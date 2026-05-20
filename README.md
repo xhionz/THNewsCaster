@@ -82,6 +82,37 @@ A pre-rendered example is in [`examples/hunt_package.md`](examples/hunt_package.
 
 ---
 
+## Hosting on GitHub Pages
+
+The repo includes `.github/workflows/pages.yml`, which:
+
+1. Runs the test suite.
+2. Rebuilds the package (live feeds first, with an offline fallback).
+3. Renders `site/index.html` + `site/hunt_package.json` via `--html`.
+4. Publishes the `site/` directory to GitHub Pages using the official
+   `actions/upload-pages-artifact` + `actions/deploy-pages` actions.
+
+It triggers on push to `main`, on a 6-hourly cron, and via
+`workflow_dispatch`. Enable Pages in **Settings → Pages → Build and
+deployment → Source: GitHub Actions** once, then the URL surfaces in
+the workflow's deploy job (typically
+`https://<user>.github.io/<repo>/`).
+
+A pre-rendered copy of the site lives under `docs/` so reviewers can
+browse it without running the workflow:
+
+```bash
+python -m http.server -d docs 8000
+# open http://localhost:8000
+```
+
+To render the site locally yourself:
+
+```bash
+PYTHONPATH=src python -m thnewscaster --offline --html --out-dir site/
+python -m http.server -d site 8000
+```
+
 ## Architecture
 
 ```

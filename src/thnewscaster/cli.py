@@ -23,6 +23,7 @@ from pathlib import Path
 
 from . import __version__
 from .feeds import collect, load_local_feed
+from .html_render import write_site
 from .package import build_package, render_markdown, to_json, to_markdown
 from .relevance import DEFAULT_THRESHOLD
 from .sources import DEFAULT_FEEDS
@@ -47,6 +48,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     p.add_argument("--threshold", type=int, default=DEFAULT_THRESHOLD, help="Minimum relevance score to keep an article")
     p.add_argument("--max-briefings", type=int, default=25, help="Cap on briefings in the package")
     p.add_argument("--no-markdown", action="store_true", help="Skip Markdown render")
+    p.add_argument("--html", action="store_true", help="Also render a static HTML site (index.html) into --out-dir")
     p.add_argument("--print", action="store_true", help="Also print Markdown to stdout")
     p.add_argument("-v", "--verbose", action="store_true")
     return p.parse_args(argv)
@@ -93,6 +95,9 @@ def main(argv: list[str] | None = None) -> int:
         md_path = args.out_dir / "hunt_package.md"
         to_markdown(pkg, md_path)
         log.info("wrote %s", md_path)
+    if args.html:
+        write_site(pkg, args.out_dir)
+        log.info("wrote %s", args.out_dir / "index.html")
 
     if args.print:
         sys.stdout.write(render_markdown(pkg))
