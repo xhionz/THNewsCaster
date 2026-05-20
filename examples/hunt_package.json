@@ -1,0 +1,2316 @@
+{
+  "generated_at": "2026-05-20T08:51:03+00:00",
+  "generator": "THNewsCaster",
+  "version": "0.1.0",
+  "briefings": [
+    {
+      "article": {
+        "id": "ee81a701b7078c72",
+        "source": "OfflineSample",
+        "title": "Volt Typhoon exploits Fortinet FortiOS CVE-2024-21762 to maintain access to US critical infrastructure",
+        "link": "https://example.invalid/news/volt-typhoon-fortios",
+        "published": "Mon, 19 May 2026 12:00:00 GMT",
+        "summary": "The PRC-aligned actor tracked as Volt Typhoon is exploiting an unauthenticated remote code execution vulnerability in Fortinet FortiGate appliances (CVE-2024-21762) to compromise edge devices and pivot into operational technology networks. Mandiant observed living-off-the-land lateral movement, credential dumping from LSASS, and the deployment of webshells on the VPN appliance. C2 traffic was observed to 185.225.74.10 and the domain login-portal-update.com. SHA256 of the dropped beacon: 3b8e7d9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d.",
+        "raw_text": "Volt Typhoon exploits Fortinet FortiOS CVE-2024-21762 to maintain access to US critical infrastructure The PRC-aligned actor tracked as Volt Typhoon is exploiting an unauthenticated remote code execution vulnerability in Fortinet FortiGate appliances (CVE-2024-21762) to compromise edge devices and pivot into operational technology networks. Mandiant observed living-off-the-land lateral movement, credential dumping from LSASS, and the deployment of webshells on the VPN appliance. C2 traffic was observed to 185.225.74.10 and the domain login-portal-update.com. SHA256 of the dropped beacon: 3b8e7d9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 99,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 CVE(s)=+20",
+          "1 malware family hit(s)=+20",
+          "1 threat actor hit(s)=+20",
+          "3 MITRE technique hit(s)=+14",
+          "2 initial-access vector(s)=+9",
+          "1 product mention(s)=+3",
+          "3 IOC(s)=+8"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2024-21762"
+        ],
+        "ips": [
+          "185.225.74.10"
+        ],
+        "domains": [
+          "login-portal-update.com"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [
+          "3b8e7d9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d"
+        ],
+        "malware_families": [
+          "Cobalt Strike"
+        ],
+        "threat_actors": [
+          "Volt Typhoon"
+        ],
+        "mitre_techniques": [
+          "T1003",
+          "T1219",
+          "T1505.003"
+        ],
+        "vectors": [
+          "exploit",
+          "vpn-edge"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": [
+          "Fortinet FortiOS"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-ee81a701-1",
+          "title": "Initial access via CVE-2024-21762 affecting Fortinet FortiOS",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2024-21762 in Fortinet FortiOS within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2024-21762; malware families: Cobalt Strike; threat actors: Volt Typhoon; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee81a701-1-O1",
+              "title": "Inventory exposure to Fortinet FortiOS",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Fortinet FortiOS, the external-exploitation hypothesis is disproven for CVE-2024-21762.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Fortinet FortiOS' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee81a701-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2024-21762 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2024-21762/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee81a701-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2024-21762 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2024-21762')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee81a701-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Fortinet FortiOS hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-ee81a701-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-ee81a701-2",
+          "title": "Endpoint execution of Cobalt Strike",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute Cobalt Strike payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on CVEs cited: CVE-2024-21762; malware families: Cobalt Strike; threat actors: Volt Typhoon; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee81a701-2-O1",
+              "title": "EDR hash sweep for Cobalt Strike",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known Cobalt Strike SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('Cobalt Strike', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-ee81a701-2-O2",
+              "title": "Behavioural pattern hunt for Cobalt Strike",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee81a701-2-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Cobalt Strike-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee81a701-2-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'Cobalt Strike' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee81a701-2-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_cobalt_strike' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-ee81a701-3",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2024-21762; malware families: Cobalt Strike; threat actors: Volt Typhoon; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee81a701-3-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('login-portal-update.com') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee81a701-3-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('185.225.74.10') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee81a701-3-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-ee81a701-3-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ee81a701-3-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-ee81a701-4",
+          "title": "Post-foothold lateral movement consistent with Volt Typhoon",
+          "statement": "An attacker who matched the TTPs of Volt Typhoon has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on CVEs cited: CVE-2024-21762; malware families: Cobalt Strike; threat actors: Volt Typhoon; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee81a701-4-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee81a701-4-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee81a701-4-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-ee81a701-4-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "bd9f3e8c6145108d",
+        "source": "OfflineSample",
+        "title": "Cl0p ransomware abuses CVE-2025-3104 in MOVEit Transfer for mass data theft",
+        "link": "https://example.invalid/news/clop-moveit",
+        "published": "Sat, 17 May 2026 17:45:00 GMT",
+        "summary": "The Cl0p ransomware crew is again exploiting a zero-day in MOVEit Transfer, this time CVE-2025-3104, to drop a webshell and exfiltrate data from managed file transfer instances at finance and healthcare organisations. Talos reports the use of a custom .NET webshell, archive staging with 7z, and exfiltration to transfer.sh and anonfiles.com. Observed IP: 91.219.236.50.",
+        "raw_text": "Cl0p ransomware abuses CVE-2025-3104 in MOVEit Transfer for mass data theft The Cl0p ransomware crew is again exploiting a zero-day in MOVEit Transfer, this time CVE-2025-3104, to drop a webshell and exfiltrate data from managed file transfer instances at finance and healthcare organisations. Talos reports the use of a custom .NET webshell, archive staging with 7z, and exfiltration to transfer.sh and anonfiles.com. Observed IP: 91.219.236.50.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 88,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 CVE(s)=+20",
+          "1 malware family hit(s)=+20",
+          "3 MITRE technique hit(s)=+14",
+          "1 initial-access vector(s)=+7",
+          "2 impact action(s)=+11",
+          "1 product mention(s)=+3",
+          "3 IOC(s)=+8"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2025-3104"
+        ],
+        "ips": [
+          "91.219.236.50"
+        ],
+        "domains": [
+          "transfer.sh",
+          "anonfiles.com"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [
+          "Cl0p"
+        ],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1486",
+          "T1567",
+          "T1505.003"
+        ],
+        "vectors": [
+          "exploit"
+        ],
+        "sectors": [
+          "healthcare"
+        ],
+        "actions": [
+          "ransomware",
+          "data-breach"
+        ],
+        "products": [
+          "MOVEit Transfer"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-bd9f3e8c-1",
+          "title": "Initial access via CVE-2025-3104 affecting MOVEit Transfer",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2025-3104 in MOVEit Transfer within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2025-3104; malware families: Cl0p; vectors: exploit; impact: ransomware, data-breach; products: MOVEit Transfer.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-bd9f3e8c-1-O1",
+              "title": "Inventory exposure to MOVEit Transfer",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of MOVEit Transfer, the external-exploitation hypothesis is disproven for CVE-2025-3104.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'MOVEit Transfer' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-bd9f3e8c-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2025-3104 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2025-3104/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-bd9f3e8c-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2025-3104 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2025-3104')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-bd9f3e8c-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on MOVEit Transfer hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-bd9f3e8c-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-bd9f3e8c-2",
+          "title": "Endpoint execution of Cl0p",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute Cl0p payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on CVEs cited: CVE-2025-3104; malware families: Cl0p; vectors: exploit; impact: ransomware, data-breach; products: MOVEit Transfer.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-bd9f3e8c-2-O1",
+              "title": "EDR hash sweep for Cl0p",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known Cl0p SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('Cl0p', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-bd9f3e8c-2-O2",
+              "title": "Behavioural pattern hunt for Cl0p",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-bd9f3e8c-2-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Cl0p-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-bd9f3e8c-2-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'Cl0p' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-bd9f3e8c-2-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_cl0p' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-bd9f3e8c-3",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2025-3104; malware families: Cl0p; vectors: exploit; impact: ransomware, data-breach; products: MOVEit Transfer.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-bd9f3e8c-3-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('transfer.sh','anonfiles.com') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-bd9f3e8c-3-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('91.219.236.50') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-bd9f3e8c-3-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-bd9f3e8c-3-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-bd9f3e8c-3-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-bd9f3e8c-4",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on CVEs cited: CVE-2025-3104; malware families: Cl0p; vectors: exploit; impact: ransomware, data-breach; products: MOVEit Transfer.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-bd9f3e8c-4-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-bd9f3e8c-4-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-bd9f3e8c-4-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-bd9f3e8c-4-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "0dd384cec9b59b5a",
+        "source": "OfflineSample",
+        "title": "Akira ransomware operators exploit exposed Cisco ASA VPNs without MFA",
+        "link": "https://example.invalid/news/akira-cisco-asa",
+        "published": "Wed, 14 May 2026 19:15:00 GMT",
+        "summary": "CISA and partners warn that Akira ransomware affiliates continue to gain initial access via Cisco ASA SSL VPN portals where MFA is not enforced, often using credentials obtained from RedLine and Lumma Stealer logs. Lateral movement is conducted with RDP and PsExec, followed by data exfiltration via Rclone to mega.nz and encryption of ESXi datastores. Manufacturing and healthcare sectors are heavily targeted. IOC IPs include 45.61.136.215 and 193.143.1.205.",
+        "raw_text": "Akira ransomware operators exploit exposed Cisco ASA VPNs without MFA CISA and partners warn that Akira ransomware affiliates continue to gain initial access via Cisco ASA SSL VPN portals where MFA is not enforced, often using credentials obtained from RedLine and Lumma Stealer logs. Lateral movement is conducted with RDP and PsExec, followed by data exfiltration via Rclone to mega.nz and encryption of ESXi datastores. Manufacturing and healthcare sectors are heavily targeted. IOC IPs include 45.61.136.215 and 193.143.1.205.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 87,
+        "rationale": [
+          "source weight (news)=+5",
+          "3 malware family hit(s)=+30",
+          "4 MITRE technique hit(s)=+17",
+          "4 initial-access vector(s)=+13",
+          "1 impact action(s)=+8",
+          "2 product mention(s)=+6",
+          "3 IOC(s)=+8"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [
+          "45.61.136.215",
+          "193.143.1.205"
+        ],
+        "domains": [
+          "mega.nz"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [
+          "Lumma Stealer",
+          "RedLine Stealer",
+          "Akira"
+        ],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001",
+          "T1486",
+          "T1567",
+          "T1219"
+        ],
+        "vectors": [
+          "exploit",
+          "vpn-edge",
+          "rdp",
+          "credential-theft"
+        ],
+        "sectors": [
+          "healthcare",
+          "manufacturing"
+        ],
+        "actions": [
+          "ransomware"
+        ],
+        "products": [
+          "Cisco ASA / FTD",
+          "VMware ESXi"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-0dd384ce-1",
+          "title": "Initial access via the disclosed vulnerability affecting Cisco ASA / FTD",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Cisco ASA / FTD within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on malware families: Lumma Stealer, RedLine Stealer, Akira; vectors: exploit, vpn-edge, rdp; impact: ransomware; products: Cisco ASA / FTD, VMware ESXi.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-0dd384ce-1-O1",
+              "title": "Inventory exposure to Cisco ASA / FTD",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Cisco ASA / FTD, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Cisco ASA / FTD' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0dd384ce-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0dd384ce-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0dd384ce-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Cisco ASA / FTD hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-0dd384ce-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-0dd384ce-2",
+          "title": "Endpoint execution of Lumma Stealer",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute Lumma Stealer payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on malware families: Lumma Stealer, RedLine Stealer, Akira; vectors: exploit, vpn-edge, rdp; impact: ransomware; products: Cisco ASA / FTD, VMware ESXi.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-0dd384ce-2-O1",
+              "title": "EDR hash sweep for Lumma Stealer",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known Lumma Stealer SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('Lumma Stealer', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-0dd384ce-2-O2",
+              "title": "Behavioural pattern hunt for Lumma Stealer",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0dd384ce-2-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Lumma Stealer-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0dd384ce-2-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'Lumma Stealer' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0dd384ce-2-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_lumma_stealer' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-0dd384ce-3",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on malware families: Lumma Stealer, RedLine Stealer, Akira; vectors: exploit, vpn-edge, rdp; impact: ransomware; products: Cisco ASA / FTD, VMware ESXi.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-0dd384ce-3-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('mega.nz') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0dd384ce-3-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('45.61.136.215','193.143.1.205') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0dd384ce-3-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-0dd384ce-3-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-0dd384ce-3-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-0dd384ce-4",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on malware families: Lumma Stealer, RedLine Stealer, Akira; vectors: exploit, vpn-edge, rdp; impact: ransomware; products: Cisco ASA / FTD, VMware ESXi.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-0dd384ce-4-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0dd384ce-4-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0dd384ce-4-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-0dd384ce-4-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "18db64987d71d102",
+        "source": "OfflineSample",
+        "title": "Scattered Spider runs MFA-fatigue and help-desk social engineering against US insurance firms",
+        "link": "https://example.invalid/news/scattered-spider-insurance",
+        "published": "Sun, 18 May 2026 09:30:00 GMT",
+        "summary": "Scattered Spider (aka Octo Tempest, Muddled Libra) is targeting US insurance firms with vishing calls to help desks, MFA push-bombing, and OAuth illicit-consent grants in Entra ID. After initial access the group deploys ScreenConnect and AnyDesk for persistence and exfiltrates data via mega.nz before deploying ransomware. The financial and insurance sector should consider this an active campaign.",
+        "raw_text": "Scattered Spider runs MFA-fatigue and help-desk social engineering against US insurance firms Scattered Spider (aka Octo Tempest, Muddled Libra) is targeting US insurance firms with vishing calls to help desks, MFA push-bombing, and OAuth illicit-consent grants in Entra ID. After initial access the group deploys ScreenConnect and AnyDesk for persistence and exfiltrates data via mega.nz before deploying ransomware. The financial and insurance sector should consider this an active campaign.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 66,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 threat actor hit(s)=+20",
+          "3 MITRE technique hit(s)=+14",
+          "2 initial-access vector(s)=+9",
+          "1 impact action(s)=+8",
+          "2 product mention(s)=+6",
+          "1 IOC(s)=+4"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "mega.nz"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [
+          "Scattered Spider"
+        ],
+        "mitre_techniques": [
+          "T1486",
+          "T1567",
+          "T1219"
+        ],
+        "vectors": [
+          "cloud-misconfig",
+          "social-engineering"
+        ],
+        "sectors": [
+          "finance"
+        ],
+        "actions": [
+          "ransomware"
+        ],
+        "products": [
+          "Microsoft 365 / Entra ID",
+          "ConnectWise ScreenConnect"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-18db6498-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft 365 / Entra ID",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft 365 / Entra ID within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on threat actors: Scattered Spider; vectors: cloud-misconfig, social-engineering; impact: ransomware; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-18db6498-1-O1",
+              "title": "Inventory exposure to Microsoft 365 / Entra ID",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft 365 / Entra ID, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft 365 / Entra ID' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-18db6498-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-18db6498-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-18db6498-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft 365 / Entra ID hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-18db6498-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-18db6498-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on threat actors: Scattered Spider; vectors: cloud-misconfig, social-engineering; impact: ransomware; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-18db6498-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('mega.nz') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-18db6498-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-18db6498-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-18db6498-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-18db6498-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-18db6498-3",
+          "title": "Post-foothold lateral movement consistent with Scattered Spider",
+          "statement": "An attacker who matched the TTPs of Scattered Spider has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on threat actors: Scattered Spider; vectors: cloud-misconfig, social-engineering; impact: ransomware; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-18db6498-3-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-18db6498-3-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-18db6498-3-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-18db6498-3-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-18db6498-4",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on threat actors: Scattered Spider; vectors: cloud-misconfig, social-engineering; impact: ransomware; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-18db6498-4-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-18db6498-4-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-18db6498-4-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-18db6498-4-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "ddcaed457901bb72",
+        "source": "OfflineSample",
+        "title": "BumbleBee loader returns with SocGholish fake-update lures dropping IcedID and Cobalt Strike",
+        "link": "https://example.invalid/news/bumblebee-socgholish",
+        "published": "Fri, 16 May 2026 14:00:00 GMT",
+        "summary": "Proofpoint and Unit42 observed renewed BumbleBee activity delivered via SocGholish (FakeUpdates) JavaScript injects on compromised WordPress sites. Post-execution, operators dropped IcedID and Cobalt Strike beacons configured for HTTPS C2. Persistence was established via scheduled tasks and a Run key. SHA256: 9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a.",
+        "raw_text": "BumbleBee loader returns with SocGholish fake-update lures dropping IcedID and Cobalt Strike Proofpoint and Unit42 observed renewed BumbleBee activity delivered via SocGholish (FakeUpdates) JavaScript injects on compromised WordPress sites. Post-execution, operators dropped IcedID and Cobalt Strike beacons configured for HTTPS C2. Persistence was established via scheduled tasks and a Run key. SHA256: 9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 59,
+        "rationale": [
+          "source weight (news)=+5",
+          "4 malware family hit(s)=+30",
+          "2 MITRE technique hit(s)=+11",
+          "2 initial-access vector(s)=+9",
+          "1 IOC(s)=+4"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [
+          "9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a"
+        ],
+        "malware_families": [
+          "Cobalt Strike",
+          "IcedID",
+          "BumbleBee",
+          "SocGholish"
+        ],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1053",
+          "T1021.001"
+        ],
+        "vectors": [
+          "phishing",
+          "rdp"
+        ],
+        "sectors": [],
+        "actions": [],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-ddcaed45-1",
+          "title": "Endpoint execution of Cobalt Strike",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute Cobalt Strike payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on malware families: Cobalt Strike, IcedID, BumbleBee; vectors: phishing, rdp.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-ddcaed45-1-O1",
+              "title": "EDR hash sweep for Cobalt Strike",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known Cobalt Strike SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('Cobalt Strike', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-ddcaed45-1-O2",
+              "title": "Behavioural pattern hunt for Cobalt Strike",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ddcaed45-1-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Cobalt Strike-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ddcaed45-1-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'Cobalt Strike' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ddcaed45-1-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_cobalt_strike' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-ddcaed45-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on malware families: Cobalt Strike, IcedID, BumbleBee; vectors: phishing, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-ddcaed45-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ddcaed45-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ddcaed45-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-ddcaed45-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ddcaed45-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-ddcaed45-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on malware families: Cobalt Strike, IcedID, BumbleBee; vectors: phishing, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-ddcaed45-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ddcaed45-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ddcaed45-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ddcaed45-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "article": {
+        "id": "44caa1049c505865",
+        "source": "OfflineSample",
+        "title": "APT29 (Midnight Blizzard) compromises Microsoft 365 tenants via OAuth abuse and password spraying",
+        "link": "https://example.invalid/news/apt29-m365",
+        "published": "Thu, 15 May 2026 08:00:00 GMT",
+        "summary": "Microsoft Threat Intelligence has attributed a new wave of Microsoft 365 tenant compromises to APT29 (Midnight Blizzard / Cozy Bear). The Russian SVR-linked group is performing password spraying against legacy authentication endpoints, then granting itself illicit OAuth consent to read mail and files in Entra ID. Government and education sectors are most affected.",
+        "raw_text": "APT29 (Midnight Blizzard) compromises Microsoft 365 tenants via OAuth abuse and password spraying Microsoft Threat Intelligence has attributed a new wave of Microsoft 365 tenant compromises to APT29 (Midnight Blizzard / Cozy Bear). The Russian SVR-linked group is performing password spraying against legacy authentication endpoints, then granting itself illicit OAuth consent to read mail and files in Entra ID. Government and education sectors are most affected.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 43,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 threat actor hit(s)=+20",
+          "1 MITRE technique hit(s)=+8",
+          "1 initial-access vector(s)=+7",
+          "1 product mention(s)=+3"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [
+          "APT29 (Cozy Bear)"
+        ],
+        "mitre_techniques": [
+          "T1110"
+        ],
+        "vectors": [
+          "cloud-misconfig"
+        ],
+        "sectors": [
+          "government",
+          "education"
+        ],
+        "actions": [],
+        "products": [
+          "Microsoft 365 / Entra ID"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-44caa104-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft 365 / Entra ID",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft 365 / Entra ID within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on threat actors: APT29 (Cozy Bear); vectors: cloud-misconfig; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-44caa104-1-O1",
+              "title": "Inventory exposure to Microsoft 365 / Entra ID",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft 365 / Entra ID, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft 365 / Entra ID' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-44caa104-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-44caa104-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-44caa104-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft 365 / Entra ID hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-44caa104-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ]
+        },
+        {
+          "id": "H-44caa104-2",
+          "title": "Post-foothold lateral movement consistent with APT29 (Cozy Bear)",
+          "statement": "An attacker who matched the TTPs of APT29 (Cozy Bear) has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on threat actors: APT29 (Cozy Bear); vectors: cloud-misconfig; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-44caa104-2-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-44caa104-2-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-44caa104-2-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-44caa104-2-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        },
+        {
+          "id": "H-44caa104-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on threat actors: APT29 (Cozy Bear); vectors: cloud-misconfig; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-44caa104-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-44caa104-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-44caa104-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-44caa104-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "skipped": 1,
+  "total_seen": 7
+}

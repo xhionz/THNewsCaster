@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "thnewscaster"
+version = "0.1.0"
+description = "Threat-hunting focused news platform: ingest security news, surface hunt-worthy stories, generate hypotheses and CTF-style disproof objectives."
+requires-python = ">=3.10"
+authors = [{ name = "THNewsCaster" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+thnewscaster = "thnewscaster.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+thnewscaster = ["data/*.xml", "data/*.json"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
