@@ -1,0 +1,44 @@
+name: Deploy GitHub Pages
+
+# The daily build runs on your Ubuntu host and pushes the rendered site to the
+# gh-pages branch (see deploy/publish.sh). This workflow publishes whatever is
+# on that branch to GitHub Pages. It keeps the repo's Pages source set to
+# "GitHub Actions" while letting the server be the builder.
+
+on:
+  push:
+    branches:
+      - gh-pages
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Stage site (exclude VCS metadata)
+        run: |
+          mkdir -p _site
+          rsync -a --exclude='.git' --exclude='_site' ./ _site/
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

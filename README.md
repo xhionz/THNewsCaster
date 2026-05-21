@@ -161,6 +161,51 @@ The service runs under systemd hardening (`ProtectSystem=strict`,
 `NoNewPrivileges`, restricted address families, write access limited to
 the state directory).
 
+### Publishing to GitHub Pages (custom domain)
+
+The daily job can push its rendered site to a `gh-pages` branch; the
+included [`.github/workflows/pages.yml`](.github/workflows/pages.yml)
+then publishes that branch to GitHub Pages at your custom domain. The
+server is the builder, GitHub is the host — keep the repo's **Settings →
+Pages → Source** set to **GitHub Actions**.
+
+1. Generate a deploy key for the service account and add the public half
+   to the repo (**Settings → Deploy keys → Add**, tick *Allow write
+   access*):
+
+   ```bash
+   sudo -u thnewscaster ssh-keygen -t ed25519 -f /etc/thnewscaster/pages_deploy_key -N ''
+   sudo cat /etc/thnewscaster/pages_deploy_key.pub   # paste this as the deploy key
+   ```
+
+2. Set the Pages variables in `/etc/thnewscaster/thnewscaster.env`:
+
+   ```bash
+   THNC_PAGES_REPO=git@github.com:xhionz/thnewscaster.git
+   THNC_PAGES_BRANCH=gh-pages
+   THNC_PAGES_DOMAIN=thnews.wusaapp.net
+   THNC_PAGES_SSH_KEY=/etc/thnewscaster/pages_deploy_key
+   ```
+
+3. Run it: `sudo systemctl start thnewscaster.service`. Each run rebuilds
+   the package, then `deploy/publish.sh` pushes a clean copy of the site
+   to `gh-pages` (writing `CNAME` = your domain and `.nojekyll`), and the
+   workflow deploys it. If nothing changed, no commit is pushed.
+
+DNS for `thnews.wusaapp.net` should be a `CNAME` to
+`<your-github-user>.github.io` (apex domains use the GitHub Pages A/AAAA
+records instead). Leave `THNC_PAGES_REPO` unset to build without
+publishing.
+
+> **Why a branch + workflow rather than the server pushing straight to
+> Pages?** GitHub Pages only accepts published content via a Pages
+> deployment (the `deploy-pages` action) or a configured branch. A plain
+> `git push` from your server can't deploy on its own, so the server
+> pushes content to `gh-pages` and the workflow performs the actual
+> deployment. (Alternatively, switch Pages source to *Deploy from a
+> branch → gh-pages* and you can delete the workflow entirely — the push
+> alone will publish.)
+
 ### Rendering the site locally
 
 ```bash

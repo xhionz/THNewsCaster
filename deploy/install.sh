@@ -36,9 +36,10 @@ fi
 
 echo "==> Syncing application into ${INSTALL_DIR}"
 mkdir -p "${INSTALL_DIR}"
-# Copy the package source and project metadata.
-cp -r "${REPO_ROOT}/src" "${REPO_ROOT}/pyproject.toml" "${INSTALL_DIR}/"
+# Copy the package source, project metadata, and deploy scripts.
+cp -r "${REPO_ROOT}/src" "${REPO_ROOT}/pyproject.toml" "${REPO_ROOT}/deploy" "${INSTALL_DIR}/"
 cp -r "${REPO_ROOT}/README.md" "${INSTALL_DIR}/" 2>/dev/null || true
+chmod +x "${INSTALL_DIR}/deploy/run-and-publish.sh" "${INSTALL_DIR}/deploy/publish.sh"
 
 echo "==> Building virtualenv and installing package"
 python3 -m venv "${INSTALL_DIR}/.venv"
@@ -71,12 +72,21 @@ cat <<EOF
 ==> Done.
 
 Next steps:
-  1. Edit your endpoint + key:   sudoedit ${ENV_FILE}
-  2. Trigger a run now:          sudo systemctl start thnewscaster.service
-  3. Watch logs:                 journalctl -u thnewscaster.service -f
-  4. Check the schedule:         systemctl list-timers thnewscaster.timer
-  5. Output is written to:       ${STATE_DIR}/site
+  1. Edit endpoint + key + Pages settings:  sudoedit ${ENV_FILE}
+  2. (For Pages publish) create a deploy key and add it to the repo:
+       sudo -u ${APP_USER} ssh-keygen -t ed25519 -f ${CONF_DIR}/pages_deploy_key -N ''
+       sudo cat ${CONF_DIR}/pages_deploy_key.pub
+     Repo -> Settings -> Deploy keys -> Add deploy key -> paste, tick "Allow write access".
+  3. Trigger a run now:          sudo systemctl start thnewscaster.service
+  4. Watch logs:                 journalctl -u thnewscaster.service -f
+  5. Check the schedule:         systemctl list-timers thnewscaster.timer
+  6. Output is written to:       ${STATE_DIR}/site
 
-To serve the site, point any web server at ${STATE_DIR}/site
+GitHub Pages: when THNC_PAGES_REPO is set, each run pushes the rendered site
+to the ${PAGES_BRANCH:-gh-pages} branch; the .github/workflows/pages.yml workflow
+then publishes it to your custom domain. Keep the repo's Pages source set to
+"GitHub Actions" (Settings -> Pages). The CNAME file is written automatically.
+
+To serve the site locally instead, point any web server at ${STATE_DIR}/site
 (e.g. nginx root, or: python3 -m http.server -d ${STATE_DIR}/site 8080).
 EOF

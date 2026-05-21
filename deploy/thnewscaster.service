@@ -11,15 +11,17 @@ Group=thnewscaster
 EnvironmentFile=/etc/thnewscaster/thnewscaster.env
 # Adjust if you installed somewhere other than /opt/thnewscaster.
 WorkingDirectory=/opt/thnewscaster
-ExecStart=/opt/thnewscaster/.venv/bin/python -m thnewscaster --from-env
+ExecStart=/opt/thnewscaster/deploy/run-and-publish.sh
 StateDirectory=thnewscaster
 TimeoutStartSec=900
 
-# Hardening — the job only needs to read the repo and write its output dir.
+# Hardening — the job reads the repo, writes its output dir, and (when
+# publishing) pushes to GitHub over SSH using the deploy key.
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=true
+ReadOnlyPaths=/etc/thnewscaster
 ReadWritePaths=/var/lib/thnewscaster
 ProtectKernelTunables=true
 ProtectControlGroups=true
