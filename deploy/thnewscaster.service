@@ -13,7 +13,9 @@ EnvironmentFile=/etc/thnewscaster/thnewscaster.env
 WorkingDirectory=/opt/thnewscaster
 ExecStart=/opt/thnewscaster/deploy/run-and-publish.sh
 StateDirectory=thnewscaster
-TimeoutStartSec=900
+# Generous ceiling: an LLM-backed run makes one request per kept briefing and
+# can take a while on a local model. Raise further if you increase MAX_BRIEFINGS.
+TimeoutStartSec=7200
 
 # Hardening — the job reads the repo, writes its output dir, and (when
 # publishing) pushes to GitHub over SSH using the deploy key.

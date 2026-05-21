@@ -32,9 +32,13 @@ def build_package(
 ) -> HuntPackage:
     pkg = HuntPackage()
     source_kinds = source_kinds or {}
-    briefings: list[HuntBriefing] = []
     total = 0
     skipped = 0
+
+    # First pass: score everything. Hypothesis generation (which may call an
+    # LLM, one request per article) is deferred until after we've ranked and
+    # capped, so we only pay that cost for the briefings we actually keep.
+    candidates: list[tuple[Article, Extraction, Scoring]] = []
     for art in articles:
         total += 1
         ext = extract(art)
@@ -42,12 +46,17 @@ def build_package(
         if not sc.is_hunt_worthy:
             skipped += 1
             continue
+        candidates.append((art, ext, sc))
+
+    candidates.sort(key=lambda c: c[2].score, reverse=True)
+    if max_briefings is not None:
+        candidates = candidates[:max_briefings]
+
+    briefings: list[HuntBriefing] = []
+    for art, ext, sc in candidates:
         hyps = hypothesis_generator(art, ext)
         briefings.append(HuntBriefing(article=art, scoring=sc, extraction=ext, hypotheses=hyps))
 
-    briefings.sort(key=lambda b: b.scoring.score, reverse=True)
-    if max_briefings is not None:
-        briefings = briefings[:max_briefings]
     pkg.briefings = briefings
     pkg.total_seen = total
     pkg.skipped = skipped

@@ -39,6 +39,10 @@ class LLMConfig:
     timeout: float = 60.0
     max_tokens: int = 4096
     temperature: float = 0.2
+    # Turn off "thinking"/reasoning for models that support it (e.g. Qwen3
+    # via vLLM). Reasoning models are far slower and their output is harder to
+    # constrain to JSON, so disabling it is recommended for this workload.
+    disable_thinking: bool = False
 
     @property
     def is_usable(self) -> bool:
@@ -59,6 +63,7 @@ class LLMConfig:
             timeout=float(_env_int("THNC_OPENAI_TIMEOUT", 60)),
             max_tokens=_env_int("THNC_OPENAI_MAX_TOKENS", 4096),
             temperature=float(os.environ.get("THNC_OPENAI_TEMPERATURE", "0.2") or 0.2),
+            disable_thinking=_env_bool("THNC_OPENAI_DISABLE_THINKING", False),
         )
 
 

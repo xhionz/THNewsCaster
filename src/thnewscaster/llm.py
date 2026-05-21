@@ -102,6 +102,10 @@ def _post_chat(cfg: LLMConfig, system: str, user: str) -> str:
         "max_tokens": cfg.max_tokens,
         "response_format": {"type": "json_object"},
     }
+    if cfg.disable_thinking:
+        # vLLM/SGLang pass these through to the chat template; Qwen3 honours
+        # enable_thinking=False. Harmless for servers that ignore it.
+        body["chat_template_kwargs"] = {"enable_thinking": False}
     data = json.dumps(body).encode("utf-8")
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
     if cfg.api_key:
