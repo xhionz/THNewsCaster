@@ -1,0 +1,14 @@
+[Unit]
+Description=Run THNewsCaster once daily
+Documentation=https://github.com/xhionz/thnewscaster
+
+[Timer]
+# Daily at 06:15 local time, with up to 10 minutes of jitter so multiple
+# hosts don't hammer feeds/endpoint simultaneously.
+OnCalendar=*-*-* 06:15:00
+RandomizedDelaySec=600
+# Catch up if the machine was off when the timer was due.
+Persistent=true
+
+[Install]
+WantedBy=timers.target

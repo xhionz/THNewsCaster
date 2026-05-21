@@ -1,0 +1,31 @@
+[Unit]
+Description=THNewsCaster daily threat-hunting news package build
+Documentation=https://github.com/xhionz/thnewscaster
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=thnewscaster
+Group=thnewscaster
+EnvironmentFile=/etc/thnewscaster/thnewscaster.env
+# Adjust if you installed somewhere other than /opt/thnewscaster.
+WorkingDirectory=/opt/thnewscaster
+ExecStart=/opt/thnewscaster/.venv/bin/python -m thnewscaster --from-env
+StateDirectory=thnewscaster
+TimeoutStartSec=900
+
+# Hardening — the job only needs to read the repo and write its output dir.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/thnewscaster
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
+LockPersonality=true
+MemoryDenyWriteExecute=true
+
+[Install]
+WantedBy=multi-user.target

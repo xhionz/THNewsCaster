@@ -2,17 +2,20 @@
 
 Examples
 --------
-Live pull from default feeds + write JSON+Markdown package::
+Live pull from default feeds + write the full site (JSON + Markdown + HTML)::
 
-    python -m thnewscaster --out-dir out/
+    python -m thnewscaster --out-dir out/ --html
 
 Offline run using the bundled sample feed::
 
     python -m thnewscaster --offline --out-dir out/
 
-Pipe arbitrary RSS/Atom file::
+Daily daemon run driven entirely by environment (see deploy/)::
 
-    python -m thnewscaster --feed-file path/to/feed.xml
+    THNC_OUT_DIR=/var/lib/thnewscaster/site \
+    THNC_OPENAI_BASE_URL=https://my-endpoint/v1 \
+    THNC_OPENAI_API_KEY=sk-... \
+    python -m thnewscaster --from-env
 """
 from __future__ import annotations
 
@@ -22,8 +25,12 @@ import sys
 from pathlib import Path
 
 from . import __version__
+from .config import AppConfig, LLMConfig
 from .feeds import collect, load_local_feed
 from .html_render import write_site
+from .hypotheses import generate as generate_heuristic
+from .llm import generate_llm
+from .models import Article, Extraction, Hypothesis
 from .package import build_package, render_markdown, to_json, to_markdown
 from .relevance import DEFAULT_THRESHOLD
 from .sources import DEFAULT_FEEDS
@@ -42,16 +49,70 @@ def _setup_logging(verbose: bool) -> None:
 def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     p = argparse.ArgumentParser(prog="thnewscaster", description="Threat-hunting news platform")
     p.add_argument("--version", action="version", version=f"thnewscaster {__version__}")
+    p.add_argument("--from-env", action="store_true",
+                   help="Take all settings from THNC_* environment variables (for the daemon)")
     p.add_argument("--offline", action="store_true", help="Use bundled sample feed instead of network")
     p.add_argument("--feed-file", action="append", default=[], help="Local RSS/Atom file to ingest (repeatable)")
-    p.add_argument("--out-dir", type=Path, default=Path("out"), help="Where to write the package")
-    p.add_argument("--threshold", type=int, default=DEFAULT_THRESHOLD, help="Minimum relevance score to keep an article")
-    p.add_argument("--max-briefings", type=int, default=25, help="Cap on briefings in the package")
+    p.add_argument("--out-dir", type=Path, default=None, help="Where to write the package (default: out/)")
+    p.add_argument("--threshold", type=int, default=None, help="Minimum relevance score to keep an article")
+    p.add_argument("--max-briefings", type=int, default=None, help="Cap on briefings in the package")
+    p.add_argument("--html", action="store_true", help="Render a static HTML site (index.html) into --out-dir")
     p.add_argument("--no-markdown", action="store_true", help="Skip Markdown render")
-    p.add_argument("--html", action="store_true", help="Also render a static HTML site (index.html) into --out-dir")
     p.add_argument("--print", action="store_true", help="Also print Markdown to stdout")
+    # LLM controls (override environment).
+    p.add_argument("--llm", choices=["auto", "on", "off"], default="auto",
+                   help="auto: use endpoint if configured; on: require it; off: heuristic only")
+    p.add_argument("--llm-base-url", default=None, help="OpenAI-compatible base URL (…/v1)")
+    p.add_argument("--llm-model", default=None, help="Model name for the endpoint")
     p.add_argument("-v", "--verbose", action="store_true")
     return p.parse_args(argv)
+
+
+def _resolve_config(args: argparse.Namespace) -> AppConfig:
+    cfg = AppConfig.from_env()
+
+    # CLI overrides win over environment.
+    if args.out_dir is not None:
+        cfg.out_dir = args.out_dir
+    if args.threshold is not None:
+        cfg.threshold = args.threshold
+    if args.max_briefings is not None:
+        cfg.max_briefings = args.max_briefings
+    if args.offline:
+        cfg.offline = True
+    if args.html:
+        cfg.write_html = True
+    if args.no_markdown:
+        cfg.write_markdown = False
+
+    if args.llm_base_url is not None:
+        cfg.llm.base_url = args.llm_base_url.rstrip("/")
+    if args.llm_model is not None:
+        cfg.llm.model = args.llm_model
+    if args.llm == "on":
+        cfg.llm.enabled = True
+    elif args.llm == "off":
+        cfg.llm.enabled = False
+    else:  # auto
+        cfg.llm.enabled = bool(cfg.llm.base_url)
+    return cfg
+
+
+def _make_generator(cfg: AppConfig, log: logging.Logger):
+    """Return a generator: LLM-primary with heuristic fallback per article."""
+    if not cfg.llm.is_usable:
+        log.info("LLM disabled or unconfigured; using heuristic generator")
+        return generate_heuristic
+
+    log.info("LLM enabled: %s (model=%s)", cfg.llm.base_url, cfg.llm.model)
+
+    def _gen(article: Article, ext: Extraction) -> list[Hypothesis]:
+        hyps = generate_llm(article, ext, cfg.llm)
+        if hyps is None:
+            return generate_heuristic(article, ext)
+        return hyps
+
+    return _gen
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -59,15 +120,19 @@ def main(argv: list[str] | None = None) -> int:
     _setup_logging(args.verbose)
     log = logging.getLogger("thnewscaster")
 
-    articles = []
+    cfg = _resolve_config(args)
+    if cfg.out_dir is None:
+        cfg.out_dir = Path("out")
+
     source_kinds = {name: kind for name, _, kind in DEFAULT_FEEDS}
 
+    articles: list[Article] = []
     if args.feed_file:
         for f in args.feed_file:
             path = Path(f)
             log.info("loading local feed %s", path)
             articles.extend(load_local_feed(path))
-    elif args.offline:
+    elif cfg.offline:
         if not DEFAULT_SAMPLE.exists():
             log.error("offline sample missing at %s", DEFAULT_SAMPLE)
             return 2
@@ -79,25 +144,32 @@ def main(argv: list[str] | None = None) -> int:
 
     log.info("collected %d articles", len(articles))
 
+    if args.llm == "on" and not cfg.llm.is_usable:
+        log.error("--llm on requires THNC_OPENAI_BASE_URL / --llm-base-url to be set")
+        return 2
+
+    generator = _make_generator(cfg, log)
+
     pkg = build_package(
         articles,
         source_kinds=source_kinds,
-        threshold=args.threshold,
-        max_briefings=args.max_briefings,
+        threshold=cfg.threshold,
+        max_briefings=cfg.max_briefings,
+        hypothesis_generator=generator,
     )
     log.info("built package: %d briefings (%d seen, %d skipped)", len(pkg.briefings), pkg.total_seen, pkg.skipped)
 
-    args.out_dir.mkdir(parents=True, exist_ok=True)
-    json_path = args.out_dir / "hunt_package.json"
+    cfg.out_dir.mkdir(parents=True, exist_ok=True)
+    json_path = cfg.out_dir / "hunt_package.json"
     to_json(pkg, json_path)
     log.info("wrote %s", json_path)
-    if not args.no_markdown:
-        md_path = args.out_dir / "hunt_package.md"
+    if cfg.write_markdown:
+        md_path = cfg.out_dir / "hunt_package.md"
         to_markdown(pkg, md_path)
         log.info("wrote %s", md_path)
-    if args.html:
-        write_site(pkg, args.out_dir)
-        log.info("wrote %s", args.out_dir / "index.html")
+    if cfg.write_html:
+        write_site(pkg, cfg.out_dir)
+        log.info("wrote %s", cfg.out_dir / "index.html")
 
     if args.print:
         sys.stdout.write(render_markdown(pkg))

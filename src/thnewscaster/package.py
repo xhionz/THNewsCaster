@@ -5,15 +5,17 @@ import json
 import logging
 from dataclasses import asdict
 from pathlib import Path
-from typing import Iterable
+from typing import Callable, Iterable
 
 from .extraction import extract
 from .hypotheses import generate
-from .models import Article, HuntBriefing, HuntPackage
+from .models import Article, Extraction, Hypothesis, HuntBriefing, HuntPackage
 from .relevance import DEFAULT_THRESHOLD, score
 from .sources import SOURCE_WEIGHTS
 
 log = logging.getLogger(__name__)
+
+HypothesisGenerator = Callable[[Article, Extraction], list[Hypothesis]]
 
 
 def _source_kind(source_name: str, source_map: dict[str, str]) -> str:
@@ -26,6 +28,7 @@ def build_package(
     source_kinds: dict[str, str] | None = None,
     threshold: int = DEFAULT_THRESHOLD,
     max_briefings: int | None = 25,
+    hypothesis_generator: HypothesisGenerator = generate,
 ) -> HuntPackage:
     pkg = HuntPackage()
     source_kinds = source_kinds or {}
@@ -39,7 +42,7 @@ def build_package(
         if not sc.is_hunt_worthy:
             skipped += 1
             continue
-        hyps = generate(art, ext)
+        hyps = hypothesis_generator(art, ext)
         briefings.append(HuntBriefing(article=art, scoring=sc, extraction=ext, hypotheses=hyps))
 
     briefings.sort(key=lambda b: b.scoring.score, reverse=True)
