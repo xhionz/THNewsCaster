@@ -43,8 +43,25 @@ emits a **briefing** containing:
    point value, a falsification criterion, suggested data sources, a
    sample SIEM-agnostic query, and mapped ATT&CK technique IDs.
 
-The whole package is written as both `hunt_package.json` (machine-
-readable) and `hunt_package.md` (analyst-readable briefing).
+The whole package is written as `hunt_package.json` (machine-readable),
+`hunt_package.md` (analyst-readable), and `index.html` (browsable site),
+plus:
+
+- **IOC exports**, grouped and sorted by type (CVEs, IPs, domains, then
+  SHA256/SHA1/MD5) with per-IOC provenance: `iocs.csv`, `iocs.json`, and a
+  STIX 2.1 bundle `iocs_stix.json`.
+- **Sigma rules** (`sigma/*.yml`) when hypotheses are LLM-generated.
+- A dated **archive** (`archive/<timestamp>/`) with its own index, so you
+  keep history rather than only the latest run.
+
+**Cross-run dedup.** A SQLite ledger (`state.db`) records every article
+already processed, so each run only spends LLM time on *new* articles. The
+published site is rebuilt from a rolling window (default: briefings first
+seen in the last 14 days), so it stays populated on quiet days. Disable
+with `--no-dedup` / `THNC_DEDUP=false`.
+
+**Notifications.** Optionally ping a Slack/webhook and/or send SMTP email
+about new briefings at or above `THNC_NOTIFY_MIN_SCORE`.
 
 ---
 

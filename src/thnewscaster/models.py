@@ -70,6 +70,7 @@ class Hypothesis:
     confidence: str  # low | medium | high
     mitre_attack: list[str]
     objectives: list[Objective] = field(default_factory=list)
+    sigma_rule: str = ""  # optional Sigma YAML (LLM-generated)
 
 
 @dataclass
@@ -78,6 +79,7 @@ class HuntBriefing:
     scoring: Scoring
     extraction: Extraction
     hypotheses: list[Hypothesis]
+    first_seen: str = ""  # ISO timestamp the article was first ingested
 
 
 @dataclass
@@ -91,3 +93,39 @@ class HuntPackage:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+
+# --- Reconstruction from plain dicts (for the persistent store) -------------
+
+def objective_from_dict(d: dict[str, Any]) -> Objective:
+    return Objective(
+        id=d["id"], title=d["title"],
+        falsification_criterion=d.get("falsification_criterion", ""),
+        data_sources=list(d.get("data_sources", [])),
+        suggested_query=d.get("suggested_query", ""),
+        mitre_attack=list(d.get("mitre_attack", [])),
+        difficulty=d.get("difficulty", "medium"),
+        points=int(d.get("points", 100)),
+    )
+
+
+def hypothesis_from_dict(d: dict[str, Any]) -> Hypothesis:
+    return Hypothesis(
+        id=d["id"], title=d["title"], statement=d.get("statement", ""),
+        rationale=d.get("rationale", ""), confidence=d.get("confidence", "medium"),
+        mitre_attack=list(d.get("mitre_attack", [])),
+        objectives=[objective_from_dict(o) for o in d.get("objectives", [])],
+        sigma_rule=d.get("sigma_rule", ""),
+    )
+
+
+def briefing_from_dict(d: dict[str, Any]) -> HuntBriefing:
+    a, e, s = d["article"], d["extraction"], d["scoring"]
+    return HuntBriefing(
+        article=Article(**a),
+        scoring=Scoring(score=int(s["score"]), rationale=list(s.get("rationale", [])),
+                        is_hunt_worthy=bool(s.get("is_hunt_worthy", True))),
+        extraction=Extraction(**e),
+        hypotheses=[hypothesis_from_dict(h) for h in d.get("hypotheses", [])],
+        first_seen=d.get("first_seen", ""),
+    )

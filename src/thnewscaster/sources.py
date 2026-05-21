@@ -16,17 +16,23 @@ DEFAULT_FEEDS: list[tuple[str, str, str]] = [
     ("KrebsOnSecurity", "https://krebsonsecurity.com/feed/", "news"),
     ("Dark Reading", "https://www.darkreading.com/rss.xml", "news"),
     ("SecurityWeek", "https://www.securityweek.com/feed/", "news"),
+    ("The Record", "https://therecord.media/feed/", "news"),
 
     # Government / advisory
     ("CISA Advisories", "https://www.cisa.gov/cybersecurity-advisories/all.xml", "advisory"),
     ("NCSC UK", "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml", "advisory"),
+    ("SANS Internet Storm Center", "https://isc.sans.edu/rssfeed_full.xml", "advisory"),
 
-    # Vendor research blogs
+    # Vendor / research blogs
     ("Microsoft Security", "https://www.microsoft.com/en-us/security/blog/feed/", "vendor"),
-    ("Google TAG / Mandiant", "https://cloud.google.com/blog/topics/threat-intelligence/rss/", "vendor"),
-    ("Talos Intelligence", "https://blog.talosintelligence.com/feeds/posts/default", "vendor"),
+    ("Google Threat Intelligence", "https://cloud.google.com/blog/products/identity-security/rss", "vendor"),
+    ("Cisco Talos", "https://blog.talosintelligence.com/rss/", "vendor"),
     ("CrowdStrike", "https://www.crowdstrike.com/blog/feed/", "vendor"),
     ("Unit42 (Palo Alto)", "https://unit42.paloaltonetworks.com/feed/", "vendor"),
+    ("The DFIR Report", "https://thedfirreport.com/feed/", "vendor"),
+    ("Sekoia.io", "https://blog.sekoia.io/feed/", "vendor"),
+    ("Volexity", "https://www.volexity.com/blog/feed/", "vendor"),
+    ("Rapid7", "https://www.rapid7.com/blog/rss/", "vendor"),
 
     # Community / social via RSS bridges
     ("/r/netsec", "https://www.reddit.com/r/netsec/.rss", "social"),

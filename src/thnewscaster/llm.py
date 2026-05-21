@@ -47,6 +47,7 @@ _SCHEMA_HINT = """Return JSON of exactly this shape:
       "rationale": "why this hypothesis follows from the article/indicators",
       "confidence": "low" | "medium" | "high",
       "mitre_attack": ["T1190", "..."],
+      "sigma_rule": "a valid Sigma detection rule as a YAML string (title, logsource, detection, condition); use \\n for newlines",
       "objectives": [
         {
           "title": "short objective title",
@@ -62,6 +63,7 @@ _SCHEMA_HINT = """Return JSON of exactly this shape:
   ]
 }
 Rules: provide AT LEAST 3 hypotheses; each hypothesis MUST have between 3 and 5 objectives.
+The sigma_rule must be syntactically valid Sigma YAML embedded as a JSON string.
 """
 
 
@@ -190,6 +192,7 @@ def _parse_hypotheses(parsed: dict, article: Article) -> list[Hypothesis]:
         if conf not in ("low", "medium", "high"):
             conf = "medium"
         objs = _parse_objectives(rh.get("objectives", []), hid)
+        sigma = rh.get("sigma_rule", "")
         hyps.append(
             Hypothesis(
                 id=hid,
@@ -199,6 +202,7 @@ def _parse_hypotheses(parsed: dict, article: Article) -> list[Hypothesis]:
                 confidence=conf,
                 mitre_attack=_as_str_list(rh.get("mitre_attack")),
                 objectives=objs,
+                sigma_rule=sigma if isinstance(sigma, str) else "",
             )
         )
     return hyps

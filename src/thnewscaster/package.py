@@ -78,6 +78,7 @@ def render_markdown(pkg: HuntPackage) -> str:
     lines.append(f"- Generated: `{pkg.generated_at}`")
     lines.append(f"- Generator: `{pkg.generator} v{pkg.version}`")
     lines.append(f"- Articles seen: **{pkg.total_seen}**  ·  Skipped (below threshold): **{pkg.skipped}**  ·  Briefings: **{len(pkg.briefings)}**")
+    lines.append("- IOC exports: `iocs.csv`, `iocs.json`, `iocs_stix.json`  ·  Sigma rules: `sigma/`  ·  History: `archive/`")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -91,6 +92,8 @@ def render_markdown(pkg: HuntPackage) -> str:
             lines.append(f"- **Link**: <{a.link}>")
         if a.published:
             lines.append(f"- **Published**: {a.published}")
+        if b.first_seen:
+            lines.append(f"- **First seen**: {b.first_seen}")
         lines.append(f"- **Relevance score**: {b.scoring.score}")
         lines.append(f"- **Score rationale**: {', '.join(b.scoring.rationale)}")
         lines.append("")
@@ -138,6 +141,13 @@ def render_markdown(pkg: HuntPackage) -> str:
                 lines.append(f"  - Data sources: {', '.join(o.data_sources)}")
                 lines.append(f"  - Suggested query: `{o.suggested_query}`")
             lines.append("")
+            if h.sigma_rule.strip():
+                lines.append("**Sigma rule:**")
+                lines.append("")
+                lines.append("```yaml")
+                lines.append(h.sigma_rule.strip())
+                lines.append("```")
+                lines.append("")
         lines.append("---")
         lines.append("")
 

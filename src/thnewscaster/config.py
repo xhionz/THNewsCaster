@@ -76,15 +76,51 @@ class AppConfig:
     write_html: bool = True
     write_markdown: bool = True
     llm: LLMConfig = None  # type: ignore[assignment]
+    # Persistence / dedup
+    dedup: bool = True
+    state_db: Path | None = None
+    retention_days: int = 14
+    site_max: int = 50
+    # Exports
+    write_iocs: bool = True
+    write_sigma: bool = True
+    archive: bool = True
+    # Notifications
+    slack_webhook: str = ""
+    notify_min_score: int = 60
+    smtp_host: str = ""
+    smtp_port: int = 25
+    smtp_user: str = ""
+    smtp_password: str = ""
+    smtp_from: str = ""
+    smtp_to: str = ""
 
     @classmethod
     def from_env(cls) -> "AppConfig":
+        out_dir = Path(os.environ.get("THNC_OUT_DIR", "out"))
+        state_db_env = os.environ.get("THNC_STATE_DB", "").strip()
+        state_db = Path(state_db_env) if state_db_env else (out_dir.parent / "state.db")
         return cls(
-            out_dir=Path(os.environ.get("THNC_OUT_DIR", "out")),
+            out_dir=out_dir,
             threshold=_env_int("THNC_THRESHOLD", DEFAULT_THRESHOLD),
             max_briefings=_env_int("THNC_MAX_BRIEFINGS", 25),
             offline=_env_bool("THNC_OFFLINE", False),
             write_html=_env_bool("THNC_WRITE_HTML", True),
             write_markdown=_env_bool("THNC_WRITE_MARKDOWN", True),
             llm=LLMConfig.from_env(),
+            dedup=_env_bool("THNC_DEDUP", True),
+            state_db=state_db,
+            retention_days=_env_int("THNC_RETENTION_DAYS", 14),
+            site_max=_env_int("THNC_SITE_MAX", 50),
+            write_iocs=_env_bool("THNC_WRITE_IOCS", True),
+            write_sigma=_env_bool("THNC_WRITE_SIGMA", True),
+            archive=_env_bool("THNC_ARCHIVE", True),
+            slack_webhook=os.environ.get("THNC_SLACK_WEBHOOK", "").strip(),
+            notify_min_score=_env_int("THNC_NOTIFY_MIN_SCORE", 60),
+            smtp_host=os.environ.get("THNC_SMTP_HOST", "").strip(),
+            smtp_port=_env_int("THNC_SMTP_PORT", 25),
+            smtp_user=os.environ.get("THNC_SMTP_USER", "").strip(),
+            smtp_password=os.environ.get("THNC_SMTP_PASSWORD", ""),
+            smtp_from=os.environ.get("THNC_SMTP_FROM", "").strip(),
+            smtp_to=os.environ.get("THNC_SMTP_TO", "").strip(),
         )

@@ -27,11 +27,11 @@ from pathlib import Path
 from . import __version__
 from .config import AppConfig, LLMConfig
 from .feeds import collect, load_local_feed
-from .html_render import write_site
 from .hypotheses import generate as generate_heuristic
 from .llm import generate_llm
 from .models import Article, Extraction, Hypothesis
-from .package import build_package, render_markdown, to_json, to_markdown
+from .package import render_markdown
+from .pipeline import run as run_pipeline
 from .relevance import DEFAULT_THRESHOLD
 from .sources import DEFAULT_FEEDS
 
@@ -58,6 +58,7 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     p.add_argument("--max-briefings", type=int, default=None, help="Cap on briefings in the package")
     p.add_argument("--html", action="store_true", help="Render a static HTML site (index.html) into --out-dir")
     p.add_argument("--no-markdown", action="store_true", help="Skip Markdown render")
+    p.add_argument("--no-dedup", action="store_true", help="Disable the cross-run dedup/archive store")
     p.add_argument("--print", action="store_true", help="Also print Markdown to stdout")
     # LLM controls (override environment).
     p.add_argument("--llm", choices=["auto", "on", "off"], default="auto",
@@ -84,6 +85,8 @@ def _resolve_config(args: argparse.Namespace) -> AppConfig:
         cfg.write_html = True
     if args.no_markdown:
         cfg.write_markdown = False
+    if args.no_dedup:
+        cfg.dedup = False
 
     if args.llm_base_url is not None:
         cfg.llm.base_url = args.llm_base_url.rstrip("/")
@@ -150,26 +153,8 @@ def main(argv: list[str] | None = None) -> int:
 
     generator = _make_generator(cfg, log)
 
-    pkg = build_package(
-        articles,
-        source_kinds=source_kinds,
-        threshold=cfg.threshold,
-        max_briefings=cfg.max_briefings,
-        hypothesis_generator=generator,
-    )
-    log.info("built package: %d briefings (%d seen, %d skipped)", len(pkg.briefings), pkg.total_seen, pkg.skipped)
-
-    cfg.out_dir.mkdir(parents=True, exist_ok=True)
-    json_path = cfg.out_dir / "hunt_package.json"
-    to_json(pkg, json_path)
-    log.info("wrote %s", json_path)
-    if cfg.write_markdown:
-        md_path = cfg.out_dir / "hunt_package.md"
-        to_markdown(pkg, md_path)
-        log.info("wrote %s", md_path)
-    if cfg.write_html:
-        write_site(pkg, cfg.out_dir)
-        log.info("wrote %s", cfg.out_dir / "index.html")
+    pkg = run_pipeline(cfg, articles, source_kinds=source_kinds, generator=generator)
+    log.info("published %d briefing(s) to %s", len(pkg.briefings), cfg.out_dir)
 
     if args.print:
         sys.stdout.write(render_markdown(pkg))

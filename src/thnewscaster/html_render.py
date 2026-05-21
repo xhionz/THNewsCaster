@@ -129,8 +129,14 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
     parts.append(f"Generated <strong>{_h(pkg.generated_at)}</strong> by {_h(pkg.generator)} v{_h(pkg.version)} &middot; ")
     parts.append(f"<strong>{pkg.total_seen}</strong> articles seen &middot; ")
     parts.append(f"<strong>{pkg.skipped}</strong> below threshold &middot; ")
-    parts.append(f"<strong>{len(pkg.briefings)}</strong> hunt briefings &middot; ")
-    parts.append(f"<a href='{_h(json_filename)}'>download JSON</a>")
+    parts.append(f"<strong>{len(pkg.briefings)}</strong> hunt briefings")
+    parts.append("</div>")
+    parts.append("<div class='meta'>Downloads: ")
+    parts.append(f"<a href='{_h(json_filename)}'>package JSON</a> &middot; ")
+    parts.append("<a href='iocs.csv'>IOCs CSV</a> &middot; ")
+    parts.append("<a href='iocs.json'>IOCs JSON</a> &middot; ")
+    parts.append("<a href='iocs_stix.json'>STIX</a> &middot; ")
+    parts.append("<a href='archive/index.html'>archive</a>")
     parts.append("</div></header>")
 
     parts.append("<main>")
@@ -160,7 +166,8 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
             parts.append(f"<h2><a href='{_h(a.link)}' target='_blank' rel='noopener noreferrer'>{title_html}</a></h2>")
         else:
             parts.append(f"<h2>{title_html}</h2>")
-        parts.append(f"<div class='src'>{_h(a.source)} &middot; {_h(a.published)}</div>")
+        seen = f" &middot; first seen {_h(b.first_seen)}" if b.first_seen else ""
+        parts.append(f"<div class='src'>{_h(a.source)} &middot; {_h(a.published)}{seen}</div>")
 
         parts.append(f"<span class='badge score'>score {s.score}</span>")
         parts.append(_badges(e.cves, "cve"))
@@ -205,6 +212,10 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
                 parts.append(f"<p><strong>Data sources.</strong> {_h(', '.join(o.data_sources))}</p>")
                 parts.append(f"<p><strong>Suggested query.</strong></p><pre>{_h(o.suggested_query)}</pre>")
                 parts.append("</div>")
+            if h_.sigma_rule.strip():
+                parts.append("<details><summary>Sigma rule</summary>")
+                parts.append(f"<pre>{_h(h_.sigma_rule.strip())}</pre>")
+                parts.append("</details>")
             parts.append("</section>")
         parts.append("</details></div>")
 

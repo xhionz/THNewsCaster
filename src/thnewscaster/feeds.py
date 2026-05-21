@@ -21,8 +21,14 @@ from .models import Article
 
 log = logging.getLogger(__name__)
 
-USER_AGENT = "THNewsCaster/0.1 (+https://example.invalid/thnewscaster) Python-urllib"
-DEFAULT_TIMEOUT = 8.0
+# A realistic browser-ish UA: several feeds (Reddit, some Mastodon instances)
+# reject the default Python-urllib agent with 403/406.
+USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
+    "THNewsCaster/0.1 Safari/537.36"
+)
+ACCEPT = "application/rss+xml, application/atom+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.5"
+DEFAULT_TIMEOUT = 12.0
 
 _ATOM_NS = {"a": "http://www.w3.org/2005/Atom"}
 _TAG_RE = re.compile(r"<[^>]+>")
@@ -46,7 +52,14 @@ def _hash_id(*parts: str) -> str:
 
 
 def fetch_url(url: str, timeout: float = DEFAULT_TIMEOUT) -> bytes | None:
-    req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "*/*"})
+    req = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent": USER_AGENT,
+            "Accept": ACCEPT,
+            "Accept-Language": "en-US,en;q=0.9",
+        },
+    )
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
             return resp.read()
