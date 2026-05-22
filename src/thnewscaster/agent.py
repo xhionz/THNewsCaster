@@ -1,0 +1,192 @@
+"""Agentic hypothesis generation.
+
+A portable ReAct-style loop that works on any chat model (no native
+function-calling required): on each turn the model returns a single JSON
+object that is either a tool call or the final hunt package. We execute
+tools, feed results back, and iterate within a step budget. A second
+"critic" agent then reviews the package against a rubric and can force a
+single revision.
+
+Falls back (returns ``None``) on any failure so the caller can drop to the
+single-shot LLM generator and then the heuristic engine.
+"""
+from __future__ import annotations
+
+import json
+import logging
+import urllib.error
+from dataclasses import dataclass
+
+from .config import LLMConfig
+
+_NET_ERRORS = (urllib.error.URLError, TimeoutError, OSError)
+from .llm import (
+    _build_user_prompt,
+    _meets_contract,
+    _parse_hypotheses,
+    chat_raw,
+    coerce_json,
+)
+from .models import Article, Extraction, Hypothesis
+from .tools import ToolRegistry
+
+log = logging.getLogger(__name__)
+
+
+@dataclass
+class AgentConfig:
+    enabled: bool = False
+    max_steps: int = 4          # max tool-calling turns before forcing a final
+    critic: bool = True         # run the critic + (one) revision pass
+    tools: tuple[str, ...] = ("fetch_article", "lookup_cve", "lookup_mitre")
+
+
+def _tools_block(registry: ToolRegistry) -> str:
+    specs = registry.schema()
+    if not specs:
+        return "No tools are available; reason from the provided indicators only."
+    lines = ["You may call these tools to gather context before answering:"]
+    for s in specs:
+        args = ", ".join(f"{k}: {v}" for k, v in s["args"].items())
+        lines.append(f"- {s['name']}({args}) — {s['description']}")
+    return "\n".join(lines)
+
+
+def _system_prompt(registry: ToolRegistry, max_steps: int) -> str:
+    return (
+        "You are a senior threat-hunting analyst agent. Your job is to turn a "
+        "security news item into testable hunting hypotheses with CTF-style "
+        "FALSIFICATION objectives (finite checks whose NULL result disproves the "
+        "hypothesis) and a Sigma detection rule per hypothesis.\n\n"
+        f"{_tools_block(registry)}\n\n"
+        f"You have a budget of {max_steps} tool calls. Use tools when they would "
+        "materially improve accuracy (e.g. confirm a CVE is exploited in the wild, "
+        "read the full article, resolve ATT&CK ids). Do not call a tool twice with "
+        "the same arguments.\n\n"
+        "On EVERY turn respond with a SINGLE JSON object, nothing else:\n"
+        '  to use a tool:  {"action":"use_tool","tool":"<name>","args":{...},"thought":"why"}\n'
+        '  when finished:  {"action":"final","hypotheses":[ ... ]}\n\n'
+        "The final hypotheses array MUST follow this schema and contain AT LEAST 3 "
+        "hypotheses, each with 3-5 objectives:\n"
+        '{"title","statement","rationale","confidence":"low|medium|high",'
+        '"mitre_attack":["T1190"],"sigma_rule":"<valid Sigma YAML as a string>",'
+        '"objectives":[{"title","falsification_criterion","data_sources":[...],'
+        '"suggested_query","mitre_attack":[...],"difficulty":"easy|medium|hard","points":100}]}'
+    )
+
+
+def _run_react(cfg: LLMConfig, agent_cfg: AgentConfig, registry: ToolRegistry,
+               article: Article, ext: Extraction) -> list[Hypothesis] | None:
+    messages = [
+        {"role": "system", "content": _system_prompt(registry, agent_cfg.max_steps)},
+        {"role": "user", "content": _build_user_prompt(article, ext)},
+    ]
+    tool_calls_used = 0
+    for _step in range(agent_cfg.max_steps + 2):  # +2 turns to allow a final after budget
+        content = chat_raw(cfg, messages)
+        obj = coerce_json(content)
+        action = str(obj.get("action", "")).lower()
+
+        if action == "use_tool" and tool_calls_used < agent_cfg.max_steps:
+            name = str(obj.get("tool", ""))
+            args = obj.get("args", {}) if isinstance(obj.get("args"), dict) else {}
+            result = registry.call(name, args)
+            tool_calls_used += 1
+            log.info("agent tool %s(%s) -> %s", name, args,
+                     "error" if "error" in result else "ok")
+            messages.append({"role": "assistant", "content": content})
+            messages.append({
+                "role": "user",
+                "content": f"TOOL RESULT ({name}): {json.dumps(result)[:4000]}",
+            })
+            continue
+
+        if action == "final" or "hypotheses" in obj:
+            return _parse_hypotheses(obj, article)
+
+        # Budget exhausted or malformed: demand a final next turn.
+        messages.append({"role": "assistant", "content": content})
+        messages.append({
+            "role": "user",
+            "content": 'Stop using tools. Respond now with {"action":"final","hypotheses":[...]} '
+                       "following the required schema.",
+        })
+    return None
+
+
+def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
+                         hyps: list[Hypothesis]) -> list[Hypothesis]:
+    rubric = (
+        "You are a hunt-quality reviewer. Assess the hypotheses below against: "
+        "(1) each hypothesis is specific and testable; (2) objectives are true "
+        "FALSIFICATION tests (null result disproves), not confirmations; (3) "
+        "ATT&CK ids are plausible; (4) the Sigma rule is syntactically valid. "
+        'Respond with JSON: {"verdict":"accept"|"revise","issues":["..."]}'
+    )
+    payload = json.dumps(
+        {"hypotheses": [
+            {"title": h.title, "statement": h.statement,
+             "objectives": [o.falsification_criterion for o in h.objectives],
+             "sigma_rule": h.sigma_rule[:600]}
+            for h in hyps
+        ]}, ensure_ascii=False,
+    )
+    try:
+        review = coerce_json(chat_raw(cfg, [
+            {"role": "system", "content": rubric},
+            {"role": "user", "content": payload},
+        ]))
+    except (ValueError, KeyError, OSError) as exc:
+        log.warning("critic failed (%s); keeping original", exc)
+        return hyps
+
+    if str(review.get("verdict", "accept")).lower() != "revise":
+        return hyps
+    issues = review.get("issues", [])
+    log.info("critic requested revision: %s", issues)
+
+    revise_prompt = (
+        "Revise your hunt package to fix these issues, keeping the same JSON "
+        f"schema (>=3 hypotheses, 3-5 falsification objectives each):\n{json.dumps(issues)}\n\n"
+        f"Original article + indicators:\n{_build_user_prompt(article, ext)}"
+    )
+    try:
+        revised = _parse_hypotheses(
+            coerce_json(chat_raw(cfg, [
+                {"role": "system", "content": "You are a senior threat-hunting analyst. "
+                                              "Return the corrected JSON only."},
+                {"role": "user", "content": revise_prompt},
+            ])),
+            article,
+        )
+    except (ValueError, KeyError, OSError) as exc:
+        log.warning("revision failed (%s); keeping original", exc)
+        return hyps
+    return revised if _meets_contract(revised) else hyps
+
+
+def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
+                     agent_cfg: AgentConfig, *, offline: bool) -> list[Hypothesis] | None:
+    if not cfg.is_usable or not agent_cfg.enabled:
+        return None
+    registry = ToolRegistry(
+        offline=offline, enabled=set(agent_cfg.tools), timeout=cfg.timeout / 3 or 10.0
+    )
+    try:
+        hyps = _run_react(cfg, agent_cfg, registry, article, ext)
+    except _NET_ERRORS as exc:
+        log.warning("agent transport error for '%s': %s", article.title[:60], exc)
+        return None
+    except (ValueError, KeyError, json.JSONDecodeError) as exc:
+        log.warning("agent produced unusable output for '%s': %s", article.title[:60], exc)
+        return None
+
+    if hyps is None or not _meets_contract(hyps):
+        log.warning("agent output failed contract for '%s'; falling back", article.title[:60])
+        return None
+
+    if agent_cfg.critic:
+        hyps = _critique_and_revise(cfg, article, ext, hyps)
+
+    log.info("agent produced %d hypotheses for '%s'", len(hyps), article.title[:60])
+    return hyps

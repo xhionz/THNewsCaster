@@ -92,46 +92,56 @@ def _build_user_prompt(article: Article, ext: Extraction) -> str:
     )
 
 
-def _post_chat(cfg: LLMConfig, system: str, user: str) -> str:
+def chat_raw(cfg: LLMConfig, messages: list[dict], *, json_mode: bool = True) -> str:
+    """Post an arbitrary multi-turn message list; return the reply content.
+
+    Shared by the single-shot generator and the agent loop.
+    """
     url = f"{cfg.base_url}/chat/completions"
     body = {
         "model": cfg.model,
-        "messages": [
-            {"role": "system", "content": system},
-            {"role": "user", "content": user},
-        ],
+        "messages": messages,
         "temperature": cfg.temperature,
         "max_tokens": cfg.max_tokens,
-        "response_format": {"type": "json_object"},
     }
+    if json_mode:
+        body["response_format"] = {"type": "json_object"}
     if cfg.disable_thinking:
         # vLLM/SGLang pass these through to the chat template; Qwen3 honours
         # enable_thinking=False. Harmless for servers that ignore it.
         body["chat_template_kwargs"] = {"enable_thinking": False}
-    data = json.dumps(body).encode("utf-8")
     headers = {"Content-Type": "application/json", "Accept": "application/json"}
     if cfg.api_key:
         headers["Authorization"] = f"Bearer {cfg.api_key}"
-    req = urllib.request.Request(url, data=data, headers=headers, method="POST")
-    try:
+
+    def _do(b: dict) -> dict:
+        req = urllib.request.Request(
+            url, data=json.dumps(b).encode("utf-8"), headers=headers, method="POST"
+        )
         with urllib.request.urlopen(req, timeout=cfg.timeout) as resp:
-            payload = json.loads(resp.read().decode("utf-8"))
+            return json.loads(resp.read().decode("utf-8"))
+
+    try:
+        payload = _do(body)
     except urllib.error.HTTPError as exc:
         # Some endpoints reject response_format; retry once without it.
-        if exc.code in (400, 422):
+        if exc.code in (400, 422) and "response_format" in body:
             log.warning("LLM rejected response_format (%s); retrying without it", exc.code)
             body.pop("response_format", None)
-            req2 = urllib.request.Request(
-                url, data=json.dumps(body).encode("utf-8"), headers=headers, method="POST"
-            )
-            with urllib.request.urlopen(req2, timeout=cfg.timeout) as resp:
-                payload = json.loads(resp.read().decode("utf-8"))
+            payload = _do(body)
         else:
             raise
     return payload["choices"][0]["message"]["content"]
 
 
-def _coerce_json(text: str) -> dict:
+def _post_chat(cfg: LLMConfig, system: str, user: str) -> str:
+    return chat_raw(
+        cfg,
+        [{"role": "system", "content": system}, {"role": "user", "content": user}],
+    )
+
+
+def coerce_json(text: str) -> dict:
     text = text.strip()
     text = _FENCE_RE.sub("", text).strip()
     try:
@@ -142,6 +152,9 @@ def _coerce_json(text: str) -> dict:
         if start != -1 and end != -1 and end > start:
             return json.loads(text[start : end + 1])
         raise
+
+
+_coerce_json = coerce_json  # backwards-compatible alias
 
 
 def _as_str_list(value) -> list[str]:

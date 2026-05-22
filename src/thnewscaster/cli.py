@@ -25,6 +25,7 @@ import sys
 from pathlib import Path
 
 from . import __version__
+from .agent import AgentConfig, generate_agentic
 from .config import AppConfig, LLMConfig
 from .feeds import collect, load_local_feed
 from .hypotheses import generate as generate_heuristic
@@ -61,6 +62,8 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     p.add_argument("--no-dedup", action="store_true", help="Disable the cross-run dedup/archive store")
     p.add_argument("--print", action="store_true", help="Also print Markdown to stdout")
     # LLM controls (override environment).
+    p.add_argument("--agent", action="store_true",
+                   help="Use the agentic generator (tools + critic) instead of single-shot LLM")
     p.add_argument("--llm", choices=["auto", "on", "off"], default="auto",
                    help="auto: use endpoint if configured; on: require it; off: heuristic only")
     p.add_argument("--llm-base-url", default=None, help="OpenAI-compatible base URL (…/v1)")
@@ -87,6 +90,8 @@ def _resolve_config(args: argparse.Namespace) -> AppConfig:
         cfg.write_markdown = False
     if args.no_dedup:
         cfg.dedup = False
+    if args.agent:
+        cfg.agent_enabled = True
 
     if args.llm_base_url is not None:
         cfg.llm.base_url = args.llm_base_url.rstrip("/")
@@ -102,14 +107,29 @@ def _resolve_config(args: argparse.Namespace) -> AppConfig:
 
 
 def _make_generator(cfg: AppConfig, log: logging.Logger):
-    """Return a generator: LLM-primary with heuristic fallback per article."""
+    """Return a generator with graceful per-article fallback.
+
+    Chain: agent (if enabled) -> single-shot LLM -> heuristic engine.
+    """
     if not cfg.llm.is_usable:
         log.info("LLM disabled or unconfigured; using heuristic generator")
         return generate_heuristic
 
-    log.info("LLM enabled: %s (model=%s)", cfg.llm.base_url, cfg.llm.model)
+    agent_cfg = AgentConfig(
+        enabled=cfg.agent_enabled, max_steps=cfg.agent_max_steps,
+        critic=cfg.agent_critic, tools=cfg.agent_tools,
+    )
+    if agent_cfg.enabled:
+        log.info("agent enabled: %s (model=%s, tools=%s, critic=%s)",
+                 cfg.llm.base_url, cfg.llm.model, ",".join(agent_cfg.tools), agent_cfg.critic)
+    else:
+        log.info("LLM enabled: %s (model=%s)", cfg.llm.base_url, cfg.llm.model)
 
     def _gen(article: Article, ext: Extraction) -> list[Hypothesis]:
+        if agent_cfg.enabled:
+            hyps = generate_agentic(article, ext, cfg.llm, agent_cfg, offline=cfg.offline)
+            if hyps is not None:
+                return hyps
         hyps = generate_llm(article, ext, cfg.llm)
         if hyps is None:
             return generate_heuristic(article, ext)

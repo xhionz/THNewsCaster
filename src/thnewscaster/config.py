@@ -96,6 +96,11 @@ class AppConfig:
     smtp_from: str = ""
     smtp_to: str = ""
     criteria: FocusCriteria = field(default_factory=FocusCriteria)
+    # Agentic generation
+    agent_enabled: bool = False
+    agent_max_steps: int = 4
+    agent_critic: bool = True
+    agent_tools: tuple[str, ...] = ("fetch_article", "lookup_cve", "lookup_mitre")
 
     @classmethod
     def from_env(cls) -> "AppConfig":
@@ -126,4 +131,12 @@ class AppConfig:
             smtp_from=os.environ.get("THNC_SMTP_FROM", "").strip(),
             smtp_to=os.environ.get("THNC_SMTP_TO", "").strip(),
             criteria=FocusCriteria.from_env(),
+            agent_enabled=_env_bool("THNC_AGENT_ENABLED", False),
+            agent_max_steps=_env_int("THNC_AGENT_MAX_STEPS", 4),
+            agent_critic=_env_bool("THNC_AGENT_CRITIC", True),
+            agent_tools=tuple(
+                t.strip() for t in os.environ.get(
+                    "THNC_AGENT_TOOLS", "fetch_article,lookup_cve,lookup_mitre"
+                ).split(",") if t.strip()
+            ),
         )

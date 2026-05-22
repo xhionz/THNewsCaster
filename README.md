@@ -146,6 +146,32 @@ The endpoint is asked for JSON; the result must satisfy the contract
 (≥3 hypotheses, each with 3–5 falsification objectives) or that article
 silently falls back to the heuristic generator.
 
+### Agentic mode
+
+For higher-quality output, enable the **agent** (`--agent` or
+`THNC_AGENT_ENABLED=true`). Instead of one shot, each kept article is run
+through a tool-using ReAct loop:
+
+```
+reason ─▶ call tool ─▶ observe ─▶ … ─▶ produce package ─▶ critic ─▶ (revise once)
+```
+
+- **Tools** (each fail-safe, auto-disabled offline): `fetch_article`
+  (read the full article body), `lookup_cve` (CISA KEV — confirms
+  in-the-wild/ransomware status, vendor, due date), `lookup_mitre`
+  (resolve ATT&CK ids/names, fully offline). Configure with
+  `THNC_AGENT_TOOLS`.
+- **Critic** reviews each package against a rubric (testable hypotheses,
+  true falsification objectives, plausible ATT&CK, valid Sigma) and forces
+  one revision if it's weak (`THNC_AGENT_CRITIC`).
+- **Portable**: uses a JSON action protocol, not native function-calling,
+  so it works on any OpenAI-compatible chat model (incl. local vLLM).
+- **Robust**: the chain is agent → single-shot LLM → heuristic; any failure
+  at one layer drops to the next, so a run never fails.
+
+The loop adds latency (multiple model calls per article), so keep
+`THNC_MAX_BRIEFINGS` modest when agentic mode is on.
+
 ---
 
 ## Daily run on Ubuntu (systemd)
