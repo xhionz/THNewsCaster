@@ -80,6 +80,14 @@ class HuntBriefing:
     extraction: Extraction
     hypotheses: list[Hypothesis]
     first_seen: str = ""  # ISO timestamp the article was first ingested
+    agent_trace: list[str] = field(default_factory=list)  # tool calls / critic steps
+
+
+@dataclass
+class GenResult:
+    """What a hypothesis generator returns: hypotheses plus an optional trace."""
+    hypotheses: list[Hypothesis]
+    trace: list[str] = field(default_factory=list)
 
 
 @dataclass
@@ -128,4 +136,5 @@ def briefing_from_dict(d: dict[str, Any]) -> HuntBriefing:
         extraction=Extraction(**e),
         hypotheses=[hypothesis_from_dict(h) for h in d.get("hypotheses", [])],
         first_seen=d.get("first_seen", ""),
+        agent_trace=list(d.get("agent_trace", [])),
     )

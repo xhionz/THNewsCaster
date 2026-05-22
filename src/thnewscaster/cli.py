@@ -30,7 +30,7 @@ from .config import AppConfig, LLMConfig
 from .feeds import collect, load_local_feed
 from .hypotheses import generate as generate_heuristic
 from .llm import generate_llm
-from .models import Article, Extraction, Hypothesis
+from .models import Article, Extraction, GenResult, Hypothesis
 from .package import render_markdown
 from .pipeline import run as run_pipeline
 from .relevance import DEFAULT_THRESHOLD
@@ -129,15 +129,17 @@ def _make_generator(cfg: AppConfig, log: logging.Logger):
     else:
         log.info("LLM enabled: %s (model=%s)", cfg.llm.base_url, cfg.llm.model)
 
-    def _gen(article: Article, ext: Extraction) -> list[Hypothesis]:
+    def _gen(article: Article, ext: Extraction) -> GenResult:
         if agent_cfg.enabled:
-            hyps = generate_agentic(article, ext, cfg.llm, agent_cfg, offline=cfg.offline)
+            trace: list[str] = []
+            hyps = generate_agentic(article, ext, cfg.llm, agent_cfg,
+                                    offline=cfg.offline, trace=trace)
             if hyps is not None:
-                return hyps
+                return GenResult(hypotheses=hyps, trace=trace)
         hyps = generate_llm(article, ext, cfg.llm)
         if hyps is None:
-            return generate_heuristic(article, ext)
-        return hyps
+            return GenResult(hypotheses=generate_heuristic(article, ext))
+        return GenResult(hypotheses=hyps, trace=["single-shot LLM (no agent loop)"])
 
     return _gen
 

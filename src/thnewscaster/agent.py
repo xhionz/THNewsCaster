@@ -76,7 +76,7 @@ def _system_prompt(registry: ToolRegistry, max_steps: int) -> str:
 
 
 def _run_react(cfg: LLMConfig, agent_cfg: AgentConfig, registry: ToolRegistry,
-               article: Article, ext: Extraction) -> list[Hypothesis] | None:
+               article: Article, ext: Extraction, trace: list[str]) -> list[Hypothesis] | None:
     messages = [
         {"role": "system", "content": _system_prompt(registry, agent_cfg.max_steps)},
         {"role": "user", "content": _build_user_prompt(article, ext)},
@@ -92,8 +92,9 @@ def _run_react(cfg: LLMConfig, agent_cfg: AgentConfig, registry: ToolRegistry,
             args = obj.get("args", {}) if isinstance(obj.get("args"), dict) else {}
             result = registry.call(name, args)
             tool_calls_used += 1
-            log.info("agent tool %s(%s) -> %s", name, args,
-                     "error" if "error" in result else "ok")
+            status = "error" if "error" in result else "ok"
+            log.info("agent tool %s(%s) -> %s", name, args, status)
+            trace.append(f"tool {name}({json.dumps(args)}) -> {status}")
             messages.append({"role": "assistant", "content": content})
             messages.append({
                 "role": "user",
@@ -115,7 +116,7 @@ def _run_react(cfg: LLMConfig, agent_cfg: AgentConfig, registry: ToolRegistry,
 
 
 def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
-                         hyps: list[Hypothesis]) -> list[Hypothesis]:
+                         hyps: list[Hypothesis], trace: list[str]) -> list[Hypothesis]:
     rubric = (
         "You are a hunt-quality reviewer. Assess the hypotheses below against: "
         "(1) each hypothesis is specific and testable; (2) objectives are true "
@@ -141,9 +142,11 @@ def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
         return hyps
 
     if str(review.get("verdict", "accept")).lower() != "revise":
+        trace.append("critic: accept")
         return hyps
     issues = review.get("issues", [])
     log.info("critic requested revision: %s", issues)
+    trace.append(f"critic: revise ({'; '.join(str(i) for i in issues)[:200]})")
 
     revise_prompt = (
         "Revise your hunt package to fix these issues, keeping the same JSON "
@@ -166,14 +169,16 @@ def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
 
 
 def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
-                     agent_cfg: AgentConfig, *, offline: bool) -> list[Hypothesis] | None:
+                     agent_cfg: AgentConfig, *, offline: bool,
+                     trace: list[str] | None = None) -> list[Hypothesis] | None:
     if not cfg.is_usable or not agent_cfg.enabled:
         return None
+    trace = trace if trace is not None else []
     registry = ToolRegistry(
         offline=offline, enabled=set(agent_cfg.tools), timeout=cfg.timeout / 3 or 10.0
     )
     try:
-        hyps = _run_react(cfg, agent_cfg, registry, article, ext)
+        hyps = _run_react(cfg, agent_cfg, registry, article, ext, trace)
     except _NET_ERRORS as exc:
         log.warning("agent transport error for '%s': %s", article.title[:60], exc)
         return None
@@ -186,7 +191,10 @@ def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
         return None
 
     if agent_cfg.critic:
-        hyps = _critique_and_revise(cfg, article, ext, hyps)
+        before = len(hyps)
+        hyps = _critique_and_revise(cfg, article, ext, hyps, trace)
+        if not any(t.startswith("critic:") for t in trace):
+            trace.append("critic: accept")
 
     log.info("agent produced %d hypotheses for '%s'", len(hyps), article.title[:60])
     return hyps

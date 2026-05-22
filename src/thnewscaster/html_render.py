@@ -176,6 +176,10 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
         parts.append(_badges(e.products, "product"))
         parts.append(_badges(e.sectors, "sector"))
 
+        if b.agent_trace:
+            steps = " &rarr; ".join(_h(s) for s in b.agent_trace)
+            parts.append(f"<div class='src'><strong>agent:</strong> {steps}</div>")
+
         if a.summary:
             parts.append(f"<p class='summary-text'>{_h(a.summary)}</p>")
 

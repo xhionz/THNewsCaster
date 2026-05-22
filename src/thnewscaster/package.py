@@ -10,7 +10,7 @@ from typing import Callable, Iterable
 from .extraction import extract
 from .hypotheses import generate
 from .criteria import FocusCriteria
-from .models import Article, Extraction, Hypothesis, HuntBriefing, HuntPackage
+from .models import Article, Extraction, GenResult, Hypothesis, HuntBriefing, HuntPackage
 from .relevance import DEFAULT_THRESHOLD, score
 from .sources import SOURCE_WEIGHTS
 
@@ -73,8 +73,15 @@ def build_package(
 
     briefings: list[HuntBriefing] = []
     for art, ext, sc in candidates:
-        hyps = hypothesis_generator(art, ext)
-        briefings.append(HuntBriefing(article=art, scoring=sc, extraction=ext, hypotheses=hyps))
+        result = hypothesis_generator(art, ext)
+        # Generators may return a bare list or a GenResult carrying a trace.
+        if isinstance(result, GenResult):
+            hyps, trace = result.hypotheses, result.trace
+        else:
+            hyps, trace = result, []
+        briefings.append(HuntBriefing(
+            article=art, scoring=sc, extraction=ext, hypotheses=hyps, agent_trace=trace,
+        ))
 
     pkg.briefings = briefings
     pkg.total_seen = total
@@ -115,6 +122,8 @@ def render_markdown(pkg: HuntPackage) -> str:
             lines.append(f"- **First seen**: {b.first_seen}")
         lines.append(f"- **Relevance score**: {b.scoring.score}")
         lines.append(f"- **Score rationale**: {', '.join(b.scoring.rationale)}")
+        if b.agent_trace:
+            lines.append(f"- **Agent trace**: {' → '.join(b.agent_trace)}")
         lines.append("")
         if a.summary:
             lines.append(f"> {a.summary}")

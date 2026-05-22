@@ -1,13 +1,13 @@
 {
   "type": "bundle",
-  "id": "bundle--8931013a-6e2c-4d5f-81bc-dfe91f49ba39",
+  "id": "bundle--c57a2b03-e0bb-4cc5-9452-8336c14f257e",
   "objects": [
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--d6e450bf-f4d2-49e1-8ede-41ea65727dfa",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "vulnerability--effa53ae-7041-4f6e-bafe-5c78a45a937b",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "CVE-2025-3104",
       "external_references": [
         {
@@ -19,9 +19,9 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--cc2f5191-8f61-43b5-a810-51ec54aa55ad",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "vulnerability--371e53d8-a684-464d-b7e6-7c8fb53bf3bd",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "CVE-2024-21762",
       "external_references": [
         {
@@ -33,13 +33,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1e1cb43c-582e-4d51-a9fc-271e26e7d0a5",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--77271778-85d0-4617-8f60-bdbc5480d277",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "IP addresses: 45.61.136.215",
       "pattern": "[ipv4-addr:value = '45.61.136.215']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -47,13 +47,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c66aec50-3e83-4433-b9c9-59d83cc3369c",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--ea963e4b-114b-453d-8c31-6f3a063670b8",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "IP addresses: 91.219.236.50",
       "pattern": "[ipv4-addr:value = '91.219.236.50']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -61,13 +61,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--efae9dca-7f23-4c64-b92b-34031cc0bfc0",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--9c770ba3-9fb1-4233-945c-58cb2d097402",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "IP addresses: 185.225.74.10",
       "pattern": "[ipv4-addr:value = '185.225.74.10']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -75,13 +75,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a69edfbf-6128-4376-a7db-94c1e5640002",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--12dbe642-f701-44fc-a686-b27c0f94cc0d",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "IP addresses: 193.143.1.205",
       "pattern": "[ipv4-addr:value = '193.143.1.205']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -89,13 +89,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ce23bba0-07ec-4105-9633-a3385ec1ebd2",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--b5f68ee5-eb06-40c7-b26f-a215dd9cc6b4",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "Domains: anonfiles.com",
       "pattern": "[domain-name:value = 'anonfiles.com']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -103,13 +103,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2f7a797b-0635-451b-9e73-3656750cd4ac",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--34b9800c-e6b3-43de-b5cb-054e4f92c79e",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "Domains: login-portal-update.com",
       "pattern": "[domain-name:value = 'login-portal-update.com']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -117,13 +117,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f7870ed3-9aea-455d-abf8-b41413e65c84",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--6fe6b2ce-e079-456f-af5d-46b066a3a3f2",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "Domains: mega.nz",
       "pattern": "[domain-name:value = 'mega.nz']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -131,13 +131,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--89f35482-ee83-494b-8a5b-fc15cf88a761",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--9c064d5c-55b6-44fd-90d3-50acbe5c0e2a",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "Domains: transfer.sh",
       "pattern": "[domain-name:value = 'transfer.sh']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -145,13 +145,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--55670e12-f953-435e-bf97-883491290523",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--de143f21-6725-4d5c-bf32-83563afc538c",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "SHA256 hashes: 3b8e7d9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d",
       "pattern": "[file:hashes.'SHA-256' = '3b8e7d9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
@@ -159,13 +159,13 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--afcd6eb3-d994-499b-805a-80847f88bb82",
-      "created": "2026-05-21T16:33:09.000Z",
-      "modified": "2026-05-21T16:33:09.000Z",
+      "id": "indicator--0fbf85fa-77b2-4735-bcc1-4d8548985671",
+      "created": "2026-05-22T01:46:04.000Z",
+      "modified": "2026-05-22T01:46:04.000Z",
       "name": "SHA256 hashes: 9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a",
       "pattern": "[file:hashes.'SHA-256' = '9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d7e6f5a']",
       "pattern_type": "stix",
-      "valid_from": "2026-05-21T16:33:09.000Z",
+      "valid_from": "2026-05-22T01:46:04.000Z",
       "labels": [
         "malicious-activity"
       ]
