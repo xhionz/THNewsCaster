@@ -31,35 +31,45 @@ def build_package(
     max_briefings: int | None = 25,
     hypothesis_generator: HypothesisGenerator = generate,
     criteria: FocusCriteria | None = None,
+    triage_selector: "Callable[[list[tuple[Article, Extraction]]], list[tuple[Article, Extraction, Scoring]]] | None" = None,
 ) -> HuntPackage:
     pkg = HuntPackage()
     source_kinds = source_kinds or {}
     total = 0
     skipped = 0
 
-    # First pass: score everything. Hypothesis generation (which may call an
-    # LLM, one request per article) is deferred until after we've ranked and
-    # capped, so we only pay that cost for the briefings we actually keep.
-    candidates: list[tuple[Article, Extraction, Scoring]] = []
-    for art in articles:
-        total += 1
-        ext = extract(art)
-        sc = score(ext, source_kind=_source_kind(art.source, source_kinds), threshold=threshold)
-        # Focus criteria can boost the score, drop excluded topics, or (in
-        # require mode) drop anything that doesn't match a focus value.
-        if criteria is not None:
-            if not criteria.apply(art, ext, sc):
+    if triage_selector is not None:
+        # Model-driven selection: extract everything, hand the (article, ext)
+        # pairs to the selector, which decides what's hunt-worthy, the ranking,
+        # and applies the cap. Hypothesis generation runs only on the result.
+        pairs = [(art, extract(art)) for art in articles]
+        total = len(pairs)
+        candidates = triage_selector(pairs)
+        skipped = total - len(candidates)
+    else:
+        # First pass: score everything. Hypothesis generation (which may call an
+        # LLM, one request per article) is deferred until after we've ranked and
+        # capped, so we only pay that cost for the briefings we actually keep.
+        candidates = []
+        for art in articles:
+            total += 1
+            ext = extract(art)
+            sc = score(ext, source_kind=_source_kind(art.source, source_kinds), threshold=threshold)
+            # Focus criteria can boost the score, drop excluded topics, or (in
+            # require mode) drop anything that doesn't match a focus value.
+            if criteria is not None:
+                if not criteria.apply(art, ext, sc):
+                    skipped += 1
+                    continue
+                sc.is_hunt_worthy = sc.score >= threshold
+            if not sc.is_hunt_worthy:
                 skipped += 1
                 continue
-            sc.is_hunt_worthy = sc.score >= threshold
-        if not sc.is_hunt_worthy:
-            skipped += 1
-            continue
-        candidates.append((art, ext, sc))
+            candidates.append((art, ext, sc))
 
-    candidates.sort(key=lambda c: c[2].score, reverse=True)
-    if max_briefings is not None:
-        candidates = candidates[:max_briefings]
+        candidates.sort(key=lambda c: c[2].score, reverse=True)
+        if max_briefings is not None:
+            candidates = candidates[:max_briefings]
 
     briefings: list[HuntBriefing] = []
     for art, ext, sc in candidates:

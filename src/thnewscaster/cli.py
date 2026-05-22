@@ -64,6 +64,8 @@ def _parse_args(argv: list[str] | None) -> argparse.Namespace:
     # LLM controls (override environment).
     p.add_argument("--agent", action="store_true",
                    help="Use the agentic generator (tools + critic) instead of single-shot LLM")
+    p.add_argument("--triage", action="store_true",
+                   help="Let the model decide which articles are hunt-worthy (batched triage)")
     p.add_argument("--llm", choices=["auto", "on", "off"], default="auto",
                    help="auto: use endpoint if configured; on: require it; off: heuristic only")
     p.add_argument("--llm-base-url", default=None, help="OpenAI-compatible base URL (…/v1)")
@@ -92,6 +94,8 @@ def _resolve_config(args: argparse.Namespace) -> AppConfig:
         cfg.dedup = False
     if args.agent:
         cfg.agent_enabled = True
+    if args.triage:
+        cfg.triage_enabled = True
 
     if args.llm_base_url is not None:
         cfg.llm.base_url = args.llm_base_url.rstrip("/")

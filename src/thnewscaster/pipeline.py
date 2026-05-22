@@ -28,6 +28,7 @@ from .notify import notify_new
 from .package import HypothesisGenerator, build_package, to_json, to_markdown
 from .html_render import write_site
 from .store import BriefingStore
+from .triage import TriageConfig, make_selector
 
 log = logging.getLogger(__name__)
 
@@ -63,12 +64,26 @@ def run(
             "focus criteria active (require=%s, exclude=%d terms)",
             cfg.criteria.require, len(cfg.criteria.exclude_keywords),
         )
+
+    selector = None
+    if cfg.triage_enabled and cfg.llm.is_usable:
+        log.info("model-driven triage enabled (batch=%d)", cfg.triage_batch_size)
+        selector = make_selector(
+            cfg.llm,
+            TriageConfig(enabled=True, batch_size=cfg.triage_batch_size),
+            cfg.criteria,
+            source_kinds=source_kinds,
+            threshold=cfg.threshold,
+            max_briefings=cfg.max_briefings,
+        )
+
     if not cfg.dedup or cfg.state_db is None:
         log.info("dedup disabled; building over all %d articles", len(articles))
         pkg = build_package(
             articles, source_kinds=source_kinds,
             threshold=cfg.threshold, max_briefings=cfg.max_briefings,
             hypothesis_generator=generator, criteria=cfg.criteria,
+            triage_selector=selector,
         )
         for b in pkg.briefings:
             b.first_seen = _now()
@@ -88,6 +103,7 @@ def run(
             new_articles, source_kinds=source_kinds,
             threshold=cfg.threshold, max_briefings=cfg.max_briefings,
             hypothesis_generator=generator, criteria=cfg.criteria,
+            triage_selector=selector,
         )
 
         when = _now()

@@ -101,6 +101,9 @@ class AppConfig:
     agent_max_steps: int = 4
     agent_critic: bool = True
     agent_tools: tuple[str, ...] = ("fetch_article", "lookup_cve", "lookup_mitre")
+    # Model-driven triage (the model decides what's hunt-worthy)
+    triage_enabled: bool = False
+    triage_batch_size: int = 20
 
     @classmethod
     def from_env(cls) -> "AppConfig":
@@ -139,4 +142,6 @@ class AppConfig:
                     "THNC_AGENT_TOOLS", "fetch_article,lookup_cve,lookup_mitre"
                 ).split(",") if t.strip()
             ),
+            triage_enabled=_env_bool("THNC_TRIAGE_ENABLED", False),
+            triage_batch_size=_env_int("THNC_TRIAGE_BATCH_SIZE", 20),
         )

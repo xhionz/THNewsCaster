@@ -172,6 +172,28 @@ reason ─▶ call tool ─▶ observe ─▶ … ─▶ produce package ─▶ 
 The loop adds latency (multiple model calls per article), so keep
 `THNC_MAX_BRIEFINGS` modest when agentic mode is on.
 
+### Model-driven triage
+
+By default a heuristic relevance score decides which articles are
+hunt-worthy. Enable **triage** (`--triage` or `THNC_TRIAGE_ENABLED=true`)
+to hand that decision to the model: it receives the new articles (title +
+summary + extracted signals) in batched calls and returns, per article,
+whether it's worth hunting and a 0–100 priority. Selection keeps the
+hunt-worthy ones, ranked by the model's priority.
+
+- **Efficient**: a few batched calls (`THNC_TRIAGE_BATCH_SIZE`), not one
+  per article.
+- **Bounded**: `THNC_MAX_BRIEFINGS` is still a hard ceiling on how many get
+  the full hunt — a busy news day can't blow up the run.
+- **Operator intent respected**: `THNC_EXCLUDE_KEYWORDS` / focus `require`
+  still hard-filter first; focus priorities are passed to the model as
+  guidance.
+- **Fail-safe**: if the endpoint errors, it falls back to heuristic scoring.
+
+With `--triage` and `--agent` both on, the model makes essentially all the
+decisions — what to investigate and how — while Python only orchestrates,
+caps, persists, and publishes.
+
 ---
 
 ## Daily run on Ubuntu (systemd)
