@@ -63,6 +63,14 @@ with `--no-dedup` / `THNC_DEDUP=false`.
 **Notifications.** Optionally ping a Slack/webhook and/or send SMTP email
 about new briefings at or above `THNC_NOTIFY_MIN_SCORE`.
 
+**Focus criteria.** Tell THNewsCaster what you care about across sectors,
+threat actors, malware, vectors, products, and free-text keywords. Matches
+**boost** an article's score (`THNC_FOCUS_*` + `THNC_FOCUS_BOOST`) so
+relevant stories rank higher; set `THNC_FOCUS_REQUIRE=true` to turn those
+lists into a strict allowlist (drop everything that matches none).
+`THNC_EXCLUDE_KEYWORDS` always drops matching articles. See
+`deploy/thnewscaster.env.example` for the full list.
+
 ---
 
 ## Install / run

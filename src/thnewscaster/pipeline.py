@@ -58,12 +58,17 @@ def run(
     source_kinds: dict[str, str],
     generator: HypothesisGenerator,
 ) -> HuntPackage:
+    if cfg.criteria.active:
+        log.info(
+            "focus criteria active (require=%s, exclude=%d terms)",
+            cfg.criteria.require, len(cfg.criteria.exclude_keywords),
+        )
     if not cfg.dedup or cfg.state_db is None:
         log.info("dedup disabled; building over all %d articles", len(articles))
         pkg = build_package(
             articles, source_kinds=source_kinds,
             threshold=cfg.threshold, max_briefings=cfg.max_briefings,
-            hypothesis_generator=generator,
+            hypothesis_generator=generator, criteria=cfg.criteria,
         )
         for b in pkg.briefings:
             b.first_seen = _now()
@@ -82,7 +87,7 @@ def run(
         new_pkg = build_package(
             new_articles, source_kinds=source_kinds,
             threshold=cfg.threshold, max_briefings=cfg.max_briefings,
-            hypothesis_generator=generator,
+            hypothesis_generator=generator, criteria=cfg.criteria,
         )
 
         when = _now()

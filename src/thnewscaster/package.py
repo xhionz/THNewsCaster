@@ -9,6 +9,7 @@ from typing import Callable, Iterable
 
 from .extraction import extract
 from .hypotheses import generate
+from .criteria import FocusCriteria
 from .models import Article, Extraction, Hypothesis, HuntBriefing, HuntPackage
 from .relevance import DEFAULT_THRESHOLD, score
 from .sources import SOURCE_WEIGHTS
@@ -29,6 +30,7 @@ def build_package(
     threshold: int = DEFAULT_THRESHOLD,
     max_briefings: int | None = 25,
     hypothesis_generator: HypothesisGenerator = generate,
+    criteria: FocusCriteria | None = None,
 ) -> HuntPackage:
     pkg = HuntPackage()
     source_kinds = source_kinds or {}
@@ -43,6 +45,13 @@ def build_package(
         total += 1
         ext = extract(art)
         sc = score(ext, source_kind=_source_kind(art.source, source_kinds), threshold=threshold)
+        # Focus criteria can boost the score, drop excluded topics, or (in
+        # require mode) drop anything that doesn't match a focus value.
+        if criteria is not None:
+            if not criteria.apply(art, ext, sc):
+                skipped += 1
+                continue
+            sc.is_hunt_worthy = sc.score >= threshold
         if not sc.is_hunt_worthy:
             skipped += 1
             continue

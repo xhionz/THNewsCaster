@@ -7,9 +7,10 @@ present, win over the environment.
 from __future__ import annotations
 
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 
+from .criteria import FocusCriteria
 from .relevance import DEFAULT_THRESHOLD
 
 
@@ -94,6 +95,7 @@ class AppConfig:
     smtp_password: str = ""
     smtp_from: str = ""
     smtp_to: str = ""
+    criteria: FocusCriteria = field(default_factory=FocusCriteria)
 
     @classmethod
     def from_env(cls) -> "AppConfig":
@@ -123,4 +125,5 @@ class AppConfig:
             smtp_password=os.environ.get("THNC_SMTP_PASSWORD", ""),
             smtp_from=os.environ.get("THNC_SMTP_FROM", "").strip(),
             smtp_to=os.environ.get("THNC_SMTP_TO", "").strip(),
+            criteria=FocusCriteria.from_env(),
         )
