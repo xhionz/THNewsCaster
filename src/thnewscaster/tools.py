@@ -43,6 +43,29 @@ def _load_kev(timeout: float) -> dict[str, dict]:
     return _kev_cache
 
 
+def kev_enrich(cves: list[str], *, offline: bool, timeout: float = 10.0) -> dict[str, dict]:
+    """Pre-fetch CISA KEV status for already-extracted CVEs.
+
+    Shared by triage and the hunt agent so they get authoritative
+    in-the-wild/ransomware status without spending a tool round-trip. The KEV
+    catalog is fetched once and cached, so enriching many articles is cheap.
+    """
+    if offline or not cves:
+        return {}
+    kev = _load_kev(timeout)
+    out: dict[str, dict] = {}
+    for c in cves:
+        entry = kev.get(c.upper())
+        if entry:
+            out[c.upper()] = {
+                "known_exploited": True,
+                "known_ransomware_use": entry.get("knownRansomwareCampaignUse"),
+                "date_added": entry.get("dateAdded"),
+                "product": entry.get("product"),
+            }
+    return out
+
+
 class ToolRegistry:
     """Holds the enabled tools and dispatches calls by name."""
 

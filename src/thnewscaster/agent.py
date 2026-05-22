@@ -21,6 +21,7 @@ from .config import LLMConfig
 
 _NET_ERRORS = (urllib.error.URLError, TimeoutError, OSError)
 from .llm import (
+    _SCHEMA_HINT,
     _build_user_prompt,
     _meets_contract,
     _parse_hypotheses,
@@ -28,7 +29,7 @@ from .llm import (
     coerce_json,
 )
 from .models import Article, Extraction, Hypothesis
-from .tools import ToolRegistry
+from .tools import ToolRegistry, kev_enrich
 
 log = logging.getLogger(__name__)
 
@@ -65,21 +66,18 @@ def _system_prompt(registry: ToolRegistry, max_steps: int) -> str:
         "the same arguments.\n\n"
         "On EVERY turn respond with a SINGLE JSON object, nothing else:\n"
         '  to use a tool:  {"action":"use_tool","tool":"<name>","args":{...},"thought":"why"}\n'
-        '  when finished:  {"action":"final","hypotheses":[ ... ]}\n\n'
-        "The final hypotheses array MUST follow this schema and contain AT LEAST 3 "
-        "hypotheses, each with 3-5 objectives:\n"
-        '{"title","statement","rationale","confidence":"low|medium|high",'
-        '"mitre_attack":["T1190"],"sigma_rule":"<valid Sigma YAML as a string>",'
-        '"objectives":[{"title","falsification_criterion","data_sources":[...],'
-        '"suggested_query","mitre_attack":[...],"difficulty":"easy|medium|hard","points":100}]}'
+        '  when finished:  {"action":"final", ...the hunt package...}\n\n'
+        "When finished, the JSON object must also carry the fields described here "
+        f"(use the 'hypotheses' array exactly as specified):\n{_SCHEMA_HINT}"
     )
 
 
 def _run_react(cfg: LLMConfig, agent_cfg: AgentConfig, registry: ToolRegistry,
-               article: Article, ext: Extraction, trace: list[str]) -> list[Hypothesis] | None:
+               article: Article, ext: Extraction, trace: list[str],
+               enrichment: dict) -> list[Hypothesis] | None:
     messages = [
         {"role": "system", "content": _system_prompt(registry, agent_cfg.max_steps)},
-        {"role": "user", "content": _build_user_prompt(article, ext)},
+        {"role": "user", "content": _build_user_prompt(article, ext, enrichment)},
     ]
     tool_calls_used = 0
     for _step in range(agent_cfg.max_steps + 2):  # +2 turns to allow a final after budget
@@ -116,7 +114,8 @@ def _run_react(cfg: LLMConfig, agent_cfg: AgentConfig, registry: ToolRegistry,
 
 
 def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
-                         hyps: list[Hypothesis], trace: list[str]) -> list[Hypothesis]:
+                         hyps: list[Hypothesis], trace: list[str],
+                         enrichment: dict) -> list[Hypothesis]:
     rubric = (
         "You are a hunt-quality reviewer. Assess the hypotheses below against: "
         "(1) each hypothesis is specific and testable; (2) objectives are true "
@@ -139,6 +138,7 @@ def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
         ]))
     except (ValueError, KeyError, OSError) as exc:
         log.warning("critic failed (%s); keeping original", exc)
+        trace.append("critic: skipped (error)")
         return hyps
 
     if str(review.get("verdict", "accept")).lower() != "revise":
@@ -151,7 +151,7 @@ def _critique_and_revise(cfg: LLMConfig, article: Article, ext: Extraction,
     revise_prompt = (
         "Revise your hunt package to fix these issues, keeping the same JSON "
         f"schema (>=3 hypotheses, 3-5 falsification objectives each):\n{json.dumps(issues)}\n\n"
-        f"Original article + indicators:\n{_build_user_prompt(article, ext)}"
+        f"Original article + indicators:\n{_build_user_prompt(article, ext, enrichment)}"
     )
     try:
         revised = _parse_hypotheses(
@@ -174,11 +174,16 @@ def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
     if not cfg.is_usable or not agent_cfg.enabled:
         return None
     trace = trace if trace is not None else []
-    registry = ToolRegistry(
-        offline=offline, enabled=set(agent_cfg.tools), timeout=cfg.timeout / 3 or 10.0
-    )
+    timeout = cfg.timeout / 3 or 10.0
+    registry = ToolRegistry(offline=offline, enabled=set(agent_cfg.tools), timeout=timeout)
+    # Pre-fetch KEV for extracted CVEs so the agent doesn't burn a tool turn
+    # confirming exploitation it could have been handed up front.
+    enrichment = kev_enrich(ext.cves, offline=offline, timeout=timeout)
+    if enrichment:
+        trace.append(f"kev: {len(enrichment)} CVE(s) in CISA KEV")
+
     try:
-        hyps = _run_react(cfg, agent_cfg, registry, article, ext, trace)
+        hyps = _run_react(cfg, agent_cfg, registry, article, ext, trace, enrichment)
     except _NET_ERRORS as exc:
         log.warning("agent transport error for '%s': %s", article.title[:60], exc)
         return None
@@ -191,10 +196,7 @@ def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
         return None
 
     if agent_cfg.critic:
-        before = len(hyps)
-        hyps = _critique_and_revise(cfg, article, ext, hyps, trace)
-        if not any(t.startswith("critic:") for t in trace):
-            trace.append("critic: accept")
+        hyps = _critique_and_revise(cfg, article, ext, hyps, trace, enrichment)
 
     log.info("agent produced %d hypotheses for '%s'", len(hyps), article.title[:60])
     return hyps

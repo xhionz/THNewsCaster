@@ -67,7 +67,8 @@ The sigma_rule must be syntactically valid Sigma YAML embedded as a JSON string.
 """
 
 
-def _build_user_prompt(article: Article, ext: Extraction) -> str:
+def _build_user_prompt(article: Article, ext: Extraction,
+                       enrichment: dict | None = None) -> str:
     signals = {
         "cves": ext.cves,
         "threat_actors": ext.threat_actors,
@@ -82,12 +83,19 @@ def _build_user_prompt(article: Article, ext: Extraction) -> str:
         "sha256": ext.hashes_sha256,
     }
     signals = {k: v for k, v in signals.items() if v}
+    kev_block = ""
+    if enrichment:
+        kev_block = (
+            "CISA KEV STATUS (authoritative, pre-fetched — no need to look these up): "
+            f"{json.dumps(enrichment, ensure_ascii=False)}\n\n"
+        )
     return (
         f"ARTICLE TITLE: {article.title}\n"
         f"SOURCE: {article.source}\n"
         f"PUBLISHED: {article.published}\n"
         f"SUMMARY: {article.summary}\n\n"
         f"EXTRACTED INDICATORS (JSON): {json.dumps(signals, ensure_ascii=False)}\n\n"
+        f"{kev_block}"
         f"{_SCHEMA_HINT}"
     )
 

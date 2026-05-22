@@ -22,6 +22,7 @@ from .criteria import FocusCriteria
 from .llm import chat_raw, coerce_json
 from .models import Article, Extraction, Scoring
 from .relevance import score as heuristic_score
+from .tools import kev_enrich
 
 log = logging.getLogger(__name__)
 
@@ -73,11 +74,16 @@ def _focus_hint(criteria: FocusCriteria) -> str:
     return "Operator priorities (favour these): " + "; ".join(bits)
 
 
-def _triage_batch(llm_cfg: LLMConfig, batch: list[Pair], focus_hint: str) -> dict[str, dict]:
-    items = [
-        {"id": a.id, "title": a.title, "summary": a.summary[:600], "signals": _signals(e)}
-        for a, e in batch
-    ]
+def _triage_batch(llm_cfg: LLMConfig, batch: list[Pair], focus_hint: str,
+                  *, offline: bool) -> dict[str, dict]:
+    items = []
+    for a, e in batch:
+        item = {"id": a.id, "title": a.title, "summary": a.summary[:600], "signals": _signals(e)}
+        kev = kev_enrich(e.cves, offline=offline, timeout=llm_cfg.timeout / 3 or 10.0)
+        if kev:
+            # Actively-exploited CVEs are the strongest hunt signal.
+            item["cisa_kev"] = kev
+        items.append(item)
     user = f"{focus_hint}\n\nITEMS (JSON):\n{json.dumps(items, ensure_ascii=False)}"
     content = chat_raw(llm_cfg, [
         {"role": "system", "content": _SYSTEM},
@@ -113,6 +119,7 @@ def make_selector(
     source_kinds: dict[str, str],
     threshold: int,
     max_briefings: int,
+    offline: bool = False,
 ) -> Selector:
     def _select(pairs: list[Pair]) -> list[Candidate]:
         # Operator hard rules first: exclude_keywords / require still apply.
@@ -132,7 +139,7 @@ def make_selector(
         try:
             for i in range(0, len(kept), triage_cfg.batch_size):
                 batch = kept[i : i + triage_cfg.batch_size]
-                decisions.update(_triage_batch(llm_cfg, batch, focus_hint))
+                decisions.update(_triage_batch(llm_cfg, batch, focus_hint, offline=offline))
             log.info("model triage decided on %d/%d articles", len(decisions), len(kept))
         except Exception as exc:  # noqa: BLE001 — any transport/parse failure
             log.warning("model triage failed (%s); falling back to heuristic scoring", exc)
