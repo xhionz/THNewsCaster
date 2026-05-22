@@ -121,7 +121,8 @@ def _make_generator(cfg: AppConfig, log: logging.Logger):
 
     agent_cfg = AgentConfig(
         enabled=cfg.agent_enabled, max_steps=cfg.agent_max_steps,
-        critic=cfg.agent_critic, tools=cfg.agent_tools,
+        critic=cfg.agent_critic, critic_always=cfg.agent_critic_always,
+        tools=cfg.agent_tools,
     )
     if agent_cfg.enabled:
         log.info("agent enabled: %s (model=%s, tools=%s, critic=%s)",

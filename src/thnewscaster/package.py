@@ -32,6 +32,7 @@ def build_package(
     hypothesis_generator: HypothesisGenerator = generate,
     criteria: FocusCriteria | None = None,
     triage_selector: "Callable[[list[tuple[Article, Extraction]]], list[tuple[Article, Extraction, Scoring]]] | None" = None,
+    concurrency: int = 1,
 ) -> HuntPackage:
     pkg = HuntPackage()
     source_kinds = source_kinds or {}
@@ -71,9 +72,18 @@ def build_package(
         if max_briefings is not None:
             candidates = candidates[:max_briefings]
 
+    # Generation is the expensive part (LLM/agent calls). Optionally run it
+    # across briefings concurrently — useful when the endpoint batches requests
+    # (e.g. vLLM continuous batching). Order is preserved.
+    if concurrency > 1 and len(candidates) > 1:
+        from concurrent.futures import ThreadPoolExecutor
+        with ThreadPoolExecutor(max_workers=concurrency) as ex:
+            results = list(ex.map(lambda c: hypothesis_generator(c[0], c[1]), candidates))
+    else:
+        results = [hypothesis_generator(art, ext) for art, ext, _ in candidates]
+
     briefings: list[HuntBriefing] = []
-    for art, ext, sc in candidates:
-        result = hypothesis_generator(art, ext)
+    for (art, ext, sc), result in zip(candidates, results):
         # Generators may return a bare list or a GenResult carrying a trace.
         if isinstance(result, GenResult):
             hyps, trace = result.hypotheses, result.trace

@@ -86,10 +86,26 @@ def test_agent_critic_can_force_revision(monkeypatch):
     ]
     monkeypatch.setattr(agent, "chat_raw", lambda *a, **k: scripted.pop(0))
     art = _article()
+    # Force the critic to run even though the output is high-confidence.
     hyps = generate_agentic(art, extract(art), _cfg(),
-                            AgentConfig(enabled=True, critic=True, max_steps=2), offline=False)
+                            AgentConfig(enabled=True, critic=True, critic_always=True,
+                                        max_steps=2), offline=False)
     assert hyps is not None and len(hyps) == 3
     assert not scripted, "all scripted turns (final, critic, revision) should be consumed"
+
+
+def test_critic_skipped_when_all_high_confidence(monkeypatch):
+    # Only the final is scripted; if the critic tried to run, pop() would fail.
+    scripted = [_final_payload()]
+    monkeypatch.setattr(agent, "chat_raw", lambda *a, **k: scripted.pop(0))
+    art = _article()
+    trace: list[str] = []
+    hyps = generate_agentic(art, extract(art), _cfg(),
+                            AgentConfig(enabled=True, critic=True, critic_always=False),
+                            offline=False, trace=trace)
+    assert hyps is not None and len(hyps) == 3
+    assert scripted == [], "the single final turn should be consumed, critic skipped"
+    assert any("skipped (high confidence)" in t for t in trace)
 
 
 def test_agent_disabled_returns_none():

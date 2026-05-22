@@ -84,7 +84,7 @@ def run(
             articles, source_kinds=source_kinds,
             threshold=cfg.threshold, max_briefings=cfg.max_briefings,
             hypothesis_generator=generator, criteria=cfg.criteria,
-            triage_selector=selector,
+            triage_selector=selector, concurrency=cfg.concurrency,
         )
         for b in pkg.briefings:
             b.first_seen = _now()
@@ -104,7 +104,7 @@ def run(
             new_articles, source_kinds=source_kinds,
             threshold=cfg.threshold, max_briefings=cfg.max_briefings,
             hypothesis_generator=generator, criteria=cfg.criteria,
-            triage_selector=selector,
+            triage_selector=selector, concurrency=cfg.concurrency,
         )
 
         when = _now()

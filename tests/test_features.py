@@ -107,6 +107,26 @@ def test_pipeline_dedup_second_run_processes_nothing_new(tmp_path: Path) -> None
     assert len(pkg2.briefings) == len(pkg1.briefings)
 
 
+def test_concurrent_generation_preserves_order_and_count() -> None:
+    arts = _arts()
+
+    # Tag each briefing's first hypothesis with the article id so we can verify
+    # results line up with their source article regardless of thread timing.
+    def tagging_gen(article, ext):
+        hyps = gen_heuristic(article, ext)
+        hyps[0].title = f"TAG::{article.id}::{hyps[0].title}"
+        return hyps
+
+    seq = build_package(arts, hypothesis_generator=tagging_gen, concurrency=1)
+    par = build_package(arts, hypothesis_generator=tagging_gen, concurrency=4)
+    assert len(par.briefings) == len(seq.briefings)
+    seq_ids = [b.article.id for b in seq.briefings]
+    par_ids = [b.article.id for b in par.briefings]
+    assert par_ids == seq_ids, "concurrency must preserve briefing order"
+    for b in par.briefings:
+        assert b.hypotheses[0].title.startswith(f"TAG::{b.article.id}::")
+
+
 def test_pipeline_no_dedup_builds_over_all(tmp_path: Path) -> None:
     cfg = _cfg(tmp_path)
     cfg.dedup = False

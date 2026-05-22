@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import logging
 import re
+import threading
 import urllib.error
 import urllib.request
 
@@ -20,6 +21,7 @@ log = logging.getLogger(__name__)
 
 _CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 _kev_cache: dict[str, dict] | None = None  # cveID -> entry, loaded once per process
+_kev_lock = threading.Lock()
 _CVE_RE = re.compile(r"^CVE-\d{4}-\d{4,7}$", re.IGNORECASE)
 
 
@@ -27,20 +29,25 @@ def _load_kev(timeout: float) -> dict[str, dict]:
     global _kev_cache
     if _kev_cache is not None:
         return _kev_cache
-    _kev_cache = {}
-    raw = fetch_url(_CISA_KEV_URL, timeout=timeout)
-    if raw is None:
+    # Build a local dict and publish it atomically, so concurrent callers in
+    # parallel briefing generation don't double-fetch or see a half-filled cache.
+    with _kev_lock:
+        if _kev_cache is not None:
+            return _kev_cache
+        loaded: dict[str, dict] = {}
+        raw = fetch_url(_CISA_KEV_URL, timeout=timeout)
+        if raw is not None:
+            try:
+                data = json.loads(raw.decode("utf-8"))
+                for v in data.get("vulnerabilities", []):
+                    cid = v.get("cveID", "").upper()
+                    if cid:
+                        loaded[cid] = v
+                log.info("loaded %d CISA KEV entries", len(loaded))
+            except (json.JSONDecodeError, AttributeError) as exc:
+                log.warning("failed to parse CISA KEV: %s", exc)
+        _kev_cache = loaded
         return _kev_cache
-    try:
-        data = json.loads(raw.decode("utf-8"))
-        for v in data.get("vulnerabilities", []):
-            cid = v.get("cveID", "").upper()
-            if cid:
-                _kev_cache[cid] = v
-        log.info("loaded %d CISA KEV entries", len(_kev_cache))
-    except (json.JSONDecodeError, AttributeError) as exc:
-        log.warning("failed to parse CISA KEV: %s", exc)
-    return _kev_cache
 
 
 def kev_enrich(cves: list[str], *, offline: bool, timeout: float = 10.0) -> dict[str, dict]:

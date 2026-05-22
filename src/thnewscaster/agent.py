@@ -39,6 +39,7 @@ class AgentConfig:
     enabled: bool = False
     max_steps: int = 4          # max tool-calling turns before forcing a final
     critic: bool = True         # run the critic + (one) revision pass
+    critic_always: bool = False  # False = only critique low/medium-confidence output
     tools: tuple[str, ...] = ("fetch_article", "lookup_cve", "lookup_mitre")
 
 
@@ -196,7 +197,13 @@ def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
         return None
 
     if agent_cfg.critic:
-        hyps = _critique_and_revise(cfg, article, ext, hyps, trace, enrichment)
+        # Confidence-gated: skip the critic round-trip when the agent is already
+        # confident across the board (saves ~1-2 model calls/article).
+        all_high = hyps and all(h.confidence == "high" for h in hyps)
+        if all_high and not agent_cfg.critic_always:
+            trace.append("critic: skipped (high confidence)")
+        else:
+            hyps = _critique_and_revise(cfg, article, ext, hyps, trace, enrichment)
 
     log.info("agent produced %d hypotheses for '%s'", len(hyps), article.title[:60])
     return hyps

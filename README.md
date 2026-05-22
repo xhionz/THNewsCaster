@@ -170,7 +170,14 @@ reason ─▶ call tool ─▶ observe ─▶ … ─▶ produce package ─▶ 
   at one layer drops to the next, so a run never fails.
 
 The loop adds latency (multiple model calls per article), so keep
-`THNC_MAX_BRIEFINGS` modest when agentic mode is on.
+`THNC_MAX_BRIEFINGS` modest when agentic mode is on. Two efficiency knobs:
+
+- **Confidence-gated critic** (default): the critic is skipped when the
+  agent's output is all high-confidence, saving a call. Force it on with
+  `THNC_AGENT_CRITIC_ALWAYS=true`.
+- **Concurrency** (`THNC_CONCURRENCY`): generate briefings in parallel —
+  cuts wall-clock time when the endpoint batches requests (e.g. vLLM
+  continuous batching). KEV/state access is thread-safe; order is preserved.
 
 ### Model-driven triage
 

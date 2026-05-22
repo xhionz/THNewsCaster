@@ -101,9 +101,12 @@ class AppConfig:
     agent_max_steps: int = 4
     agent_critic: bool = True
     agent_tools: tuple[str, ...] = ("fetch_article", "lookup_cve", "lookup_mitre")
+    agent_critic_always: bool = False  # False = only critique low/medium-confidence output
     # Model-driven triage (the model decides what's hunt-worthy)
     triage_enabled: bool = False
     triage_batch_size: int = 20
+    # Generate briefings concurrently (helps if the endpoint batches requests)
+    concurrency: int = 1
 
     @classmethod
     def from_env(cls) -> "AppConfig":
@@ -142,6 +145,8 @@ class AppConfig:
                     "THNC_AGENT_TOOLS", "fetch_article,lookup_cve,lookup_mitre"
                 ).split(",") if t.strip()
             ),
+            agent_critic_always=_env_bool("THNC_AGENT_CRITIC_ALWAYS", False),
             triage_enabled=_env_bool("THNC_TRIAGE_ENABLED", False),
             triage_batch_size=_env_int("THNC_TRIAGE_BATCH_SIZE", 20),
+            concurrency=max(1, _env_int("THNC_CONCURRENCY", 1)),
         )
