@@ -71,10 +71,15 @@ main{max-width:1240px;margin:0 auto;padding:20px 24px 60px}
   overflow:hidden;border-left:4px solid var(--border)}
 .card.crit{border-left-color:var(--crit)} .card.high{border-left-color:var(--high)}
 .card.med{border-left-color:var(--med)} .card.low{border-left-color:var(--low)}
-.card>summary{list-style:none;cursor:pointer;padding:15px 16px;display:block}
+.card>summary{list-style:none;cursor:pointer;padding:15px 16px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:6px}
 .card>summary::-webkit-details-marker{display:none}
-.card .toprow{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px}
-.pill{font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.04em}
+.pill{order:1;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px;letter-spacing:.04em}
+.score{order:2;margin-left:auto}
+.card h2{order:3;flex-basis:100%}
+.glance{order:4;flex-basis:100%}
+.chips{order:5;flex-basis:100%}
+.foot{order:6;flex-basis:100%}
 .pill.crit{background:rgba(255,93,108,.16);color:var(--crit)}
 .pill.high{background:rgba(255,159,67,.16);color:var(--high)}
 .pill.med{background:rgba(255,216,102,.16);color:var(--med)}
@@ -106,6 +111,17 @@ code,pre{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:var(
 pre{padding:9px 11px;overflow-x:auto;white-space:pre-wrap}
 details.sub>summary{cursor:pointer;color:var(--accent);font-size:12px;margin:6px 0}
 .trace{color:var(--muted);font-size:11.5px;margin:8px 0 0}
+/* compact one-line-per-briefing view */
+main.compact .grid{grid-template-columns:1fr;gap:5px}
+main.compact .card{border-radius:8px}
+main.compact .card>summary{padding:8px 12px;flex-wrap:nowrap;gap:10px}
+main.compact .card h2{order:2;flex:1;flex-basis:auto;margin:0;font-size:14px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+main.compact .score{order:3}
+main.compact .glance,main.compact .chips,main.compact .foot{display:none}
+.btn{background:var(--panel);color:var(--ink);border:1px solid var(--border);
+  padding:9px 12px;border-radius:9px;font:inherit;cursor:pointer}
+.btn.on{background:var(--accent);color:#06203a;border-color:var(--accent);font-weight:700}
 .hidden{display:none!important}
 footer{color:var(--muted);font-size:12px;padding:30px 24px;text-align:center;
   border-top:1px solid var(--border)}
@@ -114,13 +130,17 @@ footer{color:var(--muted);font-size:12px;padding:30px 24px;text-align:center;
 _JS = """
 (function(){
   const q=document.getElementById('q'), ms=document.getElementById('minScore');
+  const crit=document.getElementById('critOnly'), view=document.getElementById('viewToggle');
+  const main=document.querySelector('main');
   const cards=[...document.querySelectorAll('.card')];
   const sections=[...document.querySelectorAll('.tier-section')];
+  let critOnly=false;
   function apply(){
     const n=(q.value||'').toLowerCase().trim(), m=parseInt(ms.value||'0',10);
     let shown=0;
     cards.forEach(c=>{
-      const ok=(!n||(c.dataset.haystack||'').includes(n))&&(parseInt(c.dataset.score||'0',10)>=m);
+      let ok=(!n||(c.dataset.haystack||'').includes(n))&&(parseInt(c.dataset.score||'0',10)>=m);
+      if(critOnly && c.dataset.tier!=='crit') ok=false;
       c.classList.toggle('hidden',!ok); if(ok)shown++;
     });
     sections.forEach(s=>{
@@ -129,6 +149,15 @@ _JS = """
     });
     document.getElementById('shown').textContent=shown;
   }
+  crit.addEventListener('click',()=>{critOnly=!critOnly;crit.classList.toggle('on',critOnly);apply();});
+  view.addEventListener('click',()=>{
+    const compact=main.classList.toggle('compact');
+    view.classList.toggle('on',compact);
+    view.textContent=compact?'Card view':'Compact view';
+    try{localStorage.setItem('thnc_compact',compact?'1':'0');}catch(e){}
+  });
+  try{if(localStorage.getItem('thnc_compact')==='1'){main.classList.add('compact');
+    view.classList.add('on');view.textContent='Card view';}}catch(e){}
   q.addEventListener('input',apply); ms.addEventListener('input',apply); apply();
 })();
 """
@@ -163,14 +192,12 @@ def _card(b: HuntBriefing) -> str:
         " ".join(e.mitre_techniques),
     ]).lower()
 
-    p = [f'<details class="card {cls}" data-haystack="{_h(haystack)}" data-score="{b.scoring.score}">']
+    p = [f'<details class="card {cls}" data-tier="{cls}" data-haystack="{_h(haystack)}" data-score="{b.scoring.score}">']
 
-    # ---- glanceable face ----
+    # ---- glanceable face (flex row; reflows to compact view via CSS) ----
     p.append("<summary>")
-    p.append("<div class='toprow'>")
     p.append(f"<span class='pill {cls}'>{label}</span>")
     p.append(f"<span class='score'>score {b.scoring.score} &middot; {len(b.hypotheses)} hyp &middot; {n_obj} obj</span>")
-    p.append("</div>")
     p.append(f"<h2>{_h(a.title)}</h2>")
     p.append(f"<p class='glance'>{_h(_glance(b))}</p>")
 
@@ -241,6 +268,8 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
         sel = " selected" if v == 0 else ""
         p.append(f"<option value='{v}'{sel}>{v}</option>")
     p.append("</select>")
+    p.append("<button id='critOnly' class='btn'>Critical only</button>")
+    p.append("<button id='viewToggle' class='btn'>Compact view</button>")
     p.append(f"<span class='meta'>Showing <span id='shown'>{len(pkg.briefings)}</span> of {len(pkg.briefings)}</span>")
     p.append("</div>")
 
