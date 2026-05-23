@@ -16,28 +16,10 @@ import html
 import json
 from pathlib import Path
 
+from . import analytics
+from .analytics import TIERS as _TIERS, criticality as _criticality
+from .intel import KILLCHAIN_STAGES
 from .models import HuntBriefing, HuntPackage
-
-
-# Criticality tiers, highest first. (label, css class, min score)
-_TIERS = [
-    ("Critical", "crit", 85),
-    ("High", "high", 65),
-    ("Medium", "med", 45),
-    ("Low", "low", 0),
-]
-
-
-def _criticality(b: HuntBriefing) -> tuple[str, str]:
-    score = b.scoring.score
-    kev = any(t.startswith("kev:") for t in b.agent_trace)
-    # Actively-exploited (CISA KEV) never ranks below High.
-    if kev and score < 65:
-        score = 65
-    for label, cls, threshold in _TIERS:
-        if score >= threshold:
-            return label, cls
-    return "Low", "low"
 
 
 _CSS = """
@@ -112,16 +94,55 @@ pre{padding:9px 11px;overflow-x:auto;white-space:pre-wrap}
 details.sub>summary{cursor:pointer;color:var(--accent);font-size:12px;margin:6px 0}
 .trace{color:var(--muted);font-size:11.5px;margin:8px 0 0}
 /* compact one-line-per-briefing view */
-main.compact .grid{grid-template-columns:1fr;gap:5px}
-main.compact .card{border-radius:8px}
-main.compact .card>summary{padding:8px 12px;flex-wrap:nowrap;gap:10px}
-main.compact .card h2{order:2;flex:1;flex-basis:auto;margin:0;font-size:14px;
+main[data-view=compact] .grid{grid-template-columns:1fr;gap:5px}
+main[data-view=compact] .card{border-radius:8px}
+main[data-view=compact] .card>summary{padding:8px 12px;flex-wrap:nowrap;gap:10px}
+main[data-view=compact] .card h2{order:2;flex:1;flex-basis:auto;margin:0;font-size:14px;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-main.compact .score{order:3}
-main.compact .glance,main.compact .chips,main.compact .foot{display:none}
+main[data-view=compact] .score{order:3}
+main[data-view=compact] .glance,main[data-view=compact] .chips,main[data-view=compact] .foot{display:none}
 .btn{background:var(--panel);color:var(--ink);border:1px solid var(--border);
   padding:9px 12px;border-radius:9px;font:inherit;cursor:pointer}
 .btn.on{background:var(--accent);color:#06203a;border-color:var(--accent);font-weight:700}
+/* dashboard */
+.dash{display:grid;grid-template-columns:1fr;gap:14px;margin:4px 0 22px}
+@media(min-width:900px){.dash{grid-template-columns:1.4fr 1fr}}
+.panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
+.panel h3{margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.brief{font-size:15.5px;line-height:1.6}
+.kc{display:flex;gap:3px;align-items:flex-end;height:74px;margin-top:6px}
+.kc .stage{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
+.kc .bar{width:100%;background:var(--panel2);border-radius:4px 4px 0 0;min-height:3px}
+.kc .bar.on{background:var(--accent)}
+.kc .lbl{font-size:9px;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);
+  white-space:nowrap;max-height:42px;overflow:hidden}
+.kc .n{font-size:11px;color:var(--ink)}
+.matrix{display:grid;grid-template-columns:14px 1fr 1fr;grid-template-rows:1fr 1fr 14px;
+  gap:4px;height:170px;margin-top:6px}
+.q{border:1px solid var(--border);border-radius:8px;padding:7px;display:flex;flex-direction:column;
+  font-size:11px;color:var(--muted);overflow:hidden}
+.q.hot{border-color:var(--crit);background:rgba(255,93,108,.08)}
+.q .qn{font-size:18px;font-weight:700;color:var(--ink)}
+.q .dots{margin-top:auto;display:flex;flex-wrap:wrap;gap:3px}
+.q .dot2{width:7px;height:7px;border-radius:50%;background:var(--muted)}
+.q.hot .dot2{background:var(--crit)}
+.axis{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:10px;
+  text-transform:uppercase;letter-spacing:.05em}
+.axis.y{writing-mode:vertical-rl;transform:rotate(180deg)}
+/* by data source */
+#bysource{display:none}
+.srcgroup{background:var(--panel);border:1px solid var(--border);border-radius:12px;
+  margin:10px 0;padding:6px 14px}
+.srcgroup>summary{cursor:pointer;font-size:15px;font-weight:600;padding:9px 2px;list-style:none}
+.srcgroup>summary::-webkit-details-marker{display:none}
+.srcgroup .cnt{color:var(--muted);font-weight:400;font-size:13px;margin-left:6px}
+.srow{border-left:3px solid var(--border);padding:8px 11px;margin:7px 0;
+  background:rgba(0,0,0,.18);border-radius:0 7px 7px 0;font-size:13px}
+.srow.crit{border-left-color:var(--crit)} .srow.high{border-left-color:var(--high)}
+.srow.med{border-left-color:var(--med)} .srow.low{border-left-color:var(--low)}
+.srow .meta{color:var(--muted);font-size:11px;margin:2px 0 4px}
+main[data-view=source] .tier-section{display:none}
+main[data-view=source] #bysource{display:block}
 .hidden{display:none!important}
 footer{color:var(--muted);font-size:12px;padding:30px 24px;text-align:center;
   border-top:1px solid var(--border)}
@@ -130,34 +151,31 @@ footer{color:var(--muted);font-size:12px;padding:30px 24px;text-align:center;
 _JS = """
 (function(){
   const q=document.getElementById('q'), ms=document.getElementById('minScore');
-  const crit=document.getElementById('critOnly'), view=document.getElementById('viewToggle');
+  const crit=document.getElementById('critOnly'), view=document.getElementById('view');
   const main=document.querySelector('main');
-  const cards=[...document.querySelectorAll('.card')];
+  const filterable=[...document.querySelectorAll('.card,.srow')];
   const sections=[...document.querySelectorAll('.tier-section')];
+  const groups=[...document.querySelectorAll('.srcgroup')];
   let critOnly=false;
   function apply(){
     const n=(q.value||'').toLowerCase().trim(), m=parseInt(ms.value||'0',10);
     let shown=0;
-    cards.forEach(c=>{
+    filterable.forEach(c=>{
       let ok=(!n||(c.dataset.haystack||'').includes(n))&&(parseInt(c.dataset.score||'0',10)>=m);
       if(critOnly && c.dataset.tier!=='crit') ok=false;
-      c.classList.toggle('hidden',!ok); if(ok)shown++;
+      c.classList.toggle('hidden',!ok);
+      if(ok && c.classList.contains('card')) shown++;
     });
-    sections.forEach(s=>{
-      const vis=[...s.querySelectorAll('.card')].some(c=>!c.classList.contains('hidden'));
-      s.classList.toggle('hidden',!vis);
-    });
+    sections.forEach(s=>s.classList.toggle('hidden',
+      ![...s.querySelectorAll('.card')].some(c=>!c.classList.contains('hidden'))));
+    groups.forEach(g=>g.classList.toggle('hidden',
+      ![...g.querySelectorAll('.srow')].some(r=>!r.classList.contains('hidden'))));
     document.getElementById('shown').textContent=shown;
   }
+  function setView(v){main.dataset.view=v;try{localStorage.setItem('thnc_view',v);}catch(e){}}
   crit.addEventListener('click',()=>{critOnly=!critOnly;crit.classList.toggle('on',critOnly);apply();});
-  view.addEventListener('click',()=>{
-    const compact=main.classList.toggle('compact');
-    view.classList.toggle('on',compact);
-    view.textContent=compact?'Card view':'Compact view';
-    try{localStorage.setItem('thnc_compact',compact?'1':'0');}catch(e){}
-  });
-  try{if(localStorage.getItem('thnc_compact')==='1'){main.classList.add('compact');
-    view.classList.add('on');view.textContent='Card view';}}catch(e){}
+  view.addEventListener('change',()=>setView(view.value));
+  try{const v=localStorage.getItem('thnc_view'); if(v){view.value=v; main.dataset.view=v;}}catch(e){}
   q.addEventListener('input',apply); ms.addEventListener('input',apply); apply();
 })();
 """
@@ -240,6 +258,75 @@ def _card(b: HuntBriefing) -> str:
     return "".join(p)
 
 
+def _dashboard(pkg: HuntPackage) -> str:
+    p = ["<div class='dash'>"]
+
+    # Intel brief + kill-chain (left column)
+    p.append("<div class='panel'>")
+    if pkg.brief:
+        p.append("<h3>Today's brief</h3>")
+        p.append(f"<p class='brief'>{_h(pkg.brief)}</p>")
+    cov = analytics.killchain_coverage(pkg)
+    mx = max((c for _, c in cov), default=0) or 1
+    p.append("<h3 style='margin-top:14px'>Kill-chain coverage</h3>")
+    p.append("<div class='kc'>")
+    for stage, n in cov:
+        h = int(8 + (n / mx) * 58) if n else 3
+        on = " on" if n else ""
+        p.append("<div class='stage'>")
+        p.append(f"<span class='n'>{n or ''}</span>")
+        p.append(f"<div class='bar{on}' style='height:{h}px' title='{_h(stage)}: {n}'></div>")
+        p.append(f"<span class='lbl'>{_h(stage)}</span>")
+        p.append("</div>")
+    p.append("</div></div>")
+
+    # Likelihood x impact matrix (right column)
+    quad = analytics.likelihood_impact(pkg)
+    def cell(key, hot=False):
+        items = quad[key]
+        dots = "".join("<span class='dot2'></span>" for _ in items[:24])
+        titles = " · ".join(b.article.title for b in items[:6])
+        cls = "q hot" if hot else "q"
+        return (f"<div class='{cls}' title='{_h(titles)}'>"
+                f"<span class='qn'>{len(items)}</span><div class='dots'>{dots}</div></div>")
+    p.append("<div class='panel'><h3>Likelihood × impact</h3>")
+    p.append("<div class='matrix'>")
+    p.append("<div class='axis y'>likelihood</div>")
+    p.append(cell("hi_lo"))
+    p.append(cell("hi_hi", hot=True))
+    p.append("<div></div>")
+    p.append(cell("lo_lo"))
+    p.append(cell("lo_hi"))
+    p.append("<div></div><div></div><div class='axis'>impact &rarr;</div>")
+    p.append("</div></div>")
+
+    p.append("</div>")
+    return "".join(p)
+
+
+def _by_source(pkg: HuntPackage) -> str:
+    groups = analytics.objectives_by_source(pkg)
+    p = ["<div id='bysource'>"]
+    p.append("<p class='meta'>Every objective from today's news, grouped by the telemetry it needs — "
+             "open one log source and work the list.</p>")
+    for source, refs in groups:
+        p.append("<details class='srcgroup' open>")
+        p.append(f"<summary>{_h(source)}<span class='cnt'>{len(refs)} check(s)</span></summary>")
+        for b, h_, o in refs:
+            _, cls = _criticality(b)
+            hay = f"{b.article.title} {h_.title} {o.title} {' '.join(b.extraction.cves)}".lower()
+            p.append(f"<div class='srow {cls}' data-tier='{cls}' data-haystack='{_h(hay)}' "
+                     f"data-score='{b.scoring.score}'>")
+            p.append(f"<div>{_h(o.title)} <span class='meta'>— {_h(o.difficulty)} · {o.points} pts</span></div>")
+            p.append(f"<div class='meta'>{_h(b.article.title)}</div>")
+            p.append(f"<div>{_h(o.falsification_criterion)}</div>")
+            p.append(f"<pre>{_h(o.suggested_query)}</pre>")
+            p.append("</div>")
+        p.append("</details>")
+    p.append("</div>")
+    return "".join(p)
+
+
 def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -> str:
     # Group briefings by criticality tier (already score-sorted in the package).
     by_tier: dict[str, list[HuntBriefing]] = {label: [] for label, _, _ in _TIERS}
@@ -258,7 +345,10 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
     p.append(f"<strong>{pkg.total_seen}</strong> seen &middot; <strong>{len(pkg.briefings)}</strong> briefings &middot; ")
     p.append(f"<a href='{_h(json_filename)}'>JSON</a> &middot; <a href='iocs.csv'>IOCs</a> &middot; ")
     p.append("<a href='iocs_stix.json'>STIX</a> &middot; <a href='archive/index.html'>archive</a>")
-    p.append("</div></header><main>")
+    p.append("</div></header><main data-view='cards'>")
+
+    if pkg.briefings:
+        p.append(_dashboard(pkg))
 
     p.append("<div class='controls'>")
     p.append("<input id='q' type='search' placeholder='Filter by actor, CVE, malware, product…'>")
@@ -268,10 +358,16 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
         sel = " selected" if v == 0 else ""
         p.append(f"<option value='{v}'{sel}>{v}</option>")
     p.append("</select>")
+    p.append("<label class='meta' for='view'>View</label>")
+    p.append("<select id='view'>")
+    for val, lbl in (("cards", "Cards"), ("compact", "Compact"), ("source", "By data source")):
+        p.append(f"<option value='{val}'>{lbl}</option>")
+    p.append("</select>")
     p.append("<button id='critOnly' class='btn'>Critical only</button>")
-    p.append("<button id='viewToggle' class='btn'>Compact view</button>")
     p.append(f"<span class='meta'>Showing <span id='shown'>{len(pkg.briefings)}</span> of {len(pkg.briefings)}</span>")
     p.append("</div>")
+
+    p.append(_by_source(pkg))
 
     for label, cls, _ in _TIERS:
         items = by_tier[label]

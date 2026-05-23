@@ -25,6 +25,7 @@ from pathlib import Path
 from . import iocs as ioc_export
 from . import llm
 from . import sigma_export
+from .brief import generate_brief
 from .config import AppConfig
 from .models import Article, HuntPackage
 from .notify import notify_new
@@ -118,6 +119,7 @@ def run(
         )
         for b in pkg.briefings:
             b.first_seen = _now()
+        pkg.brief = generate_brief(pkg, cfg.llm if cfg.llm.is_usable else None)
         _write_outputs(cfg, pkg, cfg.out_dir)
         if cfg.archive:
             _archive(cfg, pkg)
@@ -158,6 +160,7 @@ def run(
             len(site_pkg.briefings), cfg.retention_days, len(new_pkg.briefings),
         )
 
+        site_pkg.brief = generate_brief(site_pkg, cfg.llm if cfg.llm.is_usable else None)
         _write_outputs(cfg, site_pkg, cfg.out_dir)
         if cfg.archive:
             _archive(cfg, site_pkg)

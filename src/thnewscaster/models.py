@@ -98,6 +98,7 @@ class HuntPackage:
     briefings: list[HuntBriefing] = field(default_factory=list)
     skipped: int = 0
     total_seen: int = 0
+    brief: str = ""  # 3-sentence executive summary of the run
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)

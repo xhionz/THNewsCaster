@@ -178,6 +178,38 @@ TECHNIQUE_NAMES: dict[str, str] = {
 }
 
 
+# ATT&CK kill-chain stage order (subset we map) and technique -> primary stage.
+KILLCHAIN_STAGES: list[str] = [
+    "Initial Access", "Execution", "Persistence", "Privilege Escalation",
+    "Defense Evasion", "Credential Access", "Discovery", "Lateral Movement",
+    "Collection", "Command and Control", "Exfiltration", "Impact",
+]
+
+TECHNIQUE_TACTIC: dict[str, str] = {
+    "T1566": "Initial Access", "T1190": "Initial Access", "T1133": "Initial Access",
+    "T1078": "Initial Access", "T1078.004": "Initial Access",
+    "T1059": "Execution", "T1059.001": "Execution", "T1059.003": "Execution",
+    "T1059.005": "Execution", "T1053": "Execution", "T1053.005": "Execution",
+    "T1204": "Execution",
+    "T1547": "Persistence", "T1547.001": "Persistence", "T1098": "Persistence",
+    "T1505.003": "Persistence",
+    "T1055": "Defense Evasion", "T1620": "Defense Evasion", "T1218.011": "Defense Evasion",
+    "T1497": "Defense Evasion",
+    "T1003": "Credential Access", "T1110": "Credential Access", "T1110.003": "Credential Access",
+    "T1556": "Credential Access", "T1558.003": "Credential Access", "T1528": "Credential Access",
+    "T1621": "Credential Access",
+    "T1021.001": "Lateral Movement", "T1021.002": "Lateral Movement",
+    "T1021.006": "Lateral Movement", "T1570": "Lateral Movement",
+    "T1560": "Collection",
+    "T1071": "Command and Control", "T1071.004": "Command and Control",
+    "T1095": "Command and Control", "T1219": "Command and Control",
+    "T1573": "Command and Control", "T1573.002": "Command and Control",
+    "T1567": "Exfiltration", "T1567.002": "Exfiltration", "T1041": "Exfiltration",
+    "T1048.003": "Exfiltration",
+    "T1486": "Impact",
+}
+
+
 PRODUCT_KEYWORDS: dict[str, list[str]] = {
     "Microsoft Exchange": ["exchange server", "outlook web access", "owa"],
     "Microsoft 365 / Entra ID": ["entra id", "azure ad", "microsoft 365", "office 365"],
