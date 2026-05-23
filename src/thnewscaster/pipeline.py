@@ -16,11 +16,14 @@ articles and publish that.
 """
 from __future__ import annotations
 
+import json
 import logging
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
 from . import iocs as ioc_export
+from . import llm
 from . import sigma_export
 from .config import AppConfig
 from .models import Article, HuntPackage
@@ -31,6 +34,31 @@ from .store import BriefingStore
 from .triage import TriageConfig, make_selector
 
 log = logging.getLogger(__name__)
+
+
+def _write_status(cfg: AppConfig, *, seen: int, new: int, published: int,
+                  elapsed: float) -> None:
+    """One-line run summary to the log + a status.json for polling."""
+    calls = llm.get_call_count()
+    log.info(
+        "RUN SUMMARY: seen=%d new=%d hunted=%d published=%d model_calls=%d elapsed=%.1fs",
+        seen, new, published, published, calls, elapsed,
+    )
+    status = {
+        "last_run": _now(),
+        "elapsed_seconds": round(elapsed, 1),
+        "articles_seen": seen,
+        "new_articles": new,
+        "briefings_published": published,
+        "model_calls": calls,
+        "triage_enabled": cfg.triage_enabled,
+        "agent_enabled": cfg.agent_enabled,
+    }
+    try:
+        cfg.out_dir.mkdir(parents=True, exist_ok=True)
+        (cfg.out_dir / "status.json").write_text(json.dumps(status, indent=2))
+    except OSError as exc:
+        log.warning("could not write status.json: %s", exc)
 
 
 def _now() -> str:
@@ -59,6 +87,8 @@ def run(
     source_kinds: dict[str, str],
     generator: HypothesisGenerator,
 ) -> HuntPackage:
+    started = time.monotonic()
+    llm.reset_call_count()
     if cfg.criteria.active:
         log.info(
             "focus criteria active (require=%s, exclude=%d terms)",
@@ -92,6 +122,8 @@ def run(
         if cfg.archive:
             _archive(cfg, pkg)
         notify_new(cfg, pkg.briefings)
+        _write_status(cfg, seen=len(articles), new=len(pkg.briefings),
+                      published=len(pkg.briefings), elapsed=time.monotonic() - started)
         return pkg
 
     store = BriefingStore(cfg.state_db)
@@ -130,6 +162,8 @@ def run(
         if cfg.archive:
             _archive(cfg, site_pkg)
         notify_new(cfg, new_pkg.briefings)
+        _write_status(cfg, seen=len(articles), new=len(new_articles),
+                      published=len(new_pkg.briefings), elapsed=time.monotonic() - started)
         return site_pkg
     finally:
         store.close()

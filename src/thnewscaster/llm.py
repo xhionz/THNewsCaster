@@ -23,6 +23,19 @@ from .models import Article, Extraction, Hypothesis, Objective
 
 log = logging.getLogger(__name__)
 
+# Process-wide counter of model calls, so a run can report how many requests
+# it made (useful for tracking cost/latency on a local endpoint).
+_CALL_COUNT = 0
+
+
+def reset_call_count() -> None:
+    global _CALL_COUNT
+    _CALL_COUNT = 0
+
+
+def get_call_count() -> int:
+    return _CALL_COUNT
+
 _MIN_HYP = 3
 _MIN_OBJ = 3
 _MAX_OBJ = 5
@@ -105,6 +118,8 @@ def chat_raw(cfg: LLMConfig, messages: list[dict], *, json_mode: bool = True) ->
 
     Shared by the single-shot generator and the agent loop.
     """
+    global _CALL_COUNT
+    _CALL_COUNT += 1
     url = f"{cfg.base_url}/chat/completions"
     body = {
         "model": cfg.model,
