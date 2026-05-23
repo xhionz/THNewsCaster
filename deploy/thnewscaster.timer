@@ -1,14 +1,16 @@
 [Unit]
-Description=Run THNewsCaster once daily
+Description=Run THNewsCaster on a recurring interval
 Documentation=https://github.com/xhionz/thnewscaster
 
 [Timer]
-# Daily at 06:15 local time, with up to 10 minutes of jitter so multiple
-# hosts don't hammer feeds/endpoint simultaneously.
-OnCalendar=*-*-* 06:15:00
-RandomizedDelaySec=600
-# Catch up if the machine was off when the timer was due.
-Persistent=true
+# Run shortly after boot, then re-fire a fixed gap AFTER each run finishes.
+# Using OnUnitInactiveSec (not OnCalendar) means runs never overlap: the next
+# run is scheduled relative to the previous one completing, so a slow agent
+# run just pushes the next start out rather than stacking up.
+OnBootSec=3min
+OnUnitInactiveSec=30min
+# Small jitter so multiple hosts don't hit feeds/endpoint in lockstep.
+RandomizedDelaySec=120
 
 [Install]
 WantedBy=timers.target
