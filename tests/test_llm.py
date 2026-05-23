@@ -94,3 +94,47 @@ def test_llm_returns_none_on_garbage(monkeypatch) -> None:
 def test_llm_skipped_when_unconfigured() -> None:
     art = _article()
     assert llm.generate_llm(art, extract(art), LLMConfig(enabled=False)) is None
+
+
+class _FakeResp:
+    def __init__(self, body): self._b = body.encode()
+    def read(self): return self._b
+    def __enter__(self): return self
+    def __exit__(self, *a): return False
+
+
+def test_chat_raw_retries_transient_5xx(monkeypatch):
+    import urllib.error
+    calls = {"n": 0}
+    good = json.dumps({"choices": [{"message": {"content": "{\"ok\":1}"}}]})
+
+    def fake_urlopen(req, timeout=None):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise urllib.error.HTTPError("u", 503, "busy", {}, None)
+        return _FakeResp(good)
+
+    monkeypatch.setattr(llm.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(llm.urllib.request, "urlopen", fake_urlopen)
+    out = llm.chat_raw(LLMConfig(enabled=True, base_url="https://f/v1", model="m", max_retries=2),
+                       [{"role": "user", "content": "x"}])
+    assert calls["n"] == 2 and "ok" in out
+
+
+def test_chat_raw_does_not_retry_timeout(monkeypatch):
+    import socket
+    import urllib.error
+    calls = {"n": 0}
+
+    def fake_urlopen(req, timeout=None):
+        calls["n"] += 1
+        raise urllib.error.URLError(socket.timeout("timed out"))
+
+    monkeypatch.setattr(llm.time, "sleep", lambda *_: None)
+    monkeypatch.setattr(llm.urllib.request, "urlopen", fake_urlopen)
+    try:
+        llm.chat_raw(LLMConfig(enabled=True, base_url="https://f/v1", model="m", max_retries=3),
+                     [{"role": "user", "content": "x"}])
+    except urllib.error.URLError:
+        pass
+    assert calls["n"] == 1, "read-timeouts must not be retried"

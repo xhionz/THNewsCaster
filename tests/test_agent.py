@@ -125,4 +125,20 @@ def test_tools_offline_are_failsafe():
 
 def test_tool_not_enabled_is_rejected():
     reg = ToolRegistry(offline=False, enabled={"lookup_mitre"})
-    assert "error" in reg.call("fetch_article", {"url": "https://x"})
+    assert "error" in reg.call("fetch_article", {})
+
+
+def test_fetch_article_blocks_ssrf_to_internal_hosts():
+    # Even online, fetching is pinned to the article URL and private/loopback
+    # targets are refused (no network call happens).
+    for bad in ("http://127.0.0.1/", "http://169.254.169.254/latest/meta-data/",
+                "http://localhost:8080/", "file:///etc/passwd"):
+        reg = ToolRegistry(offline=False, enabled={"fetch_article"}, article_url=bad)
+        assert "error" in reg.fetch_article(), f"should refuse {bad}"
+
+
+def test_fetch_article_ignores_model_supplied_url():
+    # The model cannot redirect the fetch: only article_url is ever used, and a
+    # missing article_url yields an error rather than fetching attacker input.
+    reg = ToolRegistry(offline=False, enabled={"fetch_article"}, article_url="")
+    assert "error" in reg.call("fetch_article", {"url": "http://169.254.169.254/"})

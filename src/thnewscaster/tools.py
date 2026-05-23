@@ -7,17 +7,50 @@ loop can continue and degrade gracefully. Network tools are disabled when
 """
 from __future__ import annotations
 
+import ipaddress
 import json
 import logging
 import re
+import socket
 import threading
 import urllib.error
 import urllib.request
+from urllib.parse import urlparse
 
 from .feeds import _strip_html, fetch_url
 from .intel import MITRE_TECHNIQUES, TECHNIQUE_NAMES
 
 log = logging.getLogger(__name__)
+
+
+def _is_public_http_url(url: str) -> bool:
+    """Reject non-HTTP(S) URLs and any host resolving to a non-public address.
+
+    The agent chooses what to fetch from prompt content that includes
+    untrusted article text, so an injected URL could otherwise point at
+    cloud metadata (169.254.169.254), localhost, or internal services
+    (SSRF). We resolve the host and refuse private/loopback/link-local/
+    reserved targets.
+    """
+    try:
+        u = urlparse(url)
+    except ValueError:
+        return False
+    if u.scheme not in ("http", "https") or not u.hostname:
+        return False
+    try:
+        infos = socket.getaddrinfo(u.hostname, u.port or 80, proto=socket.IPPROTO_TCP)
+    except OSError:
+        return False
+    for info in infos:
+        try:
+            ip = ipaddress.ip_address(info[4][0])
+        except ValueError:
+            return False
+        if (ip.is_private or ip.is_loopback or ip.is_link_local
+                or ip.is_reserved or ip.is_multicast or ip.is_unspecified):
+            return False
+    return True
 
 _CISA_KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 _kev_cache: dict[str, dict] | None = None  # cveID -> entry, loaded once per process
@@ -76,24 +109,32 @@ def kev_enrich(cves: list[str], *, offline: bool, timeout: float = 10.0) -> dict
 class ToolRegistry:
     """Holds the enabled tools and dispatches calls by name."""
 
-    def __init__(self, *, offline: bool, enabled: set[str], timeout: float = 10.0):
+    def __init__(self, *, offline: bool, enabled: set[str], timeout: float = 10.0,
+                 article_url: str = ""):
         self.offline = offline
         self.enabled = enabled
         self.timeout = timeout
+        # The only URL fetch_article is allowed to retrieve. Pinning it to the
+        # article under analysis removes the SSRF surface entirely — the model
+        # cannot redirect the fetch to an injected/internal URL.
+        self.article_url = article_url
 
     # --- tool implementations ---------------------------------------------
 
-    def fetch_article(self, url: str = "", max_chars: int = 6000) -> dict:
+    def fetch_article(self, max_chars: int = 6000) -> dict:
         if self.offline:
             return {"error": "offline: article fetch disabled"}
+        url = self.article_url
         if not url:
-            return {"error": "no url provided"}
+            return {"error": "no article url available"}
+        if not _is_public_http_url(url):
+            return {"error": "refusing to fetch non-public or unsafe URL"}
         raw = fetch_url(url, timeout=self.timeout)
         if raw is None:
             return {"error": f"could not fetch {url}"}
         try:
             text = _strip_html(raw.decode("utf-8", errors="ignore"))
-        except Exception as exc:  # noqa: BLE001
+        except (UnicodeError, ValueError) as exc:
             return {"error": f"decode failed: {exc}"}
         return {"url": url, "text": text[:max_chars], "truncated": len(text) > max_chars}
 
@@ -150,7 +191,7 @@ class ToolRegistry:
         args = args or {}
         try:
             if name == "fetch_article":
-                return self.fetch_article(**{k: v for k, v in args.items() if k in ("url", "max_chars")})
+                return self.fetch_article(**{k: v for k, v in args.items() if k in ("max_chars",)})
             if name == "lookup_cve":
                 return self.lookup_cve(cve=args.get("cve", ""))
             if name == "lookup_mitre":
@@ -163,9 +204,9 @@ class ToolRegistry:
         """Tool descriptions advertised to the model (name/args/desc)."""
         catalog = {
             "fetch_article": {
-                "description": "Fetch and clean the full text of the article from its URL "
-                               "(more context than the RSS summary).",
-                "args": {"url": "string (the article link)"},
+                "description": "Fetch and clean the full text of THIS article (more context "
+                               "than the RSS summary). Takes no arguments.",
+                "args": {},
             },
             "lookup_cve": {
                 "description": "Look up a CVE in the CISA Known Exploited Vulnerabilities "

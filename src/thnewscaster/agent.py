@@ -176,7 +176,8 @@ def generate_agentic(article: Article, ext: Extraction, cfg: LLMConfig,
         return None
     trace = trace if trace is not None else []
     timeout = cfg.timeout / 3 or 10.0
-    registry = ToolRegistry(offline=offline, enabled=set(agent_cfg.tools), timeout=timeout)
+    registry = ToolRegistry(offline=offline, enabled=set(agent_cfg.tools), timeout=timeout,
+                            article_url=article.link)
     # Pre-fetch KEV for extracted CVEs so the agent doesn't burn a tool turn
     # confirming exploitation it could have been handed up front.
     enrichment = kev_enrich(ext.cves, offline=offline, timeout=timeout)
