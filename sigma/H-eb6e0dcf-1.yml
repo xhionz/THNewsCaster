@@ -1,0 +1,13 @@
+title: Detect BissaScanner API Probing
+logsource:
+  product: webserver
+detection:
+  ua: BissaScanner
+  status: [404, 403, 500]
+  request_method: GET
+condition: all
+fields:
+  - client_ip
+  - user_agent
+  - status
+  - url

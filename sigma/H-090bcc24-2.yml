@@ -1,0 +1,18 @@
+title: Detect Kazuar-Style WMI Event Subscription
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects creation of WMI event consumers that execute malicious payloads
+selection:
+  EventID: 5861
+  TargetInstance:
+    - '*__EventFilter*'
+    - '*CommandLineEventConsumer*'
+    - '*ExecutablePath*\*.dll*'
+    - '*ExecutablePath*\*.dat*'
+    - '*ExecutablePath*\*.tmp*'
+condition: selection
+logsource:
+  product: windows
+  service: wmi-event-log
+category: wmi_activity
+title: Detect Kazuar-Style WMI Event Subscription

@@ -1,0 +1,9 @@
+title: Malicious npm postinstall via node.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\node.exe'
+  CommandLine: '*postinstall*'
+condition: all

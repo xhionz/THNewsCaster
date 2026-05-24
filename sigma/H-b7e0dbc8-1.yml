@@ -1,0 +1,15 @@
+title: Suspicious M365 Email Send with Encoded PowerShell
+logsource:
+  product: m365
+  service: exchangeonline
+detection:
+  selection:
+    EventID: 50001
+    RecipientCount|gt: 10
+    SenderAddress|endswith: '.onmicrosoft.com'
+  condition: selection
+  filter:
+    - SenderAddress|contains: 'noreply'
+    - SenderAddress|contains: 'support'
+    - SenderAddress|contains: 'admin'
+condition: selection and not filter

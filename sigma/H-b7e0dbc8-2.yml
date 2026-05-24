@@ -1,0 +1,17 @@
+title: Suspicious Outlook Add-in Installation via MSHTA/WScript
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\OUTLOOK.EXE'
+    ParentImage|contains:
+      - 'mshta.exe'
+      - 'wscript.exe'
+      - 'cscript.exe'
+  condition: selection
+  filter:
+    - Image|contains: '\Microsoft\Office\'
+    - ParentImage|contains: '\Windows\System32\'
+condition: selection and not filter

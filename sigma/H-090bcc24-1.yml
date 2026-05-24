@@ -1,0 +1,21 @@
+title: Detect Kazuar-Style Scheduled Task Creation
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects suspicious scheduled task creation indicative of Kazuar espionage tooling
+detection:
+  selection:
+    EventID: 4698
+    CommandLine:
+      - '* /create *'
+      - '* /tr *'
+      - '* /xml *'
+      - '* /sc onlogon *'
+      - '* /tr "*\*.dll" *'
+      - '* /tr "*\*.dat" *'
+      - '* /tr "*\*.tmp" *'
+  condition: selection
+logsource:
+  product: windows
+  service: security
+category: process_creation
+title: Detect Kazuar-Style Scheduled Task Creation

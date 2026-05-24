@@ -1,0 +1,15 @@
+title: Detect Internal Host Scanning to External IPs
+logsource:
+  product: firewall
+detection:
+  direction: outbound
+  src_ip: 192.168.0.0/16
+  dst_ip: !192.168.0.0/16
+  dst_port: [80, 443, 8080, 8443]
+  user_agent: BissaScanner
+condition: all
+fields:
+  - src_ip
+  - dst_ip
+  - dst_port
+  - user_agent

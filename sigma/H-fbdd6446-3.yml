@@ -1,0 +1,10 @@
+title: Suspicious package.json modification during npm install
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: '*\npm.exe'
+  TargetFilename: '*\package.json'
+  UtcTime: '2026-05-20T00:00:00Z' - '2026-05-24T23:59:59Z'
+condition: all

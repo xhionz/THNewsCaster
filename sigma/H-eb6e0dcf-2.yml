@@ -1,0 +1,16 @@
+title: Detect BissaScanner Credential Stuffing
+logsource:
+  product: webserver
+detection:
+  ua: BissaScanner
+  request_method: POST
+  status: 401
+  url: [/login, /auth, /api/v1/login]
+  username: /.*@.*/
+condition: all
+fields:
+  - client_ip
+  - user_agent
+  - status
+  - url
+  - username

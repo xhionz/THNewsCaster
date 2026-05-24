@@ -1,0 +1,18 @@
+title: Detect Kazuar-Style DNS Tunneling
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects high-volume DNS queries with hex-encoded or long subdomains indicative of DNS tunneling
+selection:
+  EventID: 256
+  QueryName:
+    - '*[0-9a-f]{8,}.com*'
+    - '*[0-9a-f]{16,}.net*'
+    - '*[0-9a-f]{32,}.org*'
+    - '*[a-f0-9]{8,}.*'
+  QueryCount: '>100'
+condition: selection
+logsource:
+  product: windows
+  service: dns-server
+category: dns_query
+title: Detect Kazuar-Style DNS Tunneling

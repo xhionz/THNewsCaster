@@ -1,0 +1,8 @@
+title: Malicious repo cloned in GitLab CI
+logsource:
+  product: gitlab
+  service: ci_pipeline
+detection:
+  project_path: '*malware*' OR project_path: '*backdoor*' OR project_path: '*trojan*' OR project_path: '*keylogger*'
+  event_type: push
+condition: all
