@@ -110,25 +110,20 @@ main[data-view=compact] .glance,main[data-view=compact] .chips,main[data-view=co
 .panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px 18px}
 .panel h3{margin:0 0 10px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
 .brief{font-size:15.5px;line-height:1.6}
-.kc{display:flex;gap:3px;align-items:flex-end;height:74px;margin-top:6px}
-.kc .stage{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}
-.kc .bar{width:100%;background:var(--panel2);border-radius:4px 4px 0 0;min-height:3px}
-.kc .bar.on{background:var(--accent)}
-.kc .lbl{font-size:9px;color:var(--muted);writing-mode:vertical-rl;transform:rotate(180deg);
-  white-space:nowrap;max-height:42px;overflow:hidden}
-.kc .n{font-size:11px;color:var(--ink)}
-.matrix{display:grid;grid-template-columns:14px 1fr 1fr;grid-template-rows:1fr 1fr 14px;
-  gap:4px;height:170px;margin-top:6px}
-.q{border:1px solid var(--border);border-radius:8px;padding:7px;display:flex;flex-direction:column;
-  font-size:11px;color:var(--muted);overflow:hidden}
+.kc{display:flex;flex-direction:column;gap:5px;margin-top:8px}
+.kcrow{display:flex;align-items:center;gap:8px;font-size:11px}
+.kcrow .nm{flex:0 0 120px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kcrow .nm.zero{opacity:.45}
+.kcrow .track{flex:1;height:12px;background:var(--panel2);border-radius:4px;overflow:hidden}
+.kcrow .fill{height:100%;background:var(--accent);border-radius:4px}
+.kcrow .ct{flex:0 0 22px;text-align:right;color:var(--ink)}
+.matrix{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px}
+.q{border:1px solid var(--border);border-radius:8px;padding:9px;min-height:62px;
+  display:flex;flex-direction:column;gap:4px;font-size:10px;color:var(--muted)}
 .q.hot{border-color:var(--crit);background:rgba(255,93,108,.08)}
 .q .qn{font-size:18px;font-weight:700;color:var(--ink)}
-.q .dots{margin-top:auto;display:flex;flex-wrap:wrap;gap:3px}
-.q .dot2{width:7px;height:7px;border-radius:50%;background:var(--muted)}
-.q.hot .dot2{background:var(--crit)}
-.axis{display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:10px;
-  text-transform:uppercase;letter-spacing:.05em}
-.axis.y{writing-mode:vertical-rl;transform:rotate(180deg)}
+.q .ql{text-transform:uppercase;letter-spacing:.04em;line-height:1.3}
+.mxcap{margin-top:7px;font-size:10px;color:var(--muted);text-align:center}
 /* by data source */
 #bysource{display:none}
 .srcgroup{background:var(--panel);border:1px solid var(--border);border-radius:12px;
@@ -271,34 +266,34 @@ def _dashboard(pkg: HuntPackage) -> str:
     p.append("<h3 style='margin-top:14px'>Kill-chain coverage</h3>")
     p.append("<div class='kc'>")
     for stage, n in cov:
-        h = int(8 + (n / mx) * 58) if n else 3
-        on = " on" if n else ""
-        p.append("<div class='stage'>")
-        p.append(f"<span class='n'>{n or ''}</span>")
-        p.append(f"<div class='bar{on}' style='height:{h}px' title='{_h(stage)}: {n}'></div>")
-        p.append(f"<span class='lbl'>{_h(stage)}</span>")
+        pct = int((n / mx) * 100) if n else 0
+        zero = " zero" if not n else ""
+        p.append("<div class='kcrow'>")
+        p.append(f"<span class='nm{zero}'>{_h(stage)}</span>")
+        p.append(f"<span class='track'><span class='fill' style='width:{pct}%'></span></span>")
+        p.append(f"<span class='ct'>{n}</span>")
         p.append("</div>")
     p.append("</div></div>")
 
     # Likelihood x impact matrix (right column)
     quad = analytics.likelihood_impact(pkg)
-    def cell(key, hot=False):
+
+    def cell(key, label, hot=False):
         items = quad[key]
-        dots = "".join("<span class='dot2'></span>" for _ in items[:24])
         titles = " · ".join(b.article.title for b in items[:6])
         cls = "q hot" if hot else "q"
         return (f"<div class='{cls}' title='{_h(titles)}'>"
-                f"<span class='qn'>{len(items)}</span><div class='dots'>{dots}</div></div>")
+                f"<span class='qn'>{len(items)}</span><span class='ql'>{label}</span></div>")
+
     p.append("<div class='panel'><h3>Likelihood × impact</h3>")
     p.append("<div class='matrix'>")
-    p.append("<div class='axis y'>likelihood</div>")
-    p.append(cell("hi_lo"))
-    p.append(cell("hi_hi", hot=True))
-    p.append("<div></div>")
-    p.append(cell("lo_lo"))
-    p.append(cell("lo_hi"))
-    p.append("<div></div><div></div><div class='axis'>impact &rarr;</div>")
-    p.append("</div></div>")
+    p.append(cell("hi_lo", "high likely · low impact"))
+    p.append(cell("hi_hi", "high likely · high impact", hot=True))
+    p.append(cell("lo_lo", "low likely · low impact"))
+    p.append(cell("lo_hi", "low likely · high impact"))
+    p.append("</div>")
+    p.append("<div class='mxcap'>top row = more likely &middot; right column = higher impact</div>")
+    p.append("</div>")
 
     p.append("</div>")
     return "".join(p)
