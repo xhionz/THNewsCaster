@@ -1,0 +1,11 @@
+title: Detect Banana RAT C2 Communication via Suspicious HTTP User-Agent
+logsource:
+  product: windows
+  service: http
+condition: 'http.user_agent contains "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) BananaRAT/2.0" or http.user_agent contains "BananaRAT"'
+detection:
+  user_agent_pattern:
+    - "BananaRAT/2.0"
+    - "BananaRAT/1.0"
+    - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) BananaRAT/2.0"
+condition: user_agent_pattern

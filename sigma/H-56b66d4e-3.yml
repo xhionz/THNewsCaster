@@ -1,0 +1,10 @@
+title: Detect LSASS Memory Dumping via Comsvcs.dll
+logsource:
+  product: windows
+  service: process_creation
+condition: 'process_name: "rundll32.exe" and command_line contains "comsvcs.dll" and command_line contains "MiniDump"'
+detection:
+  lsass_dump:
+    - process_name: "rundll32.exe"
+      command_line: '*comsvcs.dll*MiniDump*lsass*'
+condition: lsass_dump

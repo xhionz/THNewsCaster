@@ -1,0 +1,9 @@
+title: Detect DNS Exfiltration via High Entropy Subdomains
+logsource:
+  product: dns
+condition: 'query contains "." and count of dots in query > 5 and entropy(query) > 3.5'
+detection:
+  high_entropy_query:
+    - query: '*.*.*.*.*.*'
+    - query: '*[A-Za-z0-9+/]{20,}.*'
+condition: high_entropy_query

@@ -1,0 +1,17 @@
+title: Detect OYSTERSHUCK DLL Hijacking via Registry Modification
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 12 OR EventID: 13 OR EventID: 14
+    TargetObject|contains:
+      - '\Software\Classes\' 
+      - '\CLSID\'
+    Image|endswith: 
+      - '\regsvr32.exe'
+      - '\certutil.exe'
+    CommandLine|contains:
+      - 'OYSTERSHUCK'
+      - '%TEMP%'
+  condition: selection

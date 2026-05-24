@@ -1,0 +1,12 @@
+title: Detect OYSTERFRESH PowerShell Execution via Base64
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    CommandLine|contains:
+      - 'OYSTERFRESH'
+      - 'Invoke-Expression'
+      - 'Base64EncodedCommand'
+  condition: selection

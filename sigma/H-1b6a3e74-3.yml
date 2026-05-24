@@ -1,0 +1,18 @@
+title: Detect Non-Admin SMB Access to Administrative Shares
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5145
+    ShareName|contains:
+      - 'C$'
+      - 'ADMIN$'
+      - 'IPC$'
+    AccountName|contains: 
+      - 'WORKSTATION$'
+      - 'User'
+    AccountName|exclude:
+      - 'Administrator'
+      - 'Domain Admin'
+  condition: selection
