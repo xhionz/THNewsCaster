@@ -104,6 +104,7 @@ main[data-view=compact] .glance,main[data-view=compact] .chips,main[data-view=co
 .btn{background:var(--panel);color:var(--ink);border:1px solid var(--border);
   padding:9px 12px;border-radius:9px;font:inherit;cursor:pointer}
 .btn.on{background:var(--accent);color:#06203a;border-color:var(--accent);font-weight:700}
+.vbtns{display:flex;gap:4px}
 /* dashboard */
 .dash{display:grid;grid-template-columns:1fr;gap:14px;margin:4px 0 22px}
 @media(min-width:900px){.dash{grid-template-columns:1.4fr 1fr}}
@@ -146,7 +147,8 @@ footer{color:var(--muted);font-size:12px;padding:30px 24px;text-align:center;
 _JS = """
 (function(){
   const q=document.getElementById('q'), ms=document.getElementById('minScore');
-  const crit=document.getElementById('critOnly'), view=document.getElementById('view');
+  const crit=document.getElementById('critOnly');
+  const vbtns=[...document.querySelectorAll('.vbtn')];
   const main=document.querySelector('main');
   const filterable=[...document.querySelectorAll('.card,.srow')];
   const sections=[...document.querySelectorAll('.tier-section')];
@@ -167,10 +169,14 @@ _JS = """
       ![...g.querySelectorAll('.srow')].some(r=>!r.classList.contains('hidden'))));
     document.getElementById('shown').textContent=shown;
   }
-  function setView(v){main.dataset.view=v;try{localStorage.setItem('thnc_view',v);}catch(e){}}
+  function setView(v){
+    main.dataset.view=v;
+    vbtns.forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+    try{localStorage.setItem('thnc_view',v);}catch(e){}
+  }
   crit.addEventListener('click',()=>{critOnly=!critOnly;crit.classList.toggle('on',critOnly);apply();});
-  view.addEventListener('change',()=>setView(view.value));
-  try{const v=localStorage.getItem('thnc_view'); if(v){view.value=v; main.dataset.view=v;}}catch(e){}
+  vbtns.forEach(b=>b.addEventListener('click',()=>setView(b.dataset.v)));
+  try{const v=localStorage.getItem('thnc_view'); if(v) setView(v);}catch(e){}
   q.addEventListener('input',apply); ms.addEventListener('input',apply); apply();
 })();
 """
@@ -353,11 +359,12 @@ def render_html(pkg: HuntPackage, *, json_filename: str = "hunt_package.json") -
         sel = " selected" if v == 0 else ""
         p.append(f"<option value='{v}'{sel}>{v}</option>")
     p.append("</select>")
-    p.append("<label class='meta' for='view'>View</label>")
-    p.append("<select id='view'>")
+    p.append("<label class='meta'>View</label>")
+    p.append("<div class='vbtns'>")
     for val, lbl in (("cards", "Cards"), ("compact", "Compact"), ("source", "By data source")):
-        p.append(f"<option value='{val}'>{lbl}</option>")
-    p.append("</select>")
+        on = " on" if val == "cards" else ""
+        p.append(f"<button class='btn vbtn{on}' data-v='{val}'>{lbl}</button>")
+    p.append("</div>")
     p.append("<button id='critOnly' class='btn'>Critical only</button>")
     p.append(f"<span class='meta'>Showing <span id='shown'>{len(pkg.briefings)}</span> of {len(pkg.briefings)}</span>")
     p.append("</div>")

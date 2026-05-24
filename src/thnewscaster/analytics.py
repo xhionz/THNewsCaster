@@ -84,17 +84,26 @@ def objectives_by_source(pkg: HuntPackage) -> list[tuple[str, list[ObjRef]]]:
 
 # --- Kill-chain coverage ----------------------------------------------------
 
+def stage_for_technique(tid: str) -> str | None:
+    """Map an ATT&CK id to its kill-chain stage, falling back to the parent
+    technique for sub-techniques (e.g. T1566.002 -> T1566)."""
+    tid = tid.strip().upper()
+    if tid in TECHNIQUE_TACTIC:
+        return TECHNIQUE_TACTIC[tid]
+    if "." in tid:
+        return TECHNIQUE_TACTIC.get(tid.split(".")[0])
+    return None
+
+
 def killchain_coverage(pkg: HuntPackage) -> list[tuple[str, int]]:
     """Count hypotheses touching each ATT&CK stage, in kill-chain order."""
     counts = {s: 0 for s in KILLCHAIN_STAGES}
     for b in pkg.briefings:
         for h in b.hypotheses:
-            stages = set()
-            ids = list(h.mitre_attack) + [m for o in h.objectives for m in o.mitre_attack]
-            for tid in ids:
-                stage = TECHNIQUE_TACTIC.get(tid.strip())
-                if stage:
-                    stages.add(stage)
+            ids = (list(h.mitre_attack)
+                   + [m for o in h.objectives for m in o.mitre_attack]
+                   + list(b.extraction.mitre_techniques))
+            stages = {s for s in (stage_for_technique(t) for t in ids) if s}
             for s in stages:
                 counts[s] += 1
     return [(s, counts[s]) for s in KILLCHAIN_STAGES]
