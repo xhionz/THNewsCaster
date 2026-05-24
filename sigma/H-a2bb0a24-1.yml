@@ -1,0 +1,14 @@
+title: Suspicious SharePoint Access from External IPs
+logsource:
+  product: iis
+  service: iis
+condition: 'request_uri contains "/_vti_bin/" or request_uri contains "/_layouts/" and client_ip not in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] and status_code == 200
+detection:
+  selection:
+    request_uri:
+      - "*/_vti_bin/*"
+      - "*/_layouts/*"
+    client_ip:
+      - "not in internal_ranges"
+    status_code: 200
+  condition: selection

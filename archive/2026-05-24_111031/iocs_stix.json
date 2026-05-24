@@ -1,0 +1,328 @@
+{
+  "type": "bundle",
+  "id": "bundle--c4aeabdd-2df5-4ce4-b7cb-d173f8fd5858",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--2149c1cc-00bb-4c89-83a2-a0ab8f704874",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-48172",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-48172"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--775f5451-b7eb-4a01-96b7-d41291f2b34d",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-34621",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-34621"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--057c1435-11b5-4ab5-8513-ef0e0f4a71eb",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-33825",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-33825"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--eab36603-bc82-4c5e-83c0-b262998c102d",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-32201",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-32201"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--9ecc0aef-b22b-4582-9336-41d2d76b7fec",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-20223",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-20223"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--5743662e-815b-4cc3-af46-ec47c56a03a7",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-9082",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-9082"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--48d6aee1-21c7-4056-bc70-fa9ac22f1c3e",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-5281",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-5281"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "spec_version": "2.1",
+      "id": "vulnerability--268ac4b8-d136-4256-a31c-7815de5ca926",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "CVE-2026-0300",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2026-0300"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4782b129-4ce6-4362-806b-3eb276996510",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "IP addresses: 83.142.209.194",
+      "pattern": "[ipv4-addr:value = '83.142.209.194']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--24f21164-e2b0-4abc-a229-a8ea4adef4ec",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: consequences.investigations",
+      "pattern": "[domain-name:value = 'consequences.investigations']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2e5b068c-a759-431f-a069-86c92f0a9d69",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: cve.org",
+      "pattern": "[domain-name:value = 'cve.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e4bdcd25-8bcb-4191-bde6-378ca45aae73",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: filev2.getsession.org",
+      "pattern": "[domain-name:value = 'filev2.getsession.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--15e0c67c-d419-432d-b1e8-b1784298b1f4",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: git-tanstack.com",
+      "pattern": "[domain-name:value = 'git-tanstack.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cc4b4e2b-4b0f-4e70-8691-8e7c4c2bce28",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: isc.sans.edu",
+      "pattern": "[domain-name:value = 'isc.sans.edu']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--217ff555-be74-413f-acb9-b7bf4fa6490e",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: next.js",
+      "pattern": "[domain-name:value = 'next.js']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dcb24291-1af8-4c59-90ba-e49305d53d88",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: ransomware.live",
+      "pattern": "[domain-name:value = 'ransomware.live']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--51c9eb91-d894-476f-a808-24b2aba662ab",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: security.paloaltonetworks.com",
+      "pattern": "[domain-name:value = 'security.paloaltonetworks.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--67f89f41-993f-443b-b526-e78f72911d61",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: seed1.getsession.org",
+      "pattern": "[domain-name:value = 'seed1.getsession.org']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2bfcbd8f-7cf5-4537-9ff9-106e339e3fa9",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: settings.json",
+      "pattern": "[domain-name:value = 'settings.json']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cc04ed09-8de7-4041-a574-7fa950a5aba3",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: tasks.json",
+      "pattern": "[domain-name:value = 'tasks.json']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d2f637e9-ef63-4c14-8bd1-0e427ec55d4f",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: www.cisa.gov",
+      "pattern": "[domain-name:value = 'www.cisa.gov']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a4c4a8a1-222e-404a-86f4-292e029b98fe",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "Domains: www.siemens.com",
+      "pattern": "[domain-name:value = 'www.siemens.com']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ad39ceaa-8341-4d83-8875-afc12e70384a",
+      "created": "2026-05-24T11:10:31.000Z",
+      "modified": "2026-05-24T11:10:31.000Z",
+      "name": "SHA256 hashes: ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c",
+      "pattern": "[file:hashes.'SHA-256' = 'ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c']",
+      "pattern_type": "stix",
+      "valid_from": "2026-05-24T11:10:31.000Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    }
+  ]
+}

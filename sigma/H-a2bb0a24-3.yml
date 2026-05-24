@@ -1,0 +1,14 @@
+title: Windows Defender Disabled via Registry or PowerShell
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4688 AND (CommandLine contains "Set-MpPreference" or CommandLine contains "DisableAntiSpyware" or CommandLine contains "reg add HKLM\\SOFTWARE\\Microsoft\\Windows Defender\\Features" or CommandLine contains "reg add HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender")
+detection:
+  selection:
+    EventID: 4688
+    CommandLine:
+      - "*Set-MpPreference*"
+      - "*DisableAntiSpyware*"
+      - "*reg add HKLM\\SOFTWARE\\Microsoft\\Windows Defender\\Features*"
+      - "*reg add HKLM\\SOFTWARE\\Policies\\Microsoft\\Windows Defender*"
+  condition: selection

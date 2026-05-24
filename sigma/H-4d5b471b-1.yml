@@ -1,0 +1,15 @@
+title: Detect Drupal CVE-2026-9082 SQLi Exploitation
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detect potential exploitation of CVE-2026-9082 via SQLi in Drupal web logs
+logsource:
+  product: apache
+  service: access
+detection:
+  selection:
+    uri_query: '*SELECT*'
+    request_uri: '*user/login*|*node/*|*admin/*'
+    status: '200'|'302'
+  condition: selection
+references:
+  - https://www.cisa.gov/known-exploited-vulnerabilities-catalog

@@ -1,0 +1,17 @@
+title: Detect Lateral Movement from Compromised Drupal Server
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detect outbound connections from Drupal server IPs to internal systems post-exploitation
+logsource:
+  product: windows
+  service: sysmon
+  event_id: 3
+detection:
+  selection:
+    SourceIp: '10.10.10.0/24'
+    DestinationIp: '10.10.20.0/24'|'10.10.30.0/24'
+    DestinationPort: '3389'|'445'|'135'|'5985'
+    Protocol: 'tcp'
+  condition: selection
+references:
+  - https://www.cisa.gov/known-exploited-vulnerabilities-catalog

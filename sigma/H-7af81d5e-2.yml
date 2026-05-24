@@ -1,0 +1,14 @@
+title: Suspicious User Agent in Secure Workload API Calls
+logsource:
+  product: proxy
+  service: http
+detection:
+  selection:
+    endpoint|contains: '/api/v1/'
+    user_agent|contains: 
+      - 'curl'
+      - 'python-requests'
+      - 'nmap'
+      - 'sqlmap'
+      - 'wget'
+  condition: selection

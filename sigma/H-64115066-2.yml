@@ -1,0 +1,12 @@
+title: Root Cron Job Created via Suspicious Plugin Access
+logsource:
+  product: linux
+  service: cron
+detection:
+  selection:
+    message: '*crontab*'
+    user: 'root'
+    action: 'add'
+  condition: selection
+fields: [user, message, timestamp]
+level: high

@@ -1,0 +1,14 @@
+title: Detect Loading of Signed DLL from Non-Standard Vendor Path
+logsource:
+  product: windows
+  service: sysmon
+condition: 'selection'
+detection:
+  selection:
+    EventID: 10
+    ImageLoaded: '*'
+    Company: 'Microsoft Corporation'
+    ImageLoaded: '*\AppData\Local\Temp\*.dll'
+    Signed: 'true'
+  condition: selection
+  timeframe: 1h

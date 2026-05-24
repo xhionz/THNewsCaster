@@ -1,0 +1,11 @@
+title: Alert Generation for Nonexistent Siemens Vulnerability
+logsource:
+  product: siem
+  service: ticketing
+condition: 'event.category: "vulnerability" AND event.action: "alert" AND (message contains "RUGGEDCOM APE1808" OR message contains "CVE-2026-0300" AND message contains "Siemens")'
+detection:
+  event.category: "vulnerability"
+  event.action: "alert"
+  message: "*RUGGEDCOM APE1808*"
+  message: "*CVE-2026-0300*"
+  message: "*Siemens*"

@@ -1,0 +1,12 @@
+title: Suspicious cPanel API Call from Root Process
+logsource:
+  product: linux
+  service: cpanel
+detection:
+  selection:
+    command: 'uapi|cpanelapi'
+    user: 'root'
+    args: 'RemoteHost|transfer|listaccts'
+  condition: selection
+fields: [user, command, args, timestamp]
+level: high

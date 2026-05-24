@@ -1,0 +1,8 @@
+title: Detect SQL Injection Attempt via CVE-2026-9082 in Drupal Core
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri contains "/user/login" or request_uri contains "/node" or request_uri contains "/comment" and (request_body contains "' OR 1=1" or request_body contains "--" or request_body contains "UNION SELECT" or request_body contains "' AND SLEEP(5)--" or request_body contains "' OR (SELECT COUNT(*) FROM users)>0")
+  and http_status_code in [200, 500]
+  and user_agent !~ "^Mozilla/5.0.*Googlebot" and user_agent !~ "^Mozilla/5.0.*bingbot"'

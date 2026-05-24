@@ -1,0 +1,12 @@
+title: Detect PostgreSQL RCE Payloads via SQLi
+logsource:
+  product: webserver
+  service: apache
+condition: 'query_string: '*COPY FROM PROGRAM*' or query_string: '*pg_sleep*' or query_string: '*pg_read_file*' or query_string: '*pg_ls_dir*'
+detection:
+  pg_exploits:
+    - '*COPY FROM PROGRAM*'
+    - '*pg_sleep*'
+    - '*pg_read_file*'
+    - '*pg_ls_dir*'
+condition: 1 of pg_exploits

@@ -1,0 +1,13 @@
+title: Malicious npm/PyPI Package Installation Detected
+logsource:
+  product: linux
+  service: package_manager
+condition: 'event_id: package_install and (package_name: @tanstack* or package_name: tanstack*) and (package_source: https://registry.npmjs.org/ or package_source: https://pypi.org/)
+detection:
+  malicious_package_name:
+    - '@tanstack'
+    - 'tanstack'
+  malicious_source:
+    - 'https://registry.npmjs.org/'
+    - 'https://pypi.org/'
+condition: 'malicious_package_name and malicious_source'

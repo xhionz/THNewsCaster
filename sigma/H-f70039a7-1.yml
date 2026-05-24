@@ -1,0 +1,13 @@
+title: Suspicious Jenkins Plugin Download from git-tanstack.com
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 1 and (process_image: *\jenkins\*.exe or process_image: *\java\*.exe) and (command_line: *git-tanstack.com* or command_line: *filev2.getsession.org*)
+detection:
+  malicious_domain: 
+    - git-tanstack.com
+    - filev2.getsession.org
+  jenkins_process:
+    - '*\jenkins\*.exe'
+    - '*\java\*.exe'
+condition: 'jenkins_process and malicious_domain'

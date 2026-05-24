@@ -1,0 +1,5 @@
+title: Detect Brute Force or Valid Credentials Login from Web Server IP
+logsource:
+  product: windows
+  category: logon
+condition: 'source_ip in [drupal_web_server_ips] and logon_type in [3, 10] and event_id in [4624, 4625] and account_name != "SYSTEM" and account_name != "ANONYMOUS LOGON" and timestamp >= "2026-05-24T00:00:00Z"'

@@ -1,0 +1,11 @@
+title: Suspicious DNS Queries to Malicious-Looking Domains
+logsource:
+  product: windows
+  service: dns
+condition: 'event_id: 22 and (query: '*tasks.json*' or query: '*settings.json*' or query: '*isc.sans.edu*')
+detection:
+  malicious_query:
+    - '*tasks.json*'
+    - '*settings.json*'
+    - '*isc.sans.edu*'
+condition: 'malicious_query'

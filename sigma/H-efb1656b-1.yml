@@ -1,0 +1,10 @@
+title: Suspicious POST to PAN-OS Captive Portal Auth Endpoint
+logsource:
+  product: pan_os
+  service: firewall
+condition: 'http.request.method: POST and http.request.uri: /user-id/auth and http.request.content_length > 1000 and http.response.status_code: 200'
+detection:
+  http.request.method: POST
+  http.request.uri: /user-id/auth
+  http.request.content_length: '>1000'
+  http.response.status_code: 200

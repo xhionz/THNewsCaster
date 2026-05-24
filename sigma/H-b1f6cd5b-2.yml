@@ -1,0 +1,12 @@
+title: Drupal SQLi User Creation Attempt
+logsource:
+  product: database
+  service: drupal
+detection:
+  selection:
+    query:
+      - 'INSERT INTO users (name, pass, mail, status) VALUES'
+      - 'INSERT INTO users SELECT * FROM users WHERE uid=1'
+      - 'UPDATE users SET pass = WHERE name ='
+  condition: selection.query
+level: high

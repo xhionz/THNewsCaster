@@ -1,0 +1,14 @@
+title: Detect Brute-Force RDP to Domain Controllers with PowerShell Execution
+logsource:
+  product: windows
+  service: security
+condition: 'selection'
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 10
+    AccountName: '*'
+    SourceNetworkAddress: '192.168.100.0/24'
+    ProcessName: 'powershell.exe'
+  condition: selection
+  timeframe: 10m

@@ -1,0 +1,5 @@
+title: Detect Suspicious DNS Queries for Data Exfiltration Post-SQLi
+logsource:
+  product: dns
+  category: dns_query
+condition: 'query contains "." and query_length > 100 and query matches "[a-f0-9]{32,}|base64|\.php|\.exe|\.sql" and domain !~ "^.*\.google\.com$" and domain !~ "^.*\.microsoft\.com$" and domain !~ "^.*\.cloudflare-dns\.com$"'

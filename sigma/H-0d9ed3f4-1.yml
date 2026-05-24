@@ -1,0 +1,12 @@
+title: Detect Drupalgeddon2 SQLi Payloads
+logsource:
+  product: webserver
+  service: apache
+condition: 'query_string: '*%27 OR *%27%27=%27*' or query_string: '*%27 UNION SELECT*' or query_string: '*%27; DROP TABLE*' or query_string: '*%27 AND 1=1*'
+detection:
+  sql_payloads:
+    - '*%27 OR *%27%27=%27*'
+    - '*%27 UNION SELECT*'
+    - '*%27; DROP TABLE*'
+    - '*%27 AND 1=1*'
+condition: 1 of sql_payloads

@@ -1,0 +1,11 @@
+title: Phishing Domain Impersonation of Palo Alto and CISA
+logsource:
+  product: dns
+  service: resolver
+condition: 'dns.query.name contains "security.paloaltonetworks" AND dns.query.name != "security.paloaltonetworks.com" OR dns.query.name contains "cisa.gov" AND dns.query.name != "cisa.gov"'
+detection:
+  dns.query.name: "*security.paloaltonetworks*"
+  dns.query.name: "*cisa.gov*"
+  dns.query.name: "!security.paloaltonetworks.com"
+  dns.query.name: "!cisa.gov"
+condition: 'all of them'

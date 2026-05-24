@@ -1,0 +1,21 @@
+title: Drupal SQLi Exploitation Attempt
+logsource:
+  product: webserver
+detection:
+  selection:
+    req_uri:
+      - '/user/login'
+      - '/node'
+      - '/comment'
+    user_agent:
+      - 'curl'
+      - 'wget'
+      - 'python-requests'
+    query_string:
+      - 'OR 1=1'
+      - 'UNION SELECT'
+      - 'DROP TABLE'
+      - 'SELECT * FROM users'
+    status: 200
+  condition: (selection.req_uri and selection.user_agent and (selection.query_string))
+level: high

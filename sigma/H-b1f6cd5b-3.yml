@@ -1,0 +1,24 @@
+title: Ransomware File Drop via Web Process
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  selection:
+    parent_process:
+      - 'apache2'
+      - 'php-fpm'
+      - 'php'
+      - 'sh'
+      - 'bash'
+    file_path:
+      - '/var/www/html/'
+      - '/tmp/'
+      - '/var/tmp/'
+    file_extension:
+      - '.locked'
+      - '.crypt'
+      - '.encrypted'
+      - '.ransom'
+      - '.xyz'
+  condition: selection.parent_process and selection.file_path and selection.file_extension
+level: high

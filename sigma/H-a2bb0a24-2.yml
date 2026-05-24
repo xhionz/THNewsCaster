@@ -1,0 +1,19 @@
+title: Suspicious Adobe Reader Process Creation
+logsource:
+  product: windows
+  service: sysmon
+condition: 'event_id: 1 AND (CommandLine contains "/t" or CommandLine contains "/n" or CommandLine contains "/s" or CommandLine contains "-open") and (CommandLine contains "javascript:" or CommandLine contains "cmd.exe" or CommandLine contains "powershell.exe" or CommandLine contains "rundll32.exe")
+detection:
+  selection:
+    EventID: 1
+    CommandLine:
+      - "*/t*"
+      - "*/n*"
+      - "*-open*"
+      - "*/s*"
+    CommandLine:
+      - "*javascript:*"
+      - "*cmd.exe*"
+      - "*powershell.exe*"
+      - "*rundll32.exe*"
+  condition: selection

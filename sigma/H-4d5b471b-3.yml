@@ -1,0 +1,18 @@
+title: Detect Data Exfiltration via HTTP from Drupal Server
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detect large HTTP POSTs from Drupal servers to external domains indicative of data exfiltration
+logsource:
+  product: apache
+  service: access
+detection:
+  selection:
+    method: 'POST'
+    request_uri: '*'
+    status: '200'
+    response_bytes: '>10000'
+    DestinationHostname: '*[a-z0-9]{5,}.com'|'*[a-z0-9]{5,}.net'
+    NOT DestinationHostname: 'drupal.local'|'cdn.example.com'
+  condition: selection
+references:
+  - https://www.cisa.gov/known-exploited-vulnerabilities-catalog

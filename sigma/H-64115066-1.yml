@@ -1,0 +1,13 @@
+title: Suspicious cPanel Plugin Request Leading to Root Execution
+logsource:
+  product: webserver
+  service: litespeed
+detection:
+  selection:
+    uri: "/cp-plugin/litespeed/"
+    user_agent: "*"
+    status: 200
+    request_body: "exec|system|shell_exec|passthru|eval"
+  condition: selection
+fields: [client_ip, uri, request_body]
+level: critical

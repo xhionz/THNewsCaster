@@ -1,0 +1,16 @@
+title: Suspicious Outbound HTTPS to Non-Business Domains
+logsource:
+  product: proxy
+  service: http
+detection:
+  selection:
+    protocol: 'https'
+    dest_domain|endswith:
+      - '.tk'
+      - '.ml'
+      - '.ga'
+      - '.cf'
+      - '.gq'
+      - '.xyz'
+    dest_port: 443
+  condition: selection

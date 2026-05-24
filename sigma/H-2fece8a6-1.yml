@@ -1,0 +1,15 @@
+title: Detect Exchange Web Shell Activity via Unusual ASPX Request Patterns
+logsource:
+  product: microsoft_exchange
+  service: iis
+condition: 'selection'
+detection:
+  selection:
+    cs-uri-stem:
+      - '*.aspx'
+      - '*.ashx'
+    cs-method: 'POST'
+    cs-uri-query: '*cmd*'
+    cs-user-agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+  condition: selection
+  timeframe: 5m

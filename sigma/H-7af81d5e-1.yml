@@ -1,0 +1,9 @@
+title: Unauthenticated Access to Cisco Secure Workload API
+logsource:
+  product: proxy
+  service: http
+detection:
+  selection:
+    endpoint|contains: '/api/v1/'
+    auth_header: ''
+  condition: selection
