@@ -1,0 +1,10 @@
+title: OpenPetya - Malicious Office Macro Triggering PowerShell Download
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\powershell.exe'
+  CommandLine: '(-nop|-noprofile|-e|-enc)'
+  ParentImage: '*\WINWORD.EXE' OR '*\EXCEL.EXE'
+condition: EventID == 1 and ParentImage endswith ('\WINWORD.EXE' or '\EXCEL.EXE') and CommandLine contains '-enc' or CommandLine contains '-e'

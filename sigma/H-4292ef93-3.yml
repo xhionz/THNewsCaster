@@ -1,0 +1,13 @@
+title: LENOVO_SMBIOS.sys Load Preceding EDR Memory Access
+logsource:
+  product: windows
+  service: image_load
+detection:
+  sel1:
+    Image: '*\LENOVO_SMBIOS.sys'
+  sel2:
+    EventID: 13
+    TargetImage: '*\edr_agent.exe'
+    Details: 'WriteProcessMemory'
+  condition: sel1 and sel2 and sel1.EventTime < sel2.EventTime and sel2.EventTime - sel1.EventTime < 30s
+level: high

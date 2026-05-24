@@ -1,0 +1,12 @@
+title: Suspicious Office Document Execution Leading to Update.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\Update.exe'
+    ParentImage: '*\winword.exe' OR ParentImage: '*\excel.exe' OR ParentImage: '*\powerpnt.exe'
+  condition: selection
+fields:
+  - Image
+  - ParentImage

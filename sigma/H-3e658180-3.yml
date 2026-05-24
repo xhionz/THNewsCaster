@@ -1,0 +1,15 @@
+title: Detect Suspicious Artifact Upload in GitHub Actions
+logsource:
+  product: github_actions
+  service: workflow_run
+detection:
+  event_type: artifact_uploaded
+  artifact_name:
+    - '*secrets*'
+    - '*config*'
+    - '*token*'
+    - '*key*'
+    - '*password*'
+    - '*env*'
+    - '*backup*'
+  condition: artifact_name

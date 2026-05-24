@@ -1,0 +1,11 @@
+title: Salt Typhoon DNS Exfiltration via Long Random Domains
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    domain|re: '^[a-z0-9]{32,}\.com$'
+    query_type: 'TXT'
+    count: '>100'
+  condition: selection
+condition: count > 100

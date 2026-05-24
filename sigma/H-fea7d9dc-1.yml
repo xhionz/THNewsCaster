@@ -1,0 +1,7 @@
+title: Suspicious Template Injection in Ghost CMS Admin
+logsource:
+  product: webserver
+  service: nginx
+  category: web
+condition: 'req_uri contains "/ghost/api/v3/admin/posts/" and (resp_body contains "{{" and resp_body contains "}}" and resp_body contains "javascript:" or resp_body contains "onload=" or resp_body contains "eval(" or resp_body contains "Function(" )'
+fields: [req_uri, resp_body]

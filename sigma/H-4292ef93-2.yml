@@ -1,0 +1,10 @@
+title: Unpatched LENOVO_SMBIOS.sys Detected via File Version
+logsource:
+  product: windows
+  service: image_load
+detection:
+  sel:
+    Image: '*\LENOVO_SMBIOS.sys'
+    FileVersion: '1.2.3.4'  # Known vulnerable version
+  condition: sel
+level: high

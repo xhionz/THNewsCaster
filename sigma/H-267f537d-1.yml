@@ -1,0 +1,19 @@
+title: Suspicious Signed Executable from Temp or AppData
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects signed executables executed from temporary or user-writable directories, which may indicate certificate abuse
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 1
+    Image: 
+      - '*\temp\*.exe'
+      - '*\appdata\local\*.exe'
+      - '*\appdata\roaming\*.exe'
+  Selection2:
+    SignatureStatus: 'Valid'
+  Condition: Selection1 and Selection2
+  timeframe: 1d
+reference: https://github.com/SigmaHQ/sigma

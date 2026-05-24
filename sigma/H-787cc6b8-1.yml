@@ -1,0 +1,12 @@
+title: Salt Typhoon Fortinet CVE-2023-28252 Exploit Attempt
+logsource:
+  product: fortinet
+  service: firewall
+detection:
+  selection:
+    action: 'deny'
+    dst_ip: '10.0.0.0/8'
+    url: '*../*' | '*%2e%2e/*'
+    status_code: 404
+  condition: selection
+condition: selection

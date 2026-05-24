@@ -1,0 +1,7 @@
+title: Suspicious JS Injection via Theme/Plugin in Ghost CMS Frontend
+logsource:
+  product: webserver
+  service: nginx
+  category: web
+condition: 'req_uri contains "/post/" and resp_body contains "connatix.player.js" and resp_body contains "theme_id:" and resp_body contains "plugin_id:" and resp_body contains "eval(" or resp_body contains "Function("'
+fields: [req_uri, resp_body, req_headers]

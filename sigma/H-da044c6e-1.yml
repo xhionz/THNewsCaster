@@ -1,0 +1,14 @@
+title: Suspicious Execution of Vendor Update with Unapproved Hash
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\Update.exe'
+    ParentImage: '*\TrustedVendor\*.exe'
+    Hash: '!*' # Any hash not in approved list
+  condition: selection
+fields:
+  - Image
+  - Hash
+  - ParentImage

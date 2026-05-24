@@ -1,0 +1,22 @@
+title: APC Tandem - DLL Sideloading Triggering Injection
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects DLL sideloading into trusted processes followed by NtQueueApcThread or CreateRemoteThread
+logsource:
+  product: windows
+  service: edr
+condition: 'module_load: (explorer.exe or svchost.exe) AND module_path NOT LIKE "%Windows%" AND (call_name: NtQueueApcThread OR event_id: 8)'
+detection:
+  module_load:
+    - explorer.exe
+    - svchost.exe
+  module_path:
+    - '*\Temp\*'
+    - '*\AppData\Local\*'
+    - '*\Downloads\*'
+    - '*\%USERPROFILE%\*'
+  call_name:
+    - NtQueueApcThread
+  event_id:
+    - 8
+condition: all of them

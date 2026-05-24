@@ -1,0 +1,14 @@
+title: Suspicious MSHTA Execution from Email Client
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image|endswith: '\\mshta.exe'
+    CommandLine|contains: '.hta'
+    ParentImage|endswith: '\\outlook.exe'
+  Condition: Selection
+keywords:
+  - mshta
+  - phishing
+  - email

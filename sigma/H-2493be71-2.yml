@@ -1,0 +1,13 @@
+title: APC Tandem - CreateRemoteThread into svchost.exe
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects CreateRemoteThread calls from user processes into svchost.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 8
+  SourceImage: (powershell.exe or cmd.exe or wscript.exe or cscript.exe)
+  TargetImage: svchost.exe
+  TargetProcessId: not null
+condition: EventID of 8 and SourceImage of (powershell.exe or cmd.exe or wscript.exe or cscript.exe) and TargetImage: svchost.exe

@@ -1,0 +1,14 @@
+title: Suspicious MSHTA Execution from Non-Admin Network Share
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image|endswith: '\\mshta.exe'
+    CommandLine|contains: '\\' AND NOT CommandLine|contains: '\\*\netlogon' AND NOT CommandLine|contains: '\\*\sysvol'
+    CommandLine|endswith: '.hta' OR '.js' OR '.vbs'
+  Condition: Selection
+keywords:
+  - mshta
+  - network share
+  - malicious script

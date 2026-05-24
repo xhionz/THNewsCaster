@@ -1,0 +1,12 @@
+title: Salt Typhoon Suspicious Scheduled Task Creation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4698
+    CommandLine|contains: 'powershell' | 'cmd' | 'wmic'
+    TaskName|re: '^[a-zA-Z0-9]{16,}$'
+    TaskName|contains: 'UpdateService' | 'WindowsDefenderScan': false
+  condition: selection
+condition: selection

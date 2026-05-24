@@ -1,0 +1,17 @@
+title: Suspicious Certificate Enrollment After Phishing Logon
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects privileged logons followed by certificate enrollment within 5 minutes, suggesting credential theft
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4672
+    AccountName: '*@ourcompany.com'
+  Selection2:
+    EventID: 4885
+    RequesterAccount: '*@ourcompany.com'
+  Condition: Selection1 and Selection2
+  timeframe: 5m
+reference: https://github.com/SigmaHQ/sigma

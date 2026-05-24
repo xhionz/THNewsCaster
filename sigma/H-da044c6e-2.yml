@@ -1,0 +1,15 @@
+title: Suspicious Signed Binary with Untrusted Certificate Thumbprint
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\Update.exe'
+    Signature: 'TrustedVendor Inc.'
+    SignatureStatus: 'Valid'
+    SignatureThumbprint: '!*' # Not in approved thumbprint list
+  condition: selection
+fields:
+  - Image
+  - Signature
+  - SignatureThumbprint

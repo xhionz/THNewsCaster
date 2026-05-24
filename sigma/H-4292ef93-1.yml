@@ -1,0 +1,14 @@
+title: Suspicious LENOVO_SMBIOS.sys Load with EDR Termination
+logsource:
+  product: windows
+  service: image_load
+detection:
+  sel1:
+    Image: '*\LENOVO_SMBIOS.sys'
+  sel2:
+    EventID: 10
+    Image: '*\edr_agent.exe'
+    ProcessTermination: true
+  condition: sel1 and sel2
+  timeframe: 5m
+level: high

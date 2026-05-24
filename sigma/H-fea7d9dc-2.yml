@@ -1,0 +1,7 @@
+title: Suspicious Admin Login from Unusual Location + Post Modification
+logsource:
+  product: webserver
+  service: nginx
+  category: web
+condition: 'req_uri contains "/ghost/api/v3/admin/session/" and req_body contains "email:" and resp_status = 200 and EXISTS (SELECT 1 FROM web_logs w2 WHERE w2.req_uri LIKE "%/ghost/api/v3/admin/posts/%" AND w2.req_time > web_logs.req_time AND w2.req_time < web_logs.req_time + 600 AND w2.req_body contains "<script>" or w2.req_body contains "connatix.player.js")'
+fields: [req_uri, req_body, resp_status, client_ip]

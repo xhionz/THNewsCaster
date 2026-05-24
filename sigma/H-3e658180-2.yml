@@ -1,0 +1,16 @@
+title: Detect Suspicious Package Installation via Typosquatting Pattern
+logsource:
+  product: github_actions
+  service: workflow_run
+detection:
+  event_type: workflow_run
+  package_manager: 'npm' | 'pip' | 'gem'
+  package_name:
+    - '*expresss*'
+    - '*lodashx*'
+    - '*jqueryx*'
+    - '*requestx*'
+    - '*axiosx*'
+    - '*babel*'
+    - '*webpack*'
+  condition: package_name and package_manager

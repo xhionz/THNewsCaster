@@ -1,0 +1,10 @@
+title: OpenPetya - Lateral Movement via SMB or RDP Exploitation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 3
+  DestinationPort: 445 OR 3389
+  Image: '*\svchost.exe' OR '*\explorer.exe'
+  DestinationIp: '192.168.10.0/24' OR '10.0.0.0/8'
+condition: EventID == 3 and (DestinationPort == 445 or DestinationPort == 3389) and Image endswith ('\svchost.exe') and DestinationIp in ('192.168.10.0/24', '10.0.0.0/8')

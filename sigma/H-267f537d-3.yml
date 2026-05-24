@@ -1,0 +1,20 @@
+title: Reused Certificate Thumbprint Across Multiple Executables
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects the same certificate thumbprint used to sign multiple distinct executable files, indicating potential certificate reuse in malware campaigns
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 1
+    SignatureStatus: 'Valid'
+    Signature: 'Microsoft Windows'
+  Selection2:
+    Image: 
+      - '*\temp\*.exe'
+      - '*\appdata\local\*.exe'
+      - '*\appdata\roaming\*.exe'
+  Condition: Selection1 and Selection2
+  timeframe: 1d
+reference: https://github.com/SigmaHQ/sigma

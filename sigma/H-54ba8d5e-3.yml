@@ -1,0 +1,14 @@
+title: MSHTA Spawned from Office Macro via Temporary File
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image|endswith: '\\mshta.exe'
+    ParentImage|endswith: '\\winword.exe' OR '\\excel.exe' OR '\\powerpnt.exe'
+    CommandLine|contains: '\AppData\Local\Temp' AND (CommandLine|endswith: '.hta' OR '.js' OR '.vbs')
+  Condition: Selection
+keywords:
+  - mshta
+  - office macro
+  - temp file

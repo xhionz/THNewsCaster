@@ -1,0 +1,10 @@
+title: OpenPetya Ransomware - Suspicious Disk Write Pattern
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: '*\svchost.exe'
+  TargetFilename: 'C:\\$MFT'
+  Access: 'write'
+condition: EventID == 11 and TargetFilename contains '$MFT' and Image endswith '\svchost.exe'
