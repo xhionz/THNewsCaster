@@ -1,0 +1,18 @@
+title: Suspicious Package Dependency Installation in CI
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects package manager commands installing packages from non-whitelisted registries or with suspicious post-install scripts
+logsource:
+  product: github
+  service: actions
+condition: 'payload.commits[].modified contains any of ["package-lock.json", "yarn.lock", "requirements.txt", "pom.xml", "build.gradle"] and (payload.commits[].added contains "--registry https://" or payload.commits[].added contains "postinstall" or payload.commits[].added contains "npm install --ignore-scripts=false" or payload.commits[].added contains "pip install --trusted-host" or payload.commits[].added contains "curl -sSL https://raw.githubusercontent.com/" or payload.commits[].added contains "wget https://raw.githubusercontent.com/")
+detection:
+  modified_lockfile: 
+    - payload.commits[].modified
+  suspicious_install: 
+    - payload.commits[].added
+condition: modified_lockfile and suspicious_install
+tags:
+  - attack.supply_chain_compromise
+  - attack.t1195.001
+  - attack.t1059.003

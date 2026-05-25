@@ -1,0 +1,18 @@
+title: Suspicious GitHub Actions Workflow with Exfiltration
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects newly added or modified GitHub Actions workflows containing suspicious HTTP requests to external domains
+logsource:
+  product: github
+  service: actions
+condition: 'payload.commits[].modified contains any of [".github/workflows/", ".github/workflows/*.yml", ".github/workflows/*.yaml"] and (payload.commits[].added contains "curl " or payload.commits[].added contains "wget " or payload.commits[].added contains "http://" or payload.commits[].added contains "https://" or payload.commits[].added contains "requests.get(" or payload.commits[].added contains "urllib.request.urlopen(" or payload.commits[].added contains "HttpClient().GetAsync(" or payload.commits[].added contains "requests.post(" or payload.commits[].added contains "Invoke-RestMethod" or payload.commits[].added contains "Invoke-WebRequest")
+detection:
+  modified_workflow: 
+    - payload.commits[].modified
+  exfil_command: 
+    - payload.commits[].added
+condition: modified_workflow and exfil_command
+tags:
+  - attack.supply_chain_compromise
+  - attack.t1195.002
+  - attack.t1071.001
