@@ -1,0 +1,10 @@
+title: Detect Unauthorized PLC Configuration Changes via OPC UA
+logsource:
+  product: opc_ua
+  service: opc_ua_server
+detection:
+  opc_ua_method: ['Write', 'Browse', 'ModifyMonitoredItems']
+  opc_ua_node_id: ['ns=3;s=TemperatureSetpoint', 'ns=3;s=SafetyLimit', 'ns=3;s=ValveStatus']
+  user: '!= engineering-team'
+  event_type: 'configuration'
+condition: all of them

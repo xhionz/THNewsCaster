@@ -1,0 +1,10 @@
+title: Detect Disk Wipe via Cipher Command via Suspicious Parent Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image: '*\update.exe'
+  CommandLine: '*cipher /w*'
+  ParentImage: ('*\update.exe' | '*\microsoftupdate.exe')
+  ParentCommandLine: '*\svchost.exe' | '*\explorer.exe'
+condition: all of them

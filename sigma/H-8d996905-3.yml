@@ -1,0 +1,9 @@
+title: Detect Suspicious PowerShell Execution for Log Deletion
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image: '*\powershell.exe'
+  CommandLine: ('*Remove-Item* -Path *Windows\System32\winevt* | *-Force*' | '*wevtutil cl*' | '*del /q %windir%\system32\winevt\Logs\*')
+  ParentImage: '*\cmd.exe' | '*\explorer.exe'
+condition: all of them
