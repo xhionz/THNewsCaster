@@ -1,0 +1,14 @@
+title: Anomalous Microsoft Graph API Access via OAuth Token
+logsource:
+  product: azure_ad
+  category: audit
+detection:
+  Selection:
+    OperationName: 'ApplicationPermissionGrant'
+    Resource: 'Microsoft Graph'
+    ClientAppId: '00000003-0000-0000-c000-000000000000'
+    ResultType: '0'
+    UserAgent: 'python-requests'
+  Condition: Selection
+  timeframe: 1h
+condition: Selection

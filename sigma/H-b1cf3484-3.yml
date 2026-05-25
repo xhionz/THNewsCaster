@@ -1,0 +1,14 @@
+title: Rapid MFA Prompts Following Suspicious Referrer
+logsource:
+  product: azure_ad
+  category: authentication
+detection:
+  Selection:
+    OperationName: 'InteractiveAuthentication'
+    ResultType: '0'
+    ConditionalAccessPolicies: 'MFA Required'
+    ReferrerUrl: 'https://*.github.io/*' OR 'https://*.dropbox.com/*' OR 'https://*.bit.ly/*' OR 'https://*.shorturl.at/*'
+    TimeSinceLastAuth: '<=600s'
+  Condition: Selection
+  timeframe: 1h
+condition: Selection

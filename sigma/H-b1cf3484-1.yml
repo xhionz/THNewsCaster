@@ -1,0 +1,12 @@
+title: Suspicious OAuth Device Code Flow with Anomalous User Agent
+logsource:
+  product: azure_ad
+  category: authentication
+detection:
+  Selection:
+    OperationName: 'OAuth2DeviceCodeFlow'
+    ResultType: '0'
+    UserAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Kali365'
+  Condition: Selection
+  timeframe: 1h
+condition: Selection
