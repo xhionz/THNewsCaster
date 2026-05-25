@@ -1,0 +1,14 @@
+title: Detect dyld with anomalous memory protection changes via PAC oracle
+logsource:
+  product: macos
+  service: process_creation
+detection:
+  Selection:
+    Image: '*dyld*'
+    ParentImage: ['*Terminal*', '*iTerm2*', '*bash*', '*zsh*']
+    CommandLine: '*__dyld_chained_fixups*'
+  Condition: Selection
+keywords:
+  - dyld
+  - PAC
+  - fixup

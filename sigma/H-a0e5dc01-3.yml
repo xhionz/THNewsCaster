@@ -1,0 +1,14 @@
+title: Detect shellcode execution via dyld-injected memory regions
+logsource:
+  product: macos
+  service: process_creation
+detection:
+  Selection:
+    Image: ['*Finder*', '*Terminal*', '*iTerm2*', '*SystemUIServer*']
+    CommandLine: '*-e*' OR CommandLine: '*sh*' OR CommandLine: '*bash*' OR CommandLine: '*zsh*'
+    ParentImage: '*dyld*'
+  Condition: Selection
+keywords:
+  - dyld
+  - shellcode
+  - injection

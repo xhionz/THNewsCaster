@@ -1,0 +1,14 @@
+title: Detect dyld loading non-Apple-signed libraries via PAC forgery
+logsource:
+  product: macos
+  service: process_creation
+detection:
+  Selection:
+    Image: '*dyld*'
+    ParentImage: ['*Terminal*', '*iTerm2*', '*bash*', '*zsh*']
+    CommandLine: '*DYLD_INSERT_LIBRARIES*' OR CommandLine: '*DYLD_LIBRARY_PATH*'
+  Condition: Selection
+keywords:
+  - dyld
+  - PAC
+  - library_path
