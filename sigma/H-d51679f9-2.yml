@@ -1,0 +1,10 @@
+title: Exploit Attempt on Public Linux Service
+logsource:
+  product: linux
+  service: audit
+condition: 'event_type: "exec" and process.name: "curl" or process.name: "wget" and process.args: "http://*" and src.ip: "192.168.1.0/24"'
+detection:
+  exploit_tool: process.name: ["curl", "wget", "nc", "socat"]
+  external_url: process.args: "http://*" or process.args: "https://*"
+  manufacturing_subnet: src.ip: "192.168.1.0/24"
+condition: all of them

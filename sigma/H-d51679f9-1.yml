@@ -1,0 +1,12 @@
+title: Suspicious Email to Manufacturing Department
+logsource:
+  product: office365
+  service: exchange
+condition: 'recipient.department: "Manufacturing" and event_type: "message delivered" and (attachment.extension: ["exe", "js", "vbs", "scr", "zip", "docm", "xlsm"] or url: "*bit.ly*" or url: "*tinyurl*" or subject: /.*(urgent|invoice|payment|signature).*/i)'
+detection:
+  recipient_department: recipient.department: "Manufacturing"
+  event_type_delivered: event_type: "message delivered"
+  malicious_attachment: attachment.extension: ["exe", "js", "vbs", "scr", "zip", "docm", "xlsm"]
+  suspicious_url: url: "*bit.ly*" or url: "*tinyurl*"
+  suspicious_subject: subject: /.*(urgent|invoice|payment|signature).*/i
+condition: all of them

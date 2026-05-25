@@ -1,0 +1,11 @@
+title: Suspicious CI/CD Pipeline Activity
+logsource:
+  product: jenkins
+  service: build
+condition: 'actor.user != "automation-bot" and event_type: "build_started" and (build.step: "npm install" or build.step: "pip install" or build.step: "git clone" and build.repo: "*internal-repo*" and build.commit.author: "*" and build.commit.message: /.*(update|patch|fix).*/i)'
+detection:
+  non_automation_actor: actor.user: "*" and not actor.user: "automation-bot"
+  suspicious_build_step: build.step: ["npm install", "pip install", "git clone"]
+  internal_repo: build.repo: "*internal-repo*"
+  suspicious_commit_msg: build.commit.message: /.*(update|patch|fix).*/i
+condition: all of them
