@@ -1,0 +1,18 @@
+title: Suspicious Git Tag Push Without Valid GPG Signature
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects Git tag pushes to laravel-lang repositories without valid GPG signature verification
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    comm: 'git'
+    cmdline: '*tag*laravel-lang*'
+    audit_event: 'execve'
+  filter:
+    - 'git tag -s' not in cmdline
+    - 'gpg --verify' not in parent_cmdline
+  condition: selection and filter
+timeframe: 6d
+level: high

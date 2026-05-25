@@ -1,0 +1,23 @@
+title: Suspicious Office Document Execution via Macro
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\office\*.exe'
+    ParentImage: '*\winword.exe' or '*\excel.exe'
+  selection2:
+    EventID: 1
+    Image: '*\mshta.exe'
+    ParentImage: '*\winword.exe' or '*\excel.exe'
+  selection3:
+    EventID: 1
+    Image: '*\powershell.exe'
+    ParentImage: '*\winword.exe' or '*\excel.exe'
+    CommandLine: '*-e*' or '*-enc*' or '*-nop*'
+  condition: selection1 or selection2 or selection3
+tags:
+  - attack.t1566
+  - attack.t1204
+  - attack.t1059

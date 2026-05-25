@@ -1,0 +1,16 @@
+title: Exfiltration of CI Secrets via PHP from Laravel-Lang
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects HTTP/S connections from PHP processes running under laravel-lang vendor directories to suspicious domains
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  selection:
+    Image: '*php*'
+    CommandLine: '*vendor/laravel-lang*'
+  filter:
+    - 'composer install' not in CommandLine
+  condition: selection and (network_outbound and destination_domain in suspicious_domains)
+timeframe: 6d
+level: high

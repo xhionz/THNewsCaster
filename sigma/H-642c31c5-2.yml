@@ -1,0 +1,23 @@
+title: Suspicious Process Injection from Suspicious Loader
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\RemotePELoader.exe'
+    ParentImage: '*\explorer.exe' or '*\svchost.exe'
+  selection2:
+    EventID: 8
+    Image: '*\RemotePELoader.exe'
+    TargetImage: '*\svchost.exe' or '*\lsass.exe' or '*\winlogon.exe'
+  selection3:
+    EventID: 1
+    Image: '*\svchost.exe'
+    ParentImage: '*\RemotePELoader.exe'
+    CommandLine: '*-nop*' or '*-enc*' or '*-e*'
+  condition: selection1 and (selection2 or selection3)
+tags:
+  - attack.t1055
+  - attack.t1027
+  - attack.t1059

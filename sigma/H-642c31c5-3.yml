@@ -1,0 +1,19 @@
+title: DPAPI Credential Exfiltration via DNS Tunneling
+logsource:
+  product: windows
+  service: dns
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\DPAPILoader.exe'
+    ParentImage: '*\svchost.exe' or '*\explorer.exe'
+  selection2:
+    EventID: 22
+    QueryName: /.*\.lazarus\.com$/ or /.*\.secureupdate\.net$/ or /.*\.cdn-update\.org$/
+    QueryResult: 'NXDOMAIN' or 'NOERROR'
+    QueryCount: '>100'
+  condition: selection1 and selection2
+tags:
+  - attack.t1555
+  - attack.t1071
+  - attack.t1041
