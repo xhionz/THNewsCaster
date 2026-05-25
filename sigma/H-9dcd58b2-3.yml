@@ -1,0 +1,32 @@
+title: Detect Credential Harvesting via Package Post-Install Script
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image|endswith:
+      - '\npm.cmd'
+      - '\pip.exe'
+      - '\cargo.exe'
+    CommandLine|contains:
+      - 'install '
+  selection2:
+    ParentImage|endswith:
+      - '\npm.cmd'
+      - '\pip.exe'
+      - '\cargo.exe'
+    Image|endswith:
+      - '\node.exe'
+      - '\python.exe'
+      - '\rustc.exe'
+    CommandLine|contains:
+      - 'keyring'
+      - 'credential-manager'
+      - 'aws credentials'
+      - 'dumpcreds'
+      - 'getenv("TOKEN")'
+      - 'readFileSync(".aws/credentials")'
+  condition: selection and selection2
+falsepositives:
+  - Legitimate credential management tools
+level: high

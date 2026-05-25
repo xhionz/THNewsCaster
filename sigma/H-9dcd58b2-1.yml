@@ -1,0 +1,26 @@
+title: Detect TrapDoor Malicious Package Installation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image|endswith:
+      - '\npm.cmd'
+      - '\pip.exe'
+      - '\cargo.exe'
+    CommandLine|contains:
+      - 'install trapdoor'
+      - 'install malicious-package-1'
+      - 'install malicious-package-2'
+      - 'install malicious-package-3'
+      - 'install malicious-package-4'
+      - 'install malicious-package-5'
+      - 'install malicious-package-6'
+      - 'install malicious-package-7'
+      - 'install malicious-package-8'
+      - 'install malicious-package-9'
+      - 'install malicious-package-10'
+  condition: selection
+falsepositives:
+  - Legitimate package installs with similar names
+level: high

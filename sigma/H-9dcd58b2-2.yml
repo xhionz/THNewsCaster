@@ -1,0 +1,22 @@
+title: Detect TrapDoor Malicious CI/CD Dependency Installation
+logsource:
+  product: linux
+  service: container
+detection:
+  selection:
+    container_image|contains:
+      - 'node'
+      - 'python'
+      - 'rust'
+    container_name|contains:
+      - 'jenkins'
+      - 'github-actions'
+      - 'gitlab-ci'
+    command_line|contains:
+      - 'npm install trapdoor'
+      - 'pip install malicious-package-1'
+      - 'cargo install malicious-package-2'
+  condition: selection
+falsepositives:
+  - Legitimate CI builds using public packages
+level: high
