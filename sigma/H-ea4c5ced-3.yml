@@ -1,0 +1,20 @@
+title: Suspicious Plugin File Upload or Modification in Ghost CMS
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects unauthorized file uploads or modifications in Ghost plugin directories
+logsource:
+  product: webserver
+  service: http
+  category: web
+ detection:
+   selection:
+     uri_path: '/content/plugins/*/index.js' OR uri_path: '/content/plugins/*/index.min.js' OR uri_path: '/content/plugins/*/*.php'
+     method: "POST" OR method: "PUT"
+     response_code: 200
+   condition: selection
+fields:
+  - uri_path
+  - method
+  - client_ip
+  - response_code
+level: high

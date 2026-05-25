@@ -1,0 +1,18 @@
+title: Obfuscated JavaScript Injection in Static Assets
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects obfuscated JavaScript files commonly used in ClickFix attacks
+logsource:
+  product: webserver
+  service: http
+  category: web
+ detection:
+   selection:
+     uri_path: '*.js' OR uri_path: '*.min.js'
+     response_body: '*eval(*' OR '*atob(*' OR '*String.fromCharCode(*' OR '*\x*\x*\x*' OR '*base64decode(*'
+   condition: selection
+fields:
+  - uri_path
+  - response_body
+  - client_ip
+level: high
