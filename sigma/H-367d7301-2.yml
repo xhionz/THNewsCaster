@@ -1,0 +1,15 @@
+title: Detect Suspicious Software Update from Untrusted Vendor
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects software updates from unsigned or untrusted vendors in manufacturing subnet
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\UpdateService.exe'
+    Company: 'Unknown' OR Company: 'Not Verified'
+    ParentImage: '*\Windows\System32\svchost.exe'
+  condition: selection
+level: high

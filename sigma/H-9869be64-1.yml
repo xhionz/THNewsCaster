@@ -1,0 +1,20 @@
+title: Suspicious Composer Post-Install Script with Credential Stealer
+logsource:
+  product: linux
+  service: shell
+condition: '(
+  ("composer" and "install" and "laravel-lang" and ("curl" or "wget"))
+  and
+  ("https://raw.githubusercontent.com" or "https://gist.githubusercontent.com")
+  and
+  not ("github.com/laravel-lang" or "github.com/composer")
+)'
+detection:
+  keywords:
+    - "composer install"
+    - "laravel-lang"
+    - "curl"
+    - "wget"
+    - "https://raw.githubusercontent.com"
+    - "https://gist.githubusercontent.com"
+  condition: keywords

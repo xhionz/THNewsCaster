@@ -1,0 +1,16 @@
+title: Suspicious Outbound HTTPS with Long Random Subdomain
+description: Detects outbound HTTPS connections to domains with unusually long random subdomains, indicative of C2 exfiltration
+logsource:
+  product: web
+  service: http
+detection:
+  req_uri:
+    - 'https://*.example.com'
+  req_host:
+    - '*.*.*.*.*.*.*.*.*.*'
+  http.response.bytes: '>1000000'
+  user_agent:
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    - 'curl'
+condition: all of req_host and http.response.bytes and user_agent
+level: high

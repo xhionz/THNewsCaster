@@ -1,0 +1,26 @@
+title: Suspicious Composer Install in CI/CD Environment
+logsource:
+  product: linux
+  service: shell
+condition: '(
+  ("composer" and "install" and "laravel-lang" and ("curl" or "wget"))
+  and
+  ("CI" or "JENKINS" or "GITLAB" or "GITHUB_ACTIONS")
+  and
+  ("https://raw.githubusercontent.com" or "https://gist.githubusercontent.com")
+  and
+  not ("github.com/laravel-lang" or "github.com/composer")
+)'
+detection:
+  keywords:
+    - "composer install"
+    - "laravel-lang"
+    - "curl"
+    - "wget"
+    - "CI"
+    - "JENKINS"
+    - "GITLAB"
+    - "GITHUB_ACTIONS"
+    - "raw.githubusercontent.com"
+    - "gist.githubusercontent.com"
+  condition: keywords

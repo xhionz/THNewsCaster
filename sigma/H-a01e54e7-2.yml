@@ -1,0 +1,20 @@
+title: Suspicious SMB Share Access via Non-Privileged Accounts
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 5145
+  Account_Name:
+    - 'Guest'
+    - 'TempUser'
+    - 'Backup'
+    - 'Test'
+    - 'User'
+  Accesses:
+    - '%%4416'
+    - '%%4417'
+  Target_Server_Name:
+    - '*'
+condition: 1 of them and not (Account_Name in ('Administrator', 'Domain Admins', 'Enterprise Admins'))
+level: high

@@ -1,0 +1,24 @@
+title: Malicious Composer Install on Developer Workstation
+logsource:
+  product: linux
+  service: shell
+condition: '(
+  ("composer" and "install" and "laravel-lang")
+  and
+  ("curl" or "wget" or "bash" or "sh")
+  and
+  ("https://raw.githubusercontent.com" or "https://gist.githubusercontent.com")
+  and
+  not ("github.com/laravel-lang" or "github.com/composer")
+)'
+detection:
+  keywords:
+    - "composer install"
+    - "laravel-lang"
+    - "curl"
+    - "wget"
+    - "bash"
+    - "sh"
+    - "raw.githubusercontent.com"
+    - "gist.githubusercontent.com"
+  condition: keywords

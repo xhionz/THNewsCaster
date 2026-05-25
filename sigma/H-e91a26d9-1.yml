@@ -1,0 +1,17 @@
+title: Suspicious SYLK File Execution via Non-Standard Parent
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 4688
+    CommandLine: '*.slk'
+    ParentImage: ['*\powershell.exe', '*\cmd.exe', '*\wscript.exe', '*\cscript.exe', '*\rundll32.exe', '*\mshta.exe']
+  Filter:
+    ParentImage: ['*\excel.exe', '*\winword.exe', '*\explorer.exe', '*\outlook.exe', '*\svchost.exe']
+  Condition: Selection and not Filter
+fields:
+  - CommandLine
+  - ParentImage
+  - Image
+condition: selection and not filter

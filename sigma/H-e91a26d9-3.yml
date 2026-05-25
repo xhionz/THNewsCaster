@@ -1,0 +1,16 @@
+title: Suspicious SYLK Formula Execution Bypassing Allowlisting
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 4688
+    CommandLine: '*.slk'
+    ParentImage: ['*\powershell.exe', '*\cmd.exe', '*\wscript.exe', '*\rundll32.exe']
+  Selection2:
+    CommandLine: '*=CMD|*' OR CommandLine: '*=EXEC|*' OR CommandLine: '*=DDE|*' OR CommandLine: '*=HYPERLINK|*http*'
+  Condition: Selection or Selection2
+fields:
+  - CommandLine
+  - ParentImage
+condition: selection or selection2

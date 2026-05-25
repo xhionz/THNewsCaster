@@ -1,0 +1,19 @@
+title: NTLM Relay Detection via Failed Logons to Non-Asset IPs
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4625
+  Target_Server_Name:
+    - '192.168.0.0/16'
+    - '172.16.0.0/12'
+    - '10.0.0.0/8'
+  Status_Code:
+    - '0xc000006d'
+  Network_Source_IP:
+    - '192.168.0.0/16'
+    - '172.16.0.0/12'
+    - '10.0.0.0/8'
+condition: not (Target_Server_Name in ('DC01*', 'DC02*', 'DC03*')) and 1 of them
+level: high

@@ -1,0 +1,14 @@
+title: Detect PlugX Memory Injection via Sysmon Process Access
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects suspicious process access patterns consistent with PlugX memory injection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 10
+    TargetImage: '*\svchost.exe'
+    GrantedAccess: '0x1010'
+  condition: selection
+level: medium

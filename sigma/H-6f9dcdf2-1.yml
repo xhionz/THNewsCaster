@@ -1,0 +1,15 @@
+title: Suspicious CommsServlet POST Request to Apex One Server
+description: Detects POST requests to CommsServlet endpoint indicative of RCE exploitation attempt
+logsource:
+  product: web
+  service: http
+detection:
+  req_uri:
+    - '/servlet/CommsServlet'
+  req_method: POST
+  req_user_agent:
+    - 'curl'
+    - 'wget'
+    - 'Python-urllib'
+condition: all of req_*
+level: high

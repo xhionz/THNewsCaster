@@ -1,0 +1,16 @@
+title: Suspicious File Access via Scripted SYLK Payload
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 4663
+    AccessMask: '0x20019'
+    ObjectName: '\\*\*.txt' OR ObjectName: '\\*\*.docx' OR ObjectName: '\\*\*.xlsx' OR ObjectName: '\\*\*.pst'
+    Image: ['*\powershell.exe', '*\cmd.exe', '*\wscript.exe', '*\cscript.exe']
+  Condition: selection
+fields:
+  - ObjectName
+  - Image
+  - SubjectUserName
+condition: selection

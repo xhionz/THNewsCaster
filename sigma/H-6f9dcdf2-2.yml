@@ -1,0 +1,13 @@
+title: Suspicious Lateral Movement via Pass-the-Hash Detected
+description: Detects logons from Apex One server to other internal hosts using NTLM authentication without prior approved ticketing
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 4624
+  logon_type: 3
+  account_name: 'SYSTEM' | 'LOCAL SERVICE' | 'NETWORK SERVICE'
+  source_workstation: 'APX-SRV-01' | 'APX-SRV-02' | 'APX-SRV-03'
+  authentication_package: 'NTLM'
+condition: all of event_id and logon_type and source_workstation and authentication_package
+level: high

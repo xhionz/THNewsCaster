@@ -1,0 +1,21 @@
+title: Pass-the-Hash Detection via SMB Logons
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4624
+  Logon_Type:
+    - 3
+  Authentication_Package:
+    - 'NTLM'
+  Account_Name:
+    - 'Administrator'
+    - 'Domain Admins'
+    - 'krbtgt'
+  Network_Source_IP:
+    - '192.168.0.0/16'
+    - '172.16.0.0/12'
+    - '10.0.0.0/8'
+condition: 1 of them and not (Account_Name in ('ANONYMOUS LOGON', 'SYSTEM'))
+level: high
