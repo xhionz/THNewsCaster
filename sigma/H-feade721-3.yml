@@ -1,0 +1,12 @@
+title: TeamPCP - Malicious @antv npm Package Usage
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 10 and (Image: "*\node.exe" or Image: "*\npm.exe") and (CommandLine: "*echarts-for-react*" or CommandLine: "*size-sensor*" or CommandLine: "*antv*" or CommandLine: "*timeago.js*")
+detection:
+  keywords:
+    - antv
+    - echarts-for-react
+    - size-sensor
+    - timeago.js
+condition: keywords

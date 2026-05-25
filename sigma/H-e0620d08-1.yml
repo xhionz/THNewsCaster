@@ -1,0 +1,10 @@
+title: Suspicious POST to Ghost Admin API via CVE-2023-40174
+logsource:
+  product: webserver
+  service: nginx
+detection:
+  selection:
+    method: 'POST'
+    request_uri: '/ghost/api/v3/admin/users/'
+    status: 200
+  condition: selection

@@ -1,0 +1,11 @@
+title: TeamPCP - Malicious Nx Console Extension Installation
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 10 and (Image: "*\Code.exe" or Image: "*\Code Helper.exe") and (CommandLine: "*nrwl.angular-console*" or CommandLine: "*v18.95.0*")
+detection:
+  keywords:
+    - nrwl.angular-console
+    - v18.95.0
+  timeframe: 1h
+condition: keywords

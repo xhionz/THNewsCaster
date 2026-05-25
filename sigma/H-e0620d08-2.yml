@@ -1,0 +1,10 @@
+title: Redirects from Ghost CMS to Phishing Domains
+logsource:
+  product: webserver
+  service: nginx
+detection:
+  selection:
+    status: [301, 302]
+    request_uri: '/'
+    location: '*phishing-domain.com*' OR '*malicious-redirect.net*' OR '*fake-login.org*'
+  condition: selection

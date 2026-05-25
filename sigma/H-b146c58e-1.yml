@@ -1,0 +1,10 @@
+title: TeamPCP - Malicious Nx Console VS Code Extension Publish
+logsource:
+  product: vscode_marketplace
+  category: application
+condition: 'publisher: nrwl.angular-console and version: 18.95.0 and timestamp > 2026-05-18T00:00:00Z and timestamp < 2026-05-20T00:00:00Z'
+detection:
+  publisher: nrwl.angular-console
+  version: '18.95.0'
+  time_window: '2026-05-18T00:00:00Z - 2026-05-20T00:00:00Z'
+condition: all

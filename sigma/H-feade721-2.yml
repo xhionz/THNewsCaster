@@ -1,0 +1,15 @@
+title: TeamPCP - Malicious durabletask SDK Execution
+logsource:
+  product: linux
+  service: process
+condition: 'process_name: "python" or process_name: "python3" and (command_line: "*durabletask*" and command_line: "*1.4.1" or command_line: "*1.4.2" or command_line: "*1.4.3") and (file_name: "*.so" or file_name: "*.bin" or file_name: "*wipe*" or file_name: "*dd*" or file_name: "*shred*")
+detection:
+  keywords:
+    - durabletask
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - wipe
+    - shred
+    - dd
+condition: keywords
