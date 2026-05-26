@@ -1,0 +1,10 @@
+title: Suspicious 7-Zip Archive Processing
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\7zFM.exe'
+  CommandLine: '* *.zip*' | '* *.pdf*'
+  ParentImage: '*\explorer.exe' | '*\svchost.exe'
+condition: all

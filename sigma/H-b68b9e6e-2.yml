@@ -1,0 +1,10 @@
+title: Suspicious DLL Load by 7-Zip
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 10
+  Image: '*\7zFM.exe'
+  TargetFilename: '*\AppData\Local\Temp\*.dll'
+  ImageLoaded: '*\AppData\Local\Temp\*.dll'
+condition: all

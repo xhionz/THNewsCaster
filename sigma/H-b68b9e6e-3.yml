@@ -1,0 +1,10 @@
+title: Suspicious Archive Open via Email Attachment
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\7zFM.exe'
+  CommandLine: '* *.zip*' | '* *.pdf*'
+  ParentImage: '*\outlook.exe' | '*\chrome.exe' | '*\firefox.exe'
+condition: all
