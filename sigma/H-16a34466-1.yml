@@ -1,0 +1,13 @@
+title: Detect Godzilla ASPX Web Shell via File Creation and HTTP Access
+logsource:
+  product: windows
+  service: security
+detection:
+  file_creation:
+    EventID: 11
+    Image: '*\inetpub\wwwroot\*.aspx'
+    TargetFilename: '*\*.aspx'
+  http_access:
+    EventID: 13
+    Message: 'GET *.aspx'
+condition: file_creation and http_access

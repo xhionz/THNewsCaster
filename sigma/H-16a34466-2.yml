@@ -1,0 +1,14 @@
+title: Detect Godzilla-Related PowerShell Script Block Execution
+logsource:
+  product: windows
+  service: powershell
+detection:
+  scriptblock:
+    EventID: 4104
+    ScriptBlockText: 'Invoke-Expression'
+    or:
+      - 'DownloadFile'
+      - 'System.Net.WebClient'
+      - 'Base64Decode'
+      - 'IEX '
+condition: scriptblock

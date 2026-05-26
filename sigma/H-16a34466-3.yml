@@ -1,0 +1,10 @@
+title: Detect LSASS Memory Access via Process Access
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  lsass_access:
+    EventID: 10
+    TargetImage: '*\lsass.exe'
+    SourceImage: '*\powershell.exe' OR '*\w3wp.exe' OR '*\svchost.exe'
+condition: lsass_access
