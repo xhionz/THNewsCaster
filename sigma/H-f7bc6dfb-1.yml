@@ -1,0 +1,16 @@
+title: Suspicious Interactive Logon After Phishing Indicators
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4624
+    LogonType: 2
+  Selection2:
+    EventID: 4624
+    LogonType: 10
+  Selection3:
+    AccountName: '*@*'
+    LogonProcessName: 'NtLmSsp'
+  Condition: (Selection1 or Selection2) and Selection3
+condition: Selection1 or Selection2 or Selection3

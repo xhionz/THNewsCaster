@@ -1,0 +1,20 @@
+title: SQL Injection Attempt on Registry Web Service
+logsource:
+  product: iis
+  service: access
+detection:
+  Selection1:
+    cs-uri-stem: '*register*' OR '*citizen*' OR '*entity*'
+    cs-uri-query: '*SELECT*' OR '*UNION*' OR '*--*' OR '*;--*'
+    cs-method: POST
+    sc-status: 200
+  Selection2:
+    cs-uri-stem: '*register*' OR '*citizen*' OR '*entity*'
+    cs(User-Agent): '*sqlmap*' OR '*nmap*' OR '*curl*' OR '*wget*'
+    sc-status: 500
+  Selection3:
+    cs-uri-stem: '*register*' OR '*citizen*' OR '*entity*'
+    cs-method: POST
+    cs-uri-query: '*OR 1=1*'
+    cs-referer: '-'
+condition: Selection1 or Selection2 or Selection3
