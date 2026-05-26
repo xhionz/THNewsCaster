@@ -1,0 +1,14 @@
+title: Suspicious Email with Malicious Attachment from Impersonated Domain
+logsource:
+  product: office365
+  service: mail
+detection:
+  selection:
+    from: '*@*aviation*|*software*'
+    subject: '.*Invoice.*|.*Contract.*|.*Payment.*'
+    attachment_name: '.*\.(exe|js|vbs|scr|bat|dll)$'
+  condition: selection
+fields:
+  - from
+  - subject
+  - attachment_name

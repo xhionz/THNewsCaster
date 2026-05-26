@@ -1,0 +1,17 @@
+title: Suspicious O365 Login from Anomalous Location
+logsource:
+  product: office365
+  service: auditlog
+detection:
+  selection:
+    operation: 'UserLoggedIn'
+    user_agent: '*Mozilla*'
+    client_ip: '185.143.221.*' OR '194.187.245.*' OR '104.28.12.*'
+    location: 'Iran' OR 'Russia' OR 'China'
+    result: 'Success'
+  condition: selection
+fields:
+  - user_id
+  - client_ip
+  - location
+  - user_agent

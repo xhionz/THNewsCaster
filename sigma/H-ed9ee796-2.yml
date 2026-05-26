@@ -1,0 +1,16 @@
+title: Suspicious Redirects in Web Server Logs
+logsource:
+  product: webserver
+  service: access
+detection:
+  selection:
+    http_referer: '*google.*|*bing.*|*yahoo.*'
+    http_location: '*malware.*|*phishing.*|*drive.*|*download.*'
+    status_code: 301|302
+    user_agent: '*Mozilla*'
+  condition: selection
+fields:
+  - client_ip
+  - http_referer
+  - http_location
+  - status_code
