@@ -1,0 +1,5 @@
+title: Suspicious cPanel Plugin Privilege Escalation Attempt
+logsource:
+  product: apache
+  service: http
+condition: 'http.request.uri contains "/cpanel/" and (http.request.uri contains "cmd=" or http.request.uri contains "action=exec" or http.request.uri contains "do=run" or http.request.uri contains "php_value") and http.response.status_code in [200, 302, 403] and user_agent != "cPanel"'

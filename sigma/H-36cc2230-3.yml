@@ -1,0 +1,5 @@
+title: Suspicious Cron Job or Systemd Service Creation
+logsource:
+  product: linux
+  service: audit
+condition: 'event_type == "exec" and process_name in ["crontab", "systemctl"] and process_command_line contains "-e" or process_command_line contains "enable" or process_command_line contains "start" and process_effective_user == "root" and process_parent_name in ["sh", "bash"]'

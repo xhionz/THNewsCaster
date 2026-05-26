@@ -1,0 +1,5 @@
+title: Suspicious Web Shell Upload via cPanel File Manager
+logsource:
+  product: apache
+  service: http
+condition: 'http.request.uri contains "/cpsess[0-9]+/frontend/paper_lantern/filemanager/index.html" and http.request.method == "POST" and http.request.body contains "base64_decode" or http.request.body contains "eval(" or http.request.body contains "shell_exec" or http.request.body contains "system(" and http.response.status_code == 200'
