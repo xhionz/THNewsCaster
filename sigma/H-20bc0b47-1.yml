@@ -1,0 +1,15 @@
+title: Suspicious Process Spawn from SharePoint App Pool
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 4688
+    NewProcessName:
+      - '*\mshta.exe'
+      - '*\cscript.exe'
+    CommandLine:
+      - '*__VIEWSTATE*'
+      - '*__EVENTVALIDATION*'
+    ParentProcessName: '*\w3wp.exe'
+  condition: selection

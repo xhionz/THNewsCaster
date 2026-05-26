@@ -1,0 +1,14 @@
+title: Suspicious ASPX/ASHX File Creation in SharePoint Web Root
+logsource:
+  product: windows
+  service: file_event
+detection:
+  selection:
+    EventType: CreateFile
+    TargetFilename:
+      - '*\inetpub\wwwroot\_layouts\*.aspx'
+      - '*\inetpub\wwwroot\_layouts\*.ashx'
+      - '*\inetpub\wwwroot\_vti_bin\*.aspx'
+      - '*\inetpub\wwwroot\_vti_bin\*.ashx'
+    ProcessName: '*\w3wp.exe'
+  condition: selection

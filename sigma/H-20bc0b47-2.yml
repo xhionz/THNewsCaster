@@ -1,0 +1,15 @@
+title: Suspicious Logon from SharePoint Service Account
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    AccountName:
+      - 'SP_AppPool'
+      - 'SP_Service'
+    LogonType:
+      - 3  # Network
+      - 10 # RemoteInteractive
+    SourceNetworkAddress: '!=127.0.0.1'
+  condition: selection
