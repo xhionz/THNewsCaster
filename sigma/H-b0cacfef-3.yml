@@ -1,0 +1,16 @@
+title: Ababil HTTPS Exfiltration via Suspicious TLDs and Certificates
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects outbound HTTPS connections to domains with high-risk TLDs or untrusted certificates
+logsource:
+  product: proxy
+  service: https
+detection:
+  selection1:
+    domain: '*\.tk' OR domain: '*\.ml' OR domain: '*\.ga' OR domain: '*\.cf' OR domain: '*\.gq'
+  selection2:
+    certificate_issuer: '*Let\'s Encrypt*' AND certificate_subject: '*unknown*'
+  selection3:
+    bytes_sent: '>1000000'
+  condition: selection1 or selection2 or selection3
+condition: selection1 or selection2 or selection3

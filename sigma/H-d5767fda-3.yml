@@ -1,0 +1,15 @@
+title: Insider-Assisted MFA Approval Pattern
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects MFA push approvals from users who rarely approve MFA requests, especially when triggered by high-risk sign-ins
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  selection:
+    Status: Success
+    AuthenticationMethod: Push notification
+    UserApproval: True
+  timeframe: 1h
+  condition: selection | count() by UserId > 3 and UserId in (users_with_low_approval_history)
+condition: selection

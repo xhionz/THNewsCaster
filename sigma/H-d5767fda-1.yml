@@ -1,0 +1,14 @@
+title: MFA Prompt Bombing - High Volume Sign-In Attempts
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects high volume of Azure AD sign-in attempts with MFA prompts within a short time window
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  selection:
+    Status: Failed
+    AuthenticationMethod: Push notification
+  timeframe: 5m
+  condition: selection | count() by UserId > 10
+condition: selection

@@ -1,0 +1,12 @@
+title: Ababil DNS Tunneling to .ir Domains
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects DNS queries to .ir domains associated with Ababil of Minab C2
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    domain: '*\.ir'
+  condition: selection
+condition: selection

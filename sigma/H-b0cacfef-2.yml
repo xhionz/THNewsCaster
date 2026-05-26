@@ -1,0 +1,19 @@
+title: Ababil Wiper Execution via Scripting Engines
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects execution of mshta, cscript, or wscript with temporary file arguments
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\mshta.exe'
+    CommandLine: '*\temp\*.tmp'
+  selection2:
+    Image: '*\cscript.exe'
+    CommandLine: '*\temp\*.tmp'
+  selection3:
+    Image: '*\wscript.exe'
+    CommandLine: '*\temp\*.tmp'
+  condition: 1 of selection*
+condition: 1 of selection*

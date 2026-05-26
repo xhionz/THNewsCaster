@@ -1,0 +1,15 @@
+title: Credential Stuffing Leading to MFA Prompts
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects high volume of failed sign-ins using usernames from known credential dumps, followed by MFA prompts
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  selection:
+    Status: Failed
+    AuthenticationMethod: Push notification
+    UserName: 'in' [list_of_compromised_usernames]
+  timeframe: 10m
+  condition: selection | count() > 15
+condition: selection
