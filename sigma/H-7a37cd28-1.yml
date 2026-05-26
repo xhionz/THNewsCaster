@@ -1,0 +1,10 @@
+title: Detect VNC Brute Force or Direct Connection to BioFlo 320
+logsource:
+  product: network
+  service: tcp
+condition: 'dest.ip in ["192.168.100.0/24", "192.168.101.0/24"] and dest.port == 5900 and src.ip not in ["192.168.1.100", "192.168.1.101", "192.168.1.102"] and connection.duration > 10s and (protocol == "rfb" or payload.contains("RFB"))
+detection:
+  rfb_protocol: "payload.contains("RFB")"
+  external_source: "src.ip not in ["192.168.1.100", "192.168.1.101", "192.168.1.102"]"
+  long_duration: "connection.duration > 10s"
+condition: all of them

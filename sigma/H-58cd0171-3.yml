@@ -1,0 +1,12 @@
+title: Detect Backdoored VLC Binary in Camera Connect Installer
+logsource:
+  product: windows
+  service: file_event
+condition: 'file_path contains 'CameraConnect_1.5.0.14.exe' and file_hash IN ["d1e2f3a4b5c6d1e2f3a4b5c6d1e2f3a4b5c6d1e2", "e2d1c3b4a5f6e2d1c3b4a5f6e2d1c3b4a5f6e2d1"]'
+detection:
+  selection:
+    file_path: '*CameraConnect_1.5.0.14.exe'
+    file_hash:
+      - 'd1e2f3a4b5c6d1e2f3a4b5c6d1e2f3a4b5c6d1e2'
+      - 'e2d1c3b4a5f6e2d1c3b4a5f6e2d1c3b4a5f6e2d1'
+  condition: selection

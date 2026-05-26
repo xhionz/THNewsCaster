@@ -1,0 +1,15 @@
+title: MConfig Memory Dump Creation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*MConfig.exe*' 
+    ParentProcessName: '*svchost.exe*' 
+  condition: selection
+  keywords:
+    - 'CreateProcess'
+    - 'Dump'
+    - 'memory'
+condition: selection

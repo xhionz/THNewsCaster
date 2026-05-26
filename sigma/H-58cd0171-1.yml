@@ -1,0 +1,10 @@
+title: Detect Malicious MMS Stream Exploiting VLC Heap Overflow
+logsource:
+  product: network
+  service: tcp
+condition: 'dns.query contains "mms://" and content contains /mms:\/\/.*[\x00-\x1f\x7f-\xff]{10,}/'
+detection:
+  selection:
+    dns.query: '*mms://*'
+    content: '/mms:\/\/.*[\x00-\x1f\x7f-\xff]{10,}/'
+  condition: selection

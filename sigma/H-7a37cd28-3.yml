@@ -1,0 +1,10 @@
+title: Detect Unauthorized Access to BioFlo 320 Web Interface
+logsource:
+  product: network
+  service: http
+detection:
+  target_service: "dest.ip in ["192.168.100.0/24", "192.168.101.0/24"] and dest.port == 80 or dest.port == 443"
+  suspicious_path: "http.uri contains '/admin' or http.uri contains '/login' or http.uri contains '/cgi-bin'"
+  external_source: "src.ip not in ["192.168.1.100", "192.168.1.101", "192.168.1.102", "10.10.10.0/24"]"
+  high_request_rate: "count(http.uri) > 50 over 5m"
+condition: target_service and suspicious_path and external_source and high_request_rate

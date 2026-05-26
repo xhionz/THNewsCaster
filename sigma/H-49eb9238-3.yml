@@ -1,0 +1,11 @@
+title: MConfig Hosts Connecting to Network Infrastructure IPs
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5156
+    ProcessName: 'MConfig.exe'
+    DestinationIp: '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16'
+  condition: selection
+condition: selection

@@ -1,0 +1,17 @@
+title: Detect Unsigned OCPP Firmware Update Requests
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_method: POST
+  req_uri: /ocpp
+  content_type: application/json
+  body:
+    - '"action":"UpdateFirmware"'
+    - '"payload":"[A-Za-z0-9+/=]{100,}"'
+    - '"signature":null'
+    - '"signature":""'
+    - '"signature":"invalid"'
+    - '"signature":"-----BEGIN"'
+    - '"firmwareLocation":"http://[^/]{100,}"'
+condition: all of them

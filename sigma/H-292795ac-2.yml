@@ -1,0 +1,12 @@
+title: Detect ICS Host Scanning B&R Controller IPs
+logsource:
+  product: network
+  service: tcp
+detection:
+  src_ip:
+    - '10.10.10.0/24'  # ICS subnet
+  dst_ip:
+    - '10.10.20.0/24'  # B&R controller subnet
+  tcp.dstport: [80, 443, 8080, 8443]
+  connection.count: 5
+condition: all of them

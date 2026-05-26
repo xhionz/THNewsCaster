@@ -1,0 +1,20 @@
+title: Detect Phishing Email Spoofing Eppendorf Domain with Macro Attachment
+logsource:
+  product: email
+  service: smtp
+detection:
+  spoofed_domain: "email.from.domain endswith 'eppendorf.com'"
+  malicious_attachment: "email.attachments.extension in ['docm', 'xlsm', 'js', 'vbs', 'hta']"
+  suspicious_url: "email.urls.domain in ['bit.ly', 'tinyurl.com', 'ow.ly'] and email.urls.contains('eppendorf')"
+  obfuscated_link: "email.html_body contains 'javascript:window.open' or email.html_body contains 'data:text/html'"
+condition: spoofed_domain and (malicious_attachment or suspicious_url or obfuscated_link)
+title: Detect Phishing Email Spoofing Eppendorf Domain with Macro Attachment
+logsource:
+  product: email
+  service: smtp
+detection:
+  spoofed_domain: "email.from.domain endswith 'eppendorf.com'"
+  malicious_attachment: "email.attachments.extension in ['docm', 'xlsm', 'js', 'vbs', 'hta']"
+  suspicious_url: "email.urls.domain in ['bit.ly', 'tinyurl.com', 'ow.ly'] and email.urls.contains('eppendorf')"
+  obfuscated_link: "email.html_body contains 'javascript:window.open' or email.html_body contains 'data:text/html'"
+condition: spoofed_domain and (malicious_attachment or suspicious_url or obfuscated_link)

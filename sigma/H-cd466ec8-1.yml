@@ -1,0 +1,19 @@
+title: Detect Malformed OCPP Payloads Exploiting CVE-2025-5517
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_method: POST
+  req_uri: /ocpp
+  content_type: application/json
+  body:
+    - '.*"chargePointId":"[^"]{1,20}".*'
+    - '.*"action":"[A-Z][a-zA-Z]*".*'
+    - '.*"params":\{.*\}.*'
+    - '.*"status":\[.*\].*'
+    - '.*"meterValue":\[.*\].*'
+    - '.*"value":\d{10,}.*'
+    - '.*"timestamp":"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z".*'
+    - '.*"customData":\{.*"unknownKey":.*\}.*'
+    - '.*"location":"http://[^/]{100,}".*'
+condition: all of them

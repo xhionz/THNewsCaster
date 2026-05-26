@@ -1,0 +1,12 @@
+title: Detect Port Scanning for B&R SDM Ports
+logsource:
+  product: network
+  service: tcp
+detection:
+  src_ip:
+    - 'external_ips'
+  dst_ip:
+    - '10.10.20.0/24'  # B&R controller subnet
+  tcp.dstport: [80, 443, 8080, 8443]
+  connection.count: 10
+condition: all of them

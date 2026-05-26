@@ -1,0 +1,15 @@
+title: Detect Malformed HTTP Requests to B&R SDM Endpoint
+logsource:
+  product: web
+  service: http
+detection:
+  req_uri:
+    - '/sdm/*'
+    - '/system/diagnostics/*'
+  user_agent:
+    - 'curl/*'
+    - 'python-requests/*'
+    - 'Mozilla/5.0 (compatible; Nmap Scripting Engine)'
+  status_code: 500
+  method: 'POST'
+condition: all of them

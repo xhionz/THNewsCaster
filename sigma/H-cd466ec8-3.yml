@@ -1,0 +1,15 @@
+title: Detect Suspicious OCPP Command Injection Attempts
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_method: POST
+  req_uri: /ocpp
+  content_type: application/json
+  body:
+    - '.*"params":\{.*"command":"[A-Za-z0-9\s\|\&\;\`\$\(\)]{30,}".*\}.*'
+    - '.*"params":\{.*"value":".*\x00.*".*\}.*'
+    - '.*"params":\{.*"value":".*\x27.*\x3b.*".*\}.*'
+    - '.*"params":\{.*"value":".*\x22.*\x7c.*".*\}.*'
+    - '.*"params":\{.*"value":".*\x24\x28.*".*\}.*'
+condition: all of them
