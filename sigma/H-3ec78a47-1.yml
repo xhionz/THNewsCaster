@@ -1,0 +1,28 @@
+title: Detect Godzilla Web Shell Deployment via IIS
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects creation of suspicious .aspx files by IIS worker process following HTTP POST to KnowledgeDeliver.aspx
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*KnowledgeDeliver.aspx*'
+    ParentImage: '*\w3wp.exe'
+    Image: '*\cmd.exe'
+  condition: selection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  FileCreation:
+    Image: '*\w3wp.exe'
+    ParentImage: '*\iisexpress.exe' or '*\w3wp.exe'
+    TargetFilename: '*\*.aspx'
+    CommandLine: '*Godzilla*' or '*base64*' or '*eval(*'
+  HttpPost:
+    EventID: 5156
+    DestinationIp: '10.10.10.5'
+    DestinationPort: '80'
+    Protocol: 'TCP'
+    DestinationHostname: '*KnowledgeDeliver.aspx*'
+    SourceIp: '!10.10.10.0/24'
+condition: FileCreation and HttpPost

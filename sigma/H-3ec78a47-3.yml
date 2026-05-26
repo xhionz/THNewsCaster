@@ -1,0 +1,21 @@
+title: Detect Suspicious DNS Exfiltration from Web Server
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects high-volume, long, or entropy-rich DNS queries from web server IPs, indicative of DNS tunneling
+logsource:
+  product: windows
+  service: dns
+  category: dns_query
+detection:
+  selection:
+    QueryName: '*.*.*.*.*'
+    QueryCount: '>10'
+    QueryLength: '>50'
+    QueryEntropy: '>3.5'
+    SourceIp: '10.10.10.5'
+  condition: selection
+fields:
+  - QueryName
+  - QueryLength
+  - QueryCount
+  - SourceIp

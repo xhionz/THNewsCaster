@@ -1,0 +1,14 @@
+title: Detect PowerShell Execution from IIS Process
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects PowerShell execution spawned by w3wp.exe or cmd.exe, indicative of post-exploitation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 4688
+    Image: '*\powershell.exe'
+    ParentImage: '*\w3wp.exe' or '*\cmd.exe'
+    CommandLine: '*-EncodedCommand*' or '*Invoke-Expression*' or '*DownloadFile*' or '*ConvertTo-SecureString*'
+  condition: selection
