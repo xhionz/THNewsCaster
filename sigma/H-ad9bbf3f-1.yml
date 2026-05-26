@@ -1,0 +1,25 @@
+title: Suspicious Web Shell POST to Non-Standard Script Paths
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    method: 'POST'
+    uri:
+      - '*.php'
+      - '*.aspx'
+    uri_not:
+      - '/wp-content/*'
+      - '/static/*'
+      - '/api/*'
+      - '/admin/*'
+    status: '200'
+    user_agent: 'Mozilla/5.0*'  # retained for baseline, but not primary signal
+    src_ip: '176.126.128.0/18'
+    content: 'base64_decode('
+  condition: selection
+  keywords:
+    - 'base64_decode('
+    - 'eval('
+    - 'assert('
+condition: selection
