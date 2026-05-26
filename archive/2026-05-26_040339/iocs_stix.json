@@ -1,11 +1,11 @@
 {
   "type": "bundle",
-  "id": "bundle--c87cdf95-16e8-4d99-ae9a-c5c1f2c2cf01",
+  "id": "bundle--e5f07022-a785-465d-8f3b-b4c76e54094e",
   "objects": [
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--dd461dcb-62aa-4b1c-95e4-2d0859bdfee6",
+      "id": "vulnerability--224d2e9b-62c5-4b40-ac67-66e98f2d5f29",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-48172",
@@ -19,7 +19,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f2c5a229-3f27-47b4-8bb0-1e586bea057b",
+      "id": "vulnerability--c5d3c003-6edd-4f1b-80b6-55a30ddca842",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-34621",
@@ -33,7 +33,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--bc20a714-e107-4930-94d9-6b039030b526",
+      "id": "vulnerability--9e81263b-5bdd-4375-9f7f-900cdf21b6fc",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-33825",
@@ -47,7 +47,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--a54f3249-46ba-4edb-ae17-ec88c9110daf",
+      "id": "vulnerability--13777ae3-c583-4770-b443-4ac09967f371",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-32201",
@@ -61,7 +61,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--69793331-0d59-47b2-a716-a551459f1452",
+      "id": "vulnerability--dc20775c-a385-43c8-8ca0-bc1d810e6273",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-26980",
@@ -75,7 +75,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--57afc684-7f40-4025-8d77-43735e256f5b",
+      "id": "vulnerability--ae38bdb9-6ebd-46dd-935f-950272db01de",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-20700",
@@ -89,7 +89,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--48ead2b5-267b-4158-8bee-ac324a0a66ed",
+      "id": "vulnerability--00d35604-1a18-4ac1-ae86-7d0e43117f36",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-20223",
@@ -103,7 +103,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--96864d39-1f4e-4246-a1bf-30267a46bc14",
+      "id": "vulnerability--17fc2dd5-5332-4b1d-b72e-595467fe28ab",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-9082",
@@ -117,7 +117,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--5908bc70-9d11-40f5-a481-34c46c03dd18",
+      "id": "vulnerability--36374fe0-b477-44b6-95f8-357c3565a423",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-5281",
@@ -131,7 +131,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f6fe385f-ad26-4c55-9ae3-616f031e5eb5",
+      "id": "vulnerability--2b3bf428-d1ea-4ca2-a51a-6edc3fbf75f8",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2026-0300",
@@ -145,7 +145,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--29e29bbd-0e79-402e-adce-ac396e12c44f",
+      "id": "vulnerability--f58841f8-f9cb-4f5e-9a12-c54a16a96ab9",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "CVE-2025-33073",
@@ -159,7 +159,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8bbc156d-7713-49cd-9f2d-012a660ebdf7",
+      "id": "indicator--1e443625-644c-4174-b1e8-16796ace2076",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "IP addresses: 83.142.209.194",
@@ -173,7 +173,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fd13c069-51ec-48fb-9951-8cf76cddbe5e",
+      "id": "indicator--e10f2882-5b70-4afe-9b1d-0b4f77471cbe",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: consequences.investigations",
@@ -187,7 +187,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f2971a12-cbaf-4e75-b17b-46857102232f",
+      "id": "indicator--3659f3a1-af9d-4bf4-9a98-030cd2d612f3",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: crates.io",
@@ -201,7 +201,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--122586a2-9efc-4468-8d08-251abaa96cdc",
+      "id": "indicator--758dd030-5117-4ce6-a79f-ca1b7058b744",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: cve.org",
@@ -215,7 +215,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--cdad065d-16b8-4b2f-8682-3079ed6a5818",
+      "id": "indicator--d5bca31d-5591-4952-bd14-02509495ed59",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: filev2.getsession.org",
@@ -229,7 +229,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7eedd470-e3ac-404c-be6e-eabd45762965",
+      "id": "indicator--40a432aa-142e-4def-9fe8-12a75d08b713",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: git-tanstack.com",
@@ -243,7 +243,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--fa22a402-16ed-4d82-b1f6-02ac9034f5fb",
+      "id": "indicator--47d3771a-6750-46dd-a3f0-4044cf0afe54",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: isc.sans.edu",
@@ -257,7 +257,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1b8610ad-17d0-4558-8eb2-e4134b907093",
+      "id": "indicator--1330b5b9-ffed-427d-a25d-225f22e617f9",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: next.js",
@@ -271,7 +271,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0d011da2-6881-490c-9508-3956b5bb77b3",
+      "id": "indicator--0ff960d4-a30e-4d9b-90a3-133f17311f3f",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: node.js",
@@ -285,7 +285,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7b7a87ef-02f6-4e80-9a9b-4459d5e72e96",
+      "id": "indicator--fb08db87-50e9-416b-bad6-e84e5145093f",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: nrwl.angular",
@@ -299,7 +299,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1b7c1cbc-855a-4234-b76a-9be32fab4663",
+      "id": "indicator--12822605-6a55-47e4-bc12-04d6420f3f69",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: ransomware.live",
@@ -313,7 +313,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b76d3043-3b37-4e26-ba51-aa62ea425de1",
+      "id": "indicator--0dc46e90-1048-478c-ae79-f629038e0507",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: security.paloaltonetworks.com",
@@ -327,7 +327,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--d2f39668-1be7-48a1-8901-6bc892592165",
+      "id": "indicator--e625b5f0-7ff1-4069-8a3a-12a02c2d779e",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: seed1.getsession.org",
@@ -341,7 +341,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bc50c444-0399-4426-92c3-793dd3778897",
+      "id": "indicator--23968c1b-790a-47dc-91d1-25f99cc63911",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: settings.json",
@@ -355,7 +355,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a21962a9-6992-4198-b8a0-b1c1dd547766",
+      "id": "indicator--86a5ef8c-cc07-4a7b-a47d-ee5d977d4b63",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: tasks.json",
@@ -369,7 +369,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--333234ea-22ba-4020-9367-0535dfe0e8b5",
+      "id": "indicator--dbdcf6c7-578a-4e0c-bfa9-4dbf36a6946a",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: timeago.js",
@@ -383,7 +383,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5333e55c-2822-4881-8824-286718cfc03f",
+      "id": "indicator--383cb862-828c-4336-8e6a-2574ba542e44",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: www.cisa.gov",
@@ -397,7 +397,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--11a8d29d-4bf6-4857-82c9-2071d47eaa74",
+      "id": "indicator--46657dde-9a83-4f91-9324-dbde57ee0b47",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "Domains: www.siemens.com",
@@ -411,7 +411,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--7907d22e-1ec7-485c-bca6-87a8b0e19615",
+      "id": "indicator--7b9a09cf-b6ba-4cda-be63-1ed47feb864a",
       "created": "2026-05-26T04:03:39.000Z",
       "modified": "2026-05-26T04:03:39.000Z",
       "name": "SHA256 hashes: ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c",
