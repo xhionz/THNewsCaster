@@ -1,0 +1,16 @@
+title: Suspicious DNS Tunneling via FreePBX Exploit
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects DNS queries with suspicious subdomains indicative of JOMANGY campaign exploiting CVE-2024-21762
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    query_length: '>60'
+    domain:
+      - '*joman*'
+      - '*digicat*'
+  timeframe: 5m
+  condition: selection and query_count > 10
+condition: selection

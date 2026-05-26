@@ -1,0 +1,17 @@
+title: Suspicious .so File Creation Post FreePBX Exploit
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects creation of .so files in common temporary directories after known FreePBX exploit activity
+logsource:
+  product: linux
+  service: filesystem
+detection:
+  selection:
+    file_path:
+      - '/tmp/*.so'
+      - '/var/tmp/*.so'
+      - '/dev/shm/*.so'
+    action: 'create'
+  timeframe: 10m
+  condition: selection
+condition: selection
