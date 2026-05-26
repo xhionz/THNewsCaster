@@ -1,0 +1,22 @@
+title: Detect CVE-2023-21712 Exploit Attempt in SharePoint
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+level: high
+description: Detects HTTP requests with payload patterns indicative of CVE-2023-21712 exploitation on SharePoint servers.
+logsource:
+  product: iis
+  service: web
+  category: web_server
+detection:
+  selection:
+    uri_path: "/_vti_bin/"  # Common SharePoint endpoint
+    query_string|contains:
+      - "_vti_bin/"  # Exploit pattern
+      - "..%2f"  # Path traversal
+      - "<script>"  # Script injection
+    client_ip: "10.10.50.10"  # Known SharePoint server IP
+  condition: selection
+fields:
+  - client_ip
+  - uri_path
+  - query_string

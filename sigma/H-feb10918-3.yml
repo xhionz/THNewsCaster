@@ -1,0 +1,21 @@
+title: Detect Suspicious External File Sharing in SharePoint Audit Logs
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+level: medium
+description: Detects external sharing events from non-admin users in SharePoint audit logs.
+logsource:
+  product: sharepoint
+  category: audit
+detection:
+  selection:
+    Operation: 'SharingInvitationCreated'
+    Target: '*.docx' OR '*.xlsx' OR '*.pdf'
+    SharingType: 'ExternalUser'
+    User: !'admin*'  # Non-admin user
+    ClientIP: NOT IN ('10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16')
+  condition: selection
+fields:
+  - User
+  - Target
+  - SharingType
+  - ClientIP

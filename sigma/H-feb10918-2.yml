@@ -1,0 +1,19 @@
+title: Detect Suspicious Kerberos Ticket Usage for Lateral Movement
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+level: medium
+description: Detects unusual Kerberos ticket requests from SharePoint server to domain controllers.
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769  # Kerberos ticket request
+    TargetUserName: 'krbtgt' OR TargetUserName|endswith: '$'
+    ClientIP: '10.10.50.10'  # SharePoint server
+    TicketOptions: '0x40810000'  # Forwardable, Renewable
+  condition: selection
+fields:
+  - ClientIP
+  - TargetUserName
+  - TicketOptions
