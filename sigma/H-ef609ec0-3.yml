@@ -1,0 +1,12 @@
+title: Stealthy Drupal Reconnaissance - High Request Rate with Legitimate UAs
+logsource:
+  product: web_server
+  service: apache
+  category: web
+condition: 'http.request.uri contains "/drupal" and http.request.user_agent matches "Mozilla/5.0.*" and http.response.status_code: 200 and count(http.request.uri) > 50 per 5m'
+detection:
+  uri_pattern: "/drupal"
+  user_agent_pattern: "Mozilla/5.0.*"
+  status_code: 200
+  rate_limit: "50 requests per 5 minutes"
+condition: all

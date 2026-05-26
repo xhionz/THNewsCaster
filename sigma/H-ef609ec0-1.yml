@@ -1,0 +1,13 @@
+title: Drupal SQLi Exploit - Credential Exfiltration
+logsource:
+  product: web_server
+  service: apache
+  category: web
+condition: 'http.request.method: POST and http.request.uri contains "/user/login" and (http.request.body contains "' OR 1=1--" or http.request.body contains "UNION SELECT" or http.request.body contains "SELECT * FROM users") and http.response.status_code: 200 and http.response.body contains "password_hash" or http.response.body contains "auth_token"'
+detection:
+  method: POST
+  uri: "/user/login"
+  body_pattern: ['' OR 1=1--', 'UNION SELECT', 'SELECT * FROM users']
+  status_code: 200
+  response_body_pattern: ['password_hash', 'auth_token']
+condition: all

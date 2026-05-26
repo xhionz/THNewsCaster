@@ -1,0 +1,10 @@
+title: Post-Exploitation PowerShell Execution via Web Compromise
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+condition: 'process.command_line contains "powershell" and process.command_line contains "-EncodedCommand" or process.command_line contains "IEX" or process.command_line contains "Invoke-Expression" and process.parent_image: "httpd.exe" or process.parent_image: "apache.exe"'
+detection:
+  parent_image: ['httpd.exe', 'apache.exe']
+  command_line_pattern: ['-EncodedCommand', 'IEX', 'Invoke-Expression']
+condition: all
