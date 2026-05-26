@@ -1,0 +1,12 @@
+title: KnowledgeDeliver Exploit via Known Vulnerability
+logsource:
+  product: iis
+  service: http
+condition: 'request_uri: "*/KnowledgeDeliver/*" and query_string: "*cmd=*" or query_string: "*exec=*" or query_string: "*powershell=*"'
+detection:
+  suspicious_knowledge_deliver:
+    - request_uri: "*/KnowledgeDeliver/*"
+    - query_string: "*cmd=*"
+    - query_string: "*powershell=*"
+    - query_string: "*exec=*"
+condition: 'suspicious_knowledge_deliver'

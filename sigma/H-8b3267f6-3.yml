@@ -1,0 +1,12 @@
+title: Suspicious DNS Queries from IIS Worker Process
+logsource:
+  product: windows
+  service: dns
+condition: 'process_name: 'w3wp.exe' and query_name: '*.*.*' and query_count > 100 and query_name_length > 50'
+detection:
+  suspicious_dns:
+    - process_name: 'w3wp.exe'
+    - query_name: '*.*.*'
+    - query_count: '>100'
+    - query_name_length: '>50'
+condition: 'suspicious_dns'

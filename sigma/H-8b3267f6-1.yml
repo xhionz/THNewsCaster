@@ -1,0 +1,11 @@
+title: Suspicious ViewState Deserialization Attempt
+logsource:
+  product: iis
+  service: http
+condition: 'request_uri: "*.aspx" and query_string: "*__VIEWSTATE=*" and not query_string: "*__VIEWSTATE=AAAA*" and not query_string: "*__VIEWSTATE=AAAB*"'
+detection:
+  suspicious_viewstate:
+    - query_string: "*__VIEWSTATE=*"
+    - query_string: "*%2F*"  # potential base64 encoding with path separators
+    - query_string: "*%3D%3D*"  # common padding in base64
+condition: 'suspicious_viewstate' and not query_string: "*__VIEWSTATE=AA*" and not query_string: "*__VIEWSTATE=AAAA*"
