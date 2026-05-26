@@ -1,0 +1,33 @@
+type,value,article_count,sources
+cves,CVE-2026-48172,1,https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html
+cves,CVE-2026-34621,1,https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/
+cves,CVE-2026-33825,1,https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/
+cves,CVE-2026-32201,1,https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/
+cves,CVE-2026-26980,2,https://thehackernews.com/2026/05/ghost-cms-cve-2026-26980-exploited-to.html | https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/
+cves,CVE-2026-20700,1,https://www.reddit.com/r/blueteamsec/comments/1tnjuzd/cve202620700_a_controlled_exploration_of_dylds/
+cves,CVE-2026-20223,1,https://thehackernews.com/2026/05/cisco-patches-cvss-100-secure-workload.html
+cves,CVE-2026-9082,3,https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html | https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html | https://www.reddit.com/r/netsec/comments/1tjnwy1/keys_to_the_kingdom_anonymous_sql_injection_in/
+cves,CVE-2026-5426,1,https://thehackernews.com/2026/05/knowledgedeliver-lms-flaw-exploited-to.html
+cves,CVE-2026-5281,1,https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/
+cves,CVE-2026-0300,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02
+cves,CVE-2025-33073,1,https://www.reddit.com/r/blueteamsec/comments/1tn21en/fix_cve202533073_ntlm_reflection_not_exploitable/
+ips,83.142.209.194,1,https://isc.sans.edu/diary/rss/32994
+domains,asp.net,1,https://thehackernews.com/2026/05/knowledgedeliver-lms-flaw-exploited-to.html
+domains,consequences.investigations,1,https://blog.talosintelligence.com/state-sponsored-actors-better-known-as-the-friends-you-dont-want/
+domains,crates.io,1,https://thehackernews.com/2026/05/trapdoor-supply-chain-attack-spreads.html
+domains,cve.org,1,https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html
+domains,filev2.getsession.org,3,https://isc.sans.edu/diary/rss/32994 | https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,git-tanstack.com,1,https://isc.sans.edu/diary/rss/32994
+domains,isc.sans.edu,3,https://isc.sans.edu/diary/rss/32994 | https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,next.js,1,https://isc.sans.edu/diary/rss/32994
+domains,node.js,1,https://www.reddit.com/r/blueteamsec/comments/1tmd6aa/malicious_postinstall_hook_found_across_700/
+domains,nrwl.angular,2,https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,ransomware.live,1,https://isc.sans.edu/diary/rss/32994
+domains,security.paloaltonetworks.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02
+domains,seed1.getsession.org,3,https://isc.sans.edu/diary/rss/32994 | https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,settings.json,3,https://isc.sans.edu/diary/rss/32994 | https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,tasks.json,3,https://isc.sans.edu/diary/rss/32994 | https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,timeago.js,2,https://isc.sans.edu/diary/rss/33014 | https://isc.sans.edu/diary/rss/33016
+domains,www.cisa.gov,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02
+domains,www.siemens.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02
+sha256,ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c,1,https://isc.sans.edu/diary/rss/32994
