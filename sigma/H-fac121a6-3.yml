@@ -1,0 +1,11 @@
+title: MuddyWater Phishing Macro Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    ParentImage: '*\outlook.exe' OR ParentImage: '*\chrome.exe' OR ParentImage: '*\firefox.exe'
+    Image: '*\winword.exe' OR Image: '*\excel.exe' OR Image: '*\powerpnt.exe'
+    CommandLine: '*-Embedding*' OR CommandLine: '*-Embed*' OR CommandLine: '*-m*' OR CommandLine: '*-o*'
+  Condition: Selection
+  Timeframe: 7d

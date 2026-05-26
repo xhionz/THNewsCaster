@@ -1,0 +1,12 @@
+title: MuddyWater DNS Exfiltration via Subdomain Beaconing
+logsource:
+  product: dns
+  service: dns-query
+detection:
+  Selection:
+    Query: '*.*.*.*.*'
+    Query|contains: 'a' | contains: 'b' | contains: 'c' | contains: 'd' | contains: 'e' | contains: 'f'
+    Query|endswith: '.com' | endswith: '.net' | endswith: '.org'
+    Query|count: > 50
+  Condition: Selection
+  Timeframe: 7d

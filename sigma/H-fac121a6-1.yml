@@ -1,0 +1,17 @@
+title: MuddyWater DLL Side-Loading Detection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: '*\*.exe'
+    ImageLoaded: '*\*.dll'
+    ImageLoaded|contains: '.dll'
+    Image|endswith: '.exe'
+    ImageLoaded|startswith: Image
+  Condition: Selection
+  Filtered:
+    ImageLoaded|contains: 'C:\Program Files\'
+    ImageLoaded|contains: 'C:\Windows\'
+  Condition: Selection and not Filtered
+  Timeframe: 7d
