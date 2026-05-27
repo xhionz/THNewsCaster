@@ -1,0 +1,13 @@
+title: Session Persistence After Password Change
+logsource:
+  product: web_application
+  service: authentication
+detection:
+  selection:
+    event_type: password_change
+  selection2:
+    event_type: login_success
+    session_id: ""  # placeholder for correlation
+  condition: selection and selection2 and selection.session_id == selection2.session_id
+fields: [user_id, session_id, timestamp]
+level: high

@@ -1,0 +1,12 @@
+title: OTP Verification Used in Recovery Flow
+logsource:
+  product: web_application
+  service: authentication
+detection:
+  selection:
+    event_type: otp_verification
+    flow_type: password_reset
+    status: locked_out
+  condition: selection
+fields: [user_id, ip_address, flow_type, response_body]
+level: high

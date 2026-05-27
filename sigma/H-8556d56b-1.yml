@@ -1,0 +1,12 @@
+title: OTP Lockout Validity Leak Detection
+logsource:
+  product: web_application
+  service: authentication
+detection:
+  selection:
+    event_type: otp_verification
+    status: locked_out
+    response_code: 200
+  condition: selection
+fields: [user_id, ip_address, otp_attempt, response_body]
+level: high
