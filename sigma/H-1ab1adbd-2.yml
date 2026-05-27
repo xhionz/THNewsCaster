@@ -1,0 +1,14 @@
+title: Detect GlassWorm VS Code Extension Installation
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects suspicious VS Code extension installations potentially linked to GlassWorm
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\code.exe'
+    CommandLine: '*--install-extension*' AND ('*glassworm*' OR '*auto-deploy-pro*' OR '*secure-utils*')
+  condition: selection
+timeframe: 5m

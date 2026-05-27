@@ -1,0 +1,16 @@
+title: Detect GlassWorm DNS Tunneling via npm postinstall
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects DNS queries to suspicious domains following npm install events
+logsource:
+  product: windows
+  service: dns
+detection:
+  selection:
+    QueryName: '*glassworm.xyz'
+    QueryCount: 5
+    TimeGenerated: '>2026-01-01T00:00:00Z'
+  selection2:
+    QueryName: '*[.]glassworm[.]xyz'
+  condition: selection and not selection2
+timeframe: 10m

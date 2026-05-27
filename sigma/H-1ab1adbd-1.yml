@@ -1,0 +1,19 @@
+title: Detect GlassWorm npm Package Installation via Process Creation
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects suspicious npm install commands potentially associated with GlassWorm
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\node.exe'
+    CommandLine: '*npm install*'
+  selection2:
+    CommandLine: '*--registry*http*'
+  condition: selection and not selection2
+keywords:
+  - npm
+  - glassworm
+timeframe: 5m
