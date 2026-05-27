@@ -1,0 +1,11 @@
+title: Suspicious SSH Login from Unusual Location or Time
+logsource:
+  product: linux
+  service: ssh
+condition: 'event_type: "authentication" and auth_method: "password" and src_ip NOT IN (trusted_networks) and (hour(event_time) < 6 or hour(event_time) > 20)'
+detection:
+  event_type: "authentication"
+  auth_method: "password"
+  src_ip: "!trusted_networks"
+  hour: "<6 OR >20"
+condition: all of them

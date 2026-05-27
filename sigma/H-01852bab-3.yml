@@ -1,0 +1,10 @@
+title: Suspicious Cron Job Creation or Modification
+logsource:
+  product: linux
+  service: cron
+condition: 'event_type: "file_create" and file_path: "/etc/cron.d/" or file_path: "/var/spool/cron/" or file_path: "/etc/crontab" and file_name: "*" and file_owner: "root"'
+detection:
+  event_type: "file_create"
+  file_path: "/etc/cron.d/" OR "/var/spool/cron/" OR "/etc/crontab"
+  file_owner: "root"
+condition: all of them

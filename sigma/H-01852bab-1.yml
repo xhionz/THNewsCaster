@@ -1,0 +1,12 @@
+title: Suspicious LiteSpeed Plugin Access via POST Request
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'http_method: "POST" and http_uri contains "/plugins/litespeed/" and http_user_agent contains "python" and http_status_code: 200'
+detection:
+  http_method: "POST"
+  http_uri: "/plugins/litespeed/"
+  http_user_agent: "python"
+  http_status_code: 200
+condition: all of them
