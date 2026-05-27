@@ -1,0 +1,17 @@
+title: Suspicious CI/CD Container Push
+logsource:
+  product: jenkins
+  service: build_log
+detection:
+  action: "docker push"
+  image_name:
+    - "corp-"
+    - "internal-"
+  build_host:
+    - "ci-worker-01"
+    - "ci-worker-02"
+    - "ci-worker-03"
+  src_ip:
+    - "10.10.10.10"
+    - "10.10.10.11"
+condition: all of them

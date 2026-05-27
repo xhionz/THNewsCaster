@@ -1,0 +1,14 @@
+title: Unauthenticated Gitea Container Image Pull
+logsource:
+  product: gitea
+  service: http_access
+detection:
+  request_uri:
+    - "/api/packages/container/"
+  user_id: ""
+  status_code: 200
+  user_agent:
+    - "curl"
+    - "wget"
+    - "python-requests"
+condition: all of them

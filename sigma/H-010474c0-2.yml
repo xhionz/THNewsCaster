@@ -1,0 +1,12 @@
+title: Container Image Push to External Registry
+logsource:
+  product: docker
+  service: daemon
+detection:
+  action: "push"
+  dst_domain:
+    - "docker.io"
+    - "quay.io"
+    - "ghcr.io"
+    - "registry.hub.docker.com"
+condition: all of them
