@@ -1,0 +1,11 @@
+title: Native Tool Execution After SSLVPN Login
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4624
+  LogonType: 10
+  TimeCreated: 'within 1h'
+  CommandLine: 'whoami /groups|net user|net group /domain|nltest /dsgetdc:|adfind.exe -f "*(objectClass=*)"|adfind.exe -f "*(sAMAccountType=805306368)"'
+condition: EventID == 4624 and LogonType == 10 and (CommandLine contains 'whoami /groups' or CommandLine contains 'net user' or CommandLine contains 'net group /domain' or CommandLine contains 'nltest /dsgetdc:' or CommandLine contains 'adfind.exe' and (CommandLine contains 'domain' or CommandLine contains 'user' or CommandLine contains 'group'))
+level: high

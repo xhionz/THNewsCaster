@@ -1,0 +1,11 @@
+title: RDP Brute Force from Botnet IP Range
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4625
+  AccountName: '.*'
+  SourceNetworkAddress: '185.220.101.*|195.154.123.*|188.165.10.0/24'
+  FailureReason: '%%2313'
+condition: EventID == 4625 and SourceNetworkAddress contains '185.220.101.' or SourceNetworkAddress contains '195.154.123.' or SourceNetworkAddress matches '^188\.165\.10\.[0-9]{1,3}$'
+level: high

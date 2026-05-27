@@ -1,0 +1,14 @@
+title: Scheduled Task Created After PowerShell Execution on DC
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  CommandLine: 'powershell.exe *.ps1|powershell.exe -enc*'
+  TimeCreated: 'within 10m'
+  TargetDomain: 'DOMAINCONTROLLER'
+  EventID: 4698
+  TaskName: '.*'
+  Creator: 'NT AUTHORITY\SYSTEM'|'DOMAIN\Administrator'
+condition: (EventID == 4688 and (CommandLine contains 'powershell.exe' and (CommandLine contains '.ps1' or CommandLine contains '-enc'))) and (EventID == 4698 and TargetDomain contains 'DC' and TimeCreated within 10m of previous event)
+level: high
