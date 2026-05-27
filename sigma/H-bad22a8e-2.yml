@@ -1,0 +1,19 @@
+title: Detect Suspicious Network Logons from Non-IT Accounts
+logsource:
+  product: windows
+  service: security
+detection:
+  suspicious_logon:
+    EventID: 4624
+    LogonType: 3
+    AccountName|contains: ['temp', 'guest', 'vendor', 'contractor', 'svc_']
+    WorkstationName|contains: ['LAPTOP', 'DESKTOP']
+    LogonProcessName: 'NtLmSsp'
+  selection:
+    suspicious_logon: true
+  condition: selection
+keywords:
+  - logon
+  - credential
+  - network
+  - suspicious

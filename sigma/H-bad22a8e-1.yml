@@ -1,0 +1,23 @@
+title: Detect Suspicious Process Creation After USB Insertion
+logsource:
+  product: windows
+  service: sysmon
+  version: '4.20'
+detection:
+  usb_insertion:
+    EventID: 8001
+    DevicePath: 'USB'
+  process_creation:
+    EventID: 1
+    Image: '*\*.exe'
+    ParentImage: '*\explorer.exe'
+    CommandLine: '*\temp\*.exe' or '*\appdata\local\temp\*.exe'
+  selection:
+    usb_insertion: true
+    process_creation: true
+  condition: usb_insertion and process_creation
+keywords:
+  - sysmon
+  - usb
+  - process
+  - suspicious

@@ -1,0 +1,23 @@
+title: Detect Suspicious PowerShell Execution from Office Processes
+logsource:
+  product: windows
+  service: sysmon
+  version: '4.20'
+detection:
+  office_launch:
+    EventID: 1
+    Image: '*\winword.exe' or '*\excel.exe' or '*\powerpoint.exe'
+  powershell_execution:
+    EventID: 1
+    ParentImage: '*\winword.exe' or '*\excel.exe' or '*\powerpoint.exe'
+    Image: '*\powershell.exe'
+    CommandLine: '-nop -c *' or '-enc *' or '-w hidden'
+  selection:
+    office_launch: true
+    powershell_execution: true
+  condition: office_launch and powershell_execution
+keywords:
+  - powershell
+  - office
+  - obfuscation
+  - malware
