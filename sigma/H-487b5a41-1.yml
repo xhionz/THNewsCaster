@@ -1,0 +1,16 @@
+title: Suspicious Email with Executable Attachment from External Domain
+logsource:
+  product: office_365
+  service: smtp
+detection:
+  selection:
+    EventID: 5000
+    FromDomain: !*.lacity.org
+    FromDomain: !*.latransit.org
+    FileName: '*.exe' | '*.dll' | '*.scr' | '*.js' | '*.vbs' | '*.ps1'
+    Subject: '*Public Transit Schedule*' | '*Municipal Service Notice*' | '*Service Update*'
+  condition: selection
+fields:
+  - FromAddress
+  - FileName
+  - Subject

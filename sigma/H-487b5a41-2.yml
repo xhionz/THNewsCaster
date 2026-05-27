@@ -1,0 +1,16 @@
+title: ICS/SCADA Port Scanning from External or Untrusted Internal Host
+logsource:
+  product: network
+  service: firewall
+detection:
+  selection:
+    DestinationPort: 102 | 502 | 1911 | 2404 | 44818 | 5000 | 5020
+    Direction: 'inbound'
+    SourceIP: !10.0.0.0/8
+    SourceIP: !172.16.0.0/12
+    SourceIP: !192.168.0.0/16
+  condition: selection
+fields:
+  - SourceIP
+  - DestinationPort
+  - DestinationIP
