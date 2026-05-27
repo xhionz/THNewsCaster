@@ -1,0 +1,16 @@
+title: Detect Daemon Tools Lite Malicious Image Mount
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects execution of suspicious binaries from Daemon Tools Lite mount directories
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\DaemonTools\*.exe'
+    CommandLine: '*-mount*'
+  condition: selection
+falsepositives:
+  - Legitimate use of Daemon Tools Lite for mounting legal ISOs
+level: medium

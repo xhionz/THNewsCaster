@@ -1,0 +1,16 @@
+title: Detect Suspicious npm Install of TanStack from Non-Standard Registry
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects installation of TanStack packages from non-official registries or with suspicious flags
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\node.exe'
+    CommandLine: '*install* tanstack*' and (CommandLine contains '@registry.example.com' or CommandLine contains '--registry http://' or CommandLine contains '--unsafe-perm')
+  condition: selection
+falsepositives:
+  - Legitimate use of private npm registries
+level: high
