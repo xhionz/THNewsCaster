@@ -1,0 +1,10 @@
+title: Detect CVE-2024-21762 Exploitation via Outbound HTTP POST to /remote/fgt_lang
+logsource:
+  product: fortios
+  service: http
+detection:
+  selection:
+    method: 'POST'
+    uri: '*remote/fgt_lang*'
+  condition: selection
+condition: selection

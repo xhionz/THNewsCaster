@@ -1,0 +1,14 @@
+title: Detect Credential Relay via Cloud Proxy
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  selection:
+    authentication_method: 'federated'
+    status: 'Success'
+    client_app: 'Browser'
+    conditional_access: 'None'
+  filter:
+    ip_address: '10.0.0.0/8' | '172.16.0.0/12' | '192.168.0.0/16'
+  condition: selection and not filter
+condition: selection

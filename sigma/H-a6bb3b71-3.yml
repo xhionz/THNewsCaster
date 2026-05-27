@@ -1,0 +1,13 @@
+title: Detect Phishing Emails Impersonating IT/Microsoft to Trigger Control Disablement
+logsource:
+  product: email
+  service: smtp
+detection:
+  selection:
+    from: '*@microsoft.com'
+    subject: '*urgent*patch*'
+    attachment: true
+    x_spf_result: 'fail'
+    x_dkim_result: 'fail'
+  condition: selection
+condition: selection

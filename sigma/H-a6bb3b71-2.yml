@@ -1,0 +1,14 @@
+title: Detect AI-Assisted Internal Network Scanning
+logsource:
+  product: firewall
+  service: http
+detection:
+  selection:
+    method: 'GET'
+    uri: '*'
+    src_ip: 'internal_range'
+    dst_ip: 'internal_range'
+    status_code: '200'
+    user_agent: '*Mozilla/5.0*'
+  condition: selection | count() > 50 by src_ip within 5m
+condition: selection | count() > 50 by src_ip within 5m

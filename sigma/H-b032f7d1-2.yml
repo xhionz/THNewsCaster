@@ -1,0 +1,13 @@
+title: Detect Phishing Domain Access via Proxy
+logsource:
+  product: proxy
+  service: web
+detection:
+  selection:
+    url|contains: "login.microsoftonline.com"
+    url|contains: "auth" | "oauth" | "token" | "exchange"
+    user_agent|contains: "Mozilla" | "Chrome" | "Safari"
+  filter:
+    domain|endswith: "microsoft.com" | "office.com" | "azure.com"
+  condition: selection and not filter
+condition: selection

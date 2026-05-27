@@ -1,0 +1,11 @@
+title: Detect Suspicious Google Workspace Token Replay
+logsource:
+  product: google_workspace
+  service: signins
+detection:
+  selection:
+    event_type: "token_replay"
+    client_ip: !"10.0.0.0/8" | !"172.16.0.0/12" | !"192.168.0.0/16"
+    user_agent: "Mozilla" | "Chrome"
+  condition: selection
+condition: selection
