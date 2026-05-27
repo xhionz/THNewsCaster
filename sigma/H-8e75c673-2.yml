@@ -1,0 +1,11 @@
+title: Detect Nmap Scans Targeting MediaInfoLib Endpoints
+logsource:
+  product: web
+  service: http
+detection:
+  selection:
+    http.user_agent: '*Nmap*' | '*nmap*' | '*Scanner*'
+    http.uri: '*mediainfo*' | '*convert*' | '*transcode*' | '*media*'
+    http.status_code: 200 | 404 | 500
+  condition: selection
+condition: selection

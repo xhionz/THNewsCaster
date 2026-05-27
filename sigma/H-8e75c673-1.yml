@@ -1,0 +1,11 @@
+title: Detect MediaInfoLib Exploit via Email Attachment
+logsource:
+  product: email
+  service: smtp
+detection:
+  selection:
+    attachment.name: '*.*'
+    attachment.size: >5000000
+    attachment.type: 'video/mp4' | 'video/avi' | 'audio/mp3' | 'application/octet-stream'
+  condition: selection
+condition: selection

@@ -1,0 +1,11 @@
+title: Detect PowerShell Invoked to Process Media Files
+logsource:
+  product: windows
+  service: powershell
+detection:
+  selection:
+    CommandLine: '*mediainfo*' | '*ffmpeg*' | '*ffprobe*' | '*avconv*'
+    Image: '*powershell.exe'
+    ParentImage: '*cmd.exe' | '*explorer.exe' | '*svchost.exe'
+  condition: selection
+condition: selection
