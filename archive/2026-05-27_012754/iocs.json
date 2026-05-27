@@ -1,0 +1,698 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-48172",
+      "sources": [
+        "https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html",
+        "https://www.cisa.gov/news-events/alerts/2026/05/26/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-48095",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1to1sco/7zip_cve202648095_ntfs_heap_overflow_leads_to/"
+      ]
+    },
+    {
+      "value": "CVE-2026-45659",
+      "sources": [
+        "https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-34621",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-33825",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-32201",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-26980",
+      "sources": [
+        "https://thehackernews.com/2026/05/ghost-cms-cve-2026-26980-exploited-to.html",
+        "https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20700",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tnjuzd/cve202620700_a_controlled_exploration_of_dylds/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20223",
+      "sources": [
+        "https://thehackernews.com/2026/05/cisco-patches-cvss-100-secure-workload.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-9082",
+      "sources": [
+        "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
+        "https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html",
+        "https://www.reddit.com/r/netsec/comments/1tjnwy1/keys_to_the_kingdom_anonymous_sql_injection_in/"
+      ]
+    },
+    {
+      "value": "CVE-2026-7251",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-5426",
+      "sources": [
+        "https://thehackernews.com/2026/05/knowledgedeliver-lms-flaw-exploited-to.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-5281",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-0300",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+      ]
+    },
+    {
+      "value": "CVE-2025-33073",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tn21en/fix_cve202533073_ntlm_reflection_not_exploitable/"
+      ]
+    },
+    {
+      "value": "CVE-2025-5517",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-01"
+      ]
+    },
+    {
+      "value": "CVE-2025-3450",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-04"
+      ]
+    },
+    {
+      "value": "CVE-2024-46461",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2023-47360",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2023-47359",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2023-46814",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2022-41325",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2020-26664",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-19721",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-13962",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-13615",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-13602",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-5460",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-5459",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-5439",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2018-11529",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-17670",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-10699",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-9301",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-9300",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8313",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8312",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8311",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8310",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "1.5.0.14",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "1.5.0.15",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "2.59.132.106",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "3.0.7.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "3.0.17.4",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "83.142.209.194",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "93.115.10.35",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "193.42.11.108",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "198.23.185.238",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "addinprocess.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "applaunch.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "asp.net",
+      "sources": [
+        "https://thehackernews.com/2026/05/knowledgedeliver-lms-flaw-exploited-to.html"
+      ]
+    },
+    {
+      "value": "autorun.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "consequences.investigations",
+      "sources": [
+        "https://blog.talosintelligence.com/state-sponsored-actors-better-known-as-the-friends-you-dont-want/"
+      ]
+    },
+    {
+      "value": "crates.io",
+      "sources": [
+        "https://thehackernews.com/2026/05/trapdoor-supply-chain-attack-spreads.html"
+      ]
+    },
+    {
+      "value": "cve.org",
+      "sources": [
+        "https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html"
+      ]
+    },
+    {
+      "value": "direct-download.giize.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "direct-download.gleeze.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "direct-downloads.giize.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "directdownload.icu",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "dynu.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "filev2.getsession.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "free-download.giize.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "giize.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "git-tanstack.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "gleeze.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "gminer.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "installutil.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "lolminer.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "minemine.gleeze.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "miner.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "msbuild.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "msiexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "next.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "nrwl.angular",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "powershell.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "ransomware.live",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "regasm.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "regsvcs.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "rumtimehost.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "runtimehost.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "runtimehost.lnk",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "schtasks.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "screenconnect.clientservice.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "security.paloaltonetworks.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+      ]
+    },
+    {
+      "value": "securityhealthhost.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "seed1.getsession.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "settings.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "simplerunpe.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "simplerunpe.pdb",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "srbminer-multi.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "start-download.gleeze.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "tasks.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "timeago.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "vlc.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01"
+      ]
+    },
+    {
+      "value": "www.eppendorf.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01"
+      ]
+    },
+    {
+      "value": "www.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "062bb28765fbaa11f8cc341fa16e2c7f942a122d929cb41f4a0f755b4429f246",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "16562974deec80e41ef57a71a6de8c03ceb393005fb1432f8d9d82c61294ef8c",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "1b2555b09ac62164638f47c8272beb6b0f97186e37d3a54cb84c723ff7a2eee5",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "2ee93ccbcd49ed94c65dcf52e7dcb8f0fa0a443ca24c0e0c7f79152efba657b7",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "69077fcf940fc5852fb32beed15636756ebc04ac971b7ed71d36251e7ea70a20",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "7035c2abeb617e828dfda1b119b8544fa9ae15a1d263d18bc5506acaf381f496",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "9ff07c9fafa9c03fdf69e4abf6806aa7c938b5480e7e258f227db0719ecd6386",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "a460d00ef93c8ce70d32e48e55781af66a53328fc2dde45519be196c265de074",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "c7425fbe6c3a4937934215c54027d4b67202d12ab490682fae03498870d66d06",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "cf3f8160eb5a5580e0c35054847e3ac4d01e9fe74fab8bc12bf6e8a40bf696b2",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "db2d33c4e6e4a5c2263b56e8303c343305a94dde1fc2968304ba260acbbd9f9f",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    },
+    {
+      "value": "e021662a652ba95c8778b991056696ab3c9b0f60d5e23b1e6cf73c3847db6610",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/26/poisoned-search-results-gpu-mining-cryptojacking-campaign-abusing-screenconnect-microsoft-net-utilities/"
+      ]
+    }
+  ],
+  "sha1": [],
+  "md5": []
+}
