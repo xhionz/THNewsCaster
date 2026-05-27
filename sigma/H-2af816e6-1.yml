@@ -1,0 +1,11 @@
+title: Phishing Email with Credential Submission Domain
+logsource:
+  product: office365
+  service: securityhub
+detection:
+  selection:
+    subject: '*urgent*' | '*action required*' | '*immediate*' | '*account suspended*'
+    sender_domain: '*[!a-z0-9.-]*.xyz' | '*[!a-z0-9.-]*.info' | '*[!a-z0-9.-]*.top'
+    urls: '*login*' | '*verify*' | '*secure*' | '*account*'
+  condition: selection
+condition: 1 of selection*

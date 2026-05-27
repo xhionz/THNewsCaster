@@ -1,0 +1,16 @@
+title: Credential Stuffing - Multiple Failed Logins Followed by Success
+logsource:
+  product: azure_ad
+  service: authentication
+detection:
+  selection:
+    result_type: 'Failure'
+    user_id: '*'
+    timestamp: '*'
+  condition: 10 of selection* by user_id
+  selection2:
+    result_type: 'Success'
+    user_id: '*'
+    timestamp: '> last_failure_timestamp + 10s'
+  condition: selection2 AND user_id IN (selection.user_id)
+condition: 1 of selection* and selection2

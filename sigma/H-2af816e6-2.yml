@@ -1,0 +1,11 @@
+title: Session Cookie Modification from Non-Allowlisted Domain
+logsource:
+  product: chrome
+  service: browser_extension
+detection:
+  selection:
+    event_type: 'cookie_modified'
+    domain: '*[!a-z0-9.-]*.malicious.site' | '*[!a-z0-9.-]*.phish.net' | '*[!a-z0-9.-]*.fakeapp.org'
+    session_id: '*'
+  condition: selection
+condition: 1 of selection*
