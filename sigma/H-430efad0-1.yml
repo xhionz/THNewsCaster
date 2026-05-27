@@ -1,0 +1,20 @@
+title: Suspicious cPanel Login and File Manager Access
+logsource:
+  product: apache
+  service: httpd
+detection:
+  sel1:
+    uri: '/cpsess*/frontend/paper_lantern/filemanager/index.html'
+    status: 200
+  sel2:
+    uri: '/cpsess*/frontend/paper_lantern/filemanager/upload.html'
+    status: 200
+  sel3:
+    uri: '/cpsess*/frontend/paper_lantern/terminal/index.html'
+    status: 200
+  sel4:
+    user_agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+    status: 200
+  condition: sel1 or sel2 or sel3
+  timeframe: 5m
+condition: all

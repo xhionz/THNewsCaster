@@ -1,0 +1,20 @@
+title: cPanel Remote Code Execution Attempt via Known Vulnerability Path
+logsource:
+  product: apache
+  service: httpd
+detection:
+  sel1:
+    uri: '/cpsess*/json-api/cpanel'
+    query: 'cpanel_jsonapi_module=Fileman&cpanel_jsonapi_func=upload_file'
+    status: 200
+  sel2:
+    uri: '/cpsess*/frontend/paper_lantern/filemanager/upload.html'
+    referer: 'http://.*\.com'
+    status: 200
+  sel3:
+    uri: '/cpsess*/frontend/paper_lantern/terminal/index.html'
+    user_agent: 'curl'
+    status: 200
+  condition: sel1 or sel2 or sel3
+  timeframe: 10m
+condition: all

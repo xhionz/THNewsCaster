@@ -1,0 +1,14 @@
+title: Suspicious Email Click Leading to cPanel Login
+logsource:
+  product: email_gateway
+detection:
+  sel1:
+    subject: 'Urgent: cPanel Security Update Required'
+    sender: '.*@.*\.com'
+    attachment: '.*\.exe|.*\.js|.*\.vbs'
+  sel2:
+    body: 'click here to update your cPanel password'
+    url: '.*cpanel.*\.com|.*cpanel.*\.net'
+  condition: sel1 and sel2
+  timeframe: 7d
+condition: all
