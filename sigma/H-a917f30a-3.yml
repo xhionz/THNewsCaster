@@ -1,0 +1,16 @@
+title: DNS Exfiltration via High-Volume TXT/AAAA Queries
+logsource:
+  product: network
+  service: dns
+condition: 'event_type: dns_query and query_type in ["TXT", "AAAA"] and src_ip in (internal_ip_range) and query_count > 20 within 5m and query_length > 50'
+detection:
+  query_type:
+    - "TXT"
+    - "AAAA"
+  src_ip:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+  query_length:
+    - ">50"
+condition: 'query_type in (query_type) and src_ip in (src_ip) and query_count > 20 within 5m and query_length > 50'

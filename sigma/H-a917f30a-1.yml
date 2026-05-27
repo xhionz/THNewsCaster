@@ -1,0 +1,25 @@
+title: Phishing Email from Suspicious Iranian Domains
+logsource:
+  product: email
+  service: exchange
+condition: 'event_type: email_received and (sender_domain|contains: ["irancell.ir", "melli.ir", "gov.ir"] or sender_domain|contains: ["irancell", "melli", "gov"])
+  and (attachment_extension: ["exe", "js", "vbs", "scr", "zip", "doc", "xls"] or url: contains "http" and url: contains ".ir" or subject: contains "invoice" or subject: contains "payment")
+detection:
+  sender_domain:
+    - "irancell.ir"
+    - "melli.ir"
+    - "gov.ir"
+  attachment_extension:
+    - "exe"
+    - "js"
+    - "vbs"
+    - "scr"
+    - "zip"
+    - "doc"
+    - "xls"
+  url:
+    - "http"
+  subject:
+    - "invoice"
+    - "payment"
+condition: 'sender_domain in (sender_domain) or attachment_extension in (attachment_extension) or url in (url) or subject in (subject)'

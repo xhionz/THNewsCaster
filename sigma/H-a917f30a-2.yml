@@ -1,0 +1,22 @@
+title: Suspicious C2 via Legitimate Services from Internal Hosts
+logsource:
+  product: network
+  service: dns
+condition: 'event_type: dns_query and (domain|contains: ["github.com", "pastebin.com", "dropbox.com", "bit.ly", "tinyurl.com", "replit.com", "glitch.me"]) and src_ip in (internal_ip_range) and query_type in ["A", "AAAA"] and response_count > 5 and time_window: 5m'
+detection:
+  domain:
+    - "github.com"
+    - "pastebin.com"
+    - "dropbox.com"
+    - "bit.ly"
+    - "tinyurl.com"
+    - "replit.com"
+    - "glitch.me"
+  query_type:
+    - "A"
+    - "AAAA"
+  src_ip:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+condition: 'domain in (domain) and src_ip in (src_ip) and query_type in (query_type) and response_count > 5 within 5m'
