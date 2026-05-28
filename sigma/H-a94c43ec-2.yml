@@ -1,0 +1,12 @@
+title: Detect Lateral Movement from EMS to Manufacturing Subnet via SMB/RDP
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    TargetUserName: '.*'
+    LogonType: 3
+    TargetComputerName: '.*-ICS.*'
+    IpAddress: '192.168.10.*'
+  condition: selection

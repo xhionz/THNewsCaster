@@ -1,0 +1,12 @@
+title: Detect Suspicious HTTPS Exfiltration from EMS Server
+logsource:
+  product: fortinet
+  service: forticlient_ems
+detection:
+  selection:
+    type: 'traffic'
+    direction: 'outbound'
+    destination_port: 443
+    user_agent: ['curl', 'python-requests', 'PowerShell']
+    source_ip: 'EMS_SERVER_IP'
+  condition: selection

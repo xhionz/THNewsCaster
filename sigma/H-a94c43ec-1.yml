@@ -1,0 +1,11 @@
+title: Detect FortiClient EMS RCE Exploit Attempt
+logsource:
+  product: fortinet
+  service: forticlient_ems
+detection:
+  selection:
+    type: 'event'
+    log_id: 10010
+    status: 'error'
+    description: 'Unauthenticated remote code execution attempt'
+  condition: selection
