@@ -1,0 +1,12 @@
+title: Kimsuky JSONPing Beaconing Pattern
+logsource:
+  product: webserver
+  service: access
+condition: 'user_agent|contains: 'Chrome' AND not user_agent|contains: 'Chrome/' AND request_uri: '/api/v1/heartbeat' AND method: 'POST' AND content_type: 'application/json'
+detection:
+  user_agent:
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome'
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome (no version)'
+  request_uri: '/api/v1/heartbeat'
+  method: 'POST'
+  content_type: 'application/json'

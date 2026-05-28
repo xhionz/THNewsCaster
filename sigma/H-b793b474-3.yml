@@ -1,0 +1,16 @@
+title: Kimsuky Obfuscated PowerShell via WinRM
+logsource:
+  product: windows
+  service: powershell
+condition: 'script_block_text|contains: ' -enc ' OR script_block_text|contains: ' -e ' OR script_block_text|contains: ' -Command ' AND event_id: '4104' AND logon_type: '3' AND source_network_address: '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16'
+detection:
+  script_block_text:
+    - '-enc '
+    - '-e '
+    - '-Command '
+  event_id: 4104
+  logon_type: 3
+  source_network_address:
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'

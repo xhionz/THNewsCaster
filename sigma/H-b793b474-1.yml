@@ -1,0 +1,10 @@
+title: Kimsuky Phishing Email with Malicious Attachment
+logsource:
+  product: windows
+  service: email
+condition: 'Attachment|contains: ['.exe', '.js', '.scr']'
+detection:
+  Attachment:
+    - '*.exe'
+    - '*.js'
+    - '*.scr'
