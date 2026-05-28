@@ -1,0 +1,5 @@
+title: Suspicious Login to XCharge Management Portal from Untrusted IP
+logsource:
+  product: web
+  service: http
+condition: 'http.request.host =~ "^(.*\.)?xcharge\.com$" and http.request.uri contains "/admin/login" and http.response.status_code == 200 and not ip.src in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "203.0.113.0/24"] and http.request.user_agent !~ "Mozilla/5.0.*Chrome"'

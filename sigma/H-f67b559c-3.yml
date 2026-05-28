@@ -1,0 +1,5 @@
+title: Malicious Firmware Download from XCharge CDN
+logsource:
+  product: network
+  service: http
+condition: 'http.request.host =~ "^(.*\.)?xchargecdn\.com$" and http.request.uri =~ "^/firmware/.*\.bin$" and http.response.status_code == 200 and http.response.header["Content-Type"] == "application/octet-stream" and not http.response.header["X-Integrity-Check"]'

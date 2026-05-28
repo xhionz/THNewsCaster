@@ -1,0 +1,5 @@
+title: Detect KMW Camera Password Reset Exploit
+logsource:
+  product: network
+  service: http
+condition: 'http.request.method: POST and http.request.uri contains "/reset_password" and http.request.uri contains "/admin/" and ip.src in ["192.168.10.0/24", "10.5.0.0/16"] and http.response.status_code: 200 and user_agent: ""'

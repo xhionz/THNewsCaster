@@ -1,0 +1,5 @@
+title: Suspicious APK Installation via Email or Web Download
+logsource:
+  product: android
+  service: package_manager
+condition: 'package_name == "com.fourthfrontier.frontierx"' and 'installation_source == "unknown"' and 'package_sha256 != "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"' and 'package_sha256 != "f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3b2a1f6e5d4c3"'

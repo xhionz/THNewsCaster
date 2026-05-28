@@ -1,0 +1,5 @@
+title: Detect Credential Theft via Phishing and Camera Login
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 AND logon_type: 3 AND account_name IN (finance_users) AND ip.src IN (external_ips) AND process.name: "iexplore.exe" OR "chrome.exe"'

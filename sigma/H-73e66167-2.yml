@@ -1,0 +1,5 @@
+title: Detect Lateral Movement from KMW Cameras to Sensitive Servers
+logsource:
+  product: network
+  service: smb
+condition: 'ip.src in ["192.168.10.100", "192.168.10.101", ..., "192.168.10.150"] and ip.dst in ["10.10.1.10", "10.10.1.11", "10.10.2.5", "10.10.2.6"] and smb.command: 0x00000011'

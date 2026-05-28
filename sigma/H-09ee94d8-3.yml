@@ -1,0 +1,13 @@
+title: Lateral Movement from USR-W610 to OT Devices
+logsource:
+  product: network
+  service: tcp
+detection:
+  selection:
+    src.ip: '192.168.100.0/24' # USR-W610 subnet
+    dst.ip: '192.168.200.0/24' # OT subnet
+    dst.port: [21, 23, 502, 102, 110, 143]
+  condition: selection
+  falsepositives:
+    - Legitimate maintenance
+  level: critical

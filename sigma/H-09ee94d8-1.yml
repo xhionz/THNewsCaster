@@ -1,0 +1,13 @@
+title: Detection of Hardcoded Credentials Access on USR-W610 Device
+logsource:
+  product: network
+  service: http
+detection:
+  selection:
+    http.method: 'GET'
+    http.uri: '/admin'
+    user_agent: 'curl'
+  condition: selection
+  falsepositives:
+    - Legitimate admin access
+  level: high

@@ -1,0 +1,5 @@
+title: Suspicious Firmware Update Attempt via Management Interface
+logsource:
+  product: network
+  service: http
+condition: 'http.request.uri contains "/firmware/update" and http.request.method == "POST" and http.response.status_code == 200 and not http.request.header["X-Firmware-Signature"] and not http.request.header["X-Firmware-Hash"]'

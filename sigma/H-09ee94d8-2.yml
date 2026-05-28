@@ -1,0 +1,12 @@
+title: Detection of Unusual Firmware Boot Behavior on USR-W610
+logsource:
+  product: network
+  service: dhcp
+detection:
+  selection:
+    dhcp.hostname: 'USR-W610-'
+    dhcp.option_12: 'firmware-update'
+  condition: selection
+  falsepositives:
+    - Legitimate firmware update
+  level: medium

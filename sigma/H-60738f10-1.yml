@@ -1,0 +1,5 @@
+title: Suspicious BLE Advertisement Cloning Attempt
+logsource:
+  product: android
+  service: bluetooth
+condition: 'bluetooth_advertisement_uuid matches "^0000180f-0000-1000-8000-00805f9b34fb$" or bluetooth_advertisement_uuid matches "^00002a37-0000-1000-8000-00805f9b34fb$"' and bluetooth_advertisement_address !~ "^(AA:BB:CC:DD:EE:FF|11:22:33:44:55:66)$" and bluetooth_advertisement_count > 5 within 60s
