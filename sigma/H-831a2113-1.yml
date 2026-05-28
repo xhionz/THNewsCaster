@@ -1,0 +1,19 @@
+title: One-Char Auth Bypass in LLM API Endpoints
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects HTTP requests to /api/v1/ endpoints with token parameters of 1-4 characters
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_uri:
+    - '/api/v1/'
+  token_param:
+    - 'token=\w{1,4}'
+    - 'api_key=\w{1,4}'
+    - 'auth=\w{1,4}'
+  method:
+    - 'GET'
+    - 'POST'
+condition: all of them
+level: high

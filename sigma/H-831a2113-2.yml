@@ -1,0 +1,25 @@
+title: Suspicious LLM/Shim Binary Execution
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects execution of processes with names containing 'llm', 'shim', or 'openai' with suspicious command-line arguments
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  process_name:
+    - 'llm.exe'
+    - 'LiteLLM.exe'
+    - 'openai_shim.exe'
+    - 'shim.exe'
+  suspicious_args:
+    - '--auth-bypass'
+    - '--token='
+    - '-c curl '
+    - 'powershell -e '
+    - 'certutil -decode '
+  parent_process:
+    - 'cmd.exe'
+    - 'powershell.exe'
+    - 'wscript.exe'
+condition: process_name and suspicious_args and parent_process
+level: high
