@@ -1,0 +1,10 @@
+title: Suspicious sudo usage by gitea-service account
+logsource:
+  product: linux
+  service: sudo
+detection:
+  selection:
+    user: 'gitea-service'
+    command: 'sudo -i' OR 'sudo su' OR 'sudo cp /root/.ssh/authorized_keys /home/gitea/.ssh/'
+  condition: selection
+level: critical

@@ -1,0 +1,12 @@
+title: Suspicious PAT Usage in External CI/CD Systems
+logsource:
+  product: linux
+  service: gitea
+detection:
+  selection:
+    event_type: api_access
+    endpoint: "/user/tokens"
+    action: "create" OR "view"
+    user_agent: "curl" OR "python-requests"
+  condition: selection
+level: high

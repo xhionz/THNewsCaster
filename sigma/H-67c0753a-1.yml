@@ -1,0 +1,15 @@
+title: Suspicious Gitea File Access via SSRF
+logsource:
+  product: linux
+  service: gitea
+detection:
+  selection:
+    event_type: http_request
+    uri: "*/repo/*/raw/*"
+    query: "file=/etc/gitea/app.ini" OR "file=/home/gitea/.ssh/id_rsa"
+    status_code: 200
+  condition: selection
+keywords:
+  - "file=/etc/gitea/app.ini"
+  - "file=/home/gitea/.ssh/id_rsa"
+level: high
