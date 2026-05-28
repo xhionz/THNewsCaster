@@ -1,0 +1,12 @@
+title: Detect Accessibility Permission Request via Android API
+logsource:
+  product: android
+  category: android_permission_request
+detection:
+  Permission:
+    - 'android.permission.ACCESSIBILITY_SERVICE'
+    - 'android.permission.SYSTEM_ALERT_WINDOW'
+  RequestType:
+    - 'request_permission'
+    - 'grant_permission'
+condition: all of them

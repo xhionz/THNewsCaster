@@ -1,0 +1,16 @@
+title: Detect Accessibility Service Monitoring Financial Apps
+logsource:
+  product: android
+  category: accessibility_event
+detection:
+  PackageName:
+    - 'com.chase'
+    - 'com.paypal.mobile'
+    - 'com.bankofamerica'
+    - 'com.wellsfargo'
+    - 'com.citi'
+  EventTypes:
+    - 'TYPE_WINDOW_STATE_CHANGED'
+    - 'TYPE_VIEW_CLICKED'
+    - 'TYPE_VIEW_FOCUSED'
+condition: all of them

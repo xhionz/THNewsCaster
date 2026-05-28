@@ -1,0 +1,14 @@
+title: Detect APK Installation via pm install Command
+logsource:
+  product: android
+  category: process_creation
+detection:
+  Image:
+    - '/data/app/*'
+    - '/storage/emulated/0/Download/*'
+    - '/storage/self/primary/Download/*'
+  CommandLine:
+    - '*pm install*'
+    - '*pm install -r*'
+    - '*pm install --user*'
+condition: all of them
