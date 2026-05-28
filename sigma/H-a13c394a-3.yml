@@ -1,0 +1,14 @@
+title: Suspicious WMI Event Consumer Created by Code.exe
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects creation of WMI event consumer or scheduled task triggered by Code.exe
+logsource:
+  product: windows
+  service: wmi_event
+detection:
+  selection:
+    EventID: 5857
+    CommandLine: "*\Code.exe"
+    TargetObject: "*\WmiPrvSE.exe"
+  condition: selection
+level: high

@@ -1,0 +1,13 @@
+title: Suspicious Nx Console Extension Installation via Auto-Update
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects creation of Nx Console extension directory with versioned folder name indicative of CVE-2026-48027
+logsource:
+  product: windows
+  service: file_event
+detection:
+  selection:
+    Image: "*\Code.exe"
+    TargetFilename: "*\.vscode\extensions\nx-console-*.\*"
+  condition: selection
+level: high

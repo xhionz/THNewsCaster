@@ -1,0 +1,18 @@
+title: Suspicious GitHub Action Workflow with Secret Harvesting
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects GitHub Action YAML files containing patterns indicative of secret harvesting (e.g., echo $GITHUB_TOKEN, aws sts get-caller-identity)
+logsource:
+  product: github
+  service: repository_file
+detection:
+  selection:
+    file_path: "*.yml" OR "*.yaml"
+    content: |
+      - name: *
+        run: |
+          echo $GITHUB_TOKEN
+          aws sts get-caller-identity
+          curl -s http://169.254.169.254/latest/meta-data/iam/security-credentials/
+  condition: selection
+level: high
