@@ -1,0 +1,766 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-48172",
+      "sources": [
+        "https://thehackernews.com/2026/05/litespeed-cpanel-plugin-cve-2026-48172.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-48095",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1to1sco/7zip_cve202648095_ntfs_heap_overflow_leads_to/"
+      ]
+    },
+    {
+      "value": "CVE-2026-48027",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-45659",
+      "sources": [
+        "https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-45321",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-35616",
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-forticlient-ems-flaw-to-push-infostealer-malware/"
+      ]
+    },
+    {
+      "value": "CVE-2026-34621",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-33825",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-32201",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-28764",
+      "sources": [
+        "https://blog.talosintelligence.com/mediaarea-heap-based-buffer-overflow-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-27771",
+      "sources": [
+        "https://thehackernews.com/2026/05/gitea-vulnerability-exposes-private.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-26980",
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/ghost-cms-sql-injection-flaw-exploited-in-large-scale-clickfix-campaign/"
+      ]
+    },
+    {
+      "value": "CVE-2026-26194",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "CVE-2026-25713",
+      "sources": [
+        "https://blog.talosintelligence.com/mediaarea-heap-based-buffer-overflow-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-25104",
+      "sources": [
+        "https://blog.talosintelligence.com/mediaarea-heap-based-buffer-overflow-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-22554",
+      "sources": [
+        "https://blog.talosintelligence.com/mediaarea-heap-based-buffer-overflow-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20223",
+      "sources": [
+        "https://thehackernews.com/2026/05/cisco-patches-cvss-100-secure-workload.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-9082",
+      "sources": [
+        "https://thehackernews.com/2026/05/drupal-core-sql-injection-bug-actively.html",
+        "https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html",
+        "https://www.reddit.com/r/netsec/comments/1tjnwy1/keys_to_the_kingdom_anonymous_sql_injection_in/"
+      ]
+    },
+    {
+      "value": "CVE-2026-9039",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-9038",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-9037",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-8398",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-7786",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-7251",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-5768",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-148-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-5386",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-5281",
+      "sources": [
+        "https://krebsonsecurity.com/2026/04/patch-tuesday-april-2026-edition/"
+      ]
+    },
+    {
+      "value": "CVE-2026-0300",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+      ]
+    },
+    {
+      "value": "CVE-2025-33073",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tn21en/fix_cve202533073_ntlm_reflection_not_exploitable/"
+      ]
+    },
+    {
+      "value": "CVE-2024-46461",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-39933",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "CVE-2024-39932",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "CVE-2024-39930",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "CVE-2023-47360",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2023-47359",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2023-46814",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2022-41325",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2020-26664",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-19721",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-13962",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-13615",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-13602",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-5460",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-5459",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2019-5439",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2018-11529",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-17670",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-10699",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-9301",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-9300",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8313",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8312",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8311",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "CVE-2017-8310",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "1.5.0.14",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "1.5.0.15",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "3.0.7.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "3.0.17.4",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05"
+      ]
+    },
+    {
+      "value": "83.142.209.194",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "abcdef.bat",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "adfind.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "app.ini",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "c.error",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "c.params",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "cmd.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024",
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "consequences.investigations",
+      "sources": [
+        "https://blog.talosintelligence.com/state-sponsored-actors-better-known-as-the-friends-you-dont-want/"
+      ]
+    },
+    {
+      "value": "cve.org",
+      "sources": [
+        "https://thehackernews.com/2026/05/highly-critical-drupal-core-flaw.html"
+      ]
+    },
+    {
+      "value": "exec.command",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "explorer.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "filev2.getsession.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "fmt.sprintf",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "fourthfrontier.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-148-01"
+      ]
+    },
+    {
+      "value": "gentlemen.bmp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "git-tanstack.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "http.title",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "hunt.io",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1tpa7ke/exposing_a_smishing_campaign_across_19_countries/"
+      ]
+    },
+    {
+      "value": "image-131.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-143.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-146-1024x155.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-146-300x45.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-146-768x116.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-146.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-147.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-164.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-169-1024x142.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-169-300x42.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-169-768x107.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "image-169.webp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016",
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "main.kmw.ro",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-06"
+      ]
+    },
+    {
+      "value": "net.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "next.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "nltest.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "nrwl.angular",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "pr.basebranch",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "process.execdir",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "psexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "pull.go",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "pullrequest.merge",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "ransomware.live",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "readme-gentlemen.txt",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "sc.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "security.paloaltonetworks.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+      ]
+    },
+    {
+      "value": "seed1.getsession.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "settings.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "snort.org",
+      "sources": [
+        "https://blog.talosintelligence.com/mediaarea-heap-based-buffer-overflow-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "strings.split",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed"
+      ]
+    },
+    {
+      "value": "tasks.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994",
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "timeago.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33014",
+        "https://isc.sans.edu/diary/rss/33016"
+      ]
+    },
+    {
+      "value": "veeam.endpoint.service",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "whoami.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33024"
+      ]
+    },
+    {
+      "value": "wipefile.tmp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "wmic.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-146-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-148-01"
+      ]
+    },
+    {
+      "value": "www.eppendorf.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01"
+      ]
+    },
+    {
+      "value": "www.microsoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "www.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-139-02"
+      ]
+    },
+    {
+      "value": "www.xcharge.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "078163d5c16f64caa5a14784323fd51451b8c831c73396b967b4e35e6879937b",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "22b38dad7da097ea03aa28d0614164cd25fafeb1383dbc15047e34c8050f6f67",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    },
+    {
+      "value": "ab4fcadaec49c03278063dd269ea5eef82d24f2124a8e15d7b90f2fa8601266c",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/32994"
+      ]
+    },
+    {
+      "value": "fe1033335a045c696c900d435119d210361966e2fb5cd1ba3382608cfa2c8e68",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/"
+      ]
+    }
+  ],
+  "sha1": [],
+  "md5": []
+}
