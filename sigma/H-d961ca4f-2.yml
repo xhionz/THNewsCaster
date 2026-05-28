@@ -1,0 +1,21 @@
+title: Gogs Unauthenticated Account Creation Leading to RCE
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects rapid sequence of user creation followed by repository creation and rebase merge with malicious branch
+logsource:
+  product: gogs
+  category: application
+detection:
+  selection1:
+    event_type: 'user_created'
+    timestamp: '>2026-05-20T00:00:00Z' AND '<2026-05-28T00:00:00Z'
+  selection2:
+    event_type: 'repo_created'
+    user_id: selection1.user_id
+  selection3:
+    action: 'rebase'
+    branch_name: '*--exec*'
+    user_id: selection1.user_id
+  condition: selection1 and selection2 and selection3
+  timeframe: 10m
+level: critical

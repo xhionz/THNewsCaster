@@ -1,0 +1,13 @@
+title: Gogs RCE via Argument Injection in Branch Name
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects malicious branch names containing --exec during rebase merge operations in Gogs
+logsource:
+  product: gogs
+  category: application
+detection:
+  selection:
+    action: 'rebase'
+    branch_name: '*--exec*'
+  condition: selection
+level: critical
