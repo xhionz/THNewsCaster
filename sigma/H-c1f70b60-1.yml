@@ -1,0 +1,27 @@
+title: Gentlemen Initial Compromise and Lateral Movement
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects RDP logons from non-DC hosts, SMB admin share access, and process creation from temp directories indicative of Gentlemen ransomware
+logsource:
+  product: windows
+  service: security
+detection:
+  rdp_login:
+    EventID: 4624
+    LogonType: 10
+    AccountName: '-DC$'
+  smb_admin_access:
+    EventID: 4624
+    LogonType: 3
+    AccountName: '-DC$'
+    TargetDomainName: 'NT AUTHORITY'
+    TargetUserName: 'SYSTEM'
+  process_creation_from_temp:
+    EventID: 4688
+    Image: '*\temp\*.exe'
+    CommandLine: '*psexec* | *wmic*'
+  file_extension_gentlemen:
+    EventID: 11
+    TargetFilename: '*\.gentlemen'
+condition: (rdp_login or smb_admin_access) and (process_creation_from_temp or file_extension_gentlemen)
+level: high

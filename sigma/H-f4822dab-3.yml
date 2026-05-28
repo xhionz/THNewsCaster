@@ -1,0 +1,10 @@
+title: Detect LSASS Memory Access by Non-Whitelisted Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 10
+  TargetImage: "*\lsass.exe"
+  ProcessName: "*"
+  ProcessName_NOT: ["procdump.exe", "taskmgr.exe", "powershell.exe", "cmd.exe", "FortiClient.exe", "svchost.exe"]
+condition: all

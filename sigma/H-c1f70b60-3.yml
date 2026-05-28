@@ -1,0 +1,20 @@
+title: Gentlemen Data Encryption and Cleanup
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects file encryption (.gentlemen extension) and cleanup artifacts (wipefile.tmp) indicative of Gentlemen ransomware
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  encryption_extension:
+    EventID: 11
+    TargetFilename: '*\.gentlemen'
+  cleanup_artifact:
+    EventID: 11
+    TargetFilename: '*\wipefile.tmp'
+  file_deletion:
+    EventID: 23
+    TargetFilename: '*\*.docx' | '*\*.xlsx' | '*\*.pdf' | '*\*.jpg'
+    Image: '*\psexec.exe' | '*\wmic.exe' | '*\Gentlemen*.exe'
+condition: encryption_extension or cleanup_artifact or file_deletion
+level: high

@@ -1,0 +1,13 @@
+title: Detect Unsigned or Unknown Hash EMS Update Payload
+logsource:
+  product: fortinet
+  service: ems_update
+condition: 'file_name: *.exe OR file_name: *.dll AND file_hash_sha256: "" AND update_source: "EMS" AND file_size > 1000000'
+detection:
+  file_name:
+    - "*.exe"
+    - "*.dll"
+  file_hash_sha256: ""
+  update_source: "EMS"
+  file_size: >1000000
+condition: all

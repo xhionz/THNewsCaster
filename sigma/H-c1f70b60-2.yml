@@ -1,0 +1,23 @@
+title: Gentlemen Persistence via Registry and Scheduled Tasks
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects registry persistence and scheduled task creation via wmic or psexec indicative of Gentlemen ransomware
+logsource:
+  product: windows
+  service: security
+detection:
+  registry_persistence:
+    EventID: 4657
+    KeyName: '*\Software\Microsoft\Windows\CurrentVersion\Run\'
+    NewValue: '*psexec*' | '*wmic*' | '*.exe'
+  scheduled_task_creation:
+    EventID: 4698
+    TaskName: '*Gentlemen*' | '*update*' | '*system*'
+    Creator: 'SYSTEM'
+    CommandLine: '*psexec*' | '*wmic* job create*' | '*wmic process call create*'
+  wmic_process_call:
+    EventID: 4688
+    Image: '*\wmic.exe'
+    CommandLine: '*process call create*' | '*job create*'
+condition: registry_persistence or scheduled_task_creation or wmic_process_call
+level: high

@@ -1,0 +1,14 @@
+title: Detect Malicious CVE-2024-21762 Exploitation via fgt_lang
+logsource:
+  product: fortinet
+  service: ems
+condition: 'request_uri: "/remote/fgt_lang" and request_method: "POST" and (request_size > 5000 or (request_params: "lang" and request_params: "*" and not request_params: "en" and not request_params: "zh")) and response_code: 200'
+detection:
+  request_uri: "/remote/fgt_lang"
+  request_method: "POST"
+  request_size: >5000
+  request_params:
+    - "lang"
+    - "*"
+  response_code: 200
+condition: all
