@@ -1,0 +1,13 @@
+title: Detect FortiClient EMS Auth Bypass via CVE-2023-27997
+logsource:
+  product: forticlient_ems
+  service: http
+condition: 'request_uri: "/remote/fgt_lang" and status_code: 200 and user_agent: "*Mozilla*" and (request_method: "POST" or request_method: "GET") and (content_length > 1000)
+detection:
+  auth_bypass_pattern:
+    - request_uri: "/remote/fgt_lang"
+    - status_code: 200
+    - user_agent: "*Mozilla*"
+    - content_length: >1000
+  time_window: "within 5m"
+condition: auth_bypass_pattern

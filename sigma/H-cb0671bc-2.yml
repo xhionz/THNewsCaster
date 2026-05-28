@@ -1,0 +1,13 @@
+title: Detect Malicious FortiClient EMS Policy Modification
+logsource:
+  product: forticlient_ems
+  service: policy_update
+condition: 'policy_change: true and (outbound_rule: "*allow tcp to 192.168.*" or outbound_rule: "*allow udp to 53" or outbound_rule: "*allow http to *.cloudfront.net")
+detection:
+  suspicious_policy_change:
+    - policy_change: true
+    - outbound_rule: "*allow tcp to 192.168.*"
+    - outbound_rule: "*allow udp to 53"
+    - outbound_rule: "*allow http to *.cloudfront.net"
+    - outbound_rule: "*allow https to *.azureedge.net"
+condition: suspicious_policy_change

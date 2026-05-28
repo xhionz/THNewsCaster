@@ -1,0 +1,15 @@
+title: Detect DNS Tunneling for EKZ Exfiltration
+logsource:
+  product: dns
+  service: dns_query
+condition: 'query_count > 50 in 5m and query_length > 50 and domain ends with ".tk" or ".ml" or ".ga" or ".cf" or ".gq"'
+detection:
+  tunneling_pattern:
+    - query_count: >50
+    - query_length: >50
+    - domain: "*.tk"
+    - domain: "*.ml"
+    - domain: "*.ga"
+    - domain: "*.cf"
+    - domain: "*.gq"
+condition: tunneling_pattern
