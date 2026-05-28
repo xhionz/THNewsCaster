@@ -1,0 +1,11 @@
+title: Suspicious Git Receive Pack POST Request
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    method: 'POST'
+    uri: '/git-receive-pack'
+    user_agent: 'git/*'
+  condition: selection
+condition: selection

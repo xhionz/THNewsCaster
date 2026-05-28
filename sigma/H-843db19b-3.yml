@@ -1,0 +1,11 @@
+title: Suspicious HTTP Proxy Behavior via Gogs
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    method: 'CONNECT'
+    uri: '*'
+    source.ip: not in [internal_ip_ranges]
+  condition: selection
+condition: selection
