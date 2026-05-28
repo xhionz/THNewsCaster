@@ -1,0 +1,9 @@
+title: Detect Smishing Phishing Page with 128-Char Base64 Hash
+logsource:
+  product: web_proxy
+  category: web
+Detection:
+  EventID: 1
+  UserAgent: '.*Android.*'
+  http_response_body: '.*<meta name="hash" content="[a-zA-Z0-9+/]{128}" />.*'
+condition: all

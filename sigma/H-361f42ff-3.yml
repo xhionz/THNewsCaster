@@ -1,0 +1,10 @@
+title: Detect MFA Bypass via WebAuthn Session Replay
+logsource:
+  product: identity_provider
+detection:
+  event:
+    - 'MFA bypassed'
+    - 'Authentication without second factor'
+  user_agent: '*Chrome*'
+  source_ip: IN (SELECT src_ip FROM phishing_events)
+condition: 'MFA bypassed' AND source_ip IN phishing_events AND timestamp < phishing_event_timestamp + 1h

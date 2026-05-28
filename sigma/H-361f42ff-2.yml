@@ -1,0 +1,11 @@
+title: Detect Credential Reuse Across Identity Providers
+logsource:
+  product: identity_provider
+detection:
+  user:
+    - '*'
+  event:
+    - 'Failed login to Okta'
+    - 'Successful login to VPN'
+  time_window: 5m
+condition: 'Failed login to Okta' AND 'Successful login to VPN' within 5m AND same user

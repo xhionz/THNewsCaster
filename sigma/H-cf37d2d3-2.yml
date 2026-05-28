@@ -1,0 +1,15 @@
+title: Detect HTTP Requests to Known Malicious Cloud IPs with Suspicious User-Agent
+logsource:
+  product: web_proxy
+  category: web
+Detection:
+  EventID: 1
+  destination.ip: [
+    '104.18.0.0/16',
+    '45.113.128.0/17',
+    '182.254.128.0/18',
+    '119.28.0.0/14'
+  ]
+  UserAgent: '.*Android.*'
+  http_response_body: '.*<meta name="hash" content="[a-zA-Z0-9+/]{128}" />.*'
+condition: all

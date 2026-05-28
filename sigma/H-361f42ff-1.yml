@@ -1,0 +1,12 @@
+title: Detect AiTM Phishing for Google Password Manager PIN
+logsource:
+  product: web_proxy
+detection:
+  url:
+    - '*accounts.google.com/signin*'
+    - '*accounts.google.com/oauth2/v3/consent*'
+    - '*accounts.google.com/signin/v2/challenge/pin*'
+  user_agent:
+    - '*Chrome*'
+  http_response_code: 200
+condition: all of them
