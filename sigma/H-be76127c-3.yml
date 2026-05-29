@@ -1,0 +1,14 @@
+title: GREYVIBE Process Injection via CreateRemoteThread into lsass.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: '10'
+    TargetImage: '*\lsass.exe'
+    Image: '*\svchost.exe' OR Image: '*\explorer.exe'
+    TargetImage|contains: 'lsass.exe'
+    Image|endswith: '.dll'
+    Hash|count: 3
+  condition: selection
+timeframe: 10m

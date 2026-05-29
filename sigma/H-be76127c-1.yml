@@ -1,0 +1,17 @@
+title: GREYVIBE Phishing Emails from .ru/.by with AI Buzzwords
+logsource:
+  product: mail
+  service: smtp
+detection:
+  selection:
+    From|endswith:
+      - '.ru'
+      - '.by'
+    Body|contains:
+      - 'AI'
+      - 'automated'
+      - 'smart'
+      - 'machine learning'
+      - 'neural network'
+  condition: selection
+timeframe: 14d

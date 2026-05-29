@@ -1,0 +1,15 @@
+title: GREYVIBE Scanning of Ukrainian Public IPs
+logsource:
+  product: network
+  service: firewall
+detection:
+  selection:
+    DestinationIP:
+      - '185.143.224.0/24'
+      - '195.133.144.0/20'
+      - '95.167.128.0/18'
+      - '176.121.128.0/18'
+    EventID: '4799'
+    Direction: 'outbound'
+  condition: selection
+timeframe: 5m
