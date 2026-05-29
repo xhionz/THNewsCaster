@@ -1,0 +1,17 @@
+title: Build Server Compromise Leading to Sicoob.Sdk Injection
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+  CommandLine:
+    - '*dotnet add package Sicoob.Sdk*'
+    - '*Install-Package Sicoob.Sdk*'
+  ParentImage:
+    - '*\Jenkins.exe'
+    - '*\AzureDevOps.exe'
+    - '*\TeamCity.exe'
+    - '*\GitLab-Runner.exe'
+condition: all of them

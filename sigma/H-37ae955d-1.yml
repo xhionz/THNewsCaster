@@ -1,0 +1,17 @@
+title: Suspicious dotnet CLI Installation of Sicoob.Sdk
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\dotnet.exe'
+  CommandLine:
+    - '*add package* Sicoob.Sdk*'
+    - '*install-package* Sicoob.Sdk*'
+  ParentImage:
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+    - '*\Jenkins.exe'
+    - '*\AzureDevOps.exe'
+    - '*\TeamCity.exe'
+condition: all of them

@@ -1,0 +1,22 @@
+title: Credential Dumping After Sicoob.Sdk Installation
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\lsass.exe'
+    - '*\mimikatz.exe'
+    - '*\procdump.exe'
+    - '*\rundll32.exe'
+    - '*\certutil.exe'
+  CommandLine:
+    - '*-dump*'
+    - '*-p*'
+    - '*-o*'
+    - '*export*certificate*'
+    - '*-cert*'
+  ParentImage:
+    - '*\dotnet.exe'
+    - '*\powershell.exe'
+    - '*\cmd.exe'
+condition: all of them
