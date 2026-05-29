@@ -1,0 +1,15 @@
+title: Suspicious npm postinstall script execution
+logsource:
+  product: shell
+  service: bash
+detection:
+  keywords:
+    - 'npm install'
+    - 'postinstall'
+    - 'base64'
+    - 'eval'
+    - 'curl'
+    - 'wget'
+    - 'sh -c'
+  condition: 'keywords'
+level: medium

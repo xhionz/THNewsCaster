@@ -1,0 +1,14 @@
+title: Typosquatted npm package installation detected
+logsource:
+  product: shell
+  service: bash
+detection:
+  keywords:
+    - 'npm install '
+    - ' exress'
+    - ' react '
+    - ' vue '
+    - ' lodash '
+    - ' moment '
+  condition: 'keywords' AND not 'npm install --save-dev'
+level: high

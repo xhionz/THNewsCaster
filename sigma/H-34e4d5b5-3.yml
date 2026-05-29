@@ -1,0 +1,12 @@
+title: Suspicious DNS queries from Node.js process
+logsource:
+  product: linux
+  service: dns
+detection:
+  selection:
+    process_name: 'node'
+    query: |
+      endswith: '.data.example.com'
+      contains: '.data.example.com'
+  condition: 'selection'
+level: high
