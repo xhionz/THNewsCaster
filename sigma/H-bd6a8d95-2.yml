@@ -1,0 +1,14 @@
+title: Suspicious environment variable access during npm execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process:
+    - 'node preinstall.js'
+    - 'node setup.mjs'
+    - 'node npm.js'
+  env_var:
+    - 'AZURE_TENANT_ID'
+    - 'AZURE_CLIENT_ID'
+    - 'AZURE_CLIENT_SECRET'
+condition: process and env_var

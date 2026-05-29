@@ -1,0 +1,11 @@
+title: Suspicious npm script execution via node
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  keywords:
+    - 'node preinstall.js'
+    - 'node setup.mjs'
+    - 'node npm.js'
+    - 'node index.js'
+condition: keywords

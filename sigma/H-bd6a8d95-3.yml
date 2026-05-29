@@ -1,0 +1,12 @@
+title: Unauthorized access to AWS IMDS from non-AWS hosts
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process:
+    - 'node preinstall.js'
+    - 'node setup.mjs'
+    - 'node npm.js'
+  network:
+    - 'destination.ip: 169.254.169.254'
+condition: process and network
