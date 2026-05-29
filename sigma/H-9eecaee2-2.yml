@@ -1,0 +1,26 @@
+title: Detection of Cloud Credential Exfiltration via LLM Agent
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects HTTP POST with cloud credential strings from python/node processes spawned after marimo.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\marimo.exe'
+    CommandLine: '*--port*' or '*--host*'
+  selection2:
+    Image: '*\python.exe' or '*\node.exe'
+    CommandLine: '*langchain*' or '*llama-index*' or '*transformers*'
+  selection3:
+    Image: '*\python.exe' or '*\node.exe'
+    NetworkConnection: true
+    DestinationIp: '!10.0.0.0/8' and '!172.16.0.0/12' and '!192.168.0.0/16'
+    DestinationPort: '80' or '443'
+    Direction: 'out'
+    ProcessGuid: '{process_guid_from_selection2}'
+  selection4:
+    Image: '*\python.exe' or '*\node.exe'
+    CommandLine: '*GOOGLE_APPLICATION_CREDENTIALS*' or '*AWS_ACCESS_KEY_ID*' or '*AZURE_CLIENT_ID*'
+  condition: selection1 and selection2 and selection3 and selection4
+timeframe: 900

@@ -1,0 +1,18 @@
+title: Detection of LLM Agent Spawned After Marimo Exploit
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects python.exe or node.exe spawning after marimo.exe with LLM libraries
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\marimo.exe'
+    CommandLine: '*--port*' or '*--host*'
+  selection2:
+    Image: '*\python.exe' or '*\node.exe'
+    CommandLine: '*langchain*' or '*llama-index*' or '*transformers*' or '*openai*' or '*cohere*'
+  filter1:
+    ParentImage: '*\marimo.exe'
+  condition: selection1 and selection2 and not filter1
+timeframe: 600
