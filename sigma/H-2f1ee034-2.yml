@@ -1,0 +1,15 @@
+title: Suspicious Chrome Launch from Email Attachment
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\chrome.exe'
+    ParentImage: '*\outlook.exe' OR ParentImage: '*\winword.exe' OR ParentImage: '*\excel.exe'
+    CommandLine: '*http*' OR CommandLine: '*file:*'
+  condition: selection
+fields:
+  - Image
+  - ParentImage
+  - CommandLine
+level: medium

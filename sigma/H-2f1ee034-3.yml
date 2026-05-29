@@ -1,0 +1,17 @@
+title: Chrome Drive-by Download from Suspicious Domain
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\chrome.exe'
+    CommandLine: '*http*'
+    ParentImage: '*\explorer.exe'
+  filter:
+    CommandLine: '*google.com*' OR '*bing.com*' OR '*microsoft.com*'
+  condition: selection and not filter
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+level: medium

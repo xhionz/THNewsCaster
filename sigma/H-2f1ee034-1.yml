@@ -1,0 +1,19 @@
+title: Suspicious Chrome Process Spawn After Unpatched Version
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\chrome.exe'
+    CommandLine: '*--remote-debugging-port*'
+    ParentImage: '*\chrome.exe'
+  filter:
+    Image: '*\chrome.exe'
+    Version: '147.*'
+  condition: selection and not filter
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+  - Version
+level: high
