@@ -1,0 +1,12 @@
+title: Detection of Lateral Movement via Compromised VPN Credentials
+logsource:
+  product: palo_alto_pan_os
+  category: traffic
+detection:
+  from: 'vpn'
+  to: 'internal'
+  log_subtype: 'user-id'
+  user: 'not in (known_admin_users, known_remote_users)'
+  bytes_sent: '> 5000'
+  src_ip: 'in (SELECT src_ip FROM user-id-logs WHERE log_subtype == 'globalprotect' AND action == 'login-success' AND timestamp BETWEEN '2024-05-20T00:00:00Z' AND '2024-05-25T23:59:59Z')'
+condition: all

@@ -1,0 +1,21 @@
+title: Detection of Internal Reconnaissance from VPN-Originated Host
+logsource:
+  product: palo_alto_pan_os
+  category: traffic
+detection:
+  src_ip: 'in (SELECT src_ip FROM traffic-logs WHERE from == 'vpn' AND to == 'internal' AND timestamp BETWEEN '2024-05-20T00:00:00Z' AND '2024-05-25T23:59:59Z' GROUP BY src_ip HAVING COUNT(DISTINCT dst_port) >= 5 AND timestamp BETWEEN MIN(timestamp) AND MIN(timestamp)+600s)'
+  dst_port: 'in (22, 23, 445, 3389, 135, 139)'
+  bytes_sent: '> 100'
+condition: all
+
+---
+
+title: Detection of DNS Reconnaissance from VPN-Originated IP
+logsource:
+  product: palo_alto_pan_os
+  category: dns
+detection:
+  src_ip: 'in (SELECT src_ip FROM traffic-logs WHERE from == 'vpn' AND to == 'internal' AND timestamp BETWEEN '2024-05-20T00:00:00Z' AND '2024-05-25T23:59:59Z')'
+  query: 'ends_with (.internal.domain.com)'
+  query_count: '> 10'
+condition: all

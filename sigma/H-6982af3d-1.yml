@@ -1,0 +1,8 @@
+title: Detection of CVE-2024-3400 Authentication Bypass on PAN-OS
+logsource:
+  product: palo_alto_pan_os
+  category: threat
+detection:
+  threat_name: 'CVE-2024-3400'
+  action: 'blocked' | 'allowed'
+condition: threat_name
