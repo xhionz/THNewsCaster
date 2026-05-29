@@ -1,0 +1,13 @@
+title: Detect SSH Brute Force from External IP
+logsource:
+  product: linux
+  service: sshd
+detection:
+  failed_auth:
+    - 'Failed password'
+  external_source:
+    - '192.168.0.0/16'
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+  count_threshold: 5
+condition: failed_auth and not external_source and count > 5

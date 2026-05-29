@@ -1,0 +1,15 @@
+title: Detect Gogs Argument Injection Exploit
+logsource:
+  product: gogs
+  service: http
+ detection:
+   req_uri_pattern:
+     - '*git-upload-pack*'
+     - '*git-receive-pack*'
+   query_params:
+     - '*head*'
+     - '*pack-objects*'
+   user_agent:
+     - 'git/*'
+   status_code: 200
+ condition: all of them

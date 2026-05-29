@@ -1,0 +1,10 @@
+title: Detect Ransomware Scheduled Task Creation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  process_name: 'schtasks.exe'
+  command_line: 'create /sc' AND ('/tr "*.exe"' OR '/tr "*.bat"' OR '/tr "*.cmd"')
+  parent_process: 'cmd.exe' OR 'powershell.exe'
+condition: event_id == 1 and process_name == 'schtasks.exe' and command_line contains 'create /sc' and (command_line contains '*.exe' or command_line contains '*.bat' or command_line contains '*.cmd')
