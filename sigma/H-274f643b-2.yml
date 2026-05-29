@@ -1,0 +1,28 @@
+title: IoT Exploit Attempt - Known CVEs
+logsource:
+  product: network
+  service: firewall
+detection:
+  selection:
+    DestinationIP:
+      - '192.168.10.0/24'
+      - '10.20.30.0/24'
+    DestinationPort:
+      - 80
+      - 443
+      - 502
+      - 102
+    UserAgent:
+      - '*curl*'
+      - '*wget*'
+      - '*python-requests*'
+    Request:
+      - '/cgi-bin/.%2e/%2e%2e/%2e%2e/etc/passwd'
+      - '/admin/login?cmd=reset'
+      - '/api/v1/config?dump'
+  condition: selection
+fields:
+  - SourceIP
+  - DestinationIP
+  - Request
+  - Timestamp

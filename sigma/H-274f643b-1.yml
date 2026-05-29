@@ -1,0 +1,16 @@
+title: Botnet DNS C2 - Dutch Botnet Indicators
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    Domain:
+      - '*botnet*.com'
+      - '*iotcontrol*.net'
+      - '*deviceupdate*.org'
+      - '*firmwareupdate*.info'
+  condition: selection
+fields:
+  - Domain
+  - ClientIP
+  - Timestamp
