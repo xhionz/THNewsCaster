@@ -1,0 +1,18 @@
+title: Detect ICMP Beaconing with Large Payloads
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects ICMP echo requests with payload >100 bytes and regular intervals (50-70s)
+logsource:
+  product: palo_alto_pan_os
+  service: traffic
+  category: network_traffic
+detection:
+  selection:
+    protocol: "1"
+    icmp_type: "8"
+    icmp_code: "0"
+    bytes: ">100"
+    src_ip: "192.168.86.99" | "146.19.216.119" | "146.19.216.120"
+    interval_seconds: "50-70"
+  condition: selection
+level: low

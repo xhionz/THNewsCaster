@@ -1,0 +1,14 @@
+title: Detect PAN-OS GlobalProtect Auth Bypass via Malformed AuthParam
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects anomalous auth_param values indicative of CVE-2024-3400 exploitation
+logsource:
+  product: palo_alto_pan_os
+  service: traffic
+detection:
+  selection:
+    event_type: GLOBALPROTECT
+    auth_param: "*authprofile*" | "*authprofil*" | "*authprofilename*"
+    auth_method: ""
+  condition: selection
+level: medium

@@ -1,0 +1,14 @@
+title: Detect High-Entropy DNS Queries for Exfiltration
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects DNS queries with subdomains exhibiting high entropy, suggestive of data exfiltration
+logsource:
+  product: dns
+  category: dns_query
+detection:
+  selection:
+    query: "*.*.*.*"
+    query_count: 5
+    entropy: ">0.8"
+  condition: selection
+level: medium
