@@ -1,0 +1,16 @@
+title: Detect Unauthenticated GraphQL IDOR Attempts
+logsource:
+  product: web_server
+  service: graphql
+detection:
+  req_method: 'POST'
+  req_path: '/graphql'
+  req_body_json:
+    - 'query'
+    - 'variables'
+    - 'id:'
+    - 'userId:'
+    - 'user_id:'
+    - 'userID:'
+  auth_missing: 'not request.headers.Authorization exists'
+condition: all of req_* and auth_missing

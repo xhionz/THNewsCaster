@@ -1,0 +1,15 @@
+title: Detect Exfiltration to Suspicious External Domains via HTTPS
+logsource:
+  product: network
+  service: proxy
+detection:
+  protocol: 'HTTPS'
+  dest_domain:
+    - 'pastebin.com'
+    - 'drive.google.com'
+    - 'dropbox.com'
+    - 'mega.nz'
+    - 'anonfiles.com'
+  req_size: 'request.bytes > 5000'
+  src_internal: 'source.ip in [10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16]'
+condition: all of protocol and dest_domain and req_size and src_internal

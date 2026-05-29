@@ -1,0 +1,14 @@
+title: Detect GraphQL Enumeration via Known Tool User-Agents
+logsource:
+  product: web_server
+  service: graphql
+detection:
+  req_method: 'POST'
+  req_path: '/graphql'
+  user_agent: 
+    - 'graphqlmap'
+    - 'BurpSuite'
+    - 'PostmanRuntime'
+    - 'python-requests'
+  auth_missing: 'not request.headers.Authorization exists'
+condition: all of req_* and auth_missing and any of user_agent
