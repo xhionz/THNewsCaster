@@ -1,0 +1,10 @@
+title: Malicious PowerShell or Office Spawned Executable
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    ParentImage: '*\winword.exe' or '*\excel.exe' or '*\powershell.exe' or '*\wscript.exe' or '*\cscript.exe'
+    Image: '*\OpenAI-Update.exe' or '*\chatgpt-update.exe' or '*\ai-client.exe'
+  Condition: Selection
+condition: Selection

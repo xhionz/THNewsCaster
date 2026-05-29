@@ -1,0 +1,10 @@
+title: Suspicious HTTP Request to Phishing Domain via ChatGPT Share Link
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    CommandLine: '*chatgpt.com/share/*'
+    Image: '*\chrome.exe' or '*\firefox.exe' or '*\edge.exe'
+  Condition: Selection
+condition: Selection
