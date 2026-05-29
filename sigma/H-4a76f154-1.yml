@@ -1,0 +1,12 @@
+title: Detect Suspicious Kernel Syscalls Associated with Fictional Dirty Frag LPE
+logsource:
+  product: linux
+  service: syscall
+detection:
+  selection:
+    syscall:
+      - "mmap"
+      - "mprotect"
+      - "write"
+  condition: 1 of selection*
+level: informational

@@ -1,0 +1,15 @@
+title: Detect Ollama Scanner HTTP Requests to /v1/models
+logsource:
+  product: linux
+  service: http
+  category: web
+detection:
+  selection:
+    uri:
+      - "/v1/models"
+      - "/v1/engines"
+      - "/health"
+    user_agent: "Metasploit"
+    method: "GET"
+  condition: 1 of selection*
+level: informational

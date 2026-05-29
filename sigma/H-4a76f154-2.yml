@@ -1,0 +1,15 @@
+title: Detect Suspicious HTTP Requests to Citrix NetScaler SAML Endpoints
+logsource:
+  product: linux
+  service: http
+  category: web
+detection:
+  selection:
+    uri:
+      - "/saml/idp/SSO"
+      - "/saml/idp/login"
+      - "/saml/idp/metadata"
+    status_code: 200
+    user_agent: "Metasploit"
+  condition: 1 of selection*
+level: medium
