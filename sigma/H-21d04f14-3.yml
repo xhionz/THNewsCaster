@@ -1,0 +1,16 @@
+title: Kimsuky DNS Exfiltration via Base64 Subdomains
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects DNS queries with base64-encoded subdomains under webex-meeting[.]com
+logsource:
+  product: dns
+  service: zeek
+detection:
+  domain_pattern:
+    query: '*webex-meeting[.]com'
+    query|contains: '.'
+    query|endswith: '.webex-meeting.com'
+  base64_pattern:
+    query|re: '[A-Za-z0-9+/]{20,}\.webex-meeting\.com'
+  condition: domain_pattern and base64_pattern
+level: high

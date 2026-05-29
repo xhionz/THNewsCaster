@@ -1,0 +1,19 @@
+title: Kimsuky HTTPSpy Registry Persistence and HTTP C2
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects HTTPSpy persistence via registry run key and outbound HTTP connections
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  persistence:
+    EventID: 13
+    TargetObject: '*\Software\Microsoft\Windows\CurrentVersion\Run\*'
+    Image: '*\*.exe'
+  c2_connection:
+    EventID: 3
+    DestinationIp: '185.143.221.0/24'
+    DestinationPort: '80'
+    Protocol: 'tcp'
+  condition: persistence and c2_connection
+level: high
