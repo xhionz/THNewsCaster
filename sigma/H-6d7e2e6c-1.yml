@@ -1,0 +1,16 @@
+title: Detection of Exploitation of Public-Facing Windows Service via Known Zero-Day PoC
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*\mshta.exe*' OR '*\powershell.exe*' OR '*\certutil.exe*' OR '*\bitsadmin.exe*'
+    ParentCommandLine: '*\svchost.exe*' OR '*\lsass.exe*'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User
+  - ProcessId
+condition: selection

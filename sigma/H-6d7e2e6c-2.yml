@@ -1,0 +1,17 @@
+title: Detection of Lateral Movement via SMB Exploitation Using Known Zero-Day
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+    AccountName: '*$'
+    SourceNetworkAddress: '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16'
+  condition: selection
+fields:
+  - AccountName
+  - SourceNetworkAddress
+  - LogonType
+  - ProcessId
+condition: selection

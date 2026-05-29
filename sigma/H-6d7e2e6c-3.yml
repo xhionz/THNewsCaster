@@ -1,0 +1,16 @@
+title: Detection of Phishing Email with Suspicious Attachment Leading to Exploit Execution
+logsource:
+  product: email
+  service: msexchange
+detection:
+  selection:
+    Subject: '*invoice*' OR '*quote*' OR '*payment*' OR '*urgent*'
+    AttachmentName: '*.hta' OR '*.js' OR '*.vbs' OR '*.scr' OR '*.exe'
+    SenderDomain: '!ourcompany.com'
+  condition: selection
+fields:
+  - Subject
+  - AttachmentName
+  - SenderAddress
+  - Recipient
+condition: selection
