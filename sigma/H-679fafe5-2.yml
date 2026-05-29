@@ -1,0 +1,13 @@
+title: Suspicious SSH Login from Gogs Server
+logsource:
+  product: linux
+  service: sshd
+Detection:
+  winlogon_event_id: 4624
+  account_name|contains:
+    - 'git'
+    - 'gogs'
+    - 'deploy'
+  logon_type: 10
+  source_network_address: '10.10.10.10'
+condition: all

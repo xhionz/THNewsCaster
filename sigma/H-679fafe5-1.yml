@@ -1,0 +1,13 @@
+title: Suspicious Gogs Branch Name with Shell Metacharacters
+logsource:
+  product: gogs
+  service: pull_request
+Detection:
+  branch_name|contains:
+    - ';'
+    - '$('
+    - '${'
+    - '|'
+    - '&&'
+    - '`'
+condition: branch_name|contains

@@ -1,0 +1,12 @@
+title: Suspicious DNS Query with Base64 Subdomain
+logsource:
+  product: dns
+  service: resolver
+Detection:
+  query|contains:
+    - '.base64.'
+    - '.aHR0c'
+    - '.c2VjcmV0'
+    - '.ZG9j'
+    - '.cGx1Zw=='
+condition: query|contains
