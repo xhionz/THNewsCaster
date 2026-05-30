@@ -1,0 +1,23 @@
+title: Suspicious Nx Console Execution via npm or Build Tool
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects suspicious execution of nx.exe or build.exe with suspicious command-line patterns indicative of supply chain compromise.
+author: Threat Hunting Team
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\node_modules\@nrwl\cli\bin\nx.exe'
+    CommandLine: '*--target=* --configuration=* --verbose*'
+  selection2:
+    EventID: 1
+    Image: '*\node_modules\@nrwl\cli\bin\build.exe'
+    CommandLine: '*--output-path=dist* --watch*'
+  selection3:
+    EventID: 1
+    Image: '*\node_modules\@nrwl\cli\bin\nx.exe'
+    CommandLine: '*npm install* github.com/*'
+  condition: selection1 or selection2 or selection3
+level: medium

@@ -1,0 +1,27 @@
+title: Suspicious npm Install Triggering Malicious Execution
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects npm install commands that trigger execution of suspicious binaries or scripts.
+author: Threat Hunting Team
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: 'C:\Program Files\nodejs\npm.cmd'
+    CommandLine: '*install* --registry=https://npm.example.com*'
+  selection2:
+    EventID: 1
+    Image: 'C:\Program Files\nodejs\npm.cmd'
+    CommandLine: '*install* github.com/*'
+  selection3:
+    EventID: 1
+    Image: 'C:\Program Files\nodejs\npm.cmd'
+    CommandLine: '*install* @evil-package*'
+  selection4:
+    EventID: 1
+    ParentImage: 'C:\Program Files\nodejs\npm.cmd'
+    Image: '*\node_modules\*\postinstall.js'
+  condition: selection1 or selection2 or selection3 or selection4
+level: high

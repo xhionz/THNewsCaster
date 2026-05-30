@@ -1,0 +1,17 @@
+title: Unauthorized GitHub Enterprise Repository Clone Detected
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects clone events from GitHub Enterprise repositories not in the approved allowlist.
+author: Threat Hunting Team
+logsource:
+  product: github_enterprise
+  service: audit_log
+detection:
+  selection:
+    action: 'repository.clone'
+    repository: '*'
+    actor: '*'
+  filter:
+    repository NOT IN ('org/app1', 'org/app2', 'org/lib-core', 'org/dev-tools')
+  condition: selection and filter
+level: high
