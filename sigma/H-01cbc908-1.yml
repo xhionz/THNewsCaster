@@ -1,0 +1,15 @@
+title: Detection of CIFSwitch Keyring Abuse via keyctl
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    auditd.type: SYSCALL
+    syscall: keyctl
+    args: request_key
+    key_type: cifs
+  condition: selection
+fields:
+  - key_type
+  - args
+  - auid

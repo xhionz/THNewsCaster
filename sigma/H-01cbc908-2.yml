@@ -1,0 +1,21 @@
+title: Detection of Suspicious CIFS Credentials File Usage
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    auditd.type: SYSCALL
+    syscall: execve
+    argv0: '/bin/mount'
+    argv1: '-t'
+    argv2: 'cifs'
+    argv3: 'credentials='
+  selection2:
+    file_path: '/tmp/'
+    file_path: '/dev/shm/'
+    file_path: '/var/tmp/'
+  condition: selection and selection2
+fields:
+  - argv3
+  - file_path
+  - auid

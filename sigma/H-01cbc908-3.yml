@@ -1,0 +1,15 @@
+title: Detection of Suspicious Cron/Systemd Job Triggering CIFS Mounts
+logsource:
+  product: linux
+  service: syslog
+detection:
+  selection:
+    program: 'cron'
+    message: '.*(/bin/mount.*-t.*cifs.*credentials=|/usr/bin/keyctl.*request_key.*cifs)'
+  selection2:
+    program: 'systemd'
+    message: '.*(/bin/mount.*-t.*cifs.*credentials=|/usr/bin/keyctl.*request_key.*cifs)'
+  condition: selection or selection2
+fields:
+  - program
+  - message
