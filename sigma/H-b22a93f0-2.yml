@@ -1,0 +1,17 @@
+title: Detect Ransomware via File Encryption and Process Spawn
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  file_encryption:
+    EventID: 11
+    TargetFilename: '.*\.(cry|crypt|locked|encrypted|xtbl|wncry|zepto)$'
+  process_spawn:
+    EventID: 1
+    Image: '*\crypt.exe'
+    CommandLine: '*-enc*'
+  powershell_crypt:
+    EventID: 1
+    Image: '*\powershell.exe'
+    CommandLine: '*-enc* *Write-Output* *ConvertTo-SecureString*'
+condition: any of file_encryption or process_spawn or powershell_crypt

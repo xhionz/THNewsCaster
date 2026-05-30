@@ -1,0 +1,10 @@
+title: Detect lsass.exe Credential Dumping via ProcessAccess
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  target_lsass:
+    EventID: 10
+    TargetImage: '*\lsass.exe'
+    Image: '*\mimikatz.exe' or '*\procdump.exe' or '*\rundll32.exe' or '*\comsvcs.dll'
+condition: target_lsass

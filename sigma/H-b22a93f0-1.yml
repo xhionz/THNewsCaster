@@ -1,0 +1,5 @@
+title: Detect GlobalProtect Auth Bypass via CVE-2024-3400
+logsource:
+  product: palo_alto
+  service: globalprotect
+condition: 'event_type: "auth-bypass" and (source_ip: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]) and user: "anonymous" or user: "guest"'
