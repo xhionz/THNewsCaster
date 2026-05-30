@@ -1,0 +1,11 @@
+title: Detect RDP Lateral Movement from GlobalProtect-Connected Hosts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 10
+    IpAddress: '10.0.0.0/8'
+  condition: selection
+condition: selection

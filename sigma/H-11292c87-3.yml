@@ -1,0 +1,11 @@
+title: Detect LSASS Memory Access for Credential Dumping
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 10
+    Image: '*\lsass.exe'
+    TargetImage: '*\procdump.exe' OR '*\mimikatz.exe' OR '*\tasklist.exe' OR '*\comsvcs.dll'
+  condition: selection
+condition: selection

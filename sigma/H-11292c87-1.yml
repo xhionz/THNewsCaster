@@ -1,0 +1,10 @@
+title: Detect GlobalProtect Auth Bypass via CVE-2026-0257
+logsource:
+  product: pan_os
+  service: traffic
+detection:
+  selection:
+    threat_name: 'globalprotect-auth-bypass'
+    action: 'allow'
+  condition: selection
+condition: selection
