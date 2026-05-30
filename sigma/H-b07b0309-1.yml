@@ -1,0 +1,22 @@
+title: Suspicious npm postinstall.js Execution and Exfiltration
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects execution of postinstall.js scripts with outbound connections to known malicious domains
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\node.exe'
+    CommandLine: '*postinstall.js*'
+  selection2:
+    EventID: 3
+    DestinationHostname: 
+      - 'oob.moika.tech'
+      - 'npm.t-in-one.io'
+      - 'docs.t-in-one.io'
+      - 'jira.t-in-one.io'
+      - 'obfusnpmjs.sa'
+  condition: selection1 and selection2
+level: high

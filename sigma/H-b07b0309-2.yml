@@ -1,0 +1,24 @@
+title: Suspicious npm Package Upload from Unusual Source
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects npm package uploads from non-standard IPs or user agents during CI/CD pipeline activity
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\npm.cmd'
+    CommandLine: '*publish*'
+  selection2:
+    EventID: 3
+    DestinationHostname: 'www.npmjs.com'
+    SourceIp: 
+      - '192.168.1.0/24'
+      - '10.0.0.0/8'
+  selection3:
+    EventID: 4688
+    NewProcessName: '*\node.exe'
+    CommandLine: '*npm publish*'
+  condition: selection1 and selection2 and not selection3
+level: medium

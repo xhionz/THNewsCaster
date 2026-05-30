@@ -1,0 +1,19 @@
+title: Obfuscated JavaScript in npm postinstall.js Files
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects postinstall.js files containing obfuscated JavaScript patterns commonly used in supply-chain attacks
+logsource:
+  product: windows
+  service: file_event
+detection:
+  selection:
+    Image: '*\node.exe'
+    TargetFilename: '*\postinstall.js'
+    Content: 
+      - 'String.fromCharCode'
+      - '\u0072\u0065\u0071\u0075\u0069\u0072\u0065'
+      - 'process.versions.node'
+      - 'os.platform'
+      - 'process.cwd'
+  condition: selection
+level: high
