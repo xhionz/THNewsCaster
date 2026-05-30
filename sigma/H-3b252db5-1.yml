@@ -1,0 +1,10 @@
+title: Suspicious Chatflow Import via API
+logsource:
+  product: webserver
+  service: http
+detection:
+  method: POST
+  path: '/api/v1/chatflow/import'
+  content_type: 'application/json'
+  condition: all
+  timeframe: 15m

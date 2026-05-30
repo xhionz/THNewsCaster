@@ -1,0 +1,11 @@
+title: Suspicious Chatflow Deployment via CI/CD
+logsource:
+  product: webserver
+  service: http
+detection:
+  method: POST
+  path: '/api/v1/chatflow/import'
+  content_type: 'application/json'
+  user_agent: 'Jenkins' OR 'GitHub Actions' OR 'GitLab CI'
+  condition: all
+  timeframe: 15m

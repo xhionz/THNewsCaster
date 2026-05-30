@@ -1,0 +1,10 @@
+title: Suspicious Admin Access via Valid Credentials
+logsource:
+  product: webserver
+  service: http
+detection:
+  path: '/admin'
+  status_code: 200
+  auth_header: 'Bearer '
+  condition: all
+  timeframe: 15m
