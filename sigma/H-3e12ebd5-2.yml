@@ -1,0 +1,8 @@
+title: Detect Suspicious DNS Tunneling from PAN-OS
+logsource:
+  product: pan_os
+  service: dns
+condition: 'dns_query_length > 60 and dns_query_count > 100 in 5m'
+detection:
+  dns_query_length: '>60'
+  dns_query_count: '>100 in 5m'

@@ -1,0 +1,11 @@
+title: Detect Internal Port Scanning from PAN-OS Device
+logsource:
+  product: pan_os
+  service: firewall
+condition: 'src_ip IN ("<PAN-OS-IPs>") and dst_ip IN ("10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16") and action: allow and dst_port IN (22, 445, 3389, 5985) and count > 20 in 10m'
+detection:
+  src_ip: 'IN ("<PAN-OS-IPs>")'
+  dst_ip: 'IN ("10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16")'
+  action: 'allow'
+  dst_port: 'IN (22, 445, 3389, 5985)'
+  count: '>20 in 10m'

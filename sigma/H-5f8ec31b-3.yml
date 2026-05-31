@@ -1,0 +1,14 @@
+title: Detect Suspicious File Encryption Activity on Manufacturing Workstation
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects rapid file renames and deletions indicative of ransomware encryption on manufacturing workstations
+logsource:
+  product: windows
+  category: file_event
+detection:
+  selection:
+    Image: '*\cmd.exe' OR Image: '*\powershell.exe'
+    TargetFilename: '*.encrypted' OR TargetFilename: '*.lock'
+    SourceIp: '10.0.10.0/24'
+    event_type: 'file_created' OR event_type: 'file_deleted'
+  condition: selection

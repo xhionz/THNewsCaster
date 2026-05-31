@@ -1,0 +1,14 @@
+title: Detect GlobalProtect Auth Bypass via CVE-2024-3400
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects HTTP requests to /global-protect/getconfig.esp with empty or missing user field, indicative of CVE-2024-3400 exploitation
+logsource:
+  product: pan_os
+  category: firewall
+detection:
+  selection:
+    log_subtype: 'global-protect'
+    uri: '/global-protect/getconfig.esp'
+    user: ''
+    status_code: '200'
+  condition: selection

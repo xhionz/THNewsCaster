@@ -1,0 +1,8 @@
+title: Detect CVE-2026-0257 Auth Bypass Attempt
+logsource:
+  product: pan_os
+  service: globalprotect
+condition: 'auth_method: none and auth_result: success'
+detection:
+  auth_method: none
+  auth_result: success
