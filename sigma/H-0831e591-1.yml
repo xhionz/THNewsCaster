@@ -1,0 +1,15 @@
+title: Botnet C2 Outbound HTTP/HTTPS
+logsource:
+  product: firewall
+  service: network
+condition: 'destination_ip in ["185.143.221.12", "198.51.100.42", "203.0.113.89"] and destination_port in [80, 443] and direction: outbound'
+detection:
+  destination_ip:
+    - '185.143.221.12'
+    - '198.51.100.42'
+    - '203.0.113.89'
+  destination_port:
+    - 80
+    - 443
+  direction: outbound
+condition: all

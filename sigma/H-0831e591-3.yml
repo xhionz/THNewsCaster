@@ -1,0 +1,13 @@
+title: CVE-2024-21762 Print Spooler RCE
+logsource:
+  product: windows
+  service: system
+condition: 'event_id == 4688 and parent_image == "*spoolsv.exe" and (command_line contains "powershell" or command_line contains "wmic")'
+detection:
+  event_id: 4688
+  parent_image:
+    - '*spoolsv.exe'
+  command_line:
+    - '*powershell*'
+    - '*wmic*'
+condition: all

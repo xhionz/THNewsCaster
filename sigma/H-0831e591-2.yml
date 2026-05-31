@@ -1,0 +1,19 @@
+title: IoT Default Credential Access
+logsource:
+  product: windows
+  service: security
+condition: 'event_id in [4624, 4625] and logon_type in [10, 3] and account_name in ["admin", "root", "guest", "user", "support"]'
+detection:
+  event_id:
+    - 4624
+    - 4625
+  logon_type:
+    - 10
+    - 3
+  account_name:
+    - 'admin'
+    - 'root'
+    - 'guest'
+    - 'user'
+    - 'support'
+condition: all
