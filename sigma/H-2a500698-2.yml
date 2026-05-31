@@ -1,0 +1,14 @@
+title: Detect LSASS Memory Access via Sysmon Event ID 10
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects non-trusted process accessing lsass.exe memory, indicative of credential dumping
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 10
+    TargetImage: '*\lsass.exe'
+    ProcessImage: '*\mimikatz.exe' | '*\procdump.exe' | '*\rundll32.exe' | '*\svchost.exe' | '*\powershell.exe' | '*\cmd.exe'
+  condition: selection
+level: high

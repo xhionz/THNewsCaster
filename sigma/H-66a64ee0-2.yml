@@ -1,0 +1,11 @@
+title: Detect Phishing Emails with Spoofed Microsoft Domains
+logsource:
+  product: exchange_online
+  service: mail
+condition: 'sender_domain != "microsoft.com" and sender_domain != "office.com" and subject =~ "device code" or body =~ "enter device code"'
+detection:
+  selection:
+    sender_domain: "*"
+    subject: "*device code*"
+    body: "*enter device code*"
+  condition: selection and not (sender_domain == "microsoft.com" or sender_domain == "office.com")

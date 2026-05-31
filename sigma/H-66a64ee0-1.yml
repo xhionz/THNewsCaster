@@ -1,0 +1,11 @@
+title: Detect OAuth Device Code Flow with Long Duration and Refresh Token Issuance
+logsource:
+  product: azure_ad
+  service: audit
+condition: 'device_code_flow_duration > 300 and refresh_token_issued: true
+detection:
+  selection:
+    event_type: "OAuth2DeviceCodeFlow"
+    device_code_flow_duration: >300
+    refresh_token_issued: true
+  condition: selection

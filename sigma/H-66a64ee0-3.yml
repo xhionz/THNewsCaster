@@ -1,0 +1,12 @@
+title: Detect File Uploads to External IPs Shortly After OAuth Event
+logsource:
+  product: windows
+  service: sysmon
+  event_id: 11
+condition: 'Image != "*\svchost.exe" and TargetFilename =~ "*.txt" or "*.json" or "*.token" and TargetObject =~ "^http[s]?://(?!.*microsoft.com|.*office.com|.*azure.com).*"'
+detection:
+  selection:
+    Image: "*"
+    TargetFilename: "*.txt" or "*.json" or "*.token"
+    TargetObject: "*://*"
+  condition: selection and not (TargetObject contains "microsoft.com" or TargetObject contains "office.com" or TargetObject contains "azure.com")

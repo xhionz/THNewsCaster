@@ -1,0 +1,15 @@
+title: Detect CVE-2024-21762 Exploit via Auth Login
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects potential exploitation of CVE-2024-21762 via anomalous POST requests to /api/v1/auth/login
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    http.request.method: 'POST'
+    http.request.uri: '/api/v1/auth/login'
+    http.user_agent: 'curl/*' | 'python-requests/*' | 'wget/*'
+    status_code: 200
+  condition: selection
+level: high
