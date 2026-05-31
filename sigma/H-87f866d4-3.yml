@@ -1,0 +1,12 @@
+title: RDP Connection from WordPress Server IP
+logsource:
+  product: windows
+  service: security
+condition: 'detection'
+detection:
+  selection:
+    event_id: '4624' OR '4625'
+    source_ip: '192.168.10.50'
+    logon_type: '10'
+  condition: selection
+  timeframe: 1h

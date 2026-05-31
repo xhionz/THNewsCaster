@@ -1,0 +1,13 @@
+title: Web Shell Detected in WP Maps Pro Plugin Directory
+logsource:
+  product: wordpress
+  service: apache
+condition: 'detection'
+detection:
+  selection:
+    uri_path: '/wp-content/plugins/wp-maps-pro/*.php'
+    http_method: 'GET' OR 'POST'
+    file_creation_time: '>2026-05-28T00:00:00Z' AND '<2026-05-31T23:59:59Z'
+    request_body: 'base64_decode' OR 'eval(' OR 'system(' OR 'passthru(' OR 'shell_exec('
+  condition: selection
+  timeframe: 1h

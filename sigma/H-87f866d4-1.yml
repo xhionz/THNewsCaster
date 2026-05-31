@@ -1,0 +1,12 @@
+title: WP Maps Pro Unauthenticated Admin Creation
+logsource:
+  product: wordpress
+  service: apache
+condition: 'detection'
+detection:
+  selection:
+    uri_path: '/wp-admin/admin-ajax.php'
+    action: 'wp_maps_pro_create_admin'
+    http_method: 'POST'
+  condition: selection
+  timeframe: 1h
