@@ -1,0 +1,5 @@
+title: Detect Lateral Movement via SMB/WinRM from Internal Hosts
+logsource:
+  product: windows
+  service: security
+condition: 'EventID: 5145 AND NetworkSourceAddress|not in: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] AND ShareName IN ("C$", "ADMIN$", "IPC$")'

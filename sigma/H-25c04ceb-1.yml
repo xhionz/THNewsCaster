@@ -1,0 +1,5 @@
+title: Detect CVE-2024-3400 Exploitation via GlobalProtect
+logsource:
+  product: palo_alto
+  service: globalprotect
+condition: 'event_id: "threat" and threat_name: "Command Injection" and source_ip|not in: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]'

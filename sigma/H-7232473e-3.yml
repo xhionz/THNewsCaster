@@ -1,0 +1,10 @@
+title: Detect Suspicious Scheduled Task Creation via SCHTASKS
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: 'C:\\Windows\\System32\\schtasks.exe'
+  CommandLine: '*create* /sc minute* /tn *System* /tr *cmd.exe*'
+  ParentImage: 'C:\\Windows\\System32\\svchost.exe'
+condition: all

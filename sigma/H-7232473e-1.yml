@@ -1,0 +1,11 @@
+title: Detect Zerologon Exploitation via Netlogon RPC Opcode 0x17
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 5140
+  AccessMask: '0x001f01ff'
+  ShareName: 'IPC$'
+  ClientAddress: '192.168.10.0/24'
+  RpcOperation: '0x17'
+condition: all

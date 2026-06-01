@@ -1,0 +1,5 @@
+title: Detect Credential Dumping via Palo Alto CLI or API
+logsource:
+  product: palo_alto
+  service: system
+condition: 'log_subtype: "cli" and command|contains: "show credential" or command|contains: "show config" and source_ip|not in: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]'

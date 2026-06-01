@@ -1,0 +1,12 @@
+title: Detect NTLMv2 Hash Usage from Non-Standard Sources
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4624
+  LogonType: 3
+  AuthenticationPackage: 'NTLM'
+  LogonProcess: 'NtLmSsp'
+  WorkstationName: 'MANUF-PC*'
+  ClientAddress: '192.168.10.0/24'
+condition: all
