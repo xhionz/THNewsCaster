@@ -1,0 +1,21 @@
+title: Anomalous SSH Login to CI/CD Runner Post-npm-Install
+id: 4d5e6f7g-8h9i-0j1k-2l3m-4n5o6p7q8r9s
+status: experimental
+description: Detects SSH logins to CI/CD hosts from new or non-standard IPs within 1 hour of npm install events
+logsource:
+  product: linux
+  category: authentication
+detection:
+  ssh_login:
+    EventID: 10000
+    AccountName: '*'
+    SourceNetworkAddress|contains: '10.10.' or SourceNetworkAddress|contains: '192.168.'
+    AuthenticationType: password
+    Timestamp: > 2023-05-25T00:00:00 AND < 2023-05-30T23:59:59
+  npm_install_source:
+    Image|endswith: '\\npm.cmd'
+    CommandLine|contains: '@redhat-cloud-services'
+    ParentImage|endswith: '\\cmd.exe'
+    SourceIP: $ssh_login.SourceNetworkAddress
+condition: ssh_login and npm_install_source
+level: high

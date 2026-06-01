@@ -1,0 +1,12 @@
+title: Detect Malicious PHP File Upload in WordPress
+logsource:
+  product: wordpress
+  service: apache
+condition: 'request_uri contains "/wp-content/uploads/" or request_uri contains "/wp-content/themes/" and request_uri endswith ".php" and status_code == 200 and user_agent contains "Mozilla"'
+detection:
+  php_upload:
+    - 'request_uri contains "/wp-content/uploads/"'
+    - 'request_uri endswith ".php"'
+    - 'status_code == 200'
+    - 'user_agent contains "Mozilla"'
+condition: 'php_upload'

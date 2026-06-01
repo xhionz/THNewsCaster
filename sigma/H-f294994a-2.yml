@@ -1,0 +1,11 @@
+title: Detect RDP Brute Force Attempts
+logsource:
+  product: windows
+  service: security
+condition: 'EventID == 4625 and AccountName != "-" and SourceNetworkAddress != ""'
+detection:
+  rdp_bruteforce:
+    - 'EventID == 4625'
+    - 'AccountName != "-"'
+    - 'SourceNetworkAddress != ""'
+condition: 'rdp_bruteforce and count() > 10 in 5m'

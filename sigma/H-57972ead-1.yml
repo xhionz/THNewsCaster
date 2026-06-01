@@ -1,0 +1,21 @@
+title: Suspicious npm Install Triggering Credential Harvesting
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects npm install events followed by suspicious child process execution indicative of credential dumping
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  npm_install:
+    Image|endswith: '\\npm.cmd' or Image|endswith: '\\npm'
+    CommandLine|contains: 'install @redhat-cloud-services'
+  child_process:
+    ParentImage|endswith: '\\npm.cmd' or ParentImage|endswith: '\\npm'
+    Image|in:
+      - '\\cmd.exe'
+      - '\\powershell.exe'
+      - '\\wscript.exe'
+      - '\\cscript.exe'
+      - '\\rundll32.exe'
+condition: npm_install and child_process
+level: high

@@ -1,0 +1,29 @@
+title: Suspicious Link Click Leading to npm Install via Messaging
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects clicks on suspicious URLs in Slack/Teams messages followed by npm install events
+logsource:
+  product: office365
+  category: url
+condition: 'url' contains 'bit.ly' or 'tinyurl.com' or 'short.url' AND 'user_agent' contains 'Slack' OR 'Teams' AND 'timestamp' > 2023-05-25T00:00:00 AND 'timestamp' < 2023-05-30T23:59:59
+
+# Note: This rule is split into two parts for SIEM compatibility. A second rule for process_creation is required to correlate with npm install.
+
+# Second rule:
+
+title: npm Install After Suspicious URL Click
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  url_click:
+    Image|endswith: '\\chrome.exe' or Image|endswith: '\\firefox.exe'
+    CommandLine|contains: 'https://bit.ly' or CommandLine|contains: 'https://tinyurl.com'
+  npm_install:
+    Image|endswith: '\\npm.cmd'
+    CommandLine|contains: 'install @redhat-cloud-services'
+    ParentImage|endswith: '\\chrome.exe' or ParentImage|endswith: '\\firefox.exe'
+condition: url_click and npm_install
+level: high

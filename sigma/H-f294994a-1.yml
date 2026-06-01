@@ -1,0 +1,10 @@
+title: Detect WP Maps Pro CVE-2026-8732 Admin Account Creation
+logsource:
+  product: wordpress
+  service: apache
+condition: 'request_uri contains "wp-admin/admin-ajax.php" and query_string contains "action=wpmaps_pro_create_admin" and status_code == 200'
+detection:
+  wpmaps_exploit:
+    - 'request_uri contains "wp-admin/admin-ajax.php"'
+    - 'query_string contains "action=wpmaps_pro_create_admin"'
+    - 'status_code == 200'
