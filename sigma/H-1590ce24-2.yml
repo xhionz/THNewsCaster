@@ -1,0 +1,14 @@
+title: Detect Lateral Movement via WebLogic-Spawned Remote Services
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects suspicious child processes spawned from WebLogic Java processes
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\java.exe'
+    ParentImage: '*\weblogic\*'
+    CommandLine: '*-Dweblogic*' AND (CommandLine: '*net use*' OR CommandLine: '*smbclient*' OR CommandLine: '*psexec*' OR CommandLine: '*wmic*' OR CommandLine: '*powershell -enc*')
+  condition: selection
+level: high

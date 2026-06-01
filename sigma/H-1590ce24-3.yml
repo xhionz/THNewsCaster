@@ -1,0 +1,18 @@
+title: Detect Suspicious WebLogic Console Login and .WAR Deployment
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects login to WebLogic console followed by .WAR deployment in application logs
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection1:
+    cs-uri-stem: '/console/jsp/Login.jsp'
+    cs-method: 'POST'
+    status_code: 200
+  selection2:
+    cs-uri-stem: '*deploy*'
+    cs-uri-stem: '*.war'
+    cs-method: 'POST'
+  condition: selection1 AND selection2
+level: high
