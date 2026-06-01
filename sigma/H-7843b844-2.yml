@@ -1,0 +1,19 @@
+title: Detect cloud service login from non-standard location or time
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4624
+    LogonType: 3
+    AccountName: '*'
+    SourceNetworkAddress: '*'
+    LogonProcessName: 'NtLmSsp'
+    AuthenticationPackageName: 'Negotiate'
+    WorkstationName: '*'
+    TargetDomainName: 'AzureAD' OR TargetDomainName: 'AWS' OR TargetDomainName: 'GCP'
+  Condition: Selection
+fields:
+  - AccountName
+  - SourceNetworkAddress
+  - LogonType

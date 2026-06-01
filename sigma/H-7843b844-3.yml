@@ -1,0 +1,13 @@
+title: Detect file upload to cloud storage from suspicious process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\node.exe' OR Image: '*\python.exe' OR Image: '*\powershell.exe'
+    CommandLine: '*upload*' OR CommandLine: '*put*' OR CommandLine: '*s3*' OR CommandLine: '*drive*' OR CommandLine: '*gsutil*'
+  Condition: Selection
+fields:
+  - CommandLine
+  - Image

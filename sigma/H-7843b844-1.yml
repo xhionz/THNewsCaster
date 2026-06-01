@@ -1,0 +1,13 @@
+title: Detect npm install targeting @redhat-cloud-services
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\node.exe'
+    CommandLine: '*@redhat-cloud-services*'
+  Condition: Selection
+fields:
+  - CommandLine
+  - Image
