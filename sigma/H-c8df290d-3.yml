@@ -1,0 +1,5 @@
+title: Detect Phishing Redirect to FakeUpdate Site Hosting SocGholish
+logsource:
+  product: email
+  category: email
+condition: 'subject contains "urgent update" or subject contains "security patch" or body contains "click here to fix" and url in body contains ".com/fix" or ".net/patch" and destination_domain not in trusted_domains'

@@ -1,0 +1,5 @@
+title: Detect FakeUpdate Payload Delivery via Compromised Web Server
+logsource:
+  product: webserver
+  category: web
+condition: 'request_uri contains "update" or request_uri contains "patch" or request_uri contains "upgrade" and user_agent contains "Windows NT" and status_code == 200 and response_size > 500000 and referer contains "external-domain"'

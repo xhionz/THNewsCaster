@@ -1,0 +1,5 @@
+title: Detect SocGholish Drive-by Download via ClickFix Landing Page
+logsource:
+  product: webserver
+  category: web
+condition: 'request_uri contains "clickfix" or request_uri contains "fixnow" or request_uri contains "repair" and user_agent contains "Windows NT" and status_code == 200 and response_content_type contains "text/html" and response_body contains "window.location.href" and response_body contains "base64"'
