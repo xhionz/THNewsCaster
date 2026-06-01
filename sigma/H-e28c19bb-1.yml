@@ -1,0 +1,12 @@
+title: RedSun - Malicious File Triggering Defender Engine Memory Corruption
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+detection:
+  EventID: 1
+  Image: '*\MsMpEng.exe'
+  ParentImage: '*\WINWORD.EXE' | '*\EXCEL.EXE' | '*\POWERPNT.EXE'
+  CommandLine: '*\*.doc' | '*\*.docx' | '*\*.xls' | '*\*.xlsx' | '*\*.ppt' | '*\*.pptx'
+  Hashes: 'SHA256:8a7d5c1e9f2b3a4d6c8e7f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d'
+condition: all of them

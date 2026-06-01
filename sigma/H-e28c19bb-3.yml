@@ -1,0 +1,11 @@
+title: Suspicious Scheduled Task Creation via schtasks.exe
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+detection:
+  EventID: 1
+  Image: '*\schtasks.exe'
+  CommandLine: '* /TR * /SC ONLOGON *' | '* /TR * /SC ONSTART *' | '* /TR * /RU System *'
+  ParentImage: '*\cmd.exe' | '*\powershell.exe' | '*\wscript.exe'
+condition: all of them
