@@ -1,0 +1,25 @@
+title: Detect AI-Generated Phishing Emails with Spoofed Domains
+logsource:
+  product: email_gateway
+detection:
+  subject_keywords:
+    - 'urgent'
+    - 'action required'
+    - 'security alert'
+  sender_domain:
+    - 'yourcompany.com'
+    - 'hr.yourcompany.com'
+    - 'it.yourcompany.com'
+  sender_ip_not_in_allowlist: true
+  body_patterns:
+    - 'please click the link below'
+    - 'this is a time-sensitive matter'
+    - 'immediate attention required'
+  spam_score: > 85
+condition: subject_keywords and sender_domain and sender_ip_not_in_allowlist and body_patterns and spam_score
+fields:
+  - sender
+  - recipient
+  - subject
+  - spam_score
+  - sender_ip

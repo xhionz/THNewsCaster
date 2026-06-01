@@ -1,0 +1,22 @@
+title: Detect Suspicious PAN-OS API Command Execution
+logsource:
+  product: palo_alto_pan_os
+  service: api
+detection:
+  cmd_keywords:
+    - 'set system'
+    - 'set shell'
+    - 'run command'
+    - 'request system restart'
+  http_method: 'POST'
+  uri_path: '/api/'
+  not_legitimate:
+    - 'show system info'
+    - 'show interface'
+    - 'show route'
+condition: cmd_keywords and http_method and uri_path and not not_legitimate
+fields:
+  - user
+  - uri_path
+  - cmd_keywords
+  - src_ip

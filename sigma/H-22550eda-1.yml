@@ -1,0 +1,14 @@
+title: Detect OAuth Redirects to Untrusted Domains in GlobalProtect Logs
+logsource:
+  product: palo_alto_globalprotect
+detection:
+  redirect_domain:
+    - 'example.com'
+    - 'malicious-domain.net'
+    - 'phish-site.org'
+  event_type: 'oauth-redirect'
+condition: redirect_domain
+fields:
+  - user
+  - redirect_domain
+  - timestamp
