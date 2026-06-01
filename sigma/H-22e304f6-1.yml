@@ -1,0 +1,16 @@
+title: Detection of Zerologon (CVE-2020-1472) Netlogon Exploitation
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects anomalous Netlogon secure channel authentication patterns indicative of Zerologon exploitation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4771
+    EventData: 
+      - 'Pre-Auth Type: 0x0'
+      - 'Kerberos Error Code: 0x12'
+      - 'Client Address: 127.0.0.1'
+  condition: selection
+level: critical

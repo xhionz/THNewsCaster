@@ -1,0 +1,16 @@
+title: Lateral Movement via Stolen Domain Credentials
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects lateral movement using domain admin credentials from non-standard hosts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    EventData.LogonType: 3
+    EventData.LogonProcessName: 'NtLmSsp'
+    EventData.AccountName: ('Administrator', 'Domain Admins', 'krbtgt')
+    EventData.SourceComputerName: NOT IN ('DC01', 'DC02', 'DC03')
+  condition: selection
+level: critical
