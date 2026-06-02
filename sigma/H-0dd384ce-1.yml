@@ -1,0 +1,17 @@
+title: Akira Initial Access via Cisco ASA VPN Without MFA
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects suspicious authentication patterns on Cisco ASA SSL VPN portals without MFA, potentially indicating Akira initial access.
+logsource:
+  product: cisco_asa
+  service: vpn
+  category: authentication
+detection:
+  selection:
+    event_type: 'sslvpn-login'
+    mfa_used: false
+    user_agent: 'Mozilla/*'
+    status: 'success'
+  condition: selection
+  timeframe: 15m
+level: high

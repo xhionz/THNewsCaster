@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-02T18:41:42+00:00",
+  "generated_at": "2026-06-02T18:03:41+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -13762,7 +13762,7 @@
       ]
     }
   ],
-  "skipped": 337,
-  "total_seen": 340,
-  "brief": "State-sponsored actors, particularly Volt Typhoon, are actively exploiting critical infrastructure vulnerabilities to maintain persistent access, with manufacturing and government sectors as primary targets. Prioritize patching CVE-2024-21762 (FortiOS) and CVE-2026-41089 (Windows Netlogon) immediately—both are being actively weaponized in live attacks and have direct links to nation-state operations. Notable actors include Volt Typhoon and Salt Typhoon; key CVEs are CVE-2024-21762, CVE-2026-41089, and CVE-2026-9082 (Drupal), all with KEV status or confirmed exploitation."
+  "skipped": 1,
+  "total_seen": 7,
+  "brief": "State-sponsored actors, particularly Volt Typhoon, are actively exploiting critical infrastructure vulnerabilities to maintain persistent access, with manufacturing and government sectors under sustained attack. Prioritize patching CVE-2024-21762 (FortiOS) and CVE-2026-41089 (Windows Netlogon) immediately—both are being weaponized in live campaigns with high impact and low effort for attackers. Notable actors include Volt Typhoon and Salt Typhoon; key CVEs are CVE-2024-21762, CVE-2026-41089, and CVE-2026-9082 (Drupal), all with confirmed exploitation."
 }

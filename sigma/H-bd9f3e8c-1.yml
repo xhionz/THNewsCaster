@@ -1,0 +1,15 @@
+title: Detect .NET Webshell Upload via MOVEit Transfer
+logsource:
+  product: webserver
+  service: iis
+condition: 'cs-uri-stem ends with ".aspx" or cs-uri-stem ends with ".dll" and cs(User-Agent) contains "Microsoft .NET" and cs-method: "POST" and cs-uri-stem contains "/MOVEit/"'
+detection:
+  cs-uri-stem:
+    - "*.aspx"
+    - "*.dll"
+  cs(User-Agent):
+    - "*Microsoft .NET*"
+  cs-method: "POST"
+  cs-uri-stem:
+    - "*/MOVEit/*"
+condition: all

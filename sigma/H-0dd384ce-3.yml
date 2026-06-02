@@ -1,0 +1,14 @@
+title: Akira Data Exfiltration via Rclone to mega.nz
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects Rclone processes attempting to upload data to mega.nz domains.
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\rclone.exe'
+    CommandLine: '*mega.nz*'
+    CommandLine: '*copy*' OR '*sync*'
+  condition: selection
+level: high

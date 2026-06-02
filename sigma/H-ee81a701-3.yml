@@ -1,0 +1,13 @@
+title: Detect Lateral Movement to OT Subnet via PowerShell/WMI
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 3
+  destination_ip:
+    - '185.225.74.10'
+    - 'login-portal-update.com'
+  source_ip: '10.20.0.0/24'
+  image: 'powershell.exe'
+  destination_port: 80
+condition: all of them

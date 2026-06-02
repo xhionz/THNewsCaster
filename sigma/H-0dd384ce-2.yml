@@ -1,0 +1,27 @@
+title: Akira Lateral Movement via RDP and PsExec
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects PsExec or RDP logins from non-administrative hosts to critical servers within 24h of initial access.
+logsource:
+  product: windows
+  service: security
+  category: process_creation
+detection:
+  selection:
+    Image: '*\psexec.exe'
+    CommandLine: '*-s -i *'
+    ParentImage: '*\svchost.exe'
+  condition: selection
+  or:
+    - logsource:
+        product: windows
+        service: security
+        category: logon
+      detection:
+        EventID: 4624
+        LogonType: 10
+        Account_Name: '*'
+        Source_Network_Address: '192.168.*'
+        Target_Server: 'DC01' OR 'FILE01'
+  timeframe: 24h
+level: high

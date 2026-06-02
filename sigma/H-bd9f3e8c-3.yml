@@ -1,0 +1,17 @@
+title: Detect Exfiltration to Cl0p C2 IP and Domains
+logsource:
+  product: network
+  service: proxy
+condition: '(dns_query_domain in ("transfer.sh", "anonfiles.com") or dst_ip: "91.219.236.50") and http_method in ("POST", "GET") and bytes_out > 1000000'
+detection:
+  dns_query_domain:
+    - "transfer.sh"
+    - "anonfiles.com"
+  dst_ip:
+    - "91.219.236.50"
+  http_method:
+    - "POST"
+    - "GET"
+  bytes_out:
+    - ">1000000"
+condition: all

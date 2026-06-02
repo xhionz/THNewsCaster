@@ -1,0 +1,11 @@
+title: Detect 7z Archive Creation on MOVEit Server Filesystem
+logsource:
+  product: windows
+  service: file_system
+condition: 'file_name ends with '.7z' and file_path contains 'MOVEit' and file_creation_time between '2026-05-15T00:00:00Z' and '2026-05-20T23:59:59Z''
+detection:
+  file_name:
+    - '*.7z'
+  file_path:
+    - '*MOVEit*'
+condition: all

@@ -1,0 +1,10 @@
+title: Detect LSASS Memory Access via Suspicious Process Creation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  process_name: 'powershell.exe'
+  parent_process_name: 'cmd.exe'
+  command_line: '*-nop -c *Get-Process lsass*'
+condition: all of them
