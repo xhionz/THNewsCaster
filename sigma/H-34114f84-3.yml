@@ -1,0 +1,21 @@
+title: Suspicious Crontab Modification After NPM Install
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects crontab modifications occurring shortly after npm install commands
+logsource:
+  product: linux
+  service: shell
+detection:
+  selection:
+    CommandLine|contains:
+      - 'crontab -l | { cat; echo'
+      - 'crontab -'
+      - 'echo "* * * * *" | crontab'
+  condition: selection
+  timeframe: 15m
+  filter:
+    parent_process.command_line|contains: 'npm install redhat'
+tags:
+  - attack.t1195
+  - attack.t1053
+  - attack.t1059

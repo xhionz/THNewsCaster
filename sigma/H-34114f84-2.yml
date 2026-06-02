@@ -1,0 +1,20 @@
+title: Suspicious Postinstall Script Executing Credential Theft Commands
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects npm postinstall scripts executing commands to read credential files
+logsource:
+  product: linux
+  service: shell
+detection:
+  selection:
+    CommandLine|contains:
+      - 'cat ~/.npmrc'
+      - 'cat ~/.aws/credentials'
+      - 'cat ~/.ssh/id_rsa'
+      - 'cat /etc/passwd'
+      - 'grep -r "token" ~/.npm'
+  condition: selection
+tags:
+  - attack.t1195
+  - attack.t1059
+  - attack.t1555

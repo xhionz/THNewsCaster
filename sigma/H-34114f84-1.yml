@@ -1,0 +1,19 @@
+title: Suspicious NPM Install with Red Hat Impersonation
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects npm install commands targeting package names starting with 'redhat' via shell execution
+logsource:
+  product: linux
+  service: shell
+  definition: 'Command line execution of npm install with redhat* package name'
+detection:
+  selection:
+    CommandLine|contains:
+      - 'npm install redhat'
+      - 'npm install --save redhat'
+      - 'npm install --save-dev redhat'
+  condition: selection
+tags:
+  - attack.t1195
+  - attack.t1059
+  - attack.t1071
