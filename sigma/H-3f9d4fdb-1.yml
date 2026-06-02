@@ -1,0 +1,12 @@
+title: Suspicious Framework Privilege Escalation via Binder IPC
+logsource:
+  product: android
+  service: framework
+  category: process_creation
+detection:
+  selection:
+    process_name: 'system_server'
+    parent_process_name: 'zygote'
+    cmdline: '.*\b(\w+\.\w+|\w+):\w+\b.*'
+  condition: selection
+timeframe: 72h

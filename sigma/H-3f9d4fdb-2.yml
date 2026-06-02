@@ -1,0 +1,11 @@
+title: Suspicious Local Service Binding or ADB Reverse Shell
+logsource:
+  product: android
+  category: network_connection
+detection:
+  selection:
+    local_port: 5555
+    remote_address: NOT ('127.0.0.1' OR '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16')
+    process_name: 'shell' OR 'adbd'
+  condition: selection
+timeframe: 72h

@@ -1,0 +1,11 @@
+title: Suspicious Accessibility Service Registration or Boot Receiver
+logsource:
+  product: android
+  category: process_creation
+detection:
+  selection:
+    process_name: 'am' OR 'pm'
+    cmdline: '.*\bstartservice\b.*' AND ('com.android.accessibility' OR 'android.intent.action.BOOT_COMPLETED')
+    parent_process_name: 'system_server'
+  condition: selection
+timeframe: 72h
