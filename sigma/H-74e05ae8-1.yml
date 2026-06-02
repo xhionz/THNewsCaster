@@ -1,0 +1,15 @@
+title: AI Support Account Takeover via Social Engineering
+logsource:
+  product: nginx
+  service: http
+condition: 'http_request contains "reset_password" and http_request contains "support.meta.com" and user_agent !~ "^Mozilla/5.0.*Googlebot" and response_status == 200 and http_request !~ "^/api/v1/"'
+detection:
+  request_path:
+    - 'reset_password'
+  host:
+    - 'support.meta.com'
+  user_agent_exclusion:
+    - 'Googlebot'
+  status_code:
+    - 200
+condition: 'request_path and host and user_agent_exclusion and status_code'

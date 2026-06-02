@@ -1,0 +1,16 @@
+title: Mass Support Ticket Submission by IP
+logsource:
+  product: elasticsearch
+  service: support_tickets
+condition: 'submission_ip_count > 50 and submission_timestamp > now()-7d and ticket_status == "processed" and ticket_content contains "lockout" and ticket_content contains "reset password"'
+detection:
+  ip:
+    field: submission_ip
+    condition: count > 50
+  time_window: '7d'
+  status:
+    - 'processed'
+  content_keywords:
+    - 'lockout'
+    - 'reset password'
+condition: 'ip and time_window and status and content_keywords'

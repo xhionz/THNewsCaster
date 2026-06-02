@@ -1,0 +1,16 @@
+title: Fake Meta Support Page Traffic
+logsource:
+  product: nginx
+  service: http
+condition: 'http_request contains "support" and http_request contains "instagram" and host !~ "^.*\.meta\.com$" and referer !~ "^https?://(www\.)?instagram\.com" and response_status == 200'
+detection:
+  path:
+    - 'support'
+    - 'instagram'
+  host_exclusion:
+    - '.meta.com'
+  referer_exclusion:
+    - 'instagram.com'
+  status_code:
+    - 200
+condition: 'path and host_exclusion and referer_exclusion and status_code'
