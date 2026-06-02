@@ -1,0 +1,15 @@
+title: Lateral Movement via WMI or PsExec from WebLogic Server
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\wmic.exe'
+    ParentImage: '*\java.exe'
+    CommandLine: '*call*'
+  selection2:
+    Image: '*\psexec.exe'
+    ParentImage: '*\java.exe'
+    CommandLine: '*-c*'
+  condition: selection1 or selection2
+condition: selection1 or selection2

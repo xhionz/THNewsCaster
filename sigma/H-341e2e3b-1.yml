@@ -1,0 +1,13 @@
+title: Exploit Detection - CVE-2024-21761 T3 Protocol Deserialization
+logsource:
+  product: network
+  service: tcp
+condition: 'ip.src in [10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16] and tcp.dstport == 7001 and payload matches "\xac\xed\x00\x05" and payload contains "java.lang.Runtime" and payload contains "exec"'
+detection:
+  selection:
+    - ip.src in [10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16]
+    - tcp.dstport: 7001
+    - payload: "\xac\xed\x00\x05"
+    - payload: "java.lang.Runtime"
+    - payload: "exec"
+  condition: selection

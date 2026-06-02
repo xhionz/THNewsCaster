@@ -1,0 +1,13 @@
+title: Phishing Email Targeting WebLogic Admins
+logsource:
+  product: email
+  service: smtp
+detection:
+  selection:
+    subject: 'Urgent'
+    subject: 'WebLogic'
+    subject: 'Patch'
+    sender_domain: 'not in [allowed_domains]'
+    attachment: '.*\.exe$|.*\.jar$|.*\.bat$'
+  condition: selection
+condition: selection
