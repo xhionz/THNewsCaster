@@ -1,0 +1,10 @@
+title: Detect Suspicious SMB Connection from WebLogic Server to Windows Host
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5140
+    ShareName: 'IPC$'
+    SubjectUserName: 'weblogic_svc'
+  condition: selection

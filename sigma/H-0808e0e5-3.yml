@@ -1,0 +1,10 @@
+title: Detect Outbound HTTP/HTTPS from WebLogic Server to Suspicious Domains
+logsource:
+  product: weblogic
+  service: http_proxy
+detection:
+  selection:
+    event_type: http_request
+    dst_domain: '.*\.dynamic-dns\.com$|.*\.duckdns\.org$'
+    src_ip: [weblogic_server_ips]
+  condition: selection
