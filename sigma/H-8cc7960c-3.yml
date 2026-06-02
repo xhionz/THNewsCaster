@@ -1,0 +1,7 @@
+title: No Real-World Exploitation Evidence
+logsource:
+  product: system
+  service: security
+condition: '1==1'
+detection:
+  no_evidence: true

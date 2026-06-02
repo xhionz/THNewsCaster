@@ -1,0 +1,7 @@
+title: No Valid Threat Detected in Article
+logsource:
+  product: system
+  service: security
+condition: '1==1'
+detection:
+  false_positive: true

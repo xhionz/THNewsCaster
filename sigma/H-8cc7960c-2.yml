@@ -1,0 +1,7 @@
+title: Reddit CAPTCHA Page Detected
+logsource:
+  product: web
+  service: http
+condition: 'http.url contains "reddit.com/r/netsec" and http.content contains "solution" and http.content contains "DOMContentLoaded"'
+detection:
+  captcha_page: true
