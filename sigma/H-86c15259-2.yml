@@ -1,0 +1,5 @@
+title: Suspicious RDP Login from Web Server IP
+logsource:
+  product: windows
+  service: security
+condition: 'EventID': 4624 AND 'LogonType': 10 AND 'IpAddress': '[WEB_SERVER_IP]' AND 'AccountName': 'Administrator'

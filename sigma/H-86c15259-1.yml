@@ -1,0 +1,5 @@
+title: Suspicious Kirki Plugin AJAX Request (CVE-2023-48795)
+logsource:
+  product: apache
+  service: access
+condition: 'request_uri': '/wp-content/plugins/kirki/ajax.php' and 'user_agent': 'WordPress' and 'status': 200 and 'referer': '' and 'body': contains_any('action=save&data=', 'action=update&option=')

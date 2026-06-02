@@ -1,0 +1,5 @@
+title: Suspicious Login from Unusual Location After Phishing Window
+logsource:
+  product: wordpress
+  service: authentication
+condition: 'event_type': 'login_success' AND 'user': 'administrator' AND 'ip_address': not_in_list([TRUSTED_IP_RANGES]) AND 'timestamp': [2023-05-01 TO 2023-06-01] AND 'previous_login_ip': '0.0.0.0' OR 'previous_login_ip': ''
