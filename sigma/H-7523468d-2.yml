@@ -1,0 +1,5 @@
+title: Detect Suspicious DNS Queries for C2
+logsource:
+  product: dns
+  category: dns_query
+condition: 'query_count > 50 over 5m and (query ends with ".tk" or query ends with ".ml" or query ends with ".ga" or query ends with ".cf" or query ends with ".gq") and query_length > 40 and query not contains "google" and query not contains "cloudflare"'

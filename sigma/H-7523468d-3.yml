@@ -1,0 +1,5 @@
+title: Detect Android Scanning of Internal Subnets
+logsource:
+  product: network
+  category: connection
+condition: 'source.device_type = "android" and destination.ip in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] and destination.port in [139, 445, 21, 22] and connection_count > 10 over 10m'

@@ -1,0 +1,6 @@
+title: Detect Android Phishing Payload Delivery via Email
+logsource:
+  product: email
+  category: email
+condition: 'subject contains "Urgent: Security Update" or subject contains "Android Patch Required" and (attachment.extension in [".apk", ".dex"] or attachment.mime_type contains "application/vnd.android.package-archive")
+  and sender.domain not in ["google.com", "company.com"]
