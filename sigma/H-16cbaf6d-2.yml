@@ -1,0 +1,14 @@
+title: Suspicious Android Network Connections to Known Malicious Domains
+logsource:
+  product: android
+  service: network_connection
+detection:
+  destination_domain:
+    - endswith: '.malware-domain.com'
+    - endswith: '.phishing-site.net'
+    - endswith: '.exploit-kit.org'
+  package_name:
+    - 'com.android.browser'
+    - 'com.android.chrome'
+    - 'org.mozilla.firefox'
+condition: 1 of them

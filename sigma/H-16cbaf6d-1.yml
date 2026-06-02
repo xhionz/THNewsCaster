@@ -1,0 +1,13 @@
+title: Suspicious Code Execution via System Server
+logsource:
+  product: android
+  service: process_creation
+detection:
+  Image:
+    - '*system_server*'
+  CommandLine:
+    - contains: 'am start'
+    - contains: 'svc power'
+    - contains: 'busybox'
+    - contains: 'sh -c'
+condition: 1 of them

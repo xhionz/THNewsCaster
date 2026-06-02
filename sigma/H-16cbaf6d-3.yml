@@ -1,0 +1,14 @@
+title: Suspicious DNS Queries to Unusual OT-like Hostnames
+logsource:
+  product: dns
+  service: query
+detection:
+  query:
+    - contains: '.internal.'
+    - contains: '.ot.'
+    - contains: '.manufacturing.'
+    - contains: '.plc.'
+    - contains: '.scada.'
+  client_ip:
+    - in: ["10.10.1.0/24", "192.168.100.0/24"]
+condition: 1 of them
