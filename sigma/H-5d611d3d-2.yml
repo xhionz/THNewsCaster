@@ -1,0 +1,12 @@
+title: Suspicious CGI Command Execution on HP VoIP Phone
+logsource:
+  product: network
+  service: http
+detection:
+  user_agent: 'HP VoIP Phone Firmware v2.1.3'
+  uri: '/cgi-bin/voiceconfig'
+  request_method: 'POST'
+  content: 'cat /etc/passwd' | contains
+  content: 'nc ' | contains
+  content: 'sh -c ' | contains
+condition: all

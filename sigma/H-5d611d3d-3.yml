@@ -1,0 +1,10 @@
+title: Lateral Movement from VoIP Phone via Unusual ARP/NDP Activity
+logsource:
+  product: network
+  service: arp
+detection:
+  src_ip in [10.10.50.0/24]
+  dst_ip not in [10.10.50.0/24, 10.10.1.1, 10.10.1.2]
+  arp_operation: 'request'
+  count: > 50
+condition: count
