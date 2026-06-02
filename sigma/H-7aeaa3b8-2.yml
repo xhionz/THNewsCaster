@@ -1,0 +1,12 @@
+title: Malicious Package C2 Beaconing Detected
+logsource:
+  product: network
+  service: dns
+condition: 'dns.query.type: A and dns.query.name: "*.update[.]io" or dns.query.name: "*.cdn[.]cloud" or dns.query.name: "*.api[.]redhat[.]malware"'
+detection:
+  selection:
+    - dns.query.type: A
+    - dns.query.name: "*.update.io"
+    - dns.query.name: "*.cdn.cloud"
+    - dns.query.name: "*.api.redhat.malware"
+  condition: selection

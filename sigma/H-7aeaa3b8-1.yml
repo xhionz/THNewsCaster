@@ -1,0 +1,12 @@
+title: Suspicious GitHub API Access from Internal Hosts
+logsource:
+  product: network
+  service: proxy
+condition: 'http.method: POST and http.url: "*.github.com/*" and http.user_agent: "git/*" and http.status_code: 200 and src.ip: "192.168.0.0/16"'
+detection:
+  selection:
+    - http.method: POST
+    - http.url: "*.github.com/*"
+    - http.user_agent: "git/*"
+    - http.status_code: 200
+  condition: selection

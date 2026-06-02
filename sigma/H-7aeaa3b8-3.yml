@@ -1,0 +1,11 @@
+title: Suspicious Credential Dumping After Package Install
+logsource:
+  product: windows
+  service: sysmon
+condition: 'event_id: 10 and process.path: "*redhat*" and parent_process_name: "powershell.exe"'
+detection:
+  selection:
+    - event_id: 10
+    - process.path: "*redhat*"
+    - parent_process_name: "powershell.exe"
+  condition: selection
