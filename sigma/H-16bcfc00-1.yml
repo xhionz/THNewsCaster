@@ -1,0 +1,14 @@
+title: Detect WebLogic CVE-2024-21182 Exploitation Attempt
+logsource:
+  product: weblogic_server
+  service: http
+condition: 'request_uri contains "/_async/AsyncResponseService" or request_uri contains "/wls-wsat/CoordinatorPortType" or request_uri contains "/bea_wls_deployment_internal/DeploymentService"'
+detection:
+  suspicious_uris:
+    - '/_async/AsyncResponseService'
+    - '/wls-wsat/CoordinatorPortType'
+    - '/bea_wls_deployment_internal/DeploymentService'
+condition: suspicious_uris
+status: stable
+level: high
+title: Detect WebLogic CVE-2024-21182 Exploitation Attempt

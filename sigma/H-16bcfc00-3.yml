@@ -1,0 +1,25 @@
+title: Detect WebLogic Lateral Movement to Internal Servers
+logsource:
+  product: firewall
+  service: network
+condition: 'src_ip IN (weblogic_server_ips) AND dst_ip IN (internal_db_app_ips) AND (dst_port IN (1521,3306,1433,5432) OR dst_port > 10000)'
+detection:
+  weblogic_ips:
+    - '10.10.10.10'
+    - '10.10.10.11'
+    - '10.10.10.12'
+  internal_target_ips:
+    - '10.20.20.10'
+    - '10.20.20.11'
+    - '10.20.20.20'
+  suspicious_ports:
+    - 1521
+    - 3306
+    - 1433
+    - 5432
+    - 10001
+    - 10002
+condition: weblogic_ips and internal_target_ips and suspicious_ports
+status: stable
+level: high
+title: Detect WebLogic Lateral Movement to Internal Servers

@@ -1,0 +1,16 @@
+title: Detect Suspicious Java Process Modifications
+logsource:
+  product: linux
+  service: process_creation
+condition: 'process_name:java AND parent_process_name:weblogic.Server AND (command_line contains '-Dweblogic.Stdout' OR command_line contains '-Dweblogic.Stderr' OR command_line contains 'nohup' OR command_line contains 'screen' OR command_line contains 'tmux')'
+detection:
+  suspicious_java_args:
+    - '-Dweblogic.Stdout'
+    - '-Dweblogic.Stderr'
+    - 'nohup'
+    - 'screen'
+    - 'tmux'
+condition: suspicious_java_args
+status: stable
+level: medium
+title: Detect Suspicious Java Process Modifications
