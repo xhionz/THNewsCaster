@@ -1,0 +1,16 @@
+title: Detection of SSH brute-force followed by root shell
+logsource:
+  product: linux
+  service: auth
+detection:
+  selection:
+    event_type: 'sshd'
+    message: 'Failed password'
+  selection2:
+    event_type: 'sshd'
+    message: 'Accepted password for root'
+  condition: selection and selection2 within 60s
+  keywords:
+    - 'Failed password'
+    - 'Accepted password for root'
+condition: selection and selection2

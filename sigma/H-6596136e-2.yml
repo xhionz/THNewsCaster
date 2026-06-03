@@ -1,0 +1,16 @@
+title: Detection of Docker socket access from non-container process
+logsource:
+  product: linux
+  service: audit
+detection:
+  selection:
+    type: SYSCALL
+    arch: x86_64
+    a0: '0x5'
+    path: '/var/run/docker.sock'
+    comm: 'curl' | 'wget' | 'python' | 'bash'
+  condition: selection
+  keywords:
+    - 'docker.sock'
+    - 'POST /v1.'
+condition: selection

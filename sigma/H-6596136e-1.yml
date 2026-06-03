@@ -1,0 +1,18 @@
+title: Detection of cgroup release_agent write attempt
+logsource:
+  product: linux
+  service: audit
+detection:
+  selection:
+    type: SYSCALL
+    arch: x86_64
+    a0: '0x1'
+    a1: '0x1'
+    a2: '0x1'
+    a3: '0x1'
+    comm: 'write'
+  condition: selection
+  keywords:
+    - 'release_agent'
+    - '/proc/self/ns/'
+condition: selection
