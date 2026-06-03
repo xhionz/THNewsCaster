@@ -1,0 +1,10 @@
+title: Detect Credential Dumping via lsass Memory Access
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 10
+  Image: 'C:\\Windows\\System32\\svchost.exe'
+  TargetImage: 'C:\\Windows\\System32\\lsass.exe'
+  AccessMask: '0x1410'
+condition: all of them

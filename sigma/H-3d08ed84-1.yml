@@ -1,0 +1,11 @@
+title: Detect Exploitation of CVE-2024-30447 in Apache Tomcat
+logsource:
+  product: apache
+  service: httpd
+detection:
+  req_uri:
+    - '/manager/html'
+    - '/host-manager/html'
+  user_agent: 'Mozilla/5.0 (compatible; Nmap Scripting Engine)'
+  status_code: 200
+condition: all of them
