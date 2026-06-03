@@ -1,0 +1,14 @@
+title: HTTP/2 HEADERS Frame Header Bloat Detection
+logsource:
+  product: nginx
+  service: access_log
+detection:
+  sel:
+    http2_frame_type: 0x1
+    http2_header_count: '>200'
+    http2_header_name_length: '>100'
+  condition: sel
+aliases:
+  http2_frame_type: 'frame_type'
+  http2_header_count: 'header_count'
+  http2_header_name_length: 'max_header_name_len'
