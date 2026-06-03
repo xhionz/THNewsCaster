@@ -1,0 +1,10 @@
+title: Detect Malware Using Microsoft 365 Token via Debug Flag
+logsource:
+  product: android
+  service: process
+condition: 'extra: {"com.microsoft.token_request_debug": "true"}'
+detection:
+  extra:
+    com.microsoft.token_request_debug: 'true'
+  process_name: 'com.example.malware'
+condition: 'extra and process_name'

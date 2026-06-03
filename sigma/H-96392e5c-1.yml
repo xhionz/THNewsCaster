@@ -1,0 +1,10 @@
+title: Detect Android Token Request via Debug Flag
+logsource:
+  product: android
+  service: intent
+condition: 'extra: {"com.microsoft.token_request_debug": "true"}'
+detection:
+  extra:
+    com.microsoft.token_request_debug: 'true'
+  event_type: intent_received
+condition: 'extra'

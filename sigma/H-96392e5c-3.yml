@@ -1,0 +1,11 @@
+title: Detect APT-Style Token Theft via Android Debug Flag
+logsource:
+  product: android
+  service: intent
+condition: 'extra: {"com.microsoft.token_request_debug": "true"}'
+detection:
+  extra:
+    com.microsoft.token_request_debug: 'true'
+  device_count: '>= 3'
+  time_window: 'within 24h'
+condition: 'extra and device_count and time_window'
