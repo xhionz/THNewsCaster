@@ -1,0 +1,12 @@
+title: Suspicious Phishing Email to Executive
+logsource:
+  product: office365
+  service: o365
+condition: 'Operation: "SendMail"' AND 'ResultStatus: "Success"' AND ('MessageTrace: "ContainsSuspiciousUrl"' OR 'AttachmentHash IN ["a1b2c3...", "d4e5f6..."]') AND 'Recipient: "executive@company.com"' AND 'Date >= "2026-02-15"' AND 'Date <= "2026-03-01"'
+detection:
+  Operation: "SendMail"
+  ResultStatus: "Success"
+  Recipient: "executive@company.com"
+  MessageTrace: "ContainsSuspiciousUrl"
+  AttachmentHash: ["a1b2c3...", "d4e5f6..."]
+  Date: "2026-02-15".."2026-03-01"

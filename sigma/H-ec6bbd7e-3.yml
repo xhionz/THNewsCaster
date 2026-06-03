@@ -1,0 +1,11 @@
+title: Suspicious Daily Cloud Uploads by Executive
+logsource:
+  product: office365
+  service: o365
+condition: 'Operation: "Upload"' AND 'ResultStatus: "Success"' AND 'FileSize > 1000000000' AND 'UserPrincipalName|endswith: "@company.com"' AND 'Date >= "2026-03-01"' AND 'Date <= "2026-07-30"'
+detection:
+  Operation: "Upload"
+  ResultStatus: "Success"
+  FileSize: >1000000000
+  UserPrincipalName: "*company.com"
+  Date: "2026-03-01".."2026-07-30"
