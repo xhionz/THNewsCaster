@@ -1,0 +1,20 @@
+title: Suspicious VS Code Extension Install from GitHub Gist
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects installation of .vsix extensions from GitHub Gist URLs with embedded network exfiltration code
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\Code.exe'
+    CommandLine: '*--install-extension https://gist.githubusercontent.com/*'
+  selection2:
+    CommandLine: '*--install-extension *'
+  condition: selection and (CommandLine: '*fetch(*' or CommandLine: '*XMLHttpRequest(*' or CommandLine: '*new XMLHttpRequest(*')
+  condition2: selection2 and CommandLine: '*--install-extension https://gist.githubusercontent.com/*' and not CommandLine: '*raw.githubusercontent.com*'
+  condition: selection and (selection2)
+falsepositives:
+  - Legitimate Gist-based extension sharing
+level: high

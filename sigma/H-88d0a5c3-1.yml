@@ -1,0 +1,20 @@
+title: Suspicious VS Code Extension Installation via .vsix
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects installation of .vsix files from non-trusted sources with embedded JavaScript that makes network calls
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\Code.exe'
+    CommandLine: '*--install-extension *.vsix'
+  selection2:
+    CommandLine: '*--install-extension *'
+  condition: selection and not CommandLine: '*marketplace.visualstudio.com*' and not CommandLine: '*vscode:extension/*'
+  condition2: selection2 and (CommandLine: '*fetch(*' or CommandLine: '*XMLHttpRequest(*' or CommandLine: '*new XMLHttpRequest(*')
+  condition: selection and (selection2)
+falsepositives:
+  - Legitimate internal extension deployment
+level: high

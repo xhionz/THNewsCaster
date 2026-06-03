@@ -1,0 +1,20 @@
+title: Suspicious Extension Installation from Non-Official Sources
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects installation of VS Code extensions from non-official sources that contain network exfiltration patterns
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\Code.exe'
+    CommandLine: '*--install-extension *'
+  selection2:
+    CommandLine: '*--install-extension *'
+  condition: selection and not CommandLine: '*marketplace.visualstudio.com*' and not CommandLine: '*github.com*' and not CommandLine: '*vscode:extension/*'
+  condition2: selection2 and (CommandLine: '*fetch(*' or CommandLine: '*XMLHttpRequest(*' or CommandLine: '*new XMLHttpRequest(*')
+  condition: selection and (selection2)
+falsepositives:
+  - Internal extension repository
+level: high
