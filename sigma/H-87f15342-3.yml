@@ -1,0 +1,19 @@
+title: Suspicious Wasm Runtime DLL Sideloading
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\explorer.exe'
+    ModuleLoad: '*wazero.dll'
+  Selection2:
+    Image: '*\svchost.exe'
+    ModuleLoad: '*wasmtime.dll'
+  Selection3:
+    Image: '*\winlogon.exe'
+    ModuleLoad: '*libwasm.*'
+  Selection4:
+    Image: '*\powershell.exe'
+    ModuleLoad: '*.wasm'
+  Condition: Selection1 or Selection2 or Selection3 or Selection4
+  timeframe: 1h

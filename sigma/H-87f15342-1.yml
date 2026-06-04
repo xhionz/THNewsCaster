@@ -1,0 +1,19 @@
+title: Suspicious Wasm Module Load via Process Injection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\powershell.exe'
+    CommandLine: '*-EncodedCommand*'
+  Selection2:
+    Image: '*\dotnet.exe'
+    CommandLine: '*--wasm*'
+  Selection3:
+    Image: '*\java.exe'
+    CommandLine: '*-Dwasm.module*'
+  Selection4:
+    Image: '*\rundll32.exe'
+    ModuleLoad: '*.wasm'
+  Condition: Selection1 or Selection2 or Selection3 or Selection4
+  timeframe: 5m

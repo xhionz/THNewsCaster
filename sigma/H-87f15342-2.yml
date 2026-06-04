@@ -1,0 +1,16 @@
+title: Suspicious Blazor WASM Build Artifacts Generated
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\msbuild.exe'
+    CommandLine: '*-p:BlazorWebAssemblyLoadFromExternalAssembly=true*'
+  Selection2:
+    Image: '*\dotnet.exe'
+    CommandLine: '*publish -r browser-wasm*'
+  Selection3:
+    Image: '*\msbuild.exe'
+    FileCreate: '*.wasm'
+  Condition: Selection1 or Selection2 or Selection3
+  timeframe: 1h
