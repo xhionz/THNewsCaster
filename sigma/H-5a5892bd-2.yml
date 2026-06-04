@@ -1,0 +1,10 @@
+title: Detect Cache Warmer Reconnaissance Scans
+logsource:
+  product: webserver
+  service: http
+detection:
+  uri_path: '/cache-warmer/'
+  uri_path: '/index.php/admin/cache_warmer/'
+  uri_path: '/pub/cache-warmer/'
+  user_agent: 'nmap' or 'curl' or 'wget' or 'python-requests'
+condition: any of them

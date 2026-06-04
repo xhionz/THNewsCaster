@@ -1,0 +1,9 @@
+title: Detect Suspicious Magento Admin API Access
+logsource:
+  product: webserver
+  service: http
+detection:
+  uri_path: '/rest/V1/integration/admin/token'
+  http_header: "Authorization: Bearer *"
+  user_agent: 'MagentoAdminClient' or 'curl' or 'python-requests'
+condition: all of them

@@ -1,0 +1,9 @@
+title: Detect Cache Warmer Deserialization Exploit
+logsource:
+  product: webserver
+  service: http
+detection:
+  http_cookie: "*a:4:{*"
+  http_cookie: "*O:.*:.*:{*"
+  http_cookie: "*s:[0-9]+:\"__PHP_Incomplete_Class_Name\"*"
+condition: any of them
