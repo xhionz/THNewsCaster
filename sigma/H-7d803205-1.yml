@@ -1,0 +1,6 @@
+title: Detect CVE-2021-34429 Exploitation on SD-WAN Edge
+logsource:
+  product: cisco_sdwan
+  service: edge
+condition: 'image: "/opt/cisco/viptela/bin/viptela" and (command_line: "*curl*http*" or command_line: "*wget*http*" or command_line: "*bash -c*" or command_line: "*sh -c*" or command_line: "*echo*base64*" or command_line: "*nc -e*" or command_line: "*telnet*" or command_line: "*rm -f*" or command_line: "*chmod +x*" or command_line: "*nohup*" or command_line: "*tmux*" or command_line: "*screen*" or command_line: "*curl.*-o*" or command_line: "*wget.*-O*")
+  and not (command_line: "*systemctl*" or command_line: "*service*" or command_line: "*dpkg*" or command_line: "*apt*" or command_line: "*yum*" or command_line: "*rpm*")

@@ -1,0 +1,5 @@
+title: Detect DNS Exfiltration via High-Entropy Queries from SD-WAN Edge
+logsource:
+  product: cisco_sdwan
+  service: dns
+condition: 'query: "*.*.*.*" and query_count > 50 within 1m and query_length > 60 and query not contains ("google.com" OR "cloudflare.com" OR "cisco.com" OR "dns.google") and src_ip IN (edge_device_ips)'
