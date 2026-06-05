@@ -1,0 +1,14 @@
+title: Suspicious SMB Authentication from IBM i to DC
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects SMB authentication attempts from IBM i system IP to Windows DCs
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    Logon_Type: 3
+    Source_Network_Address: "<IBM_i_system_IP>"
+  condition: selection
+level: medium

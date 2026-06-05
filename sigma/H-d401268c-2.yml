@@ -1,0 +1,13 @@
+title: IBM i User Profile Modification Detected
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects user profile changes on IBM i systems via audit journal
+logsource:
+  product: ibm_i
+  service: audit_journal
+detection:
+  selection:
+    event.type: AUDIT_EVENT
+    audit.code: "CHGUSRPRF"
+  condition: selection
+level: high

@@ -1,0 +1,13 @@
+title: IBM i Unauthenticated RCE via Port 5555
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects potential exploitation of CVE-2024-21762 via unauthenticated traffic to IBM i port 5555
+logsource:
+  product: network
+  service: tcp
+detection:
+  selection:
+    destination.port: 5555
+    event.action: connection_established
+  condition: selection and not source.ip in ["192.168.1.0/24", "10.0.0.0/8"] and not destination.ip in ["192.168.1.0/24", "10.0.0.0/8"]
+level: high
