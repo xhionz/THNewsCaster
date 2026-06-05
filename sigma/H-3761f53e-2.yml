@@ -1,0 +1,11 @@
+title: Suspicious Credential Access via Serv-U File Transfer
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: '*\ServU.exe'
+    CommandLine: '*-user*|*-pass*|*-upload*'
+    ParentImage: 'cmd.exe'
+  Condition: Selection
+  timeframe: 7d

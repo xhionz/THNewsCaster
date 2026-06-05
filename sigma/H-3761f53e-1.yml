@@ -1,0 +1,11 @@
+title: Suspicious Serv-U Resource Exhaustion via High CPU
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: '*\ServU.exe'
+    CommandLine: '*-maxconnections*|*-maxupload*|*-maxdownload*'
+    CPUUsage: '>95'
+  Condition: Selection
+  timeframe: 7d

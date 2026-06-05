@@ -1,0 +1,11 @@
+title: Suspicious File Upload to Serv-U with Executable Extension
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: '*\ServU.exe'
+    CommandLine: '*-upload*'
+    TargetFile: '*.exe|*.dll|*.ps1|*.bat|*.vbs'
+  Condition: Selection
+  timeframe: 7d
