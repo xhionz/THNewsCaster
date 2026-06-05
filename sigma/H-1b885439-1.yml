@@ -1,0 +1,14 @@
+title: Detection of CVE-2026-20245 Exploit Attempt
+logsource:
+  product: cisco
+  service: sdwan_manager
+detection:
+  selection:
+    event_id: 'CVE-2026-20245'
+    severity: 'high'
+    action: 'exploit_attempt'
+  condition: selection
+fields:
+  - src_ip
+  - dst_ip
+  - user

@@ -1,0 +1,16 @@
+title: Suspicious Persistence on SD-WAN Manager
+logsource:
+  product: linux
+  service: system
+detection:
+  selection:
+    event_type: 'user_added'
+    username: '^[a-z]{3,5}[0-9]{2}$'
+    or:
+      - command: 'crontab -l' AND output contains 'malicious-script.sh'
+      - file_path: '/usr/bin/.hidden_binary' AND file_hash != 'known-good-hash'
+  condition: selection
+fields:
+  - username
+  - command
+  - file_path

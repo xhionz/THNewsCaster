@@ -1,0 +1,16 @@
+title: Lateral Movement from SD-WAN to Manufacturing Subnet
+logsource:
+  product: firewall
+  service: traffic
+detection:
+  selection:
+    src_ip: 'SD_WAN_MANAGER_IP'
+    dst_ip: '192.168.100.0/24'
+    protocol: 'tcp'
+    dst_port: [22, 445, 5985, 3389]
+  condition: selection
+fields:
+  - src_ip
+  - dst_ip
+  - dst_port
+  - bytes_sent
