@@ -1,0 +1,11 @@
+title: Suspicious PAN-OS Config Change for Persistence
+logsource:
+  product: pan_os
+  service: config
+detection:
+  selection:
+    command: 'set user *' OR 'set tunnel *' OR 'set ssh *'
+    user: 'admin'
+    action: 'commit'
+  condition: selection
+condition: selection

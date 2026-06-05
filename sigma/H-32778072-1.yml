@@ -1,0 +1,12 @@
+title: Suspicious GlobalProtect Authentication Bypass via CVE-2024-32965
+logsource:
+  product: pan_os
+  service: firewall
+detection:
+  selection:
+    event_id: 'auth'
+    action: 'allow'
+    user: 'guest'
+    app: 'globalprotect-portal'
+  condition: selection
+condition: selection

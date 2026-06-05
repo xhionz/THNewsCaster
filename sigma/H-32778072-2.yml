@@ -1,0 +1,11 @@
+title: LSASS Memory Dumping from VPN-Connected Hosts
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 10
+    Image: '*\rundll32.exe'
+    CommandLine: '*lsass*'
+  condition: selection
+condition: selection
