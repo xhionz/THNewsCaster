@@ -1,0 +1,12 @@
+title: Detect Everest Forms Pro RCE via action=submit_form
+logsource:
+  product: apache
+  service: http
+condition: 'query|contains: "action=submit_form" and query|contains: "form_id=" and query|contains: "_wpnonce=" and status: 200'
+detection:
+  exploit_request:
+    query|contains: "action=submit_form"
+    query|contains: "form_id="
+    query|contains: "_wpnonce="
+    status: 200
+condition: exploit_request

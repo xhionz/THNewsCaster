@@ -1,0 +1,11 @@
+title: Detect RDP Logins from WordPress Server IP
+logsource:
+  product: windows
+  service: security
+condition: 'EventID: 4624 and LogonType: 10 and Source_Network_Address: '192.168.10.100'
+detection:
+  rdp_login_from_wp:
+    EventID: 4624
+    LogonType: 10
+    Source_Network_Address: '192.168.10.100'
+condition: rdp_login_from_wp

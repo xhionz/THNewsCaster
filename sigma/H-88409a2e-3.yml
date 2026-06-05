@@ -1,0 +1,11 @@
+title: Detect Suspicious DNS Query Lengths from WordPress Server
+logsource:
+  product: dns
+  service: bind
+condition: 'query_length > 50 and query|contains: '.' and source_ip: '192.168.10.100'
+detection:
+  long_dns_query:
+    query_length: '>50'
+    source_ip: '192.168.10.100'
+    query|contains: '.'
+condition: long_dns_query
