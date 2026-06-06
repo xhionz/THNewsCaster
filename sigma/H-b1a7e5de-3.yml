@@ -1,0 +1,11 @@
+title: SMB Connection from WordPress Server to Internal Hosts
+logsource:
+  product: network
+  service: netflow
+condition: 'src_ip IN (SELECT ip FROM wordpress_servers)'
+detection:
+  dst_port: 445
+  protocol: tcp
+  bytes_out: '>1000'
+  dst_ip: '10.0.0.0/8' | '172.16.0.0/12' | '192.168.0.0/16'
+condition: all

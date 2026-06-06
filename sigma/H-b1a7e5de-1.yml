@@ -1,0 +1,11 @@
+title: Suspicious Everest Forms Pro RCE Attempt
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri: /wp-content/plugins/everest-forms-pro/ || request_uri: /wp-content/plugins/everest-forms/'
+detection:
+  body: 'php' | 'base64' | 'eval\(' | 'system\(' | 'shell_exec\(' | 'assert\(' | 'create_function\('
+  user_agent: 'curl' | 'wget' | 'python-requests'
+  status: 200
+condition: all

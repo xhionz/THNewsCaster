@@ -1,0 +1,11 @@
+title: Phishing Email with Malicious ZIP Attachment
+logsource:
+  product: email
+  service: exchange
+condition: 'attachment_name: '*.zip''
+detection:
+  sender_domain: 'suspected-phishing-domain.com'
+  attachment_name: '*.zip'
+  attachment_size: '>500000'
+  body: 'everest' | 'form' | 'exploit' | 'php' | 'eval\(' | 'system\('
+condition: all
