@@ -1,0 +1,16 @@
+title: Detect Lateral Movement via SMB After Serv-U Crash
+logsource:
+  product: windows
+  service: smb-server
+  category: network_connection
+condition: 'event_id: 3 and dst_port: 445 and src_ip IN (serv-u-server-ips) and user: NOT ("NT AUTHORITY\\SYSTEM" | "NT AUTHORITY\\NETWORK SERVICE")'
+detection:
+  dst_port:
+    - 445
+  src_ip:
+    - "10.10.10.10"
+    - "10.10.10.11"
+  user:
+    - "DOMAIN\\user1"
+    - "DOMAIN\\user2"
+  timeframe: 30m

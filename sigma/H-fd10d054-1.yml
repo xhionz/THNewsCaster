@@ -1,0 +1,16 @@
+title: Detect Serv-U DoS via Malformed FTP Command
+logsource:
+  product: windows
+  service: serv-u
+  category: application
+condition: 'event_id: 1001 and ftp_command: "SITE EXEC" and ftp_response: "500" and bytes_sent: > 10000'
+detection:
+  ftp_command:
+    - "SITE EXEC"
+    - "SITE EXEC"
+    - "SITE EXEC"
+  ftp_response:
+    - "500"
+  bytes_sent:
+    - '>10000'
+  timeframe: 5m

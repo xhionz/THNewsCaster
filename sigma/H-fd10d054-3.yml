@@ -1,0 +1,14 @@
+title: Detect Credential File Access on Serv-U Server
+logsource:
+  product: windows
+  service: serv-u
+  category: file_access
+condition: 'event_id: 11 and file_path: "*\\Serv-U\\*.ini" OR file_path: "*\\Serv-U\\*.cfg" OR file_path: "*\\Serv-U\\*.txt" and access_type: "read"'
+detection:
+  file_path:
+    - "*\\Serv-U\\*.ini"
+    - "*\\Serv-U\\*.cfg"
+    - "*\\Serv-U\\*.txt"
+  access_type:
+    - "read"
+  timeframe: 1h
