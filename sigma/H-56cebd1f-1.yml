@@ -1,0 +1,15 @@
+title: Qilin Ransomware VPN Initial Access Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects anomalous authentication attempts on Check Point Mobile Access VPN that may indicate exploitation of a zero-day
+logsource:
+  product: checkpoint
+  category: vpn
+condition: 'event_type: "vpn_login" and action: "failed" and source_ip: "10.0.0.0/8" and user: "*" and user_agent: "*Mozilla*" and timestamp > "2026-05-25T00:00:00Z" and timestamp < "2026-06-07T23:59:59Z"'
+detection:
+  anomalous_vpn_login:
+    - event_type: "vpn_login"
+    - action: "failed"
+    - source_ip: "10.0.0.0/8"
+    - user_agent: "*Mozilla*"
+condition: anomalous_vpn_login

@@ -1,0 +1,18 @@
+title: Suspicious DNS Tunneling for Qilin C2
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects high-volume, low-entropy DNS queries to uncommon domains that may indicate DNS tunneling
+logsource:
+  product: dns
+  category: query
+condition: 'query_count > 50 AND domain: "*.xyz" OR "*.top" OR "*.info" OR "*.pw" AND query_length > 30 AND response_code: "NOERROR" AND timestamp > "2026-05-25T00:00:00Z" and timestamp < "2026-06-07T23:59:59Z"'
+detection:
+  high_volume_dns:
+    - query_count: '>50'
+    - domain: '*.*.xyz'
+    - domain: '*.*.top'
+    - domain: '*.*.info'
+    - domain: '*.*.pw'
+    - query_length: '>30'
+    - response_code: 'NOERROR'
+condition: high_volume_dns

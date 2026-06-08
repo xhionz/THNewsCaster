@@ -1,0 +1,17 @@
+title: Suspicious Scheduled Task Creation by Non-System User
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects creation of scheduled tasks by non-system users, a common Qilin persistence technique
+logsource:
+  product: windows
+  category: process_creation
+condition: 'image: "schtasks.exe" AND command_line: *"/create"* AND user: "*" AND NOT user: "NT AUTHORITY\SYSTEM" AND NOT user: "NT AUTHORITY\LOCAL SERVICE" AND NOT user: "NT AUTHORITY\NETWORK SERVICE" AND timestamp > "2026-05-25T00:00:00Z" and timestamp < "2026-06-07T23:59:59Z"'
+detection:
+  schtasks_creation:
+    - image: "schtasks.exe"
+    - command_line: '*"/create"*'
+    - user: '*'
+    - user_not: 'NT AUTHORITY\SYSTEM'
+    - user_not: 'NT AUTHORITY\LOCAL SERVICE'
+    - user_not: 'NT AUTHORITY\NETWORK SERVICE'
+condition: schtasks_creation
