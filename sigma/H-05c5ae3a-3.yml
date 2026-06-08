@@ -1,0 +1,11 @@
+title: Detect Suspicious IKEv1 Rekeying and Session Anomalies
+logsource:
+  product: checkpoint
+  service: vpn
+condition: 'ike_version: "1"' and 'rekey_count > 5' and 'src_ip != gateway_ip' and 'auth_method: "pre_shared_key"'
+detection:
+  ike_version: '1'
+  rekey_count: '> 5'
+  src_ip: '!= gateway_ip'
+  auth_method: 'pre_shared_key'
+condition: all of them

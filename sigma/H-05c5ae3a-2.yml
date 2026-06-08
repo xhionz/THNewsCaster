@@ -1,0 +1,11 @@
+title: Detect Ransomware File Encryption Patterns
+logsource:
+  product: windows
+  service: file_system
+condition: 'file_access_time > file_modification_time' and 'file_extension_changed' and 'file_size > 1000000' and 'file_name_pattern: /\.(lock|encrypted|qilin)$/i'
+detection:
+  file_access_time: '> file_modification_time'
+  file_extension_changed: true
+  file_size: '> 1000000'
+  file_name_pattern: '/\.(lock|encrypted|qilin)$/i'
+condition: all of them

@@ -1,0 +1,11 @@
+title: Detect IKEv1 Authentication Bypass via CVE-2024-24919
+logsource:
+  product: checkpoint
+  service: vpn
+condition: 'ike_version: "1"' and not 'machine_cert_present' and 'auth_status: "success"' and 'client_type: "remote_access"'
+detection:
+  ike_version: '1'
+  machine_cert_present: false
+  auth_status: 'success'
+  client_type: 'remote_access'
+condition: all of them
