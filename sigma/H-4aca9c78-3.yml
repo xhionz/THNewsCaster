@@ -1,0 +1,10 @@
+title: Detect Unauthorized Check Point Firmware Update from Non-Official Source
+logsource:
+  product: checkpoint
+  service: firmware_update
+condition: 'update_source != "checkpoint.com" and update_signature_valid: "false" and update_version matches "R81.20"'
+detection:
+  update_source: 'update_source != "checkpoint.com"'
+  signature_invalid: 'update_signature_valid: "false"'
+  version_match: 'update_version matches "R81.20"'
+condition: 'all of them'

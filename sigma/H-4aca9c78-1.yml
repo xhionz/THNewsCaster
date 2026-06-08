@@ -1,0 +1,10 @@
+title: Detect IKEv1 Traffic with Invalid Certificate and Successful Tunnel Establishment
+logsource:
+  product: checkpoint
+  service: vpn
+condition: 'event_type: "ikev1_tunnel_established" and cert_validation_result: "failed" and auth_method: "pre-shared-key"'
+detection:
+  event_type: 'ikev1_tunnel_established'
+  cert_validation_result: 'failed'
+  auth_method: 'pre-shared-key'
+condition: 'all of them'

@@ -1,0 +1,11 @@
+title: Detect Phishing Emails Impersonating Check Point with Malicious Attachments or URLs
+logsource:
+  product: email
+  service: office365
+condition: 'email.subject contains "Check Point" and (email.attachments contains ".exe" or email.urls contains "check-point.com" or email.sender_domain != "checkpoint.com")'
+detection:
+  subject: 'Check Point'
+  attachment_exe: 'email.attachments contains ".exe"'
+  url_check_point: 'email.urls contains "check-point.com"'
+  sender_not_trusted: 'email.sender_domain != "checkpoint.com"'
+condition: 'any of them'
