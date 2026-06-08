@@ -1,0 +1,20 @@
+title: Internal Network Reconnaissance via nmap/masscan
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects rapid TCP SYN scans targeting UniFi OS server ports (8443, 8080, 8843) from internal IPs
+logsource:
+  product: network_flow
+  category: network_connection
+detection:
+  dst_ip:
+    - '192.168.1.50'
+    - '192.168.1.51'
+    - '192.168.1.52'
+  dst_port: [8443, 8080, 8843]
+  src_ip:
+    - '192.168.1.0/24'
+    - '10.0.0.0/8'
+  connection_count: 10
+  time_window: 60s
+  condition: dst_ip and dst_port and src_ip and connection_count > 10 and time_window
+level: medium

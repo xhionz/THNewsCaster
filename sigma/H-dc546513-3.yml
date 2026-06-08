@@ -1,0 +1,35 @@
+title: UniFi OS Credential Access via File Read or HTTP Exfiltration
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects unauthorized access to credential files or outbound HTTP POSTs containing credential patterns
+logsource:
+  product: linux
+  category: file_access
+detection:
+  file_path:
+    - '/etc/shadow'
+    - '/etc/passwd'
+    - '/var/lib/unifi/data/keystore.jks'
+    - '/opt/unifi/data/config/backup/*.zip'
+  user: ['root', 'unifi', 'admin']
+  action: 'read'
+  condition: file_path and user and action
+
+---
+
+title: UniFi OS Credential Exfiltration via HTTP POST
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8s
+status: experimental
+description: Detects outbound HTTP POSTs containing credential-like patterns from UniFi OS servers
+logsource:
+  product: webserver
+  category: web
+detection:
+  method: 'POST'
+  uri_path: '/api/v1/*'
+  content: 'password=' OR 'token=' OR 'secret=' OR 'auth=' OR 'credential='
+  dst_ip:
+    - '192.168.1.100'
+    - '10.0.0.50'
+  condition: method and uri_path and content and dst_ip
+level: high
