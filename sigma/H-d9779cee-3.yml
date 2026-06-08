@@ -1,0 +1,12 @@
+title: Detect Unsigned Kernel Module Load by Non-Root User
+logsource:
+  product: linux
+  service: auditd
+detection:
+  syscall: finit_module
+  uid: '!=0'
+  parent_uid: '!=0'
+  comm: ['sh', 'bash', 'python', 'curl', 'wget']
+  module_path: '.*'
+condition: all of them
+fields: ['syscall', 'uid', 'parent_uid', 'comm', 'module_path']

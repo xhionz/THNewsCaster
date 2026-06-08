@@ -1,0 +1,14 @@
+title: Detect LiteLLM Command Injection Leading to Ransomware Spawn
+id: 5a1b8c3d-9e2f-4a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: Detects suspicious command-line patterns indicative of command injection in LiteLLM leading to ransomware execution
+logsource:
+  product: python
+  service: litellm
+detection:
+  selection:
+    cmdline:
+      - 'litellm'
+      - 'python3'
+  condition: 'cmdline contains "/c" and (cmdline contains "curl" or cmdline contains "wget" or cmdline contains "powershell" or cmdline contains "certutil") and (cmdline contains ".exe" or cmdline contains ".bat" or cmdline contains ".ps1")'
+level: high

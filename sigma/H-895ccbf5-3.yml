@@ -1,0 +1,9 @@
+title: Detect Ransomware Spawn from Internal Scripting Hosts
+id: 8c3d2e1f-9a7b-4f6e-8d7c-6b5a4c3d2e1f
+status: experimental
+description: Detects suspicious Python/Node.js execution patterns from internal scripting servers indicative of ransomware deployment
+logsource:
+  product: python
+  service: jenkins
+condition: 'cmdline contains "python3" and (cmdline contains "-c" or cmdline contains "requests.get" or cmdline contains "urllib.request") and (cmdline contains ".exe" or cmdline contains ".bat" or cmdline contains ".ps1")'
+level: high

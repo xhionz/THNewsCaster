@@ -1,0 +1,11 @@
+title: Detect nf_tables UAF Exploit Attempt via Auditd
+logsource:
+  product: linux
+  service: auditd
+detection:
+  syscall: nf_tables
+  comm: ['sh', 'bash', 'python', 'perl', 'ruby']
+  audit_event: 'type=SYSCALL msg=audit(.*): arch=c000003e syscall=281 success=yes exit=0 a0=.* a1=.* a2=.* a3=.* items=.* ppid=.* pid=.* auid=.* uid=.* gid=.* euid=.* suid=.* fsuid=.* egid=.* sgid=.* fsgid=.* tty=.* ses=.* comm=".*" exe=".*" key="nf_tables_exploit"'
+  abnormal_memory_access: true
+condition: all of them
+fields: ['comm', 'auid', 'uid', 'syscall']

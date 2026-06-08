@@ -1,0 +1,16 @@
+title: Detect Check Point Auth Bypass via Suspicious Rule Hits
+id: 7f2e1d0c-9b8a-4f6e-8d7c-6b5a4c3d2e1f
+status: experimental
+description: Detects anomalous authentication bypass patterns in Check Point logs indicative of exploitation
+logsource:
+  product: checkpoint
+  service: firewall
+detection:
+  selection:
+    action: 'accept'
+    rule_name: 'Any-Any'
+    src: '0.0.0.0/0'
+    dst: '192.168.0.0/16'
+    auth_method: 'none'
+  condition: selection
+level: high

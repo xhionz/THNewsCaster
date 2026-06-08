@@ -1,0 +1,11 @@
+title: Detect Access to /proc/1/ns/net from Container
+logsource:
+  product: linux
+  service: auditd
+detection:
+  path: '/proc/1/ns/net'
+  action: 'open|read|stat'
+  comm: ['sh', 'bash', 'python', 'curl', 'wget']
+  container_id: '.*'
+condition: all of them
+fields: ['path', 'comm', 'auid', 'pid']
