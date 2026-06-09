@@ -1,0 +1,13 @@
+title: Detection of Typosquatted PyPI Package Install
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\python*.exe'
+    CommandLine|contains: 'pip install'
+    CommandLine|contains: 'requests-' OR CommandLine|contains: 'numpy-' OR CommandLine|contains: 'pandas-' OR CommandLine|contains: 'flask-' OR CommandLine|contains: 'django-'
+    CommandLine|not: '--trusted-host pypi.org' OR CommandLine|not: '--index-url https://pypi.org/simple/'
+  condition: selection
+level: high

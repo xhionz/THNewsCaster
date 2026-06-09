@@ -1,0 +1,11 @@
+title: Bun C2 Beaconing via HTTP with Suspicious User-Agent
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    DestinationIp: '192.168.1.*'
+    UserAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 BunStealer'
+  condition: selection
+level: high

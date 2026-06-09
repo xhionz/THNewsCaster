@@ -1,0 +1,12 @@
+title: Detection of Malicious setup.pth via pip install
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\python*.exe'
+    CommandLine|contains: 'pip install'
+    CommandLine|contains: 'setup.pth'
+  condition: selection
+level: high
