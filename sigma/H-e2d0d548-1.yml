@@ -1,0 +1,14 @@
+title: Detection of WinRAR CVE-2025-8088 Exploitation Attempt
+logsource:
+  product: windows
+  service: application
+detection:
+  selection:
+    Image|endswith: '\\WinRAR.exe'
+    CommandLine|contains: 'x' or 'e' or 't'
+    CommandLine|contains: '.rar' or '.exe' in CommandLine
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+  - ParentImage

@@ -1,0 +1,15 @@
+title: Phishing Email with Malicious RAR Attachment Detected
+logsource:
+  product: mail
+  service: exchange
+detection:
+  selection:
+    AttachmentName|endswith: '.rar'
+    Sender|contains: '@' and not endswith: '@ourdomain.com'
+    Subject|contains: ('urgent', 'invoice', 'document', 'report', 'update')
+  condition: selection
+fields:
+  - Sender
+  - Recipient
+  - AttachmentName
+  - Subject

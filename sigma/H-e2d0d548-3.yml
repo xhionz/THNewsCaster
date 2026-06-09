@@ -1,0 +1,14 @@
+title: Suspicious WinRAR Archive Creation for Data Exfiltration
+logsource:
+  product: windows
+  service: application
+detection:
+  selection:
+    Image|endswith: '\\WinRAR.exe'
+    CommandLine|contains: 'a' and ('C:\\' or 'D:\\' or 'E:\\') and ('.rar' or '.exe' in CommandLine)
+    CommandLine|contains: ('C:\\Users\\' or 'C:\\Documents and Settings\\')
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
