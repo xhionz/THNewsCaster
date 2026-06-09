@@ -1,0 +1,23 @@
+title: Defender DoS via SCM Abuse (CVE-2026-45498)
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\SecurityHealthService.exe'
+    ParentImage: '*\services.exe'
+    Event: 'ProcessTerminate'
+    Time: 'within 1m'
+  Selection2:
+    Event: 'ServiceStateChange'
+    ServiceName: 'SecurityHealthService'
+    NewState: 'Stopped'
+    Reason: 'Service crashed'
+  Selection3:
+    Event: 'ServiceStateChange'
+    ServiceName: 'SecurityHealthService'
+    NewState: 'Running'
+    PreviousState: 'Stopped'
+    Count: '>= 5'
+  Condition: Selection1 and Selection2 and Selection3
+  timeframe: 10m

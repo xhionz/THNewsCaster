@@ -1,0 +1,26 @@
+title: Suspicious Kernel Exploit via Unusual Memory Mapping (CVE-2026-41091)
+logsource:
+  product: linux
+  service: auditd
+detection:
+  Selection1:
+    syscall: mmap
+    flags: 'MAP_ANONYMOUS|MAP_PRIVATE|MAP_EXECUTABLE'
+    size: '> 1048576'
+    process: 'sshd'
+  Selection2:
+    syscall: load_module
+    filename: '/tmp/'
+    process: 'sshd'
+  Selection3:
+    syscall: ptrace
+    target_pid: '1'
+    process: 'sshd'
+  Selection4:
+    syscall: execve
+    args: '-c'
+    process: 'sshd'
+    parent: 'bash'
+    image: '/bin/bash'
+  Condition: Selection1 or Selection2 or Selection3
+  timeframe: 5m

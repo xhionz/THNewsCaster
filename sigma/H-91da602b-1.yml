@@ -1,0 +1,16 @@
+title: Suspicious SecurityHealthService.exe Spawn via svchost.exe (CVE-2026-33825)
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\svchost.exe'
+    ParentImage: '*\services.exe'
+    CommandLine: '-k netsvcs'
+  Selection2:
+    Image: '*\SecurityHealthService.exe'
+    ParentImage: '*\svchost.exe'
+    ParentCommandLine: '-k netsvcs'
+    ImageLoaded: '*\wininet.dll' | '*\uxtheme.dll' | '*\fdwsd.dll'
+  Condition: Selection1 and Selection2
+  timeframe: 5m
