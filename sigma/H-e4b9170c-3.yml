@@ -1,0 +1,10 @@
+title: Detect LockBit ransomware file encryption pattern
+logsource:
+  product: windows
+  service: file_access
+detection:
+  selection:
+    Image: '*\lockbit*.exe' OR '*\lockbit*.dll'
+    FileExtension: '.lockbit' OR '.locked' OR '.crypt' OR '.encrypted'
+    AccessType: 'write'
+  condition: selection

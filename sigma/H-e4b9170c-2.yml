@@ -1,0 +1,10 @@
+title: Detect lsass.exe memory access from non-system processes
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 10
+    Image: '*\lsass.exe'
+    ParentImage: '*\cmd.exe' OR '*\powershell.exe' OR '*\wscript.exe' OR '*\cscript.exe'
+  condition: selection

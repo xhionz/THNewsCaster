@@ -1,0 +1,9 @@
+title: Detect CVE-2023-27997 VPN Authentication Bypass
+logsource:
+  product: check_point
+  service: vpn
+detection:
+  selection:
+    action: 'Authentication Failed'
+    result: 'Bypassed'
+  condition: selection
