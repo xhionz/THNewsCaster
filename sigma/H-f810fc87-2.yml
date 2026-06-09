@@ -1,0 +1,24 @@
+title: RoguePlanet - Macro-Initiated Defender Exploit
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects VBA macro execution followed by Defender scan and SYSTEM process spawn within 10 seconds
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: 'C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE'
+    CommandLine: '* /m*'
+  selection2:
+    EventID: 11
+    TargetFilename: '*.docm'
+    Image: 'C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE'
+  selection3:
+    EventID: 1
+    ParentImage: 'C:\\Program Files\\Windows Defender\\MsMpEng.exe'
+    Image: '*\\cmd.exe'
+    CommandLine: '* /c *'
+  condition: selection1 and selection2 and selection3
+  timeframe: 10s
+level: high

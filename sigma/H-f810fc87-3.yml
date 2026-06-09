@@ -1,0 +1,20 @@
+title: RoguePlanet - WMI Persistence via Defender Trigger
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects WMI event subscription creation immediately following a Defender scan of a suspicious file
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: 'C:\\Program Files\\Windows Defender\\MsMpEng.exe'
+    CommandLine: '* -ScanType 1 *'
+  selection2:
+    EventID: 19
+    EventType: 'EventFilter'
+    Name: '*RoguePlanet*'
+    Query: '*Win32_ProcessStartTrace*'
+  condition: selection1 and selection2
+  timeframe: 30s
+level: high

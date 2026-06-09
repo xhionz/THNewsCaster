@@ -1,0 +1,19 @@
+title: RoguePlanet - SYSTEM Execution via Defender Exploit
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects suspicious process creation triggered by MsMpEng.exe scan within 5 seconds of file access, indicating potential exploit abuse
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: 'C:\\Program Files\\Windows Defender\\MsMpEng.exe'
+  selection2:
+    EventID: 1
+    ParentImage: 'C:\\Program Files\\Windows Defender\\MsMpEng.exe'
+    Image: '*\\cmd.exe'
+    CommandLine: '* /c *'
+  condition: selection1 and selection2
+  timeframe: 5s
+level: high
