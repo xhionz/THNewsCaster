@@ -1,0 +1,11 @@
+title: Suspicious PAN-OS Configuration Change from Non-Admin Source
+logsource:
+  product: palo_alto_pan_os
+  category: config_change
+detection:
+  selection:
+    type: 'config'
+    operation: 'set'
+    user: '!admin'
+    change: 'system settings|network|security profile'
+  condition: selection

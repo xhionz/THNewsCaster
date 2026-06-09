@@ -1,0 +1,12 @@
+title: Internal Network Scanning from PAN-OS Device
+logsource:
+  product: palo_alto_pan_os
+  category: traffic
+detection:
+  selection:
+    src_device: 'firewall-01'
+    application: (ssh OR rdp OR smb OR telnet)
+    dst_ip: (10.0.0.0/8 OR 172.16.0.0/12 OR 192.168.0.0/16)
+    action: allow
+    bytes: > 1000
+  condition: selection
