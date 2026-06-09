@@ -1,0 +1,11 @@
+title: Detect Suspicious VPN Login Patterns Post-CISA-Alert
+logsource:
+  product: checkpoint_vpn
+  service: access
+condition: 'user_agent contains "Mozilla" and user_agent !contains "Check Point" and login_status == "success" and source_ip in ["192.168.100.0/24", "10.0.0.0/8"] and timestamp > "2026-06-05T00:00:00Z" and timestamp < "2026-06-09T23:59:59Z"'
+detection:
+  suspicious_ua: 'user_agent contains "Mozilla" and user_agent !contains "Check Point"'
+  valid_login: 'login_status == "success"'
+  insider_source: 'source_ip in ["192.168.100.0/24", "10.0.0.0/8"]'
+  time_window: 'timestamp > "2026-06-05T00:00:00Z" and timestamp < "2026-06-09T23:59:59Z"'
+condition: suspicious_ua and valid_login and insider_source and time_window

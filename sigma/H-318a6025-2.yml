@@ -1,0 +1,11 @@
+title: Detect Unusual Vendor Network Access to Internal Systems
+logsource:
+  product: firewall
+  service: traffic
+condition: 'src_ip in ["10.20.30.0/24", "172.20.1.0/24"] and dst_ip in ["172.16.50.0/24", "172.16.51.0/24"] and protocol == "tcp" and dst_port in [445, 3389, 5985] and timestamp > "2026-06-05T00:00:00Z" and timestamp < "2026-06-09T23:59:59Z"'
+detection:
+  vendor_ip: 'src_ip in ["10.20.30.0/24", "172.20.1.0/24"]'
+  gov_target: 'dst_ip in ["172.16.50.0/24", "172.16.51.0/24"]'
+  sensitive_port: 'dst_port in [445, 3389, 5985]'
+  time_window: 'timestamp > "2026-06-05T00:00:00Z" and timestamp < "2026-06-09T23:59:59Z"'
+condition: vendor_ip and gov_target and sensitive_port and time_window

@@ -1,0 +1,11 @@
+title: Detect Suspicious PowerShell Execution from VPN-Authenticated Users
+logsource:
+  product: windows
+  service: powershell
+condition: 'user in ["user1", "user2", "user3"] and event_id == 4104 and command_line contains "-EncodedCommand" and parent_process_name == "svchost.exe" and timestamp > "2026-06-05T00:00:00Z" and timestamp < "2026-06-09T23:59:59Z"'
+detection:
+  vpn_user: 'user in ["user1", "user2", "user3"]'
+  encoded_cmd: 'command_line contains "-EncodedCommand"'
+  svchost_parent: 'parent_process_name == "svchost.exe"'
+  time_window: 'timestamp > "2026-06-05T00:00:00Z" and timestamp < "2026-06-09T23:59:59Z"'
+condition: vpn_user and encoded_cmd and svchost_parent and time_window
