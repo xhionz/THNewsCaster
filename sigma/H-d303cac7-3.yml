@@ -1,0 +1,15 @@
+title: Detect Malicious Email-Triggered Chrome Exploit
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: chrome.exe
+    ParentImage: '*/outlook.exe'
+    CommandLine: '-remote-debugging-port'
+  Condition: Selection
+  Keywords:
+    - 'chrome.exe'
+    - 'outlook.exe'
+    - 'file://'
+condition: Selection

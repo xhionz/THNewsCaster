@@ -1,0 +1,16 @@
+title: Detect Malvertising Exploit via Chrome Ad Network Referrer
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: chrome.exe
+    ParentImage: '*/explorer.exe'
+    CommandLine: '-remote-debugging-port'
+  Condition: Selection
+  Keywords:
+    - 'chrome.exe'
+    - 'explorer.exe'
+    - 'ad.doubleclick.net'
+    - 'googlesyndication.com'
+condition: Selection

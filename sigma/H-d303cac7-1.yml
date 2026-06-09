@@ -1,0 +1,15 @@
+title: Detect Chrome Memory Corruption Exploit via Unusual Process Tree
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: chrome.exe
+    ParentImage: '*/svchost.exe'
+    CommandLine: '-remote-debugging-port'
+  Condition: Selection
+  Keywords:
+    - 'chrome.exe' 
+    - 'svchost.exe'
+    - '-remote-debugging-port'
+condition: Selection
