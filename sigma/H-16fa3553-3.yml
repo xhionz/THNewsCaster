@@ -1,0 +1,11 @@
+title: Detection of Potential CVE-2026-20245 Exploitation on Cisco SD-WAN Manager
+logsource:
+  product: cisco_sdwan_manager
+  service: web_access
+detection:
+  selection:
+    uri: '*<script>*' OR uri: '*onerror=*' OR uri: '*javascript:*'
+    status_code: 200
+  condition: selection
+fields: [client_ip, uri, user_agent]
+level: critical

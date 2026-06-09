@@ -1,0 +1,11 @@
+title: Detection of Potential CVE-2026-7473 Exploitation on Arista EOS
+logsource:
+  product: arista_eos
+detection:
+  selection:
+    event_type: "authentication"
+    status: "failed"
+    reason: "incomplete_comparison"
+  condition: selection
+fields: [user, source_ip, destination_ip]
+level: high

@@ -1,0 +1,12 @@
+title: Detection of Potential CVE-2026-11645 Exploitation via Chromium V8
+logsource:
+  product: windows
+  service: application
+detection:
+  selection:
+    image: '*\chrome.exe'
+    event_type: 'exception'
+    exception_code: '0xc0000005' OR '0xc0000374'
+  condition: selection
+fields: [process_id, parent_process, user, source_ip]
+level: critical
