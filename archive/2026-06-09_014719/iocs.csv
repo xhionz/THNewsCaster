@@ -1,0 +1,91 @@
+type,value,article_count,sources
+cves,CVE-2026-50752,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+cves,CVE-2026-50751,3,https://thehackernews.com/2026/06/critical-check-point-vpn-flaw-exploited.html | https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+cves,CVE-2026-48095,1,https://www.reddit.com/r/blueteamsec/comments/1to1sco/7zip_cve202648095_ntfs_heap_overflow_leads_to/
+cves,CVE-2026-48027,2,https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/05/28/supply-chain-compromises-impact-nx-console-and-github-repositories
+cves,CVE-2026-45659,1,https://thehackernews.com/2026/05/microsoft-patches-sharepoint-rce-flaw.html
+cves,CVE-2026-45321,1,https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-45247,1,https://thehackernews.com/2026/06/cisa-adds-exploited-magento-rce-flaw.html
+cves,CVE-2026-43500,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+cves,CVE-2026-43284,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+cves,CVE-2026-42271,1,https://www.cisa.gov/news-events/alerts/2026/06/08/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-41089,1,https://www.securityweek.com/critical-windows-netlogon-vulnerability-in-attackers-crosshairs/
+cves,CVE-2026-39987,1,https://thehackernews.com/2026/05/attackers-use-llm-agent-for-post.html
+cves,CVE-2026-35616,1,https://www.bleepingcomputer.com/news/security/hackers-exploit-forticlient-ems-flaw-to-push-infostealer-malware/
+cves,CVE-2026-28318,2,https://thehackernews.com/2026/06/cisa-adds-actively-exploited-solarwinds.html | https://www.cisa.gov/news-events/alerts/2026/06/05/cisa-adds-one-known-exploited-vulnerability-catalog
+cves,CVE-2026-26194,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+cves,CVE-2026-23111,1,https://thehackernews.com/2026/06/one-character-linux-kernel-flaw-enables.html
+cves,CVE-2026-20245,2,https://www.bleepingcomputer.com/news/security/new-cisco-sd-wan-flaw-exploited-in-zero-day-attacks-to-gain-root/ | https://www.securityweek.com/cisco-warns-of-7th-sd-wan-zero-day-exploited-in-2026/
+cves,CVE-2026-9039,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08
+cves,CVE-2026-9038,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08
+cves,CVE-2026-9037,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08
+cves,CVE-2026-8398,1,https://www.cisa.gov/news-events/alerts/2026/05/27/cisa-adds-three-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-8206,1,https://www.bleepingcomputer.com/news/security/critical-kirki-flaw-exploited-to-hijack-wordpress-admin-accounts/
+cves,CVE-2026-7251,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01
+cves,CVE-2026-4257,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+cves,CVE-2026-3300,2,https://thehackernews.com/2026/06/hackers-exploit-critical-everest-forms.html | https://www.bleepingcomputer.com/news/security/critical-everest-forms-pro-flaw-exploited-to-take-over-wordpress-sites/
+cves,CVE-2026-3055,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+cves,CVE-2026-0257,7,https://thehackernews.com/2026/05/pan-os-globalprotect-authentication.html | https://unit42.paloaltonetworks.com/active-exploitation-of-pan-os-cve-2026-0257/ | https://www.bleepingcomputer.com/news/security/palo-alto-globalprotect-vpn-auth-bypass-flaw-now-exploited-in-attacks/ | https://www.cisa.gov/news-events/alerts/2026/05/29/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.reddit.com/r/blueteamsec/comments/1tsnkzi/cve20260257_panos_globalprotect_authentication/ | https://www.reddit.com/r/blueteamsec/comments/1tsnmsd/observed_exploitation_of_panos_globalprotect/ | https://www.securityweek.com/recent-palo-alto-networks-vulnerability-exploited-for-weeks/
+cves,CVE-2025-55182,1,https://www.reddit.com/r/blueteamsec/comments/1tvzqk0/aptc26lazarus组织利用cve202555182与copperhedge组件的攻击行动分析/
+cves,CVE-2025-48595,1,https://thehackernews.com/2026/06/google-june-2026-android-update-patches.html
+cves,CVE-2024-39933,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+cves,CVE-2024-39932,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+cves,CVE-2024-39930,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+cves,CVE-2024-24919,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+cves,CVE-2024-21762,1,https://example.invalid/news/volt-typhoon-fortios
+cves,CVE-2024-21182,2,https://www.cisa.gov/news-events/alerts/2026/06/01/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.securityweek.com/oracle-weblogic-vulnerability-exploited-in-the-wild/
+cves,CVE-2022-28368,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+ips,38.54.88.201,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,38.54.107.167,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,38.60.157.139,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,45.76.26.42,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,45.77.149.152,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,66.42.99.200,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,144.208.127.155,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,162.33.177.101,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+ips,185.225.74.10,1,https://example.invalid/news/volt-typhoon-fortios
+ips,209.182.225.136,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+domains,abcdef.bat,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,app.ini,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,c.error,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,c.params,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,cmd.exe,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,docs.metasploit.com,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+domains,exec.command,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,fmt.sprintf,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,gentlemen.bmp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,gmail.com,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-05-29-2026
+domains,http.title,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,image-131.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-143.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-146-1024x155.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-146-300x45.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-146-768x116.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-146.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-147.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-164.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-169-1024x142.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-169-300x42.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-169-768x107.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,image-169.webp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,login-portal-update.com,1,https://example.invalid/news/volt-typhoon-fortios
+domains,pr.basebranch,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,process.execdir,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,psexec.exe,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,pull.go,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,pullrequest.merge,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,readme-gentlemen.txt,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,strings.split,1,https://www.rapid7.com/blog/post/ve-authenticated-rce-via-argument-injection-gogs-unfixed
+domains,veeam.endpoint.service,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,wipefile.tmp,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,wmic.exe,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,www.cisa.gov,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01
+domains,www.eppendorf.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-146-01
+domains,www.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+domains,www.xcharge.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-148-08
+sha256,078163d5c16f64caa5a14784323fd51451b8c831c73396b967b4e35e6879937b,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+sha256,22b38dad7da097ea03aa28d0614164cd25fafeb1383dbc15047e34c8050f6f67,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+sha256,3b8e7d9c2f1a0b6d4e5f9a8b7c6d5e4f3a2b1c0d9e8f7a6b5c4d3e2f1a0b9c8d,1,https://example.invalid/news/volt-typhoon-fortios
+sha256,fe1033335a045c696c900d435119d210361966e2fb5cd1ba3382608cfa2c8e68,1,https://www.microsoft.com/en-us/security/blog/2026/05/28/the-gentlemen-ransomware-dissecting-a-self-propagating-go-encryptor/
+md5,51d39aa39478beeac94f2d12f682ecce,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
+md5,52fda5c1b9704544f32ee98d9060e689,1,https://www.rapid7.com/blog/post/etr-critical-check-point-vpn-zero-day-exploited-in-the-wild-cve-2026-50751
