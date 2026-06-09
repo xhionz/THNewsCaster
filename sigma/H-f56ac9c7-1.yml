@@ -1,0 +1,10 @@
+title: Detect Check Point CVE-2023-27997 Auth Bypass
+logsource:
+  product: check_point
+  service: firewall
+detection:
+  req_uri_pattern: '*/admin/ssh*'
+  user_agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+  status_code: 200
+  condition: all of them
+condition: count(event_id) > 0

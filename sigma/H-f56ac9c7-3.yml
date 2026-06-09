@@ -1,0 +1,14 @@
+title: Detect Brute Force with Common Passwords
+logsource:
+  product: windows
+  service: security
+detection:
+  failed_logons:
+    event_id: 4625
+    AccountName: '*'
+    IpAddress: '*'
+  common_passwords:
+    AccountName: 'admin'
+    IpAddress: '*'
+  condition: failed_logons and common_passwords
+condition: count(event_id) by IpAddress > 5 within 5m

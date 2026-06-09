@@ -1,0 +1,15 @@
+title: Detect Suspicious SMB Access and LSASS Dumping
+logsource:
+  product: windows
+  service: security
+detection:
+  smb_access: 
+    event_id: 5140
+    IpAddress: '10.10.10.10'
+    ObjectName: '\\*\SYSVOL'
+  lsass_dump:
+    event_id: 10
+    Image: '*\rundll32.exe'
+    CommandLine: '*lsass*'
+  condition: smb_access or lsass_dump
+condition: count(event_id) > 0
