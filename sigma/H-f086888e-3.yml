@@ -1,0 +1,20 @@
+title: Macro-Initiated Chrome Execution via Office
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects Chrome being launched from Word or Excel after macro execution, indicating possible V8 exploitation via embedded JS.
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection1:
+    Image: '*\chrome.exe'
+  selection2:
+    ParentImage: '*\winword.exe'
+    ParentImage: '*\excel.exe'
+  selection3:
+    CommandLine: '*-e *javascript*'
+  keywords:
+    - 'http://'
+    - 'https://'
+  condition: selection1 and (selection2 or selection3) and (Keywords)
+timeframe: 5m

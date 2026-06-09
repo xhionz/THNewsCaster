@@ -1,0 +1,21 @@
+title: Suspicious Chrome Execution from Email Attachment
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects Chrome being spawned from suspicious parent processes associated with email clients or document readers, potentially indicating exploitation of V8 zero-day.
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection1:
+    Image: '*\chrome.exe'
+  selection2:
+    ParentImage: '*\outlook.exe'
+  selection3:
+    ParentImage: '*\winword.exe'
+    ParentImage: '*\excel.exe'
+  keywords:
+    - 'http://'
+    - 'https://'
+    - 'javascript:'
+  condition: (selection1 and (selection2 or selection3)) and (Keywords)
+timeframe: 5m
