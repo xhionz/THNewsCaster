@@ -1,0 +1,10 @@
+title: Suspicious Chrome Launch from Email Client
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image|endswith: '\chrome.exe'
+    ParentImage|endswith: '\outlook.exe'
+  Condition: Selection
+condition: Selection

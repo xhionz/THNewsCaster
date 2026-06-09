@@ -1,0 +1,11 @@
+title: Suspicious Scheduled Task Created by Chrome
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image|endswith: '\chrome.exe'
+    EventType: CreateRemoteThread
+    TargetImage|endswith: '\schtasks.exe'
+  Condition: Selection
+condition: Selection
