@@ -1,0 +1,10 @@
+title: Detect Suspicious SSH Login from Ivanti Server
+logsource:
+  product: linux
+  category: authentication
+detection:
+  ssh_src_ip: "10.10.10.50"
+  ssh_username: "*"
+  ssh_auth_method: "password"
+  ssh_success: true
+  condition: all of them

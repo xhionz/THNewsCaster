@@ -1,0 +1,10 @@
+title: Detect CVE-2023-46805 Exploitation Attempt
+logsource:
+  product: ivanti_connect_secure
+  category: web
+detection:
+  req_method: 'POST'
+  req_uri: '/dana-na/auth/url_default/login.cgi'
+  user_agent: '*curl*'
+  status_code: 200
+  condition: all of them
