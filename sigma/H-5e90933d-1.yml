@@ -1,0 +1,24 @@
+title: Suspicious OWA XSS Payload via ProxyLogon
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects potential XSS payloads delivered via Exchange OWA after ProxyLogon exploitation
+logsource:
+  product: exchange_server
+  category: web_server
+detection:
+  req_uri:
+    - '/owa/auth/'
+    - '/owa/'
+  request_body:
+    - /document\.cookie|document\.location|alert\(.*
+    - /https?://[^
+	 ]+.*[<>"]
+    - /<script.*?>.*?</script>/i
+  user_agent:
+    - /Mozilla/5.0.*Windows NT.*Chrome|Firefox/i
+condition: all of them
+fields:
+  - request_uri
+  - request_body
+  - user_agent
+  - client_ip

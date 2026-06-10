@@ -1,0 +1,22 @@
+title: PowerShell -e Payload Triggered via OWA XSS
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects PowerShell -e or -EncodedCommand patterns in HTTP requests to OWA, likely from XSS-driven command execution
+logsource:
+  product: exchange_server
+  category: web_server
+detection:
+  req_uri:
+    - '/owa/auth/'
+    - '/owa/'
+  request_body:
+    - /powershell.*-e|-EncodedCommand|[0-9A-Za-z+/=]{100,}/
+    - /base64.*[A-Za-z0-9+/=]{100,}/
+  user_agent:
+    - /Mozilla/5.0.*Windows NT.*Chrome|Firefox/i
+condition: all of them
+fields:
+  - request_uri
+  - request_body
+  - user_agent
+  - client_ip

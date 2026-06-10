@@ -1,0 +1,24 @@
+title: OWA Session Cookie Theft via XSS
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects JavaScript patterns attempting to read or exfiltrate OWA session cookies
+logsource:
+  product: exchange_server
+  category: web_server
+detection:
+  req_uri:
+    - '/owa/auth/'
+    - '/owa/'
+  request_body:
+    - /document\.cookie|document\.location\.href|window\.location|fetch\(.*https?:\/\/
+    - /[a-zA-Z0-9+/=]{50,}\s*\+\s*document\.cookie|
+    - /new Image\(\).src=.*document\.cookie|
+    - /encodeURIComponent\(document\.cookie\)/
+  user_agent:
+    - /Mozilla/5.0.*Windows NT.*Chrome|Firefox/i
+condition: all of them
+fields:
+  - request_uri
+  - request_body
+  - user_agent
+  - client_ip
