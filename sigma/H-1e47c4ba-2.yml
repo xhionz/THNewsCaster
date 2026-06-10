@@ -1,0 +1,19 @@
+title: Suspicious Admin Account Creation in Ivanti Sentry
+logsource:
+  product: webserver
+  service: http
+condition: '1 of them'
+detection:
+  req_uri:
+    - '*admin/create*'
+    - '*user/add*'
+    - '*auth/bypass*'
+  method: 'POST'
+  body:
+    - '*"admin": true*'
+    - '*"role": "admin"*'
+    - '*"password":*'
+    - '*"username": "admin"*'
+    - '*"enabled": true*'
+  status_code: 201
+reference: https://cisa.gov/kev

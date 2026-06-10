@@ -1,0 +1,25 @@
+title: Suspicious Command Injection in Ivanti Sentry
+logsource:
+  product: webserver
+  service: http
+condition: '1 of them'
+detection:
+  req_uri:
+    - '*;*'
+    - '*|*'
+    - '*`*'
+    - '*$(*)'
+  user_agent:
+    - '*curl*'
+    - '*wget*'
+    - '*python-requests*'
+    - '*nc*'
+    - '*telnet*'
+  body:
+    - '*echo*'
+    - '*base64*'
+    - '*sh -c*'
+    - '*rm -f*'
+    - '*chmod*'
+  status_code: 200
+reference: https://cisa.gov/kev

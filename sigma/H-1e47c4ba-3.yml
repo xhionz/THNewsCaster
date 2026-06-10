@@ -1,0 +1,16 @@
+title: Lateral Movement from Ivanti Sentry Appliance
+logsource:
+  product: network
+  service: firewall
+condition: '1 of them'
+detection:
+  src_ip: '192.168.1.10'
+  dst_ip:
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'
+  dst_port: 445
+  bytes: > 10000
+  protocol: tcp
+  action: allow
+reference: https://cisa.gov/kev
