@@ -1,0 +1,19 @@
+title: Simulated MiniPlasma RDP Session Hijack
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4624
+    LogonType: 10
+    LogonProcessName: 'TermSrv'
+    AccountName: 'Administrator'
+  Selection2:
+    EventID: 4778
+    LogonType: 10
+    LogonProcessName: 'TermSrv'
+    AccountName: 'Administrator'
+  Condition: Selection and Selection2
+  keywords:
+    - 'MiniPlasma simulation'
+condition: selection and selection2

@@ -1,0 +1,17 @@
+title: Simulated GreenPlasma BitLocker Key Access
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4688
+    CommandLine: '*lsass.exe*'
+    ParentImage: '*\cmd.exe'
+  Selection2:
+    EventID: 4688
+    CommandLine: '*-dump*'
+    Image: '*\lsass.exe'
+  Condition: Selection and Selection2
+  keywords:
+    - 'GreenPlasma simulation'
+condition: selection and selection2

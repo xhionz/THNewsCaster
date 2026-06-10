@@ -1,0 +1,13 @@
+title: Simulated YellowKey Kernel Exploit Detection
+logsource:
+  product: windows
+  service: system
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\svchost.exe'
+    CommandLine: '*-s -p*'
+  Condition: Selection
+  keywords:
+    - 'YellowKey simulation'
+condition: selection
