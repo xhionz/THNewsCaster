@@ -1,0 +1,15 @@
+title: Detect RoguePlanet WMI Persistence via Event Consumer
+logsource:
+  product: windows
+  service: wmi
+condition: 'EventID: 5861 or EventID: 5862'
+detection:
+  selection1:
+    EventID: 5861
+    ConsumerType: "CommandLineEventConsumer"
+    CommandLine: "*cmd.exe*"
+  selection2:
+    EventID: 5862
+    ConsumerType: "ActiveScriptEventConsumer"
+    ScriptingLanguage: "VBScript" or "JScript"
+  condition: selection1 or selection2

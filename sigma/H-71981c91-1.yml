@@ -1,0 +1,11 @@
+title: Detect RoguePlanet LPE via Defender SCM Race Condition
+logsource:
+  product: windows
+  service: system
+condition: 'EventID: 7045 and Image: "*\svchost.exe" and ServiceName: "WinDefend" and ServiceType: "own_process" and ServiceStartType: "auto" and TimeCreated > "2026-06-08T00:00:00Z" and TimeCreated < "2026-06-10T23:59:59Z"'
+detection:
+  selection1:
+    ServiceName: "WinDefend"
+    ServiceType: "own_process"
+    ServiceStartType: "auto"
+  condition: selection1

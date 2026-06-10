@@ -1,0 +1,15 @@
+title: Detect RoguePlanet Ransomware via Scheduled Task
+logsource:
+  product: windows
+  service: task_scheduler
+condition: 'EventID: 106 or EventID: 107'
+detection:
+  selection1:
+    TaskName: "*Update*" or "*Defender*" or "*System*"
+    Action: "*cmd.exe" or "*powershell.exe" or "*wscript.exe"
+    User: "NT AUTHORITY\SYSTEM"
+    TaskPath: "\Microsoft\Windows\" or "\" 
+  selection2:
+    Action: "*cmd.exe" or "*powershell.exe"
+    CommandLine: "* -enc *" or "* -nop -c *" or "* -w hidden*"
+  condition: selection1 and selection2
