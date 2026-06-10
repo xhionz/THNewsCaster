@@ -1,0 +1,13 @@
+title: Suspicious SMBv3 Negotiation Request - CVE-2024-21887
+logsource:
+  product: windows
+  service: smb
+Detection:
+  selection:
+    EventID: 5156
+    Protocol: SMB
+    Size: '>100'
+    Flags: '0x00000000'
+    PacketType: 'NegotiateProtocolResponse'
+  condition: selection
+condition: selection

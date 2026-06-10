@@ -1,0 +1,17 @@
+title: Suspicious Email with Malicious Office Attachment
+logsource:
+  product: office365
+  service: email
+Detection:
+  selection:
+    From: '*@microsoft.com'
+    AttachmentExtension: 
+      - 'doc'
+      - 'docx'
+      - 'xls'
+      - 'xlsx'
+      - 'ppt'
+      - 'pptx'
+    Content: 'msoffice'
+  condition: selection
+condition: selection

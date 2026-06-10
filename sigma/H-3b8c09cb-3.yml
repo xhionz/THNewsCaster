@@ -1,0 +1,11 @@
+title: RDP Brute Force Attempt - Multiple Failed Logons
+logsource:
+  product: windows
+  service: security
+Detection:
+  selection:
+    EventID: 4625
+    LogonType: 10
+    AccountName: '*'
+  condition: selection
+condition: selection and count() > 10 within 5m
