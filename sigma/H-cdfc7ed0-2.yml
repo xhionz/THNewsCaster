@@ -1,0 +1,15 @@
+title: Ivanti CVE-2023-46805 Command Injection
+logsource:
+  product: ivanti_connect_secure
+  service: http
+detection:
+  req_uri:
+    - '/dana-na/'
+    - '/auth/'
+  req_body:
+    - contains: 'system('
+    - contains: 'exec('
+    - contains: 'cmd /c'
+    - contains: 'bash -c'
+condition: req_uri and (req_body)
+level: high

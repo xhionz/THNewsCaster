@@ -1,0 +1,17 @@
+title: Lateral Movement to Manufacturing Subnet
+logsource:
+  product: firewall
+  service: network
+detection:
+  src_ip:
+    - in: [fortios_device_ips, ivanti_device_ips]
+  dest_ip:
+    - in: [192.168.100.0/24]
+  protocol:
+    - 'tcp'
+  dest_port:
+    - 445
+    - 3389
+    - 5985
+condition: src_ip and dest_ip and protocol and dest_port
+level: medium

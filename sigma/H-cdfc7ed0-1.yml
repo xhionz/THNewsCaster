@@ -1,0 +1,14 @@
+title: FortiOS CVE-2023-27997 RCE Attempt
+logsource:
+  product: fortinet_fortios
+  service: http
+detection:
+  req_uri:
+    - '/remote/fgt_lang'
+    - '/remote/login'
+  req_body:
+    - contains: 'exec'
+    - contains: 'system('
+    - contains: 'cmd.exe'
+condition: req_uri and (req_body)
+level: high
