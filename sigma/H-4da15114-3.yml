@@ -1,0 +1,17 @@
+title: Detect Lateral Movement via SMB from Exchange Server
+logsource:
+  product: windows
+  service: security
+condition: '1 of them'
+detection:
+  selection:
+    event_id: 5145
+    share_name: '\\*\IPC$'
+    src_ip: 'exchange_server_ip_list'
+    dest_ip: 'domain_controller_ip_list'
+  selection2:
+    event_id: 5145
+    share_name: '\\*\C$'
+    src_ip: 'exchange_server_ip_list'
+    dest_ip: 'file_server_ip_list'
+  condition: selection or selection2

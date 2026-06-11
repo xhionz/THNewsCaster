@@ -1,0 +1,15 @@
+title: Detect Suspicious OWA Access from Internal User with Anomalous Behavior
+logsource:
+  product: exchange_server
+  service: iis
+condition: '1 of them'
+detection:
+  selection:
+    uri: '/owa/'
+    status: 200
+    user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+  selection2:
+    src_ip: '192.168.10.0/24'
+    user: 'not in (known_admin_users)'
+    login_time: '2026-05-14T00:00:00Z - 2026-05-20T23:59:59Z'
+  condition: selection and selection2
