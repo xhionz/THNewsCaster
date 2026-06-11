@@ -1,0 +1,19 @@
+title: UNC6240 PeopleSoft RCE Exploit Attempt
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_method:
+    - POST
+    - GET
+  uri:
+    - '*psp/*'
+    - '*psauth/*'
+    - '*psweb/*'
+  user_agent:
+    - 'curl/*'
+    - 'wget/*'
+    - 'python-requests/*'
+    - 'libwww-perl/*'
+  status_code: 200
+condition: all of them

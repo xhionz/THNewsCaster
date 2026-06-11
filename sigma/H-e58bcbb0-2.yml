@@ -1,0 +1,24 @@
+title: UNC6240 Phishing Email to Admins Targeting PeopleSoft
+logsource:
+  product: email
+  service: smtp
+detection:
+  sender_domain:
+    - 'oracle-support[.]com'
+    - 'peoplesoft-updates[.]net'
+    - 'hr-secure[.]org'
+  subject:
+    - 'Urgent: Security Patch Required for PeopleSoft'
+    - 'Action Required: Your PeopleSoft Access Will Be Disabled'
+    - 'Your Oracle Security Update'
+  attachment_extension:
+    - '.exe'
+    - '.js'
+    - '.vbs'
+    - '.zip'
+  body_keywords:
+    - 'CVE'
+    - 'patch'
+    - 'PeopleSoft'
+    - 'urgent'
+condition: all of them
