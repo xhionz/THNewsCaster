@@ -1,0 +1,10 @@
+title: Unusual Database Connection from PeopleSoft Server
+logsource:
+  product: network
+  service: firewall
+condition: 'src_ip IN (peoplesoft_server_ips) AND dst_ip IN (hr_db_server_ips) AND dst_port IN (1433, 1521, 3306) AND event_type=connection_established'
+detection:
+  src_ip_in: ["10.10.5.10", "10.10.5.11"]
+  dst_ip_in: ["10.20.1.5", "10.20.1.6"]
+  dst_port_in: [1433, 1521, 3306]
+  event_type: connection_established

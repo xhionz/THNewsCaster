@@ -1,0 +1,20 @@
+title: Suspicious Command Injection via CVE-2026-10520
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_uri:
+    - '/api/v1/endpoint'
+    - '/api/v1/config'
+    - '/api/v1/execute'
+  method: 'POST'
+  user_agent: 'curl'|'wget'|'python-requests'
+  body_pattern:
+    - 'cmd='
+    - 'exec('
+    - 'system('
+    - 'bash -c'
+    - 'powershell -c'
+  status_code: 200
+condition: all of them
+level: high

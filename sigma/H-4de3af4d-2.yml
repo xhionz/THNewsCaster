@@ -1,0 +1,14 @@
+title: Lateral Movement via RDP/SMB from Sentry OS
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 4624  # Successful logon
+    - 4625  # Failed logon
+  logon_type: 3  # Network logon
+  source_network_address: '[sentry_os_ip_1]'|'[sentry_os_ip_2]'|'[sentry_os_ip_3]'
+  account_name: 'Administrator'|'svc_account'|'domain_admin'
+  logon_process: 'Advapi'|'NtLmSsp'
+condition: all of them
+level: high

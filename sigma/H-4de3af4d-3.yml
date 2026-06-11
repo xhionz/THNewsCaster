@@ -1,0 +1,15 @@
+title: Suspicious DNS Tunneling from Sentry OS
+logsource:
+  product: dns
+  service: query
+detection:
+  query:
+    - /.*[a-z]{10,}//
+    - /.*[0-9]{8,}//
+    - /.*[a-f0-9]{32,}//
+  domain_length: '>50'
+  query_count: '>10'
+  timeframe: 5m
+  src_ip: '[sentry_os_ip_1]'|'[sentry_os_ip_2]'|'[sentry_os_ip_3]'
+condition: all of them
+level: high

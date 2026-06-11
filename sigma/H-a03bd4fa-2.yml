@@ -1,0 +1,13 @@
+title: Suspicious PeopleSoft Login from High-Risk User Agent
+logsource:
+  product: application
+  service: peoplesoft
+condition: 'event_type == "login_success" and user_agent CONTAINS "curl" or user_agent CONTAINS "python-requests" and user NOT IN (admin_users) and src_ip IN (corporate_ip_ranges)'
+detection:
+  event_type: login_success
+  user_agent_pattern:
+    - "curl/"
+    - "python-requests/"
+    - "wget/"
+  user_not_in: ["admin", "svc_peoplesoft", "hr_admin"]
+  src_ip_in: ["10.10.0.0/16", "192.168.1.0/24"]

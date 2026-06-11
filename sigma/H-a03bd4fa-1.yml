@@ -1,0 +1,13 @@
+title: Suspicious POST to PeopleSoft Webshell Path
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri contains "/psp/ps/" and request_method == "POST" and (request_uri contains "/shell.php" or request_uri contains "/upload.php" or request_uri contains "/cmd.php") and status_code == 200
+detection:
+  method: POST
+  uri_pattern:
+    - "/psp/ps/shell.php"
+    - "/psp/ps/upload.php"
+    - "/psp/ps/cmd.php"
+  status: 200
