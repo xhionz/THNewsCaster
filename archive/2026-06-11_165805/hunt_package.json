@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T17:32:42+00:00",
+  "generated_at": "2026-06-11T16:58:02+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -13867,7 +13867,7 @@
       ]
     }
   ],
-  "skipped": 324,
-  "total_seen": 325,
-  "brief": "Critical patching urgency dominates, with multiple exploited zero-days in Microsoft Exchange and Windows systems posing immediate enterprise-wide risks. Prioritize patching CVE-2026-42897 (exploited Exchange) and CVE-2026-10520/CVE-2026-10523 (Ivanti Sentry) due to KEV status and confirmed active exploitation in manufacturing. Actor activity remains unattributed, but Ivanti and Microsoft products are the primary targets across critical infrastructure sectors."
+  "skipped": 340,
+  "total_seen": 340,
+  "brief": "Critical patching urgency dominates, driven by multiple exploited zero-days and Kev-listed vulnerabilities in Microsoft Exchange and Ivanti Sentry. Prioritize patching CVE-2026-10520, CVE-2026-10523, and CVE-2026-42897 immediately—these are Kev-listed, enable remote code execution, and target manufacturing sectors with high-impact assets. Ivanti Sentry and Microsoft Exchange are the primary attack vectors, with manufacturing as the most targeted sector."
 }
