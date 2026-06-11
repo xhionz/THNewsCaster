@@ -1,0 +1,22 @@
+title: Suspicious HTTP Request to Ivanti Connect Secure RCE Endpoint
+logsource:
+  product: webserver
+  service: nginx
+condition: '1 of them'
+detection:
+  req_uri:
+    - '/dana-na/auth/url_default/login.cgi'
+    - '/dana-na/auth/url_default/submit'
+    - '/dana-na/auth/url_default/submit?'
+  user_agent:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+  method: 'POST'
+  status: 200
+  referer: ''
+  content_length: '>1000'
+  remote_ip: '10.0.0.0/8'
+falsepositives:
+  - Legitimate internal monitoring scripts
+level: critical

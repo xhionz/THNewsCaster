@@ -1,0 +1,16 @@
+title: Unusual HTTPS Outbound from Ivanti Appliance
+logsource:
+  product: webserver
+  service: nginx
+condition: '1 of them'
+detection:
+  src_ip: 'IVANTI_APPLIANCE_IP'
+  dst_port: 443
+  uri: '.*'
+  content_length: '>5000000'
+  user_agent: 'Mozilla/5.0'
+  method: 'GET'
+  status: 200
+falsepositives:
+  - Legitimate backup or sync traffic
+level: high

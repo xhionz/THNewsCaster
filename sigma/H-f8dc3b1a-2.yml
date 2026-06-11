@@ -1,0 +1,13 @@
+title: Suspicious SSH Login from Ivanti Appliance to Internal Host
+logsource:
+  product: sshd
+condition: '1 of them'
+detection:
+  src_ip: 'IVANTI_APPLIANCE_IP'
+  dst_ip: '10.0.0.0/8'
+  auth_method: 'password'
+  event_type: 'session_opened'
+  user: 'root'
+falsepositives:
+  - Legitimate admin maintenance
+level: high
