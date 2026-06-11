@@ -1,0 +1,12 @@
+title: Palo Alto CVE-2023-3436 SSL-Tunnel C2
+logsource:
+  product: paloalto
+  service: traffic
+condition: 'selection'
+detection:
+  selection:
+    app: 'ssl-tunnel'
+    action: 'allow'
+    bytes_out: '>100000'
+    destination_ip: '10.0.0.0/8'
+  condition: selection

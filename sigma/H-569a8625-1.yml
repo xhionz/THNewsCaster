@@ -1,0 +1,10 @@
+title: Splunk CVE-2023-46813 Web Shell Creation
+logsource:
+  product: splunk
+  service: web
+condition: 'selection'
+detection:
+  selection:
+    path: '*\*.php'
+    user: 'splunk'
+  condition: selection

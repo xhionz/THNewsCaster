@@ -1,0 +1,11 @@
+title: Supply Chain Compromise via Malicious Update
+logsource:
+  product: windows
+  service: sysmon
+condition: 'selection'
+detection:
+  selection:
+    Image: ['*\splunkupdate.exe', '*\panupdate.exe', '*\update.exe', '*\patch.exe']
+    ParentImage: ['*\splunkd.exe', '*\panw-service.exe']
+    CommandLine: '*-silent* *-force*'
+  condition: selection
