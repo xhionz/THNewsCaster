@@ -1,0 +1,13 @@
+title: Detect Suspicious JSESSIONID Usage
+logsource:
+  product: web_server
+  category: access_log
+detection:
+  selection:
+    http_cookie: '*JSESSIONID=*'
+    status: 200
+  condition: selection
+fields:
+  - http_cookie
+  - client_ip
+  - user_agent

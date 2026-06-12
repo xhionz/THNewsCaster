@@ -1,0 +1,13 @@
+title: Detect Log4Shell Exploitation via JNDI Lookup
+logsource:
+  product: web_server
+  category: access_log
+detection:
+  selection:
+    uri_path: '*${jndi:*'
+    status: 200
+  condition: selection
+fields:
+  - uri_path
+  - client_ip
+  - user_agent

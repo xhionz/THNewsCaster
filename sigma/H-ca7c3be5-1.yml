@@ -1,0 +1,14 @@
+title: Detect PeopleSoft CVE-2021-21975 Exploitation
+logsource:
+  product: web_server
+  category: access_log
+detection:
+  selection:
+    uri_path: "/psp/ps/"  
+    query: "*%27+OR+1%3D1*"  
+    status: 200
+  condition: selection
+fields:
+  - uri_path
+  - query
+  - client_ip
