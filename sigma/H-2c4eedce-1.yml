@@ -1,0 +1,12 @@
+title: Suspicious PeopleSoft WAR File Access via CVE-2026-35273
+logsource:
+  product: webserver
+  service: apache
+  category: web
+Detection:
+  request_uri:
+    - '*psemhub.war*'
+    - '*readme-if-you-see-this-youve-been-hacked.txt*'
+  status_code: 200
+  user_agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+condition: all of them

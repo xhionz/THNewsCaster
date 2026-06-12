@@ -1,0 +1,9 @@
+title: Suspicious Cloud Exfil via MeshAgent Binary
+logsource:
+  product: windows
+  category: process_creation
+Detection:
+  image: '*meshagent64-azure-ops.exe'
+  parent_image: 'java.exe'
+  command_line: '*https://azurenetfiles.net*'
+condition: all of them

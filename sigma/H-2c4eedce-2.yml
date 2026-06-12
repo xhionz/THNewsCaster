@@ -1,0 +1,11 @@
+title: Suspicious SMB Access from PeopleSoft Server
+logsource:
+  product: windows
+  service: smb-server
+  category: network_connection
+Detection:
+  source_ip: '142.11.200.186'
+  target_share: 'C$'
+  user: 'Administrator'
+  event_id: 5140
+condition: all of them
