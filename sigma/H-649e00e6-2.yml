@@ -1,0 +1,23 @@
+title: Suspicious System Persistence After AUR Build
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects creation of systemd units, cron jobs, or shell profile modifications immediately after AUR package build
+logsource:
+  product: linux
+  service: auditd
+detection:
+  build_complete:
+    - event_type: exec
+      comm: makepkg
+      args: '-s'
+  persistence_change:
+    - event_type: file_create
+      file_path: '/etc/systemd/system/*.service'
+    - event_type: file_write
+      file_path: '/etc/cron.d/*'
+    - event_type: file_write
+      file_path: '/home/*/.bashrc'
+    - event_type: file_write
+      file_path: '/home/*/.zshrc'
+  condition: build_complete and (persistence_change)
+level: high

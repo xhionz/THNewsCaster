@@ -1,0 +1,19 @@
+title: Suspicious Rust Binary Execution After AUR Build
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects execution of a Rust-compiled binary immediately after AUR package build
+logsource:
+  product: linux
+  service: auditd
+detection:
+  build_phase:
+    - event_type: exec
+      comm: makepkg
+      args: '-s'
+  malware_execution:
+    - event_type: exec
+      comm: 'rustc'
+      args: '-o'
+      parent_comm: makepkg
+  condition: build_phase and malware_execution
+level: high
