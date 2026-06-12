@@ -1,0 +1,18 @@
+title: Lateral Movement via SMB/RDP from Ivanti Appliance IPs
+logsource:
+  product: windows
+  service: security
+condition: 'event_id:4624 OR event_id:4625 AND src_ip IN [Ivanti_appliance_IPs] AND dst_ip IN [internal_server_subnets]'
+detection:
+  event_id:
+    - 4624
+    - 4625
+  src_ip:
+    - "10.10.10.10"
+    - "10.10.10.11"
+    - "10.10.10.12"
+  dst_ip:
+    - "10.10.20.1"
+    - "10.10.20.2"
+    - "10.10.20.3"
+condition: 'all of them'

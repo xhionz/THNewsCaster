@@ -1,0 +1,25 @@
+title: Detection of CVE-2023-46805 Command Injection Payloads
+logsource:
+  product: webserver
+  service: http
+condition: 'body|contains: ["grep", "cat", "ls", "id", "whoami", "curl", "wget", "nc", "bash", "sh", "python", "perl"]'
+detection:
+  body|contains:
+    - "grep"
+    - "cat"
+    - "ls"
+    - "id"
+    - "whoami"
+    - "curl"
+    - "wget"
+    - "nc"
+    - "bash"
+    - "sh"
+    - "python"
+    - "perl"
+  user_agent|contains:
+    - "Mozilla/5.0"
+    - "curl"
+    - "wget"
+    - "python-requests"
+condition: 'all of them'

@@ -1,0 +1,17 @@
+title: Detection of Suspicious DNS TXT Queries from Ivanti Appliances
+logsource:
+  product: dns
+condition: 'query|contains: "data" OR query|contains: "exfil" OR query|contains: "secret" OR query|endswith: ".com" OR query|endswith: ".net" OR query|endswith: ".org"'
+detection:
+  type: "TXT"
+  query|contains:
+    - "data"
+    - "exfil"
+    - "secret"
+    - "token"
+    - "key"
+  domain|endswith:
+    - ".com"
+    - ".net"
+    - ".org"
+condition: 'all of them'
