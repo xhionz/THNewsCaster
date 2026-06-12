@@ -1,0 +1,5 @@
+title: Ivanti Server Lateral Movement via SMB/RDP
+logsource:
+  product: windows
+  service: network_connection
+condition: 'initiated: true and destination_ip: "10.0.0.0/8" or "172.16.0.0/12" or "192.168.0.0/16" and (destination_port: 445 or destination_port: 3389) and source_process_path: "C:\\Ivanti\\"'

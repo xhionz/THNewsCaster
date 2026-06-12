@@ -1,0 +1,5 @@
+title: Ivanti Server Mimikatz Credential Dumping
+logsource:
+  product: windows
+  service: process_creation
+condition: 'process_name: "mimikatz.exe" or process_name: "rundll32.exe" or process_name: "certutil.exe" or process_name: "powershell.exe" and (command_line: "sekurlsa::logonpasswords" or command_line: "lsass" or command_line: "dumplsa" or command_line: "privilege::debug") and parent_process_path: "C:\\Ivanti\\"'

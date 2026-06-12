@@ -1,0 +1,5 @@
+title: Ivanti CVE-2024-21887 Path Traversal Attempt
+logsource:
+  product: windows
+  service: http
+condition: 'uri|contains: "/dana-na/" and (uri|contains: "../" or uri|contains: "..\\" or uri|contains: "%2e%2e/" or uri|contains: "..%5c") and status_code: 200'
