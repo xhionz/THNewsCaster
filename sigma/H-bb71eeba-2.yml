@@ -1,0 +1,13 @@
+title: Lateral Movement via SMB or RDP from VPN Gateway Subnet
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+    SourceNetworkAddress: '192.168.100.0/24'
+    TargetUserName: !'ANONYMOUS LOGON'
+  condition: selection
+fields: [TargetUserName, TargetDomain, SourceNetworkAddress]
+level: high

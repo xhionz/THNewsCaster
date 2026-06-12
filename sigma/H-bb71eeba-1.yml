@@ -1,0 +1,12 @@
+title: Detection of CVE-2026-50751 IKEv1 Authentication Bypass Attempt
+logsource:
+  product: checkpoint
+  service: vpn
+detection:
+  selection:
+    event_type: 'ikev1_auth_bypass'
+    vendor: 'Check Point'
+    severity: 'high'
+  condition: selection
+fields: [src_ip, dst_ip, user_agent]
+level: critical

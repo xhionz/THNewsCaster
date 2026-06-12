@@ -1,0 +1,12 @@
+title: Ransomware File Encryption Pattern Detected on Manufacturing Hosts
+logsource:
+  product: windows
+  service: file_system
+detection:
+  selection:
+    event_type: 'file_encrypted'
+    file_extension: ['.lock', '.crypt', '.encrypted', '.xyz']
+    file_path: 'C:\\Manufacturing\\' OR 'D:\\Production\\'
+  condition: selection
+fields: [file_path, file_name, process_name]
+level: critical
