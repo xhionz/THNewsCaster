@@ -1,0 +1,16 @@
+title: Check Point IKEv1 Authentication Bypass Detection
+logsource:
+  product: check_point
+  service: vpn
+condition: 'ikev1.auth.method == "pre-shared-key"' and 'ikev1.auth.status == "bypassed"' and 'src_ip != trusted_networks'
+detection:
+  ikev1_auth_bypass:
+    ikev1.auth.method: "pre-shared-key"
+    ikev1.auth.status: "bypassed"
+  not_trusted:
+    src_ip: "192.168.0.0/16"
+  trusted_networks:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+condition: ikev1_auth_bypass and not not_trusted

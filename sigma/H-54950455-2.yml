@@ -1,0 +1,24 @@
+title: Ransomware Process Creation via PowerShell/WMI from VPN-Connected Host
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  suspicious_parent:
+    ParentImage: 
+      - '*\powershell.exe'
+      - '*\wmic.exe'
+  suspicious_command:
+    Image: 
+      - '*\certutil.exe'
+      - '*\bitsadmin.exe'
+      - '*\curl.exe'
+      - '*\wget.exe'
+    CommandLine: 
+      - '*-enc*'
+      - '*-nop*'
+      - '*-w 1*'
+      - '*http*'
+      - '*https*'
+  vpn_source:
+    SourceNetwork: "10.0.0.0/8"
+condition: suspicious_parent and suspicious_command and vpn_source

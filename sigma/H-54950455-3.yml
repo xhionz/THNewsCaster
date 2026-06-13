@@ -1,0 +1,27 @@
+title: Suspicious Credential Harvesting via Phishing Email + VPN Login
+logsource:
+  product: office365
+  service: mail
+detection:
+  phishing_email:
+    sender_domain: 
+      - "trusted-domain.com"
+      - "update-security.net"
+      - "secure-login.org"
+    subject: 
+      - "Urgent: Your VPN credentials have expired"
+      - "Action Required: Security Certificate Renewal"
+    attachment: 
+      - '*.exe'
+      - '*.scr'
+      - '*.zip'
+    body: 
+      - '*VPN*'
+      - '*password*'
+      - '*click here*'
+  vpn_login:
+    logsource:
+      product: check_point
+      service: vpn
+    condition: 'src_ip == user_ip' and 'auth.method == "pre-shared-key"' and 'auth.status == "success"' and 'user_agent == "unknown"'
+condition: phishing_email and vpn_login
