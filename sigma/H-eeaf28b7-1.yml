@@ -1,0 +1,16 @@
+title: Suspicious LSASS Memory Access via Native Tools
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4688
+    CommandLine: '*lsass*'
+    ParentCommandLine: '*procdump*|*taskmgr*|*dumpert*|*rundll32*'
+  Selection2:
+    EventID: 4688
+    CommandLine: '*-p lsass*'
+    ParentImage: '*\svchost.exe'
+  Condition: Selection1 or Selection2
+status: experimental
+level: high
