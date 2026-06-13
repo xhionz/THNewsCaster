@@ -1,0 +1,15 @@
+title: Splunk Unauthenticated RCE via inputs.conf Manipulation
+logsource:
+  product: splunk
+  service: web_access
+detection:
+  selection:
+    method: 'POST'
+    uri: '*//servicesNS/*/configs/conf-inputs*'
+    status: 200
+    user: '-'
+  condition: selection
+fields:
+  - user
+  - uri
+  - status

@@ -1,0 +1,15 @@
+title: Splunk Persistence via Suspicious Scripted Input
+logsource:
+  product: splunk
+  service: config_audit
+detection:
+  selection:
+    action: 'modified'
+    file: '*inputs.conf*'
+    content: '*script* OR *cmd* OR *powershell* OR *sh*'
+    user: '-'
+  condition: selection
+fields:
+  - file
+  - content
+  - user

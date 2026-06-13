@@ -1,0 +1,16 @@
+title: Splunk REST API Scanning for Internal Hosts
+logsource:
+  product: splunk
+  service: web_access
+detection:
+  selection:
+    method: 'GET'
+    uri: '*//services/search/jobs*'
+    status: 200
+    user: '-'
+    content: 'search=host=* AND (ip=10.* OR ip=172.16.* OR ip=192.168.*)'
+  condition: selection
+fields:
+  - user
+  - uri
+  - content
