@@ -1,0 +1,12 @@
+title: Detect SD-WAN Manager Path Traversal Attempt
+logsource:
+  product: cisco_sdwan
+  service: http
+condition: 'request_uri: "*../" or request_uri: "*..\\/" or request_uri: "*/etc/passwd" or request_uri: "*/windows/win.ini"'
+detection:
+  request_uri:
+    - '*../'
+    - '*..\\/'
+    - '*/etc/passwd'
+    - '*/windows/win.ini'
+condition: any of them

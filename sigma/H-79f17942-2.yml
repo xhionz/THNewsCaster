@@ -1,0 +1,12 @@
+title: Detect LiteSpeed Symlink Exploitation Attempt
+logsource:
+  product: litespeed
+  service: http
+condition: 'request_uri: "*../" or request_uri: "*..\\/" or request_uri: "*/.ssh/id_rsa" or request_uri: "*/.env"'
+detection:
+  request_uri:
+    - '*../'
+    - '*..\\/'
+    - '*/.ssh/id_rsa'
+    - '*/.env'
+condition: any of them

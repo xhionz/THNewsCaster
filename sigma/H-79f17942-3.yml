@@ -1,0 +1,18 @@
+title: Detect Lateral Movement via SMB or SSH from Suspicious Source
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 or event_id: 4625 and logon_type: 3 and source_network_address != '' and (account_name: 'Administrator' or account_name: 'svc_*' or account_name: 'webadmin*' or account_name: 'backup*' or account_name: 'domain*' or account_name: 'user_*')'
+detection:
+  event_id:
+    - 4624
+    - 4625
+  logon_type: 3
+  account_name:
+    - 'Administrator'
+    - 'svc_*'
+    - 'webadmin*'
+    - 'backup*'
+    - 'domain*'
+    - 'user_*'
+condition: event_id of them and account_name of them
