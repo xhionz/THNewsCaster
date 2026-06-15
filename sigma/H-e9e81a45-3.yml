@@ -1,0 +1,19 @@
+title: Detect Malicious Network Activity from Approved Add-ins
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  parent_image:
+    - '*outlook.exe'
+    - '*teams.exe'
+    - '*excel.exe'
+  image:
+    - '*msedge.exe'
+    - '*chrome.exe'
+    - '*powershell.exe'
+  network_connection:
+    - '*microsoft.com*'
+    - '*azure.com*'
+    - '*graph.microsoft.com*'
+  destination_ip_not_in: ['13.107.0.0/16', '52.112.0.0/14', '40.92.0.0/15', '104.211.0.0/16']
+condition: all of parent_image and image and network_connection and destination_ip_not_in

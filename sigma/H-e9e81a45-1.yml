@@ -1,0 +1,14 @@
+title: Detect SearchLeak Exploitation via Unusual Copilot API Access
+logsource:
+  product: microsoft365
+  service: copilot_web_access
+detection:
+  req_url:
+    - '*copilot*'
+    - '*graph.microsoft.com*'
+    - '*api.microsoft.com*'
+  method: 'POST'
+  status_code: 200
+  user_agent: '*Mozilla*'
+  referer: '*office.com*'
+condition: all of req_url and method and status_code and user_agent and referer
