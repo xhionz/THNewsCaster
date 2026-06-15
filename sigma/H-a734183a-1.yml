@@ -1,0 +1,11 @@
+title: Detect GlobalProtect Authentication Bypass via CVE-2023-34362
+logsource:
+  product: palo_alto
+  service: globalprotect
+condition: 'event_id: "portal-auth-bypass" or event_id: "gateway-auth-bypass"'
+detection:
+  auth_bypass:
+    event_id:
+      - "portal-auth-bypass"
+      - "gateway-auth-bypass"
+condition: auth_bypass

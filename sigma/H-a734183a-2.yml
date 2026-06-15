@@ -1,0 +1,13 @@
+title: Detect Suspicious DNS Query Patterns Suggestive of Tunneling
+logsource:
+  product: dns
+  service: query
+detection:
+  high_entropy_subdomain:
+    query:
+      - '*.*.*.*.*'
+    condition: 'len(query) > 30 and query matches "^[a-z0-9]{8,}$"'
+  frequent_queries:
+    count: > 50
+    timeframe: 1h
+condition: all of them

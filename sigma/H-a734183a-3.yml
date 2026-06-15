@@ -1,0 +1,11 @@
+title: Detect SMB Exploitation Attempts via Event ID 11
+logsource:
+  product: windows
+  service: security
+detection:
+  smb_exploit:
+    event_id: "11"
+    image: "*\svchost.exe"
+    target_ip: "*"
+    source_ip: "*"
+condition: smb_exploit
