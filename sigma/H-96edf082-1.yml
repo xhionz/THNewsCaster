@@ -1,0 +1,26 @@
+title: Detection of Web Shell Upload via cPanel LiteSpeed Plugin Exploit
+id: 5a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: Detects POST requests to cPanel plugin endpoints that may indicate web shell upload via CVE-2026-54420
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: |
+  (request_uri contains '/cgi-bin/litespeed/' or request_uri contains '/plugin/litespeed/')
+  and method: 'POST'
+  and (content_type contains 'multipart/form-data' or file_extension in ['php', 'phtml', 'jsp'])
+  and status_code: 200
+  and user_agent !~ 'Mozilla/5.0 (compatible; Googlebot|bingbot|YandexBot)'
+detection:
+  suspicious_files:
+    - '/cgi-bin/litespeed/upload.php'
+    - '/plugin/litespeed/verify.php'
+    - '/plugin/litespeed/backup.php'
+  suspicious_headers:
+    - 'Content-Disposition: attachment; filename="*.php"'
+  suspicious_body_patterns:
+    - 'eval($_POST["cmd"])'
+    - 'system($_REQUEST["cmd"])'
+    - 'base64_decode($_POST["data"])'
+level: high
