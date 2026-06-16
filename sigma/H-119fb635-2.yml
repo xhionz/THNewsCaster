@@ -1,0 +1,5 @@
+title: Suspicious SSH Brute Force Attempts on Manufacturing Network
+logsource:
+  product: linux
+  service: sshd
+condition: 'event_type: authentication_failure AND user NOT IN ["root", "admin", "cisco"] AND src_ip NOT IN ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] AND timestamp BETWEEN "2023-06-15T00:00:00Z" AND "2023-06-17T23:59:59Z"'

@@ -1,0 +1,4 @@
+title: Suspicious DNS Tunneling for Exfiltration
+logsource:
+  product: dns
+condition: 'query_length > 100 AND query ENDS WITH ".com" OR ".net" OR ".org" AND query_count_by_query > 10 AND src_ip IN ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] AND timestamp BETWEEN "2023-06-15T00:00:00Z" AND "2023-06-17T23:59:59Z"'

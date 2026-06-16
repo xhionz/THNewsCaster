@@ -1,0 +1,5 @@
+title: Suspicious SD-WAN Manager RCE Exploitation
+logsource:
+  product: cisco_sdwan
+  service: http
+condition: 'uri|contains: ["/upload", "/admin", "/api"] and request_method: POST and response_size > 10000 and status_code: [200, 201, 302]'
