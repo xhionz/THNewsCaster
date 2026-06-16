@@ -1,0 +1,10 @@
+title: Detect Rokarolla Clipboard Hijacking for Crypto Addresses
+logsource:
+  product: android
+  service: clipboard_manager
+detection:
+  clipboard_content:
+    - /bc1[a-zA-Z0-9]{39,59}/
+    - /0x[a-fA-F0-9]{40}/
+    - /^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$/
+condition: clipboard_content

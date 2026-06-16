@@ -1,0 +1,16 @@
+title: Detect Rokarolla C2 Communication via HTTP/DNS
+logsource:
+  product: android
+  service: network
+detection:
+  domain:
+    - 'rokarolla-update[.]com'
+    - 'secure-bank-api[.]net'
+    - 'crypto-sync[.]org'
+  url_path:
+    - '/api/v1/pin'
+    - '/api/v1/sms'
+    - '/upload'
+  method: 'POST'
+  user_agent: 'Dalvik/2.1.0 (Linux; U; Android 12)'
+condition: domain and url_path and method and user_agent

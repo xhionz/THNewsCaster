@@ -1,0 +1,11 @@
+title: Detect Rokarolla Sideloading via Installer Package
+logsource:
+  product: android
+  service: package_manager
+detection:
+  installer_package:
+    - 'com.android.packageinstaller'
+    - 'com.sec.android.app.samsungapps'
+    - 'com.google.android.packageinstaller'
+  package_name: 'com.rokarolla.*' | 'com.cryptoapp.*' | 'com.banksecure.*'
+condition: installer_package and package_name
