@@ -1,0 +1,10 @@
+title: Detect mpengine.dll sideloaded by non-system application
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 10
+  Image: '*\notepad.exe' | '*\winword.exe' | '*\excel.exe' | '*\outlook.exe'
+  ImageLoaded: '*\mpengine.dll'
+  ImageLoaded: '*\mpengine.dll' AND ImageLoaded NOT LIKE '*\Windows\System32\%'
+condition: all of them

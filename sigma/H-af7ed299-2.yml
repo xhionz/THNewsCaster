@@ -1,0 +1,9 @@
+title: Detect Defender real-time protection disabled via registry modification
+logsource:
+  product: windows
+  service: registry
+detection:
+  EventID: 12
+  TargetObject: '*\Software\Microsoft\Windows Defender\DisableRealtimeMonitoring'
+  Details: '1'
+condition: all of them

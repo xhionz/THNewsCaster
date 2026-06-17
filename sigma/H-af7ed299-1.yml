@@ -1,0 +1,11 @@
+title: Detect mpengine.dll loaded by non-SYSTEM process via CVE-2023-21768 exploit
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 10
+  Image: '*\svchost.exe'
+  ImageLoaded: '*\mpengine.dll'
+  IntegrityLevel: 'Low' | 'Medium'
+  User: 'NT AUTHORITY\SYSTEM' | 'NT AUTHORITY\LOCAL SERVICE' | 'NT AUTHORITY\NETWORK SERVICE'
+condition: all of them
