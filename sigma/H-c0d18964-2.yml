@@ -1,0 +1,15 @@
+title: Suspicious File Encryption Command Line Activity
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: stable
+description: Detects command-line execution patterns associated with ransomware file encryption on Linux systems
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  selection:
+    image: "*/php" OR image: "*/sh" OR image: "*/bash" OR image: "*/python"
+    CommandLine: "*find* -name '*.php' -exec*" OR CommandLine: "*find* -name '*.pdf' -exec*" OR CommandLine: "*tar -czf* *.enc*" OR CommandLine: "*openssl enc*" OR CommandLine: "*rm -f* *.pdf*" OR CommandLine: "*mv* *.pdf* *.enc*"
+  condition: selection
+falsepositives:
+  - Legitimate backup scripts
+level: high

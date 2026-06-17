@@ -1,0 +1,19 @@
+title: Internal Recon via Proxy from Compromised Web Server
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: stable
+description: Detects HTTP requests from known web server IPs to internal RFC1918 ranges via proxy, suggesting internal reconnaissance
+logsource:
+  product: proxy
+  service: squid
+  category: web
+detection:
+  selection:
+    src_ip: "192.168.10.0/24" OR src_ip: "10.10.1.0/24"  # Web server subnet
+    dst_ip: "10.0.0.0/8" OR dst_ip: "172.16.0.0/12" OR dst_ip: "192.168.0.0/16"
+    dst_port: 80 OR dst_port: 443
+    uri: "*"  # Any URI
+    timeframe: 10m
+  condition: selection
+falsepositives:
+  - Legitimate internal monitoring
+level: medium

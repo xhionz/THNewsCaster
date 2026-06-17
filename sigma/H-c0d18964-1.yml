@@ -1,0 +1,24 @@
+title: Suspicious Joomla JCE Exploitation Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: stable
+description: Detects HTTP POST requests to Joomla JCE endpoint with suspicious parameters indicative of CVE-2020-12345 exploitation
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_method: "POST" and uri: "*/administrator/index.php" and (query_string contains "option=com_jce" or query_string contains "task=ajax" or query_string contains "action=upload") and (user_agent: "" or referer: "")
+timeframe: 5m
+detection:
+  selection:
+    request_method: "POST"
+    uri: "*/administrator/index.php"
+    query_string:
+      - "option=com_jce"
+      - "task=ajax"
+      - "action=upload"
+    user_agent: ""
+    referer: ""
+  condition: selection
+falsepositives:
+  - Legitimate admin testing
+level: high
