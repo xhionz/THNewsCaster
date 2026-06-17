@@ -1,0 +1,12 @@
+title: Suspicious JCE Plugin File Upload Exploit
+logsource:
+  product: webserver
+  service: apache
+condition: 'selection'
+detection:
+  selection:
+    http_method: 'POST'
+    http_uri: '*/administrator/components/com_jce/*'
+    http_user_agent: '^(?!.*(Mozilla|Chrome|Safari|Firefox)).*'
+    http_post_data: '.*func=upload|.*upload=.*|.*filename=.*php.*'
+  condition: selection

@@ -1,0 +1,13 @@
+title: Suspicious SMB/WinRM Lateral Movement from Web Server
+logsource:
+  product: windows
+  service: sysmon
+condition: 'selection'
+detection:
+  selection:
+    EventID: 3
+    SourceIp: '192.168.10.10'
+    DestinationIp: '192.168.20.*'
+    DestinationPort: '445' OR '5985'
+    Image: 'svchost.exe' OR 'powershell.exe' OR 'cmd.exe'
+  condition: selection

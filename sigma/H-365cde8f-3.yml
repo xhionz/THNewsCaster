@@ -1,0 +1,13 @@
+title: Suspicious HTTP Exfiltration with Base64 Encoding
+logsource:
+  product: webserver
+  service: apache
+condition: 'selection'
+detection:
+  selection:
+    http_method: 'POST'
+    http_uri: '!*/administrator/components/com_jce/*'
+    http_user_agent: '^(?!.*(Mozilla|Chrome|Safari|Firefox)).*'
+    http_post_data: '.*[A-Za-z0-9+/]{100,}=*'
+    content_length: '100000-'
+  condition: selection
