@@ -1,0 +1,5 @@
+title: Detect FortiOS VPN Exploit Attempts via Unusual POST Requests
+logsource:
+  product: fortinet
+  service: fortigate
+condition: 'request_method: POST and url: /remote/fgt_lang and status_code: 404 and user_agent: contains("curl") and src_ip: not in ("192.168.1.0/24", "10.0.0.0/8")'

@@ -1,0 +1,5 @@
+title: Detect Internal Network Scanning from Compromised Host
+logsource:
+  product: windows
+  service: firewall
+condition: 'event_id: 5156 and src_ip: in ("192.168.10.0/24", "192.168.20.0/24") and dst_ip: not in ("192.168.1.0/24", "10.0.0.0/8") and dst_port: in (445, 5985, 135, 139) and action: allowed and src_user: not in ("SYSTEM", "LOCAL SERVICE")'

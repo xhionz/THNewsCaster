@@ -1,0 +1,5 @@
+title: Detect Suspicious Outbound HTTPS with High Volume and Low User-Agent Diversity
+logsource:
+  product: proxy
+  service: web
+condition: 'request_method: GET and url: contains(".php") and dst_port: 443 and bytes_out: > 5000000 and user_agent: not in ("Mozilla/5.0", "Chrome/", "Safari/") and dst_ip: not in ("192.168.1.0/24", "cloud_provider_ips") and src_ip: in ("192.168.10.0/24", "192.168.20.0/24")'
