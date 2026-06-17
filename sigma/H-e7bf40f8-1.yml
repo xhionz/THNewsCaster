@@ -1,0 +1,14 @@
+title: Suspicious Chrome Process Spawned by Non-Browser Parent
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects Chrome renderer processes spawned by non-browser parent processes, indicating possible exploitation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\chrome.exe'
+    ParentImage: '!*\chrome.exe' and '!*\msedge.exe' and '!*\firefox.exe' and '!*\iexplore.exe' and '!*\svchost.exe' and '!*\explorer.exe'
+  Condition: Selection
+level: high

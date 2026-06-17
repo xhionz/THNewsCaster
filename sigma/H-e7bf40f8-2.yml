@@ -1,0 +1,18 @@
+title: Suspicious Firefox DNS Queries to Known Malvertising Domains + Subsequent Script Execution
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects Firefox querying domains associated with malvertising and subsequent PowerShell or JScript execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  DnsQuery:
+    EventID: 22
+    Image: '*\firefox.exe'
+    Query: '*adserver*' OR '*doubleclick*' OR '*googlesyndication*' OR '*scorecardresearch*' OR '*exoclick*'
+  ProcessExec:
+    EventID: 1
+    Image: '*\powershell.exe' OR '*\wscript.exe' OR '*\cscript.exe'
+    ParentImage: '*\firefox.exe'
+  Condition: DnsQuery and ProcessExec
+level: high
