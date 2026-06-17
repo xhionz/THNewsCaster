@@ -1,0 +1,5 @@
+title: Phishing Emails Targeting Recent VPN Users
+logsource:
+  product: email
+  service: msexchange
+condition: 'attachment: exists and (attachment.extension in ('ps1', 'bat', 'exe') or subject contains('urgent') or subject contains('password') or subject contains('access') or subject contains('Fortinet')) and sender_domain not in ('ourcompany.com', 'trusted-partner.com') and timestamp > (last_vpn_login_timestamp - 24h)'

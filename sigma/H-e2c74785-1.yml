@@ -1,0 +1,5 @@
+title: External Credential Spraying on Fortinet VPN
+logsource:
+  product: fortinet
+  service: vpn
+condition: 'event_type: failed_login and src_ip not in (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 127.0.0.0/8, 169.254.0.0/16) and src_ip != ::1 and count() by src_ip > 10 within 5m

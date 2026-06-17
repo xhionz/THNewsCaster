@@ -1,0 +1,5 @@
+title: Internal Hosts Proxying VPN Brute Force
+logsource:
+  product: fortinet
+  service: vpn
+condition: 'event_type: failed_login and src_ip in (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) and count() by src_ip > 10 within 5m and src_ip in (10.10.10.0/24, 10.20.30.0/24, 172.20.1.0/24)'
