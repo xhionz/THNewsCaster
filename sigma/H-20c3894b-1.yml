@@ -1,0 +1,10 @@
+title: Suspicious HTTP Request to Known Exfil IP 5.255.127.55:8020
+logsource:
+  product: webserver
+  service: http
+detection:
+  server_ip: '5.255.127.55'
+  port: 8020
+  uri_path|contains: '/victims/'
+  user_agent|contains: 'python-requests'
+condition: all of them

@@ -1,0 +1,16 @@
+title: DNS Query or HTTP Request to hunt.io for Exfil Coordination
+logsource:
+  product: dns
+  service: dns
+detection:
+  domain: 'hunt.io'
+condition: all of them
+---
+title: HTTP Request to hunt.io/blog/ababil-of-minab
+logsource:
+  product: webserver
+  service: http
+detection:
+  host: 'hunt.io'
+  uri_path|contains: '/blog/ababil-of-minab'
+condition: all of them

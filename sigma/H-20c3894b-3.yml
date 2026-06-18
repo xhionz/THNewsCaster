@@ -1,0 +1,9 @@
+title: HTTP Request to 5.255.127.55:8020 with Authorization Header
+logsource:
+  product: webserver
+  service: http
+detection:
+  server_ip: '5.255.127.55'
+  port: 8020
+  headers|contains: 'Authorization:'
+condition: all of them
