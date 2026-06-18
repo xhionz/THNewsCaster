@@ -1,0 +1,16 @@
+title: Suspicious Scheduled Task Creation on DC
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4698
+    SubjectUserName: 'DOMAIN\*'
+    TaskName: '*Update*' OR '*Task*' OR '*System*' OR '*Windows*' OR '*Microsoft*'
+    CommandLine: '*powershell*' OR '*certutil*' OR '*bitsadmin*' OR '*iwr*' OR '*curl*'
+  condition: selection
+keywords:
+  - 'schtasks.exe'
+  - 'powershell'
+  - 'certutil'
+description: Detects creation of scheduled tasks with suspicious command lines from domain accounts on domain controllers

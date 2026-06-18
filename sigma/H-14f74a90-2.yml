@@ -1,0 +1,16 @@
+title: Lateral Movement via Valid Credentials to DC
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+    TargetUserName: '*$'
+    TargetDomainName: 'DOMAIN'
+    LogonProcessName: 'SMB'
+  condition: selection
+keywords:
+  - 'SMB'
+  - 'DOMAIN$'
+description: Detects network logons to domain controllers using computer account names (e.g., DC01$) via SMB

@@ -1,0 +1,13 @@
+title: Splunk SSRF CVE-2022-41430 Exploitation Attempt
+logsource:
+  product: splunk
+  service: splunkd
+condition: 'event_id: "ERROR" AND message: "*Invalid URL*" AND message: "*ssrf*" AND message: "*403*" OR message: "*404*" AND message: "*remote*" AND message: "*internal*" AND message: "*localhost*" OR message: "*127.0.0.1*"'
+detection:
+  keywords:
+    - "Invalid URL"
+    - "ssrf"
+    - "localhost"
+    - "127.0.0.1"
+    - "internal network"
+  condition: keywords
