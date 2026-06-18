@@ -1,0 +1,5 @@
+title: Detect Internal Admin Session Pivoting
+logsource:
+  product: fortinet_fortios
+  service: ssh
+condition: 'auth_method: "password" and auth_result: "success" and src_ip in ["192.168.10.0/24", "10.10.0.0/16"] and dst_ip in ["192.168.20.0/24", "10.20.0.0/16"] and user: "admin"'

@@ -1,0 +1,5 @@
+title: Detect Credential Stuffing on FortiOS Login
+logsource:
+  product: fortinet_fortios
+  service: http
+condition: 'http_request_uri: "/remote/login" and http_status_code: 401 and count(http_user_agent) > 5 by src_ip and time_window: 5m'

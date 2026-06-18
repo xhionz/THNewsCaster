@@ -1,0 +1,13 @@
+title: Detect Unusual SSL-VPN Logins from High-Risk Users
+logsource:
+  product: fortinet_fortios
+  service: sslvpn
+detection:
+  sel:
+    event_type: 'sslvpn_login'
+    status: 'success'
+    user: 'finance.*' OR 'gov.*' OR 'exec.*'
+    src_ip: '!10.0.0.0/8'
+    login_time: '2026-06-15T00:00:00Z TO 2026-06-20T23:59:59Z'
+  condition: sel
+condition: sel

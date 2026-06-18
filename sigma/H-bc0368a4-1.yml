@@ -1,0 +1,5 @@
+title: Detect CVE-2024-21762 Exploitation Attempt
+logsource:
+  product: fortinet_fortios
+  service: http
+condition: 'http_request_uri: "/remote/logincheck" and http_status_code: 400 and http_user_agent: "*curl*" or http_user_agent: "*python-requests*"'

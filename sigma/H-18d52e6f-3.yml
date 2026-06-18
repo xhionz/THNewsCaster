@@ -1,0 +1,13 @@
+title: Detect Lateral Movement via RDP/SMB from SSL-VPN Gateway IPs
+logsource:
+  product: windows
+  service: security
+detection:
+  sel:
+    EventID: 4624
+    Logon_Type: 3
+    src_ip: '{{sslvpn_gateway_ip}}'
+    target_username: 'finance.*' OR 'telecom.*'
+    time: '2026-06-16T00:00:00Z TO 2026-06-20T23:59:59Z'
+  condition: sel
+condition: sel
