@@ -1,0 +1,12 @@
+title: Suspicious Splunk Service Account Logins Outside Business Hours
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    Account_Name: "splunkd"
+    Logon_Type: 3
+    Time: ">= 06:00 and <= 18:00" | not
+  condition: selection
+level: medium

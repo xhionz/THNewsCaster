@@ -1,0 +1,13 @@
+title: Suspicious Splunk CVE-2023-34362 Exploitation Attempt
+logsource:
+  product: splunk
+  service: web_access
+detection:
+  selection:
+    uri_path: "/servicesNS/*/admin/props"
+    method: "POST"
+    status_code: [403, 404, 500]
+  condition: selection
+keywords:
+  - "CVE-2023-34362"
+level: high

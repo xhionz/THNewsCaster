@@ -1,0 +1,12 @@
+title: Suspicious Scheduled Task Creation on Splunk Server
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: "*\schtasks.exe"
+    CommandLine: "*/create*" AND ("/tr *\*.exe" OR "*/tr *\*.bat" OR "*/tr *\*.ps1")
+    ParentImage: "*\splunkd.exe" OR "*\splunkweb.exe"
+  condition: selection
+level: high
