@@ -1,0 +1,10 @@
+title: Squid Proxy Authentication Header Exposure
+logsource:
+  product: squid
+  service: access
+detection:
+  selection:
+    req_header: '*Authorization*'
+    req_header: '*Proxy-Authorization*'
+  condition: selection
+  timeframe: 1h

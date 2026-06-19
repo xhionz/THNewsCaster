@@ -1,0 +1,12 @@
+title: Squid HTTP Request Smuggling Attempt
+logsource:
+  product: squid
+  service: access
+detection:
+  selection:
+    req_method: 'POST'
+    req_uri: '*/*'
+    resp_status: 200
+    content_length: '>1000'
+  condition: selection
+  timeframe: 5m

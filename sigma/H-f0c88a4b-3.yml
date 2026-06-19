@@ -1,0 +1,14 @@
+title: Squid Proxy Port Scanning via HTTP Requests
+logsource:
+  product: squid
+  service: access
+detection:
+  selection:
+    req_uri: '*:*'
+    req_method: 'GET'
+    resp_status: 404
+  aggregation:
+    by: src_ip
+    count: > 100
+  condition: selection
+  timeframe: 10m
