@@ -1,0 +1,21 @@
+title: Detect Phishing Emails with Malicious Payloads Targeting Fortinet Admins
+logsource:
+  product: email
+  service: smtp
+detection:
+  subject: 
+    - '*Fortinet security update*'
+    - '*Critical patch for FortiGate*'
+    - '*Urgent: Your account requires verification*'
+  sender_domain: NOT IN (trusted_domains)
+  attachment_extensions:
+    - '.exe'
+    - '.scr'
+    - '.zip'
+    - '.js'
+  body: 
+    - '*download*'
+    - '*patch*'
+    - '*certificate*'
+    - '*login*'
+condition: all of them

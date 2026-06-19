@@ -1,0 +1,11 @@
+title: Detect Lateral Movement via Suspicious RDP/SSH from Compromised FortiGate Subnet
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: [4624, 4625]
+  logon_type: [10, 3]
+  source_network: '10.10.10.0/24'
+  account_name: NOT IN (admin_service_accounts)
+  logon_process: 'NtLmSsp'
+condition: all of them

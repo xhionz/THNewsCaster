@@ -1,0 +1,12 @@
+title: Detect FortiBleed Exploitation Attempts
+logsource:
+  product: fortinet
+  service: firewall
+detection:
+  req_uri:
+    - '/remote/fgt_lang'
+    - '/remote/logincheck'
+    - '/remote/fgt_lang?lang=/../../../..//etc/passwd'
+  http_status_code: [404, 500, 503]
+  user_agent: 'Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/nse/)'
+condition: all of them
