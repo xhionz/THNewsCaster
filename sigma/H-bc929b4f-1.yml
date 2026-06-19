@@ -1,0 +1,19 @@
+title: Splunk SSRF CVE-2022-45164 Outbound C2 Connection
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects outbound connections from Splunk servers to known malicious IPs post-CVE-2022-45164 exploitation
+logsource:
+  product: splunk
+  service: splunkd
+detection:
+  selection:
+    action: "outbound"
+    dest_ip:
+      - "185.143.223.10"
+      - "194.156.120.22"
+      - "104.248.12.15"
+  condition: selection
+fields:
+  - dest_ip
+  - dest_port
+  - src_ip

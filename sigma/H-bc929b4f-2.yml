@@ -1,0 +1,28 @@
+title: Lateral Movement via Suspicious Internal Network Connections
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects multiple outbound connections from internal hosts to non-standard ports on internal servers
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    DestinationIp:
+      - "10.10.10.0/24"
+      - "10.10.11.0/24"
+    DestinationPort:
+      - "445"
+      - "135"
+      - "5985"
+      - "3389"
+    SourceImage:
+      - "*\cmd.exe"
+      - "*\powershell.exe"
+      - "*\wscript.exe"
+  condition: selection
+fields:
+  - SourceImage
+  - SourceIp
+  - DestinationIp
+  - DestinationPort
