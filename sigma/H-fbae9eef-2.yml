@@ -1,0 +1,10 @@
+title: Detection of Taurine Jailbreak USB Device Connection
+logsource:
+  product: windows
+  service: usb
+condition: 'usb.device.vendor_id: 05ac and usb.device.product_id: 12a9 and usb.device.interface_class: 0x00'
+detection:
+  vendor_id: '05ac'
+  product_id: '12a9'
+  interface_class: '0x00'
+condition: all of them

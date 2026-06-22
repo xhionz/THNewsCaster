@@ -1,0 +1,10 @@
+title: Detection of Suspicious USB Vendor ID Spoofing (Apple VID)
+logsource:
+  product: windows
+  service: usb
+condition: 'usb.device.vendor_id: 05ac and not (usb.device.product_id in [12a8, 12a7, 12a9, 12a6, 12a5]) and usb.device.serial != ""'
+detection:
+  vendor_id: '05ac'
+  product_id_not_in: ['12a8', '12a7', '12a9', '12a6', '12a5']
+  serial_present: true
+condition: all of them

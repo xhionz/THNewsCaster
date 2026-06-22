@@ -1,0 +1,10 @@
+title: Detection of Checkm8 USB Device Connection via Vendor/Product ID
+logsource:
+  product: windows
+  service: usb
+condition: 'usb.device.vendor_id: 05ac and usb.device.product_id: 12a8 and usb.device.interface_class: 0xff'
+detection:
+  vendor_id: '05ac'
+  product_id: '12a8'
+  interface_class: '0xff'
+condition: all of them
