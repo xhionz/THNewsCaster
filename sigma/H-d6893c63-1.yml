@@ -1,0 +1,13 @@
+title: Detection of UniFi OS CVE-2026-34908 Exploitation Attempt
+logsource:
+  product: ubiquiti_unifi_os
+detection:
+  selection:
+    request_uri: "/api/" 
+    status_code: 200
+    user_agent: "*Mozilla*" 
+    method: "GET"
+    query: "*admin*" OR "*user*" OR "*role*"
+  condition: selection
+fields: [request_uri, user_agent, source_ip, destination_ip]
+level: high

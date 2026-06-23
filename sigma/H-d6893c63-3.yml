@@ -1,0 +1,10 @@
+title: Detection of UniFi OS Path Traversal via CVE-2026-34909
+logsource:
+  product: ubiquiti_unifi_os
+detection:
+  selection:
+    request_uri: "*../*" OR "*%2e%2e/*" OR "*%2f%2f*" OR "*etc/passwd*" OR "*config/privkey*" OR "*unifi/data/keystore*"
+    status_code: 200
+  condition: selection
+fields: [request_uri, source_ip, destination_ip, user_agent]
+level: high

@@ -1,0 +1,11 @@
+title: Detection of Lantronix EDS5000 Code Injection via HTTP Request
+logsource:
+  product: lantronix_eds5000
+detection:
+  selection:
+    request_uri: "*;*" OR "*$(*)" OR "*`*" OR "*eval(*" OR "*system(*"
+    method: "POST"
+    content_type: "application/x-www-form-urlencoded"
+  condition: selection
+fields: [request_uri, source_ip, destination_ip, user_agent]
+level: critical
