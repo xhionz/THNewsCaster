@@ -1,0 +1,12 @@
+title: Detect FortiGate CVE-2026-XXXX Exploitation Attempt
+logsource:
+  product: fortigate
+  category: firewall
+detection:
+  sel:
+    http_method: POST
+    http_content_length|gt: 1000
+    user-agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+    destination_ip: '10.0.0.0/8'
+  condition: sel
+condition: sel

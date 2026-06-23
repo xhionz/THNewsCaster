@@ -1,0 +1,13 @@
+title: Detect Phishing Emails with Suspicious Attachments or URLs
+logsource:
+  product: email
+  category: email_filter
+detection:
+  sel:
+    attachment_extension: ['docm', 'hta', 'zip', 'js', 'scr', 'exe']
+    or:
+      - url: '*://*.bit.ly/*'
+      - url: '*://*.tinyurl.com/*'
+      - url: '*://*.go.gl/*'
+  condition: sel
+condition: sel

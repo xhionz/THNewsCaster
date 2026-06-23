@@ -1,0 +1,12 @@
+title: Detect Suspicious FortiGate Admin Login from Unusual Locations
+logsource:
+  product: fortigate
+  category: authentication
+detection:
+  sel:
+    username: 'admin' | 'super_user' | 'network_admin'
+    source_ip: '!10.0.0.0/8'
+    login_success: true
+    time: '2026-02-01T00:00:00Z' - '2026-06-30T23:59:59Z'
+  condition: sel
+condition: sel
