@@ -1,0 +1,13 @@
+title: Detect Copilot Queries for Structured Sensitive Data
+logsource:
+  product: microsoft365
+  service: copilot
+Detection:
+  selection:
+    Query|contains:
+      - 'list all confidential'
+      - 'export spec sheets'
+      - 'give me a table of proprietary'
+      - 'compile a list of sensitive'
+      - 'show me all trade secrets'
+  condition: selection

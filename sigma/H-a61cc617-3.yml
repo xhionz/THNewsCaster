@@ -1,0 +1,11 @@
+title: Detect Phishing-Linked Copilot Exfiltration
+logsource:
+  product: microsoft365
+  service: copilot
+Detection:
+  selection:
+    UserPrincipalName|contains:
+      - '@example.com'
+  filter:
+    UserPrincipalName in (phishing_compromised_users_list)
+  condition: selection

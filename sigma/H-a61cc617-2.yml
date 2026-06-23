@@ -1,0 +1,11 @@
+title: Detect Copilot Queries from Non-Trusted Accounts
+logsource:
+  product: microsoft365
+  service: copilot
+Detection:
+  selection:
+    UserPrincipalName|contains:
+      - '@example.com'
+  filter:
+    UserPrincipalName not in trusted_users_list
+  condition: selection
