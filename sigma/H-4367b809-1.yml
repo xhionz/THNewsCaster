@@ -1,0 +1,13 @@
+title: FortiBleed Authentication Bypass Attempt
+logsource:
+  product: fortigate
+  service: firewall
+detection:
+  selection:
+    event_type: 'http_request'
+    uri: '*/remote/fgt_lang'
+    method: 'POST'
+    user_agent: 'Go-http-client'
+  condition: selection
+fields: [src_ip, dst_ip, uri, user_agent]
+level: critical

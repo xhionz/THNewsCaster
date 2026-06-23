@@ -1,0 +1,13 @@
+title: FortiGate Session Cookie Exfiltration via Suspicious File Transfer
+logsource:
+  product: fortigate
+  service: firewall
+detection:
+  selection:
+    event_type: 'file_transfer'
+    file_name: 'session_cookie.bin'
+    direction: 'outbound'
+    size: '>1000'
+  condition: selection
+fields: [src_ip, dst_ip, file_name, size]
+level: high

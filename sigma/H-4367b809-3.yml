@@ -1,0 +1,12 @@
+title: Golang Binary Execution on FortiGate Firewall
+logsource:
+  product: fortigate
+  service: system
+detection:
+  selection:
+    event_type: 'process_create'
+    process_name: 'go-sniffer'
+    parent_process: 'fgt_dev'
+  condition: selection
+fields: [process_name, parent_process, cmd_line, pid]
+level: critical
