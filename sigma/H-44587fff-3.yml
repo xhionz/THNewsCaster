@@ -1,0 +1,9 @@
+title: Suspicious Credential Submission via Phishing Page
+logsource:
+  product: web
+  service: proxy
+detection:
+  selection:
+    url: 'https://*.secure-login[.]xyz' | 'https://*.microsoft-update[.]info' | 'https://*.office365-verify[.]top'
+    user_agent: contains 'Mozilla' and not contains 'Chrome' | 'Firefox' | 'Safari'
+  condition: selection

@@ -1,0 +1,10 @@
+title: Akira Ransomware File Encryption Pattern
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4663
+    AccessMask: '0x12011f'
+    ObjectName: '*.encrypted' | '*.akira' | '*.lock'
+  condition: selection

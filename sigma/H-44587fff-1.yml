@@ -1,0 +1,13 @@
+title: Suspicious SSLVPN Login from Known Malicious IPs
+logsource:
+  product: sonicwall
+  service: sslvpn
+detection:
+  selection:
+    src_ip:
+      - '5.9.2.14'
+      - '6.5.4.14'
+    user:
+      - 'admin'
+      - 'root'
+  condition: selection
