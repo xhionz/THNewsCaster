@@ -1,0 +1,5 @@
+title: Suspicious algif_aead Syscall Activity
+logsource:
+  product: linux
+  service: audit
+condition: 'event_type == "syscall" and syscall == "open" and args[0] contains "/dev/crypto" and (args[1] == "O_RDWR" or args[1] == "O_WRONLY") and (auid != 0 or uid != 0)'

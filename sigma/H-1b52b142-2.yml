@@ -1,0 +1,5 @@
+title: Suspicious Kernel Module Load via insmod/modprobe
+logsource:
+  product: linux
+  service: audit
+condition: 'event_type == "syscall" and syscall == "execve" and args[0] in ["/sbin/insmod", "/sbin/modprobe"] and args[1] contains ".ko" and uid != 0'

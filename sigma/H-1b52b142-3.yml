@@ -1,0 +1,5 @@
+title: Unusual Outbound Network Traffic from Industrial Device
+logsource:
+  product: linux
+  service: netflow
+condition: 'src_ip in ["192.168.1.100", "192.168.1.101"] and dst_port not in [22, 80, 443, 53, 123] and bytes_out > 5000 and protocol in ["tcp", "udp"] and dst_ip not in ("192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12")'
