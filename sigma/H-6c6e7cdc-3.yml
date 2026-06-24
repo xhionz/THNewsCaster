@@ -1,0 +1,25 @@
+title: Large External Data Transfer via EDR
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    Image|endswith:
+      - '\powershell.exe'
+      - '\cmd.exe'
+      - '\certutil.exe'
+      - '\bitsadmin.exe'
+      - '\curl.exe'
+      - '\wget.exe'
+    DestinationPort: 443
+    BytesSent: '>104857600'
+    DestinationIp!~10.0.0.0/8
+    DestinationIp!~172.16.0.0/12
+    DestinationIp!~192.168.0.0/16
+  filter:
+    - Image|endswith: '\svchost.exe'
+    - Image|endswith: '\explorer.exe'
+    - DestinationIp|contains: 'microsoft.com'
+    - DestinationIp|contains: 'windowsupdate.com'
+condition: selection and not filter

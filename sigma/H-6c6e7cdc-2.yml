@@ -1,0 +1,23 @@
+title: Suspicious Exploit Activity via Web Server Logs
+logsource:
+  product: iis
+  service: access
+detection:
+  selection:
+    cs-uri-stem|contains:
+      - '/.env'
+      - '/wp-admin/admin-ajax.php'
+      - '/exchange/owa/auth/'
+      - '/_vti_bin/'
+      - '/cgi-bin/'
+    cs-method: POST
+    sc-status: 200
+    cs(User-Agent)|contains:
+      - 'curl/'
+      - 'wget/'
+      - 'python-requests/'
+  filter:
+    - cs-uri-stem|contains: '/favicon.ico'
+    - cs-uri-stem|contains: '/robots.txt'
+    - cs-uri-stem|contains: '/wp-content/'
+condition: selection and not filter

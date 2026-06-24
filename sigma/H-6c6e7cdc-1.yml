@@ -1,0 +1,16 @@
+title: Suspicious Scheduled Task Creation via EventID 4698
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4698
+    CommandLine|contains:
+      - 'schtasks /create'
+      - 'schtasks /create /sc'
+      - 'schtasks /create /tn'
+  filter:
+    - CommandLine|contains: 'Microsoft\Windows\Update'
+    - CommandLine|contains: 'Windows Defender'
+    - CommandLine|contains: 'Windows Update'
+condition: selection and not filter
