@@ -1,0 +1,8 @@
+title: Detect SSRF via Dify Plugin HTTP Requests
+logsource:
+  product: server
+  service: application
+detection:
+  event_type: "plugin_executed"
+  url: contains "169.254.169.254" or contains "127.0.0.1" or contains "localhost" or contains "10." or contains "192.168." or contains "172.16." or contains "172.17." or contains "172.18." or contains "172.19." or contains "172.20." or contains "172.21." or contains "172.22." or contains "172.23." or contains "172.24." or contains "172.25." or contains "172.26." or contains "172.27." or contains "172.28." or contains "172.29." or contains "172.30." or contains "172.31."
+condition: all of them

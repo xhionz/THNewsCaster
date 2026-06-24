@@ -1,0 +1,16 @@
+title: Detect DifyTap Unauthenticated API Access
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_path:
+    - '/api/v1/workflows'
+    - '/api/v1/chats'
+    - '/api/v1/agents'
+  user_agent:
+    - 'curl'
+    - 'Python-requests'
+    - 'Go-http-client'
+    - 'axios'
+  auth_header_missing: true
+condition: all of them

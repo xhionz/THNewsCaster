@@ -1,0 +1,10 @@
+title: Detect Suspicious Dify Integration Creation
+logsource:
+  product: dap
+  service: application
+detection:
+  event_type: "integration_created"
+  user_id: not in ["admin", "svc-dify", "automation-bot"]
+  integration_type: "webhook" or "database" or "external_api"
+  tenant_ids_accessed: count > 2
+condition: all of them
