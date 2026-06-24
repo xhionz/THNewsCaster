@@ -1,0 +1,12 @@
+title: Admin-Scope PAT Used in GitLab CI Pipeline
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+description: Detects GitLab CI pipeline triggers using PATs with admin or write:repo scope
+logsource:
+  product: gitlab
+  service: ci
+detection:
+  event_type: pipeline_trigger
+  auth_method: personal_access_token
+  scope: admin OR scope: write_repository
+  condition: event_type == 'pipeline_trigger' and auth_method == 'personal_access_token' and (scope == 'admin' or scope == 'write_repository')
+level: high

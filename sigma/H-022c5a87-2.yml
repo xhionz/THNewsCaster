@@ -1,0 +1,12 @@
+title: Newly Published npm Package Installed
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+description: Detects installation of npm packages published within 72h of first install with no prior usage
+logsource:
+  product: npm
+  service: install
+detection:
+  package_name: not empty
+  install_time: > now - 72h
+  first_published: > install_time - 72h
+  condition: package_name != '' and install_time > (now - 72h) and first_published > (install_time - 72h)
+level: high
