@@ -1,0 +1,19 @@
+title: Detect Phishing Emails Targeting Admins with Fortinet Credential Lures
+logsource:
+  product: mail
+  service: smtp
+detection:
+  subject:
+    - 'Urgent: Fortinet VPN Access Required'
+    - 'Action Required: Your FortiOS Account is Compromised'
+    - 'Security Alert: Fortinet Device Needs Patching'
+  body:
+    - 'click here to reset your Fortinet password'
+    - 'download the Fortinet security patch'
+    - 'https://fortinet-update[.]com/'
+    - 'https://[a-zA-Z0-9]{5,10}.com/fgt'
+  sender_domain:
+    - 'fortinet-support[.]com'
+    - 'fortinet-security[.]net'
+    - 'update-fortinet[.]org'
+condition: 1 of them

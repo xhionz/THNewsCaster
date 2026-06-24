@@ -1,0 +1,24 @@
+title: Detect Credential Spraying Against Fortinet VPN
+logsource:
+  product: fortinet_fortios
+  service: authentication
+detection:
+  auth_method:
+    - 'web'
+    - 'sslvpn'
+  status:
+    - 'fail'
+  user:
+    - 'admin'
+    - 'root'
+    - 'administrator'
+    - 'support'
+    - 'user'
+condition: '100 of auth_fail_*'
+selection:
+  auth_fail_*:
+    - status == 'fail'
+    - user in ['admin', 'root', 'administrator', 'support', 'user']
+    - timestamp >= '2026-06-12T00:00:00Z'
+    - timestamp <= '2026-06-20T23:59:59Z'
+condition: 100 of selection*

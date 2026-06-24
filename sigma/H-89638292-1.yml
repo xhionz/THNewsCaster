@@ -1,0 +1,17 @@
+title: Detect CVE-2024-21762 Exploitation via /remote/fgt_lang
+logsource:
+  product: fortinet_fortios
+  service: http
+condition: 'request_uri contains "/remote/fgt_lang" and status_code == 200 and user_agent not contains "Mozilla/" and user_agent != ""'
+detection:
+  request_uri:
+    - "/remote/fgt_lang"
+  status_code:
+    - 200
+  user_agent:
+    - "curl"
+    - "python-requests"
+    - "wget"
+    - "Go-http-client"
+    - "PowerShell"
+condition: 1 of them
