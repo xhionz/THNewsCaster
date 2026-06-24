@@ -1,0 +1,20 @@
+title: Amadey - Web Server to Rundll32 via Curl
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: 'C:\\Windows\\System32\\curl.exe'
+    ParentImage: 'C:\\Windows\\System32\\inetsrv\\w3wp.exe' OR 'C:\\Windows\\System32\\iisexpress.exe' OR 'C:\\Windows\\System32\\cmd.exe'
+    CommandLine: '*http* *.php*'
+  condition: selection
+  selection2:
+    EventID: 1
+    Image: 'C:\\Windows\\System32\\rundll32.exe'
+    CommandLine: '* *.dll*' AND NOT CommandLine: '*.php*'
+  condition: selection or selection2
+fields:
+  - Image
+  - ParentImage
+  - CommandLine

@@ -1,0 +1,15 @@
+title: StealC - Firefox to PowerShell via Cmd
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: 'C:\\Program Files\\Mozilla Firefox\\firefox.exe'
+    ParentImage: 'C:\\Windows\\System32\\cmd.exe'
+    CommandLine: '*-enc*'
+  condition: selection
+fields:
+  - Image
+  - ParentImage
+  - CommandLine

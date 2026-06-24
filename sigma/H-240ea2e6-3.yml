@@ -1,0 +1,14 @@
+title: Ransomware - LSASS Access by Credential Dumping Tools
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 10
+    TargetImage: 'C:\\Windows\\System32\\lsass.exe'
+    ProcessImage: 'C:\\Windows\\System32\\mimikatz.exe' OR 'C:\\Windows\\System32\\procexp.exe' OR 'C:\\Windows\\System32\\procdump.exe' OR 'C:\\Windows\\System32\\comsvcs.dll'
+  condition: selection
+fields:
+  - ProcessImage
+  - TargetImage
+  - AccessMask
