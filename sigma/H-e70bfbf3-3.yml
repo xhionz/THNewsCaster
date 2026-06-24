@@ -1,0 +1,12 @@
+title: Suspicious Driver File Creation Post-User Activity
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+description: Detects creation of 844ljfpvz.sys within 1 hour of user logon
+logsource:
+  product: windows
+  service: sysmon
+event_id: 11
+detection:
+  selection:
+    TargetFilename: '*844ljfpvz.sys'
+    Image: '*\explorer.exe' OR Image: '*\chrome.exe' OR Image: '*\firefox.exe' OR Image: '*\iexplore.exe'
+  condition: selection

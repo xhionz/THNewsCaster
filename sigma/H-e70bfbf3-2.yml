@@ -1,0 +1,12 @@
+title: Suspicious Driver Load via Service Host
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+description: Detects driver loading by a service host process
+logsource:
+  product: windows
+  service: sysmon
+event_id: 6
+detection:
+  selection:
+    ImageLoaded: '*844ljfpvz.sys'
+    Image: '*\svchost.exe' OR Image: '*\services.exe'
+  condition: selection
