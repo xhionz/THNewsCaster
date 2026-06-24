@@ -1,0 +1,15 @@
+title: Detect Cisco SD-WAN Root Account Creation via CVE-2023-20198
+logsource:
+  product: cisco_sdwan
+  service: system
+condition: 'event_id: "1001" and user: "root" and action: "create" and source.ip: "10.0.0.0/8"'
+detection:
+  event_id:
+    - "1001"
+  user:
+    - "root"
+  action:
+    - "create"
+  source.ip:
+    - "10.0.0.0/8"
+condition: 1 of them

@@ -1,0 +1,16 @@
+title: Detect Internal Network Scanning from SD-WAN Devices
+logsource:
+  product: network
+  service: flow
+condition: 'source.ip IN (sdwan_devices) AND destination.port IN (22, 23, 445, 3389) AND bytes > 10000 AND event_type="flow"'
+detection:
+  source.ip:
+    - "10.10.10.0/24"
+  destination.port:
+    - 22
+    - 23
+    - 445
+    - 3389
+  bytes:
+    - ">10000"
+condition: 1 of them

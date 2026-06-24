@@ -1,0 +1,14 @@
+title: Detect Suspicious SD-WAN Firmware Update Activity
+logsource:
+  product: cisco_sdwan
+  service: update
+condition: 'event_type: "firmware_update" and status: "success" and source.ip NOT IN (trusted_update_ips)'
+detection:
+  event_type:
+    - "firmware_update"
+  status:
+    - "success"
+  source.ip:
+    - "192.168.50.0/24"
+    - "104.18.0.0/16"
+condition: 1 of them
