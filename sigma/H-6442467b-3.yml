@@ -1,0 +1,11 @@
+title: Detect Internal Network Scanning from Fortinet Device
+logsource:
+  product: fortinet
+  service: firewall
+detection:
+  src_ip: 'fortinet_device_ips'
+  dst_ip: 'internal_subnets'
+  dst_port: [22, 3389, 445, 135, 139, 5985]
+  event_type: 'connection_attempt'
+  count: '>10' within 5m
+condition: all of them

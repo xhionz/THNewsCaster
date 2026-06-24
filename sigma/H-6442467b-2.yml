@@ -1,0 +1,14 @@
+title: Detect Suspicious Phishing Email Targeting Fortinet VPN
+logsource:
+  product: email
+  service: smtp
+detection:
+  subject:
+    - '*Fortinet VPN Password Reset*'
+    - '*Urgent: Your Fortinet Account Requires Verification*'
+    - '*Security Alert: Fortinet VPN Access Expired*'
+  sender_domain: '*[.]com'
+  body: '*click here*reset*password*' OR '*verify*account*vpn*'
+  attachment: '*.exe' OR '*.zip' OR '*.scr'
+  flags: 'phishing' OR 'high_priority'
+condition: all of them

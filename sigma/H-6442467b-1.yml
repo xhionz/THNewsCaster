@@ -1,0 +1,13 @@
+title: Detect CVE-2023-34362 Path Traversal Attempt
+logsource:
+  product: fortinet
+  service: ssl_vpn
+detection:
+  req_path:
+    - '/remote/fgt_lang'
+    - '/remote/logincheck'
+    - '/remote/fgt_lang?lang=../../../..'
+    - '/remote/fgt_lang?lang=../../../../etc/passwd'
+  method: 'GET'
+  status_code: 200
+condition: all of them
