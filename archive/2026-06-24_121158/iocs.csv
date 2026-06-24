@@ -1,0 +1,55 @@
+type,value,article_count,sources
+cves,CVE-2026-54420,2,https://www.bleepingcomputer.com/news/security/cisa-warns-of-another-actively-exploited-cpanel-plugin-flaw/ | https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-50751,2,https://www.reddit.com/r/blueteamsec/comments/1u3m8cz/marking_your_own_homework_check_point_remote/ | https://www.reddit.com/r/netsec/comments/1u3m7yj/marking_your_own_homework_check_point_remote/
+cves,CVE-2026-50656,1,https://thehackernews.com/2026/06/microsoft-confirms-rogueplanet-defender_02022423645.html
+cves,CVE-2026-48907,1,https://thehackernews.com/2026/06/cisa-warns-of-actively-exploited-joomla.html
+cves,CVE-2026-47729,1,https://www.reddit.com/r/netsec/comments/1u9y7yw/squidbleed_cve202647729_heartbleedstyle/
+cves,CVE-2026-46333,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+cves,CVE-2026-46300,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+cves,CVE-2026-43494,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+cves,CVE-2026-43284,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+cves,CVE-2026-42897,1,https://www.securityweek.com/microsoft-patches-exploited-exchange-server-vulnerability/
+cves,CVE-2026-35273,4,https://thehackernews.com/2026/06/shinyhunters-exploits-oracle-peoplesoft.html | https://www.bleepingcomputer.com/news/security/oracle-mitigates-peoplesoft-zero-day-exploited-in-data-theft-attacks/ | https://www.cisa.gov/news-events/alerts/2026/06/12/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+cves,CVE-2026-34910,1,https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-34909,1,https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-34908,1,https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-31431,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+cves,CVE-2026-20262,2,https://www.cisa.gov/news-events/alerts/2026/06/15/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/cisco-patches-another-sd-wan-zero-day-exploited-in-attacks/
+cves,CVE-2026-20253,3,https://thehackernews.com/2026/06/critical-splunk-enterprise-flaw-lets.html | https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.securityweek.com/splunk-enterprise-vulnerability-exploited-in-attacks-days-after-disclosure/
+cves,CVE-2026-10520,1,https://www.cisa.gov/news-events/alerts/2026/06/11/cisa-adds-one-known-exploited-vulnerability-catalog
+cves,CVE-2026-0257,1,https://thehackernews.com/2026/06/palo-alto-warns-of-active-exploitation.html
+cves,CVE-2025-67038,1,https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog
+cves,CVE-2024-40766,1,https://isc.sans.edu/diary/rss/33094
+cves,CVE-2024-12802,1,https://isc.sans.edu/diary/rss/33094
+cves,CVE-2017-3548,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+cves,CVE-2013-3821,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,5.9.2.14,1,https://isc.sans.edu/diary/rss/33094
+ips,5.255.127.55,1,https://www.reddit.com/r/blueteamsec/comments/1u6nsf4/ababil_of_minab_exposed_la_metro_scada_backups/
+ips,6.5.4.14,1,https://isc.sans.edu/diary/rss/33094
+ips,127.0.0.1,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,142.11.200.186,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,142.11.200.187,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,142.11.200.188,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,142.11.200.189,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,142.11.200.190,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+ips,176.120.22.24,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,844ljfpvz.sys,1,https://www.reddit.com/r/blueteamsec/comments/1uarrhk/a_whql_microsoft_signed_rootkit_844ljfpvzsys/
+domains,agent.ashx,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,azurenetfiles.net,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,disable-algif.conf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+domains,hubs.la,1,https://www.reddit.com/r/blueteamsec/comments/1u8yjfr/introducing_fortibleed/
+domains,hunt.io,1,https://www.reddit.com/r/blueteamsec/comments/1u6nsf4/ababil_of_minab_exposed_la_metro_scada_backups/
+domains,isc.sans.edu,1,https://isc.sans.edu/diary/rss/33094
+domains,isc.sans.org,1,https://isc.sans.edu/diary/rss/33094
+domains,meshagent32-azure-ops.exe,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,meshagent64-azure-ops.exe,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,meshagent64-v2.exe,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,psemhub.war,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,readme-if-you-see-this-youve-been-hacked.txt,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+domains,socradar.io,1,https://www.reddit.com/r/blueteamsec/comments/1u8yjfr/introducing_fortibleed/
+domains,www.cisa.gov,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-174-06
+sha256,2ab684d93c1553fad87041b4dea97188a97e78589deee2a7bacff905564f3a35,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+sha256,68257a6f9ff196179ec03624e849927f26599eb180a7c82e14ef5bc4e93bc309,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+sha256,c7e9332731b06644fc73e0046a2a89eaa59b09f54250e9bd622467187351711f,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+sha256,d83fdb9e53c5ff03c4cb0451ea1bebd79b53f29eadc1e2fa394c7af13a86ce2f,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273
+sha256,f02a924c9ff92a8780ce812511341182c6b509d45bc59f3f7b522e37225d24fc,1,https://www.rapid7.com/blog/post/etr-active-exploitation-of-oracle-peoplesoft-zero-day-cve-2026-35273

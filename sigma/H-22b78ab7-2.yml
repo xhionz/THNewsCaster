@@ -1,0 +1,11 @@
+title: Cobalt Strike PowerShell Beacon Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  sel:
+    Image: '*\powershell.exe'
+    CommandLine: '*-nop -c *Invoke-Expression*'
+    ParentImage: '*\outlook.exe' OR '*\chrome.exe' OR '*\iexplore.exe'
+  condition: sel
+condition: sel

@@ -1,0 +1,11 @@
+title: Mimikatz lsass.exe Memory Access via ProcessAccess
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  sel:
+    EventID: 10
+    TargetImage: '*\lsass.exe'
+    SourceImage: '*\mimikatz.exe' OR '*\procdump.exe' OR '*\rundll32.exe' AND CommandLine: '*lsadump*'
+  condition: sel
+condition: sel

@@ -1,0 +1,11 @@
+title: FortiOS CVE-2023-28618 SSL-VPN Auth Bypass Attempt
+logsource:
+  product: fortinet
+  service: firewall
+detection:
+  sel:
+    event_type: 'sslvpn'
+    status: 'fail'
+    reason: 'auth-bypass'
+  condition: sel
+condition: sel
