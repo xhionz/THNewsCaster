@@ -1,0 +1,18 @@
+title: Suspicious Python Process Launching Cryptominer via Langflow Exploit
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  Image:
+    - '*python*'
+    - '*python3*'
+  CommandLine:
+    - '*-c*'
+    - '*import requests*'
+    - '*getpass*'
+    - '*mining*'
+    - '*xmr*'
+    - '*monero*'
+  ParentImage:
+    - '*langflow*'
+condition: all of them

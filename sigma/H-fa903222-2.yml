@@ -1,0 +1,11 @@
+title: Nemesys Ransomware C2 via Friendhosting DNS Tunneling
+logsource:
+  product: dns
+  service: query
+condition: selection and dns_query_length > 100
+selection:
+  dns.query: '*.friendhosting.com' OR '*.friendhosting.bg'
+detection:
+  selection:
+    dns.query: '*.friendhosting.com' OR '*.friendhosting.bg'
+  condition: selection and dns.query_length > 100

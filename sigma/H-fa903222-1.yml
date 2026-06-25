@@ -1,0 +1,17 @@
+title: ShinyHunters PeopleSoft Exploit via Friendhosting C2
+logsource:
+  product: iis
+  service: http
+condition: selection
+selection:
+  cs_uri_stem: '*/psp/*'
+  cs_uri_query: 'ps_token=*' OR 'cmd=*' OR 'SOAPAction=*'
+  cs_host: 'friendhosting.com' OR 'friendhosting.bg'
+  cs_method: 'POST'
+detection:
+  selection:
+    cs_uri_stem: '*/psp/*'
+    cs_uri_query: 'ps_token=*' OR 'cmd=*' OR 'SOAPAction=*'
+    cs_host: 'friendhosting.com' OR 'friendhosting.bg'
+    cs_method: 'POST'
+  condition: selection

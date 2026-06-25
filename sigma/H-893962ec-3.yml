@@ -1,0 +1,14 @@
+title: Python Script Creating Persistent Cron Job or Systemd Timer
+logsource:
+  product: linux
+  service: file_access
+detection:
+  file_path:
+    - '/etc/cron.d/*'
+    - '/etc/systemd/system/*.timer'
+    - '/var/spool/cron/crontabs/*'
+  process_name:
+    - 'python'
+    - 'python3'
+  access_type: 'write'
+condition: all of them

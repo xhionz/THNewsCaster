@@ -1,0 +1,16 @@
+title: Suspicious High-Frequency DNS Queries from Python Process
+logsource:
+  product: linux
+  service: dns
+detection:
+  query:
+    - '*xmr*'
+    - '*mining*'
+    - '*pool*'
+    - '*crypt*'
+    - '*monero*'
+  process_name:
+    - 'python'
+    - 'python3'
+  query_count: '>10'
+condition: all of them
