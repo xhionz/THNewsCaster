@@ -1,0 +1,17 @@
+title: Suspicious DICOM TLS Traffic to External IPs
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects DICOM traffic over TLS to external IPs not in peer list
+logsource:
+  product: dicom
+  service: pynetdicom
+detection:
+  dicom_command: C-STORE
+  tls_encrypted: true
+  external_destination:
+    - dest_ip: '!192.168.0.0/16'
+    - dest_ip: '!10.0.0.0/8'
+    - dest_ip: '!172.16.0.0/12'
+  not_in_peer_list: true
+condition: dicom_command and tls_encrypted and external_destination and not_in_peer_list
+level: medium

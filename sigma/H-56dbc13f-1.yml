@@ -1,0 +1,20 @@
+title: DICOM Path Traversal via C-STORE
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects path traversal attempts in DICOM C-STORE requests via malicious FileMetaInformationStorageMediaFileID or SOPInstanceUID fields
+logsource:
+  product: dicom
+  service: pynetdicom
+detection:
+  dicom_command: C-STORE
+  path_traversal_pattern:
+    - FileMetaInformationStorageMediaFileID: '*\..\*'
+    - SOPInstanceUID: '*\..\*'
+    - PatientName: '*\..\*'
+  malicious_extension:
+    - FileMetaInformationStorageMediaFileID: '*.exe'
+    - SOPInstanceUID: '*.bat'
+    - FileMetaInformationStorageMediaFileID: '*.ps1'
+    - SOPInstanceUID: '*.vbs'
+condition: dicom_command and (path_traversal_pattern or malicious_extension)
+level: critical

@@ -1,0 +1,17 @@
+title: DICOM C-STORE Triggers PowerShell Execution
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects PowerShell execution triggered by DICOM C-STORE events via file creation and process creation correlation
+logsource:
+  product: dicom
+  service: pynetdicom
+detection:
+  dicom_cstore: 
+    - dicom_command: C-STORE
+    - FileMetaInformationStorageMediaFileID: '*.ps1'
+  powershell_exec:
+    - Image: '*\powershell.exe'
+    - CommandLine: '*-ExecutionPolicy Bypass*' or '*-EncodedCommand*'
+    - ParentImage: '*\svchost.exe' or '*\taskhostw.exe'
+condition: dicom_cstore and powershell_exec
+level: critical
