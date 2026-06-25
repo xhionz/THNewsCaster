@@ -1,0 +1,10 @@
+title: Suspicious Scheduled Task Creation in vManage
+logsource:
+  product: cisco_sdwan
+  service: vmanage_scheduler
+detection:
+  selection:
+    action: "create_task"
+    command: "*curl*" OR "*wget*" OR "*base64*" OR "*nc*" OR "*ssh-keygen*"
+    user: "root"
+  condition: selection

@@ -1,0 +1,10 @@
+title: New Root-Level User Created in vManage
+logsource:
+  product: cisco_sdwan
+  service: vmanage_auth
+detection:
+  selection:
+    action: "add_user"
+    username: "*" AND (uid: 0 OR gid: 0 OR shell: /bin/bash)
+    source: "remote_api" OR "local_cli"
+  condition: selection

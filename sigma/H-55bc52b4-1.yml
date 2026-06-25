@@ -1,0 +1,10 @@
+title: Suspicious CLI Injection via vManage API
+logsource:
+  product: cisco_sdwan
+  service: vmanage_api
+detection:
+  selection:
+    action: "execute_command"
+    user: "admin"
+    command: "*sudo*" OR "*root*" OR "*chmod 777 /root*" OR "*echo.*>>*.ssh/authorized_keys*"
+  condition: selection
