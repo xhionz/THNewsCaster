@@ -1,0 +1,10 @@
+title: Detect Windchill RCE via JSP Upload
+logsource:
+  product: ptc_windchill
+  service: http
+condition: 'uri contains ".jsp" and http_request.method == "POST" and http_request.status_code == 200'
+detection:
+  uri:
+    - "*.jsp"
+  method: "POST"
+  status_code: 200

@@ -1,0 +1,18 @@
+title: Detect Linux-based AD Recon from Windchill
+logsource:
+  product: linux
+  service: process_creation
+condition: 'process_name IN ("curl", "wget", "python", "python3") and command_line contains "ldap" or command_line contains "smb" or command_line contains "ntlm" and source_ip IN (windchill_server_ips)'
+detection:
+  process_name:
+    - "curl"
+    - "wget"
+    - "python"
+    - "python3"
+  command_line:
+    - "*ldap*"
+    - "*smb*"
+    - "*ntlm*"
+    - "*kerberos*"
+    - "*dc.*"
+    - "*domain*controller*"
