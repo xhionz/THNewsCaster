@@ -1,0 +1,14 @@
+title: Detect OS Command Injection in P7 Config Endpoint
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_uri:
+    - '/config'
+    - '/api/v1/settings'
+  http_request_body:
+    - 'cmd=whoami'
+    - 'exec='
+    - '; rm -f '
+    - '| cat /etc/passwd'
+  condition: 1 of them

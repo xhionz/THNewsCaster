@@ -1,0 +1,13 @@
+title: Detect Malformed HTTP Request Exploiting P7 NULL Pointer Dereference
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_uri:
+    - '/overview.jsp'
+  http_request_method: 'POST'
+  http_request_headers:
+    - 'Content-Length: >10000'
+    - 'User-Agent: ^$'
+    - 'Accept: */*;q=0.0'
+  condition: all of them

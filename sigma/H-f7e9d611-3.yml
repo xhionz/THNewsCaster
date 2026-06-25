@@ -1,0 +1,16 @@
+title: Detect Phishing Login Page Submission to Suspicious Domains
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  http_request_method: 'POST'
+  http_request_uri:
+    - '/login'
+    - '/auth'
+    - '/signin'
+  http_request_headers["Host"]:
+    - 'se-login.com'
+    - 'schneider-electric.net'
+    - 'p7-support.org'
+    - 'cisa-security.org'
+  condition: all of them
