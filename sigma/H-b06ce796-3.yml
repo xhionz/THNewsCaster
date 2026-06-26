@@ -1,0 +1,17 @@
+title: Detect AXL API Enumeration via Large or Rapid SOAP Requests
+logsource:
+  product: cisco_ucm
+  category: web_server
+detection:
+  axl_endpoint:
+    - http.request.uri.path|contains: '/axl/'
+  large_response:
+    - http.response.body.size > 50000
+  rapid_requests:
+    - count(http.request.uri.path) > 20 over 1m
+  suspicious_soapaction:
+    - http.request.headers['SOAPAction']|contains: 'listUser'
+    - http.request.headers['SOAPAction']|contains: 'getPhone'
+    - http.request.headers['SOAPAction']|contains: 'getLine'
+    - http.request.headers['SOAPAction']|contains: 'getDevice'
+condition: all of them

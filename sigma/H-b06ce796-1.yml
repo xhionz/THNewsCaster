@@ -1,0 +1,19 @@
+title: Detect CVE-2024-21762 SOAP RCE Attempt
+logsource:
+  product: cisco_ucm
+  category: web_server
+detection:
+  soap_endpoint:
+    - http.request.uri.path|contains: '/service/extension/'
+  soap_action:
+    - http.request.headers['SOAPAction']|contains: 'get'
+    - http.request.headers['SOAPAction']|contains: 'add'
+    - http.request.headers['SOAPAction']|contains: 'delete'
+  suspicious_ua:
+    - http.request.headers['User-Agent']|contains: 'Cisco'
+    - http.request.headers['User-Agent']|contains: 'Apache-HttpClient'
+    - http.request.headers['User-Agent']|contains: 'curl'
+    - http.request.headers['User-Agent']|contains: 'python-requests'
+  status_not_200:
+    - http.response.status_code: [403, 500, 503]
+condition: all of them

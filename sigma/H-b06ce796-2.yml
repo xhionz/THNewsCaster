@@ -1,0 +1,14 @@
+title: Detect Anomalous SIP Traffic from UCM to Non-Phone Devices
+logsource:
+  product: cisco_ucm
+  category: network_flow
+detection:
+  src_ucm:
+    - src_ip in (ucm_server_ips)
+  dst_not_phone:
+    - dst_ip not in (ip_phone_subnets)
+  sip_method:
+    - sip.method in ['INVITE', 'REGISTER', 'OPTIONS']
+  high_sip_rate:
+    - count(sip.method) > 50 over 5m
+condition: all of them
