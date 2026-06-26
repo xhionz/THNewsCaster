@@ -1,0 +1,5 @@
+title: Large File Exfiltration from SD-WAN Manager
+logsource:
+  product: cisco_sdwan_manager
+  service: http
+condition: 'response_size|gt: 1000000 and destination_ip NOT IN (internal_ip_ranges) and user_agent|contains: ["curl", "python-requests", "wget"]'

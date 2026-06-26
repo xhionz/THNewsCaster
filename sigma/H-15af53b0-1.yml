@@ -1,0 +1,5 @@
+title: Suspicious POST to SD-WAN Manager Auth Endpoint
+logsource:
+  product: cisco_sdwan_manager
+  service: http
+condition: 'request_method: POST and uri: /dana-na/auth/url_default/ and status_code: 200 and user_agent|contains: ["curl", "python-requests", "wget"]'

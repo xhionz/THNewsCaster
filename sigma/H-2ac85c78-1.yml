@@ -1,0 +1,16 @@
+title: Cobalt Strike DNS Tunneling - Custom Profile
+logsource:
+  product: dns
+  service: dns-server
+detection:
+  DomainSuffix:
+    - '.com'
+    - '.net'
+    - '.org'
+  Domain:
+    - '*.*.*.*'
+    - '*-*-*-*'
+    - '*[0-9]{3,}*
+  Condition: DomainSuffix and (Domain contains '*.*.*.*' or Domain contains '*-*-*-*' or Domain matches '.*[0-9]{3,}.*')
+  timeframe: 5m
+condition: selection

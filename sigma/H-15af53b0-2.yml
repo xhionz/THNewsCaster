@@ -1,0 +1,5 @@
+title: Suspicious Admin Login to SD-WAN Manager
+logsource:
+  product: cisco_sdwan_manager
+  service: http
+condition: 'uri: /dana-na/auth/login.cgi and status_code: 200 and user_agent|contains: ["curl", "python-requests"] and request_method: POST'

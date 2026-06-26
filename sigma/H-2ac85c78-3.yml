@@ -1,0 +1,14 @@
+title: Macro-Enabled Office Document Executing PowerShell
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  ParentImage:
+    - '*\winword.exe'
+    - '*\excel.exe'
+    - '*\powerpnt.exe'
+  Image: '*\powershell.exe'
+  CommandLine: '*-e *' or '*-EncodedCommand *' or '*-nop *' or '*-w hidden *'
+  Condition: ParentImage and Image and CommandLine
+  timeframe: 5m
+condition: selection
