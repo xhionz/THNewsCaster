@@ -1,0 +1,18 @@
+title: Suspicious JSP Upload to Windchill
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri|contains: "/Windchill/" and request_uri|endswith: ".jsp" and status_code|in: [200, 201, 204] and user_agent|contains: "Mozilla" and request_method: "POST"'
+detection:
+  request_uri:
+    - "/Windchill/app/"
+    - "/Windchill/ptc/"
+  status_code:
+    - 200
+    - 201
+    - 204
+  request_method: POST
+  user_agent:
+    - "Mozilla/5.0"
+  timeframe: 1h

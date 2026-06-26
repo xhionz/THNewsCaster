@@ -1,0 +1,15 @@
+title: Suspicious Scheduled Task Creation on Windchill Server
+logsource:
+  product: windows
+  service: microsoft-windows-scheduledtask/operational
+condition: 'event_id: 106 and task_name|contains: "temp" or task_name|contains: "update" or task_name|contains: "svc"'
+detection:
+  event_id:
+    - 106
+  task_name:
+    - "temp"
+    - "update"
+    - "svc"
+    - "system"
+    - "windows"
+  timeframes: 72h

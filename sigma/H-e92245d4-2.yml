@@ -1,0 +1,16 @@
+title: Suspicious RDP/SMB Logins from Windchill Server
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 AND logon_type: 10 AND source_network_address != '' AND account_name != '' and account_name NOT IN (admin_accounts)'
+detection:
+  event_id:
+    - 4624
+  logon_type:
+    - 10
+    - 3
+  source_network_address:
+    - '10.10.10.10'
+  account_name:
+    - '*'
+  timeframes: 24h
