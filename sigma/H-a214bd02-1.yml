@@ -1,0 +1,18 @@
+title: Detect pedit COW Exploit via Kernel Memory Corruption
+logsource:
+  product: linux
+  service: kernel
+detection:
+  selinux_avc:
+    type: AVC
+    msg: 'denied { write }' 
+    comm: 'tc'
+    path: '/dev/shm/'
+  kernel_oops:
+    message: 'BUG: unable to handle kernel paging request'
+    call_trace: 'act_pedit'
+  abnormal_tc_usage:
+    comm: 'tc'
+    ppid: '1'
+    args: '*pedit*' 
+condition: selinux_avc or kernel_oops or abnormal_tc_usage

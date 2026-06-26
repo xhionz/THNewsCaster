@@ -1,0 +1,17 @@
+title: Detect Post-Exploit SSH Tunneling and Outbound C2 Connections
+logsource:
+  product: linux
+  service: sshd
+detection:
+  ssh_tunnel:
+    event_type: 'session_open'
+    user: 'root'
+    client_ip: '10.0.0.0/8'
+    port: '443|80|53|993'
+  outbound_c2:
+    event_type: 'network_connection'
+    dest_port: '443|80|53|993'
+    dest_ip: '185.130.105.0/24|194.187.240.0/24'
+    process_name: 'sshd'
+    direction: 'outbound'
+condition: ssh_tunnel or outbound_c2

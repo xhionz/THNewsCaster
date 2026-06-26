@@ -1,0 +1,14 @@
+title: Detect Suspicious Kernel Module Load
+logsource:
+  product: linux
+  service: kernel
+detection:
+  module_load:
+    type: MODULE_LOAD
+    module_name: '.*[xX]x.*|.*[kK]eep.*|.*[tT]emp.*'
+    signature_status: 'unsigned'
+  modprobe_usage:
+    comm: 'modprobe'
+    args: '.*[xX]x.*|.*[kK]eep.*|.*[tT]emp.*'
+    euid: '0'
+condition: module_load or modprobe_usage

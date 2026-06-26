@@ -1,0 +1,17 @@
+title: Web Shell Detection via Unusual PHP File Creation in Windchill Web Root
+logsource:
+  product: webserver
+  service: apache
+  category: file_event
+detection:
+  selection:
+    file_path: '*/windchill*/webapps/*/*.php'
+    file_name: '.*\.php$'
+    file_creation_time: '>2026-06-01T00:00:00Z'
+  condition: selection
+  keywords:
+    - 'eval('
+    - 'base64_decode('
+    - 'system('
+    - 'assert('
+condition: selection

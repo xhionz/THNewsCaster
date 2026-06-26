@@ -1,0 +1,11 @@
+title: Suspicious DNS Query Length from Windchill Server
+logsource:
+  product: dns
+  category: dns_query
+detection:
+  selection:
+    src_ip: 'windchill_server_ips'
+    query_length: '>100'
+    query: '.*[a-z0-9]{16,}\.(com|net|org)$'
+    event_time: '>2026-06-01T00:00:00Z'
+  condition: selection

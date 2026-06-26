@@ -1,0 +1,12 @@
+title: Lateral Movement via SMB from Windchill Server
+logsource:
+  product: windows
+  service: security
+  category: network_connection
+detection:
+  selection:
+    source_ip: 'windchill_server_ips'
+    destination_port: 445
+    event_id: 3
+    event_time: '>2026-06-01T00:00:00Z'
+  condition: selection
