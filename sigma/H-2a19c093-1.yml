@@ -1,0 +1,9 @@
+title: Detect Malicious VS Code Extension Installation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  cmdline_pattern: '*--install-extension*'
+  marketplace_domain: '*marketplace.visualstudio.com*'
+  suspicious_publisher: '*@*.vsix'
+condition: cmdline_pattern and marketplace_domain and not suspicious_publisher

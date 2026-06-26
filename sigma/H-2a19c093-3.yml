@@ -1,0 +1,8 @@
+title: Detect Manual VS Code Extension Install from Suspicious URL
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  download_url: 'CommandLine: *https://dl.acm.org/doi/10.1145/3800506.3803487*'
+  extension_install: 'CommandLine: *--install-extension*' AND 'Image: *\Code\Code.exe'
+condition: download_url and extension_install

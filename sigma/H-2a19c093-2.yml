@@ -1,0 +1,9 @@
+title: Detect VS Code Extension Install Followed by Credential Dumping
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  extension_install: 'CommandLine: *--install-extension*' AND 'Image: *\Code\Code.exe'
+  credential_dump: 'EventID: 10 AND (ProcessName: *lsass.exe* OR ProcessName: *mimikatz* OR ProcessName: *procdump*)'
+condition: extension_install and credential_dump
+timeframe: 1h
