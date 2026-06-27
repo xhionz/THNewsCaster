@@ -1,0 +1,11 @@
+title: Detect RoguePlanet Persistence via Run Key Modification
+logsource:
+  product: windows
+  service: registry
+detection:
+  selection:
+    EventID: 12
+    TargetObject: '*\Software\Microsoft\Windows\CurrentVersion\Run\*'
+    Image: '*\cmd.exe' or Image: '*\powershell.exe' or Image: '*\wscript.exe' or Image: '*\cscript.exe'
+  condition: selection
+level: medium

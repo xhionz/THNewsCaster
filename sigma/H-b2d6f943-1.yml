@@ -1,0 +1,12 @@
+title: Detect RoguePlanet Race Condition Exploit via MpCmdRun.exe to cmd.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    ParentImage: '*\MpCmdRun.exe'
+    Image: '*\cmd.exe'
+    CommandLine: '* /c *'
+  condition: selection
+level: medium

@@ -1,0 +1,12 @@
+title: Detect Lateral Movement via SMB from Compromised Host
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    DestinationPort: 445
+    Image: '*\svchost.exe' or Image: '*\lsass.exe' or Image: '*\cmd.exe' or Image: '*\powershell.exe'
+    DestinationIp: '10.0.0.0/8' or DestinationIp: '172.16.0.0/12' or DestinationIp: '192.168.0.0/16'
+  condition: selection
+level: medium
