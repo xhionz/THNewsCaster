@@ -1,0 +1,10 @@
+title: Detect RDP Lateral Movement Using Suspicious Credentials
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 4624
+  logon_type: 10
+  account_name: "SimpleHelp*"
+  logon_process: "Advapi"
+condition: all of them

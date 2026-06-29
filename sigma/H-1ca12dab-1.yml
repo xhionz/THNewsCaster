@@ -1,0 +1,12 @@
+title: Detect SimpleHelp Auth Bypass via Anomalous HTTP Requests
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_method: POST
+  user_agent: ""
+  or:
+    - user_agent: "curl"
+    - user_agent: "python-requests"
+    - user_agent: "wget"
+condition: all of them

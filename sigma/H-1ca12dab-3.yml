@@ -1,0 +1,11 @@
+title: Detect Ransomware File Encryption via Sysmon Process Creation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  image: "*\SimpleHelp.exe"
+  parent_image: "*\svchost.exe"
+  child_image: "*\cmd.exe" OR "*\powershell.exe" OR "*\wscript.exe" OR "*\cscript.exe"
+  process_creation_time: "2026-06-29T00:00:00Z" - "2026-07-05T23:59:59Z"
+condition: all of them
