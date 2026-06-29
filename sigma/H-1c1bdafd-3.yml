@@ -1,0 +1,15 @@
+title: Detect DNS Exfiltration via Unusual Query Patterns
+logsource:
+  product: dns
+  service: query
+condition: 'query_length > 100 and query_domain contains ".com" and query_domain not in (trusted_domains) and query_type == "TXT" or query_type == "A"'
+detection:
+  query_length:
+    - '>100'
+  trusted_domains:
+    - "oracle.com"
+    - "company.com"
+    - "cloud.oracle.com"
+  query_type:
+    - "TXT"
+    - "A"

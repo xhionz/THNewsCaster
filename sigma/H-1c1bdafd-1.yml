@@ -1,0 +1,16 @@
+title: Detect CVE-2021-2109 Exploitation in Oracle EBS
+logsource:
+  product: oracle_ebs
+  service: http
+condition: 'request_uri contains "/OA_HTML/AppsLocalLogin.jsp" and status_code in [400, 403, 404, 500] and user_agent contains "curl" or user_agent contains "wget"'
+detection:
+  request_uri:
+    - "/OA_HTML/AppsLocalLogin.jsp"
+  status_code:
+    - 400
+    - 403
+    - 404
+    - 500
+  user_agent:
+    - "curl"
+    - "wget"

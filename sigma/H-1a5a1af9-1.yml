@@ -1,0 +1,9 @@
+title: Detect Djinn Stealer Initial Access via Log4Shell in SimpleHelp
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 1001 and image: "*\powershell.exe" and command_line: (*"-enc"* or *"-e "* or *"IEX"* or *"Invoke-Expression"*) and parent_image: "*\simplehelp.jar" or "*\simplehelp.exe"'
+detection:
+  cmd: 'command_line: (*"-enc"* or *"-e "* or *"IEX"* or *"Invoke-Expression"*)'
+  parent: 'parent_image: "*\simplehelp.jar" or "*\simplehelp.exe"'
+  condition: cmd and parent

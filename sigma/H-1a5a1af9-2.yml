@@ -1,0 +1,9 @@
+title: Detect Browser Profile Exfiltration via SimpleHelp-Initiated Scripts
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 1001 and image: "*\cmd.exe" or "*\powershell.exe" and command_line: (*"%APPDATA%\\Mozilla"* or *"%APPDATA%\\Google\\Chrome"* or *"zip"* or *"7z"* or *"tar"*) and parent_image: "*\simplehelp.jar" or "*\simplehelp.exe"'
+detection:
+  cmd: 'command_line: (*"%APPDATA%\\Mozilla"* or *"%APPDATA%\\Google\\Chrome"* or *"zip"* or *"7z"* or *"tar"*)'
+  parent: 'parent_image: "*\simplehelp.jar" or "*\simplehelp.exe"'
+  condition: cmd and parent

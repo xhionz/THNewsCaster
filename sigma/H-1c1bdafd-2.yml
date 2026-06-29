@@ -1,0 +1,15 @@
+title: Detect Suspicious EBS Login from Unusual Source
+logsource:
+  product: oracle_ebs
+  service: authentication
+condition: 'event_type == "login_success" and user in (ebs_admin_users) and source_ip not in (trusted_networks) and login_time > (now - 24h)'
+detection:
+  event_type:
+    - "login_success"
+  ebs_admin_users:
+    - "APPS"
+    - "SYSADMIN"
+    - "FIN_ADMIN"
+  trusted_networks:
+    - "10.10.0.0/16"
+    - "192.168.100.0/24"

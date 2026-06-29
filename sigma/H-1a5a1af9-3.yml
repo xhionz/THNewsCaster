@@ -1,0 +1,10 @@
+title: Detect Djinn Stealer Persistence via Registry Run Key Modification
+logsource:
+  product: windows
+  service: registry
+condition: 'event_id: 12 or event_id: 13 or event_id: 14 and target_object: *"Software\\Microsoft\\Windows\\CurrentVersion\\Run"* and image: "*\cmd.exe" or "*\powershell.exe" and parent_image: "*\simplehelp.jar" or "*\simplehelp.exe"'
+detection:
+  reg: 'target_object: *"Software\\Microsoft\\Windows\\CurrentVersion\\Run"*'
+  proc: 'image: "*\cmd.exe" or "*\powershell.exe"'
+  parent: 'parent_image: "*\simplehelp.jar" or "*\simplehelp.exe"'
+  condition: reg and proc and parent
