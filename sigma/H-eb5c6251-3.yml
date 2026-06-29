@@ -1,0 +1,16 @@
+title: Detect Admin Authentication Bypass in FortiSandbox JRPC
+logsource:
+  product: fortisandbox
+  service: jrpc
+condition: '(jrpc.method: "get.report" OR jrpc.method: "list.files") AND jrpc.params.username: "admin" AND (jrpc.params.password: "" OR jrpc.params.password: "admin" OR jrpc.params.password: "fortinet")'
+detection:
+  jrpc.method:
+    - "get.report"
+    - "list.files"
+  jrpc.params.username:
+    - "admin"
+  jrpc.params.password:
+    - ""
+    - "admin"
+    - "fortinet"
+condition: all

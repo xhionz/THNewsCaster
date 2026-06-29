@@ -1,0 +1,18 @@
+title: Detect Path Traversal in FortiSandbox JRPC API
+logsource:
+  product: fortisandbox
+  service: jrpc
+condition: 'jrpc.method: "upload.file" or jrpc.method: "get.file" or jrpc.method: "list.files" and (jrpc.params.path: "*/etc/passwd" or jrpc.params.path: "*/proc/self/environ" or jrpc.params.path: "*/etc/shadow" or jrpc.params.path: "*/var/log/" or jrpc.params.path: "*../" or jrpc.params.path: "*%2f..%2f")
+detection:
+  jrpc.method:
+    - "upload.file"
+    - "get.file"
+    - "list.files"
+  jrpc.params.path:
+    - "*/etc/passwd"
+    - "*/proc/self/environ"
+    - "*/etc/shadow"
+    - "*/var/log/"
+    - "*../"
+    - "*%2f..%2f"
+condition: all

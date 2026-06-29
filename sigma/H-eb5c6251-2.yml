@@ -1,0 +1,16 @@
+title: Detect Suspicious File Upload in FortiSandbox JRPC
+logsource:
+  product: fortisandbox
+  service: jrpc
+condition: 'jrpc.method: "upload.file" and (jrpc.params.filename ENDS WITH ".sh" or jrpc.params.filename ENDS WITH ".py" or jrpc.params.filename ENDS WITH ".elf" or jrpc.params.filename ENDS WITH ".bin" or jrpc.params.size > 5000000)'
+detection:
+  jrpc.method:
+    - "upload.file"
+  jrpc.params.filename:
+    - "*.sh"
+    - "*.py"
+    - "*.elf"
+    - "*.bin"
+  jrpc.params.size:
+    - ">5000000"
+condition: any
