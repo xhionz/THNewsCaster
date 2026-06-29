@@ -1,0 +1,16 @@
+title: Djinn Stealer - Webhook Credential Exfiltration via SimpleHelp
+logsource:
+  product: web_server
+  service: simplehelp
+detection:
+  selection:
+    uri: '/webhook/*'
+    method: 'POST'
+    content_type: 'application/json'
+    request_body: '*token*|*key*|*password*|*secret*|*bearer*'
+    user_agent: '*curl*|*python-requests*|*Go-http-client*'
+  condition: selection
+  falsepositives:
+    - Legitimate webhook integrations (e.g., Slack, Discord)
+    - Internal monitoring scripts
+condition: 1 of selection

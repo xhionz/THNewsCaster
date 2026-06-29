@@ -1,0 +1,15 @@
+title: Djinn Stealer - SimpleHelp to Cloud Service API Access
+logsource:
+  product: web_server
+  service: simplehelp
+detection:
+  selection:
+    uri: '/api/v1/external'
+    user_agent: '*curl*|*python-requests*|*Go-http-client*'
+    status_code: 200
+    request_body: '*openai*|*azureml*|*gcp-ai*|*service-account*|*cloud-credential*'
+  condition: selection
+  falsepositives:
+    - Legitimate integration scripts
+    - Scheduled data syncs
+condition: 1 of selection

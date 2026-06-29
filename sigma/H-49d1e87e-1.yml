@@ -1,0 +1,15 @@
+title: Djinn Stealer - Credential Harvest via SimpleHelp Exploit
+logsource:
+  product: web_server
+  service: simplehelp
+detection:
+  selection:
+    event_type: 'auth_failure'
+    uri: '/login'
+    user_agent: '*curl*|*python-requests*|*wget*'
+    status_code: 200
+  condition: selection
+  falsepositives:
+    - Automated health checks
+    - Legitimate CI/CD scripts
+condition: 1 of selection
