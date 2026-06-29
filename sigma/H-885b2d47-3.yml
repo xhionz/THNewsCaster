@@ -1,0 +1,14 @@
+title: Detect Suspicious Binary Execution on LoadMaster
+logsource:
+  product: linux
+  service: auditd
+detection:
+  exec_pattern:
+    - 'process.file.path: "/tmp/*"'
+    - 'process.file.path: "/var/tmp/*"'
+    - 'process.file.path: "/dev/shm/*"'
+  suspicious_name:
+    - 'process.file.name: /^[.][a-zA-Z0-9]{8,}$/'
+    - 'process.file.name: /.*\.(update|cache|bin|so)$/i'
+condition: exec_pattern and suspicious_name
+level: high

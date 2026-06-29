@@ -1,0 +1,16 @@
+title: Detect LoadMaster Outbound C2 Traffic
+logsource:
+  product: network
+  service: dns
+  category: network_connection
+detection:
+  loadmaster_ips:
+    - 'src_ip: "10.10.1.10"'
+    - 'src_ip: "10.10.1.11"'
+  c2_pattern:
+    - 'domain: "*.cloudfront.net"'
+    - 'domain: "*.dynamic-dns.net"'
+    - 'domain: "*.duckdns.org"'
+    - 'domain: "*.fastly.net"'
+condition: loadmaster_ips and any of c2_pattern
+level: high
