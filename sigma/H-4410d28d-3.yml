@@ -1,0 +1,17 @@
+title: Botnet Recruitment via CVE-2026-54420
+logsource:
+  product: webserver
+  service: litespeed
+detection:
+  selection:
+    uri: '*/litespeed/plugin*'
+    status: 200
+    request_body: 'wget http://|curl http://'
+    user_agent: 'Mozilla/5.0 (compatible; Nmap Scripting Engine)'
+  condition: selection
+fields:
+  - client_ip
+  - uri
+  - request_body
+  - user_agent
+level: high

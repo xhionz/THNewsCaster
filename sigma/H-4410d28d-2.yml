@@ -1,0 +1,17 @@
+title: Malicious LiteSpeed Plugin Update Detected
+logsource:
+  product: linux
+  service: package_manager
+detection:
+  selection:
+    package_name: 'litespeed-cpanel-plugin'
+    version: '1.2.0'|'1.2.1'|'1.2.2'
+    action: 'install'|'update'
+    signature_status: 'invalid'|'unsigned'
+  condition: selection
+fields:
+  - package_name
+  - version
+  - action
+  - signature_status
+level: high

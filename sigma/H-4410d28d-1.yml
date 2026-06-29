@@ -1,0 +1,17 @@
+title: Exploit Attempt for CVE-2026-54420 in LiteSpeed cPanel Plugin
+logsource:
+  product: webserver
+  service: litespeed
+detection:
+  selection:
+    uri: '*/litespeed/plugin*'
+    status: 200
+    user_agent: '*curl*|*wget*|*python-requests*'
+    request_body: 'exec|system|shell_exec|passthru'
+  condition: selection
+fields:
+  - client_ip
+  - uri
+  - user_agent
+  - status
+level: high
