@@ -1,0 +1,4 @@
+title: Detect DNS Tunneling for Djinn Stealer Exfiltration
+logsource:
+  product: dns
+condition: 'count > 100 and query | ends_with: ".com" and query | contains: "-" and query | length > 40 and timestamp > "2026-06-29T08:00:00Z" and timestamp < "2026-06-30T12:00:00Z"'

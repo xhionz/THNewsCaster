@@ -1,0 +1,16 @@
+title: Detect Suspicious Extension Installation with Spoofed Branding
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: '*\Extensions\*'
+  Image: '*\User Data\Default\Extensions\*'
+  Image: '*\AppData\Local\Google\Chrome\User Data\Default\Extensions\*'
+  Image: '*\AppData\Roaming\Microsoft\Edge\User Data\Default\Extensions\*'
+  Image: '*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Extensions\*'
+  Image: '*\NVIDIA*\extensions\*'
+  Image: '*\Amazon*\extensions\*'
+  Image: '*\Bank*\extensions\*'
+  Image: '*\Finance*\extensions\*'
+condition: all of them

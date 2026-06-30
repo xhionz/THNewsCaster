@@ -1,0 +1,17 @@
+title: Detect Suspicious Browser Extension Installation from Untrusted Paths
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: '*\Browser\*\Extensions\*.dll'
+  Image: '*\Browser\*\User Data\Default\Extensions\*'
+  Image: '*\AppData\Local\Google\Chrome\User Data\Default\Extensions\*'
+  Image: '*\AppData\Local\Mozilla\Firefox\Profiles\*\extensions\*'
+  Image: '*\AppData\Roaming\Microsoft\Edge\User Data\Default\Extensions\*'
+  Image: '*\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default\Extensions\*'
+  ParentImage: '*\chrome.exe'
+  ParentImage: '*\firefox.exe'
+  ParentImage: '*\msedge.exe'
+  ParentImage: '*\brave.exe'
+condition: all of them

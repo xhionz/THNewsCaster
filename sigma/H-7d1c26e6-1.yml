@@ -1,0 +1,5 @@
+title: Detect SimpleHelp Auth Bypass via Unauthenticated OIDC Requests
+logsource:
+  product: webserver
+  service: simplehelp
+condition: 'user: ["anonymous", "unauthenticated"] and http.status_code: 200 and http.url: "*/oidc/callback" and http.user_agent: "*SimpleHelp*" and timestamp > "2026-06-29T00:00:00Z" and timestamp < "2026-06-30T08:00:00Z"'

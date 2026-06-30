@@ -1,0 +1,16 @@
+title: Detect Suspicious JavaScript Injection in Web Responses
+logsource:
+  product: web
+  service: proxy
+detection:
+  http_method: 'GET'
+  http_status: 200
+  url: '*'
+  response_content: '*eval(*'
+  response_content: '*new Function(*'
+  response_content: '*innerHTML *=*<script*'
+  response_content: '*document.write(*<script*'
+  response_content: '*appendChild(*script*'
+  response_content: '*location.href*=*chrome-extension*'
+  source_domain: 'trusted-bank.com' OR source_domain: 'nvidia.com' OR source_domain: 'amazon.com'
+condition: all of them

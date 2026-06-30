@@ -1,0 +1,4 @@
+title: Detect Suspicious Cloud Service Access from Compromised Endpoints
+logsource:
+  product: firewall
+condition: 'dst_ip in ["140.82.112.0/20", "185.199.108.0/22", "185.199.109.0/22", "185.199.110.0/22", "185.199.111.0/22", "172.217.0.0/16", "172.253.0.0/16"] and http.user_agent: "*Python-urllib*" or http.user_agent: "*curl*" and http.url contains "/raw/" or http.url contains "/gist/" and timestamp > "2026-06-29T10:00:00Z" and timestamp < "2026-06-30T14:00:00Z"'
