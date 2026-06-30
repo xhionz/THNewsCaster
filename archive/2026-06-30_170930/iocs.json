@@ -1,0 +1,636 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-56445",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-56415",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-56413",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-55721",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-50656",
+      "sources": [
+        "https://thehackernews.com/2026/06/microsoft-confirms-rogueplanet-defender_02022423645.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-50110",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-50040",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-48907",
+      "sources": [
+        "https://thehackernews.com/2026/06/cisa-warns-of-actively-exploited-joomla.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-48558",
+      "sources": [
+        "https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html",
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
+        "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "https://www.darkreading.com/cyberattacks-data-breaches/djinn-stealer-targets-cloud-ai-credentials"
+      ]
+    },
+    {
+      "value": "CVE-2026-47729",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1u9y7yw/squidbleed_cve202647729_heartbleedstyle/"
+      ]
+    },
+    {
+      "value": "CVE-2026-46817",
+      "sources": [
+        "https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html",
+        "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/"
+      ]
+    },
+    {
+      "value": "CVE-2026-46331",
+      "sources": [
+        "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-34910",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-34909",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-34908",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-33825",
+      "sources": [
+        "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/"
+      ]
+    },
+    {
+      "value": "CVE-2026-33017",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1ue57gx/from_langflow_to_monero_inside_cve202633017/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20253",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/18/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "https://www.securityweek.com/splunk-enterprise-vulnerability-exploited-in-attacks-days-after-disclosure/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20245",
+      "sources": [
+        "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html",
+        "https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/",
+        "https://www.reddit.com/r/blueteamsec/comments/1ufyrvs/zeroday_exploitation_of_vulnerability/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20230",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-12819",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-12818",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-12569",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/first-ever-exploitation-of-ptc-windchill-vulnerability-discovered-in-the-wild/"
+      ]
+    },
+    {
+      "value": "CVE-2026-9718",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-9717",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-9716",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-8037",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1uj2a4w/enterprise_tech_in_shell_out_progress_kemp/"
+      ]
+    },
+    {
+      "value": "CVE-2025-67038",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/23/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2024-40766",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "CVE-2024-12802",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "5.9.2.14",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "5.255.127.55",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1u6nsf4/ababil_of_minab_exposed_la_metro_scada_backups/"
+      ]
+    },
+    {
+      "value": "6.5.4.14",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "8.0.4.29",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "01f96fd710e905ca2326.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "330311481fe14ab99814.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "39d9612df78e45b5a4bb.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "425f1faf4b214434b8a3.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "62ea47cac2534aa18f74.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "access.set",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "bartsen284.online",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "bluescry.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "cdntestconnect.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "clip.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "cmd.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "config.vdf",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "cookies.sqlite",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "cred.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "debug.pl",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "detections.ai",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1uic79a/anonymous_researcher_drops_exploitarium_109_files/"
+      ]
+    },
+    {
+      "value": "dialogconfig.vdf",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "e396586b99ee49d19cc3.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "ed54b97a570943999715.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "formhistory.sqlite",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "goodpanelforgoodjob.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "hubs.la",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1u8yjfr/introducing_fortibleed/"
+      ]
+    },
+    {
+      "value": "hunt.io",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1u6nsf4/ababil_of_minab_exposed_la_metro_scada_backups/",
+        "https://www.reddit.com/r/blueteamsec/comments/1uejfny/inside_eastern_europes_c2_sprawl_3900_servers_302/"
+      ]
+    },
+    {
+      "value": "index.php",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "isc.sans.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "libraryfolders.vdf",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "login.pl",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "logins.json",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "loginusers.vdf",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "microsoft-telemetry.at",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "msiexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "neltron-geltron.shop",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "notifications.as",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "nudwee.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "os.path.join",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01"
+      ]
+    },
+    {
+      "value": "overview.jsp",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "places.sqlite",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "polse.us",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "profiles.ini",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "rebustan.top",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "roger99699.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "rundll32.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "secure.controlpanel.asia",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "socradar.io",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1u8yjfr/introducing_fortibleed/"
+      ]
+    },
+    {
+      "value": "spasopro.at",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "stonefly.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "svclsc.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "winscp.ini",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "with.implement",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01"
+      ]
+    },
+    {
+      "value": "www.deltaww.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "www.se.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "0215f734867bd71c57ff5c524d8cc670be5b4f1861b2c390cf46d18784a53624",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "1246c5b89ab668c1137f377507bc3e266a98e93248382aa026610ae1e764a497",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "2a0f053855da59b3b56812e580d7baeba59fc9493694722aa9e3f121ee3363f1",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "30cef3d3d956e83e2c50579cfbe57a49159cccbcc8b0b0422f27d55e1c401ad9",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "43455f1ff4a623b783da670d052eb77eaaacb0c66a9f1e8508f802bf22e8129e",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "5f5b25b2e35d404034d0d60975cf1ffbc6f141761ec3f4f15d6f7c6213a056f6",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "8cef760d11d24fc2e9bbd9f770dca5105854f7ece3b0e6948d7c8b7fdd1765ea",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "8f32456359f209a63adfd24b94235e1727382ac7f7bb7f2bcaf754e721925b64",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "9383572a30ae5b76fadd0700fbd7a1aa7b05d0b6c8f9cdaef9b30a3e1f65d57d",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "977b33a9b481cf714946b7d386865cd5d284312aa5ecfa0546c197b1003e1bde",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "98e504cc7125b79eda5491f40b998605a05f4cd968b961aab4cce7beb074fefe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "99507f18c4e61fdb109805404bf6a79ea8ce2fddc590ce48d717e97516ab7e8d",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "b7d1f172ff3feafe65d47fd1cbe0cc249316371ae0e1cbe3a7c741c738b3353d",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "ca4d4c4fc3e5d5cfa922b898f2d7411f03a446dddb139ba45dfd4f8f0018b64f",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    },
+    {
+      "value": "d43c988d6f9cb355497696b580621fb1bdb7b6ed6d90f97520ecf6da5a1a41ff",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/06/24/stealc-and-amadey-breaking-down-infostealers-and-the-cybercrime-services-that-deliver-them/"
+      ]
+    }
+  ],
+  "sha1": [],
+  "md5": []
+}
