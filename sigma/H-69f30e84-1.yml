@@ -1,0 +1,20 @@
+title: Suspicious Scheduled Task Creation Outside Defender Patterns
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 106
+  TaskName: 
+    - '*\Microsoft\Windows\*'
+    - '*\Microsoft\Office\*'
+    - '*\Update\*'
+    - '*\Adobe\*'
+    - '*\Google\*'
+  ActionPath: 
+    - '*\temp\*.exe'
+    - '*\appdata\local\temp\*.exe'
+    - '*\windows\temp\*.exe'
+    - '*\users\*\appdata\roaming\*.exe'
+    - '*\programdata\*.exe'
+  Creator: SYSTEM
+condition: all of them

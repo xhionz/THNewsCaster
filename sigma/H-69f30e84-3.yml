@@ -1,0 +1,21 @@
+title: Suspicious WMI Event Subscription for Persistence
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 5861
+  EventFilterName: 
+    - '*\temp\*'
+    - '*\appdata\local\temp\*'
+    - '*\programdata\*'
+    - '*\windows\temp\*'
+  ConsumerName: 
+    - '*\temp\*'
+    - '*\appdata\local\temp\*'
+    - '*\programdata\*'
+  CommandLine: 
+    - '*cmd.exe*'
+    - '*powershell.exe*'
+    - '*wscript.exe*'
+    - '*cscript.exe*'
+condition: all of them

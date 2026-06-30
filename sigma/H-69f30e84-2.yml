@@ -1,0 +1,18 @@
+title: Suspicious DLL Load in Defender Process Context
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 7
+  Image: '*\MsMpEng.exe'
+  ImageLoaded: 
+    - '*\temp\*.dll'
+    - '*\appdata\local\temp\*.dll'
+    - '*\users\*\appdata\roaming\*.dll'
+    - '*\programdata\*.dll'
+    - '*\windows\temp\*.dll'
+  ImageLoaded: 
+    - '*\*.dll'
+    - 'ImageLoaded: !*\Windows\System32\*.dll'
+    - 'ImageLoaded: !*\Windows\SysWOW64\*.dll'
+condition: all of them
