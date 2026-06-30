@@ -1,0 +1,13 @@
+title: SSH Brute Force from Internal Host - Suspicious Login Attempts
+description: Detect multiple failed SSH login attempts from a single internal host to multiple destinations within 10 minutes
+detection:
+  selection:
+    event_id: "ssh_login_failed"
+    src_ip: "10.0.0.0/8"  # internal network
+    dest_ip: "10.0.0.0/8"  # internal network
+  condition: selection
+  timeframe: 10m
+  condition: selection and count() >= 10 within 10m
+logsource:
+  product: linux
+  service: ssh

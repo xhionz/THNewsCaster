@@ -1,0 +1,11 @@
+title: Windows Scheduled Task Created to Execute Miner Binary
+description: Detect creation of a scheduled task with a command line containing miner keywords
+detection:
+  selection:
+    event_id: "4698"  # Scheduled Task Created
+    command_line: "xmrig" | "minerd" | "xmr-stak" | "monero" | "xmr" 
+  condition: selection
+timeframe: 1d
+logsource:
+  product: windows
+  service: security

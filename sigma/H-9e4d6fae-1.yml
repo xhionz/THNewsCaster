@@ -1,0 +1,13 @@
+title: Langflow RCE - Python Code Execution via /api/v1/flow/
+description: Detect POST requests to /api/v1/flow/ containing Python code execution patterns
+detection:
+  selection:
+    event_id: "http_request"
+    method: "POST"
+    path: "/api/v1/flow/"
+    content: "eval(" | "exec(" | "subprocess." | "os.system(" | "popen(" | "__import__('os').system(" 
+  condition: selection
+timeframe: 1h
+logsource:
+  product: webserver
+  service: http
