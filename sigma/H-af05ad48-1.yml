@@ -1,0 +1,9 @@
+title: DHIS2 Default Credential Login Attempt
+logsource:
+  product: webserver
+  service: http
+detection:
+  request_uri: "*/dhis-web-login*"
+  request_method: "POST"
+  http_request_body: "username=admin&password=dhis2"
+condition: all of them

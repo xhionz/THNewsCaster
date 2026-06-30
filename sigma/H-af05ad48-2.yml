@@ -1,0 +1,9 @@
+title: DHIS2 Data File Encryption Detected
+logsource:
+  product: linux
+  service: filesystem
+detection:
+  file_path: "*/dhis2/data/*"
+  file_name: "*.dhis2.enc"
+  file_extension: "dhis2.enc"
+condition: all of them

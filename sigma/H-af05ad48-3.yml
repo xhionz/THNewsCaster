@@ -1,0 +1,9 @@
+title: DHIS2 PostgreSQL Unauthorized Access
+logsource:
+  product: linux
+  service: postgresql
+detection:
+  user: "dhis2"
+  client_addr: "!10.0.0.0/8"
+  query: "SELECT * FROM" or "UPDATE" or "DELETE FROM"
+condition: all of them
