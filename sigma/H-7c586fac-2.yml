@@ -1,0 +1,17 @@
+title: Detection of Gitea CVE-2024-3400 Auth Bypass
+logsource:
+  product: docker
+  service: gitea
+detection:
+  selection:
+    http_method: 'POST'
+    http_uri: '/api/v1/user/login'
+    http_status: 200
+    http_body: 'token'
+    auth_header: 'Authorization: Bearer'
+  condition: selection
+fields:
+  - src_ip
+  - user_agent
+  - http_uri
+condition: selection

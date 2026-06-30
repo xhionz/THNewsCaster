@@ -1,0 +1,14 @@
+title: Detection of libssh2 CVE-2024-21762 Exploitation
+logsource:
+  product: linux
+  service: ssh
+detection:
+  selection:
+    message: 'libssh2_session_startup: heap write'
+    event_type: 'authentication'
+  condition: selection
+fields:
+  - user
+  - src_ip
+  - dst_ip
+condition: selection

@@ -1,0 +1,15 @@
+title: Detection of 7-Zip SFX Archive Extraction with -o Flag
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\7zS.sfx.exe'
+    CommandLine: '*-o*'
+    ParentImage: '*\7z.exe'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentImage
+  - User
+condition: selection
