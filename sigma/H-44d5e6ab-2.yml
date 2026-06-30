@@ -1,0 +1,10 @@
+title: Phishing Email Triggered BlueHammer - OLE Object Creation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\winword.exe' OR Image: '*\excel.exe'
+  CommandLine: '*-Embedding*' OR CommandLine: '*-Embed*' OR CommandLine: '*-o *'
+  ParentImage: '*\explorer.exe'
+condition: all

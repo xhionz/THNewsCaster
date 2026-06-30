@@ -1,0 +1,9 @@
+title: BlueHammer DLL Hijack - Malicious DLL in Temp Directory
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: '*\Temp\*.dll'
+  ParentImage: '*\MsMpEng.exe'
+condition: all

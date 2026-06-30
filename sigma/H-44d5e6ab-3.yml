@@ -1,0 +1,11 @@
+title: BlueHammer to Ransomware - SYSTEM Process Chain
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\certutil.exe' OR Image: '*\bitsadmin.exe' OR Image: '*\powershell.exe'
+  ParentImage: '*\svchost.exe'
+  Integrity: 'High'
+  ParentParentImage: '*\MsMpEng.exe'
+condition: all
