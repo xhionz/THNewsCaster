@@ -1,0 +1,11 @@
+title: Detect Phishing Emails Promoting Fake CitrixBleed Vulnerability
+logsource:
+  product: email_gateway
+detection:
+  subject:
+    email.subject: "Urgent: CitrixBleed CVE-2026-8451 Patch Required" or "Security Alert: NetScaler Memory Leak Exploit"
+  body:
+    email.body: "reddit.com/r/netsec" and (email.body contains "download" or email.body contains "click here" or email.body contains "patch now")
+  link:
+    email.links: "reddit.com/r/netsec" or "watchtowrlabs.com"
+condition: all of them

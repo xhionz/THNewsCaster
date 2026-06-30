@@ -1,0 +1,10 @@
+title: Detect CVE-2023-3519 Exploitation via Oversized Accept-Encoding Header
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_header:
+    http.request.headers["Accept-Encoding"]: "*" | contains "gzip,deflate" | length > 100
+  path:
+    http.request.uri: "/vpn/"
+condition: all of them
