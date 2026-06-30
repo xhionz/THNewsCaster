@@ -1,0 +1,10 @@
+title: Phishing Email Spoofing StoneFly Support
+logsource:
+  product: email
+detection:
+  selection:
+    from_address: "*support@stonefly.com" | "*support-stonefly.com" | "*admin@stonefly.com"
+    subject: "Urgent: Your StoneFly SC License Needs Renewal" | "Security Alert: Your Account Has Been Compromised"
+    body: "click here" | "verify your credentials" | "download attachment"
+  condition: selection
+fields: [from_address, subject, recipient, timestamp]

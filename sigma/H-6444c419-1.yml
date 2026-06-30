@@ -1,0 +1,11 @@
+title: StoneFly SC OS Command Injection via Hardcoded Creds
+logsource:
+  product: webserver
+detection:
+  selection:
+    http.request.uri: "/debug.pl" | "/login.pl"
+    http.request.method: "POST"
+    http.response.status_code: 200
+    user_agent: "curl/*" | "wget/*" | "python-requests/*"
+  condition: selection
+fields: [http.request.uri, http.response.status_code, user_agent, client_ip]

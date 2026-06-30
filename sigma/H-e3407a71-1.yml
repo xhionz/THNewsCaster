@@ -1,0 +1,27 @@
+title: Unauthenticated Modbus TCP Access to DVP12SE PLCs
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects unauthenticated Modbus TCP traffic to DVP12SE PLCs from non-admin IPs
+logsource:
+  product: network
+  service: tcp
+detection:
+  sel:
+    dst_ip:
+      - '192.168.10.0/24'
+      - '192.168.11.0/24'
+    dst_port: 502
+    src_ip:
+      - '!192.168.10.100'
+      - '!192.168.10.101'
+      - '!192.168.10.102'
+      - '!192.168.10.103'
+    protocol: tcp
+    modbus_function_code:
+      - 1
+      - 5
+      - 6
+      - 15
+      - 16
+  condition: sel
+level: high

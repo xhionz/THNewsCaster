@@ -1,0 +1,10 @@
+title: StoneFly SC SQL Injection Attempt
+logsource:
+  product: webserver
+detection:
+  selection:
+    http.request.uri: "/login.pl" | "/debug.pl"
+    http.request.method: "POST"
+    http.request.body: "' OR 1=1" | "union select" | "--" | ";--"
+  condition: selection
+fields: [http.request.uri, http.request.body, client_ip, http.response.status_code]

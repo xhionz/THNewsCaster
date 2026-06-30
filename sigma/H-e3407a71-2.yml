@@ -1,0 +1,28 @@
+title: Suspicious Email with Typosquatted Domain and Macro Attachment
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects phishing emails with typosquatted Delta domains and macro-enabled attachments
+logsource:
+  product: email
+  service: smtp
+detection:
+  sel:
+    from:
+      - '*@delta-electronics.co'
+      - '*@delta-electronics.com.cn'
+      - '*@deltaww.com'
+      - '*@delta-electronics.net'
+    subject:
+      - '*urgent*'
+      - '*maintenance*'
+      - '*PLC*'
+    attachment:
+      - '*.docm'
+      - '*.xlsm'
+      - '*.js'
+    body:
+      - 'click here'
+      - 'download attachment'
+      - 'verify account'
+  condition: sel
+level: high
