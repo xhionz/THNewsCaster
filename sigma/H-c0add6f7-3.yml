@@ -1,0 +1,14 @@
+title: Oracle EBS Suspicious Outbound HTTPS to New Domains
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects outbound HTTPS connections from EBS servers to domains not in allowlist
+logsource:
+  product: oracle_ebs
+  service: network
+condition: 'event_type: "connection" and protocol: "https" and destination_port: 443 and destination_host not in [allowed_domains] and source_host in [ebs_servers] and bytes_out > 1000000'
+detection:
+  outbound_https: 'event_type: "connection" and protocol: "https"'
+  new_destination: 'destination_host not in [allowed_domains]'
+  ebs_source: 'source_host in ["ebs-app-01", "ebs-app-02"]'
+  large_transfer: 'bytes_out > 1000000'
+condition: outbound_https and new_destination and ebs_source and large_transfer

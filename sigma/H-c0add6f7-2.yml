@@ -1,0 +1,14 @@
+title: Oracle EBS Credential Brute Force Detection
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects rapid sequential authentication failures indicative of credential brute force
+logsource:
+  product: oracle_ebs
+  service: web
+condition: 'event_type: "auth_attempt" and status: "failed" and url_path: "/OA_HTML/OA.jsp" and source_ip != "192.168.10.0/24" and count_over_time(5m) > 10'
+detection:
+  auth_failures: 'event_type: "auth_attempt" and status: "failed"'
+  target_endpoint: 'url_path: "/OA_HTML/OA.jsp"'
+  external_source: 'source_ip != "192.168.10.0/24"'
+  rate_threshold: 'count_over_time(5m) > 10'
+condition: auth_failures and target_endpoint and external_source and rate_threshold

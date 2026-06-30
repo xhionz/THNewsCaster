@@ -1,0 +1,14 @@
+title: Oracle EBS Authentication Bypass Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects anomalous authentication attempts to Oracle EBS login endpoints
+logsource:
+  product: oracle_ebs
+  service: web
+condition: 'event_type: "auth_attempt" and status: "failed" and url_path: "/OA_HTML/OA.jsp" and user_agent contains "curl" or user_agent contains "python-requests" or user_agent contains "Burp" and source_ip != "192.168.10.0/24"'
+detection:
+  auth_failures: 'event_type: "auth_attempt" and status: "failed"'
+  suspicious_ua: 'user_agent contains "curl" or user_agent contains "python-requests" or user_agent contains "Burp"'
+  internal_ip_exclusion: 'source_ip != "192.168.10.0/24"'
+  endpoint_target: 'url_path: "/OA_HTML/OA.jsp"'
+condition: auth_failures and suspicious_ua and internal_ip_exclusion and endpoint_target
