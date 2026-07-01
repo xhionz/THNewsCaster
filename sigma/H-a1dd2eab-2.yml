@@ -1,0 +1,12 @@
+title: Kubernetes API Access via Argocd Repo-Server Token
+logsource:
+  product: kubernetes
+  service: audit
+condition: 'kube-apiserver-audit'
+detection:
+  user: 'system:serviceaccount:argocd:argocd-repo-server'
+  verb: 'get'
+  resource: 'secrets'
+  namespace: 'argocd'
+  request_uri: '/api/v1/namespaces/argocd/secrets'
+condition: all of them

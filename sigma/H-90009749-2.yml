@@ -1,0 +1,9 @@
+title: Ransomware File Creation via w3wp.exe Child Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  parent_process: 'Image: *\w3wp.exe'
+  child_process: 'Image: *\*.exe and (Image: *\*.crypt* or Image: *\*.lock* or Image: *\*.ransom* or Image: *\*.xtbl* or Image: *\*.zzz*)'
+  file_creation: 'EventType: CreateFile and TargetFilename: *\*.crypt* or *\*.lock* or *\*.ransom* or *\*.xtbl* or *\*.zzz*'
+condition: parent_process and child_process and file_creation

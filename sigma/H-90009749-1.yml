@@ -1,0 +1,12 @@
+title: Suspicious SharePoint Deserialization Request (CVE-2021-26855)
+logsource:
+  product: iis
+  service: http
+condition: 'http_method: POST and http_url: "*/_vti_bin/ClientService.svc" and http_user_agent: "" or http_user_agent: "*Mozilla*" and http_status: 200 and http_content_length > 5000 and http_referer: ""'
+detection:
+  suspicious_ua: 'http_user_agent: ""'
+  legitimate_ua: 'http_user_agent: contains "Mozilla"'
+  large_payload: 'http_content_length > 5000'
+  target_endpoint: 'http_url: "*/_vti_bin/ClientService.svc"'
+  no_referer: 'http_referer: ""'
+condition: all of them

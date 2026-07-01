@@ -1,0 +1,16 @@
+title: Container Escape via HostPath Mount or Socket Access
+logsource:
+  product: kubernetes
+  service: audit
+condition: 'kube-apiserver-audit'
+detection:
+  verb: 'create'
+  resource: 'pods'
+  request_uri: '/api/v1/namespaces'
+  field_path: 'spec.volumes.hostPath.path'
+  hostPath_path:
+    - '/var/run/docker.sock'
+    - '/host'
+    - '/root'
+    - '/etc'
+condition: all of them

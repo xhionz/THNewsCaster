@@ -1,0 +1,9 @@
+title: Domain Controller Enumeration via Native Tools
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process: 'Image: *\net.exe or *\nltest.exe or *\dsquery.exe or *\PowerShell.exe'
+  args: 'CommandLine: *view* or *domain* or *dc* or *forest* or *Get-ADUser* or *Get-ADDomainController*'
+  event_type: 'EventType: ProcessCreate'
+condition: process and args and event_type
