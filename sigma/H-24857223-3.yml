@@ -1,0 +1,16 @@
+title: Suspicious Microsoft 365 Account Manipulation via Hidden Forwarding Rules
+logsource:
+  product: microsoft365
+  service: exchange
+detection:
+  selection:
+    Action:
+      - 'New-InboxRule'
+      - 'Set-Mailbox'
+    Parameters:
+      - 'ForwardTo'
+      - 'DeliverToMailboxAndForward'
+      - 'HiddenFromAddressListsEnabled'
+  condition: selection
+  timeframe: 7d
+  level: high

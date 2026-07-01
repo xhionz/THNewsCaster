@@ -1,0 +1,14 @@
+title: ARToken Phishing Domain Access via Microsoft 365 Redirects
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    Domain:
+      - '*.sharepoint.com'
+      - '*.pamconj.com'
+      - '*.workers.dev'
+      - '*.s-account.workers.dev'
+  condition: selection
+  timeframe: 1h
+  level: high

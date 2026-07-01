@@ -1,0 +1,11 @@
+title: Suspicious Cloudflare Workers.dev Domain Access Mimicking Microsoft Services
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    Domain:
+      - '*.workers.dev'
+  condition: selection and not (Domain == 'onedrive.microsoft.com' OR Domain == 'sharepoint.microsoft.com')
+  timeframe: 24h
+  level: high
