@@ -1,0 +1,27 @@
+title: Suspicious Credential Access from Kemp LoadMaster Device
+logsource:
+  product: endpoint
+  category: process_creation
+condition: '1 of them'
+detection:
+  image:
+    - "ssh"
+    - "scp"
+    - "sftp"
+    - "curl"
+    - "wget"
+  cmdline:
+    - "-i /etc/kemp/"
+    - "-i /opt/kemp/"
+    - "-u admin"
+    - "-u root"
+    - "-p password"
+    - "--user admin:"
+  dest_ip:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+  filter:
+    - "curl https://google.com"
+    - "wget http://127.0.0.1"
+condition: all of them

@@ -1,0 +1,23 @@
+title: Internal Network Scanning Originating from Kemp LoadMaster
+logsource:
+  product: network
+  category: dns
+condition: '1 of them'
+detection:
+  src_ip:
+    - "10.10.10.10"  # example LoadMaster IP
+    - "10.10.10.11"
+  dest_ip:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+  query:
+    - "*.internal"
+    - "*.local"
+    - "*.corp"
+    - "*.lan"
+  method: "any"
+  filter:
+    - "query: google.com"
+    - "query: cloudflare-dns.com"
+condition: all of them

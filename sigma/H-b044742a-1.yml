@@ -1,0 +1,32 @@
+title: Suspicious HTTP Request to Kemp LoadMaster Pre-Auth Endpoint
+logsource:
+  product: web_server
+  service: http
+  category: web
+condition: '1 of them'
+detection:
+  req_uri:
+    - "/admin/"
+    - "/cgi-bin/"
+    - "/api/v1/"
+  user_agent: "Mozilla/5.0"  # common, but not exclusive
+  content:
+    - "$("
+    - "`"
+    - ";"
+    - "&&"
+    - "||"
+    - "|"
+    - "eval("  
+    - "system("  
+    - "exec("  
+    - "popen("  
+    - "bash -c"
+    - "sh -c"
+  method: "all"
+  filter:
+    - "GET /health"
+    - "GET /status"
+    - "GET /favicon.ico"
+    - "GET /robots.txt"
+condition: all of them
