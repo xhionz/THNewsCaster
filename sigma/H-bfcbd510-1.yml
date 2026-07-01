@@ -1,0 +1,10 @@
+title: Detect CVE-2019-19781 Path Traversal Attempts
+logsource:
+  product: netscaler
+  category: application
+detection:
+  req_paths:
+    - '/vpns/portal/scripts/newbm.pl'
+    - '/vpns/portal/dana-na/auth/url_default/welcome.cgi'
+    - '/vpns/portal/.../.../.../.../etc/passwd'
+  condition: req_paths

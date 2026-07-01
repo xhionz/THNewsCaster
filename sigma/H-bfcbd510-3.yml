@@ -1,0 +1,10 @@
+title: Detect Citrix Reconnaissance via Custom Headers
+logsource:
+  product: netscaler
+  category: application
+detection:
+  citrix_headers:
+    - 'http_request_header: X-Citrix-ADC'
+    - 'http_request_header: X-Citrix-User'
+    - 'http_request_header: X-Citrix-Client-IP'
+  condition: citrix_headers

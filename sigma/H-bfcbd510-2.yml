@@ -1,0 +1,10 @@
+title: Detect HTTP/2 Rapid Reset DoS (CVE-2021-35587)
+logsource:
+  product: netscaler
+  category: application
+detection:
+  high_rst_streams:
+    - 'http2_stream_count > 1000'
+    - 'http2_rst_stream_count > 500'
+  timeframe: 60s
+  condition: high_rst_streams
