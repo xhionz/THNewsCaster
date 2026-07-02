@@ -1,0 +1,11 @@
+title: Detect Ransomware Scheduled Task Creation via schtasks.exe
+logsource:
+  product: windows
+  service: sysmon
+condition: 'event_id:1 AND process_name:schtasks.exe AND process_command_line:*create* AND process_command_line:*/sc minute* OR /sc daily*'
+detection:
+  event_id: 1
+  process_name: schtasks.exe
+  process_command_line: '*create*'
+  process_command_line: '*sc minute*' OR '*sc daily*'
+condition: all

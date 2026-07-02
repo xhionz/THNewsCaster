@@ -1,0 +1,10 @@
+title: Detect Mimikatz Process Creation Accessing LSASS
+logsource:
+  product: windows
+  service: sysmon
+condition: 'event_id:1 AND process_name:mimikatz.exe AND process_command_line:*lsass*'
+detection:
+  event_id: 1
+  process_name: mimikatz.exe
+  process_command_line: '*lsass*'
+condition: all

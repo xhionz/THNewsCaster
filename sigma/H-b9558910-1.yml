@@ -1,0 +1,13 @@
+title: Detect ProxyLogon Exploitation via ASPX Request Patterns
+logsource:
+  product: iis
+  service: http
+condition: 'http.request.method: POST and http.request.uri: "*.aspx" and http.request.headers["X-Forwarded-For"]: "*" and http.response.status_code: 200 and http.response.body contains "__VIEWSTATE" and http.response.body contains "__EVENTVALIDATION"'
+detection:
+  http.request.method: POST
+  http.request.uri: "*.aspx"
+  http.request.headers["X-Forwarded-For"]: "*"
+  http.response.status_code: 200
+  http.response.body: "__VIEWSTATE"
+  http.response.body: "__EVENTVALIDATION"
+condition: all
