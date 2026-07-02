@@ -1,0 +1,9 @@
+title: Suspicious Email Attachment Execution via Office Macro
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  image: '*\winword.exe' OR '*\excel.exe' OR '*\powerpnt.exe'
+  parent_image: '*\outlook.exe'
+  command_line: contains '/m' OR contains '/o'
+condition: all

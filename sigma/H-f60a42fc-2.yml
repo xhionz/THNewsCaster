@@ -1,0 +1,9 @@
+title: Credential Dumping via Rundll32 from SharePoint w3wp.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  image: '*\rundll32.exe'
+  command_line: contains 'lsass'
+  parent_image: '*\w3wp.exe'
+condition: all

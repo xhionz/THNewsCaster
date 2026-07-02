@@ -1,0 +1,11 @@
+title: Detection of CVE-2024-21762 Exploitation via Client.svc
+logsource:
+  product: iis
+  service: sharepoint
+detection:
+  uri_path: /_vti_bin/Client.svc
+  http_method: POST
+  content_type: contains: 'text/xml' OR contains: 'application/soap+xml'
+  status_code: [404, 500]
+  user_agent: 'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)'
+condition: all
