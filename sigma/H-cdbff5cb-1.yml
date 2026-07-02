@@ -1,0 +1,23 @@
+title: Langflow RCE Exploitation via Web Request
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects exploitation of CVE-2024-27198 in Langflow via suspicious POST requests to /api/v1/run
+logsource:
+  product: webserver
+  service: nginx
+  definition: 'Contains requests to Langflow API endpoints'
+detection:
+  selection:
+    method: 'POST'
+    path: '/api/v1/run'
+    user_agent: 'python-requests/*'
+    status: 200
+  condition: selection
+fields:
+  - client_ip
+  - path
+  - user_agent
+  - status
+tags:
+  - attack.initial_access
+  - attack.t1190

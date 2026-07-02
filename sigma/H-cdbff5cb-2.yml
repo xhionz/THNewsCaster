@@ -1,0 +1,20 @@
+title: Suspicious PowerShell Credential Dumping Post-RCE
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects PowerShell execution with common credential dumping commands after initial compromise
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*-c *Invoke-Mimikatz*' OR CommandLine: '*-c *Get-Credential*' OR CommandLine: '*-c *lsass*' OR CommandLine: '*-c *sekurlsa::logonpasswords*'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentProcessName
+  - ProcessId
+tags:
+  - attack.privilege_escalation
+  - attack.t1003
+  - attack.t1078

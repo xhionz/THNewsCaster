@@ -1,0 +1,19 @@
+title: Suspicious DNS Exfiltration via High Query Count and Long Domains
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects DNS queries with >15 subdomains and >10 queries in 5 minutes, indicative of exfiltration
+logsource:
+  product: dns
+  service: bind
+detection:
+  selection:
+    query_count: '>10'
+    domain_length: '>40'
+  condition: selection
+fields:
+  - query
+  - client_ip
+  - query_count
+tags:
+  - attack.exfiltration
+  - attack.t1041
