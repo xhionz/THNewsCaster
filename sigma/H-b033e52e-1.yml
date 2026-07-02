@@ -1,0 +1,12 @@
+title: Detection of CitrixBleed (CVE-2026-8451) Memory Dumping Attempts
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    http.request.uri: '*cgi-bin/export*'
+    http.response.status_code: 200
+    http.response.body: '.*\x00.*'
+  condition: selection
+fields: [http.request.uri, http.response.body, client.ip]
+level: high

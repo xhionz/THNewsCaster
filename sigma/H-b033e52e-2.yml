@@ -1,0 +1,13 @@
+title: Suspicious Internal Network Scanning from NetScaler IPs
+logsource:
+  product: network
+  service: flow
+detection:
+  selection:
+    source.ip: [NetScaler_IPs]
+    destination.port: [80, 443, 3389, 135, 445]
+    flow.bytes > 10000
+    flow.duration: '10s'
+  condition: selection
+fields: [source.ip, destination.ip, destination.port, flow.bytes]
+level: medium

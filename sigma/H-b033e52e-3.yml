@@ -1,0 +1,12 @@
+title: Phishing Emails with Citrix-Themed Lures Post-CitrixBleed
+logsource:
+  product: email
+  service: smtp
+detection:
+  selection:
+    subject: '*Citrix*update*|*NetScaler*patch*|*CVE-2026-8451*'
+    attachment.extension: ['exe', 'js', 'scr', 'zip']
+    sender.domain: NOT [trusted_domains]
+  condition: selection
+fields: [subject, sender, attachment.name]
+level: high
