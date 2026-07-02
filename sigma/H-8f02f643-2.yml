@@ -1,0 +1,12 @@
+title: Detect Suspicious Vendor Account Logons via NTLM or OAuth
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 4624
+  account_name|startswith: 'VENDOR_' or account_name|startswith: 'SUPP_' or account_name|startswith: 'EXT_' 
+  logon_type: 3 or 10
+  authentication_package: 'NTLM' or 'Kerberos'
+  ip_address|contains: '192.168.' or ip_address|contains: '10.'
+  logon_process: 'NtLmSsp' or 'User32'
+condition: all

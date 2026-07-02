@@ -1,0 +1,17 @@
+title: Detect Citrix Bleed 2 Exploitation Attempts
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'request_uri|contains: "/vpn/" or request_uri|contains: "/ica/" or request_uri|contains: "/cgi-bin/"'
+detection:
+  request_uri:
+    - "/vpn/"
+    - "/ica/"
+    - "/cgi-bin/"
+  user_agent:
+    - "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+    - "curl/7.68.0"
+    - "python-requests/2.25.1"
+  content_length: '>10000'
+  status: '404' or '500' or '403'
+condition: all
