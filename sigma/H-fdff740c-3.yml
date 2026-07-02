@@ -1,0 +1,17 @@
+title: Detect SMB Relay Attempt from SharePoint to DC
+logsource:
+  product: windows
+  service: network_connection
+detection:
+  selection:
+    Image: '*\\svchost.exe'
+    DestinationIp: '*'
+    DestinationPort: '445'
+    SourceIp: '[SharePoint_Server_IP]'
+    Protocol: 'TCP'
+  condition: selection
+fields:
+  - Image
+  - SourceIp
+  - DestinationIp
+  - DestinationPort

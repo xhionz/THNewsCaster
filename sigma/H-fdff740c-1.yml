@@ -1,0 +1,14 @@
+title: Detect SharePoint SSRF to Web Shell Deployment via ASPX Creation
+logsource:
+  product: windows
+  service: file_system
+detection:
+  selection:
+    EventID: 11
+    Image: "*\\SharePoint\\*.aspx"
+    FileName: "*.aspx"
+  condition: selection
+fields:
+  - Image
+  - FileName
+  - ParentImage
