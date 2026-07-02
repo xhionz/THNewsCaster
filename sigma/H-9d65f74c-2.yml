@@ -1,0 +1,12 @@
+title: Detect Suspicious RDP Logons from FortiGate IP Ranges
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    Logon_Type: 10
+    Account_Name: 'Administrator'
+    Source_Network_Address: '192.168.1.1' OR '192.168.1.2' OR '192.168.1.3' OR '192.168.1.4' OR '192.168.1.5'
+  condition: selection
+condition: selection

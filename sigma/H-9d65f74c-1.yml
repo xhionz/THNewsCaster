@@ -1,0 +1,12 @@
+title: Detect FortiBleed Exploitation via Malformed HTTP POST
+logsource:
+  product: fortigate
+  service: http
+detection:
+  selection:
+    method: 'POST'
+    uri: '/remote/logincheck'
+    content_length|gt: 1000
+    user_agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+  condition: selection
+condition: selection

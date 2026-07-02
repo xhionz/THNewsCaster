@@ -1,0 +1,12 @@
+title: Detect Suspicious PowerShell Get-ADUser Execution
+logsource:
+  product: windows
+  service: powershell
+detection:
+  selection:
+    EventID: 4104
+    ScriptBlockText: '*Get-ADUser*'
+    CommandLine: '*-Server*'
+    Process: powershell.exe
+  condition: selection
+condition: selection
