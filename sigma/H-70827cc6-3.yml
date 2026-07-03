@@ -1,0 +1,13 @@
+title: Suspicious Scheduled Task Creation with PowerShell
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  task_name:
+    - "MicrosoftUpdate"
+    - "WindowsDefenderScan"
+    - "SystemMaintenance"
+  command_line:
+    - "schtasks /create"
+    - "-tr \"powershell"
+condition: 'event_id == 1 AND (command_line contains "schtasks /create" and command_line contains "powershell") and (task_name contains "MicrosoftUpdate" or task_name contains "SystemMaintenance")'

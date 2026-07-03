@@ -1,0 +1,15 @@
+title: Suspicious NPM Postinstall Execution
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\node.exe'
+    - '*\npm.cmd'
+  CommandLine:
+    - '*npm install solidity-helper-pro*'
+    - '*postinstall.js*'
+    - '*eval(*'
+    - '*new Function(*'
+    - '*Buffer.from(*, "base64"*)'
+condition: all

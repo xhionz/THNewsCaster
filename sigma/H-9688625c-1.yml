@@ -1,0 +1,13 @@
+title: Suspicious VS Code Extension Installation via Postinstall Script
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\Code\Code.exe'
+    - '*\Code\User\extensions\solidity-helper-pro\*'
+  CommandLine:
+    - '*npm install solidity-helper-pro*'
+    - '*npm run postinstall*'
+    - '*node_modules\solidity-helper-pro\postinstall.js*'
+condition: all

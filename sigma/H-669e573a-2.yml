@@ -1,0 +1,16 @@
+title: Lateral Movement via WMIC or PsExec
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+condition: 'process_name:wmic.exe or process_name:psexec.exe'
+detection:
+  wmic_exec:
+    - 'wmic.exe /node:*
+    - 'wmic.exe /user:*
+    - 'wmic.exe /password:*
+  psexec_exec:
+    - 'psexec.exe \\*
+    - 'psexec.exe -u *
+    - 'psexec.exe -p *
+condition: any of them

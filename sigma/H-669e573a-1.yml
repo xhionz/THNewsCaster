@@ -1,0 +1,20 @@
+title: Suspicious ColdFusion Exploitation via CVE-2026-XXXX
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri|contains: "/CFIDE/adminapi/" or request_uri|contains: "/flex2gateway/" or request_uri|contains: "/rest/"'
+  and status_code: 200
+  and user_agent|contains: "Java/" or user_agent|contains: "curl" or user_agent|contains: "wget"
+  and method: "POST"
+detection:
+  exploit_paths:
+    - "/CFIDE/adminapi/"
+    - "/flex2gateway/"
+    - "/rest/"
+  http_method: "POST"
+  java_useragent:
+    - "Java/"
+    - "curl"
+    - "wget"
+condition: all of them

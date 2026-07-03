@@ -1,0 +1,12 @@
+title: Suspicious VS Code Extension Download from Non-Marketplace Source
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\Code\Code.exe'
+  CommandLine:
+    - '*--install-extension*'
+    - '*https://solidity-helper-pro[.]com*'
+    - '*https://marketplace.visualstudio.com/items?itemName=solidity-helper-pro*'
+condition: all

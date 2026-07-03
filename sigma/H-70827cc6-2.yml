@@ -1,0 +1,13 @@
+title: Suspicious PowerShell Memory Dumping via Comsvcs.dll
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process:
+    - "powershell.exe"
+  module_load:
+    - "comsvcs.dll"
+  command_line:
+    - "-c "
+    - "-e "
+condition: 'process_name == "powershell.exe" and (module_loaded == "comsvcs.dll" or command_line contains "-c" or command_line contains "-e") and (event_id == 7 or event_id == 10)'

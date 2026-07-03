@@ -1,0 +1,12 @@
+title: Suspicious FortiClient EMS HTTP Request Pattern
+logsource:
+  product: windows
+  service: http
+condition: 'http.request.uri contains "/remote/fgt_lang" and http.request.method == "POST" and http.response.status_code == 200'
+detection:
+  suspicious_uri:
+    - "/remote/fgt_lang"
+  suspicious_method:
+    - "POST"
+  successful_response:
+    - 200

@@ -1,0 +1,17 @@
+title: Phishing Email with Suspicious Java Attachment
+logsource:
+  product: email
+  service: exchange
+  category: email
+condition: 'subject|contains: "Security Update" or subject|contains: "APSB26-68" or subject|contains: "Critical Patch"'
+  and attachment_name|endswith: ".jar" or attachment_name|endswith: ".class" or attachment_name|endswith: ".war"'
+detection:
+  suspicious_subjects:
+    - "Security Update"
+    - "APSB26-68"
+    - "Critical Patch"
+  malicious_attachments:
+    - ".jar"
+    - ".class"
+    - ".war"
+condition: all of them
