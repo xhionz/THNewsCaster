@@ -1,0 +1,9 @@
+title: Suspicious Android Epoll Syscall from SELinux Context
+logsource:
+  product: android
+  service: syscall
+condition: 'syscall: "epoll_ctl" and (auid != 0 and euid == 0)'
+detection:
+  epoll_ctl_syscall: 'syscall: "epoll_ctl"'
+  nonroot_to_root: 'auid != 0 and euid == 0'
+condition: epoll_ctl_syscall and nonroot_to_root

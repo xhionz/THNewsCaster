@@ -1,0 +1,10 @@
+title: AI Tool Network Beaconing During Exploit Development
+logsource:
+  product: linux
+  service: network
+condition: 'dns_query | contains "anthropic.com" or dns_query | contains "githubcopilot.com" or dns_query | contains "codeium.com"'
+detection:
+  ai_domain: 'dns_query | contains "anthropic.com"'
+  copilot_domain: 'dns_query | contains "githubcopilot.com"'
+  codeium_domain: 'dns_query | contains "codeium.com"'
+condition: any of ai_domain or copilot_domain or codeium_domain
