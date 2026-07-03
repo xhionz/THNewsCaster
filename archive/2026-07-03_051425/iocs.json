@@ -1,0 +1,366 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-56445",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-56415",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-56413",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-55721",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-50110",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-50040",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-48558",
+      "sources": [
+        "https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html",
+        "https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/",
+        "https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "https://www.darkreading.com/cyberattacks-data-breaches/djinn-stealer-targets-cloud-ai-credentials"
+      ]
+    },
+    {
+      "value": "CVE-2026-47729",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1u9y7yw/squidbleed_cve202647729_heartbleedstyle/"
+      ]
+    },
+    {
+      "value": "CVE-2026-46817",
+      "sources": [
+        "https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html",
+        "https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/"
+      ]
+    },
+    {
+      "value": "CVE-2026-46331",
+      "sources": [
+        "https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-45659",
+      "sources": [
+        "https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html",
+        "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "https://www.securityweek.com/cisa-warns-of-actively-exploited-microsoft-sharepoint-vulnerability/"
+      ]
+    },
+    {
+      "value": "CVE-2026-35616",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1ukeddc/fortinet_vulnerability_cve202635616_and_ekz/"
+      ]
+    },
+    {
+      "value": "CVE-2026-33825",
+      "sources": [
+        "https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/"
+      ]
+    },
+    {
+      "value": "CVE-2026-33017",
+      "sources": [
+        "https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-20245",
+      "sources": [
+        "https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html",
+        "https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/",
+        "https://www.reddit.com/r/blueteamsec/comments/1ufyrvs/zeroday_exploitation_of_vulnerability/"
+      ]
+    },
+    {
+      "value": "CVE-2026-20230",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-12819",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-12818",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-12569",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/first-ever-exploitation-of-ptc-windchill-vulnerability-discovered-in-the-wild/"
+      ]
+    },
+    {
+      "value": "CVE-2026-9718",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-9717",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-9716",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-8451",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1ujzc5y/citrixbleed_to_infinity_and_beyond_citrix/"
+      ]
+    },
+    {
+      "value": "CVE-2026-8037",
+      "sources": [
+        "https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html",
+        "https://www.reddit.com/r/netsec/comments/1uj2a4w/enterprise_tech_in_shell_out_progress_kemp/"
+      ]
+    },
+    {
+      "value": "CVE-2025-5777",
+      "sources": [
+        "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html"
+      ]
+    },
+    {
+      "value": "CVE-2024-40766",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "CVE-2024-12802",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "5.9.2.14",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "6.5.4.14",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "8.0.4.29",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "access.set",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "adobe2.workers.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "clear90489058903-document.workers.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "dashboard-bl.pamconj.com",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "debug.pl",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "detections.ai",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1uic79a/anonymous_researcher_drops_exploitarium_109_files/"
+      ]
+    },
+    {
+      "value": "docviewer.workers.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "hunt.io",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1uejfny/inside_eastern_europes_c2_sprawl_3900_servers_302/"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "isc.sans.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33094"
+      ]
+    },
+    {
+      "value": "login.pl",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "mononapfp.sharepoint.com",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "mononapfpcom.sharepoint.com",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "navigator.vendor",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "navigator.webdriver",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "onedrive.workers.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "os.path.join",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01"
+      ]
+    },
+    {
+      "value": "overview.jsp",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    },
+    {
+      "value": "s-account.workers.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "sharepoint.com",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "spx.pamconj.com",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "stonefly.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06"
+      ]
+    },
+    {
+      "value": "window.chrome",
+      "sources": [
+        "https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/"
+      ]
+    },
+    {
+      "value": "with.implement",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01"
+      ]
+    },
+    {
+      "value": "www.deltaww.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07"
+      ]
+    },
+    {
+      "value": "www.se.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07"
+      ]
+    }
+  ],
+  "sha256": [],
+  "sha1": [],
+  "md5": []
+}
