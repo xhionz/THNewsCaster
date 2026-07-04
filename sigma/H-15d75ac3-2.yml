@@ -1,0 +1,10 @@
+title: Anubis Ransomware - Phishing Email Delivery via Office Macro
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 4688
+  process_name: winword.exe OR excel.exe OR powerpnt.exe
+  command_line: *-e* OR *-EncodedCommand* OR *powershell.exe*
+  parent_process_name: winword.exe OR excel.exe
+condition: all of them

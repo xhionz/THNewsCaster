@@ -1,0 +1,5 @@
+title: Lateral Movement - RDP/SMB with Valid Credentials
+logsource:
+  product: windows
+  service: security
+condition: 'event_id in (4624, 4625) and logon_type in (3, 10) and account_name != "ANONYMOUS LOGON" and source_network_address in ("192.168.1.10", "192.168.1.11", "192.168.1.12") and (process_name =~ "mstsc.exe" or process_name =~ "svchost.exe" and service_name =~ "LanmanServer")'

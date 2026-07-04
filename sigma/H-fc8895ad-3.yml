@@ -1,0 +1,5 @@
+title: Persistence - Web Shell or Scheduled Task on NetScaler
+logsource:
+  product: citrix_netscaler
+  service: file_system
+condition: '(file_path contains "/nsconfig/" or file_path contains "/var/netscaler/" or file_path contains "/tmp/") and (file_name =~ "\.jsp$" or file_name =~ "\.asp$" or file_name =~ "\.php$" or file_name =~ "\.sh$" or file_name =~ "\.py$") and file_modified_time > "2025-07-01T00:00:00Z" and file_owner != "nsroot" or (event_type == "scheduled_task_created" and task_name =~ "Citrix" or task_name =~ "NS" or task_name =~ "update" or task_name =~ "backup") and created_by == "nsroot"'

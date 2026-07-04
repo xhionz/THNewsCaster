@@ -1,0 +1,10 @@
+title: Anubis Ransomware - Cloudflared Reverse Tunnel Detection
+logsource:
+  product: firewall
+  service: connection
+detection:
+  dst_ip: 104.16.0.0/12 OR 172.64.0.0/13 OR 198.41.128.0/17
+  tls_server_name: "*.cloudflare.com" OR "*.cloudflare.net"
+  process_name: cloudflared.exe
+  direction: outbound
+condition: all of them

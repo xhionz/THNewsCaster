@@ -1,0 +1,15 @@
+title: Anubis Ransomware - Citrix NetScaler CVE-2023-3519 Exploit Attempt
+logsource:
+  product: web_server
+  service: citrix_netscaler
+detection:
+  req_uri:
+    - '/cgi-bin/export'
+    - '/tmui/ctrl/loginservlet'
+    - '/tmui/login.jsp'
+  user_agent:
+    - 'Mozilla/5.0 (compatible; AnubisBot)'
+    - 'curl'
+    - 'wget'
+  status_code: 200
+condition: all of them
