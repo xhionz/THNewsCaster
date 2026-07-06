@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06T22:16:07+00:00",
+  "generated_at": "2026-07-06T21:37:49+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -13320,5 +13320,5 @@
   ],
   "skipped": 304,
   "total_seen": 305,
-  "brief": "CitrixBleed 2 (CVE-2025-5777) is the dominant threat, actively exploited by ransomware groups and linked to BYOVD and supply chain compromises. Prioritize patching CVE-2025-5777 and CVE-2026-45659 (SharePoint RCE) immediately—both are on CISA KEV with confirmed active exploitation across manufacturing and government sectors. Notable actors include Lynx and INC ransomware groups targeting Citrix and SharePoint environments."
+  "brief": "CitrixBleed 2 (CVE-2025-5777) is the dominant threat, actively exploited by ransomware groups and targeted before public disclosure, making it the highest-priority exploit to hunt. Prioritize detecting lateral movement and BYOVD techniques in environments with Citrix appliances, as exploitation is widespread and escalating. Notable actors include INC and Lynx ransomware groups, with manufacturing and government sectors most impacted by concurrent exploitation of CVE-2026-45659 (SharePoint) and CVE-2025-5777."
 }

@@ -1,6 +1,6 @@
 # Threat Hunting News Package
 
-- Generated: `2026-07-06T22:16:07+00:00`
+- Generated: `2026-07-06T21:37:49+00:00`
 - Generator: `THNewsCaster v0.1.0`
 - Articles seen: **305**  ·  Skipped (below threshold): **304**  ·  Briefings: **50**
 - IOC exports: `iocs.csv`, `iocs.json`, `iocs_stix.json`  ·  Sigma rules: `sigma/`  ·  History: `archive/`
