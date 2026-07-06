@@ -1,0 +1,13 @@
+title: Cobalt Strike - Process Hollowing via Legitimate Binary
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\svchost.exe' OR '*\dllhost.exe' OR '*\explorer.exe'
+    ParentImage: '*\cobaltstrike*.exe'
+  condition: selection
+filter:
+  - Image: 'C:\Windows\System32\svchost.exe'
+condition: selection and not filter

@@ -1,0 +1,13 @@
+title: Cobalt Strike - Irregular Sleep Interval Detection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\cobaltstrike*.exe'
+  condition: selection
+filter:
+  - Image: '*\svchost.exe'
+  - Image: '*\explorer.exe'
+condition: selection and not filter

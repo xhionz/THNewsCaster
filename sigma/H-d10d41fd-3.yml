@@ -1,0 +1,14 @@
+title: Cobalt Strike - High Entropy DNS Beaconing
+logsource:
+  product: windows
+  service: dns
+detection:
+  selection:
+    Query: '*'
+    Query|contains: '.'
+    Query|endswith: '.com' OR '.net' OR '.org'
+    Query|re: '^[a-zA-Z0-9]{15,}\.com$'
+  condition: selection
+filter:
+  - Query|contains: 'microsoft.com' OR 'google.com' OR 'amazon.com'
+condition: selection and not filter
