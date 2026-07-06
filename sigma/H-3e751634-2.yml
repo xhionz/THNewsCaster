@@ -1,0 +1,12 @@
+title: Suspicious Network Logon to ColdFusion Service Account
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4624
+  LogonType: 3
+  AccountName: 'svc_coldfusion' | 'svc_cf' | 'coldfusion_svc'
+  TargetDomainName: 'CORP'
+  TargetComputer: 'DC-*' | 'FILE-*' | 'DB-*'
+condition: all of them
+level: high

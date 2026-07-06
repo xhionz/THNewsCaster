@@ -1,0 +1,13 @@
+title: Suspicious ColdFusion Web Shell Creation via Exchange Exploit
+logsource:
+  product: windows
+  service: file_system
+detection:
+  Image:
+    - 'C:\\inetpub\\wwwroot\\*.cfm'
+    - 'C:\\coldfusion\\wwwroot\\*.cfm'
+  CommandLine: '.*powershell.*-enc.*|.*certutil.*-decode.*|.*bitsadmin.*'
+  FileCreateTime: '>2026-07-01T00:00:00Z'
+  FileSize: '>10000'
+condition: all of them
+level: high

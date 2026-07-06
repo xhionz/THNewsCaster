@@ -1,0 +1,14 @@
+title: Suspicious ColdFusion Template Injection via CVE-2021-21098
+logsource:
+  product: windows
+  service: iis
+detection:
+  cs-uri-stem:
+    - '*.cfm?cfid=*&cftoken=*'
+    - '*.cfm?method=*&action=*'
+    - '*.cfm?__cf_chl_tk=*'
+  cs-uri-query: '.*<cfscript>.*|.*execute.*|.*createObject.*|.*system.*'
+  status: '200'
+  User-Agent: '.*curl.*|.*wget.*|.*python-requests.*'
+condition: all of them
+level: high
