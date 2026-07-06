@@ -1,0 +1,13 @@
+title: Detect X-WEBAUTH-USER Header Exploitation in Gitea
+logsource:
+  product: webserver
+  service: gitea
+detection:
+  headers:
+    http.headers.X-WEBAUTH-USER: '*'
+  not_from_trusted: 
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'
+  condition: headers and not_from_trusted
+condition: count(http.headers.X-WEBAUTH-USER) > 0 and source.ip not in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]

@@ -1,0 +1,14 @@
+title: Detect Internal Tool Compromise Leading to Gitea Header Abuse
+logsource:
+  product: webserver
+  service: gitea
+detection:
+  header_from_internal:
+    http.headers.X-WEBAUTH-USER: '*'
+    source.ip: '10.0.0.0/8'
+    user: 'not in [admin_users]'
+  source_tool:
+    process.name: 'jenkins|prometheus|gitlab-runner|ansible'
+    event_type: 'process_creation'
+  timeframe: 24h
+condition: header_from_internal and source_tool

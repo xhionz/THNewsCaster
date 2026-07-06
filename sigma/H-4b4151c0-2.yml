@@ -1,0 +1,14 @@
+title: Detect Phishing-Induced Header Abuse in Gitea
+logsource:
+  product: webserver
+  service: gitea
+detection:
+  phishing_email:
+    event_type: 'email_phishing'
+    recipient: '*@ourcompany.com'
+  header_use_after_phish:
+    http.headers.X-WEBAUTH-USER: '*'
+    source.ip: '10.0.0.0/8'
+    user: 'not in [admin_users]'
+  timeframe: 24h
+condition: phishing_email and header_use_after_phish
