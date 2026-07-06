@@ -1,0 +1,10 @@
+title: Suspicious Kernel Module Unload
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    type: 'MODULE_UNLOAD'
+    module_name: '*'
+  condition: selection
+condition: selection

@@ -1,0 +1,13 @@
+title: Suspicious Kernel Exploit Activity via auditd
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    type: 'SYSCALL'
+    arch: 'x86_64'
+    syscall: 'execve'
+    a0: '0x7fffffffe000'
+    comm: 'sh'
+  condition: selection
+condition: selection

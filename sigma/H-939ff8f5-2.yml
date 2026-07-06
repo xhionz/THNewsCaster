@@ -1,0 +1,13 @@
+title: Suspicious Memory Dumping via auditd
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    type: 'SYSCALL'
+    arch: 'x86_64'
+    syscall: 'open'
+    path: '/dev/mem'
+    mode: 'O_RDONLY'
+  condition: selection
+condition: selection
