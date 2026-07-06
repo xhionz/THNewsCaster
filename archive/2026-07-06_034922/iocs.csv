@@ -1,0 +1,58 @@
+type,value,article_count,sources
+cves,CVE-2026-56445,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01
+cves,CVE-2026-56415,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+cves,CVE-2026-56413,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+cves,CVE-2026-55721,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+cves,CVE-2026-50110,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+cves,CVE-2026-50040,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+cves,CVE-2026-48558,4,https://thehackernews.com/2026/06/attackers-exploit-simplehelp-cve-2026.html | https://www.bleepingcomputer.com/news/security/hackers-exploit-critical-simplehelp-flaw-deploy-new-djinn-infostealer-taskweaver-malware/ | https://www.cisa.gov/news-events/alerts/2026/06/29/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.darkreading.com/cyberattacks-data-breaches/djinn-stealer-targets-cloud-ai-credentials
+cves,CVE-2026-46817,2,https://thehackernews.com/2026/06/oracle-e-business-suite-flaw-cve-2026.html | https://www.bleepingcomputer.com/news/security/new-oracle-e-business-suite-flaw-now-exploited-in-attacks/
+cves,CVE-2026-46331,1,https://thehackernews.com/2026/06/new-linux-pedit-cow-exploit-enables.html
+cves,CVE-2026-46242,1,https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html
+cves,CVE-2026-45659,3,https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html | https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.securityweek.com/cisa-warns-of-actively-exploited-microsoft-sharepoint-vulnerability/
+cves,CVE-2026-35616,1,https://www.reddit.com/r/blueteamsec/comments/1ukeddc/fortinet_vulnerability_cve202635616_and_ekz/
+cves,CVE-2026-33825,1,https://www.securityweek.com/bluehammer-vulnerability-exploited-in-ransomware-attacks/
+cves,CVE-2026-33017,1,https://thehackernews.com/2026/06/langflow-rce-exploited-to-deploy-monero.html
+cves,CVE-2026-20245,3,https://thehackernews.com/2026/06/cisco-catalyst-sd-wan-zero-day-cve-2026.html | https://www.bleepingcomputer.com/news/security/mandiant-reveals-how-cisco-sd-wan-zero-day-attacks-gained-root-access/ | https://www.reddit.com/r/blueteamsec/comments/1ufyrvs/zeroday_exploitation_of_vulnerability/
+cves,CVE-2026-20230,1,https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-12819,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07
+cves,CVE-2026-12818,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07
+cves,CVE-2026-12569,2,https://www.cisa.gov/news-events/alerts/2026/06/25/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/first-ever-exploitation-of-ptc-windchill-vulnerability-discovered-in-the-wild/
+cves,CVE-2026-9718,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07
+cves,CVE-2026-9717,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07
+cves,CVE-2026-9716,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07
+cves,CVE-2026-8451,1,https://www.reddit.com/r/netsec/comments/1ujzc5y/citrixbleed_to_infinity_and_beyond_citrix/
+cves,CVE-2026-8037,2,https://thehackernews.com/2026/07/latest-progress-kemp-loadmaster-pre.html | https://www.reddit.com/r/netsec/comments/1uj2a4w/enterprise_tech_in_shell_out_progress_kemp/
+cves,CVE-2025-5777,2,https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html | https://www.reddit.com/r/blueteamsec/comments/1un3saa/exploitation_of_citrixbleed_2_cve20255777_began/
+cves,CVE-2024-40766,1,https://isc.sans.edu/diary/rss/33094
+cves,CVE-2024-12802,1,https://isc.sans.edu/diary/rss/33094
+ips,5.9.2.14,1,https://isc.sans.edu/diary/rss/33094
+ips,6.5.4.14,1,https://isc.sans.edu/diary/rss/33094
+ips,8.0.4.29,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+domains,access.set,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07
+domains,adobe2.workers.dev,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,clear90489058903-document.workers.dev,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,dashboard-bl.pamconj.com,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,debug.pl,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+domains,detections.ai,1,https://www.reddit.com/r/blueteamsec/comments/1uic79a/anonymous_researcher_drops_exploitarium_109_files/
+domains,docviewer.workers.dev,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,hunt.io,1,https://www.reddit.com/r/blueteamsec/comments/1uejfny/inside_eastern_europes_c2_sprawl_3900_servers_302/
+domains,isc.sans.edu,1,https://isc.sans.edu/diary/rss/33094
+domains,isc.sans.org,1,https://isc.sans.edu/diary/rss/33094
+domains,login.pl,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+domains,mononapfp.sharepoint.com,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,mononapfpcom.sharepoint.com,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,navigator.vendor,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,navigator.webdriver,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,onedrive.workers.dev,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,os.path.join,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01
+domains,overview.jsp,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07
+domains,s-account.workers.dev,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,sharepoint.com,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,spx.pamconj.com,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,stonefly.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06
+domains,window.chrome,1,https://blog.talosintelligence.com/artoken-inside-an-eviltokens-affiliate-panel-targeting-microsoft-365/
+domains,with.implement,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07
+domains,www.cisa.gov,4,https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-06 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-176-01
+domains,www.deltaww.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-181-07
+domains,www.se.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-176-07
