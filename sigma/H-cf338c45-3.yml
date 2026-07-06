@@ -1,0 +1,14 @@
+title: Unsigned kernel module loaded post-exploit
+logsource:
+  product: linux
+  service: kernel
+  category: module_load
+condition: 'module_load' and 'signature: unsigned' and 'module_name: !~ /^(vbox|virtio|kvm|qemu)/'
+detection:
+  module_load_event:
+    event_type: 'module_load'
+  unsigned_signature:
+    signature: 'unsigned'
+  non_standard_module:
+    module_name: '!~ /^(vbox|virtio|kvm|qemu|snd|usb|hid)/'
+condition: all of module_load_event and unsigned_signature and non_standard_module

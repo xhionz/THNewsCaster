@@ -1,0 +1,17 @@
+title: Abnormal KVM ioctl activity from guest processes
+logsource:
+  product: linux
+  service: kvm
+  category: process
+condition: 'ioctl' and 'path: /dev/kvm' and 'process_name: qemu-system-*' and 'count > 50 in 5s'
+detection:
+  ioctl_kvm:
+    syscall: 'ioctl'
+  kvm_device:
+    path: '/dev/kvm'
+  qemu_process:
+    process_name: 'qemu-system-*'
+  high_frequency:
+    count: >50
+    timeframe: 5s
+condition: all of ioctl_kvm and kvm_device and qemu_process and high_frequency

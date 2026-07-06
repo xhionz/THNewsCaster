@@ -1,0 +1,14 @@
+title: KVM Shadow MMU Use-After-Free Exploit Attempt
+logsource:
+  product: linux
+  service: kvm
+  category: kernel
+condition: 'kvm: shadow mmu fault detected' and 'kvm: invalid pte write' and 'kvm: guest triggered host panic'
+detection:
+  kvm_fault:
+    kvm: shadow mmu fault detected
+  invalid_pte:
+    kvm: invalid pte write
+  host_panic:
+    kvm: guest triggered host panic
+condition: all of kvm_fault and invalid_pte and host_panic
