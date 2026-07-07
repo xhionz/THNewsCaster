@@ -1,0 +1,6 @@
+title: Roundcube CVE-2023-28154 Exploit Attempt
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri contains "/roundcube/" and (request_body contains "_task=login" and (request_body contains "_user=javascript:" or request_body contains "_pass=javascript:")) and status_code == 200

@@ -1,0 +1,5 @@
+title: Phishing Email from Compromised Roundcube Account
+logsource:
+  product: mail
+  service: roundcube
+condition: 'from IN ("user1@univ.edu", "user2@univ.edu", "user3@univ.edu") and subject contains ("URGENT: Document", "Invoice attached", "Security Alert") and attachment_count > 0 and attachment_extension IN (".exe", ".js", ".scr", ".vbs", ".zip") and to NOT IN ("hr@univ.edu", "it@univ.edu", "finance@univ.edu")

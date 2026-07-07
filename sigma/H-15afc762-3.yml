@@ -1,0 +1,5 @@
+title: Lateral Movement via Compromised Roundcube Credentials
+logsource:
+  product: windows
+  service: security
+condition: 'event_id IN (4624, 4625) and logon_type IN (3, 10) and account_name IN ("user1", "user2", "user3") and source_ip IN ("192.168.10.15", "192.168.10.22", "192.168.10.44") and timestamp >= "2024-06-09T00:00:00Z" and timestamp <= "2024-07-07T23:59:59Z"
