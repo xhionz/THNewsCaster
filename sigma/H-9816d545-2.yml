@@ -1,0 +1,5 @@
+title: GitHub Agentic Prompt Injection via Sales-Themed Issue
+logsource:
+  product: github
+  service: audit
+condition: 'event_type: "issue" and action: "created" and (issue_title contains "feedback" or issue_title contains "sales" or issue_title contains "customer" or issue_title contains "meeting") and repository.visibility: "public" and issue_author NOT IN ("security-team", "engineering-team")'

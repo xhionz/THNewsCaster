@@ -1,0 +1,5 @@
+title: GitHub Agent Exfiltration via Public Comment
+logsource:
+  product: github
+  service: audit
+condition: 'event_type: "issue_comment" and action: "created" and repository.visibility: "public" and comment_author: "github-actions[bot]" and comment_body|length > 500 and comment_body CONTAINS ("private-repo-" OR "confidential-" OR "internal-")'
