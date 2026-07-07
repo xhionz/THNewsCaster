@@ -1,0 +1,13 @@
+title: Detect ColdFusion CVE-2023-28970 Exploitation
+logsource:
+  product: apache
+  service: httpd
+detection:
+  req_uri:
+    - '/CFIDE/adminapi/componentutils.cfc'
+    - '/CFIDE/adminapi/enterpriseconfig.cfc'
+    - '/CFIDE/adminapi/enterpriseconfig.cfc?method=update'
+  http_method: POST
+  status_code: 200
+  http_response_size: '>10000'
+condition: all of them

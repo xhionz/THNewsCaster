@@ -1,0 +1,14 @@
+title: Detect Suspicious CFM/JSP File Uploads
+logsource:
+  product: windows
+  service: file_event
+detection:
+  file_path:
+    - 'C:\ColdFusion\wwwroot\*.cfm'
+    - 'C:\Adobe\ColdFusion\wwwroot\*.cfm'
+    - 'C:\ColdFusion\wwwroot\*.jsp'
+    - 'C:\Adobe\ColdFusion\wwwroot\*.jsp'
+  event_type: file_created
+  file_name: 'shell.cfm' | 'cmd.jsp' | 'rce.cfm' | 'upload.jsp'
+  file_size: '>5000'
+condition: all of them

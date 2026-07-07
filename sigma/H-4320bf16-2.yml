@@ -1,0 +1,13 @@
+title: Detect jrun.exe Memory Dumping via Sysmon
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  image:
+    - 'C:\ColdFusion\runtime\bin\jrun.exe'
+    - 'C:\Adobe\ColdFusion\runtime\bin\jrun.exe'
+  event_type: file_access
+  access_type: 'read'
+  file_path: 'C:\Windows\Temp\*.dmp'
+  process_name: 'procdump.exe' | 'taskmgr.exe' | 'rundll32.exe'
+condition: all of them
