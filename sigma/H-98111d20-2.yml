@@ -1,0 +1,15 @@
+title: SINEC OS Stack Overflow Process Spawn
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  image:
+    - '/bin/sh'
+    - '/usr/bin/wget'
+    - '/usr/bin/curl'
+    - '/bin/busybox'
+  parent_image:
+    - '/usr/sbin/sinecd'
+    - '/usr/bin/sinec-service'
+    - '/opt/siemens/sinec/bin/sinec-core'
+condition: any of image AND parent_image in ('/usr/sbin/sinecd', '/usr/bin/sinec-service', '/opt/siemens/sinec/bin/sinec-core')

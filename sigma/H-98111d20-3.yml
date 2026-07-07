@@ -1,0 +1,15 @@
+title: SINEC OS SMB Lateral Movement Attempt
+logsource:
+  product: linux
+  service: network_connection
+detection:
+  protocol: 'tcp'
+  destination_port: 445
+  source_ip:
+    - '192.168.10.0/24'
+    - '10.10.10.0/24'
+  destination_ip:
+    - '192.168.20.0/24'
+    - '192.168.21.0/24'
+  connection_state: 'ESTABLISHED'
+condition: all of them

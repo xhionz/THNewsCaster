@@ -1,0 +1,10 @@
+title: Suspicious Secret File Access via Gitea URI
+logsource:
+  product: gitea
+  service: access
+condition: 'uri matches "*/contents/*.env" or uri matches "*/contents/*config*" or uri matches "*/contents/*secret*" and status_code: 200'
+detection:
+  uri: "*/contents/*.env"
+  uri: "*/contents/*config*"
+  uri: "*/contents/*secret*"
+  status_code: 200

@@ -1,0 +1,9 @@
+title: Suspicious Gitea Login from Unusual Location or Time
+logsource:
+  product: gitea
+  service: auth
+condition: 'event_type: login_success and (source_ip not in trusted_ips or hour_of_day not in [8,9,10,11,12,13,14,15,16,17])'
+detection:
+  event_type: login_success
+  source_ip: "not in [10.0.0.0/8, 192.168.1.0/24]"
+  hour_of_day: "not in [8,9,10,11,12,13,14,15,16,17]"

@@ -1,0 +1,8 @@
+title: Suspicious Gitea Auth Bypass via X-Forwarded-User
+logsource:
+  product: gitea
+  service: access
+condition: 'headers.X-Forwarded-User: "*" and not headers.X-Forwarded-User: "" and status_code: 200'
+detection:
+  headers.X-Forwarded-User: "*"
+  status_code: 200
