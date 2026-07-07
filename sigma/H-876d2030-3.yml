@@ -1,0 +1,5 @@
+title: Unauthenticated Access to Page Builder Admin/Config
+logsource:
+  product: apache
+  category: web
+condition: '(http.request.uri contains "/admin/" or http.request.uri contains "/config/" or http.request.uri contains "/settings/" or http.request.uri contains "/dashboard/") and http.request.headers["Cookie"] == "" and http.request.headers["Authorization"] == "" and http.request.method == "GET"'

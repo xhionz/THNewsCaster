@@ -1,0 +1,5 @@
+title: Langflow API Key Bypass Attempt
+logsource:
+  product: nginx
+  category: web
+condition: 'http.request.uri contains "/api/v1/" and http.request.uri contains "key=" and http.request.headers["Authorization"] == "" and http.request.method == "GET" or http.request.method == "POST"'

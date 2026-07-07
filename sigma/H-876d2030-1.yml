@@ -1,0 +1,5 @@
+title: Suspicious PHP Upload via SP Page Builder
+logsource:
+  product: apache
+  category: web
+condition: 'http.request.uri contains "/administrator/components/com_sppagebuilder/" and http.request.method == "POST" and http.request.body contains ".php" and http.request.body contains "<?php" and http.response.status == 200'
