@@ -1,0 +1,11 @@
+title: Suspicious Dialogflow Session with High-Entropy Parameters
+logsource:
+  product: gcp
+  service: cloudaudit.googleapis.com
+  category: api
+condition: 'protoPayload.methodName: "google.cloud.dialogflow.cx.v3.AgentSessions.DetectIntent"' and protoPayload.request.queryInput.text.text: /([A-Za-z0-9+/]{40,}|[0-9]{16,}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/
+detection:
+  selection:
+    methodName: 'google.cloud.dialogflow.cx.v3.AgentSessions.DetectIntent'
+    text: /([A-Za-z0-9+/]{40,}|[0-9]{16,}|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/
+condition: selection

@@ -1,0 +1,13 @@
+title: Suspicious Dialogflow Agent Access Across Projects
+logsource:
+  product: gcp
+  service: cloudaudit.googleapis.com
+  category: api
+condition: 'protoPayload.methodName: "google.cloud.dialogflow.cx.v3.AgentSessions.CreateSession" and protoPayload.resourceName: !"projects/*/agent/*" and protoPayload.authenticationInfo.principalEmail: !"service-account@our-domain.iam.gserviceaccount.com"'
+detection:
+  selection:
+    methodName: 'google.cloud.dialogflow.cx.v3.AgentSessions.CreateSession'
+  filters:
+    - resourceName: 'projects/*/agent/*'
+    - principalEmail: 'service-account@our-domain.iam.gserviceaccount.com'
+condition: selection and not filters
