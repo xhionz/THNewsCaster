@@ -1,0 +1,13 @@
+title: Detect CVE-2024-29989 Exploitation via UniFi API
+logsource:
+  product: linux
+  service: http
+condition: 'user_agent contains "curl" or user_agent contains "wget" or user_agent contains "UniFi"'
+detection:
+  user_agent:
+    - "*curl*"
+    - "*wget*"
+    - "*UniFi*"
+  request_uri: "/api/*"
+  method: "POST"
+condition: selection

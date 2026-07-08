@@ -1,0 +1,15 @@
+title: Detect malicious cron jobs in UniFi OS
+logsource:
+  product: linux
+  service: cron
+condition: 'file_path contains "/srv/unifi/" and file_content contains "curl" or file_content contains "bash" or file_content contains "sh"'
+detection:
+  file_path:
+    - "/srv/unifi/cron/*"
+    - "/srv/unifi/cron.d/*"
+    - "/etc/cron.d/*"
+  file_content:
+    - "*curl*"
+    - "*bash*"
+    - "*sh*"
+condition: selection

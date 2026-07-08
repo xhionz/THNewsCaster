@@ -1,0 +1,11 @@
+title: Detect SSH connections from UniFi OS to non-management subnets
+logsource:
+  product: linux
+  service: ssh
+condition: 'src_ip == "192.168.100.10" and dst_ip not in ["192.168.100.0/24", "10.10.0.0/16"]'
+detection:
+  src_ip: "192.168.100.10"
+  dst_ip:
+    - "!192.168.100.0/24"
+    - "!10.10.0.0/16"
+condition: selection
