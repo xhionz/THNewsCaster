@@ -1,0 +1,11 @@
+title: Detect High-Volume DNS Queries to Short, Alphanumeric Domains
+logsource:
+  product: dns
+  service: bind
+detection:
+  selection:
+    query: '*[0-9a-f]{8,}.com' OR '*update.*.net' OR '*cdn.*.org'
+  condition: selection
+  timeframe: 5m
+  count: > 50
+status: experimental

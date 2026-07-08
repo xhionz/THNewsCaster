@@ -1,0 +1,11 @@
+title: Detect WMI or PowerShell Execution from ColdFusion Server IPs
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    event_id: 4688
+    process: 'wmic.exe' OR 'powershell.exe'
+    parent_process: 'jrun.exe' OR 'coldfusion.exe'
+  condition: selection
+status: experimental
