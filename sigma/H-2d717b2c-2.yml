@@ -1,0 +1,14 @@
+title: Container Escape via GhostLock Exploitation
+logsource:
+  product: linux
+  service: container_runtime
+detection:
+  selection:
+    container_id: '*'
+    event: 'exec' 
+    process_name: 'sh' | 'bash'
+    user: 'non-root'
+    parent_process: 'dockerd' | 'containerd'
+  condition: selection
+  timeframe: 1h
+condition: selection

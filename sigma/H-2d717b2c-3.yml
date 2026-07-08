@@ -1,0 +1,13 @@
+title: Suspicious Kernel Module Load Post-Privilege Escalation
+logsource:
+  product: linux
+  service: kernel
+detection:
+  selection:
+    syscall: 'init_module' | 'finit_module'
+    module_name: '.*[0-9a-f]{8,}.*' | 'kthreadd' | 'xfs' | 'nvidia' | 'evdev'
+    user: 'root'
+    parent_process: 'sh' | 'bash' | 'python'
+  condition: selection
+  timeframe: 1h
+condition: selection

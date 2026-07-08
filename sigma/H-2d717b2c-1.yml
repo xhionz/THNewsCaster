@@ -1,0 +1,12 @@
+title: Detection of GhostLock (CVE-2026-43499) Privilege Escalation Pattern
+logsource:
+  product: linux
+  service: kernel
+detection:
+  selection:
+    syscall: 'setuid' | 'setgid' | 'execve'
+    args: 'uid=0' | 'gid=0'
+    process_name: 'bash' | 'sh' | 'python' | 'perl'
+  condition: selection
+  timeframe: 5m
+condition: selection

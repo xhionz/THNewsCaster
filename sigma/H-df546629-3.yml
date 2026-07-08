@@ -1,0 +1,26 @@
+title: Detect Langflow API Command Injection
+logsource:
+  product: langflow
+  category: application
+detection:
+  selection:
+    uri: 
+      - '/api/run*'
+      - '/api/flow*'
+      - '/api/execute*'
+    http_method: 'POST'
+    content_type: 'application/json'
+    body: 
+      - 'command='
+      - 'shell='
+      - 'exec('
+      - 'system('
+  condition: selection
+fields:
+  - uri
+  - client_ip
+  - body
+references:
+  - https://github.com/log2timeline/plaso/issues/1234 (hypothetical reference)
+author: Threat Hunting Team
+date: '2026-07-08'

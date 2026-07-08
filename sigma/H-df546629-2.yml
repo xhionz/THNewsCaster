@@ -1,0 +1,22 @@
+title: Detect Joomla com_media File Upload RCE
+logsource:
+  product: joomla
+  category: application
+detection:
+  selection:
+    uri: 
+      - '*option=com_media&task=file.upload*'
+      - '*option=com_media&task=upload*'
+    http_method: 'POST'
+    content_type: 'multipart/form-data'
+    file_extension: '.php'
+  condition: selection
+fields:
+  - uri
+  - client_ip
+  - user_agent
+  - file_name
+references:
+  - https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-23752
+author: Threat Hunting Team
+date: '2026-07-08'
