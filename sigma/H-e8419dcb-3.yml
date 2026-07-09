@@ -1,0 +1,10 @@
+title: Detect Suspicious File Encryption via Legitimate Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: 'C:\Windows\explorer.exe' OR Image: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe'
+  TargetFilename: '*.encrypted' OR TargetFilename: '*.giga' OR TargetFilename: '*.locked'
+  ProcessId: '!= 0'
+condition: EventID == 11 and Image IN ('C:\\Windows\\explorer.exe', 'C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe') and (TargetFilename ENDS WITH '.encrypted' OR TargetFilename ENDS WITH '.giga' OR TargetFilename ENDS WITH '.locked')

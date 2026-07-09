@@ -1,0 +1,10 @@
+title: Detect GigaWiper Raw Disk Write via DeviceIoControl
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 10
+  Image: '*\svchost.exe'
+  TargetFilename: '\\?\GLOBALROOT\Device\HarddiskVolume'
+  ProcessId: '!= 0'
+condition: EventID == 10 and TargetFilename contains '\\?\GLOBALROOT\Device\HarddiskVolume'

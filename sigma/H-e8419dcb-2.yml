@@ -1,0 +1,9 @@
+title: Detect GigaWiper Registry Run Key Persistence
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 13
+  TargetObject: '*\Microsoft\Windows\CurrentVersion\Run\*'
+  Details: '*Giga*' OR '*Wiper*' OR '*BackupService*'
+condition: EventID == 13 and TargetObject contains '\Microsoft\Windows\CurrentVersion\Run\' and Details contains 'Giga' or Details contains 'Wiper'
