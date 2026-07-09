@@ -1,0 +1,11 @@
+title: PowerShell DPAPI Decryption Attempt
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: "*\powershell.exe"
+    CommandLine: "-c * [System.Security.Cryptography.ProtectedData]::Unprotect*"
+  Condition: Selection
+condition: Selection

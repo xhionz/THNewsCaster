@@ -1,0 +1,11 @@
+title: ADFS Token Forgery via Key Compromise
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: "*\powershell.exe" OR Image: "*\cmd.exe"
+    CommandLine: "*SAML*" OR CommandLine: "*token*" OR CommandLine: "*federation*"
+  Condition: Selection
+condition: Selection

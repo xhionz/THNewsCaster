@@ -1,0 +1,11 @@
+title: DPAPI Access via Unusual Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 10
+    Image: "*\lsass.exe"
+    TargetObject: "*\DPAPI\*"
+  Condition: Selection
+condition: Selection
