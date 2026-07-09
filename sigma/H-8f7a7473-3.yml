@@ -1,0 +1,13 @@
+title: GigaWiper Data Encryption and Log Deletion
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 11
+    TargetFilename: '*\Windows\System32\winevt\Logs\security.evtx' or '*\*.enc' or '*\*.crypt' or '*\*.gigawiper'
+  condition: selection
+keywords:
+  - 'GigaWiper'
+  - 'data destruction'
+  - 'log deletion'

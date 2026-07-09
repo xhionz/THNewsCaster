@@ -1,0 +1,15 @@
+title: GigaWiper Phishing PowerShell Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\powershell.exe'
+    CommandLine: '*-e*' or '*-enc*'
+  filter:
+    ParentImage: '*\winlogon.exe' or '*\svchost.exe' or '*\explorer.exe' or '*\lsass.exe'
+  condition: selection and not filter
+keywords:
+  - 'GigaWiper'
+  - 'phishing'
+  - 'encoded'

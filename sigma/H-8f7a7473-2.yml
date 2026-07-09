@@ -1,0 +1,13 @@
+title: GigaWiper Native Enumeration and Lateral Movement
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\cmd.exe' or '*\powershell.exe' or '*\wevutil.exe'
+    CommandLine: '*net view*' or '*ping -n 1*' or '*arp -a*' or '*ipconfig /all*' or '*wevutil.exe query*' or '*net use*' or '*net localgroup*'
+  condition: selection
+keywords:
+  - 'GigaWiper'
+  - 'native tools'
+  - 'enumeration'
