@@ -1,0 +1,20 @@
+title: Ransomware Encryption Following Suspicious Driver Load
+logsource:
+  product: windows
+  service: file_event
+condition: 'event_id: 11' or 'event_id: 2' and file_extension: '.goddamn' or '.crypt' or '.locked' or '.encrypted' and parent_image: not contains: 'explorer.exe' and parent_image: not contains: 'winword.exe' and parent_image: not contains: 'excel.exe'
+detection:
+  ransomware_encryption:
+    event_id:
+      - 11
+      - 2
+    file_extension:
+      - '.goddamn'
+      - '.crypt'
+      - '.locked'
+      - '.encrypted'
+    parent_image:
+      - not contains: explorer.exe
+      - not contains: winword.exe
+      - not contains: excel.exe
+condition: ransomware_encryption

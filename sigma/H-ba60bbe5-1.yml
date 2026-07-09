@@ -1,0 +1,20 @@
+title: Suspicious Non-Microsoft Kernel Driver Load
+logsource:
+  product: windows
+  service: driver
+condition: 'image_lower: not contains: microsoft' and image_lower: not contains: 'windows' and image_lower: not contains: 'intel' and image_lower: not contains: 'amd' and image_lower: not contains: 'nvidia' and image_lower: not contains: 'realtek' and image_lower: not contains: 'atheros' and image_lower: not contains: 'broadcom' and image_lower: not contains: 'citrix' and image_lower: not contains: 'vmware' and image_lower: not contains: 'oracle'
+detection:
+  non_microsoft_driver:
+    image_lower:
+      - not contains: microsoft
+      - not contains: windows
+      - not contains: intel
+      - not contains: amd
+      - not contains: nvidia
+      - not contains: realtek
+      - not contains: atheros
+      - not contains: broadcom
+      - not contains: citrix
+      - not contains: vmware
+      - not contains: oracle
+condition: non_microsoft_driver

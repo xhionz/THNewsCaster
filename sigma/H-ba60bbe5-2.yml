@@ -1,0 +1,17 @@
+title: Suspicious Driver Load via Trusted Process
+logsource:
+  product: windows
+  service: driver
+condition: 'parent_image: svchost.exe' or 'parent_image: wuauclt.exe' or 'parent_image: dllhost.exe' or 'parent_image: services.exe' and 'image_lower: not contains: microsoft' and 'image_lower: not contains: windows'
+detection:
+  trusted_parent:
+    parent_image:
+      - svchost.exe
+      - wuauclt.exe
+      - dllhost.exe
+      - services.exe
+  non_microsoft_driver:
+    image_lower:
+      - not contains: microsoft
+      - not contains: windows
+condition: trusted_parent and non_microsoft_driver
