@@ -1,0 +1,10 @@
+title: Phishing Email with Gitea Login Link
+logsource:
+  product: email
+  service: microsoft365
+detection:
+  subject: 'Urgent: Gitea account verification required'
+  sender: 'noreply@g1tea.com'
+  url: 'https://g1tea[.]com/user/login'
+  attachment_type: 'application/zip'
+condition: all of them

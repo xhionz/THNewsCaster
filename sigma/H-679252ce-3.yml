@@ -1,0 +1,10 @@
+title: Suspicious GitHub Actions Workflow Commit
+logsource:
+  product: github
+  service: actions
+detection:
+  actor: 'github-actions[bot]'
+  commit_message: 'update deps'
+  file_changed: '.github/workflows/build-gitea.yml'
+  added_secret: 'GITHUB_TOKEN'
+condition: all of them

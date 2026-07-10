@@ -1,0 +1,10 @@
+title: Gitea CVE-2023-2977 Auth Bypass Attempt
+logsource:
+  product: docker
+  service: gitea
+detection:
+  req_path: '/user/login'
+  status_code: 200
+  user_agent: 'Mozilla/5.0 (compatible; Gitea-Exploit)'  # Known exploit UA
+  body: 'token=eyJ'  # JWT pattern in POST body
+condition: all of them
