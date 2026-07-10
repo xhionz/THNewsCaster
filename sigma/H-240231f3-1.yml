@@ -1,0 +1,13 @@
+title: Detect XRING Exploit via 260-byte QPACK HEADERS Frames
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects potential exploitation of XRING vulnerability (CVE-2026-9999) via 260-byte QPACK HEADERS frames in HTTP/3 traffic
+logsource:
+  product: web_server
+  service: http3
+detection:
+  frame_type: HEADERS
+  frame_length: 260
+  protocol: http3
+condition: all
+level: high

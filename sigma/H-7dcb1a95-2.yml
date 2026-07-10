@@ -1,0 +1,5 @@
+title: Voice Call to Suspicious Enrollment Site Correlation
+logsource:
+  product: windows
+  service: edr
+condition: 'event_type: URLAccess and url contains "webauthn" and user_id IN (SELECT user_id FROM pbx_calls WHERE call_type = "inbound" AND caller_id IN (SELECT suspicious_number FROM threat_intel_blacklist) AND timestamp BETWEEN "2026-01-01" AND "2026-06-30") and timestamp BETWEEN pbx_call_timestamp AND pbx_call_timestamp + 300'

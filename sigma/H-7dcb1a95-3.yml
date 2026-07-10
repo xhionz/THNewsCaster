@@ -1,0 +1,5 @@
+title: Suspicious Browser Extension Installation for WebAuthn Interception
+logsource:
+  product: windows
+  service: edr
+condition: 'event_type: ProcessCreate and process_name: "chrome.exe" and command_line contains "--load-extension" and file_path contains "AppData\Local\Temp" and parent_process_name: "explorer.exe" and timestamp BETWEEN "2026-01-01" AND "2026-06-30"'

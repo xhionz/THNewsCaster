@@ -1,0 +1,14 @@
+title: Detect Suspicious QPACK HEADERS Frames with High Entropy Payloads
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects QPACK HEADERS frames with high entropy (potential payload obfuscation) that may indicate client-side exploitation post-XRING
+logsource:
+  product: web_server
+  service: http3
+detection:
+  frame_type: HEADERS
+  frame_length: 260
+  entropy_score: '>0.8'
+  protocol: http3
+condition: all
+level: high

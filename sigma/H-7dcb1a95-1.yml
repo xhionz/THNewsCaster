@@ -1,0 +1,6 @@
+title: Suspicious WebAuthn Enrollment Domain Access
+logsource:
+  product: windows
+  service: dns
+condition: 'event_type: DNSQuery and (domain: "login-microsoftonline-com[.]xyz" or domain: "entra-passkey[.]fake" or domain: "microsoft-passkey[.]malicious")
+  and not domain: "login.microsoftonline.com" and not domain: "enterpriseregistration.windows.net"'

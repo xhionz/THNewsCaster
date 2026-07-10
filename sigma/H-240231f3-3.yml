@@ -1,0 +1,16 @@
+title: Detect Scanning for XRING via Repeated 260-byte QPACK HEADERS Frames
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects multiple 260-byte QPACK HEADERS frames from unique IPs within 24h, indicating reconnaissance for XRING vulnerability
+logsource:
+  product: web_server
+  service: http3
+detection:
+  frame_type: HEADERS
+  frame_length: 260
+  protocol: http3
+  source.ip: 
+    - '192.168.0.0/16'
+    - '10.0.0.0/8'
+condition: count(source.ip) by source.ip >= 5 and timeframe: 24h
+level: medium
