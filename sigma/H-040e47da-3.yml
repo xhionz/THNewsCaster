@@ -1,0 +1,11 @@
+title: Suspicious DLL or EXE Loaded by StorageZoneController.exe
+logsource:
+  product: windows
+  service: image_load
+detection:
+  ImageLoaded: '*\StorageZoneController.exe'
+  Image: '*\temp\*.dll' | '*\appdata\local\temp\*.exe' | '*\windows\temp\*.dll'
+  ImageLoaded: '*\progresssoftware\*.dll' | '*\sharefile\*.dll'
+  ImageLoaded: '*\update\*.exe'
+condition: all of them
+level: high

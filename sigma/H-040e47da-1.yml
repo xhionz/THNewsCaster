@@ -1,0 +1,15 @@
+title: Suspicious Process Execution on ShareFile SZC Hosts
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\StorageZoneController.exe'
+    - '*\SZCService.exe'
+  ParentImage:
+    - '*\svchost.exe'
+    - '*\w3wp.exe'
+    - '*\iisexpress.exe'
+  CommandLine: '* -c *' | '* -e *' | '*powershell -enc *' | '*cmd /c *'
+condition: all of them
+level: high

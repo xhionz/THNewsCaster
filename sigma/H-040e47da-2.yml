@@ -1,0 +1,12 @@
+title: Suspicious Login to ShareFile SZC Server via RDP or WinRM
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4624
+  LogonType: 10 | 3 | 11
+  AccountName: 'admin*' | 'szc*' | 'svc_*'
+  SourceNetworkAddress: '10.0.0.0/8' | '172.16.0.0/12' | '192.168.0.0/16'
+  LogonProcessName: 'RdpSsp' | 'Winlogon'
+condition: all of them
+level: medium
