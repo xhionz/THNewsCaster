@@ -1,11 +1,11 @@
 {
   "type": "bundle",
-  "id": "bundle--10d121ca-90f7-44de-83b1-f8deff7b0df5",
+  "id": "bundle--5d9f8667-ce79-4c71-aa17-60997de88ea8",
   "objects": [
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8ae49788-8148-484e-bbf5-4fa001a9907b",
+      "id": "vulnerability--64170d88-9b61-4b83-b7e8-e63e0d7f2050",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-56415",
@@ -19,7 +19,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--300cefdb-5de5-4fe6-9a76-ce792dfa2d0a",
+      "id": "vulnerability--55fe4c7b-370e-48ae-baa4-02e749c1a466",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-56413",
@@ -33,7 +33,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--cce7906e-8136-4984-9a83-39587c7ff054",
+      "id": "vulnerability--33cafe04-34fe-4251-98c7-21aba4f92a70",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-56290",
@@ -47,7 +47,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--1b166add-cdfc-4c39-b6d0-c12d2950af3d",
+      "id": "vulnerability--b7a9260f-d847-4625-a1b2-64fb4e513056",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-55721",
@@ -61,7 +61,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--76a45173-a813-47a5-9422-2ddd6cefe73f",
+      "id": "vulnerability--46db6e47-d833-408c-a71a-9d5f9c3c6fb8",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-55255",
@@ -75,7 +75,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c1cc649a-cc72-435a-be92-ad36247c7f61",
+      "id": "vulnerability--261a8c3a-488f-4e6c-989b-ea857f8c689b",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-53359",
@@ -89,7 +89,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--08b24779-ded8-44fe-abe5-50fa8aff1d78",
+      "id": "vulnerability--660ae603-177b-4ab1-a91e-b67324c98f85",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-50746",
@@ -103,7 +103,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--b7deff25-c37d-4934-a608-971406802ff5",
+      "id": "vulnerability--ea62f2cb-7c73-48ab-a132-394d1a884104",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-50110",
@@ -117,7 +117,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--fc61a3c3-46a8-4e2b-a61e-74cd232c2a72",
+      "id": "vulnerability--993bf43b-6989-4080-a201-470150216610",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-50040",
@@ -131,7 +131,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--78ce29f6-76eb-4874-87df-36a722307f62",
+      "id": "vulnerability--21f81790-11dd-45a5-a4df-b9524b240097",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-48908",
@@ -145,7 +145,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--6977a0ed-7a77-42f7-8ee6-27d94ff01f95",
+      "id": "vulnerability--7295697b-05db-4677-9323-401aa93db2d3",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-48558",
@@ -159,7 +159,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--bd3214a7-64f1-43d7-b566-4e69681c65d8",
+      "id": "vulnerability--4841115d-f959-4627-8e0e-406d95cebe80",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-48282",
@@ -173,7 +173,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--a3a1d5cf-2b7b-44ec-9747-1bc12eb2246d",
+      "id": "vulnerability--4265a985-fef3-487f-95ac-17beed2733bc",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-46817",
@@ -187,7 +187,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3f1bcd72-f987-4ce6-90a0-ad7b65ea7120",
+      "id": "vulnerability--559ffd9f-4c70-4999-93bf-e0374210cc11",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-46242",
@@ -201,7 +201,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--15bc0886-888c-4d80-9b4e-8703ab0cb823",
+      "id": "vulnerability--124ad1f8-604b-4c52-9546-e53488a08a6b",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-45659",
@@ -215,7 +215,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0b81b6b5-7aa0-41fe-8c7f-b87a0dfd560c",
+      "id": "vulnerability--7b6bdea7-3307-4f7c-a05f-78b33f9a3614",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-43499",
@@ -229,7 +229,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--32305f49-26f3-49fd-b149-7f2bde4fd5a6",
+      "id": "vulnerability--4223350b-e5ea-4e9b-8e72-0e97a26163b0",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-41918",
@@ -243,7 +243,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--13848e6a-8689-4ba9-af67-8f1d70114ed8",
+      "id": "vulnerability--eb740f61-710c-4c83-a933-6f729cc28f4f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-35616",
@@ -257,7 +257,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--aae919ab-7164-4be6-8e60-251195893500",
+      "id": "vulnerability--33f225c2-aa79-461e-8547-982d2de95a06",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-35535",
@@ -271,7 +271,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--75319619-5a04-472a-8a78-7eb729592788",
+      "id": "vulnerability--d0be6bbc-eecd-4b88-99ae-8b866e629c09",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-33825",
@@ -285,7 +285,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3c14443f-486a-43b9-92eb-08c359947138",
+      "id": "vulnerability--f1298dd7-f173-4113-a4a4-b9dcaed83528",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-33017",
@@ -299,7 +299,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--38bf2b03-4a03-42fc-a706-33ebf32ebe10",
+      "id": "vulnerability--961b5f52-c074-4adf-85f7-2acfc0c3022a",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-26158",
@@ -313,7 +313,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--e69624b3-c7d0-4476-a080-d791dd5b44cf",
+      "id": "vulnerability--25a38098-83e2-4112-ae7f-41c2d531c34f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-26157",
@@ -327,7 +327,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8d852f81-a037-44e0-9a4e-785abdb8e2e5",
+      "id": "vulnerability--a729f345-989e-4ea9-bef7-1fde643db667",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-25210",
@@ -341,7 +341,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0687cb0b-a0dd-4d86-9e8d-f29b4b586df5",
+      "id": "vulnerability--5069dd46-630b-4433-9484-ebb2a949e9d0",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-24515",
@@ -355,7 +355,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3b0c4a1a-6f56-4906-b758-8e38234bd0d0",
+      "id": "vulnerability--6e188a2d-8784-4f56-a14e-2ef3b6039b54",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23238",
@@ -369,7 +369,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--5abfb23e-4392-49d2-b2c8-3b3491bea7c8",
+      "id": "vulnerability--0f765348-7633-4874-99e2-f9bfe721bbb7",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23236",
@@ -383,7 +383,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3bac2ec4-6910-4470-bd86-e0ab469d0667",
+      "id": "vulnerability--61f291bd-9a33-4236-8a45-88890c8b39ad",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23231",
@@ -397,7 +397,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--d4af8896-968d-42e0-9570-f3cd46b06b38",
+      "id": "vulnerability--20653932-490a-4a63-8888-aa1642a24e25",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23230",
@@ -411,7 +411,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--6a84a8f6-40d5-4055-bb55-bb2dee31a262",
+      "id": "vulnerability--7b7fe904-4f65-4d55-8feb-e0ac0f79068f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23229",
@@ -425,7 +425,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--e8d91f0b-967c-4ab2-bdce-49c45bb81c36",
+      "id": "vulnerability--96a6761d-e39a-4dc0-a17e-9c69ccd47eba",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23228",
@@ -439,7 +439,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0d1c63b1-dc68-442b-9ec7-7d2cf0929ca3",
+      "id": "vulnerability--533b41bf-07f6-482c-b291-7d1a5f753e66",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23222",
@@ -453,7 +453,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f5faf88a-60a1-45ca-bc7f-8b48e68a3b05",
+      "id": "vulnerability--d8cc5640-15e1-4db1-9bfa-51ec506eed89",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23220",
@@ -467,7 +467,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8e08a4e0-ef1f-4fde-90ff-b2d08f35b6c3",
+      "id": "vulnerability--2fc82345-2f14-4bc7-ae41-45cff6ab5f03",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23112",
@@ -481,7 +481,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--55eb450c-837f-409d-8cbe-470c605f8421",
+      "id": "vulnerability--7c9860aa-8936-4cf0-8145-952f522cc608",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23111",
@@ -495,7 +495,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--7db71b8b-bcd6-41b2-8faa-857a4da0bf77",
+      "id": "vulnerability--f078027a-71b0-45ae-993a-8cc97d93491e",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23038",
@@ -509,7 +509,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--765d7b58-b246-41ab-97e0-2d6f323e4ca3",
+      "id": "vulnerability--8af3e34b-6a4a-4dae-8869-fc36b38c1efe",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23037",
@@ -523,7 +523,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--95da657e-6054-4e96-afdf-5f7db3d918b5",
+      "id": "vulnerability--4c15afa1-9df0-4ac5-bf89-52320d1c0f3a",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23033",
@@ -537,7 +537,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c7e64713-2e04-466b-b7f8-1c07347ebd3d",
+      "id": "vulnerability--f62045b5-37b8-4388-a925-626182daf809",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23032",
@@ -551,7 +551,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--d6cd7d9d-0eeb-456c-bb18-6109c62b14f8",
+      "id": "vulnerability--3eaa778b-cb48-4c03-8b45-0dada6bce285",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23031",
@@ -565,7 +565,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--68639da4-2e80-436d-b0c5-ced5d4dac01a",
+      "id": "vulnerability--6716506f-e82e-4db4-b2af-0b7f1860b072",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23030",
@@ -579,7 +579,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0f0f248b-274e-4f05-84bf-2425b36fb391",
+      "id": "vulnerability--b3f21808-58fc-4920-bcac-cb5b7e3268ca",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23026",
@@ -593,7 +593,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--d9c3f5de-4781-43c6-928a-f3f9ee371b18",
+      "id": "vulnerability--b3253874-0f04-4eea-88d8-d605c1ebdd3c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-23025",
@@ -607,7 +607,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--fa469d07-641b-4a07-ac07-8c99eff957cb",
+      "id": "vulnerability--2559b42a-a9ae-42e8-9148-5be9453638ad",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-22977",
@@ -621,7 +621,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3ec09b4d-7809-4e8a-afc3-e642cd2a415a",
+      "id": "vulnerability--80a8ff6f-1d23-4c60-b773-25c8176a260c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-22976",
@@ -635,7 +635,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--114f2bef-35a3-400c-8d27-cc8f49c4eb1a",
+      "id": "vulnerability--4e0fd5dd-d003-48ec-84cc-20fbd8f40f67",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-22610",
@@ -649,7 +649,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--e9250c7b-8b70-4975-89d4-d3c853fc815b",
+      "id": "vulnerability--f41c79ab-c7ac-4a75-8c14-7c598ddff82f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-20896",
@@ -663,7 +663,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--18d65e12-0a7f-4391-9f95-2fe8a37fc8cb",
+      "id": "vulnerability--a445383b-f092-42be-ae44-cef2de33304a",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-8451",
@@ -677,7 +677,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f2a5ba07-3126-4181-9db5-b829cb0ad942",
+      "id": "vulnerability--d2ae2c1f-bbbd-4c79-8639-a8454925e9e2",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-8037",
@@ -691,7 +691,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3355cefa-c389-4908-83dc-9866c5f31ecd",
+      "id": "vulnerability--78a4ee14-271c-4626-a3a8-1de1fbd4e866",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-3784",
@@ -705,7 +705,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--7d469e29-4deb-45d2-88e9-16430462a931",
+      "id": "vulnerability--83a4d9af-b486-4b11-84ff-f5704bda7ec6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-1489",
@@ -719,7 +719,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--34399cec-c0e6-475a-ad1f-e1c6f0a7154e",
+      "id": "vulnerability--7320afdd-45da-402d-ad8a-6f14f090a0d2",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2026-1484",
@@ -733,7 +733,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0f624907-c85e-44c6-9bc0-078fb52a315e",
+      "id": "vulnerability--54731271-7c0e-4037-b3ea-5dfb5633bf14",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-71191",
@@ -747,7 +747,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--44cfa0e2-33a9-4f42-8333-85cef2bcdf85",
+      "id": "vulnerability--4d0dd8bc-42d1-436e-9cfc-44831df8f976",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-71190",
@@ -761,7 +761,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f1e54204-0f42-4a30-9a3f-4201f1a33790",
+      "id": "vulnerability--859532be-aa94-46d9-9898-7223feafb3ef",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-71189",
@@ -775,7 +775,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8fa4e881-e47b-45b3-a2fb-ea43b92ed48b",
+      "id": "vulnerability--a3534b9e-0598-4d9e-a672-69773e7666f0",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-71188",
@@ -789,7 +789,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--10579dce-02b5-45af-8b89-92eb3ea1521f",
+      "id": "vulnerability--d75aa21b-c90f-4228-9825-88f43a9d011c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-71186",
@@ -803,7 +803,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c5702cca-23e1-44c0-a2b3-3bf90f5db117",
+      "id": "vulnerability--fbec670c-732f-44c7-a1ce-c15ab852445a",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-71185",
@@ -817,7 +817,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--83368d4e-81d3-4f0c-a9c2-4d71bb4c1060",
+      "id": "vulnerability--e3cacd4b-29fe-43d0-bc99-1b706694ca95",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-69720",
@@ -831,7 +831,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--3a0fc8f1-232a-4390-a31b-612d11a9ae75",
+      "id": "vulnerability--87427fe3-1da8-4352-b232-bc58ba685da1",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-66412",
@@ -845,7 +845,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--9a22826f-9f6d-455f-9bae-77c5c9192caa",
+      "id": "vulnerability--6cdf31c8-ea82-4387-8fe7-c39b5df3ee4f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-66382",
@@ -859,7 +859,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0743b2f2-3701-4ad0-ade4-567eed7f5aa8",
+      "id": "vulnerability--23e74076-7bc7-4edf-a413-86529df593fd",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-66035",
@@ -873,7 +873,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--60d8e0a5-defd-438f-9604-92d9a90c334a",
+      "id": "vulnerability--2890d477-5b00-46ce-861b-2330591e5f7a",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-60876",
@@ -887,7 +887,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--be32e4e8-b55b-425d-add9-bf0e7f2b383e",
+      "id": "vulnerability--fe08d09e-1d0b-4193-a1fa-866582404033",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-49796",
@@ -901,7 +901,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0f805d5c-18c4-4355-85b9-75ff45a3664d",
+      "id": "vulnerability--082ebe7d-9387-40ae-9d4a-f4d38acd3792",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-49795",
@@ -915,7 +915,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--74b29393-66f8-4850-8e08-ca3561a874db",
+      "id": "vulnerability--c5667dd0-e793-4292-b595-4a122d307384",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-49794",
@@ -929,7 +929,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--01062795-091e-42c7-a0e5-55a6d3fa9ecb",
+      "id": "vulnerability--4f93ed6e-b4fd-4dc2-9751-906b7d295538",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-46394",
@@ -943,7 +943,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8ee88593-4a43-44dd-baef-f86787db7b18",
+      "id": "vulnerability--0c4cb70b-5bc7-4daa-93db-b0107ab14d34",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40345",
@@ -957,7 +957,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f4481d34-10b9-4b97-85e9-2f3b9e1142c9",
+      "id": "vulnerability--b7e6d7e9-c679-447a-a718-22b26260802c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40281",
@@ -971,7 +971,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--152e7626-ac2e-460a-a3a8-e2ebd203305c",
+      "id": "vulnerability--1711cfdc-54e9-430e-987b-c532ad11c06f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40280",
@@ -985,7 +985,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f6f1d13b-ba42-42be-b37b-d83eba3eb78b",
+      "id": "vulnerability--99b151f0-7167-49ff-82ed-74a9f7f539b6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40278",
@@ -999,7 +999,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--74011fff-b6db-4902-b178-462570fb5939",
+      "id": "vulnerability--70ec4c27-bd8b-4fb1-9bc9-58a349bb4e81",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40271",
@@ -1013,7 +1013,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c8cae1e0-30dd-4b3a-b911-65cee6536aaa",
+      "id": "vulnerability--98d4e50e-a1d8-477c-924e-dc068d24108c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40264",
@@ -1027,7 +1027,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--9206d066-5cf3-4878-b272-710a61ba3902",
+      "id": "vulnerability--b4a4832c-0cf6-4b82-8af4-728a51880f64",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40263",
@@ -1041,7 +1041,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c777cc17-9307-4858-9676-216e0dcdc371",
+      "id": "vulnerability--a7075f6e-f316-41d6-b30a-68b41ef77f7b",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40262",
@@ -1055,7 +1055,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8690400f-f38e-402b-b773-8abf3bb4d174",
+      "id": "vulnerability--cd4fdeab-4f73-4aff-a76c-8440e783edb1",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40261",
@@ -1069,7 +1069,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--ded18dea-299c-498f-9861-9671355efe89",
+      "id": "vulnerability--8021aadb-ffc1-45fc-a79a-78f6a45382c6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40258",
@@ -1083,7 +1083,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--2944a528-b5c2-4870-9ce0-280e0843e75c",
+      "id": "vulnerability--9b411166-fafa-47e1-8747-f140aa921e69",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40257",
@@ -1097,7 +1097,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--33a50067-e8ad-480a-bf60-934598857bc1",
+      "id": "vulnerability--ddfcc6e0-7fc7-4304-ad0a-8c206ba155c1",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40254",
@@ -1111,7 +1111,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c033d40b-0acd-4c65-8f1b-c358583185a6",
+      "id": "vulnerability--d3bb5a46-90dc-4350-8f33-80b1366aa820",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40252",
@@ -1125,7 +1125,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--23281af2-8149-4083-a0b1-c4103d0f151e",
+      "id": "vulnerability--65841edb-4d9b-4eaa-9116-6d41bd8cd97f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40251",
@@ -1139,7 +1139,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--f52b15f3-2123-41a8-96a1-016459fc075d",
+      "id": "vulnerability--ad59d6be-13de-4c5f-92ac-efcd79855b7f",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40250",
@@ -1153,7 +1153,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c8b0da39-67f1-428e-bf19-725a49a56d65",
+      "id": "vulnerability--fa8e17df-3bbf-4cd3-be46-a046a237dfe3",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40248",
@@ -1167,7 +1167,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--67b864d4-9415-459a-aa9d-c6fc25dde588",
+      "id": "vulnerability--ce5f6d10-4669-464d-8f8d-05a296e17aca",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-40214",
@@ -1181,7 +1181,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--159cdde6-5fad-4b06-b105-5019f0ad9fe4",
+      "id": "vulnerability--3f98f6ed-7e25-407c-b644-6065d2e08aef",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-39913",
@@ -1195,7 +1195,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--a5bd2748-476d-4200-9440-8d15d38a81e2",
+      "id": "vulnerability--68d8ac83-2fb4-46c2-be5e-07c21a9682cd",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-13601",
@@ -1209,7 +1209,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--4096a637-b97e-43c2-bf0b-66cb7f3693e1",
+      "id": "vulnerability--263ccb05-1fe8-4f20-806d-9ab9b45478c6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-13465",
@@ -1223,7 +1223,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c8c44e6d-619d-4325-8341-f3c0f11d146a",
+      "id": "vulnerability--0db86629-8be6-4cff-a8a3-a4e7f57bdb7e",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-10966",
@@ -1237,7 +1237,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--34c6efe3-4250-4364-b52e-5edf70bfca6d",
+      "id": "vulnerability--9c805770-962a-4465-8035-403e73f9c244",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-9232",
@@ -1251,7 +1251,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--0b6ab31a-f4c9-4918-824b-3478bd2e7ae1",
+      "id": "vulnerability--1f81df1d-1005-47f6-85cb-e2ffbd010925",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-9231",
@@ -1265,7 +1265,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--b18b8b92-c5ba-46b8-8e83-11e7de852e5d",
+      "id": "vulnerability--631df685-2dff-4cdc-b8ae-3828ea7b3216",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-9230",
@@ -1279,7 +1279,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--d54f0986-d2e9-4c20-bf4f-3eef97ae5d49",
+      "id": "vulnerability--4778d0fc-98c2-45f2-b880-8ec3a076a291",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-9086",
@@ -1293,7 +1293,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--878fecb3-362d-4fe2-91ed-5c4450063311",
+      "id": "vulnerability--b7a641cf-110e-4b92-bbf1-76ffde22221d",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-8732",
@@ -1307,7 +1307,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--7ebd9965-9a81-4b57-9501-077d3d2a71cc",
+      "id": "vulnerability--1a3f2f84-0a67-4646-b24b-e07b6fbd82d5",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-7039",
@@ -1321,7 +1321,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--e13a6b03-a084-43ca-bc8d-7552cb4ec753",
+      "id": "vulnerability--e94d8094-6f3a-48d3-aedb-74819a7c0485",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-6170",
@@ -1335,7 +1335,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--05c68281-d6d4-4500-8486-e2bab1c3e87f",
+      "id": "vulnerability--86d9e8cd-893a-4a41-aab3-f6d748f17419",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-6141",
@@ -1349,7 +1349,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--aadce0fb-37a9-4aed-ac5f-9b794ff2c9cd",
+      "id": "vulnerability--3489db5e-3bf6-4286-bf9d-30ce11008d7b",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-6052",
@@ -1363,7 +1363,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--4cea4e13-ad71-4ce4-bebf-86d3a82e1c13",
+      "id": "vulnerability--93893537-6f53-4af3-bd86-7d9ba637925a",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-5777",
@@ -1377,7 +1377,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--9f428cc3-1c52-4483-ac4f-c6e29c752b25",
+      "id": "vulnerability--270415c9-d369-4446-9d4b-b630d4673d28",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-1376",
@@ -1391,7 +1391,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--8ea9b383-05cc-43df-b9fe-3258ac0a7888",
+      "id": "vulnerability--108da8de-7dc4-404f-ae8a-ff1049079204",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2025-1352",
@@ -1405,7 +1405,7 @@
     {
       "type": "vulnerability",
       "spec_version": "2.1",
-      "id": "vulnerability--c9868e4d-299d-4ab7-87b0-d7831a08d417",
+      "id": "vulnerability--2094efab-d38e-4ac1-b168-607ff9eb4674",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "CVE-2024-42009",
@@ -1419,7 +1419,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2346690d-c936-4828-bfca-2aa487ab9666",
+      "id": "indicator--a59a05ff-2790-4ea4-8996-cce157c313ae",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "IP addresses: 8.0.4.29",
@@ -1433,7 +1433,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ae33046b-099c-4b0a-8c08-60ef8206bf70",
+      "id": "indicator--c3863c77-27f5-49bf-84fb-2865ccf9b418",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "IP addresses: 185.182.193.21",
@@ -1447,7 +1447,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9475ea05-bbfc-4025-9c51-a3f426c49164",
+      "id": "indicator--a2d7578a-794e-4fe1-af89-23815e8f42c4",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "IP addresses: 212.8.248.104",
@@ -1461,7 +1461,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9ab99ae0-1105-4c41-bad7-c7630d2c9264",
+      "id": "indicator--22baca79-c7a1-4003-9984-7e1abf91daf8",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: adobe2.workers.dev",
@@ -1475,7 +1475,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--17d9df9f-a52c-4005-8ae9-8fff1647071a",
+      "id": "indicator--71fd6b11-b7f3-453c-a283-e078cc34224c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: clear90489058903-document.workers.dev",
@@ -1489,7 +1489,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--69d6cff5-fc6e-4661-8eef-8bd443832192",
+      "id": "indicator--4d2c4da8-fb07-4aff-ad80-7ad34b3c8293",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: cmd.result",
@@ -1503,7 +1503,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ff8c227f-6d0c-44cd-b678-82d8e3bd32d8",
+      "id": "indicator--a4502193-cd51-4b51-9738-7f5858249357",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: cmd.task",
@@ -1517,7 +1517,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--9ca1c529-715b-4247-a6e2-09c4521a861e",
+      "id": "indicator--ad32327f-1343-45ee-867e-fccaf75c4684",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: cwipe.pdb",
@@ -1531,7 +1531,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4b619c69-8b9b-4b9d-8513-e0e654aaa545",
+      "id": "indicator--59aba062-be8e-431b-927a-5a7240ac853e",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: cwipenew.pdb",
@@ -1545,7 +1545,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--93c1d6b8-557e-4b14-89f6-d33a7288b99c",
+      "id": "indicator--188c65d2-23a3-4a46-8903-9e8a97d10822",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: dashboard-bl.pamconj.com",
@@ -1559,7 +1559,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--558b7247-5a44-4750-8a93-4117ccbf1770",
+      "id": "indicator--c101e2b5-4e96-4e07-ada1-fe4265057f7e",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: debug.pl",
@@ -1573,7 +1573,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a3a63794-872a-45c2-a0a0-a75caa98280a",
+      "id": "indicator--e66fdff8-a6c2-439b-a2d0-4a9f5e066d55",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: detections.ai",
@@ -1587,7 +1587,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--992875cd-d5aa-4c69-a9e1-b0cd1b95a695",
+      "id": "indicator--fe92b2d5-ec8f-427c-b53b-f58e1a597dc2",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: docviewer.workers.dev",
@@ -1601,7 +1601,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--efe2cfbc-5b80-4652-9f05-af04f16a4a9b",
+      "id": "indicator--a34b7d75-1c4f-450c-af0b-91aff3b02bd6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: elixir.bootlin.com",
@@ -1615,7 +1615,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--56b9688c-7d48-44b7-8e2b-86c39cc1fde5",
+      "id": "indicator--acb94758-539b-4b81-abf3-1e662c51b922",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: key.txt",
@@ -1629,7 +1629,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ed37c680-a468-4a1a-b882-855e2cab46d7",
+      "id": "indicator--21e6b49a-09bb-43f4-b3ad-fa80164ba057",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: linuxtesting.org",
@@ -1643,7 +1643,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5ea4be35-f6ea-43b7-abd8-c351976fc142",
+      "id": "indicator--e94537e4-cfb7-4dc3-a592-c61b283e7721",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: login.pl",
@@ -1657,7 +1657,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--93e3cfb6-7ee2-4315-ac53-1090e4eccaca",
+      "id": "indicator--0cbf04b5-5f65-4fd9-a2ae-3ade798d954d",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: main.findwindowsdrive",
@@ -1671,7 +1671,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--dea80e4d-bc0a-4490-b59e-f462b67a03fd",
+      "id": "indicator--46a6b24c-78a0-445c-b4f3-0206fd2c2350",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: main.main",
@@ -1685,7 +1685,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3d79de25-8540-4747-9e79-3f3faeccc214",
+      "id": "indicator--4972612e-e89d-49fe-aea9-82c82a4d109d",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: main.unallocatedrive",
@@ -1699,7 +1699,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0fa2e67a-c38e-4979-9809-da404aee9c09",
+      "id": "indicator--1dda8ab2-b80b-49c3-a777-cd1e84629935",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: main.writerandtodrive",
@@ -1713,7 +1713,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--97bbd1f2-39af-47eb-b637-0b3a7cecbe02",
+      "id": "indicator--a0f5bc42-f72d-4822-ad45-0256fe9212c9",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: mc.exe",
@@ -1727,7 +1727,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a84438dd-1312-4054-a71f-9eea0cf100db",
+      "id": "indicator--779d4b40-d15c-4b46-a8f5-2744003abdbf",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: mononapfp.sharepoint.com",
@@ -1741,7 +1741,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--255aa56c-db36-4f29-8eb7-a293fa46823c",
+      "id": "indicator--89135a7e-2b9a-4c7b-ac2c-be21394cadc6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: mononapfpcom.sharepoint.com",
@@ -1755,7 +1755,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--1456ed2e-27bd-42c3-8572-ca931398a5e5",
+      "id": "indicator--b1094b9f-dbb7-4e06-8ea3-cb6ad4ce62d3",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: navigator.vendor",
@@ -1769,7 +1769,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--84bd2087-9ff6-40de-8462-3a4be3dd1c3b",
+      "id": "indicator--d0cda16f-02f1-4ace-a1bb-5989a5f1a708",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: navigator.webdriver",
@@ -1783,7 +1783,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f369cb96-2f3c-4848-8c69-ed355f2dd2b5",
+      "id": "indicator--3b66c2ae-20f3-43fc-acc6-1bd4f0a47474",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: onedrive.workers.dev",
@@ -1797,7 +1797,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3997443f-d26b-4e85-ace0-7c263c00dfda",
+      "id": "indicator--243afc61-5b3f-4215-b13d-02b96235baf9",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: os.chdir",
@@ -1811,7 +1811,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--df60e25f-68c2-41a0-aac8-030d5a49c59d",
+      "id": "indicator--4077f740-76de-45ac-8dbb-b4f6c4932ebf",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: os.remove",
@@ -1825,7 +1825,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3ff2b22a-382d-4e3e-a903-4c3174f65e8e",
+      "id": "indicator--b8ef2482-7db3-47db-ba28-7301274ad6ed",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: q.qlen",
@@ -1839,7 +1839,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--2cb806dd-88ab-45c1-af69-7597a48955b8",
+      "id": "indicator--3436d10d-93a9-4bac-a084-84b7188cfc0b",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: rand.read",
@@ -1853,7 +1853,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--232769b3-e383-400d-b320-6bbc34e1b8dc",
+      "id": "indicator--933bd6af-d5e8-4445-85e1-e985b936f891",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: rel-1.16.0-0-gd239552ce722-prebuilt.qemu.org",
@@ -1867,7 +1867,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0a2466f4-e04a-417f-a496-f76e5920567d",
+      "id": "indicator--e32203e8-418f-4614-b761-e5aa17cae0a4",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: rel-1.16.3-0-ga6ed6b701f0a-prebuilt.qemu.org",
@@ -1881,7 +1881,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--aefed5af-7ff7-476b-a962-f39a2fce2a02",
+      "id": "indicator--b5bf8a07-9eed-4d60-bdb6-0dc6b1bd09c5",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: rel-1.17.0-0-gb52ca86e094d-prebuilt.qemu.org",
@@ -1895,7 +1895,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--0f937afa-3a94-4afa-bc48-1c733fe10591",
+      "id": "indicator--e3a6cf6d-46c5-4464-9d32-d861e8f59676",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: req.sg",
@@ -1909,7 +1909,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ef40e285-a65d-441b-87df-a95b5e1b3e2c",
+      "id": "indicator--1c84fbef-024a-4dd1-bda4-470a6e859180",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: s-account.workers.dev",
@@ -1923,7 +1923,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--e77cfec8-3277-4b12-9bb8-70a394bfa6ce",
+      "id": "indicator--010195f9-b999-4a93-9ab5-9241704c4823",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: security.evtx",
@@ -1937,7 +1937,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4034816d-21b2-4ad7-98ec-2c2487bcb295",
+      "id": "indicator--a4a4057b-0d5a-49da-b277-d39bde1fc548",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: sharepoint.com",
@@ -1951,7 +1951,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5dc34927-e670-4574-8730-e62566a90818",
+      "id": "indicator--a70a873d-a33e-400d-a32c-11156913cf1c",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: skb2.cb",
@@ -1965,7 +1965,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--de4f74be-8a65-46fc-b392-f0518121ac09",
+      "id": "indicator--55bafe51-c4c4-4b9f-ace1-ac58573fc0ee",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: spx.pamconj.com",
@@ -1979,7 +1979,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c2af7f63-8e89-40e8-bd9f-2049ca70b664",
+      "id": "indicator--38bb3cb5-a914-4be6-bc2e-a757e45d77e9",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: stonefly.com",
@@ -1993,7 +1993,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--ac018d9b-20a3-4c0b-be86-fc77ab464a0a",
+      "id": "indicator--fce58de9-f322-4bc6-9f62-40df1cebb40e",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: support.industry.siemens.com",
@@ -2007,7 +2007,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--8bd4d226-a1f3-42c6-abf5-a487c5870537",
+      "id": "indicator--e29de950-d985-4569-8eb5-f96ff39b411e",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: suse.cz",
@@ -2021,7 +2021,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--b0f39dd2-9547-4c42-9859-ccaf6047f39f",
+      "id": "indicator--807deb08-2386-42e6-8492-aef6263ca3f1",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: wevutil.exe",
@@ -2035,7 +2035,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--bd25e2f8-0411-4cbb-97eb-2d64d7ff9773",
+      "id": "indicator--d1fea170-dae9-4f59-9763-b12ee6102494",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: window.chrome",
@@ -2049,7 +2049,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--32e882c2-7ae9-4577-ba6e-5ba59d0a76c7",
+      "id": "indicator--bafca362-5e27-47c2-8b3f-b1742b587544",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: www.cisa.gov",
@@ -2063,7 +2063,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--32cb574d-6003-4c24-8c56-d8f43e234f1a",
+      "id": "indicator--5b79cef5-6c1e-46f6-9ec1-438e290d700d",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "Domains: www.siemens.com",
@@ -2077,7 +2077,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a21f28cb-d5ff-4f3f-8432-0538be16de91",
+      "id": "indicator--cc52207e-554a-49b5-bdee-11c57c24313d",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: 12c39f052f030a77c0cd531df86ad3477f46d1287b8b98b625d1dcf89385d721",
@@ -2091,7 +2091,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--de60a2fd-aae1-4f51-b7d8-7f55a3354468",
+      "id": "indicator--ec9bf7e8-8fed-4bf1-bc3e-9e3b7ff5d1c6",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: 3c30deb6556a94cfb84ae51798f4aecfae8c7358e55fdb321c5f2376579631cd",
@@ -2105,7 +2105,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--f1888397-7960-4607-8b79-ce98c26bc230",
+      "id": "indicator--9e1c0253-9635-4e0d-888c-277110cee0ae",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: 440b5385d3838e3f6bc21220caa83b65cd5f3618daea676f271c3671650ce9a3",
@@ -2119,7 +2119,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--74b3bcce-0f1b-465e-a171-208d78346bbf",
+      "id": "indicator--d4cd3c5c-8bbe-473a-8bd1-935bc935e921",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: 633d4cbd496b1094495da89a64f5e6c31a0f6d4d1488411db5b0cba1cfe42001",
@@ -2133,7 +2133,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--3ea49794-a140-4057-9583-d30982466581",
+      "id": "indicator--40dda182-c6cd-471e-b814-7521effbfc4d",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: 9706a192e2c1a1faaf0a521daf31c2af60ff4590e3f47bbb4abc227f42af0683",
@@ -2147,7 +2147,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--5c2dfd55-f7f7-46be-bcb5-6836a9216955",
+      "id": "indicator--ce1ff22d-328f-48c8-bd4b-e1ce85e3f0a7",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: ce9ad5f6c12019f4aae5b189bd8ddf5bb09e75b06a0a587b25a855c65948c913",
@@ -2161,7 +2161,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--4fdb4c8f-f12f-49c7-a36c-9ccea204c757",
+      "id": "indicator--a99d808d-69d8-486e-8392-7f29ac19fe18",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: db41e0da7ab3305be8d9720769c6950b4dc1c1984ef857d3310eb873a0fc7674",
@@ -2175,7 +2175,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--45de1b86-f55b-4055-9631-4e3014409fa0",
+      "id": "indicator--8185e133-5686-4115-9588-f5febca1c6c9",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA256 hashes: f622ed85ef31ad4ab973f4e74524866fe1bb44f0965ad2b2ad796cd657a05bfd",
@@ -2189,7 +2189,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--c08b0bf6-5e7b-43ff-a1c8-58e54a63358a",
+      "id": "indicator--cb54dfc1-d2f9-470e-9bac-431bae50d8f7",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA1 hashes: 2636426a091bd6c6f7f02e49ab20d4cdc6bfc753",
@@ -2203,7 +2203,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--a9f20c6a-965a-4ebb-8f4b-8e5f4055ae42",
+      "id": "indicator--00009add-5d29-4ff6-a929-297b65173015",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA1 hashes: 8cc09ef94dcec767faa911515ce9e609c45db470",
@@ -2217,7 +2217,7 @@
     {
       "type": "indicator",
       "spec_version": "2.1",
-      "id": "indicator--480769aa-49ed-42b2-a97c-8ab46c3907a1",
+      "id": "indicator--2de2786d-f3bf-47dc-a545-80a376628785",
       "created": "2026-07-11T00:45:20.000Z",
       "modified": "2026-07-11T00:45:20.000Z",
       "name": "SHA1 hashes: b16f441cca0a4841050e3215a9f120a6d8aea918",
