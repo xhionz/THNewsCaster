@@ -1,0 +1,12 @@
+title: Suspicious npm package publication detected
+logsource:
+  product: npm_registry
+  category: registry_update
+detection:
+  package_name: |
+    package: jscrambler
+    version: '8.14.0'
+  timestamp: |
+    timestamp: >= '2026-07-11T00:00:00Z' AND <= '2026-07-11T23:59:59Z'
+condition: package_name and timestamp
+level: high

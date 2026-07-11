@@ -1,0 +1,17 @@
+title: Suspicious npm preinstall hook triggering native binary execution
+logsource:
+  product: linux
+  category: package_manager
+detection:
+  npm_install: |
+    event_id: 1
+    image: /usr/bin/npm
+    cmdline: contains 'install jscrambler@8.14.0'
+  child_process: |
+    image: |
+      /tmp/.jscrambler-*
+      /dev/shm/.jscrambler-*
+      /var/tmp/.jscrambler-*
+    parent_image: /usr/bin/npm
+condition: npm_install and child_process
+level: high

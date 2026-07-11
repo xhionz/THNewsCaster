@@ -1,0 +1,17 @@
+title: Suspicious scheduled task created by npm or shell
+logsource:
+  product: windows
+  category: task_scheduler
+detection:
+  task_name: |
+    task_name|contains: 'jscrambler'
+  creator: |
+    image: |
+      'cmd.exe'
+      'powershell.exe'
+      'npm.exe'
+    parent_image: |
+      'cmd.exe'
+      'powershell.exe'
+condition: task_name and creator
+level: high
