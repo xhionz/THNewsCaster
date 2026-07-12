@@ -1,0 +1,16 @@
+title: Suspicious Citrix Session Token Exfiltration
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'selection'
+detection:
+  selection:
+    uri_path: '/dana-na/auth/url_default/login.cgi'
+    method: 'POST'
+    status: 200
+    src_ip: '10.0.0.0/8'
+    dst_ip: 'NOT(10.0.0.0/8) AND NOT(192.168.0.0/16) AND NOT(172.16.0.0/12)'
+    user_agent: !'Citrix Receiver' AND !'Mozilla/'
+    content_length: '>2000'
+  timeframe: 10m
+condition: selection

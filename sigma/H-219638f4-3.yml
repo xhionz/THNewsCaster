@@ -1,0 +1,17 @@
+title: DarkSpectre - RAT Installation via Software Update Compromise
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  rat_process:
+    Image: '*\update.exe'
+    CommandLine: '*-silent *-install *-remote*'
+  parent_legit:
+    ParentImage: '*\chrome.exe' OR '*\outlook.exe' OR '*\winword.exe'
+condition: rat_process and parent_legit
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+output:
+  fields: [Image, CommandLine, ParentImage]

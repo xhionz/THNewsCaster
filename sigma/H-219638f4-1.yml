@@ -1,0 +1,17 @@
+title: DarkSpectre - Malicious Browser Extension Install via Outlook
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  extension_install:
+    Image: '*\chrome.exe'
+    CommandLine: '*--load-extension*'
+  phishing_parent:
+    ParentImage: '*\outlook.exe'
+condition: extension_install and phishing_parent
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+output:
+  fields: [Image, CommandLine, ParentImage]

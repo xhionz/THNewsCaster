@@ -1,0 +1,15 @@
+title: DarkSpectre - DNS Exfiltration via High Query Rate
+logsource:
+  product: dns
+  service: windows
+detection:
+  high_query_count:
+    QueryName: '*'
+    count: '>50'
+    timeframe: '5m'
+condition: high_query_count
+fields:
+  - QueryName
+  - count
+output:
+  fields: [QueryName, count]

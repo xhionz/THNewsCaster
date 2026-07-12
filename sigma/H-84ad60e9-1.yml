@@ -1,0 +1,17 @@
+title: Suspicious Citrix NetScaler Path Traversal Attempt
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'selection'
+detection:
+  selection:
+    uri_path:
+      - '/dana-na/auth/url_default/login.cgi'
+      - '/vpn/portal/../../../etc/passwd'
+      - '/cgi-bin/dispatcher'
+    method: 'POST'
+    status: [404, 500, 503]
+    user_agent: !'Mozilla/'
+    content_length: '>1000'
+  timeframe: 5m
+condition: selection

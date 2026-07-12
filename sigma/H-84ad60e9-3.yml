@@ -1,0 +1,13 @@
+title: Suspicious PowerShell Execution from Citrix ICA Client Process
+logsource:
+  product: windows
+  service: sysmon
+condition: 'selection'
+detection:
+  selection:
+    Image: '*\powershell.exe'
+    ParentImage: '*\wfica32.exe' OR '*\wfica64.exe'
+    CommandLine: '*-enc*' OR '*-nop*' OR '*-e *' OR '*IEX *' OR '*Invoke-Expression*'
+    CommandLine: '*-w hidden*' OR '*-noninteractive*'
+  timeframe: 15m
+condition: selection
