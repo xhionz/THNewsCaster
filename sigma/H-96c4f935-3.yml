@@ -1,0 +1,11 @@
+title: Detect Scheduled Task Creation with HTTP Trigger
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\schtasks.exe'
+    CommandLine: '*create* /tr *http* /sc ONCE*'
+  condition: selection
+condition: selection

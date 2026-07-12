@@ -1,0 +1,12 @@
+title: Detect BITS Job Creation for Suspicious Payloads
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\svchost.exe'
+    CommandLine: '*bitsadmin*transfer*http*'
+    ParentImage: '*\svchost.exe'
+  condition: selection
+condition: selection

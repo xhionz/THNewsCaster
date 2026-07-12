@@ -1,0 +1,14 @@
+title: Detect HTTP.sys CVE-2024-21304 Exploit Attempt
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    Image: '*\System32\svchost.exe'
+    DestinationPort: 80
+    DestinationIp: '10.0.0.0/8'
+    RequestLength: '>10000'
+    RequestHeaders: '*Content-Length*Content-Range*'
+  condition: selection
+condition: selection
