@@ -1,0 +1,24 @@
+title: Suspicious Login Page Access via Web Server
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects HTTP requests to common credential harvesting endpoints with suspicious user agents or referrers
+logsource:
+  product: webserver
+detection:
+  selection:
+    uri:
+      - '/login'
+      - '/auth'
+      - '/signin'
+      - '/account'
+      - '/secure'
+    user_agent:
+      - '*curl*'
+      - '*python-requests*'
+      - '*wget*'
+      - '*Go-http-client*'
+    referer:
+      - '*login-*.com'
+      - '*auth-*.net'
+  condition: selection
+level: high

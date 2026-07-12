@@ -1,0 +1,18 @@
+title: Internal Host Connecting to Known Phishing IP
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects outbound connections from internal hosts to IPs known for phishing infrastructure
+logsource:
+  product: windows
+  service: firewall
+detection:
+  selection:
+    EventID: 3
+    DestinationIp:
+      - '185.143.221.101'
+      - '194.156.123.204'
+      - '104.28.12.18'
+      - '172.67.134.112'
+      - '104.21.78.101'
+  condition: selection
+level: high
