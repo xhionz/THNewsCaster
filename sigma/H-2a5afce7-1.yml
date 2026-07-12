@@ -1,0 +1,13 @@
+title: Suspicious Driver Load - Realtek.sys
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects loading of Realtek.sys kernel driver, a known target for DMA attacks
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 6
+    Image: '*\Realtek.sys'
+  Condition: Selection
+level: medium

@@ -1,0 +1,14 @@
+title: Suspicious Service Installation for DMA Persistence
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects installation of services with suspicious names or paths related to known DMA abuse
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 8
+    Image: '*\svchost.exe'
+    ServiceName: '*Realtek*' OR '*Rtk*' OR '*DMA*' OR '*GPU*'
+  Condition: Selection
+level: high

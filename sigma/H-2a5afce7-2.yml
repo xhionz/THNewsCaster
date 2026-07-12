@@ -1,0 +1,14 @@
+title: Suspicious LSASS Access from Non-System Process
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects process creation accessing LSASS.exe from non-system processes
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 10
+    TargetImage: '*\lsass.exe'
+    ProcessIntegrityLevel: 'Medium' OR 'Low'
+  Condition: Selection
+level: high
