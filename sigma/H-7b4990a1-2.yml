@@ -1,0 +1,20 @@
+title: Suspicious Balbooa Forms POST Request Pattern
+id: 9b2c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects anomalous POST requests to Balbooa Forms endpoints with large payloads or .php extensions, indicative of zero-day exploitation
+logsource:
+  product: apache
+  service: access
+  category: web
+detection:
+  selection:
+    uri: "/components/com_balbooa/"
+    method: POST
+    status: 200
+    content_length: > 50000
+    user_agent: !"Mozilla/5.0 (compatible; Googlebot)"
+  condition: selection
+  falsepositives:
+    - Legitimate form submissions with attachments
+    - Automated form testing
+level: high

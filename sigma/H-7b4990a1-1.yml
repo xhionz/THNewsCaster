@@ -1,0 +1,20 @@
+title: Suspicious PHP File Upload via iCagenda Joomla Extension
+id: 8a1a5b5e-1b8c-4f5a-9d7c-1e2f3a4b5c6d
+status: experimental
+description: Detects upload of .php files to iCagenda attachment directory, indicative of CVE-2026-48939 exploitation
+logsource:
+  product: apache
+  service: access
+  category: web
+detection:
+  selection:
+    uri: "/components/com_icagenda/"
+    method: POST
+    status: 200
+    user_agent: !"Mozilla/5.0 (compatible; Googlebot)"
+    referer: "*com_icagenda*"
+  condition: selection
+  falsepositives:
+    - Legitimate admin uploads
+    - Automated testing tools
+level: high

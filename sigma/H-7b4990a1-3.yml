@@ -1,0 +1,17 @@
+title: Ransomware File Extension Creation Post-iCagenda Compromise
+id: 7c8d9e0f-1a2b-3c4d-5e6f-7a8b9c0d1e2f
+status: experimental
+description: Detects mass creation of .locked, .encrypted, .crypt files on systems that hosted iCagenda, suggesting ransomware deployment
+logsource:
+  product: windows
+  category: file_event
+detection:
+  selection:
+    file.path: "*.locked" OR "*.encrypted" OR "*.crypt" OR "*.cryp" OR "*.pys" OR "*.zzz"
+    file.path: "*\inetpub\wwwroot\*" OR "*\components\com_icagenda\*"
+    event.type: "create"
+  condition: selection
+  falsepositives:
+    - Legitimate backup or encryption tools
+    - File system corruption
+level: high
