@@ -1,0 +1,11 @@
+title: Detection of Credential Dumping on Finance/Healthcare Subnets
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  credential_dumping:
+    - EventID: 10
+    - Image: "*\lsass.exe"
+    - ParentImage: "*\mimikatz.exe" OR "*\procexp64.exe" OR "*\procdump.exe"
+    - DestinationIp: "10.10.10.0/24" OR "10.20.20.0/24"  # finance/healthcare subnets
+condition: credential_dumping

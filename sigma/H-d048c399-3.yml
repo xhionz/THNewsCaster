@@ -1,0 +1,16 @@
+title: Anomalous DNS Queries to Government Domains from Internal Network
+logsource:
+  product: dns
+  service: dns_query
+detection:
+  gov_domain_query:
+    - query: "nsa.gov"
+    - query: "dc3.mil"
+    - query: "cyber.gov.au"
+    - query: "cyber.gc.ca"
+    - query: "ncsc.govt.nz"
+    - query: "valisluureamet.ee"
+    - query: "supo.fi"
+    - query: "ssi.gouv.fr"
+    - query: "www.sicurezzanazionale.gov.it"
+condition: gov_domain_query AND source.ip IN (internal_networks) AND NOT source.ip IN (authorized_admin_networks)

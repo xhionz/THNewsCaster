@@ -1,0 +1,13 @@
+title: Detection of Smart Install Protocol Exploitation (CVE-2018-0171)
+logsource:
+  product: network
+  service: cisco_ios
+condition: 'destination.port: 4786 and event.action: "smart_install_request" and not source.ip in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"]'
+detection:
+  smart_install_request:
+    - destination.port: 4786
+    - event.action: "smart_install_request"
+    - not source.ip: "10.0.0.0/8"
+    - not source.ip: "172.16.0.0/12"
+    - not source.ip: "192.168.0.0/16"
+condition: smart_install_request
