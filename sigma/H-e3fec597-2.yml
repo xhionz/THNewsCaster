@@ -1,0 +1,13 @@
+title: ABAP Runtime Heap Overflow Indicators
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+description: Detects ABAP runtime logs containing keywords associated with heap overflow or stack smash
+logsource:
+  product: linux
+  service: syslog
+detection:
+  keywords:
+    - 'heap_overflow'
+    - 'stack_smash'
+    - 'invalid_function_pointer'
+    - 'segmentation_fault'
+  condition: keywords

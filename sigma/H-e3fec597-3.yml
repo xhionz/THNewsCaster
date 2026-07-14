@@ -1,0 +1,17 @@
+title: Suspicious Large ABAP HTTP Response with Sensitive Data Patterns
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+description: Detects HTTP responses >100KB from ABAP endpoints containing patterns of sensitive data
+logsource:
+  product: linux
+  service: syslog
+detection:
+  keywords:
+    - 'SSN:'
+    - 'IBAN:'
+    - 'PAYROLL_ID:'
+  response_bytes:
+    - '>100000'
+  url_path:
+    - '/sap/bc/abap/'
+  condition: url_path and response_bytes and (keywords)
+  timeframe: 14d

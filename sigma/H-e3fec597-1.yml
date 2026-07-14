@@ -1,0 +1,14 @@
+title: Suspicious ABAP HTTP Request Triggering CVE-2020-6287
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+description: Detects HTTP requests to ABAP endpoints with oversized content-length and octet-stream content-type indicative of CVE-2020-6287 exploitation
+logsource:
+  product: linux
+  service: syslog
+detection:
+  keywords:
+    - '/sap/bc/abap/'
+  content_length:
+    - '>10000'
+  content_type:
+    - 'application/octet-stream'
+  condition: keywords and content_length and content_type
