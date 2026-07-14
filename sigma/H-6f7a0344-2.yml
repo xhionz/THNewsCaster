@@ -1,0 +1,17 @@
+title: ServiceNow Attachment Exfiltration Attempt
+logsource:
+  product: servicenow
+  service: rest_api
+detection:
+  selection:
+    method: 'GET'
+    endpoint: '/sys_attachment.do'
+    query: 'sys_id=*
+    response_size: '>1000000'
+    user_agent: 'curl'
+  condition: selection
+fields:
+  - method
+  - endpoint
+  - response_size
+  - user_agent

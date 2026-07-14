@@ -1,0 +1,17 @@
+title: ServiceNow Pre-Auth RCE Exploit Attempt
+logsource:
+  product: servicenow
+  service: rest_api
+detection:
+  selection:
+    method: 'POST'
+    endpoint: '/api/now/table/'
+    status_code: 200
+    user_agent: 'curl'
+    request_size: '>10000'
+  condition: selection
+fields:
+  - user_agent
+  - endpoint
+  - status_code
+  - request_size
