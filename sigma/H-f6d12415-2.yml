@@ -1,0 +1,12 @@
+title: Suspicious AD FS Token Requests with Unusual Claims
+logsource:
+  product: windows
+  service: adfs
+detection:
+  selection:
+    EventID: 364
+    ClaimType: 'http://schemas.microsoft.com/claims/authnmethodsreferences'
+    ClaimValue: 'http://schemas.microsoft.com/ws/2008/06/identity/claims/anonymous'
+  condition: selection
+fields: [User, ClientIP, ClaimType, ClaimValue]
+level: critical

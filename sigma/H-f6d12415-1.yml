@@ -1,0 +1,14 @@
+title: Suspicious Requests to SonicWall SMA1000 Admin Endpoints
+logsource:
+  product: firewall
+  service: sonicwall_sma1000
+detection:
+  selection:
+    uri: 
+      - '/servlet/ICSServlet'
+      - '/servlet/ICSServlet?cmd=exec'
+      - '/servlet/ICSServlet?cmd=system'
+    method: 'POST'
+  condition: selection
+fields: [uri, src_ip, dst_ip, user_agent]
+level: high

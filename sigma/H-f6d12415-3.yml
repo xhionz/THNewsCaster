@@ -1,0 +1,16 @@
+title: Unauthenticated Access to SharePoint Critical Endpoints
+logsource:
+  product: iis
+  service: sharepoint
+detection:
+  selection:
+    uri: 
+      - '/_vti_bin/listdata.svc'
+      - '/_layouts/15/authenticate.aspx'
+      - '/_vti_bin/client.svc'
+    status_code: 200
+    user_agent: '-'
+    auth_type: 'Anonymous'
+  condition: selection
+fields: [uri, src_ip, status_code, user_agent]
+level: critical
