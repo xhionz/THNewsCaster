@@ -1,0 +1,15 @@
+title: SharePoint Webshell Deployment via CVE-2026-56164
+logsource:
+  product: windows
+  service: iis
+condition: 'cs-uri-stem contains "/_catalogs/masterpage/" and cs-uri-stem contains ".aspx" and cs-method = "PUT" and cs-status = 201'
+detection:
+  keywords:
+    - "/_catalogs/masterpage/"
+    - ".aspx"
+    - "PUT"
+  condition: 'all of them'
+fields:
+  - cs-uri-stem
+  - cs-method
+  - cs-status

@@ -1,0 +1,16 @@
+title: Suspicious SharePoint Authentication Bypass Attempt
+logsource:
+  product: windows
+  service: iis
+condition: 'cs-uri-stem contains "/_layouts/15/" and cs-method = "POST" and cs-uri-query contains "auth" and cs-status = 200 and cs(User-Agent) contains "Mozilla" and not cs(User-Agent) contains "Windows NT"'
+detection:
+  keywords:
+    - "_layouts/15/"
+    - "auth"
+    - "__VIEWSTATE"
+  condition: 'all of them'
+fields:
+  - cs-uri-stem
+  - cs-method
+  - cs-status
+  - cs(User-Agent)

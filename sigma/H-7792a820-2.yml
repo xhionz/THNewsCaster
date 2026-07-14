@@ -1,0 +1,16 @@
+title: ADFS Exploitation via CVE-2026-56155
+logsource:
+  product: windows
+  service: iis
+condition: 'cs-uri-stem contains "/adfs/ls/" and cs-method = "POST" and cs-status = 200 and cs(User-Agent) contains "curl" or cs(User-Agent) contains "python-requests"'
+detection:
+  keywords:
+    - "/adfs/ls/"
+    - "wa=wsignin1.0"
+    - "wtrealm="
+  condition: 'all of them'
+fields:
+  - cs-uri-stem
+  - cs-method
+  - cs-status
+  - cs(User-Agent)
