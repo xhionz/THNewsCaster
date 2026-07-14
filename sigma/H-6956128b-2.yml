@@ -1,0 +1,9 @@
+title: SMA1000 Command Injection via Web UI
+logsource:
+  product: sonicwall_sma1000
+  service: web_access
+detection:
+  selection:
+    uri: "/dana-na/auth/url_default/login.cgi" | "/dana-na/" | "/dana-na/" | "/dana-na/" | "/dana-na/"
+    query: "cmd=" | "exec=" | "shell=" | ";" | "&&" | "|" | "`" | "$("
+  condition: selection

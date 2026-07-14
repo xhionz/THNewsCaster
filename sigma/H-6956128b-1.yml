@@ -1,0 +1,10 @@
+title: SMA1000 Path Traversal Exploit Attempt
+logsource:
+  product: sonicwall_sma1000
+  service: web_access
+detection:
+  selection:
+    uri: "/dana-na/auth/url_default/login.cgi"
+    method: "POST"
+    uri_pattern: "../" | "..\\" | "%2e%2e/" | "..%2f"
+  condition: selection

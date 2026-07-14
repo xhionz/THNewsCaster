@@ -1,0 +1,11 @@
+title: SMB Brute-Force from SMA1000 IP
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+    SourceNetworkAddress: {{ sma1000_ips }}
+    AccountName: 'Administrator' | 'guest' | 'admin'
+    Status: '0xc000006d'
+  condition: selection
