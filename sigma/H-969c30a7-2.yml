@@ -1,0 +1,14 @@
+title: Detection of SharePoint RCE via Unusual PowerShell Execution in w3wp.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - '*\w3wp.exe'
+  CommandLine:
+    - '*powershell* -enc*'
+    - '*powershell* -nop* -c*'
+    - '*[System.Reflection.Assembly]::Load*'
+  ParentImage:
+    - '*\w3wp.exe'
+condition: all

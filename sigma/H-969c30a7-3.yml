@@ -1,0 +1,13 @@
+title: Detection of BitLocker Recovery Key Extraction via PowerShell or WMI
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4688
+  CommandLine:
+    - '*manage-bde.exe* -protectors* -get*'
+    - '*Get-BitLockerVolume*'
+    - '*Get-WmiObject* -Class Win32_EncryptableVolume*'
+    - '*Get-ItemProperty* -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\BitLocker*'
+condition: any

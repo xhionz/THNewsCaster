@@ -1,0 +1,14 @@
+title: Detection of Golden Ticket Usage via Ticket Validation Anomalies
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4769
+  TicketOptions:
+    - '0x40810000'
+  ServiceName:
+    - 'krbtgt'
+  TicketEncryptionType:
+    - '0x17'
+condition: all
