@@ -1,0 +1,11 @@
+title: External DNS Queries to Rockwell Support from ICS Devices
+logsource:
+  product: dns
+  service: udp
+detection:
+  selection:
+    query: '*support.rockwellautomation.com*' OR '*www.rockwellautomation.com*'
+    src.ip: 'ICS_network_ranges'
+    dst.ip: '!10.0.0.0/8, !172.16.0.0/12, !192.168.0.0/16'
+  condition: selection
+  timeframe: 24h

@@ -1,0 +1,10 @@
+title: Detect Large HTTP Exfiltration from ShareFile Server
+logsource:
+  product: http
+  service: httpd
+detection:
+  uri: 
+    - uri|contains: '/api/v1/files/'
+  response_bytes|gt: 100000000
+  dest_ip|not: '10.0.0.0/8'
+condition: uri and response_bytes|gt: 100000000 and dest_ip|not: '10.0.0.0/8'

@@ -1,0 +1,11 @@
+title: ICS Protocol Scanning from 1715-AENTR
+logsource:
+  product: network
+  service: tcp
+detection:
+  selection:
+    src.ip: '1715-AENTR_IPs'
+    dst.port: [102, 502]
+    protocol: tcp
+  condition: selection
+  timeframe: 10m

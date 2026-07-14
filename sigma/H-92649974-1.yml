@@ -1,0 +1,10 @@
+title: Detect ShareFile Path Traversal via CVE-2024-21762
+logsource:
+  product: http
+  service: httpd
+detection:
+  req_uri:
+    - uri|contains: '../'
+    - uri|contains: '..\'
+  status: 200
+condition: req_uri

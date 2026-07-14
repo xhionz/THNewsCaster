@@ -1,0 +1,26 @@
+title: Internal Network Scanning from Compromised Host
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    comm:
+      - 'nmap'
+      - 'masscan'
+      - 'nc'
+      - 'netcat'
+    auid:
+      - '!= 0'
+    args:
+      - '-sS'
+      - '-p'
+      - '-sn'
+      - '192.168.'
+      - '10.'
+      - '172.16.'
+  condition: selection
+fields:
+  - comm
+  - auid
+  - args
+  - exe

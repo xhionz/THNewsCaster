@@ -1,0 +1,24 @@
+title: Container Escape via Kernel Exploit (Auditd)
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    comm:
+      - 'containerd-shim'
+      - 'runc'
+    auid:
+      - '!= 0'
+    exe:
+      - '*/containerd-shim'
+    parent:
+      - '*/dockerd'
+    message:
+      - 'execve.*uid=0'
+  condition: selection
+fields:
+  - comm
+  - exe
+  - auid
+  - parent
+  - message

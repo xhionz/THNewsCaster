@@ -1,0 +1,12 @@
+title: Unauthenticated CIP Debug Access on 1715-AENTR
+logsource:
+  product: network
+  service: tcp
+  definition: 'Port 44818 traffic'
+detection:
+  selection:
+    dst.port: 44818
+    protocol: tcp
+    payload: '0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00 0x00'
+  condition: selection
+  timeframe: 5m

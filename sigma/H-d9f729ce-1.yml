@@ -1,0 +1,16 @@
+title: Detection of Dirty Pipe Exploitation via File Write Anomalies
+logsource:
+  product: linux
+  service: kernel
+detection:
+  selection:
+    message:
+      - 'pipe:.*write to read-only file'
+      - 'audit:.*type=1326.*comm=".*".*exe=".*".*auid=.*uid=0'
+  condition: selection
+fields:
+  - comm
+  - exe
+  - auid
+  - uid
+  - message

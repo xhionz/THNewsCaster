@@ -1,0 +1,11 @@
+title: Detect LSASS Memory Access via Procdump or Mimikatz
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  process:
+    - Image|endswith: '\procdump.exe'
+    - Image|endswith: '\mimikatz.exe'
+    - Image|endswith: '\lsass.exe' and Parent_Image|endswith: '\svchost.exe'
+  CommandLine|contains: 'lsass'
+condition: process
