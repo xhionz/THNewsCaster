@@ -1,0 +1,16 @@
+title: Hypothetical Scheduled Task Creation via Cmd/PowerShell
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 4688
+    parent_process_name: 'cmd.exe' or parent_process_name: 'powershell.exe'
+    process_name: 'schtasks.exe'
+    command_line: '* /create *'
+  condition: selection
+fields:
+  - ParentProcessName
+  - ProcessName
+  - CommandLine
+  - User

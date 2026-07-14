@@ -1,0 +1,16 @@
+title: Hypothetical IIS RCE Web Shell Upload
+logsource:
+  product: iis
+detection:
+  selection:
+    cs-uri-stem:
+      - '/.aspx'
+      - '/.ashx'
+      - '/.asmx'
+    cs-method: 'POST'
+    sc-status: 200
+  condition: selection
+fields:
+  - cs-uri-stem
+  - cs-method
+  - sc-status

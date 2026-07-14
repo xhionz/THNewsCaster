@@ -1,0 +1,15 @@
+title: Hypothetical SMB Lateral Movement Detection
+logsource:
+  product: windows
+  service: smb
+detection:
+  selection:
+    EventID: 5145
+    share_name: '*\IPC$'
+    access_mask: '0x001f01ff'
+  condition: selection
+fields:
+  - EventID
+  - share_name
+  - access_mask
+  - subject_user_name
