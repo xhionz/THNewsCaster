@@ -1,0 +1,5 @@
+title: Service Account Token Usage from Unusual IP
+logsource:
+  product: windows
+  service: iis
+condition: 'request_uri contains "/graph.microsoft.com/" or request_uri contains "/api/v1.0/" and headers.Authorization contains "Bearer" and source_ip not in ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"] and user_agent contains "Microsoft Office" and timestamp > "2023-07-14T00:00:00Z" and timestamp < "2023-07-21T23:59:59Z"'

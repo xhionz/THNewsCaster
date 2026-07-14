@@ -1,0 +1,5 @@
+title: Public Internet Access to SharePoint Server
+logsource:
+  product: windows
+  service: iis
+condition: 'request_uri contains "/_api/" or request_uri contains "/_vti_bin/" and source_ip not in ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"] and status >= 200 and status < 400 and timestamp > "2023-07-14T00:00:00Z" and timestamp < "2023-07-21T23:59:59Z"'

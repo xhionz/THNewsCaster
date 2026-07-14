@@ -1,0 +1,5 @@
+title: Suspicious SharePoint Access Without Auth Header
+logsource:
+  product: windows
+  service: iis
+condition: 'request_uri contains "/_api/" or request_uri contains "/_vti_bin/" and not headers.Authorization contains "Bearer" and status >= 200 and status < 400 and user_agent !~ "^Mozilla/5.0.*" and time > "2023-07-14T00:00:00Z" and time < "2023-07-21T23:59:59Z"'

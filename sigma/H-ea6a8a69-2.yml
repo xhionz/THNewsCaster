@@ -1,0 +1,13 @@
+title: Suspicious App Registration by Non-IT User
+logsource:
+  product: microsoft_entra_id
+  service: auditlog
+detection:
+  selection:
+    operation_name: 'Register application'
+    result_type: '0'
+    user_principal_name: !('admin@company.com' 'it-team@company.com' 'service-account@company.com')
+    app_permissions: ['openid', 'profile', 'offline_access', 'User.Read', 'Mail.Read']
+  condition: selection
+  timeframe: 7d
+condition: selection

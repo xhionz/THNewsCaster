@@ -1,0 +1,12 @@
+title: Suspicious OAuth Token Request Without Prior Sign-In
+logsource:
+  product: microsoft_entra_id
+  service: oauth2tokenrequest
+detection:
+  selection:
+    token_endpoint_auth_method: 'authorization_code'
+    status_code: 200
+    grant_type: 'authorization_code'
+  condition: selection
+  timeframe: 7d
+condition: selection
