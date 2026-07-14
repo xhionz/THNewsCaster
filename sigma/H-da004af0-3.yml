@@ -1,0 +1,16 @@
+title: Detect Deserialization Exploitation via Malformed ViewState or SOAP
+logsource:
+  product: iis
+  service: web
+condition: 'cs-uri-stem contains "/_layouts/" or cs-uri-stem contains "/_vti_bin/" and (cs-uri-query contains "__VIEWSTATE" or cs-uri-query contains "__VIEWSTATEGENERATOR" or cs-uri-query contains "<soap:Envelope" or cs-uri-query contains "<s:Envelope") and (cs-uri-query contains "rO0AB" or cs-uri-query contains "AAEAAAD" or cs-uri-query contains "<s:Body" and cs-method == "POST")'
+detection:
+  uri_paths:
+    - "/_layouts/"
+    - "/_vti_bin/"
+  viewstate_patterns:
+    - "rO0AB"
+    - "AAEAAAD"
+  soap_patterns:
+    - "<soap:Envelope"
+    - "<s:Envelope"
+  condition: uri_paths and (viewstate_patterns or soap_patterns)

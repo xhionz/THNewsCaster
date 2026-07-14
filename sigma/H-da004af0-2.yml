@@ -1,0 +1,15 @@
+title: Detect AMSI Bypass via PowerShell Execution in w3wp.exe
+logsource:
+  product: windows
+  service: sysmon
+condition: 'event_id:1 and process_name:w3wp.exe and (command_line:*.ps1* or command_line:*-enc* or command_line:*-e* or command_line:*Invoke-Expression* or command_line:*IEX*) and not (command_line:*-NoProfile* or command_line:*-NonInteractive*)'
+detection:
+  process:
+    - w3wp.exe
+  command_line_keywords:
+    - "-enc"
+    - "-e"
+    - "Invoke-Expression"
+    - "IEX"
+    - ".ps1"
+  condition: process and command_line_keywords

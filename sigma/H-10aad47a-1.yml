@@ -1,0 +1,15 @@
+title: Detection of PowerShell Execution via AD FS w3wp.exe
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    Image: '*\w3wp.exe'
+    CommandLine: '*powershell*'
+    ParentImage: '*\inetinfo.exe' OR ParentImage: '*\w3wp.exe'
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+  - ParentImage

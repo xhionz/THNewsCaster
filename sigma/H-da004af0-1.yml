@@ -1,0 +1,12 @@
+title: Detect Suspicious ASP.NET Web Shell Payloads
+logsource:
+  product: iis
+  service: web
+condition: 'cs-uri-stem endswith ".aspx" or cs-uri-stem endswith ".ashx" or cs-uri-stem endswith ".asmx" and (cs-uri-query contains "<%" or cs-uri-query contains "Response.Write" or cs-uri-query contains "Execute" or cs-uri-query contains "System.Diagnostics.Process.Start") and cs-method == "POST" and cs-status == 200
+detection:
+  keywords:
+    - "<%"
+    - "Response.Write"
+    - "Execute"
+    - "System.Diagnostics.Process.Start"
+  condition: keywords

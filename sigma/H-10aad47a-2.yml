@@ -1,0 +1,19 @@
+title: Detection of LSASS Memory Access via RDP on SharePoint Servers
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    Image: '*\lsass.exe'
+    CommandLine: '*-p *'
+    ParentImage: '*\mstsc.exe'
+    AccountName: '*'
+    SourceNetworkAddress: '*'
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+  - AccountName
+  - SourceNetworkAddress
