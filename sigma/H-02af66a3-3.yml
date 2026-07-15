@@ -1,0 +1,18 @@
+title: Ransomware File Encryption Detected from SMA1000 Network
+logsource:
+  product: windows
+  service: file_system
+condition: 'event_type == "file_encrypted" AND src_ip IN ["192.168.1.10", "192.168.1.11", "192.168.1.12"]'
+detection:
+  file_extension:
+    - ".locked"
+    - ".crypt"
+    - ".encrypt"
+    - ".ransom"
+  process_name:
+    - "svchost.exe"
+    - "explorer.exe"
+  src_ip:
+    - "192.168.1.10"
+    - "192.168.1.11"
+    - "192.168.1.12"

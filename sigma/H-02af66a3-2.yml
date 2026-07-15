@@ -1,0 +1,13 @@
+title: Anonymous Authentication to SMA1000 Admin Interface
+logsource:
+  product: sonicwall_sma
+  service: http
+condition: 'auth_method == "anonymous" AND auth_status == "success"'
+detection:
+  auth_method:
+    - "anonymous"
+  auth_status:
+    - "success"
+  request_uri:
+    - "/admin/"
+    - "/api/v1/admin/"

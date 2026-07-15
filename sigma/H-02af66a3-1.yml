@@ -1,0 +1,9 @@
+title: Suspicious Path Traversal in SMA1000 API
+logsource:
+  product: sonicwall_sma
+  service: http
+condition: 'request_uri contains "/api/v1/" and request_uri contains "../"'
+detection:
+  request_uri:
+    - "/api/v1/.*\.{2}/"
+  event_type: "access"
