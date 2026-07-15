@@ -1,0 +1,19 @@
+title: Web Shell Upload on SMA1000 Web Root
+logsource:
+  product: sonicwall_sma
+  service: http
+condition: 'request_uri contains "/.php" or request_uri contains "/.jsp" or request_uri contains "/.aspx" and method = "POST" and source_ip != "<SMA1000_IP>" and content_length > 500 and user_agent !~ "SonicWall.*"'
+detection:
+  request_uri:
+    - ".php"
+    - ".jsp"
+    - ".aspx"
+  method:
+    - "POST"
+  source_ip:
+    - "<SMA1000_IP>"
+  content_length:
+    - ">500"
+  user_agent:
+    - "*"
+  condition: all of them

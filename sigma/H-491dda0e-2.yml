@@ -1,0 +1,15 @@
+title: Lateral Movement via RDP/WinRM from SMA1000
+logsource:
+  product: windows
+  service: security
+condition: 'event_id IN [4624, 4625] AND logon_type IN [10, 3] AND source_network_address = "<SMA1000_IP>"'
+detection:
+  event_id:
+    - 4624
+    - 4625
+  logon_type:
+    - 10
+    - 3
+  source_network_address:
+    - "<SMA1000_IP>"
+  condition: all of them

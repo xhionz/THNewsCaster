@@ -1,0 +1,16 @@
+title: SSRF Exploitation via CVE-2026-15409 on SMA1000
+logsource:
+  product: sonicwall_sma
+  service: http
+condition: 'request_uri contains "/api/" or request_uri contains "/rest/" or request_uri contains "/admin/" and source_ip != "<SMA1000_IP>" and status_code == 200 and user_agent !~ "SonicWall.*" and not (request_uri contains "/login" or request_uri contains "/logout")
+detection:
+  request_uri:
+    - "/api/"
+    - "/rest/"
+    - "/admin/"
+  source_ip:
+    - "<SMA1000_IP>"
+  status_code: 200
+  user_agent:
+    - "*"
+  condition: all of them
