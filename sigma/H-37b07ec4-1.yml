@@ -1,0 +1,10 @@
+title: Suspicious KNX Auth Option1 Bypass Attempt
+logsource:
+  product: knx
+  service: protocol
+condition: 'knx.auth.mode: option1' and 'knx.auth.attempts > 5' and 'knx.auth.lockout_bypassed: true'
+detection:
+  knx.auth.mode: option1
+  knx.auth.attempts: '>5'
+  knx.auth.lockout_bypassed: true
+condition: all

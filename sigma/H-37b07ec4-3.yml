@@ -1,0 +1,8 @@
+title: Suspicious Email with .js/.vbs/.exe Attachment
+logsource:
+  product: email_gateway
+condition: 'attachment_name endswith ".js" or attachment_name endswith ".vbs" or attachment_name endswith ".exe"' and 'sender_domain in ["gmail.com", "outlook.com", "hotmail.com"]'
+detection:
+  attachment_name: '*.js' or '*.vbs' or '*.exe'
+  sender_domain: 'gmail.com' or 'outlook.com' or 'hotmail.com'
+condition: all

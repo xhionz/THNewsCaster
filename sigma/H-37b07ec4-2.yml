@@ -1,0 +1,10 @@
+title: Suspicious Oracle EBS Privilege Escalation via _mode/_priv
+logsource:
+  product: oracle_ebs
+  service: web_server
+condition: 'request_uri contains "_mode="' and 'request_uri contains "_priv="' and 'status_code == 200' and 'user_agent contains "curl"'
+detection:
+  request_uri: '*_mode=*' and '*_priv=*'
+  status_code: 200
+  user_agent: 'curl'
+condition: all
