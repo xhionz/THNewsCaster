@@ -1,0 +1,12 @@
+title: Detect Suspicious PowerShell Execution with Network Connections
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image|endswith: '\powershell.exe'
+    CommandLine|contains: 'Invoke-Expression' OR 'DownloadFile' OR 'ConvertTo-SecureString' OR 'Get-ADUser' OR 'net use'
+    ParentImage|endswith: '\cmd.exe' OR '\wscript.exe' OR '\svchost.exe'
+  condition: selection
+fields: [Image, CommandLine, ParentImage, ProcessId, User]
+level: high

@@ -1,0 +1,18 @@
+title: Detect CVE-2021-26855 SSRF Proxy Requests in IIS Logs
+logsource:
+  product: iis
+detection:
+  selection:
+    cs-uri-stem|contains:
+      - '/ecp/default.aspx'
+      - '/owa/auth.owa'
+      - '/powershell'
+    cs-uri-query|contains:
+      - 'http://10.'
+      - 'http://172.'
+      - 'http://192.'
+      - 'http://127.0.0.1'
+      - 'http://localhost'
+  condition: selection
+fields: [cs-uri-stem, cs-uri-query, c-ip, cs(User-Agent)]
+level: high

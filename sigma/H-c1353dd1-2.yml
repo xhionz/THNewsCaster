@@ -1,0 +1,12 @@
+title: Detect Suspicious SharePoint Login Patterns from Malicious IPs
+logsource:
+  product: office365
+  service: auditlog
+detection:
+  selection:
+    Operation: 'UserLoggedIn'
+    ResultStatus: 'Success'
+    ClientIP: '185.143.221.12' OR '194.180.123.45' OR '104.248.102.77'
+  condition: selection
+fields: [UserId, ClientIP, Operation, ResultStatus, CreationTime]
+level: high
