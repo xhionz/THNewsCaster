@@ -1,0 +1,9 @@
+title: Detection of CVE-2024-21762 Exploitation via Author.dll
+logsource:
+  product: iis
+  service: http
+condition: 'cs-uri-stem contains "_vti_bin/_vti_aut/author.dll" or cs-uri-stem contains "_vti_bin/_vti_adm/admin.dll"'
+detection:
+  author_dll: 'cs-uri-stem contains "_vti_bin/_vti_aut/author.dll"'
+  admin_dll: 'cs-uri-stem contains "_vti_bin/_vti_adm/admin.dll"'
+condition: author_dll or admin_dll

@@ -1,0 +1,12 @@
+title: Suspicious NTLM Relay from SharePoint Server to DC
+logsource:
+  product: windows
+  service: security
+condition: 'EventID: 4624 AND Authentication_Package: NTLM AND Target_Server_Name contains "DC" AND Logon_Type: 3 AND Source_Account_Name contains "SHAREPOINT"'
+detection:
+  event_id: 'EventID: 4624'
+  auth_package: 'Authentication_Package: NTLM'
+  logon_type: 'Logon_Type: 3'
+  target_dc: 'Target_Server_Name contains "DC"'
+  source_sp: 'Target_User_Name contains "SHAREPOINT"'
+condition: event_id and auth_package and logon_type and target_dc and source_sp

@@ -1,0 +1,11 @@
+title: Suspicious Outbound HTTPS from SharePoint Server to External Domain
+logsource:
+  product: firewall
+  service: traffic
+condition: 'dest_ip not in (trusted_internal_ranges) AND dest_port: 443 AND source_ip in (sharepoint_server_ips) AND user_agent contains "SharePoint"'
+detection:
+  source_sp: 'source_ip in ("10.10.10.10", "10.10.10.11", "10.10.10.12")'
+  dest_external: 'dest_ip not in ("10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16")'
+  port_443: 'dest_port: 443'
+  useragent_sp: 'user_agent contains "SharePoint"'
+condition: source_sp and dest_external and port_443 and useragent_sp
