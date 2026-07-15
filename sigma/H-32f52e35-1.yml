@@ -1,0 +1,19 @@
+title: Detection of Suspicious Print Spooler DLL Hijacking
+logsource:
+  product: windows
+  service: spooler
+detection:
+  selection1:
+    EventID: 4688
+    CommandLine: '*\rundll32.exe*printui.dll,PrintUIEntry*'
+  selection2:
+    EventID: 4688
+    ParentImage: '*\spoolsv.exe'
+    Image: '*\*.dll'
+    CommandLine: '*\*.dll'
+  condition: selection1 or selection2
+  keywords:
+    - 'printui.dll'
+    - 'spoolsv.exe'
+    - '.dll'
+level: high

@@ -1,0 +1,22 @@
+title: Detection of Suspicious Scheduled Task Creation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 4698
+    UserName: '*'
+    TaskName: '*'
+    RunLevel: 'HighestAvailable'
+  selection2:
+    EventID: 4698
+    UserName: '*'
+    TaskName: '*'
+    Command: '*powershell.exe*' OR '*cmd.exe*' OR '*certutil*' OR '*bitsadmin*'
+  condition: selection1 and selection2
+  keywords:
+    - 'ScheduledTask'
+    - 'TaskName'
+    - 'powershell.exe'
+    - 'cmd.exe'
+level: high

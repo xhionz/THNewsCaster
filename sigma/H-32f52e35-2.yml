@@ -1,0 +1,14 @@
+title: Detection of Unusual SMB Lateral Movement to Domain Controllers
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+    TargetUserName: '*'
+    TargetDomainName: 'DOMAIN'
+    IpAddress: '*'
+    LogonProcessName: 'Svchost'
+  condition: selection and TargetUserName in ('Administrator', 'krbtgt', 'Domain Admins') and IpAddress not in ('192.168.1.10', '192.168.1.20') and TimeGenerated > '2026-07-12T00:00:00Z' and TimeGenerated < '2026-07-15T23:59:59Z'
+level: high
