@@ -1,0 +1,25 @@
+title: Suspicious RegLoadKey on User Hive
+logsource:
+  product: windows
+  service: registry
+detection:
+  Selection:
+    EventID: 4657
+    RegistryKey: 'HKEY_USERS\\.*\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders'
+    RegistryValueName: 'AppData'
+    RegistryNewValue: '*\NTUSER.DAT'
+  Selection2:
+    EventID: 4657
+    RegistryKey: 'HKEY_USERS\\.*\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders'
+    RegistryValueName: 'Local AppData'
+    RegistryNewValue: '*\NTUSER.DAT'
+  Selection3:
+    EventID: 4657
+    RegistryKey: 'HKEY_USERS\\.*\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User Shell Folders'
+    RegistryValueName: 'Local AppData'
+    RegistryNewValue: '*\AppData\Local\Temp\*.dat'
+  Condition: 1 of Selection* OR Selection3
+fields:
+  - RegistryKey
+  - RegistryNewValue
+  - User

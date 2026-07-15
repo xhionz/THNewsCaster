@@ -1,0 +1,16 @@
+title: Suspicious ProfSvc ServiceDll Modification
+logsource:
+  product: windows
+  service: registry
+detection:
+  Selection:
+    EventID: 4657
+    RegistryKey: '.*\\SYSTEM\\CurrentControlSet\\Services\\ProfSvc\\ServiceDll'
+    RegistryValueName: 'ServiceDll'
+    RegistryValueType: 'REG_SZ'
+    RegistryNewValue: '*\*.dll'
+  Condition: Selection
+fields:
+  - RegistryKey
+  - RegistryNewValue
+  - User
