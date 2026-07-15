@@ -1,0 +1,13 @@
+title: Detect Suspicious WebSocket Upgrade to Localhost on SMA1000
+logsource:
+  product: network
+  category: proxy
+  definition: 'SMA1000 appliance traffic'
+detection:
+  selection:
+    http_method: 'GET'
+    uri_path: '/ws'
+    upgrade: 'websocket'
+    dest_ip: '127.0.0.1'
+    dest_port: 8188
+  condition: selection

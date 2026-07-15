@@ -1,0 +1,13 @@
+title: Detect Path Traversal in remove_hotfix Endpoint on SMA1000
+logsource:
+  product: webserver
+  category: proxy
+  definition: 'SMA1000 web traffic'
+detection:
+  selection:
+    http_method: 'GET'
+    uri_path: 
+      - '/remote/fgt_lang?lang=/../../../../*'
+      - '/remove_hotfix'
+    query: '*../../../../*'
+  condition: selection

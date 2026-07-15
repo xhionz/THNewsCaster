@@ -1,0 +1,11 @@
+title: Detect Unusual Outbound SMB/LDAP Traffic from SMA1000
+logsource:
+  product: network
+  category: netflow
+detection:
+  selection:
+    src_ip: '192.168.1.46'
+    dest_port: [445, 389, 636]
+    event.action: 'connection-established'
+    dest_ip: '192.168.0.0/16'
+  condition: selection
