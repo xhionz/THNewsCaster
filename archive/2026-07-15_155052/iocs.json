@@ -1,0 +1,4453 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-58647",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58644",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58640",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58638",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58637",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58636",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58635",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58634",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58633",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58632",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58631",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58629",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58628",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58627",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58626",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58619",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58618",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58617",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58614",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58613",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58610",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58609",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58608",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58602",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58601",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58595",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58594",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58547",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58546",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58545",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58544",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58543",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58542",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58541",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58540",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58539",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58538",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58537",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58536",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58535",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58534",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58533",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58532",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58531",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58530",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58529",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58528",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58527",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58526",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58279",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-58277",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57982",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57979",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57976",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57973",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57969",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57968",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57108",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57107",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57102",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57101",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57097",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57096",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57095",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57094",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57093",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57092",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57091",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57090",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57089",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57088",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57087",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57085",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57084",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-57083",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56650",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56649",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56648",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56647",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56644",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56643",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56642",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56290",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-56197",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56196",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56195",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56194",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56193",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56192",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56190",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56189",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56188",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56187",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56186",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56185",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56184",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56183",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56182",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56181",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56178",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56176",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56175",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56173",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56170",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56169",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56168",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56164",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56159",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56157",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56156",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-56155",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55949",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55948",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55947",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55944",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55899",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55898",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55255",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-55145",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55144",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55142",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55141",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55140",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55139",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55138",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55137",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55136",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55135",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55134",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55133",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55132",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55131",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55130",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55129",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55128",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55127",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55126",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55125",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55124",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55123",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55122",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55121",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55120",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55058",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55057",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55056",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55055",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55054",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55053",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55052",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55051",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55050",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55049",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55048",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55047",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55046",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55045",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55044",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55043",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55042",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55041",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55040",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026",
+        "https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed"
+      ]
+    },
+    {
+      "value": "CVE-2026-55039",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55038",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55037",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55036",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55035",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55034",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55033",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55032",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55031",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55030",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55029",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55028",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55027",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55026",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55025",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55024",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55023",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55022",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55021",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55020",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55019",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55018",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55017",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55016",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55014",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55012",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55011",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55010",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55009",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55008",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55006",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55005",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55004",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55003",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55002",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55001",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-55000",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54999",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54997",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54996",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54995",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54993",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54992",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54991",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54990",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54989",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54988",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54987",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54986",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54983",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54982",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54132",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54131",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54129",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54128",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54127",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54126",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54125",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54124",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54122",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54121",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54119",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54118",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54117",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54116",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54115",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54114",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54112",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54111",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54109",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54108",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-54107",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-53359",
+      "sources": [
+        "https://thehackernews.com/2026/07/16-year-old-linux-kvm-flaw-lets-guest.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-50746",
+      "sources": [
+        "https://thehackernews.com/2026/07/ubiquiti-patches-critical-unifi-flaws.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-50697",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50696",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50695",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50694",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50692",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50690",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50689",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50688",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50687",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50686",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50685",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50684",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50683",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50682",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50681",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50680",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50679",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50678",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50677",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50676",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50675",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50674",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50673",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50672",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50670",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50669",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50668",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50667",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50666",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50665",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50663",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50661",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50659",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50658",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50657",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50656",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50655",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50653",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50652",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50651",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50650",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50649",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50648",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50647",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50646",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50528",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50527",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50526",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50525",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50524",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50522",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50520",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50518",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50510",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50509",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50506",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50505",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50504",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50503",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50502",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50501",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50500",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50499",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50498",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50497",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50496",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50495",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50494",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50493",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50492",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50491",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50490",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50489",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50488",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50487",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50486",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50485",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50484",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50483",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50482",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50480",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50479",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50478",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50477",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50476",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50475",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50474",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50473",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50471",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50470",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50469",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50468",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50467",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50466",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50465",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50463",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50462",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50461",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50460",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50459",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50458",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50457",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50456",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50455",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50454",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50453",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50452",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50451",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50450",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50449",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50448",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50447",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50445",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50444",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50442",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50441",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50440",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50439",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50438",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50437",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50436",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50435",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50434",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50433",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50432",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50431",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50430",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50429",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50428",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50427",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50426",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50425",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50424",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50423",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50422",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50421",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50420",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50419",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50418",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50417",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50416",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50415",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50414",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50413",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50412",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50411",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50410",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50409",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50408",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50407",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50406",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50405",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50404",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50403",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50402",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50401",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50400",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50399",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50398",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50397",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50396",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50394",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50393",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50392",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50391",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50390",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50389",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50388",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50387",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50386",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50385",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50384",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50383",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50382",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50381",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50380",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50379",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50378",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50377",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50376",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50375",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50374",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50373",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50372",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50371",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50370",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50369",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50368",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50367",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50366",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50365",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50364",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50363",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50362",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50361",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50360",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50359",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50358",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50357",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50356",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50355",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50354",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50353",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50352",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50351",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50350",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50348",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50347",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50346",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50345",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50344",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50343",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50342",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50341",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50340",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50339",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50338",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50337",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50336",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50335",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50334",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50333",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50332",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50331",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50330",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50329",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50328",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50327",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50326",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50325",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50324",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50323",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50322",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50321",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50318",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50317",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50316",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50315",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50314",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50313",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50312",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50311",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50310",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50309",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50308",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50307",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50306",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50305",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50304",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50303",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50302",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50301",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50300",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50299",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50298",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50297",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50296",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50295",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50294",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-50293",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49808",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49807",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49806",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49805",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49804",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49803",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49802",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49801",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49800",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49799",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49798",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49797",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49796",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49795",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49794",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49793",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49792",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49791",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49790",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49789",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49788",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49787",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49784",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49783",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49184",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49183",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49181",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49180",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49178",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49177",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49176",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49175",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49174",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49173",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49172",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49171",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49170",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49169",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49168",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49167",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49166",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49165",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49164",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-49162",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48939",
+      "sources": [
+        "https://thehackernews.com/2026/07/icagenda-and-balbooa-forms-joomla-flaws.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-48908",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/07/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-48581",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48580",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48572",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48571",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48564",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48561",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-48282",
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/max-severity-adobe-coldfusion-flaw-now-exploited-in-attacks/",
+        "https://www.securityweek.com/critical-adobe-coldfusion-vulnerability-exploited-in-attacks/"
+      ]
+    },
+    {
+      "value": "CVE-2026-47642",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47632",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47305",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47304",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47303",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47302",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47300",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47296",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47295",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47291",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1uuh80d/cve202647291_windows_critical_unauthenticated/"
+      ]
+    },
+    {
+      "value": "CVE-2026-47290",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-47282",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-46242",
+      "sources": [
+        "https://thehackernews.com/2026/07/new-bad-epoll-linux-kernel-flaw-lets.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-45659",
+      "sources": [
+        "https://thehackernews.com/2026/07/sharepoint-rce-cve-2026-45659-added-to.html",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "https://www.securityweek.com/cisa-warns-of-actively-exploited-microsoft-sharepoint-vulnerability/"
+      ]
+    },
+    {
+      "value": "CVE-2026-45646",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-45496",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-44806",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-44800",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-44747",
+      "sources": [
+        "https://thehackernews.com/2026/07/sap-patches-cvss-99-netweaver-abap-flaw.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-43499",
+      "sources": [
+        "https://thehackernews.com/2026/07/15-year-old-ghostlock-flaw-enables-root.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-42990",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-42982",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-42975",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-42900",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-41918",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-41109",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-41087",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40553",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40469",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40468",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40467",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40422",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40400",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-40378",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-35535",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-34349",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-34348",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-34346",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-34328",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-33842",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-32201",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations"
+      ]
+    },
+    {
+      "value": "CVE-2026-31431",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-26158",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-26157",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-25210",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-24515",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23238",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23236",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23231",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23230",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23229",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23228",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23222",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23220",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23112",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23111",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23038",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23037",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23033",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23032",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23031",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23030",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23026",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-23025",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-22977",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-22976",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-22610",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-20896",
+      "sources": [
+        "https://thehackernews.com/2026/07/threat-actors-probe-gitea-docker-flaw.html",
+        "https://www.securityweek.com/critical-gitea-flaw-under-active-exploitation-researchers-warn/"
+      ]
+    },
+    {
+      "value": "CVE-2026-15410",
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/sonicwall-issues-urgent-sma-patch-warning-for-two-zero-day-exploits/"
+      ]
+    },
+    {
+      "value": "CVE-2026-15409",
+      "sources": [
+        "https://thehackernews.com/2026/07/two-sonicwall-sma-1000-zero-days.html",
+        "https://www.bleepingcomputer.com/news/security/sonicwall-warns-of-sma1000-flaws-exploited-in-zero-day-attacks-patch-now/",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/sonicwall-issues-urgent-sma-patch-warning-for-two-zero-day-exploits/"
+      ]
+    },
+    {
+      "value": "CVE-2026-13862",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154"
+      ]
+    },
+    {
+      "value": "CVE-2026-10577",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-3784",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-1489",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-1484",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-71191",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-71190",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-71189",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-71188",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-71186",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-71185",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-69720",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-66412",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-66382",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-66035",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-60876",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-49796",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-49795",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-49794",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-46394",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40345",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40281",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40280",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40278",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40271",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40264",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40263",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40262",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40261",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40258",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40257",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40254",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40252",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40251",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40250",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40248",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-40214",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-39913",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-13601",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-13465",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-10966",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-9232",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-9231",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-9230",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-9086",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-8732",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-7039",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-6170",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-6141",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-6052",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-5777",
+      "sources": [
+        "https://thehackernews.com/2026/07/ransomware-groups-turn-to-citrix-bleed.html",
+        "https://www.reddit.com/r/blueteamsec/comments/1un3saa/exploitation_of_citrixbleed_2_cve20255777_began/"
+      ]
+    },
+    {
+      "value": "CVE-2025-1376",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-1352",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-42009",
+      "sources": [
+        "https://thehackernews.com/2026/07/suspected-china-aligned-hackers-exploit.html"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "3.2.0.0",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02"
+      ]
+    },
+    {
+      "value": "3.2.4.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02"
+      ]
+    },
+    {
+      "value": "185.182.193.21",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "212.8.248.104",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "advisory.sd1785.html",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+      ]
+    },
+    {
+      "value": "asp.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "ci.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "cimfs.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "cisa.dhs.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations"
+      ]
+    },
+    {
+      "value": "cmd.result",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "cmd.task",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "contact-us.html",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+      ]
+    },
+    {
+      "value": "cwipe.pdb",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "cwipenew.pdb",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "data.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "domain.local",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-cve-2026-55040-microsoft-sharepoint-jwt-token-authentication-bypass-fixed"
+      ]
+    },
+    {
+      "value": "elixir.bootlin.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "http.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026",
+        "https://www.reddit.com/r/netsec/comments/1uuh80d/cve202647291_windows_critical_unauthenticated/"
+      ]
+    },
+    {
+      "value": "ipnathlp.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154"
+      ]
+    },
+    {
+      "value": "key.txt",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "linuxtesting.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "main.findwindowsdrive",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "main.main",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "main.unallocatedrive",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "main.writerandtodrive",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "mc.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "os.chdir",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "os.remove",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "q.qlen",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "rand.read",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "rel-1.16.0-0-gd239552ce722-prebuilt.qemu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "rel-1.16.3-0-ga6ed6b701f0a-prebuilt.qemu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "rel-1.17.0-0-gb52ca86e094d-prebuilt.qemu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "req.sg",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154"
+      ]
+    },
+    {
+      "value": "security.evtx",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "skb2.cb",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "spaceport.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "srvnet.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "support.industry.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "support.rockwellautomation.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+      ]
+    },
+    {
+      "value": "suse.cz",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "unionfs.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "upnp.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33154",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-july-2026"
+      ]
+    },
+    {
+      "value": "web.config",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/07/14/cisa-urges-sharepoint-hardening-after-new-exploitations"
+      ]
+    },
+    {
+      "value": "wevutil.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+      ]
+    },
+    {
+      "value": "www.rockwellautomation.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-195-04"
+      ]
+    },
+    {
+      "value": "www.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "12c39f052f030a77c0cd531df86ad3477f46d1287b8b98b625d1dcf89385d721",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "3c30deb6556a94cfb84ae51798f4aecfae8c7358e55fdb321c5f2376579631cd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "440b5385d3838e3f6bc21220caa83b65cd5f3618daea676f271c3671650ce9a3",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "633d4cbd496b1094495da89a64f5e6c31a0f6d4d1488411db5b0cba1cfe42001",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "9706a192e2c1a1faaf0a521daf31c2af60ff4590e3f47bbb4abc227f42af0683",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "ce9ad5f6c12019f4aae5b189bd8ddf5bb09e75b06a0a587b25a855c65948c913",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "db41e0da7ab3305be8d9720769c6950b4dc1c1984ef857d3310eb873a0fc7674",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    },
+    {
+      "value": "f622ed85ef31ad4ab973f4e74524866fe1bb44f0965ad2b2ad796cd657a05bfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/07/09/gigawiper-anatomy-of-a-destructive-backdoor-assembled-from-multiple-malware/"
+      ]
+    }
+  ],
+  "sha1": [
+    {
+      "value": "2636426a091bd6c6f7f02e49ab20d4cdc6bfc753",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "8cc09ef94dcec767faa911515ce9e609c45db470",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    },
+    {
+      "value": "b16f441cca0a4841050e3215a9f120a6d8aea918",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-188-05"
+      ]
+    }
+  ],
+  "md5": []
+}
