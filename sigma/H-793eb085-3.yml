@@ -1,0 +1,12 @@
+title: Ransomware File Encryption Post-PrivEsc
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 11
+    Image: '*\svchost.exe'
+    TargetFilename: '*\*.encrypted' OR TargetFilename: '*\*.lock' OR TargetFilename: '*\*.crypt'
+    ParentImage: '*\svchost.exe'
+  condition: selection
+condition: selection

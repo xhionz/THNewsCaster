@@ -1,0 +1,12 @@
+title: Phishing Email with Office Macro Trigger
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\winword.exe' OR Image: '*\excel.exe' OR Image: '*\powerpnt.exe'
+    CommandLine: '*-Embedding*' OR CommandLine: '*-o*' OR CommandLine: '*-t*'
+    ParentImage: '*\outlook.exe' OR ParentImage: '*\iexplore.exe' OR ParentImage: '*\chrome.exe'
+  condition: selection
+condition: selection

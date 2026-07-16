@@ -1,0 +1,11 @@
+title: LegacyHive ProfSvc Registry Modification
+logsource:
+  product: windows
+  service: registry
+detection:
+  selection:
+    EventID: 4657
+    RegistryPath: 'HKLM\SYSTEM\CurrentControlSet\Services\ProfSvc\ImagePath'
+    NewValue: '*\*.dll'
+  condition: selection
+condition: selection
