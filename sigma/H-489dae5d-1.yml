@@ -1,0 +1,13 @@
+title: Suspicious Model.exe Execution via .sim File
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - '*\model.exe'
+  CommandLine: '*.sim'
+  ParentImage:
+    - '*\outlook.exe'
+    - '*\chrome.exe'
+    - '*\firefox.exe'
+condition: all of them

@@ -1,0 +1,14 @@
+title: Siman.exe spawning model.exe with suspicious parameters
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - '*\siman.exe'
+  CommandLine: '*.sim' OR '*.mod'
+  ParentImage:
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+  ChildImage:
+    - '*\model.exe'
+condition: all of them

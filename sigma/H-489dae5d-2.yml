@@ -1,0 +1,13 @@
+title: Malicious .mod File Triggering model.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - '*\model.exe'
+  CommandLine: '*.mod'
+  ParentImage:
+    - '*\explorer.exe'
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+condition: all of them
