@@ -1,0 +1,11 @@
+title: Detect Brute Force on Oracle EBS Login Page
+logsource:
+  product: webserver
+  service: apache
+condition: 'uri_path: "/fnd/servlet/fndlogin" and http_method: "POST" and count(src_ip) > 9 by src_ip within 10m'
+detection:
+  uri_path: "/fnd/servlet/fndlogin"
+  http_method: "POST"
+  count:
+    src_ip: 10
+  timeframe: 10m

@@ -1,0 +1,13 @@
+title: Detect CVE-2024-21762 Exploit Attempt in Oracle EBS
+logsource:
+  product: webserver
+  service: apache
+condition: 'uri_path: "/servlet/ords/fndxml/*" and http_method: "POST" and http_user_agent: "*Oracle*" or http_user_agent: "*curl*" or http_user_agent: "*wget*"'
+detection:
+  uri_path: "/servlet/ords/fndxml/*"
+  http_method: "POST"
+  http_user_agent:
+    - "*Oracle*"
+    - "*curl*"
+    - "*wget*"
+  timeframe: 10m

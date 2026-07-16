@@ -1,0 +1,16 @@
+title: Detect Suspicious Scheduled Task Creation on Oracle EBS Server
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4698 and (task_name contains 'Oracle' or task_name contains 'Update' or task_name contains 'Sync') and (action: 'Create' or 'Modify') and (user: 'SYSTEM' or user: 'NT AUTHORITY\SYSTEM')'
+detection:
+  event_id: 4698
+  task_name:
+    - '*Oracle*'
+    - '*Update*'
+    - '*Sync*'
+  user:
+    - 'SYSTEM'
+    - 'NT AUTHORITY\SYSTEM'
+  action: 'Create'
+timeframe: 1h
