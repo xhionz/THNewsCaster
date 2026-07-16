@@ -1,0 +1,5 @@
+title: Detection of Fortinet VPN-to-FortiSandbox Exploitation Chain
+logsource:
+  product: fortinet
+  service: fortigate
+condition: 'request_uri contains "/remote/login" and status_code == 200 and (user_agent contains "curl" or user_agent contains "python-requests") and dest_ip in fortisandbox_ip_list and timestamp >= '2026-07-01' and timestamp <= '2026-07-16'

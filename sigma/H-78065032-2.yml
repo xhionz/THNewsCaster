@@ -1,0 +1,5 @@
+title: Detection of SharePoint Deserialization Exploit (CVE-2026-58644)
+logsource:
+  product: microsoft_sharepoint
+  service: iis
+condition: 'request_uri contains "/_vti_bin/" or request_uri contains "/_layouts/" and (request_headers contains "__VIEWSTATE" or request_headers contains "__EVENTVALIDATION" or request_body contains "BinaryFormatter" or request_body contains "Type: System.") and status_code == 200

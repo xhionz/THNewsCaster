@@ -1,0 +1,5 @@
+title: Detection of FortiSandbox OS Command Injection via CVE-2026-25089/2026-39808
+logsource:
+  product: fortinet
+  service: fortsandbox
+condition: 'request_uri contains "/api/v1/" and (request_body contains "exec" or request_body contains "system(" or request_body contains "shell_exec" or request_body contains "popen") and status_code == 200
