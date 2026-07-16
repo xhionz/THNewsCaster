@@ -1,0 +1,12 @@
+title: Detection of CVE-2024-21762 Exploit Pattern
+logsource:
+  product: firewall
+  service: http
+detection:
+  selection:
+    http.request_uri: "/owa/auth/"
+    http.request_method: "POST"
+    http.response_status: 500
+    http.user_agent: "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)"
+  condition: all of them
+fields: [http.request_uri, http.response_status, http.user_agent]

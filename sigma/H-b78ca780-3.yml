@@ -1,0 +1,20 @@
+title: Detect Cobalt Strike Beacon DNS Tunneling via Suspicious Domains
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects DNS queries to known malicious domains associated with Cobalt Strike campaigns
+logsource:
+  product: windows
+  service: dns
+detection:
+  selection:
+    Query|contains:
+      - 'eorthopaedics.com'
+      - 'web-devtools.com'
+      - 'zynaris.io'
+      - 'sastoro.com'
+      - 'windowscreenrepairnearme.com'
+  condition: selection
+fields:
+  - Query
+  - SourceIP
+level: high

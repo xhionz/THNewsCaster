@@ -1,0 +1,12 @@
+title: Detection of RDP brute-force attempts from external IPs
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4625
+    LogonType: 10
+    IpAddress: "*"
+    AccountName: "*"
+  condition: selection
+fields: [IpAddress, AccountName, EventID]

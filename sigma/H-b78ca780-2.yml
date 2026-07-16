@@ -1,0 +1,16 @@
+title: Detect Remcos LSASS Dumping via Signed Binary
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects use of signed Windows binaries to dump LSASS memory, a common Remcos behavior
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image|endswith: \\rundll32.exe
+    CommandLine|contains: 'comsvcs.dll,MiniDump'
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+level: high

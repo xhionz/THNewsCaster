@@ -1,0 +1,13 @@
+title: Detection of PowerShell Execution from Suspicious Parent Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: "*\powershell.exe"
+    ParentImage: "*\outlook.exe"
+  selection2:
+    Image: "*\powershell.exe"
+    CommandLine: "*-e *" or "*-EncodedCommand *"
+  condition: 1 of selection*
+fields: [Image, ParentImage, CommandLine]

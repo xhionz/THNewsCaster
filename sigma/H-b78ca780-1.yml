@@ -1,0 +1,21 @@
+title: Detect Starland RAT Python Loader via pythonw.exe
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects execution of pythonw.exe with suspicious command-line patterns indicative of Starland RAT payload delivery
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image|endswith: \\pythonw.exe
+    CommandLine|contains:
+      - 'import requests'
+      - 'exec('
+      - 'eval('
+      - 'base64.b64decode('
+      - 'py.loader.agent'
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+level: high
