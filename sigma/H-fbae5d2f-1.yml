@@ -1,0 +1,11 @@
+title: Suspicious Device Code Consent with Scope/Client Mismatch
+logsource:
+  product: google_workspace
+  service: audit
+condition: 'event_name: "oauth2_consent" and parameters.prompt: "none" and parameters.client_id != parameters.device_code_client_id and parameters.scope != parameters.device_code_scope'
+detection:
+  event_name: 'oauth2_consent'
+  parameters.prompt: 'none'
+  parameters.client_id: '!= parameters.device_code_client_id'
+  parameters.scope: '!= parameters.device_code_scope'
+condition: all

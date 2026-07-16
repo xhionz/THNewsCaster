@@ -1,0 +1,11 @@
+title: Suspicious OAuth Consent via Spearphishing Link with prompt=none
+logsource:
+  product: google_workspace
+  service: audit
+condition: 'event_name: "oauth2_consent" and parameters.prompt: "none" and user_agent: "*Mozilla*" and ip_address NOT IN known_user_ip_ranges'
+detection:
+  event_name: 'oauth2_consent'
+  parameters.prompt: 'none'
+  user_agent: '*Mozilla*'
+  ip_address: 'NOT IN known_user_ip_ranges'
+condition: all

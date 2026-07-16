@@ -1,0 +1,14 @@
+title: Device Code Consent from External IP After Internal Device Code Issuance
+logsource:
+  product: google_workspace
+  service: audit
+condition: 'event_name: "device_code_issued" and ip_address IN internal_ip_ranges | join event_name: "oauth2_consent" and ip_address NOT IN internal_ip_ranges and parameters.prompt: "none" on device_code'
+detection:
+  device_code_issued:
+    event_name: 'device_code_issued'
+    ip_address: 'IN internal_ip_ranges'
+  oauth2_consent:
+    event_name: 'oauth2_consent'
+    ip_address: 'NOT IN internal_ip_ranges'
+    parameters.prompt: 'none'
+condition: all
