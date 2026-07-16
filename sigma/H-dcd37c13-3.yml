@@ -1,0 +1,5 @@
+title: VDI Client Exploitation for Lateral Movement
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 1 and process_name: zoomvdiclient.exe and (command_line: /connect= OR command_line: /host= OR command_line: /domain=) and (file_access: \Windows\System32\mstsc.exe OR file_access: \Windows\System32\smbclient.exe)'

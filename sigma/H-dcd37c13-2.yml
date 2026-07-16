@@ -1,0 +1,5 @@
+title: Suspicious Zoom SDK Token Access
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 1 and (process_name: zoomsdk.exe) and (command_line: /token= OR command_line: /auth= OR command_line: --api-key) and (file_write: *.token OR file_write: *.key OR file_write: *.json AND file_path: \AppData\Local\Zoom\)'

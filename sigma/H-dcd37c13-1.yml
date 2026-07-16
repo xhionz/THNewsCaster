@@ -1,0 +1,5 @@
+title: Detection of CVE-2026-53412 Exploitation Attempt
+logsource:
+  product: windows
+  service: application
+condition: 'event_id: 1 and (process_name: zoom.exe or process_name: zoomvdiclient.exe or process_name: zoomsdk.exe) and (command_line: /\*\*\* OR command_line: "--malformed" OR command_line: "--payload" OR command_line: "-u http://*.evil.com/*")
