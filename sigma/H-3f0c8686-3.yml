@@ -1,0 +1,19 @@
+title: Ransomware Scheduled Task Created from SMA
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects creation of scheduled tasks with suspicious names from manufacturing hosts after SMB connection from SMA
+logsource:
+  product: windows
+  service: security
+detection:
+  task_creation:
+    event_id: 4698
+    task_name|contains: ['update', 'patch', 'backup', 'syscheck']
+  from_sma:
+    parent_process_name: 'svchost.exe'
+    parent_process_path|contains: 'C:\\Windows\\System32\\svchost.exe'
+  source_ip_in_sma:
+    source_ip|in: 'sma_asset_group'
+  target_host_in_manufacturing:
+    target_host|in: 'manufacturing_subnet'
+condition: all of task_creation and from_sma and source_ip_in_sma and target_host_in_manufacturing

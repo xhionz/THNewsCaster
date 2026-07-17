@@ -1,0 +1,18 @@
+title: SMB Lateral Movement from SMA to Manufacturing Subnet
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects SMB connections from SMA appliances to manufacturing hosts
+logsource:
+  product: network
+  service: flow
+detection:
+  smb_traffic:
+    dst_port: [139, 445]
+    protocol: tcp
+  from_sma:
+    src_ip|in: 'sma_asset_group'
+  to_manufacturing:
+    dst_ip|in: 'manufacturing_subnet'
+  high_bytes:
+    bytes: '>10000'
+condition: all of smb_traffic and from_sma and to_manufacturing and high_bytes

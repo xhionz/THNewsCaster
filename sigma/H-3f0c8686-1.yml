@@ -1,0 +1,23 @@
+title: Suspicious SMA RCE via CVE-2023-27997
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects HTTP POST requests to vulnerable SMA endpoints indicative of CVE-2023-27997 exploitation
+logsource:
+  product: sonicwall_sma
+  service: web
+condition: 'request_uri|contains: "/admin/login" or request_uri|contains: "/admin/api" or request_uri|contains: "/api/v1/"' and method: 'POST' and status_code: 200 and source_ip not in (whitelisted_sma_admin_ips)
+detection:
+  exploit_endpoint:
+    request_uri|contains:
+      - "/admin/login"
+      - "/admin/api"
+      - "/api/v1/"
+  http_method:
+    method: 'POST'
+  status_200:
+    status_code: 200
+  not_whitelisted:
+    source_ip|not_in:
+      - '192.168.100.10'
+      - '192.168.100.11'
+condition: all of exploit_endpoint and http_method and status_200 and not_whitelisted
