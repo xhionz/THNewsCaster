@@ -1,0 +1,18 @@
+title: LegacyHive DLL Side-Loading for UAC Bypass
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects DLL side-loading in UAC-bypassable binaries like certutil.exe or comctl32.dll
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: "*\certutil.exe" OR "*\comctl32.dll"
+    ParentImage: "*\explorer.exe"
+    CommandLine: "*" AND (LoadLibrary OR LoadLibraryA)
+    ImageLoaded: "*\temp\*.dll" OR "*\appdata\local\temp\*.dll"
+  condition: selection
+  falsepositives:
+    - Legitimate debugging or software updates
+level: high

@@ -1,0 +1,17 @@
+title: LegacyHive COM Hijacking Persistence Detection
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects suspicious COM hijacking registry modifications post-privilege escalation
+logsource:
+  product: windows
+  service: registry
+detection:
+  selection:
+    EventType: SetValue
+    RegistryKey: "HKCR\CLSID\*\InprocServer32"
+    Image: "*\reg.exe" OR "*\cmd.exe"
+    ParentImage: "*\svchost.exe"
+  condition: selection
+  falsepositives:
+    - Legitimate software installation
+level: high

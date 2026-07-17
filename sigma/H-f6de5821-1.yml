@@ -1,0 +1,17 @@
+title: Detection of LegacyHive Privilege Escalation Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects potential exploitation of the LegacyHive Windows zero-day LPE exploit via unusual token manipulation and registry hive loading
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: "*\svchost.exe"
+    ParentImage: "*\explorer.exe"
+    CommandLine: "*\reg.exe" * load * HKEY_CURRENT_USER* *"
+  condition: selection
+  falsepositives:
+    - Legitimate registry hive manipulation by administrators
+level: high
