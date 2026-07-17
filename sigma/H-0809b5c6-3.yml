@@ -1,0 +1,15 @@
+title: Cryptocurrency Miner xmrig Detection
+logsource:
+  product: linux
+  service: process_creation
+condition: 'image: "*/xmrig" and cmdline: "*--url*" or image: "*/tmp/xmrig" or image: "*/dev/shm/xmrig" or file_path: "*/.config/xmrig/config.json"'
+detection:
+  image:
+    - '*\/xmrig'
+    - '*\/tmp\/xmrig'
+    - '*\/dev\/shm\/xmrig'
+  cmdline:
+    - '*--url*'
+  file_path:
+    - '*\.config\/xmrig\/config.json'
+condition: any

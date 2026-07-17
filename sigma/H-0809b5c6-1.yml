@@ -1,0 +1,17 @@
+title: WordPress CVE-2023-24725 Unauthenticated RCE Attempt
+logsource:
+  product: apache
+  service: http
+condition: 'request_uri: "/wp-json/wp/v2/users" and method: "POST" and content_length > 1000 and not user_agent: "*WordPress*" and body: "action=update"'
+ detection:
+   request_uri:
+     - "/wp-json/wp/v2/users"
+   method:
+     - "POST"
+   content_length:
+     - '>1000'
+   user_agent:
+     - '!*WordPress*'
+   body:
+     - '*action=update*'
+condition: all

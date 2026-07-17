@@ -1,0 +1,13 @@
+title: RDP Brute Force from Web Server IPs
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4625 and source_network_address IN web_server_ips and account_name != "-"'
+detection:
+  event_id:
+    - 4625
+  source_network_address:
+    - 'web_server_ips'
+  account_name:
+    - '!-'
+condition: all
