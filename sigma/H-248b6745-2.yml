@@ -1,0 +1,15 @@
+title: Detect SMB/WinRM Lateral Movement Using Valid Credentials
+logsource:
+  product: windows
+  service: security
+detection:
+  - EventID: 4624
+  - Logon_Type: 3
+  - Logon_Process: 'SMB'
+  - Authentication_Package: 'NTLM'
+  - src_ip: '[internal_subnet_ips]'
+condition: all
+keywords:
+  - 'SMB'
+  - 'NTLM'
+  - 'Logon_Type: 3'

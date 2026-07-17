@@ -1,0 +1,11 @@
+title: Detect CVE-2021-26855 Exploitation via SharePoint Deserialization
+logsource:
+  product: iis
+  service: http
+condition: 'http.request.uri contains "/_vti_bin/_vti_aut/author.dll" and http.request.method: "POST" and http.request.body contains "__VIEWSTATE" and http.response.status_code: 200'
+detection:
+  - http.request.uri contains "/_vti_bin/_vti_aut/author.dll"
+  - http.request.method: "POST"
+  - http.request.body contains "__VIEWSTATE"
+  - http.response.status_code: 200
+condition: all

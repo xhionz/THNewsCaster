@@ -1,0 +1,16 @@
+title: Detect Ransomware Activity via VSS Deletion and File Encryption
+logsource:
+  product: windows
+  service: security
+detection:
+  - EventID: 7045
+  - ServiceName: 'vssvc'
+  - Image: 'vssadmin.exe'
+  - CommandLine: 'delete shadows'
+  - FileModification: '*.mdf' OR '*.ldf' OR '*.sdf' with rapid timestamp changes
+condition: (EventID: 7045 and ServiceName: 'vssvc' and CommandLine: 'delete shadows') or (FileModification: '*.mdf' and FileModification: '*.ldf' and FileModification: '*.sdf' and file_change_count > 100)
+keywords:
+  - 'vssadmin.exe'
+  - 'delete shadows'
+  - '.mdf'
+  - '.ldf'
