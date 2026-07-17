@@ -1,0 +1,15 @@
+title: Suspicious FortiSandbox Command Execution
+logsource:
+  product: fortisandbox
+  service: http
+condition: 'request_body|contains: ["exec", "system", "sh", "bash", "cmd", "powershell"]'
+detection:
+  request_body|contains:
+    - "exec"
+    - "system"
+    - "sh"
+    - "bash"
+    - "cmd"
+    - "powershell"
+  source_ip: "10.0.0.0/8"
+  user_agent: "*curl*" | "*wget*"

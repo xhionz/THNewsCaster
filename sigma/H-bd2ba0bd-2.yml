@@ -1,0 +1,18 @@
+title: Suspicious Lateral Movement via Internal Protocols
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 5140 OR event_id: 4624 AND (network_source_ip|in: internal_ips)'
+detection:
+  event_id:
+    - 5140
+    - 4624
+  network_source_ip|in:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+  network_destination_port:
+    - 445
+    - 5985
+    - 88
+    - 389
+  logon_type: 3

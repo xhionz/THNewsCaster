@@ -1,0 +1,14 @@
+title: Suspicious Exfiltration via Encrypted Outbound Traffic
+logsource:
+  product: firewall
+  service: traffic
+condition: 'destination|not_in: internal_ips AND destination_port: 443 AND file_size|gt: 50000000 AND user_agent|contains: "Mozilla"'
+detection:
+  destination|not_in:
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+    - "192.168.0.0/16"
+  destination_port: 443
+  file_size|gt: 50000000
+  user_agent|contains: "Mozilla"
+  protocol: tcp
