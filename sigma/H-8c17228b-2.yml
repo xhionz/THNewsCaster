@@ -1,0 +1,26 @@
+title: Suspicious RDP logins from non-admin hosts or unusual times
+logsource:
+  product: windows
+  service: security
+  category: logon
+detection:
+  event_id:
+    - 4624
+    - 4625
+  logon_type:
+    - 10
+  account_name:
+    - '*admin*'
+    - '*administrator*'
+    - '*svc*'
+  source_network_address:
+    - '192.168.10.0/24'
+    - '192.168.20.0/24'
+    - '192.168.30.0/24'
+  not_source_host:
+    - 'jump-host-01'
+    - 'jump-host-02'
+  time_window:
+    - '00:00-06:00'
+    - '18:00-24:00'
+condition: event_id and logon_type and account_name and source_network_address and not_source_host and time_window

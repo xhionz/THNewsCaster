@@ -1,0 +1,33 @@
+title: Detection of wp2shell.php or variants in WordPress uploads
+logsource:
+  product: webserver
+  service: apache
+  category: file_event
+detection:
+  file_path:
+    - '*wp-content/uploads/*'
+    - '*wp-content/plugins/*'
+    - '*wp-content/themes/*'
+  file_name:
+    - '*wp2shell.php'
+    - '*wp2shell*.php'
+    - '*shell*.php'
+    - '*eval*.php'
+    - '*base64_decode*.php'
+    - '*gzinflate*.php'
+    - '*hex2bin*.php'
+  file_content:
+    - 'base64_decode('
+    - 'eval('
+    - 'gzinflate('
+    - 'assert('
+    - 'system('
+    - 'exec('
+    - 'passthru('
+    - 'shell_exec('
+    - 'popen('
+    - 'proc_open('
+condition: 1 of them
+  and file_path
+  and file_name
+  and file_content

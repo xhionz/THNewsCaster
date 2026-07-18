@@ -1,0 +1,22 @@
+title: Suspicious scheduled task or cron job creation for PHP execution
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+detection:
+  image:
+    - 'C:\\Windows\\System32\\schtasks.exe'
+    - 'C:\\Windows\\System32\\cmd.exe'
+    - '/usr/bin/crontab'
+    - '/usr/bin/bash'
+  parent_image:
+    - 'C:\\inetpub\\wwwroot\\wp-content\\uploads\\*.php'
+    - 'C:\\xampp\\htdocs\\wp-content\\uploads\\*.php'
+  command_line:
+    - 'schtasks /create /tn'
+    - 'schtasks /create /tr "php '
+    - 'crontab -'
+    - 'echo "*/15 * * * * wget -O /dev/null http://'
+    - 'echo "*/15 * * * * curl -s http://'
+condition: image and command_line
+  and (parent_image or command_line CONTAINS 'http://')
