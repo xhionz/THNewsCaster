@@ -1,0 +1,15 @@
+title: WordPress REST Batch API Exploit Attempt (CVE-2026-63030)
+logsource:
+  product: webserver
+  service: apache
+  category: web
+
+detection:
+  selection:
+    method: 'POST'
+    uri: '/wp-json/wp/v2/batch'
+    user_agent: 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)'
+    body: 'action=wp\u002fjson\u002fwp\u002fv2\u002fbatch'
+  condition: selection
+
+level: high

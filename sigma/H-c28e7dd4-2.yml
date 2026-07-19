@@ -1,0 +1,14 @@
+title: WordPress SQLi via author__not_in Parameter (CVE-2026-60137)
+logsource:
+  product: webserver
+  service: apache
+  category: web
+
+detection:
+  selection:
+    uri: '*author__not_in*'
+    query_string: '*author__not_in[]=1*'
+    method: 'GET' OR method: 'POST'
+  condition: selection
+
+level: high

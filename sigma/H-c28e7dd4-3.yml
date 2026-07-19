@@ -1,0 +1,14 @@
+title: WordPress Theme Editor RCE via PHP File Upload (CVE-2026-60137 chain)
+logsource:
+  product: webserver
+  service: apache
+  category: web
+
+detection:
+  selection:
+    uri: '*wp-admin/theme-editor.php*'
+    method: 'POST'
+    body: '*newcontent=PD9waHAgZXZhbCgkX1BPU1RbJ2NtZCddKTs/Pg==*'
+  condition: selection
+
+level: critical
