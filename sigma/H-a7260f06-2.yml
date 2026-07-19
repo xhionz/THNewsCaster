@@ -1,0 +1,10 @@
+title: Suspicious Email with SMA-Related Spoofed Domain
+logsource:
+  product: email_gateway
+detection:
+  selection:
+    subject: '*SonicWall*VPN*access*required*'
+    sender_domain: '*sonicwall-*'
+    attachment_type: 'exe|js|vbs|scr'
+  condition: selection
+condition: selection

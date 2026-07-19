@@ -1,0 +1,11 @@
+title: Suspicious SMA Authentication Bypass Attempt
+logsource:
+  product: sonicwall_sma
+  service: authentication
+detection:
+  selection:
+    event_type: auth_failure
+    user: "admin"
+    source_ip: "!10.0.0.0/8"
+  condition: selection
+condition: selection

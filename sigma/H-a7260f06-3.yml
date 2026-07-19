@@ -1,0 +1,14 @@
+title: Suspicious SMB NTLM Auth to SMA Appliance from Internal Host
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    Logon_Type: 3
+    Target_Server_Name: '*SMA*'
+    Workstation_Name: '*'
+    Account_Name: '*'
+    Authentication_Package: 'NTLM'
+  condition: selection
+condition: selection
