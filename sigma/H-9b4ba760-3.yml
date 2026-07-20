@@ -1,0 +1,15 @@
+title: Detect Malicious Plugin/Theme File Uploads
+logsource:
+  product: file_system
+detection:
+  file_path|endswith: '/wp-content/plugins/' OR file_path|endswith: '/wp-content/themes/'
+  file_content|contains:
+    - 'base64_decode'
+    - 'eval('
+    - 'assert('
+    - 'system('
+    - 'exec('
+    - 'shell_exec('
+    - 'gzinflate'
+    - 'str_rot13'
+condition: file_path and file_content

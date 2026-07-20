@@ -1,0 +1,11 @@
+title: Detect SQLi Payloads Targeting WordPress Core
+logsource:
+  product: webserver
+detection:
+  body|contains:
+    - "UNION SELECT"
+    - "CONCAT(0x7c7c"
+    - "0x4f4b"
+    - "0x7075626c697368"
+  user_agent|contains: "wordpress"
+condition: body
