@@ -1,0 +1,14 @@
+title: AI-Generated Phishing Lure Detection via Suspicious Filename Patterns
+id: 6b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+status: experimental
+description: Detects execution of files with AI-generated phishing lure patterns (e.g., misspelled extensions, fake document names) from non-standard locations.
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\*.exe'
+    CommandLine: '*reportfinal.rsc.pdf*' OR CommandLine: '*reportfina.exe*' OR CommandLine: '*readme.md*' OR CommandLine: '*reportfinal.rcs.pdf*'
+    ParentImage: '*\explorer.exe' OR ParentImage: '*\msedge.exe'
+  condition: selection
+level: medium

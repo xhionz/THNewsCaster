@@ -1,0 +1,14 @@
+title: WebDAV Malware Delivery via rundll32 and davclnt.dll
+id: 5a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: Detects rundll32.exe loading davclnt.dll from a WebDAV URL, indicative of malware delivery via exposed WebDAV server.
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\rundll32.exe'
+    CommandLine: '*davclnt.dll*'
+    CommandLine: '*http://*'
+  condition: selection
+level: high
