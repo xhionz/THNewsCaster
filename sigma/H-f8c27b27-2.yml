@@ -1,0 +1,13 @@
+title: Non-Browser Client Access to ServiceNow Web Interface
+logsource:
+  product: webserver
+  service: nginx
+  category: web
+detection:
+  user_agent:
+    - '/curl\//'
+    - '/python-requests\//'
+    - '/wget\//'
+  uri: '/navpage.do'
+  src_ip: $servicenow_servers
+condition: all of them

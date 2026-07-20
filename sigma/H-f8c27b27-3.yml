@@ -1,0 +1,12 @@
+title: Suspicious ServiceNow Session Activity from Non-Standard IPs
+logsource:
+  product: webserver
+  service: nginx
+  category: web
+detection:
+  uri: '/login.do'
+  status_code: 200
+  src_ip: $servicenow_servers
+  user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+  cookie: 'JSESSIONID'
+condition: all of them

@@ -1,0 +1,11 @@
+title: Suspicious JSP Upload to ServiceNow Webapp Directory
+logsource:
+  product: linux
+  service: file_event
+detection:
+  file_path:
+    - '/opt/servicenow/tomcat/webapps/ROOT/*.jsp'
+    - '/opt/servicenow/tomcat/webapps/ROOT/WEB-INF/classes/*.jsp'
+  file_name: '*.jsp'
+  user: 'servicenow'
+condition: all of them
