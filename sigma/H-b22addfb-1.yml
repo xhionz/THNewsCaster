@@ -1,0 +1,17 @@
+title: Suspicious HTTP Requests to SonicWall SMA1000 Admin Endpoint
+logsource:
+  product: firewall
+  service: sonicwall_sma1000
+detection:
+  selection:
+    request_uri:
+      - '/admin/'
+      - '/api/v1/'
+    user_agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+    status_code: 200
+  condition: selection
+fields:
+  - request_uri
+  - client_ip
+  - user_agent
+  - status_code

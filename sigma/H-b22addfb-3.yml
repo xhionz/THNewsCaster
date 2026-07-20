@@ -1,0 +1,19 @@
+title: Suspicious SSL-VPN Tunneling Activity from SMA1000
+logsource:
+  product: firewall
+  service: sonicwall_sma1000
+detection:
+  selection:
+    action: 'allow'
+    protocol: 'TCP'
+    dest_port: [80, 443, 8443]
+    src_ip: sma1000_internal_ip
+    dest_ip: internal_subnet_range
+    bytes_out: > 500000
+  condition: selection
+fields:
+  - src_ip
+  - dest_ip
+  - dest_port
+  - bytes_out
+  - duration

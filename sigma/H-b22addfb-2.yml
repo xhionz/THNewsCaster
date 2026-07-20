@@ -1,0 +1,15 @@
+title: Malware Execution Detected via SMA1000 Compromise
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\svchost.exe'
+    ParentImage: '*\SMA1000*'  # Hypothetical parent process from internal host
+    CommandLine: '* -e *'  # Suspicious PowerShell execution
+  condition: selection
+fields:
+  - Image
+  - ParentImage
+  - CommandLine
+  - User
