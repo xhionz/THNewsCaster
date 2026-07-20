@@ -1,0 +1,13 @@
+title: Suspicious Command Execution on SMA1000
+logsource:
+  product: sonicwall_sma1000
+  category: command_exec
+detection:
+  command:
+    - '*curl*http*'
+    - '*wget*http*'
+    - '*base64*'
+    - '*echo* > *'
+    - '*chmod*777*'
+    - '*nohup*'
+condition: any of them

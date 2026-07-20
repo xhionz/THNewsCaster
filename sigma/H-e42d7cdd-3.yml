@@ -1,0 +1,15 @@
+title: Suspicious SMA1000 Internal DNS Queries
+logsource:
+  product: sonicwall_sma1000
+  category: dns
+detection:
+  source_ip:
+    - '10.1.2.3'
+    - '10.1.2.4'
+    - '10.1.2.5'
+  query:
+    - '*.corp.local'
+    - '*.domain.local'
+    - '*dc*.corp.local'
+    - '*ldap*.corp.local'
+condition: all of them

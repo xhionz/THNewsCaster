@@ -1,0 +1,16 @@
+title: Suspicious SMA1000 Outbound to Internal Networks
+logsource:
+  product: sonicwall_sma1000
+  category: http_request
+detection:
+  source_ip:
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'
+  destination_ip:
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'
+  http_method: 'GET'
+  http_user_agent: 'Mozilla/5.0*'
+condition: all of them
