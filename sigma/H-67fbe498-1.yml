@@ -1,0 +1,13 @@
+title: Detect Web Shell Upload via CVE-2023-24775
+logsource:
+  product: apache
+  service: access
+condition: 'request_uri|contains: "wp-content/plugins/file-manager" && request_uri|contains: "upload.php" && status_code: 200 && user_agent!~ "^Mozilla/" && user_agent!~ "^WordPress/"'
+selection:
+  request_uri:
+    - "wp-content/plugins/file-manager/upload.php"
+    - "wp-content/plugins/file-manager/ajax/upload.php"
+  status_code: 200
+  user_agent:
+    - "*"
+condition: selection and not (user_agent|contains: "Mozilla/" or user_agent|contains: "WordPress/")

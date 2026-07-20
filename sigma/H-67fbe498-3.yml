@@ -1,0 +1,17 @@
+title: Detect Outbound Connections from Web Server to Internal Windows Hosts
+logsource:
+  product: firewall
+  service: traffic
+condition: 'source_ip IN (web_server_ips) AND destination_port IN (3389, 445, 135) AND destination_ip IN (internal_ip_ranges)'
+selection:
+  source_ip:
+    - "10.10.10.50"
+    - "10.10.10.51"
+    - "10.10.10.52"
+  destination_port:
+    - 3389
+    - 445
+    - 135
+  destination_ip:
+    - "10.10.0.0/16"
+condition: selection
