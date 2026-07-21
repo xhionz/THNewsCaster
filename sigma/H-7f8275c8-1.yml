@@ -1,0 +1,15 @@
+title: Suspicious SharePoint Deserialization Request Leading to RCE
+logsource:
+  product: iis
+  service: http
+condition: 'request_uri contains "/_vti_bin/" and request_body contains "BinaryFormatter" or "ObjectStateFormatter" or "ViewState" and status_code > 400
+  and user_agent !~ "Microsoft Office" and user_agent !~ "SharePoint"'
+detection:
+  keywords:
+    - "BinaryFormatter"
+    - "ObjectStateFormatter"
+    - "ViewState"
+  filter:
+    - request_uri: "/_vti_bin/"
+  condition: 'keywords and filter'
+level: high

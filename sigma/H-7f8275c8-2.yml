@@ -1,0 +1,11 @@
+title: Lateral Movement via Decrypted ASP.NET Authentication Cookie
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 and logon_type: 3 and authentication_package: 'Negotiate' and user: 'DOMAIN\*' and source_network_address in (sharepoint_server_ips)'
+detection:
+  filter:
+    - source_network_address: '10.10.10.0/24'
+    - user: 'DOMAIN\*' 
+  condition: 'filter'
+level: high

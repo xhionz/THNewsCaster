@@ -1,0 +1,11 @@
+title: Post-Patch Persistence via Stolen Machine Keys
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 and logon_type: 3 and authentication_package: 'Negotiate' and timestamp > "2026-07-20T00:00:00Z" and source_ip in (patched_sharepoint_ips)'
+detection:
+  filter:
+    - source_ip: '10.10.10.10'
+    - source_ip: '10.10.10.11'
+  condition: 'filter'
+level: high
