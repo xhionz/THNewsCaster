@@ -1,0 +1,16 @@
+title: Suspicious DNS or HTTP Exfiltration Post-Exploit
+logsource:
+  product: dns
+  service: dns
+detection:
+  long_domain: "domain|contains|\." and len(domain) > 50
+  condition: long_domain
+---
+title: Suspicious HTTP Exfiltration to External Domains
+logsource:
+  product: nginx
+  service: http
+detection:
+  external_host: "http.host|contains|" and http.host !~ "(internal\.domain\.com|servicenow\.com)"
+  large_response: "http.response.size|gt|50000"
+  condition: all of them

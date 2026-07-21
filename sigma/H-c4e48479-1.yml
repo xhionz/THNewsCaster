@@ -1,0 +1,9 @@
+title: Suspicious ServiceNow API Access via CVE-2021-22005
+logsource:
+  product: nginx
+  service: http
+detection:
+  req_path: "/api/now/table/"
+  large_payload: "size|gt|10000"
+  user_agent: "curl|wget|python-requests"
+  condition: all of them

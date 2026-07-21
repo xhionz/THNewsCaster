@@ -1,0 +1,8 @@
+title: Shell Command Injection via ServiceNow API
+logsource:
+  product: nginx
+  service: http
+detection:
+  req_path: "/api/now/table/"
+  shell_meta: "|;&&`$()"
+  condition: all of them
