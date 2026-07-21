@@ -1,0 +1,14 @@
+title: Lateral Movement via SMB/WinRM from Web Server
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects SMB or WinRM connections from a known web server IP to internal hosts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 3
+    Image: '*w3wp.exe' OR '*apache*' OR '*nginx*'
+    DestinationIp: '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16'
+    DestinationPort: '445' OR '5985' OR '5986'
+  condition: selection

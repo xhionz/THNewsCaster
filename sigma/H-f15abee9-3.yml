@@ -1,0 +1,13 @@
+title: Suspicious Scheduled Task Creation via Web Shell
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects creation of scheduled tasks or cron jobs from web server processes
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*w3wp.exe' OR '*apache*' OR '*nginx*'
+    CommandLine: '*schtasks*' OR '*at *' OR '*crontab*' OR '*echo*>>/etc/crontab*'
+  condition: selection

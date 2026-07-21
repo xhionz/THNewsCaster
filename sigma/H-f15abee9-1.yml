@@ -1,0 +1,17 @@
+title: WordPress Web Shell Upload via Plugin Vulnerability
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects suspicious PHP file uploads to wp-content directories via HTTP POST
+logsource:
+  product: apache
+  service: access
+condition: 'selection'
+detection:
+  selection:
+    method: 'POST'
+    uri: '*wp-content*'
+    uri: '*.php'
+    http_status_code: '200'
+    user_agent: 'Mozilla/5.0*'
+    bytes_sent: '>50000'
+  condition: selection
