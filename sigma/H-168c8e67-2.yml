@@ -1,0 +1,12 @@
+title: Suspicious SSH Connection to Windows Hosts Post-Compromise
+description: Detects SSH connections from WordPress servers to internal Windows hosts on port 3389 or 445, indicating lateral movement
+logsource:
+  product: linux
+  service: ssh
+  category: connection
+Detection:
+  src_ip: '10.10.0.0/24'
+  dst_ip: '10.10.10.0/24'
+  dst_port: 3389 OR 445
+  event_type: 'connection_established'
+condition: all of them

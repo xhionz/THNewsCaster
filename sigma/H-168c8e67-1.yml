@@ -1,0 +1,15 @@
+title: Suspicious Plugin Upload via Unauthenticated POST
+description: Detects unauthenticated POST requests to plugin-install.php with high file upload volume, indicative of exploit-based webshell deployment
+logsource:
+  product: wordpress
+  service: http
+  category: web
+Detection:
+  EventID: 1
+  request_method: 'POST'
+  request_uri: '/wp-admin/plugin-install.php'
+  status_code: '200'
+  user_agent: 'Mozilla/5.0*'
+  content_length: '>10000'
+  auth_status: 'unauthenticated'
+condition: all of them

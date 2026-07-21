@@ -1,0 +1,11 @@
+title: Suspicious Cron Job or Plugin Modification
+description: Detects creation or modification of cron jobs or PHP files in WordPress directories with suspicious content
+logsource:
+  product: linux
+  service: cron
+  category: process
+Detection:
+  event_type: 'file_create' OR 'file_modify'
+  file.path: '/var/spool/cron/' OR '/var/spool/crontabs/' OR '/wp-content/themes/' OR '/wp-content/plugins/'
+  file.content: 'curl ' OR 'wget ' OR 'php -r' OR 'base64_decode' OR 'eval' OR 'system('
+condition: all of them
