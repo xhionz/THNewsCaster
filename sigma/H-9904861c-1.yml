@@ -1,0 +1,15 @@
+title: Suspicious HTTP Request to ServiceNow AI Endpoint - CVE-2026-6875 Exploitation Attempt
+logsource:
+  product: webserver
+  service: http
+condition: 'request_uri contains "/api/now/ai/" and status_code == 200 and user_agent contains "curl" or user_agent contains "python-requests"'
+detection:
+  request_uri:
+    - "/api/now/ai/"
+  status_code:
+    - 200
+  user_agent:
+    - "curl"
+    - "python-requests"
+  timeframe: 5m
+level: high

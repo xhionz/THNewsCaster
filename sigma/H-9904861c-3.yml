@@ -1,0 +1,15 @@
+title: Suspicious Scheduled Job or Webhook Created in ServiceNow
+logsource:
+  product: servicenow
+  service: system
+condition: 'event_type in ["scheduled_script_created", "webhook_created"] and script_content contains "system(" or script_content contains "exec("'
+detection:
+  event_type:
+    - "scheduled_script_created"
+    - "webhook_created"
+  script_content:
+    - "system("
+    - "exec("
+    - "eval("
+    - "shell_exec("
+level: critical

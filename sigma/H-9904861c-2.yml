@@ -1,0 +1,15 @@
+title: Suspicious ServiceNow API Token Usage from Unusual IP
+logsource:
+  product: servicenow
+  service: api
+condition: 'user_agent contains "ServiceNow-API" and src_ip not in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"] and auth_status == "success"'
+detection:
+  user_agent:
+    - "ServiceNow-API"
+  src_ip:
+    - "!10.0.0.0/8"
+    - "!172.16.0.0/12"
+    - "!192.168.0.0/16"
+  auth_status:
+    - "success"
+level: high
