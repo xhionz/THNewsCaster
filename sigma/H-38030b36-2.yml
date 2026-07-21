@@ -1,0 +1,18 @@
+title: Suspicious SMB/RPC Lateral Movement to Domain Controllers
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id_4624:
+    - 4624
+  target_account:
+    - "DOMAIN\Administrator"
+    - "DOMAIN\krbtgt"
+    - "DOMAIN\DC$"
+  logon_type:
+    - 3
+    - 10
+  source_ip:
+    - "10.10.0.0/16"
+condition: event_id_4624 and any of target_account and any of logon_type and source_ip
+condition: all of detection

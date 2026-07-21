@@ -1,0 +1,16 @@
+title: Suspicious SharePoint SOAP Deserialization Attempt
+logsource:
+  product: windows
+  service: iis
+condition: 'request_uri contains "/_vti_bin/" and request_body contains "BinaryFormatter" and (request_body contains "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter" or request_body contains "System.IO.MemoryStream" or request_body contains "System.Reflection.Assembly" or request_body contains "System.Type" or request_body contains "System.Activator")
+detection:
+  uri_pattern:
+    - "*/_vti_bin/*"
+  payload_pattern:
+    - "BinaryFormatter"
+    - "System.Runtime.Serialization.Formatters.Binary.BinaryFormatter"
+    - "System.IO.MemoryStream"
+    - "System.Reflection.Assembly"
+    - "System.Type"
+    - "System.Activator"
+condition: all of uri_pattern and any of payload_pattern

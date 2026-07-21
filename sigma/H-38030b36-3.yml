@@ -1,0 +1,15 @@
+title: Suspicious DNS Tunneling or HTTP C2 from SharePoint Server
+logsource:
+  product: windows
+  service: dns
+detection:
+  high_entropy_domain:
+    - "*.aabbccdd.com"
+    - "*.xyz12345.net"
+    - "*.example[0-9]{4}.com"
+  long_domain_length:
+    - "*." | len > 40
+  frequent_queries:
+    - "count > 50 in 5m"
+condition: any of high_entropy_domain or long_domain_length and frequent_queries
+condition: all of detection
