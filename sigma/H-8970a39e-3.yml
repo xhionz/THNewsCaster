@@ -1,0 +1,10 @@
+title: Detect Qilin Ransomware Scheduled Task Creation
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image: '*\schtasks.exe'
+    CommandLine: '* /create * /tr *.exe * /sc ONSTART *'
+  condition: selection
+level: high

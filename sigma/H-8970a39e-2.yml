@@ -1,0 +1,14 @@
+title: Detect Suspicious RDP Connections from Compromised Hosts
+logsource:
+  product: pan_os
+  category: firewall
+detection:
+  selection:
+    src_zone: 'trust'
+    dst_zone: 'trust'
+    application: rdp
+    src_user: 'DOMAIN\*'  # internal user
+    dst_user: 'DOMAIN\*'  # internal user
+    action: allow
+  condition: selection
+level: medium

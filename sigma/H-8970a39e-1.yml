@@ -1,0 +1,11 @@
+title: Detect Qilin Ransomware File Extension Creation on PAN-OS
+logsource:
+  product: pan_os
+  category: firewall
+detection:
+  selection:
+    file_extension:
+      - '.qilin'
+      - '.agenda'
+  condition: selection
+level: high
