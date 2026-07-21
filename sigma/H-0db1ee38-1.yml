@@ -1,0 +1,10 @@
+title: N-Day Exploit Detection via Public-Facing Application
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  CommandLine: '*exploit*'
+  ParentImage: '*iis*|*apache*|*nginx*|*httpd*'
+condition: selection
+level: high

@@ -1,0 +1,10 @@
+title: Phishing-Driven N-Day Exploit Delivery
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  CommandLine: '*powershell* -e *'
+  ParentImage: '*outlook*|*chrome*|*firefox*'
+condition: selection
+level: high

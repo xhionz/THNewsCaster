@@ -1,0 +1,14 @@
+title: Automated N-Day Vulnerability Scanning
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 5156
+  DestinationPort: '80|443|8080|8443|3389|1433|1521'
+  SourceAddress: '10.0.0.0/8|172.16.0.0/12|192.168.0.0/16'
+  DestinationAddress: '10.0.0.0/8|172.16.0.0/12|192.168.0.0/16'
+  Protocol: 'TCP'
+  Action: 'Allow'
+  PacketSize: '100-500'
+condition: selection
+level: medium
