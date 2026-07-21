@@ -1,0 +1,9 @@
+title: Detect GlobalProtect Auth Bypass via CVE-2024-3400
+logsource:
+  product: palo_alto
+  service: globalprotect
+condition: 'threat-id': 'CVE-2024-3400' AND 'action': 'bypass'
+detection:
+  threat_id: 'CVE-2024-3400'
+  action: 'bypass'
+condition: threat_id and action

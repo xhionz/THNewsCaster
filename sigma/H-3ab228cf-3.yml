@@ -1,0 +1,12 @@
+title: Detect Qilin Ransomware File Encryption
+logsource:
+  product: windows
+  service: file_system
+condition: 'file_extension' = '.qilin' AND 'file_size' > 1000 AND 'process_name' NOT IN ('explorer.exe', 'svchost.exe')
+detection:
+  file_extension: '.qilin'
+  file_size: '>1000'
+  process_name:
+    - not: explorer.exe
+    - not: svchost.exe
+condition: file_extension and file_size and not process_name

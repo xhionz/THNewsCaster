@@ -1,0 +1,15 @@
+title: Detect Credential Dumping Post-GlobalProtect Bypass
+logsource:
+  product: windows
+  service: security
+condition: 'event_id' IN (10, 4688, 4104) AND 'process_name' IN ('lsass.exe', 'mimikatz.exe', 'procdump.exe') AND 'timestamp' > 'globalprotect_bypass_timestamp' AND 'timestamp' < 'globalprotect_bypass_timestamp' + 1h
+detection:
+  event_id: 
+    - 10
+    - 4688
+    - 4104
+  process_name:
+    - lsass.exe
+    - mimikatz.exe
+    - procdump.exe
+condition: event_id and process_name
