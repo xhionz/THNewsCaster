@@ -1,0 +1,12 @@
+title: Detect Langflow CVE-2024-27278 Code Injection
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_uri: '/api/flow/upload'
+  req_body: |
+    'import os'
+    'subprocess.'
+    'exec('
+    'eval('
+  condition: all of them

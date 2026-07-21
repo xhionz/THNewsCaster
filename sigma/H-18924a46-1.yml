@@ -1,0 +1,10 @@
+title: Detect DD-WRT CVE-2021-27137 Exploitation
+logsource:
+  product: firewall
+  service: http
+detection:
+  req_method: 'POST'
+  req_uri: '/apply.cgi'
+  req_body: |
+    'A' * 500
+  condition: all of them

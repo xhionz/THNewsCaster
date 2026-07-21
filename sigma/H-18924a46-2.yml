@@ -1,0 +1,14 @@
+title: Detect WordPress SQLi via CVE-2024-6361
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_uri: |
+    wp-admin/admin-ajax.php
+    wp-login.php
+    wp-content/plugins/
+  req_query: |
+    ' OR '1'='1'
+    ' UNION SELECT '
+    ' AND 1=1--
+  condition: any of req_uri and any of req_query
