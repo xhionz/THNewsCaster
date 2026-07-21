@@ -1,0 +1,13 @@
+title: Unpatched CADRA Version Detected via Registry or File Version
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: *\CADRA.exe
+    CommandLine: '*-version*' OR '*--version*'
+  condition: selection
+fields:
+  - Image
+  - CommandLine

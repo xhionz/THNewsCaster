@@ -1,0 +1,15 @@
+title: Suspicious BMP/PSD File Access by CADRA.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 11
+    Image: *\CADRA.exe
+    TargetFilename: 
+      - '*.bmp'
+      - '*.psd'
+  condition: selection
+fields:
+  - Image
+  - TargetFilename

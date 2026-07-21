@@ -1,0 +1,13 @@
+title: Suspicious PNG File Creation Targeting CADRA.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 11
+    Image: *\CADRA.exe
+    TargetFilename: *.png
+  condition: selection
+fields:
+  - Image
+  - TargetFilename
