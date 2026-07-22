@@ -1,0 +1,11 @@
+title: Detect Suspicious SSH Login from Windmill Server IP
+logsource:
+  product: linux
+  category: authentication
+condition: 'event_type: ssh_login and source_ip: "<WINDMILL_SERVER_IP>" and (user: "root" or user: "admin" or user: "ubuntu" or user: "deploy")'
+detection:
+  selection:
+    event_type: "ssh_login"
+    source_ip: "10.10.10.50"
+    user: "root" or user: "admin" or user: "ubuntu" or user: "deploy"
+  condition: all of selection

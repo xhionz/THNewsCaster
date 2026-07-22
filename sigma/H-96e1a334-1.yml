@@ -1,0 +1,11 @@
+title: Detect Path Traversal in Windmill get_log_file Endpoint
+logsource:
+  product: linux
+  category: web
+condition: 'request_uri|contains: "/api/w/" and request_uri|contains: "/jobs_u/get_log_file/" and request_uri|contains: ".."'
+detection:
+  selection:
+    request_uri|contains: "/api/w/"
+    request_uri|contains: "/jobs_u/get_log_file/"
+    request_uri|contains: ".."
+  condition: all of selection

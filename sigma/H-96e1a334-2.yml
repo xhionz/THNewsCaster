@@ -1,0 +1,19 @@
+title: Detect Malicious Command Injection in Windmill Job Creation
+logsource:
+  product: linux
+  category: web
+condition: 'request_uri|contains: "/api/w/" and request_uri|contains: "/jobs" and request_method: "POST" and body|contains: "shell" or body|contains: "cmd" or body|contains: "bash" or body|contains: "sh" or body|contains: "system(" or body|contains: "exec("'
+detection:
+  selection:
+    request_uri|contains: "/api/w/"
+    request_uri|contains: "/jobs"
+    request_method: "POST"
+  condition: all of selection
+  keywords:
+    body|contains: "shell"
+    body|contains: "cmd"
+    body|contains: "bash"
+    body|contains: "sh"
+    body|contains: "system("
+    body|contains: "exec("
+  condition: 1 of keywords
