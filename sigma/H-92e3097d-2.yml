@@ -1,0 +1,15 @@
+title: Detection of Sequential Credential Scanning and API Exploitation
+logsource:
+  product: github
+  service: webhook
+detection:
+  scan_phase:
+    user_agent: 'TruffleHog'
+    action: 'push'
+    repo_public: true
+  exploit_phase:
+    event_source: 'secretsmanager.amazonaws.com'
+    event_name: 'GetSecretValue'
+    time_delta: 5m-10m
+  condition: scan_phase AND exploit_phase
+condition: scan_phase AND exploit_phase

@@ -1,0 +1,10 @@
+title: Detection of AWS Key Quarantine Without Revocation
+logsource:
+  product: aws
+  service: config
+detection:
+  selection:
+    eventName: 'PutConfigRule'
+    requestParameters.ruleName: 'AWSCompromisedKeyQuarantineV3'
+  condition: selection
+condition: selection

@@ -1,0 +1,12 @@
+title: Detection of AWS Secrets Manager Enumeration Post-Credential-Exposure
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  selection:
+    eventName: 'ListSecrets' OR 'GetSecretValue'
+    userIdentity.type: 'AssumedRole'
+    eventSource: 'secretsmanager.amazonaws.com'
+  condition: selection
+  timeframe: 10m
+condition: selection
