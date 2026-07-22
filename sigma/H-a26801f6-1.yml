@@ -1,0 +1,13 @@
+title: Suspicious SmartConsole Authentication Bypass Attempt
+logsource:
+  product: checkpoint
+  service: smartconsole
+detection:
+  selection:
+    event_type: auth_attempt
+    status_code: 200
+    auth_method: "anonymous" OR auth_method: "default_creds"
+  condition: selection
+related:
+  - T1190
+  - T1203

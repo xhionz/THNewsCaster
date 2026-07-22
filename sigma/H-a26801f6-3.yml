@@ -1,0 +1,15 @@
+title: Suspicious Domain Login from Non-Standard Host
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    event_id: 4624
+    logon_type: 3 OR logon_type: 10
+    account_name: "*"  # Any account
+    workstation_name: "<SHAREPOINT_SERVER>" OR workstation_name: "<SMARTCONSOLE_SERVER>"
+    logon_time: "2026-07-22T00:00:00Z" TO "2026-07-28T23:59:59Z"
+  condition: selection
+related:
+  - T1078
+  - T1059

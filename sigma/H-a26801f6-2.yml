@@ -1,0 +1,14 @@
+title: Suspicious SharePoint Deserialization Attempt
+logsource:
+  product: sharepoint
+  service: iis
+detection:
+  selection:
+    http_method: "POST"
+    uri_path: "*/_vti_bin/*" OR uri_path: "*/_layouts/*"
+    content_type: "application/octet-stream" OR content_type: "application/x-java-serialized-object"
+    user_agent: "*"  # Any UA, as attacker may spoof or omit
+  condition: selection
+related:
+  - T1190
+  - T1203
