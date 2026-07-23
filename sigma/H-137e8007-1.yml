@@ -1,0 +1,18 @@
+title: RDP Brute Force to Malware Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 4624
+    LogonType: 10
+    AccountName: 'Administrator' | 'Guest'
+  Selection2:
+    EventID: 1
+    Image: '*\vid001.exe'
+    CommandLine: '* -e *'
+  Selection3:
+    EventID: 1
+    Image: '*\secoh-qad.exe'
+  Condition: Selection1 and (Selection2 or Selection3)
+  timeframe: 5m

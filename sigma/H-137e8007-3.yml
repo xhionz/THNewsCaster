@@ -1,0 +1,21 @@
+title: RDP Credential Theft to PowerShell Ransomware Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 4624
+    LogonType: 10
+    LogonProcessName: 'rdp-tcp#0'
+    AccountName: '*'
+  Selection2:
+    EventID: 1
+    Image: '*\powershell.exe'
+    CommandLine: '* -enc *' OR '* -nop -c *' OR '* -w hidden *'
+    ParentImage: '*\mstsc.exe'
+  Selection3:
+    EventID: 1
+    Image: '*\cmd.exe'
+    CommandLine: '* /c start \*\u165714.dat*'
+  Condition: Selection1 and (Selection2 or Selection3)
+  timeframe: 15m

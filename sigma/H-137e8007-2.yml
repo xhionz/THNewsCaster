@@ -1,0 +1,18 @@
+title: DLL Injection via Suspicious Patching Tool
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 1
+    Image: '*\win.tool.procpatcher.exe'
+    CommandLine: '* /load *'
+  Selection2:
+    EventID: 1
+    Image: '*\tmp00055df5.dll'
+  Selection3:
+    EventID: 7
+    Image: '*\svchost.exe'
+    ImageLoaded: '*\tmp00055df5.dll'
+  Condition: Selection1 and (Selection2 or Selection3)
+  timeframe: 10m
