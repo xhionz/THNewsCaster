@@ -1,0 +1,14 @@
+title: Browser Credential Theft via Process Injection
+logsource:
+  product: windows
+  service: process_creation
+condition: 'selection_1' or 'selection_2'
+detection:
+  selection_1:
+    image: '*\chrome.exe'
+    parent_image: '*\mshta.exe'
+  selection_2:
+    image: '*\firefox.exe'
+    parent_image: '*\wscript.exe'
+  condition: selection_1 or selection_2
+  timeframe: 30d

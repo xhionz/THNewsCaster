@@ -1,0 +1,17 @@
+title: Suspicious DNS Query with High Entropy or Length
+logsource:
+  product: dns
+  service: query
+detection:
+  selection_1:
+    query: '*.*.*.*.*.*'
+    query_length: '>100'
+  selection_2:
+    query: '^[a-zA-Z0-9+/]{30,}\.ourdomain\.com$'
+  selection_3:
+    query: '^[0-9a-f]{40,}\.ourdomain\.com$'
+  condition: selection_1 or selection_2 or selection_3
+  timeframe: 7d
+  aggregation:
+    count: > 5
+    by: client_ip
