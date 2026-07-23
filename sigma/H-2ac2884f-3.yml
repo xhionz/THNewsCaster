@@ -1,0 +1,16 @@
+title: Detect Ransomware File Creation After External Connection
+logsource:
+  product: windows
+  service: sysmon
+condition: 'file_extension in [".locked", ".crypt", ".ransom"] and source_process in ["powershell.exe", "cmd.exe"] and parent_process in ["svchost.exe", "lsass.exe"]'
+detection:
+  file_extension:
+    - ".locked"
+    - ".crypt"
+    - ".ransom"
+  source_process:
+    - "powershell.exe"
+    - "cmd.exe"
+  parent_process:
+    - "svchost.exe"
+    - "lsass.exe"

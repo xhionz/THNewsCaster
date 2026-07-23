@@ -1,0 +1,10 @@
+title: Detect Unauthorized SmartConsole Login via Suspicious User Agent
+logsource:
+  product: checkpoint
+  service: smartconsole
+condition: 'user_agent contains "curl" or user_agent contains "python-requests"'
+detection:
+  user_agent:
+    - "curl"
+    - "python-requests"
+    - "libcurl"

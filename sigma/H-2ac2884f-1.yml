@@ -1,0 +1,10 @@
+title: Detect Ransomware File Extensions on Quantum Gateway
+logsource:
+  product: checkpoint
+  service: firewall
+condition: 'file_extension: [".locked", ".crypt", ".ransom"]'
+detection:
+  file_extension:
+    - ".locked"
+    - ".crypt"
+    - ".ransom"
