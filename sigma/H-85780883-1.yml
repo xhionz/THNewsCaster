@@ -1,0 +1,10 @@
+title: Detect CVE-2024-24919 Authentication Bypass Attempt
+logsource:
+  product: check_point
+  service: management_server
+detection:
+  request.method: GET
+  request.uri: "/api/login"
+  status_code: 200
+  user_agent: "*curl*" | "*python-requests*"
+condition: all of them

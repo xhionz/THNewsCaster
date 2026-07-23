@@ -1,0 +1,10 @@
+title: Suspicious SmartConsole Phishing URL Access
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  selection:
+    url: '*checkp0int-smartconsole*' | '*check-point-smartconso1e*' | '*smartconsole-checkpoint*' | '*checkp0int-admin*' | '*smartconsole-checkpoint.com*'
+    user_agent: '*Mozilla*' | '*Chrome*'
+  condition: selection
+condition: selection

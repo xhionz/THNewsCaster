@@ -1,0 +1,11 @@
+title: Suspicious SmartConsole Login Page Hosting
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  selection:
+    url: '*check-point-smartconsole-login*' | '*smartconsole-checkpoint-auth*' | '*checkpoint-admin-login*'
+    status_code: 200
+    content_type: 'text/html'
+  condition: selection
+condition: selection

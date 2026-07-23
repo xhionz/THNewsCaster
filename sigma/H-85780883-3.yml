@@ -1,0 +1,10 @@
+title: Detect Policy/Topology API Data Exfiltration
+logsource:
+  product: check_point
+  service: management_server
+detection:
+  request.uri: ["/api/show-policy", "/api/show-topology", "/api/show-rulebase"]
+  request.method: POST
+  status_code: 200
+  user_agent: "*curl*" | "*python-requests*"
+condition: any of them

@@ -1,0 +1,12 @@
+title: Suspicious High-Volume DNS Queries for SmartConsole Exfiltration
+logsource:
+  product: dns
+  service: query
+detection:
+  selection:
+    query: '*smartconsole*' | '*checkpoint*' | '*admin*' | '*config*'
+    query_length: '>64'
+    query_count: '>100'
+    timeframe: '5m'
+  condition: selection
+condition: selection

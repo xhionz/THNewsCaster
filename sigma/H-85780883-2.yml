@@ -1,0 +1,10 @@
+title: Detect Suspicious DNS Tunneling via Long Queries
+logsource:
+  product: dns
+  service: query
+detection:
+  query: "*.*.*.*.*.*.*.*.*.*"  # 10+ labels
+  query_length: > 500
+  response_type: A
+  source.ip: ["192.168.1.10", "192.168.1.11"]
+condition: all of them
