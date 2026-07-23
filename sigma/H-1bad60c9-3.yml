@@ -1,0 +1,14 @@
+title: Detect Unauthorized Session Access via Stolen Tokens
+logsource:
+  product: webserver
+  service: access
+detection:
+  session_request:
+    uri_path: '/api/v1.0/session'
+    method: GET
+    status_code: 200
+    user_agent: 'curl' OR 'python-requests' OR 'node-fetch' OR 'Go-http-client'
+  non_admin_source:
+    src_ip: '10.0.0.0/8' AND NOT src_ip IN [admin_ip_ranges]
+condition: session_request and non_admin_source
+timeframe: 24h

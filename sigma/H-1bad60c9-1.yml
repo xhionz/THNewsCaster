@@ -1,0 +1,15 @@
+title: Detect SmartConsole RCE Exploit Attempts
+logsource:
+  product: windows
+  service: security
+detection:
+  process_creation:
+    Image: '*\smartconsole.exe'
+    CommandLine: '*-rce*'
+  http_post:
+    DestinationIp: '10.0.0.0/8'
+    DestinationPort: 443
+    HttpMethod: POST
+    RequestUri: '/api/v1.0/submit'
+condition: process_creation or http_post
+timeframe: 1h

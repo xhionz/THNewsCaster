@@ -1,0 +1,12 @@
+title: Detect Suspicious DNS Queries to Newly Registered Domains
+logsource:
+  product: dns
+  service: query
+detection:
+  new_domain:
+    Query: '*'
+    DomainRegistrationDate: '2026-07-22T00:00:00Z'.. '2026-07-23T23:59:59Z'
+  suspicious_process:
+    ProcessName: 'java.exe' OR 'smartconsole.exe'
+condition: new_domain and suspicious_process
+timeframe: 24h
