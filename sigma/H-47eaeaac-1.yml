@@ -1,0 +1,13 @@
+title: WP2Shell Exploit Domain Access
+logsource:
+  product: webserver
+  service: apache
+  category: web
+Detection:
+  req_uri:
+    - '/lab/wp2shell-wordpress-rce'
+    - 'learn.uphack.io'
+  user_agent:
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    - 'curl'
+condition: all of them

@@ -1,0 +1,12 @@
+title: Suspicious WordPress File Upload + SQLi Correlation
+logsource:
+  product: wordpress
+  category: web
+Detection:
+  sql_injection:
+    - 'UNION SELECT'
+    - 'SELECT INTO OUTFILE'
+  file_upload:
+    - '.php' in wp-content/uploads
+  time_window: 5m
+condition: sql_injection and file_upload

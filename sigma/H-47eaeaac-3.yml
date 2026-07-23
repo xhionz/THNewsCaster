@@ -1,0 +1,12 @@
+title: WP2Shell Lab Training Pattern
+logsource:
+  product: webserver
+  service: nginx
+Detection:
+  uri:
+    - '/wp-json/wp/v2/users'
+    - '/wp-content/uploads/2026/07/shell.php'
+    - '/wp-admin/admin-ajax.php?action=download_file'
+  user_agent:
+    - 'Mozilla/5.0 (compatible; WP2ShellLab/1.0)'
+condition: any of uri and user_agent contains 'WP2ShellLab'
