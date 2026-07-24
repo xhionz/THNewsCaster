@@ -1,0 +1,15 @@
+title: Suspicious TGT Request for krbtgt from Non-DC
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects TGT requests for krbtgt from non-domain controller accounts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4769
+    ServiceName: "krbtgt"
+    TicketOptions: "0x10000000"
+    ClientName: "*"
+  condition: selection and not ClientName ends with "$"
+level: high

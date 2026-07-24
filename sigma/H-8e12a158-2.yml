@@ -1,0 +1,15 @@
+title: DCSync from Non-DC Account
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects DCSync (NTDS replication) initiated by non-domain controller accounts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4662
+    ObjectName: "NTDS Settings"
+    AccessMask: "0x10000000"
+    SubjectUserName: "*"
+  condition: selection and not SubjectUserName ends with "$"
+level: high
