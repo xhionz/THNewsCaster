@@ -1,0 +1,10 @@
+title: Detect Exfiltration to Known Cloud Storage Domains
+logsource:
+  product: network
+  service: dns
+detection:
+  selection:
+    domain: '*dropbox.com*' OR '*googledrive.com*' OR '*onedrive.com*' OR '*mega.nz*' OR '*pcloud.com*'
+    query_type: 'A'
+  condition: selection
+fields: [domain, client_ip, query_type]

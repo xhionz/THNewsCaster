@@ -1,0 +1,12 @@
+title: Detect CVE-2023-34362 Exploitation in Windchill
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    uri: "*/ws/v1/management/"
+    method: "POST"
+    user_agent: "*Java/*"
+    status_code: 200
+  condition: selection
+fields: [uri, client_ip, user_agent, status_code]

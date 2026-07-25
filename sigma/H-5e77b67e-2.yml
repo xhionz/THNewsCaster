@@ -1,0 +1,10 @@
+title: Detect Suspicious PowerShell Credential Dumping via Invoke-Mimikatz
+logsource:
+  product: windows
+  service: powershell
+detection:
+  selection:
+    CommandLine: '*Invoke-Mimikatz*' OR '*lsadump*' OR '*sekurlsa::logonpasswords*'
+    Image: '*powershell.exe'
+  condition: selection
+fields: [CommandLine, Image, User, ProcessId]
