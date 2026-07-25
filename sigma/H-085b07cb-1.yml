@@ -1,0 +1,13 @@
+title: Cl0p Exploit - FlexPLM SOAP XML Deserialization
+logsource:
+  product: webserver
+  service: apache
+condition: 'request_uri: /FlexPLM/soap/* and request_method: POST and content_type: "text/xml" and (content: "<soapenv:Envelope" and (content: "<exec" or content: "<java" or content: "<javax.xml.transform" or content: "<org.apache.commons.collections"))
+detection:
+  malicious_xml: 
+    - content: "<soapenv:Envelope"
+    - content: "<exec"
+    - content: "<java"
+    - content: "<javax.xml.transform"
+    - content: "<org.apache.commons.collections"
+condition: all of malicious_xml

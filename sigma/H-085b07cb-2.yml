@@ -1,0 +1,11 @@
+title: Cl0p Lateral Movement via SMB Share Access
+logsource:
+  product: windows
+  service: security
+detection:
+  lateral_movement: 
+    - event_id: 5145
+    - share_name: '*'
+    - logon_type: 3
+    - account_name: not in [trusted_service_accounts]
+condition: all of lateral_movement

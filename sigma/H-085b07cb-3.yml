@@ -1,0 +1,16 @@
+title: Cl0p Ransomware Deployment via Scheduled Task or PowerShell
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  ransomware_execution:
+    - event_id: 1
+      image: '*\powershell.exe'
+      command_line: '*-EncodedCommand*' or '*-ep bypass*' or '*-w hidden*' or '*-nop*'
+    - event_id: 1
+      image: '*\schtasks.exe'
+      command_line: '*create*' and '*xml*' or '*/sc minute*'
+    - event_id: 1
+      image: '*\cmd.exe'
+      command_line: '* /c start *' and ('*.crypt' or '*.locked' or '*.cl0p')
+condition: any of ransomware_execution
