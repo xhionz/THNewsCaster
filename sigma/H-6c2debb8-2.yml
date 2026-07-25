@@ -1,0 +1,19 @@
+title: Detect Spring Boot Endpoint Scanning for Fastjson RCE
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_uri:
+    - '/jolokia/list'
+    - '/actuator/env'
+    - '/actuator/beans'
+    - '/api/json'
+    - '/rest/json'
+  status_code: 200
+  user_agent:
+    - 'Nmap'
+    - 'curl'
+    - 'python-requests'
+    - 'masscan'
+  condition: req_uri and status_code == 200 and user_agent in ['Nmap', 'curl', 'python-requests', 'masscan']
+level: medium

@@ -1,0 +1,19 @@
+title: Detect Fastjson RCE via Deserialization Payload
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_uri:
+    - '/api/*'
+    - '/rest/*'
+    - '/json/*'
+  user_agent:
+    - 'Java/*'
+    - 'Apache-HttpClient/*'
+  request_body:
+    - '@type'
+    - 'com.sun.rowset.JdbcRowSetImpl'
+    - 'com.mchange.v2.c3p0.JndiRefWrapper'
+    - 'org.apache.commons.collections.BeanMap'
+  condition: req_uri and user_agent and (request_body contains '@type' or request_body contains 'JdbcRowSetImpl' or request_body contains 'JndiRefWrapper' or request_body contains 'BeanMap')
+level: critical

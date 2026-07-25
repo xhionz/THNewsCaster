@@ -1,0 +1,15 @@
+title: Detect Base64-Encoded ysoserial Payloads in HTTP Requests
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_uri:
+    - '/api/*'
+    - '/rest/*'
+  request_body:
+    - 'U3RyaW5nLXJlc291cmNl'
+    - 'TWFuYWdlci5DbGFzcw=='
+    - 'Y29tLnN1bi5yb3dzZXQuSmRiY1Jvd3NldEltcGw='
+    - 'Y29tLm1jaGFnZS52Mi5jM3BwLkpuaWRyV2FwcGVy'
+  condition: req_uri and (request_body contains 'U3RyaW5nLXJlc291cmNl' or request_body contains 'TWFuYWdlci5DbGFzcw==' or request_body contains 'Y29tLnN1bi5yb3dzZXQuSmRiY1Jvd3NldEltcGw=' or request_body contains 'Y29tLm1jaGFnZS52Mi5jM3BwLkpuaWRyV2FwcGVy')
+level: high
