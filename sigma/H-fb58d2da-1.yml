@@ -1,0 +1,13 @@
+title: Detect Hermes WebUI Exposure and File Staging
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects exposure of Hermes WebUI with unauthenticated file staging via call_*.txt
+logsource:
+  product: webserver
+detection:
+  selection:
+    server_header: 'HermesWebUI'
+    www_authenticate: 'Basic realm="Hermes WebUI"'
+    url_path: '*/hermes-results/call_*.txt'
+  condition: all of selection*
+level: medium

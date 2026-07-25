@@ -1,0 +1,14 @@
+title: Detect Suspicious svchost.exe Process Hollowing
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects svchost.exe spawned by non-standard parents or with suspicious command-line arguments
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\svchost.exe'
+    ParentImage: '*\cmd.exe' | '*\powershell.exe' | '*\wscript.exe' | '*\cscript.exe' | '*\rundll32.exe'
+    CommandLine: '*-s*' | '*-h*' | '*-p*' | '*-e*' | '*-c*' | '*-i*' | '*-n*' | '*-t*'
+  condition: all of selection*
+level: high

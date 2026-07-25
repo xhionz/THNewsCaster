@@ -1,0 +1,16 @@
+title: Detect Hades Implant Beaconing via JavaScript Assets
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects beaconing to known Hades implant JavaScript endpoints
+logsource:
+  product: webserver
+detection:
+  selection:
+    url_path:
+      - '/assets/app.min.js'
+      - '/assets/vendor.js'
+      - '/assets/main.js'
+    http_method: 'GET'
+    status_code: 200
+  condition: all of selection*
+level: high
