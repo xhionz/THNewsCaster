@@ -1,0 +1,23 @@
+title: Suspicious Access to MachineKey Configuration Files
+logsource:
+  product: windows
+  service: file_event
+condition: 'EventType: FileWrite or EventType: FileRead and TargetFilename: ("*machine.config" or "*aspnet.config" or "*web.config" or "*MachineKey" or "*aspnet\2.0.50727.0\MachineKey") and Image: ("powershell.exe" or "cmd.exe" or "cscript.exe" or "wscript.exe" or "reg.exe" or "certutil.exe")'
+detection:
+  EventType:
+    - "FileWrite"
+    - "FileRead"
+  TargetFilename:
+    - "*machine.config"
+    - "*aspnet.config"
+    - "*web.config"
+    - "*MachineKey"
+    - "*aspnet\\2.0.50727.0\\MachineKey"
+  Image:
+    - "powershell.exe"
+    - "cmd.exe"
+    - "cscript.exe"
+    - "wscript.exe"
+    - "reg.exe"
+    - "certutil.exe"
+condition: all of them

@@ -1,0 +1,15 @@
+title: Suspicious POST to SharePoint _trust Endpoint
+logsource:
+  product: iis
+  service: http
+condition: 'cs-uri-stem: /_trust/* and cs-method: POST and not cs(User-Agent): "SharePoint Foundation" and not cs(User-Agent): "Microsoft Office" and not cs(User-Agent): "Mozilla/5.0 (Windows NT" and not cs(User-Agent): "curl/" and not cs(User-Agent): "wget/"'
+detection:
+  cs-uri-stem: "/_trust/*"
+  cs-method: "POST"
+  cs(User-Agent):
+    - "!SharePoint Foundation"
+    - "!Microsoft Office"
+    - "!Mozilla/5.0 (Windows NT"
+    - "!curl/"
+    - "!wget/"
+condition: all of them

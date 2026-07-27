@@ -1,0 +1,21 @@
+title: Suspicious web.config Modification
+logsource:
+  product: windows
+  service: file_event
+condition: 'EventType: FileWrite or EventType: FileCreate and TargetFilename: "*web.config" and Image: ("powershell.exe" or "cmd.exe" or "notepad.exe" or "robocopy.exe" or "bitsadmin.exe" or "mshta.exe" or "cscript.exe" or "wscript.exe")'
+detection:
+  EventType:
+    - "FileWrite"
+    - "FileCreate"
+  TargetFilename:
+    - "*web.config"
+  Image:
+    - "powershell.exe"
+    - "cmd.exe"
+    - "notepad.exe"
+    - "robocopy.exe"
+    - "bitsadmin.exe"
+    - "mshta.exe"
+    - "cscript.exe"
+    - "wscript.exe"
+condition: all of them
