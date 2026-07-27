@@ -1,0 +1,15 @@
+title: Detect VeloCloud CVE-2024-20001 Command Injection
+logsource:
+  product: velocloud
+  service: http
+detection:
+  req_uri:
+    - '/api/v2/edge/execute'
+    - '/api/v2/edge/config'
+  request_body:
+    - 'command='
+    - 'shell='
+    - 'bash -c '
+    - 'sh -c '
+  status_code: 200
+condition: all of req_uri and request_body and status_code

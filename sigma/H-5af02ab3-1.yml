@@ -1,0 +1,14 @@
+title: Detect FortiOS CVE-2023-34362 Exploitation
+logsource:
+  product: fortinet_fortios
+  service: http
+detection:
+  req_uri:
+    - '/remote/fgt_lang'
+    - '/remote/logincheck'
+  user_agent:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+  status_code: 200
+condition: all of req_uri and user_agent and status_code

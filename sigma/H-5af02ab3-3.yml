@@ -1,0 +1,20 @@
+title: Detect Cross-Product Exploitation from Single IP
+logsource:
+  product: combined
+  service: http
+detection:
+  fortios_req:
+    - '/remote/fgt_lang'
+    - '/remote/logincheck'
+  velocloud_req:
+    - '/api/v2/edge/execute'
+    - '/api/v2/edge/config'
+  user_agent:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+  request_body:
+    - 'command='
+    - 'shell='
+  status_code: 200
+condition: (fortios_req and user_agent and status_code) or (velocloud_req and request_body and status_code)
