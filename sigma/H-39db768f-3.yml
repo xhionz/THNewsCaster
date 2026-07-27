@@ -1,0 +1,11 @@
+title: Suspicious File Transfer from VeloCloud Orchestrator
+logsource:
+  product: linux
+  category: process_creation
+detection:
+  selection:
+    image: '*curl*'
+    cmdline: '*-o*'
+    cmdline: '*http*'
+  condition: selection
+level: high

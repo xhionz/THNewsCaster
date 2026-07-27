@@ -1,0 +1,11 @@
+title: Suspicious SSH/RDP Access from VeloCloud Orchestrator
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    source.ip: 'VELCLOUD_ORCHESTRATOR_IP'
+    destination.port: [22, 3389, 5985]
+    direction: outbound
+  condition: selection
+level: high

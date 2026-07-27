@@ -1,0 +1,12 @@
+title: Suspicious Command Injection in VeloCloud Orchestrator
+logsource:
+  product: linux
+  service: apache
+  category: web_server
+detection:
+  selection:
+    uri: '*/api/.*/exec*'
+    query: '*;*'
+    status_code: 200
+  condition: selection
+level: critical
