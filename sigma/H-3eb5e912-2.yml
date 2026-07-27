@@ -1,0 +1,9 @@
+title: Lateral Movement from Compromised Windchill Server
+id: 9d2e1f3c-8b7a-4e5d-9a1f-2c3b4e5f6a7d
+description: Detects SMB or WinRM connections from a known Windchill server to internal manufacturing workstations or file servers after a suspected exploitation event
+logsource:
+  product: windows
+  service: security
+  category: network_connection
+condition: 'event_id: 3 AND destination.ip IN [windchill_server_ips] AND destination.port IN [445, 5985] AND source.ip IN [manufacturing_subnet] AND event.timestamp > [first_exploit_time]'
+level: high

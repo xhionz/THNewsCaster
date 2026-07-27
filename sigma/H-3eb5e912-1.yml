@@ -1,0 +1,9 @@
+title: Cl0p Ransomware Exploitation via CVE-2024-21762 in PTC Windchill
+id: 5f8a3e1d-7b9c-4d8e-9a1f-2c3b4e5f6a7d
+description: Detects HTTP POST requests with serialized Java objects targeting PTC Windchill endpoints, indicative of CVE-2024-21762 exploitation
+logsource:
+  product: webserver
+  service: http
+  category: web
+condition: 'request.method: "POST" and request.uri: "*/Windchill/app/*" and request.body: "java.io.ObjectInputStream" and user_agent: !~ "(Googlebot|Bingbot|Yandex)"'
+level: critical

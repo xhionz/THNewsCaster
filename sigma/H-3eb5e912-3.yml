@@ -1,0 +1,8 @@
+title: Ransomware Encryption of PTC Windchill Data Directories
+id: 3a1b2c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+description: Detects mass file renaming or encryption activity in Windchill data directories with .cl0p or .crypt extensions
+logsource:
+  product: file_system
+  category: file_event
+condition: 'file.path CONTAINS '/Windchill/data/' OR file.path CONTAINS '/Windchill/ptc/' AND (file.name ENDS WITH '.cl0p' OR file.name ENDS WITH '.crypt') AND file.action = 'modified' AND event.count > 500 within 10m'
+level: critical
