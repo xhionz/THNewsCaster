@@ -1,0 +1,13 @@
+title: Suspicious Build Agent Command Execution via TeamCity
+logsource:
+  product: teamcity
+  service: build-agent
+condition: 'process_name contains "java" and command_line contains "curl" and command_line contains "http://" and parent_process_name == "TeamCityBuildAgent"'
+detection:
+  suspicious_process:
+    - process_name contains "java"
+    - command_line contains "curl"
+    - command_line contains "http://"
+  agent_context:
+    - parent_process_name == "TeamCityBuildAgent"
+condition: all of suspicious_process and agent_context

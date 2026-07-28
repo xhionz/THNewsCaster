@@ -1,0 +1,13 @@
+title: Detection of Suspicious TeamCity Scheduled Build Trigger
+logsource:
+  product: teamcity
+  service: build-server
+condition: 'event_type == "build_config_created" and build_trigger == "scheduled" and build_step contains "curl" and build_step contains "http://" and user == "system"'
+detection:
+  suspicious_trigger:
+    - build_trigger == "scheduled"
+    - build_step contains "curl"
+    - build_step contains "http://"
+  system_creator:
+    - user == "system"
+condition: all of suspicious_trigger and system_creator

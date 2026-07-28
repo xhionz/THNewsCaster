@@ -1,0 +1,15 @@
+title: Detection of CVE-2026-63077 Exploitation via TeamCity API
+logsource:
+  product: teamcity
+  service: http
+condition: 'request_uri contains "/app/rest/" and (request_body contains "executeCommand" or request_body contains "buildType" and status_code == 200) and user_agent contains "curl" or user_agent contains "python-requests"'
+detection:
+  suspicious_endpoint:
+    - request_uri contains "/app/rest/"
+  suspicious_body:
+    - request_body contains "executeCommand"
+    - request_body contains "buildType" and request_body contains "command="
+  suspicious_ua:
+    - user_agent contains "curl"
+    - user_agent contains "python-requests"
+condition: all of suspicious_endpoint and (any of suspicious_body) and (any of suspicious_ua)
