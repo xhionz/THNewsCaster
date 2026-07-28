@@ -1,0 +1,17 @@
+title: Detect Mimikatz Process Creation via EDR
+logsource:
+  product: windows
+  service: endpoint
+detection:
+  process_name:
+    - 'mimikatz.exe'
+    - 'mimikatz_x64.exe'
+    - 'mimikatz_x86.exe'
+  parent_process:
+    - 'cmd.exe'
+    - 'powershell.exe'
+    - 'wscript.exe'
+  command_line:
+    - 'privilege::debug'
+    - 'sekurlsa::logonpasswords'
+condition: all of them

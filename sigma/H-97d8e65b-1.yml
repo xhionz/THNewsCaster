@@ -1,0 +1,15 @@
+title: Detect FastJson RCE Exploit Payload
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_body:
+    - '@type': 'com.sun.rowset.JdbcRowSetImpl'
+    - 'dataSourceName': 'ldap://'
+    - 'autoCommit': true
+  uri:
+    - '*api/*'
+    - '*rest/*'
+    - '*erp/*'
+    - '*production/*'
+condition: all of req_body and any of uri

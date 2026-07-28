@@ -1,0 +1,16 @@
+title: Detect Lateral Movement via SMB from Compromised Java Host
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 4624
+  logon_type:
+    - 3
+  account_name:
+    - '*$'
+  ip_address:
+    - '10.10.20.50'
+  source_network_address:
+    - '10.10.10.0/24'
+condition: all of them
