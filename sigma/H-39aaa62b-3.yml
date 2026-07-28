@@ -1,0 +1,16 @@
+title: Check Point Admin Policy Modification via SSO Token
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects policy modification actions performed by a user authenticated via SSO token, indicative of credential abuse
+logsource:
+  product: checkpoint
+  service: fwm
+detection:
+  sel:
+    event_type: policy_change
+    auth_method: sso
+    user: "admin" | "administrator" | "root"
+    action: "install_policy" | "modify_rulebase" | "export_config"
+    source_ip: "192.168.86.15" | "192.168.86.16"
+  condition: sel
+level: high

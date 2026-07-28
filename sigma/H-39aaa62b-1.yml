@@ -1,0 +1,16 @@
+title: Check Point SmartConsole SIC DN Replay Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects anomalous SIC DN usage in authentication logs indicative of CVE-2026-16232 exploitation
+logsource:
+  product: checkpoint
+  service: dleserver
+detection:
+  sel:
+    event_type: auth_attempt
+    auth_method: sso
+    sso_token_issuer: management_server
+    sso_token_subject: "*SIC*"
+    source_ip: "192.168.86.15" | "192.168.86.16"
+  condition: sel
+level: high

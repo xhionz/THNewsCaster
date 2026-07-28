@@ -1,0 +1,14 @@
+title: Suspicious Python Script Execution on Check Point Management Server
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects execution of a known malicious Python script associated with CVE-2026-16232 exploitation
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  sel:
+    Image: '*\cve-2026-16232.py'
+    ParentImage: '*\python.exe' | '*\python3.exe'
+    Hashes: 'SHA256=512d49aa4c026d57177bea06dd28669c889479bfa8ea6d3b53fabe59ec9e0a2e'
+  condition: sel
+level: high
