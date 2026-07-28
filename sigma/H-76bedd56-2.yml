@@ -1,0 +1,11 @@
+title: Detect SSH Tunneling from BMC Subnet to Internal Non-Admin Hosts
+logsource:
+  product: network
+  service: netflow
+detection:
+  src_ip: 'bmc_subnet'
+  dst_port: 22
+  protocol: tcp
+  bytes_out: '>100000'
+  dst_ip_not_in: 'admin_subnet'
+condition: all of them

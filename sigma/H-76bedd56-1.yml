@@ -1,0 +1,11 @@
+title: Detect Unauthenticated IPMI Requests Exploiting CVE-2013-4786
+logsource:
+  product: network
+  service: netflow
+detection:
+  src_ip: '10.100.0.0/24'
+  dst_port: 623
+  protocol: udp
+  flags: 'SYN'
+  http_request: 'null'
+condition: all of them

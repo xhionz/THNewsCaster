@@ -1,0 +1,13 @@
+title: Detect Anomalous HTTP Requests from BMC to GPU Servers for Credential Access
+logsource:
+  product: network
+  service: netflow
+detection:
+  src_ip: 'bmc_subnet'
+  dst_ip: 'gpu_subnet'
+  dst_port: 80
+  protocol: tcp
+  http_method: 'GET'
+  http_uri: '/etc/shadow' OR '/etc/passwd' OR '/proc/self/environ'
+  http_user_agent: 'null' OR 'curl' OR 'wget'
+condition: all of them
