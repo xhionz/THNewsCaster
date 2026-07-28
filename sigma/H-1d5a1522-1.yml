@@ -1,0 +1,8 @@
+title: Detect vBulletin Template Injection Exploitation
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'query|re: "\{\{.*\}\}"'
+detection:
+  query|re: "\{\{.*\}\}"

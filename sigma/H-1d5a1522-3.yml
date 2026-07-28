@@ -1,0 +1,10 @@
+title: Detect XMRig Cryptocurrency Miner Process
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+condition: 'image|contains: "xmrig" or cmdline|contains: "xmrig" or cmdline|contains: "--coin"'
+detection:
+  image|contains: "xmrig"
+  or cmdline|contains: "xmrig"
+  or cmdline|contains: "--coin"

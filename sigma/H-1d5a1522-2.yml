@@ -1,0 +1,11 @@
+title: Detect Credential Stuffing on vBulletin Login
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_method: POST and request_uri: "/forum/login.php" and count(selection) > 100'
+detection:
+  request_method: POST
+  request_uri: "/forum/login.php"
+  body|contains: "username="
+  body|contains: "password="
