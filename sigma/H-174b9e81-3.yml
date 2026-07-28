@@ -1,0 +1,16 @@
+title: Exfiltration to AWS S3 via HTTPS POST
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects large HTTPS POST requests to AWS S3 domains from VCO server
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    src_ip: '192.168.10.5'
+    http_method: 'POST'
+    http_host: '*.s3.amazonaws.com'
+    http_response_bytes: > 50000000  # 50 MB
+    http_user_agent: !~ 'Mozilla/5.0 (compatible)'  # exclude legitimate browsers
+  condition: selection
+level: high

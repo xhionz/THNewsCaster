@@ -1,0 +1,19 @@
+title: Command Injection via CVE-2026-16812 on VCO
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects command injection attempts via CVE-2026-16812 in VeloCloud Orchestrator
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    http_method: 'POST'
+    http_uri: '/api/v1/config/apply'
+    http_request_body: '*$(*)*'  # shell command substitution
+    http_request_body: '*`*'*  # backtick command substitution
+    http_request_body: '*;*'
+    http_request_body: '*|*'
+    http_request_body: '*&&*'
+    http_request_body: '*||*'
+  condition: selection
+level: critical

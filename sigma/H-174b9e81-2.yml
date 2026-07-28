@@ -1,0 +1,16 @@
+title: Lateral Movement via TCP SYN Scans from VCO Server
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects rapid TCP SYN packets from VCO server to internal hosts on common ports
+logsource:
+  product: network
+  service: flow
+detection:
+  selection:
+    src_ip: '192.168.10.5'
+    tcp_flags: 'SYN'
+    dest_port: (22 OR 445 OR 3389 OR 135 OR 139)
+    count: > 50
+    time_window: 60s
+  condition: selection
+level: medium
