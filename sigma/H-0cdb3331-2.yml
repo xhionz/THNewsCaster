@@ -1,0 +1,16 @@
+title: Suspicious SMB Access to S7-1500 from Engineering Workstation
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects SMB access to S7-1500 IP addresses using non-standard user accounts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5140
+    TargetShare: ['IPC$', 'C$', 'D$', 'plc_config', 'shared']
+    SubjectUserName: ['*\svc_*', '*\admin_*', '*\engineer_*', '*\plc_*']
+    SubjectLogonType: 3
+  condition: selection
+fields: ['SubjectUserName', 'TargetShare', 'ClientAddress', 'LogonId']
+level: medium

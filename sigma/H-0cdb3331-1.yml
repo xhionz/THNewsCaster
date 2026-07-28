@@ -1,0 +1,15 @@
+title: Suspicious Command Execution in S7-1500 Linux Subsystem
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects command-line execution indicative of CVE-2025-68264 exploitation in Siemens S7-1500 Linux subsystem
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    comm: ['sh', 'bash', 'dash', 'awk', 'sed', 'curl', 'wget', 'nc', 'socat']
+    auid: 0
+    exe: '/bin/busybox'
+  condition: selection
+fields: ['comm', 'auid', 'exe', 'cwd']
+level: medium

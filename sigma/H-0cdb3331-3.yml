@@ -1,0 +1,16 @@
+title: Suspicious Kernel Module Load in S7-1500 Linux Subsystem
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects loading of kernel modules from non-standard paths in Siemens S7-1500 Linux subsystem
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    comm: ['insmod', 'modprobe']
+    exe: '/sbin/insmod' OR exe: '/sbin/modprobe'
+    auid: 0
+    args: '*.ko' AND NOT args: '/lib/modules/'
+  condition: selection
+fields: ['comm', 'exe', 'auid', 'args', 'cwd']
+level: high
