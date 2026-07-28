@@ -1,0 +1,10 @@
+title: Privilege Escalation via Service Account Process Chain
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    ParentProcessName: 'velocloud-service.exe'
+    Image: '*\net.exe' OR Image: '*\net1.exe' OR Image: '*\whoami.exe' OR Image: '*\icacls.exe' OR Image: '*\sc.exe'
+  condition: selection
+  timeframe: 10m

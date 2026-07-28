@@ -1,0 +1,15 @@
+title: Command Injection Attempt in VeloCloud Orchestrator
+logsource:
+  product: webserver
+  service: http
+condition: 'request_body contains ";" or request_body contains "&&" or request_body contains "||" or request_body contains "$(" or request_body contains "`" or request_body contains "|"'
+detection:
+  selection:
+    request_body:
+      - "*;*"
+      - "*&&*"
+      - "*||*"
+      - "*$(*"
+      - "*`*"
+      - "*|*"
+  condition: selection

@@ -1,0 +1,10 @@
+title: High-Entropy DNS Tunneling from VeloCloud Host
+logsource:
+  product: dns
+  service: dns-query
+detection:
+  selection:
+    query|contains: '.com' OR query|contains: '.net' OR query|contains: '.org'
+    query|windash: 20
+    query|re: '^[a-zA-Z0-9]{15,}\.[a-zA-Z0-9]{8,}\.[a-zA-Z]{2,}$'
+  condition: selection and count > 50 in 5m
