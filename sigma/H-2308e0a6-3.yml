@@ -1,0 +1,11 @@
+title: Detect malicious file creation in /tmp or /dev/shm on MDS server
+logsource:
+  product: check_point
+  service: filesystem
+detection:
+  selection:
+    event_type: file_create
+    file_path: ('/tmp/' OR '/dev/shm/')
+    file_name: ('*.py' OR '*.sh' OR '*.bin' OR '*.so')
+    user: 'root'
+  condition: selection

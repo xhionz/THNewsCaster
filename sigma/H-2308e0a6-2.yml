@@ -1,0 +1,12 @@
+title: Detect SSH connections from MDS server to internal hosts
+logsource:
+  product: check_point
+  service: firewall
+detection:
+  selection:
+    action: connect
+    src_ip: '10.10.10.10'
+    dst_port: 22
+    protocol: tcp
+    user: '.*'
+  condition: selection
