@@ -1,0 +1,27 @@
+title: Detect ESXi outbound connections to non-VMware IPs
+logsource:
+  product: vmware_esxi
+  service: network
+condition: 'dst_ip not in ["192.168.10.0/24", "8.8.8.8", "8.8.4.4", "172.217.0.0/16", "142.250.0.0/15", "173.194.0.0/16", "216.58.0.0/15", "209.85.0.0/16", "208.65.152.0/22", "208.67.222.0/24", "208.67.220.0/24", "update.vmware.com", "vmware.com"] and dst_port in [80, 443, 53, 22]'
+detection:
+  outbound_c2:
+    dst_ip: "not 192.168.10.0/24"
+    dst_port:
+      - 80
+      - 443
+      - 53
+      - 22
+    not:
+      dst_ip:
+        - "8.8.8.8"
+        - "8.8.4.4"
+        - "172.217.0.0/16"
+        - "142.250.0.0/15"
+        - "173.194.0.0/16"
+        - "216.58.0.0/15"
+        - "209.85.0.0/16"
+        - "208.65.152.0/22"
+        - "208.67.222.0/24"
+        - "208.67.220.0/24"
+        - "update.vmware.com"
+        - "vmware.com"

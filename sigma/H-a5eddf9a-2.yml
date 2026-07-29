@@ -1,0 +1,12 @@
+title: Detect ESXi VM Escape via CVE-2021-22005
+logsource:
+  product: vmware_esxi
+  service: vmx
+condition: 'cmd: ["rm -rf /vmfs", "mount -o remount,rw /vmfs", "vmkchroot /bin/sh", "cp /etc/shadow /tmp/"]'
+detection:
+  vm_escape_cmd:
+    cmd:
+      - "rm -rf /vmfs"
+      - "mount -o remount,rw /vmfs"
+      - "vmkchroot /bin/sh"
+      - "cp /etc/shadow /tmp/"

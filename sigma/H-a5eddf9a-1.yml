@@ -1,0 +1,12 @@
+title: Detect vCenter Authentication Bypass via /sdk/ (CVE-2021-21972)
+logsource:
+  product: vmware_vcenter
+  service: http
+condition: 'http_uri: "/sdk/" and http_status_code: 200 and http_user_agent: "*" and not http_user_agent: "VMware-vSphere-Client"'
+detection:
+  anon_access:
+    http_uri: "/sdk/"
+    http_status_code: 200
+    http_user_agent: "*"
+    not:
+      http_user_agent: "VMware-vSphere-Client"
