@@ -1,0 +1,17 @@
+title: FMC CVE-2023-20197 Exploitation Attempt
+logsource:
+  product: cisco_fmc
+  service: api
+condition: 'detection'
+detection:
+  http_method: 'POST'
+  uri: '/api/fmc_config/v1/domain/'
+  user_agent: 'python-requests'
+  status_code: 200
+  timeframe: 5m
+  selection:
+    - http_method
+    - uri
+    - user_agent
+    - status_code
+  condition: selection

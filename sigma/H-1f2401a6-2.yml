@@ -1,0 +1,19 @@
+title: FMC API Token Used for External Auth
+logsource:
+  product: cisco_fmc
+  service: api
+condition: 'detection'
+detection:
+  http_method: 'GET'
+  uri: '/api/fmc_config/v1/domain/'
+  user_agent: 'curl/7.68.0'
+  status_code: 200
+  src_ip: '10.10.10.50'
+  timeframe: 10m
+  selection:
+    - http_method
+    - uri
+    - user_agent
+    - status_code
+    - src_ip
+  condition: selection

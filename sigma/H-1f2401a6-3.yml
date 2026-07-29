@@ -1,0 +1,17 @@
+title: FMC Shell Command Execution Detected
+logsource:
+  product: linux
+  service: auditd
+condition: 'detection'
+detection:
+  syscall: execve
+  cmdline:
+    - '*mimikatz*'
+    - '*lsass*'
+    - '*samdump*'
+    - '*secretsdump*'
+  timeframe: 15m
+  selection:
+    - syscall
+    - cmdline
+  condition: selection
