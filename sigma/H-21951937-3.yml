@@ -1,0 +1,10 @@
+title: Lateral movement via script execution from browser
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\firefox.exe' OR Image: '*\tor-browser\Browser\firefox.exe'
+    CommandLine: '*powershell*' OR CommandLine: '*wscript*' OR CommandLine: '*cscript*'
+  condition: selection
+  timeframe: 10m

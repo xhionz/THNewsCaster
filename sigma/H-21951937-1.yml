@@ -1,0 +1,10 @@
+title: Exploit of CVE-2021-29978 via Firefox JIT
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\firefox.exe'
+    CommandLine: '*-contentproc*'
+  condition: selection
+  timeframe: 5m

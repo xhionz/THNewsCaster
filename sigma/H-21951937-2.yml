@@ -1,0 +1,10 @@
+title: Tor Browser drive-by download indicator
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\tor-browser\Browser\firefox.exe'
+    CommandLine: '*-contentproc*'
+  condition: selection
+  timeframe: 5m
