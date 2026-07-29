@@ -1,0 +1,25 @@
+title: Detect Internal Port Scanning from TeamCity Server
+logsource:
+  product: network
+  service: netflow
+condition: 'src_ip: "<TEAMCITY_SERVER_IP>" and dst_port in [135, 139, 445, 3389, 5985, 5986, 1433, 1434, 3306, 5432, 6379, 27017] and bytes_sent > 1000 and flow_count > 50 in 5m'
+detection:
+  src_ip:
+    - "10.10.10.10"
+  dst_port:
+    - 135
+    - 139
+    - 445
+    - 3389
+    - 5985
+    - 5986
+    - 1433
+    - 1434
+    - 3306
+    - 5432
+    - 6379
+    - 27017
+  selection:
+    - src_ip
+    - dst_port
+  condition: selection and bytes_sent > 1000 and flow_count > 50 in 5m

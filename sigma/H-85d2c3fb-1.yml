@@ -1,0 +1,20 @@
+title: Detect CVE-2026-63077 Exploitation via TeamCity Agent Polling
+logsource:
+  product: teamcity
+  service: http
+condition: 'request_uri|contains: "/agentServer/" and method: (POST or GET) and status_code: 200 and user_agent: !"TeamCity Agent"'
+detection:
+  request_uri:
+    - "/agentServer/"
+  method:
+    - POST
+    - GET
+  status_code:
+    - 200
+  user_agent:
+    - "TeamCity Agent"
+  selection:
+    - request_uri
+    - method
+    - status_code
+  condition: selection

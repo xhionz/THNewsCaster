@@ -1,0 +1,19 @@
+title: Detect External Triggering of TeamCity Pipelines with Stolen Credentials
+logsource:
+  product: teamcity
+  service: webhook
+condition: 'source_ip not in ["192.168.0.0/16", "10.0.0.0/8", "172.16.0.0/12"] and user_agent contains "TeamCity" and event_type: "build_started"'
+detection:
+  source_ip:
+    - "192.168.0.0/16"
+    - "10.0.0.0/8"
+    - "172.16.0.0/12"
+  user_agent:
+    - "TeamCity"
+  event_type:
+    - "build_started"
+  selection:
+    - source_ip
+    - user_agent
+    - event_type
+  condition: selection and not source_ip in trusted_networks
