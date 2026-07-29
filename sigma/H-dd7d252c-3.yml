@@ -1,0 +1,10 @@
+title: FMC Scanning Government/Manufacturing Subnets
+logsource:
+  product: cisco_fmc
+  service: firewall
+detection:
+  source.ip: '192.168.10.50'
+  destination.ip: ['10.10.0.0/16', '172.16.0.0/12', '192.168.200.0/24']
+  destination.port: [22, 445, 3389, 1433, 5985]
+  direction: 'outbound'
+condition: source.ip == '192.168.10.50' and destination.ip in ['10.10.0.0/16', '172.16.0.0/12', '192.168.200.0/24'] and destination.port in [22, 445, 3389, 1433, 5985] and direction == 'outbound'

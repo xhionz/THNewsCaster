@@ -1,0 +1,9 @@
+title: FMC Outbound Connection to Suspicious External Port
+logsource:
+  product: cisco_fmc
+  service: firewall
+detection:
+  source.ip: '192.168.10.50'
+  destination.port: [4444, 5555, 8080, 9000, 9999]
+  direction: 'outbound'
+condition: source.ip == '192.168.10.50' and destination.port in [4444, 5555, 8080, 9000, 9999] and direction == 'outbound'

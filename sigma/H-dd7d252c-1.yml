@@ -1,0 +1,9 @@
+title: FMC Hard-Coded Credential Login Attempt
+logsource:
+  product: cisco_fmc
+detection:
+  keywords:
+    - 'hardcoded credential'
+    - 'default password'
+    - 'admin:admin'
+condition: keywords
