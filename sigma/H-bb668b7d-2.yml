@@ -1,0 +1,13 @@
+title: Suspicious Image Metadata Exploit in Active Storage
+logsource:
+  product: rails
+  service: application
+condition: 'request_uri contains "/rails/active_storage" and request_method == "POST" and content_type contains "image" and (request_body contains "EXIF" or request_body contains "ICC" or request_body contains "\x00" or request_body contains "\x1b" or request_body contains "\x00\x00\x00\x00")'
+detection:
+  keywords:
+    - "EXIF"
+    - "ICC"
+    - "\x00"
+    - "\x1b"
+    - "\x00\x00\x00\x00"
+  condition: keywords

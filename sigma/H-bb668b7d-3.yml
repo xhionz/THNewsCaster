@@ -1,0 +1,12 @@
+title: DNS Tunneling from Rails Server Post-Exploit
+logsource:
+  product: dns
+  service: resolver
+condition: 'query_domain contains "rails" or query_domain contains "secret" or query_domain contains "key" or query_domain contains "db" and query_type == "TXT" and source_ip IN rails_app_servers'
+detection:
+  keywords:
+    - "rails"
+    - "secret"
+    - "key"
+    - "db"
+  condition: keywords

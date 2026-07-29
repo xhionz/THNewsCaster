@@ -1,0 +1,11 @@
+title: Suspicious Active Storage File Read Attempt via Image Upload
+logsource:
+  product: rails
+  service: application
+condition: 'request_uri contains "/rails/active_storage" and request_method == "POST" and content_type contains "image" and request_body contains ".." or request_body contains "../" or request_body contains "\x00"'
+detection:
+  keywords:
+    - ".."
+    - "../"
+    - "\x00"
+  condition: keywords
