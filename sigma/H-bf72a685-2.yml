@@ -1,0 +1,11 @@
+title: Suspicious Directory Traversal in vCenter Syslog UI
+logsource:
+  product: vcenter
+  service: web-server
+detection:
+  selection:
+    uri|contains: '../'
+    status_code: 200
+    user_agent|contains: 'curl' | 'Python-requests' | 'wget'
+  condition: selection
+  timeframe: 10m

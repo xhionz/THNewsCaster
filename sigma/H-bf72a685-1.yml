@@ -1,0 +1,11 @@
+title: Suspicious vSphere API Authentication Bypass Attempt
+logsource:
+  product: vcenter
+  service: vsphere-api
+detection:
+  selection:
+    event_type: auth_failure
+    user: 'ANONYMOUS'
+    endpoint: '/mob' | '/api'
+  condition: selection
+  timeframe: 5m

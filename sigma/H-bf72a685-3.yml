@@ -1,0 +1,12 @@
+title: Suspicious vCenter Login from Unusual Location or Time
+logsource:
+  product: vcenter
+  service: authentication
+detection:
+  selection:
+    event_type: auth_success
+    user: '*'
+    source_ip: '*'
+    time: '00:00-06:00' OR source_ip NOT IN [admin_ip_ranges]
+  condition: selection
+  timeframe: 1h
