@@ -1,0 +1,16 @@
+title: Detect Suspicious TLS Certificates Mimicking Legitimate Services
+logsource:
+  product: network
+  category: tls
+detection:
+  sel:
+    tls_subject: '*update-service.net'
+    cert_issuer: 'DigiCert Inc'
+    cert_serial: '04:12:34:56:78:9A:BC:DE:F0:12:34:56:78:9A:BC:DE'
+    src_ip: '10.0.0.0/8'
+  condition: sel
+fields:
+  - src_ip
+  - tls_subject
+  - cert_issuer
+  - cert_serial

@@ -1,0 +1,16 @@
+title: Detect Night Dragon Phishing Delivery via Suspicious Android Network Traffic
+logsource:
+  product: android
+  category: network_connection
+detection:
+  sel:
+    dst_domain: 'hunt.io'
+    user_agent: 'Dalvik/2.1.0 (Linux; U; Android 12; Nexus 5 Build/SQ3A.220805.005)'
+    src_ip: '10.0.0.0/8'
+    tls_subject: '*night-dragon.net'
+  condition: sel
+fields:
+  - src_ip
+  - dst_domain
+  - user_agent
+  - tls_subject

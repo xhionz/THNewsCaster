@@ -1,0 +1,16 @@
+title: Detect Flying Eagle RAT C2 via Obfuscated HTTPS
+logsource:
+  product: android
+  category: network_connection
+detection:
+  sel:
+    dst_domain: 'hunt.io'
+    tls_cipher: 'TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384'
+    tls_subject: '*update-service.net'
+    src_ip: '10.0.0.0/8'
+  condition: sel
+fields:
+  - src_ip
+  - dst_domain
+  - tls_subject
+  - tls_cipher
