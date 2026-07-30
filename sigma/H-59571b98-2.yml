@@ -1,0 +1,24 @@
+title: Suspicious vCenter Authentication Bypass Attempt
+logsource:
+  product: vmware_vcenter
+  category: authentication
+detection:
+  selection:
+    EventID: 1001
+    Status: 'Failed'
+    User: 'Administrator'
+    SourceIP: '10.0.0.0/8'
+    Reason: 'Invalid credentials'
+  condition: selection
+  filter:
+    - EventID: 1002
+      Status: 'Success'
+      User: 'Administrator'
+      SourceIP: '10.0.0.0/8'
+      timestamp: within 10s of previous event
+fields:
+  - User
+  - SourceIP
+  - EventID
+  - Status
+level: high

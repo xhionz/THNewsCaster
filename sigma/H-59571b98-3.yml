@@ -1,0 +1,15 @@
+title: Suspicious VMware Tools Process Creation
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image: '*\vmtoolsd.exe'
+    CommandLine: '*-e*' OR CommandLine: '*--exec*' OR CommandLine: '*--command*'
+    ParentImage: '*\vmware-vmx.exe'
+  condition: selection
+fields:
+  - Image
+  - CommandLine
+  - ParentImage
+level: high

@@ -1,0 +1,16 @@
+title: Suspected ESXi VM Escape via Kernel Exploit
+logsource:
+  product: vmware_esxi
+  category: process_creation
+detection:
+  selection:
+    EventID: 1001
+    Image: '*vmx*'  # VM process spawning unusual child
+    ParentImage: '*vmx*'  # Parent is VM process
+    CommandLine: '*-e* -c*'  # Suspicious command-line flags
+  condition: selection
+fields:
+  - Image
+  - ParentImage
+  - CommandLine
+level: high
