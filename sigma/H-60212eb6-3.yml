@@ -1,0 +1,10 @@
+title: Detect Database Credentials in Rails Logs
+logsource:
+  product: rails
+  service: application
+condition: 'log_message|contains: "password=" or log_message|contains: "SECRET_KEY_BASE" or log_message|contains: "DATABASE_URL"'
+detection:
+  log_message:
+    - "password="
+    - "SECRET_KEY_BASE"
+    - "DATABASE_URL="

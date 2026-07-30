@@ -1,0 +1,12 @@
+title: Detect File Read via CVE-2022-32833 Exploit in Rails Application
+logsource:
+  product: rails
+  service: application
+condition: 'request_uri|contains: "/rails/active_storage/representations/" and response_status: 500 and user_agent|contains: "libvips"'
+detection:
+  request_uri:
+    - "/rails/active_storage/representations/"
+  response_status:
+    - 500
+  user_agent:
+    - "libvips"

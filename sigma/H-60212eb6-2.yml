@@ -1,0 +1,13 @@
+title: Detect .env File Access on Developer Workstations
+logsource:
+  product: windows
+  service: application
+condition: 'event_type:file_access and file_path:*.env and process_name:cmd.exe or process_name:powershell.exe'
+detection:
+  file_path:
+    - "*.env"
+  process_name:
+    - "cmd.exe"
+    - "powershell.exe"
+  event_type:
+    - "file_access"
