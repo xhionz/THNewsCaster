@@ -1,0 +1,11 @@
+title: Detect Large HTTPS Exfiltration from Exchange Servers
+logsource:
+  product: exchange
+  service: network
+condition: 'dst_port: 443 and bytes_sent > 500000000 and dst_domain not in trusted_domains'
+detection:
+  large_exfil:
+    - dst_port: 443
+    - bytes_sent: '>500000000'
+    - dst_domain: 'not in trusted_domains'
+condition: large_exfil

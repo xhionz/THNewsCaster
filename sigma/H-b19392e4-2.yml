@@ -1,0 +1,11 @@
+title: Detect Suspicious OWA Logins from Rarely-Used Devices or Locations
+logsource:
+  product: exchange
+  service: owa
+condition: 'event_id: 4624 and logon_type: 3 and (device_id: "" or source_country: "" or source_ip: "*" and user: "*" and not user in trusted_users)'
+detection:
+  anomalous_login:
+    - device_id: ''
+    - source_country: ''
+    - user: 'not in trusted_users'
+condition: anomalous_login
