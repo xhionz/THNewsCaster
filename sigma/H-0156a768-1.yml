@@ -1,0 +1,10 @@
+title: Detect CVE-2023-20197 Exploitation via HTTP Request
+logsource:
+  product: cisco_fmc
+  service: http
+detection:
+  req_uri: http.request.uri contains '/api/fmc_config/v1/domain/'
+  user_agent: http.user_agent contains 'curl' and not http.user_agent contains 'Cisco'
+  status_code: http.response.status_code == 200
+  method: http.request.method == 'POST'
+condition: all of them

@@ -1,0 +1,9 @@
+title: Detect Suspicious FMC Authentication Attempts
+logsource:
+  product: cisco_fmc
+  service: authentication
+detection:
+  failed_logins: event.type == 'login_failed' AND event.category == 'authentication'
+  success_after_fail: event.type == 'login_success' AND event.category == 'authentication' AND event.action == 'login' AND event.user != 'system'
+  rapid_attempts: count(failed_logins) > 5 within 5m
+condition: all of them

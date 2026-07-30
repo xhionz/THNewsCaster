@@ -1,0 +1,10 @@
+title: Detect DNS Tunneling from FMC
+logsource:
+  product: cisco_fmc
+  service: dns
+detection:
+  long_labels: dns.query.name | count_labels() > 8
+  high_volume: count(dns.query.name) > 50 within 10m
+  unusual_tld: dns.query.name endswith '.tk' OR dns.query.name endswith '.xyz' OR dns.query.name endswith '.info'
+  no_resolved_ip: dns.response.code == 'NXDOMAIN' AND dns.query.type == 'A'
+condition: all of them
