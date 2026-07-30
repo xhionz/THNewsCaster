@@ -1,0 +1,14 @@
+title: Phishing Email Leading to OWA Login
+logsource:
+  product: email_gateway
+detection:
+  selection:
+    subject: '*OWA*' OR subject: '*password*' OR subject: '*verify account*'
+    attachment_type: 'html' OR attachment_type: 'exe'
+    sender_domain: '.*\.ru$' OR sender_domain: '.*\.onmicrosoft.com' AND NOT sender_domain: 'yourcompany.com'
+  condition: selection
+  keywords:
+    - 'OWA'
+    - 'login'
+    - 'verify'
+condition: selection

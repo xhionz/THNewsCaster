@@ -1,0 +1,16 @@
+title: Suspicious OWA Access After Credential Rotation
+logsource:
+  product: exchange_server
+  service: owa
+detection:
+  selection:
+    event_id: 4624
+    LogonType: 3
+    AccountName: '*@*'
+    LogonProcessName: 'OWA'
+    TimeCreated: '2026-07-22T00:00:00Z'.. '2026-07-30T23:59:59Z'
+  condition: selection
+  keywords:
+    - 'OWA'
+    - 'Exchange'
+condition: selection

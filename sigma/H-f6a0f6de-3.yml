@@ -1,0 +1,16 @@
+title: Suspicious ASPX File Upload in OWA Directory
+logsource:
+  product: exchange_server
+  service: iis
+detection:
+  selection:
+    file_path: '*\owa\*.aspx'
+    file_extension: 'aspx'
+    file_size: '>10000'
+    file_hash: 'NOT IN [known_good_hashes]'
+  condition: selection
+  keywords:
+    - 'cmd'
+    - 'exec'
+    - 'base64'
+condition: selection
