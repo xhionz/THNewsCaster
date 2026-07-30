@@ -1,0 +1,12 @@
+title: Azure Cosmos DB Gremlin Sandbox Escape Attempt
+logsource:
+  product: azure
+  service: cosmosdb
+detection:
+  query_pattern:
+    - 'gremlin.*\bexec\b'
+    - 'gremlin.*\bscript\b.*\bSystem\.Runtime\b'
+    - 'gremlin.*\bgetClass\b'
+    - 'gremlin.*\bforName\b'
+  condition: any of them
+level: high

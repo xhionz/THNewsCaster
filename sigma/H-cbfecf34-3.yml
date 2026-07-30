@@ -1,0 +1,11 @@
+title: Phishing Email Leading to Cosmos DB Credential Theft
+logsource:
+  product: email
+  service: o365
+detection:
+  phishing_indicators:
+    - 'subject: "Cosmos DB" AND attachment: "*.exe"'
+    - 'subject: "Security Alert" AND body: "verify your Cosmos DB access"'
+    - 'sender_domain: "free-email-service.com" AND recipient: "*admin*"'
+  condition: any of them
+level: high

@@ -1,0 +1,11 @@
+title: Suspicious Cosmos DB Access via Compromised Credential
+logsource:
+  product: azure
+  service: cosmosdb
+detection:
+  suspicious_credential:
+    - 'caller: "serviceprincipal" AND user_agent: "curl"'
+    - 'caller: "serviceprincipal" AND user_agent: "python-requests"'
+    - 'caller: "user" AND sign_in_frequency: "high" AND resource: "CosmosDB"'
+  condition: any of them
+level: high
