@@ -1,0 +1,13 @@
+title: MikroTik Configuration Export and Exfiltration
+logsource:
+  product: mikrotik
+  service: api
+condition: 'request_uri': '/export' AND 'status_code': 200 AND 'user' != 'admin' AND 'timestamp' > '2026-07-25T00:00:00Z' AND 'timestamp' < '2026-07-30T23:59:59Z' AND 'source_ip' IN (SELECT external_ip FROM suspicious_outbound_connections)
+detection:
+  config_export:
+    - 'request_uri': '/export'
+    - 'status_code': 200
+    - 'user': !'admin'
+  exfil_connection:
+    - 'source_ip': 'external_ip'
+condition: config_export and exfil_connection

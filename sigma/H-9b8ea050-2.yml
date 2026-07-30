@@ -1,0 +1,13 @@
+title: Suspicious Phishing Email Targeting MikroTik Login
+logsource:
+  product: office365
+  service: exchange
+condition: 'Subject' LIKE '%MikroTik%' OR 'Subject' LIKE '%RouterOS%' OR 'Subject' LIKE '%Login%' AND 'SenderAddress' NOT ENDS WITH '@mikrotik.com' AND 'RecipientAddress' IN (SELECT email FROM admin_users) AND 'AttachmentName' LIKE '%.exe' OR 'URL' LIKE '%mikrotik.com%' AND 'URL' NOT LIKE '%https://mikrotik.com/%'
+detection:
+  phishing_email:
+    - 'Subject': '*MikroTik*'
+    - 'SenderAddress': '!*.mikrotik.com'
+    - 'RecipientAddress': '*@ourdomain.com'
+    - 'URL': '*mikrotik.com*'
+    - 'AttachmentName': '*.exe'
+condition: phishing_email

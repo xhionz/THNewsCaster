@@ -1,0 +1,12 @@
+title: Suspicious MikroTik API Access to WireGuard Keys
+logsource:
+  product: mikrotik
+  service: api
+condition: 'request_uri': '/interface/wireguard/keys' and 'user_agent': 'MikroTik API Client' and 'status_code': 200 and 'user' != 'admin' and 'timestamp' > '2026-07-25T00:00:00Z' and 'timestamp' < '2026-07-30T23:59:59Z'
+detection:
+  suspicious_api_call:
+    - 'request_uri': '/interface/wireguard/keys'
+    - 'status_code': 200
+    - 'user_agent': 'MikroTik API Client'
+    - 'user': !'admin'
+condition: suspicious_api_call
