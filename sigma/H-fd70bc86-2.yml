@@ -1,0 +1,15 @@
+title: Cobalt Strike Beacon Delivery via Suspicious Web Redirects
+logsource:
+  product: web
+  service: proxy
+condition: 'http.url': ["*.svchost.exe", "*.sync.dat", "*.pixel.gif", "*.polyfill-7e2b.min.js"]
+  and 'http.response.status_code': 302
+  and 'http.user_agent': contains 'Mozilla'
+detection:
+  selection:
+    http.url: ["*.svchost.exe", "*.sync.dat", "*.pixel.gif", "*.polyfill-7e2b.min.js"]
+    http.response.status_code: 302
+  filter:
+    http.url: ["*.microsoft.com", "*.google.com", "*.apple.com", "*.cloudflare.com"]
+condition: selection and not filter
+level: high

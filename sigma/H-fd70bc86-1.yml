@@ -1,0 +1,13 @@
+title: Suspicious Microsoft Login Domain Access via Phishing
+logsource:
+  product: dns
+  service: dns
+condition: 'dns.domain': ["m365-owa.com", "owa-ms365.com", "ms365-device.com", "ms365-live.com", "connectivity-check.warp", "cloudflarecp.com", "cloudflareok.com"]
+  and not 'dns.domain': ["login.microsoftonline.com", "outlook.office.com", "portal.azure.com"]
+detection:
+  selection:
+    dns.domain: ["m365-owa.com", "owa-ms365.com", "ms365-device.com", "ms365-live.com", "connectivity-check.warp", "cloudflarecp.com", "cloudflareok.com"]
+  filter:
+    dns.domain: ["login.microsoftonline.com", "outlook.office.com", "portal.azure.com"]
+condition: selection and not filter
+level: high

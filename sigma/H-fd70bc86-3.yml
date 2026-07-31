@@ -1,0 +1,16 @@
+title: Suspicious Entra ID OAuth Token Issuance for Traveler Accounts
+logsource:
+  product: azure
+  service: sign-in-logs
+condition: 'userPrincipalName': contains 'traveler' OR 'userPrincipalName': contains 'guest'
+  and 'conditionalAccessPolicies': 'None'
+  and 'appDisplayName': 'Microsoft Office 365' OR 'appDisplayName': 'Azure Portal'
+detection:
+  selection:
+    userPrincipalName: contains 'traveler'
+    conditionalAccessPolicies: 'None'
+    appDisplayName: ['Microsoft Office 365', 'Azure Portal']
+  filter:
+    ipAddress: IN ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
+condition: selection and not filter
+level: high
