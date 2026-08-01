@@ -1,0 +1,12 @@
+title: Detect Log4Shell Exploitation in ACC
+logsource:
+  product: java
+  service: adobe_campaign_classic
+detection:
+  selection:
+    message:
+      - '*${jndi:ldap:*'
+      - '*${jndi:rmi:*'
+      - '*${jndi:dns:*'
+  condition: selection
+  timeframe: 7d

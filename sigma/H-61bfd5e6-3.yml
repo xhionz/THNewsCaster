@@ -1,0 +1,17 @@
+title: Detect Unauthorized API Key Usage in ACC
+logsource:
+  product: adobe_campaign_classic
+  service: api
+detection:
+  selection:
+    api_key:
+      - 'unknown'
+      - 'temp_key_123'
+      - 'test_key'
+    api_key_not_in:
+      - 'acc_prod_key_01'
+      - 'acc_prod_key_02'
+      - 'acc_backup_key'
+      - 'legacy_key_001'
+  condition: selection
+  timeframe: 7d

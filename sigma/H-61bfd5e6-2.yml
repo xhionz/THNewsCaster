@@ -1,0 +1,19 @@
+title: Detect Non-Admin User Performing ACC Export
+logsource:
+  product: adobe_campaign_classic
+  service: web_application
+detection:
+  selection:
+    action: 'export_data'
+    user_id:
+      - 'user1'
+      - 'user2'
+      - 'user3'
+      - 'guest'
+      - 'temp_user'
+    user_id_not_in:
+      - 'admin'
+      - 'acc_admin'
+      - 'security_ops'
+  condition: selection
+  timeframe: 7d
