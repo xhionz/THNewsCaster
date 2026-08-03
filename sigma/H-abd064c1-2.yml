@@ -1,0 +1,17 @@
+title: Detect Lateral Movement via WMI or PsExec
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 4688
+    - 4624
+  process_name:
+    - wmiprvse.exe
+    - psexec.exe
+  command_line:
+    - '*-c*'
+    - '*-e*'
+    - '*-u*'
+    - '*-p*'
+condition: any of them

@@ -1,0 +1,11 @@
+title: Detect SonicWall SMA 1000 CVE-2023-46805 Exploit Attempt
+logsource:
+  product: sonicwall_sma
+  service: firewall
+detection:
+  req_uri: /dana-na/auth/cookie/authcookie
+  user_agent: 
+    - curl
+    - wget
+  status_code: 200
+condition: all of them

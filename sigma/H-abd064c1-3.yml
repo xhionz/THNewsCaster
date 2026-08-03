@@ -1,0 +1,12 @@
+title: Detect Suspicious POST to /dana-na/ with Base64 Payload
+logsource:
+  product: web_proxy
+  service: squid
+detection:
+  method: POST
+  uri: 
+    - /dana-na/
+    - /dana-na/auth/
+  content_length: '>1000'
+  body_content: /(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?/
+condition: all of them
