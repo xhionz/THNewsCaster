@@ -1,0 +1,14 @@
+title: Detect Ransomware File Encryption via Sysmon EventID 11
+logsource:
+  product: sysmon
+  category: file_event
+detection:
+  selection:
+    EventID: 11
+    Image: '*\n-central\*.exe'
+    TargetFilename: '*.encrypted' OR TargetFilename: '*.lock' OR TargetFilename: '*.crypt'
+  condition: selection
+fields:
+  - Image
+  - TargetFilename
+  - User

@@ -1,0 +1,15 @@
+title: Detect Mimikatz lsass memory access via Sysmon EventID 10
+logsource:
+  product: sysmon
+  category: process_access
+detection:
+  selection:
+    EventID: 10
+    TargetImage: '*\lsass.exe'
+    GrantedAccess: '0x1410'
+    SourceImage: '*\mimikatz.exe' OR SourceImage: '*\procexp64.exe' OR SourceImage: '*\taskmgr.exe'
+  condition: selection
+fields:
+  - SourceImage
+  - TargetImage
+  - GrantedAccess
