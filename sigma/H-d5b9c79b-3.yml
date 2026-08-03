@@ -1,0 +1,15 @@
+title: Detect Suspicious PowerShell Execution from N-central Agent
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*powershell.exe'
+    CommandLine: '*-enc*' | '*-nop*' | '*-e*' | '*IEX*' | '*Invoke-Expression*' | '*DownloadString*' | '*encrypt*' | '*ransom*' | '*.exe*'
+    ParentImage: '*ncentralagent.exe' | '*ncentral.exe'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentImage
+  - Image

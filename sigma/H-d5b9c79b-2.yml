@@ -1,0 +1,14 @@
+title: Detect Credential Dumping via N-central Service Account Access
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*lsass*' | '*mimikatz*' | '*sekurlsa*' | '*procdump*'
+    ParentImage: '*ncentral.exe'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentImage
+  - Image
