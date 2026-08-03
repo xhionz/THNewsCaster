@@ -1,0 +1,14 @@
+title: Detect Legitimate User Logons Originating from N-central Server
+logsource:
+  product: windows
+  service: security
+  category: logon
+condition: 'selection'
+detection:
+  selection:
+    event_id: 4624
+    logon_type: 10
+    src_ip: '10.10.10.10'
+    account_name: 'DOMAIN\admin_*'
+  timeframe: 2026-07-28T00:00:00Z..2026-08-02T23:59:59Z
+condition: selection

@@ -1,0 +1,11 @@
+title: Detect Unpatched N-central Server Version
+logsource:
+  product: endpoint
+  category: process
+condition: 'selection'
+detection:
+  selection:
+    process_name: ncentral.exe
+    version: '<2026.3.1.7'
+  timeframe: 2026-08-02T00:00:00Z..2026-08-03T23:59:59Z
+condition: selection

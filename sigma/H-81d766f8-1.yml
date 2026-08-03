@@ -1,0 +1,15 @@
+title: Detect N-central Auth Bypass via Suspicious POST Requests
+logsource:
+  product: webserver
+  service: nginx
+  category: web
+condition: 'selection'
+detection:
+  selection:
+    method: 'POST'
+    path: '/api/auth/login'
+    body: 'auth_token=|auth_key=|session_id='
+    status: 200
+    user_agent: '*N-Central*'
+  timeframe: 2026-07-28T00:00:00Z..2026-08-02T23:59:59Z
+condition: selection
