@@ -1,0 +1,10 @@
+title: Detect Keyv Worm Post-Install Script Execution
+logsource:
+  product: linux
+  service: bash
+condition: 'event_id: "command" and (command_line contains "npm install" or command_line contains "npm ci") and (command_line contains "keyv@6.0.0" or command_line contains "cacheable" or command_line contains "postinstall" or command_line contains "node -e" or command_line contains "process.env.") and not command_line contains "--no-audit"'
+detection:
+  npm_install: 'command_line contains "npm install" or command_line contains "npm ci"'
+  malicious_keywords: 'command_line contains "keyv@6.0.0" or command_line contains "cacheable" or command_line contains "postinstall" or command_line contains "node -e" or command_line contains "process.env."'
+  exclude_legit: 'not command_line contains "--no-audit"'
+condition: 'npm_install and malicious_keywords and exclude_legit'

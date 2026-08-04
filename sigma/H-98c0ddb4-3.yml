@@ -1,0 +1,10 @@
+title: Detect VS Code Extension Tampering via npm Install
+logsource:
+  product: linux
+  service: bash
+condition: 'event_id: "command" and command_line contains "npm install" and (command_line contains ".vscode" or command_line contains "~/.config/Code" or command_line contains "~/.vscode" or command_line contains "extensions" or command_line contains "package.json" or command_line contains "postinstall")'
+detection:
+  npm_install: 'command_line contains "npm install"'
+  ide_path: 'command_line contains ".vscode" or command_line contains "~/.config/Code" or command_line contains "~/.vscode" or command_line contains "extensions"'
+  postinstall: 'command_line contains "postinstall"'
+condition: 'npm_install and (ide_path or postinstall)'

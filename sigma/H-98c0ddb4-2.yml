@@ -1,0 +1,10 @@
+title: Detect Environment Variable Exfiltration via npm Scripts
+logsource:
+  product: linux
+  service: bash
+condition: 'event_id: "command" and (command_line contains "npm install" or command_line contains "npm ci") and (command_line contains "process.env." or command_line contains "os.env" or command_line contains "dotenv") and (command_line contains "curl" or command_line contains "wget" or command_line contains "nc" or command_line contains "dig" or command_line contains "nslookup")'
+detection:
+  npm_install: 'command_line contains "npm install" or command_line contains "npm ci"'
+  env_access: 'command_line contains "process.env." or command_line contains "os.env" or command_line contains "dotenv"'
+  exfil_tool: 'command_line contains "curl" or command_line contains "wget" or command_line contains "nc" or command_line contains "dig" or command_line contains "nslookup"'
+condition: 'npm_install and env_access and exfil_tool'
