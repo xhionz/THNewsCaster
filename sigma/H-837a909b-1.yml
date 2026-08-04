@@ -1,0 +1,15 @@
+title: Detect N-central Auth Bypass Exploitation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 4624
+    LogonType: 3
+    AccountName: 'N-CentralSvc'
+  selection2:
+    EventID: 4688
+    CommandLine: '*n-central*'
+  condition: selection1 and selection2
+  timeframe: 5m
+level: high

@@ -1,0 +1,16 @@
+title: Detect N-central Take Control Session Initiation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 4624
+    LogonType: 10
+    AccountName: '*\*'
+    LogonProcessName: 'User32'
+  selection2:
+    EventID: 4688
+    CommandLine: '*N-Central*TakeControl*'
+  condition: selection1 and selection2
+  timeframe: 10m
+level: high

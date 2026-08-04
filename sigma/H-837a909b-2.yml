@@ -1,0 +1,20 @@
+title: Detect Suspicious Cloudflare Tunnel Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\temp\*.exe'
+    CommandLine: '*cloudflared*'
+  selection2:
+    Image: '*\appdata\local\temp\*.exe'
+    CommandLine: '*tunnel*'
+  selection3:
+    Image: 'powershell.exe'
+    CommandLine: '*-e *cloudflared*'
+  selection4:
+    Image: 'mshta.exe'
+    CommandLine: '*cloudflared*'
+  condition: selection1 or selection2 or selection3 or selection4
+  timeframe: 1h
+level: high
