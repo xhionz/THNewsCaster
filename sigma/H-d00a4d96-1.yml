@@ -1,0 +1,19 @@
+title: Suspicious Process Execution via N-central Service
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 1
+    Image: '*\N-central.exe'
+    CommandLine: '*-c *'
+  Selection2:
+    EventID: 1
+    Image: '*\svchost.exe'
+    CommandLine: '*-N-central*'
+  Selection3:
+    EventID: 1
+    Image: '*\services.exe'
+    CommandLine: '*N-central*'
+  Condition: Selection1 or Selection2 or Selection3
+level: high

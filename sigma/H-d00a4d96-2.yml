@@ -1,0 +1,25 @@
+title: Suspicious Outbound Traffic from N-central Hosts
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 3
+    Image: '*\N-central.exe'
+    DestinationIp: ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
+    DestinationPort: 443
+    DestinationHostname: '*'
+  Selection2:
+    EventID: 3
+    Image: '*\svchost.exe'
+    DestinationIp: ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
+    DestinationPort: 443
+    DestinationHostname: '*'
+  Selection3:
+    EventID: 3
+    Image: '*\services.exe'
+    DestinationIp: ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
+    DestinationPort: 443
+    DestinationHostname: '*'
+  Condition: Selection1 or Selection2 or Selection3
+level: high

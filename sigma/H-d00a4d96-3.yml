@@ -1,0 +1,17 @@
+title: Obfuscated PowerShell Execution via N-central Service
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 1
+    Image: '*\powershell.exe'
+    CommandLine: '*-e *' OR '*-enc *' OR '*-nop *' OR '*-w hidden *' OR '*IEX *' OR '*Invoke-Expression *'
+    ParentImage: '*\N-central.exe' OR ParentImage: '*\svchost.exe' OR ParentImage: '*\services.exe'
+  Selection2:
+    EventID: 1
+    Image: '*\cmd.exe'
+    CommandLine: '* /c powershell -e *' OR '* /c powershell -enc *'
+    ParentImage: '*\N-central.exe' OR ParentImage: '*\svchost.exe' OR ParentImage: '*\services.exe'
+  Condition: Selection1 or Selection2
+level: high
