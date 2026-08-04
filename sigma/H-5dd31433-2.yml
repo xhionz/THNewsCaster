@@ -1,0 +1,12 @@
+title: Detect N-central Auth Bypass via CVE-2023-48614
+logsource:
+  product: webserver
+  service: http
+condition: 'request_uri contains "/n-central/api/v1/auth/login" and status_code == 200 and request_headers["Authorization"] contains "Basic" and request_body contains "username=admin"'
+detection:
+  auth_bypass_pattern:
+    - '/n-central/api/v1/auth/login'
+    - 'status_code: 200'
+    - 'request_headers.Authorization: Basic'
+    - 'request_body: username=admin'
+condition: all of them

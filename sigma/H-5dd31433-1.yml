@@ -1,0 +1,14 @@
+title: Detect Langflow Code Injection via CVE-2023-34362
+logsource:
+  product: webserver
+  service: http
+condition: 'request_uri contains "/api/v1/run" and request_body contains "exec(" and request_body contains "eval(" and status_code == 200'
+detection:
+  exec_eval_pattern:
+    - 'exec('
+    - 'eval('
+  uri_pattern:
+    - '/api/v1/run'
+  status_pattern:
+    - '200'
+condition: all of them

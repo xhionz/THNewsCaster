@@ -1,0 +1,14 @@
+title: Detect Sensitive Data in Plaintext Tomcat Traffic
+logsource:
+  product: webserver
+  service: http
+condition: 'request_uri contains "/api/v1/" and status_code == 200 and ssl_enabled == false and (request_body contains "token=" or request_body contains "password=" or request_body contains "session_id=")'
+detection:
+  plaintext_pattern:
+    - 'request_uri: /api/v1/'
+    - 'status_code: 200'
+    - 'ssl_enabled: false'
+    - 'request_body: *token=*'
+    - 'request_body: *password=*'
+    - 'request_body: *session_id=*'
+condition: all of them
