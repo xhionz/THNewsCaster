@@ -1,0 +1,11 @@
+title: Veeam Unauthenticated Credential Extraction
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    http.request.method: 'POST'
+    http.request.uri: '/api/v1/agent/credentials'
+    http.user_agent: 'curl'
+    http.response.status_code: 200
+  condition: selection

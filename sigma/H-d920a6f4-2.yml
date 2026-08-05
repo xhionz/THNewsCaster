@@ -1,0 +1,12 @@
+title: Terraform MCP Token Replay Detection
+logsource:
+  product: hashicorp
+  service: terraform-mcp
+  category: audit
+detection:
+  selection:
+    event_type: 'execution'
+    tenant_id: 'tenant-b'
+    actor: 'user@tenant-a.com'
+    request_id: 'previous_request_id'
+  condition: selection

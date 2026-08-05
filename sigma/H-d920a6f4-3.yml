@@ -1,0 +1,10 @@
+title: Django SSRF Path Traversal Detection
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    http.request.uri: '*../*'
+    http.response.status_code: 200
+    http.user_agent: '*curl*'
+  condition: selection
