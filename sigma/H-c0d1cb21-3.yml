@@ -1,0 +1,12 @@
+title: Gitea Org-Mode Social Engineering Exploit
+logsource:
+  product: gitea
+  service: http
+condition: 'request_uri contains "/repo/" and request_body contains ":file:" and request_header User-Agent contains "Mozilla" and request_method = "POST" and user_id != "system"'
+detection:
+  keywords:
+    - ":file:"
+  filters:
+    - request_body: "/etc/passwd"
+    - request_body: "/etc/shadow"
+condition: keywords and any of filters

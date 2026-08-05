@@ -1,0 +1,13 @@
+title: Gitea Org-Mode File Read Attempt
+logsource:
+  product: gitea
+  service: http
+condition: 'request_uri contains ":file:" or request_body contains ":file:" and (request_body contains "/etc/passwd" or request_body contains "/etc/shadow" or request_body contains "/etc/hosts")
+detection:
+  keywords:
+    - ":file:"
+  filters:
+    - request_body: "/etc/passwd"
+    - request_body: "/etc/shadow"
+    - request_body: "/etc/hosts"
+condition: keywords and any of filters

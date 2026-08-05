@@ -1,0 +1,12 @@
+title: Gitea Public Repo Org-Mode File Read
+logsource:
+  product: gitea
+  service: http
+condition: 'request_uri contains "/repo/" and request_body contains ":file:" and (request_body contains "/etc/" or request_body contains "~")
+detection:
+  keywords:
+    - ":file:"
+  filters:
+    - request_body: "/etc/"
+    - request_body: "~"
+condition: keywords and any of filters
