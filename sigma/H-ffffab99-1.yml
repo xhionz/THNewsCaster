@@ -1,0 +1,14 @@
+title: Detect Web Shell Upload in TeamCity
+logsource:
+  product: teamcity
+  service: server
+detection:
+  web_shell_paths:
+    - file.path: "*/webapps/ROOT/*.jsp"
+    - file.path: "*/webapps/teamcity/*.war"
+    - file.path: "*/webapps/ROOT/*.jspx"
+  web_shell_content:
+    - message: '*<%@ page import="java.io.*" %>'
+    - message: '*Runtime.getRuntime().exec('*')*
+condition: web_shell_paths or web_shell_content
+level: high

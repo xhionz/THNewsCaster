@@ -1,0 +1,14 @@
+title: Detect Lateral Movement via TeamCity Service Account
+logsource:
+  product: windows
+  service: security
+detection:
+  service_account:
+    - winlogon.account_name: 'TeamCityService'
+    - winlogon.account_name: 'svc_teamcity'
+  lateral_movement:
+    - event.action: 'Logon'
+    - logon.type: 3  # Network logon
+    - source.ip != '192.168.10.0/24'  # TeamCity server subnet
+condition: service_account and lateral_movement
+level: high

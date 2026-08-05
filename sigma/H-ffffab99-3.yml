@@ -1,0 +1,13 @@
+title: Detect Deserialization Payload in TeamCity API
+logsource:
+  product: teamcity
+  service: api
+detection:
+  java_deserialization:
+    - message: '*java.io.ObjectInputStream*'
+    - message: '*sun.reflect.GeneratedSerializationConstructorAccessor*'
+    - message: '*commons-collections*'
+    - message: '*org.apache.commons.collections.Transformer*'
+    - message: '*ysoserial*'
+condition: java_deserialization
+level: critical
