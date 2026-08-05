@@ -1,0 +1,17 @@
+title: Suspicious Langflow RCE Payload via POST Request
+logsource:
+  product: web_server
+  service: http
+detection:
+  selection:
+    method: 'POST'
+    uri: '*/api/v1/flow/.*'
+    status: 200
+  keywords:
+    - 'eval('
+    - 'exec('
+    - 'os.system('
+    - 'subprocess.Popen('
+  condition: selection and 1 of keywords*
+fields: [client_ip, uri, user_agent]
+level: high

@@ -1,0 +1,16 @@
+title: Suspicious Scheduled Task Creation via PowerShell or cmd
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\cmd.exe' OR '*\powershell.exe'
+    CommandLine: '*schtasks.exe /create*' OR '*schtasks /create*' OR '*at *' OR '*New-ScheduledTask*'
+  selection2:
+    EventID: 1
+    Image: '*\cmd.exe' OR '*\powershell.exe'
+    CommandLine: '*whoami /all*' OR '*net user*' OR '*dumpcred*' OR '*mimikatz*'
+  condition: selection and selection2
+fields: [ProcessId, Image, CommandLine, ParentImage]
+level: high

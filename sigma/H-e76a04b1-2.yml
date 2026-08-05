@@ -1,0 +1,15 @@
+title: Suspicious PowerShell Execution Leading to SMB Connection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\powershell.exe'
+    CommandLine: '*-EncodedCommand*' OR '*Invoke-Expression*' OR '*Test-Connection*' OR '*Get-NetIPAddress*'
+  selection2:
+    EventID: 3
+    DestinationIp: '*'
+    DestinationPort: '445'
+  condition: selection and selection2
+fields: [ProcessId, Image, CommandLine, DestinationIp, DestinationPort]
+level: high
