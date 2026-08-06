@@ -1,0 +1,14 @@
+title: Suspicious ABB Portal Phishing Attempt
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects HTTP requests to spoofed ABB download pages
+logsource:
+  product: webserver
+  service: nginx
+detection:
+  selection:
+    http.host: 'search.abb.com'
+    http.request.uri: '/download.aspx'
+    user_agent: contains 'Mozilla' and not contains 'ABB'
+  condition: selection
+level: high

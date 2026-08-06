@@ -1,0 +1,16 @@
+title: Anomalous SMB/RDP from Zenon Hosts
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects SMB or RDP connections from Zenon hosts to non-whitelisted OT or domain targets
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5156
+    IpPort: '445' or IpPort: '3389'
+    DestinationIp: '192.168.100.0/24' or DestinationIp: '10.10.0.0/16'
+    Image: 'C:\\Program Files\\ABB\\Zenon\\*.exe'
+    DestinationIp not in ['10.10.1.10', '10.10.1.11', '10.10.1.12'] # whitelisted DCs
+  condition: selection
+level: high
