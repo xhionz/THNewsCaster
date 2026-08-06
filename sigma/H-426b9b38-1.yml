@@ -1,0 +1,16 @@
+title: Suspicious TeamCity RCE Exploit Attempt via CVE-2026-63077
+logsource:
+  product: teamcity
+  service: http
+detection:
+  req_uri:
+    - '/app/rest/builds/'
+    - '/app/rest/builds/id:'
+    - '/app/rest/vcs-root-instances/'
+    - '/app/rest/agentTypes/'
+  method: 'POST'
+  status_code: 200
+  user_agent: 'curl'
+  src_ip: '192.168.100.0/24'
+condition: 'all of them'
+timeframe: 1d

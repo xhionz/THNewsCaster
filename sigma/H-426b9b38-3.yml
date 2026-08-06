@@ -1,0 +1,14 @@
+title: Suspicious Exfiltration of Build Artifacts via HTTP
+logsource:
+  product: teamcity
+  service: http
+detection:
+  req_uri:
+    - '/builds/'
+    - '/artifacts/'
+    - '/repo/'
+  response_size: '>1000000'
+  dst_ip: 'not in [internal_ranges]'
+  user_agent: 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)'
+condition: 'all of them'
+timeframe: 1d

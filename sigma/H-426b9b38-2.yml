@@ -1,0 +1,14 @@
+title: Lateral Movement via WinRM/SMB from TeamCity Server
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 3
+    - 7
+  source_process_name: 'svchost.exe'
+  dest_ip: '192.168.100.0/24'
+  dest_port: 5985
+  src_ip: '[teamcity_server_ips]'
+condition: 'all of them'
+timeframe: 1d
