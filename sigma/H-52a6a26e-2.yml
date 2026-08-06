@@ -1,0 +1,16 @@
+title: Suspicious SMB Logon to Non-Tech Server
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624' and 'logon_type: 3' and 'account_name != "ANONYMOUS LOGON"' and 'source_network_address NOT IN ["192.168.10.0/24", "192.168.20.0/24"]' and 'target_server_name NOT IN ["tech-", "build-"]'
+detection:
+  event_id: 4624
+  logon_type: 3
+  account_name: 'NOT "ANONYMOUS LOGON"'
+  source_network_address: 'NOT "192.168.10.0/24"'
+  source_network_address: 'NOT "192.168.20.0/24"'
+  target_server_name: 'NOT "tech-"'
+  target_server_name: 'NOT "build-"'
+keywords:
+  - "4624"
+  - "logon_type:3"

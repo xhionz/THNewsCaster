@@ -1,0 +1,16 @@
+title: TeamCity CVE-2021-43798 RCE Attempt
+logsource:
+  product: teamcity
+  service: http
+condition: 'request_method: "POST"' and 'request_uri: "/app/rest/agents"' and 'content_length > 5000' and ('user_agent: "Java/"' or 'content_type: "application/x-java-serialized-object"')
+detection:
+  request_method: "POST"
+  request_uri: "/app/rest/agents"
+  content_length: '>5000'
+  user_agent: 'Java/'
+  content_type: 'application/x-java-serialized-object'
+keywords:
+  - "POST"
+  - "/app/rest/agents"
+  - "Java/"
+  - "x-java-serialized-object"

@@ -1,0 +1,15 @@
+title: High-Entropy DNS Query from TeamCity Server
+logsource:
+  product: dns
+condition: 'query_type: "A"' and 'query_length > 30' and 'query_entropy > 3.5' and 'source_ip IN [teamcity_server_ips]'
+detection:
+  query_type: "A"
+  query_length: '>30'
+  query_entropy: '>3.5'
+  source_ip: '10.10.1.10'
+  source_ip: '10.10.1.11'
+  source_ip: '10.10.1.12'
+keywords:
+  - "A record"
+  - "high entropy"
+  - "teamcity"
