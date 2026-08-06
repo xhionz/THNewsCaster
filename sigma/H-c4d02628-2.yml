@@ -1,0 +1,15 @@
+title: Detect Kernel Memory Timing Anomalies via eBPF Tracing
+logsource:
+  product: linux
+  service: bpf
+condition: 'event_type: kprobe and function: sys_read and duration_ns > 50000 and cache_miss_ratio > 0.8'
+detection:
+  kprobe:
+    event_type: 'kprobe'
+  function:
+    function: 'sys_read'
+  duration_ns:
+    duration_ns: '>50000'
+  cache_miss_ratio:
+    cache_miss_ratio: '>0.8'
+condition: all of them

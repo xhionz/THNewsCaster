@@ -1,0 +1,13 @@
+title: Detect Covert Exfiltration via Unusual DNS Query Patterns
+logsource:
+  product: linux
+  service: dns
+condition: 'query_count > 100 and query_length > 60 and domain contains base64_pattern'
+detection:
+  query_count:
+    count: '>100'
+  query_length:
+    query_length: '>60'
+  base64_pattern:
+    domain: '^[a-zA-Z0-9+/]{60,}=[02468]$'
+condition: all of them

@@ -1,0 +1,13 @@
+title: Detect Suspicious Speculative Execution Patterns via perf Events
+logsource:
+  product: linux
+  service: perf
+condition: 'event_type: cache_misses and access_pattern: high_frequency_and_unexpected_kernel_access and target_address: kernel_range'
+detection:
+  cache_misses:
+    event_type: 'cache-misses'
+  high_frequency_and_unexpected_kernel_access:
+    'perf_event': '.*kernel.*'
+  target_address:
+    'perf_event': '.*0x[0-9a-f]{12,16}.*'
+condition: all of them
