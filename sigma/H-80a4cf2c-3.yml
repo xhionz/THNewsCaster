@@ -1,0 +1,12 @@
+title: Detect C2 Beaconing to pwn.ai Domain
+logsource:
+  product: webserver
+  service: http
+detection:
+  http_host:
+    - endswith: 'pwn.ai'
+  source_ip:
+    - '192.168.1.50'
+    - '192.168.1.51'
+    - '192.168.1.52'
+condition: http_host and source_ip

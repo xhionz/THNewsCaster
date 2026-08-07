@@ -1,0 +1,12 @@
+title: Detect WordPress XSS Payload Leading to Web Shell Upload
+logsource:
+  product: webserver
+detection:
+  req_uri: 
+    - contains: "/wp-login.php"
+    - contains: "<script>"
+    - contains: "pwn.ai"
+    - contains: "javascript:"
+  status: 
+    - 200
+condition: req_uri and status
