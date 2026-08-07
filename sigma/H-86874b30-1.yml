@@ -1,0 +1,13 @@
+title: Detect SCTP Use-After-Free Exploit Attempt
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    syscall: "sctp_sendmsg" or "sctp_recvmsg"
+    a0: "0x0" or "0x1"  # Likely invalid socket state
+    a1: "0x0"  # Null or zero-length buffer pointer
+    a2: "0x0"  # Invalid length
+    a3: "0x0"  # Invalid flags
+  condition: selection
+  timeframe: 5m

@@ -1,0 +1,13 @@
+title: Detect SCTP State Machine Anomalies
+logsource:
+  product: linux
+  service: netflow
+detection:
+  selection:
+    protocol: "sctp"
+    sctp_chunk_type: "DATA" or "INIT" or "SHUTDOWN"
+    sctp_stream_id: "0"  # Commonly abused stream
+    sctp_ppid: "0"  # Invalid payload protocol ID
+    sctp_csum: "0"  # Invalid checksum
+  condition: selection
+  timeframe: 15m
