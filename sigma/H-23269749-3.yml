@@ -1,0 +1,17 @@
+title: Suspicious Inbox Rule Creation for Financial Keywords
+logsource:
+  product: microsoft365
+  service: exchange
+detection:
+  selection:
+    Operation: 'New-InboxRule'
+    RuleName: '*wire*'|'*payroll*'|'*invoice*'|'*transfer*'|'*bank*'
+    ForwardTo: '*@*.com'|'*@*.net'|'*@*.org'
+    ForwardTo: NOT '*@ourcompany.com'
+  condition: selection
+fields:
+  - UserPrincipalName
+  - RuleName
+  - ForwardTo
+  - CreatedTime
+condition: selection

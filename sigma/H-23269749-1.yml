@@ -1,0 +1,19 @@
+title: AitM Phishing - Suspicious Sign-in from Residential IP with OAuth Grant
+logsource:
+  product: microsoft365
+  service: signins
+detection:
+  selection:
+    UserAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/* Safari/537.36'
+    IPAddress: '192.168.0.0/16'|'172.16.0.0/12'|'10.0.0.0/8'
+    ResultType: '0'
+    AppId: '00000002-0000-0ff1-ce00-000000000000' # Microsoft Graph OAuth
+  filter:
+    IPAddress: '203.0.113.0/24'|'198.51.100.0/24'|'192.0.2.0/24' # Exclude known test ranges
+  condition: selection and not filter
+fields:
+  - IPAddress
+  - UserPrincipalName
+  - AppId
+  - ResultType
+condition: selection

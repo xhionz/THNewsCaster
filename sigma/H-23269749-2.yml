@@ -1,0 +1,19 @@
+title: OAuth Token Abuse for Mailbox Access
+logsource:
+  product: microsoft365
+  service: audit
+detection:
+  selection:
+    OperationName: 'Add OAuth2PermissionGrant' OR 'Update OAuth2PermissionGrant'
+    ClientApp: 'Browser'
+    TargetResources: 'Microsoft Graph'
+    IPAddress: '192.168.0.0/16'|'172.16.0.0/12'|'10.0.0.0/8'
+  filter:
+    IPAddress: '203.0.113.0/24'|'198.51.100.0/24'|'192.0.2.0/24'
+  condition: selection and not filter
+fields:
+  - TargetResources
+  - ClientApp
+  - IPAddress
+  - UserPrincipalName
+condition: selection
