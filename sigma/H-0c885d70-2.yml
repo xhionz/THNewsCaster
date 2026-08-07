@@ -1,0 +1,20 @@
+title: Metabase Scheduled Query Command Execution Detection
+id: 6b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+status: experimental
+description: Detects scheduled native queries with OS command execution functions
+logsource:
+  product: metabase
+  service: scheduler
+detection:
+  scheduled_query:
+    query:
+      native:
+        query:
+          - '*xp_cmdshell*'
+          - '*pg_sleep(10);--*'
+          - '*SELECT system(''
+          - '*EXEC master.dbo.xp_cmdshell*'
+          - '*shell_exec*'
+          - '*exec* *cmd*'
+  condition: scheduled_query
+level: high

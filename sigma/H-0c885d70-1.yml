@@ -1,0 +1,21 @@
+title: Metabase Native Query SQL Injection Detection
+id: 5a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: Detects potential SQL injection via Metabase native query payload
+logsource:
+  product: metabase
+  service: api
+detection:
+  req_body_json:
+    query:
+      native:
+        query:
+          - '*SELECT * FROM*'
+          - '*UNION SELECT*'
+          - '*DROP TABLE*'
+          - '*pg_sleep*'
+          - '*sleep*'
+          - '*BENCHMARK*'
+          - '*WAITFOR DELAY*'
+  condition: req_body_json
+level: high
