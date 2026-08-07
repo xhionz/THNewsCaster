@@ -1,0 +1,10 @@
+title: LoadMaster Internal Network Scanning
+logsource:
+  product: loadmaster
+  service: network
+detection:
+  src_ip: "LOADMASTER_INTERNAL_IP"
+  dest_port: [22, 445, 3389, 135, 139]
+  event_type: "connection_attempt"
+  dest_ip: "10.0.0.0/8" or "172.16.0.0/12" or "192.168.0.0/16"
+condition: all of them

@@ -1,0 +1,9 @@
+title: LoadMaster Shell Command Execution via Command Injection
+logsource:
+  product: loadmaster
+  service: http
+detection:
+  req_uri: "/admin"
+  req_method: "POST"
+  req_body: "id" | "whoami" | "cat /etc/passwd" | "cat /etc/shadow" | "uname -a" | "netstat -an"
+condition: all of them

@@ -1,0 +1,10 @@
+title: LoadMaster CVE-2023-34362 Command Injection Attempt
+logsource:
+  product: loadmaster
+  service: http
+detection:
+  req_uri: "/admin"
+  req_method: "POST"
+  req_body: ";" | "&&" | "||" | "$(" | "`"
+  user_agent: "curl" | "wget" | "python-requests"
+condition: all of them
