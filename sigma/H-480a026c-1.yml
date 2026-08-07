@@ -1,0 +1,5 @@
+title: TeamCity XStream Deserialization Exploit (CVE-2021-43297)
+logsource:
+  product: teamcity
+  service: server
+condition: 'event.type: "deserialization" and (xstream.class: "com.thoughtworks.xstream.mapper.SecurityMapper" or xstream.class: "com.thoughtworks.xstream.core.TreeUnmarshaller" or xstream.class: "com.thoughtworks.xstream.core.AbstractReferenceUnmarshaller" or xstream.class: "com.thoughtworks.xstream.converters.collections.CollectionConverter" or xstream.class: "com.thoughtworks.xstream.converters.collections.MapConverter" or xstream.class: "org.apache.commons.collections.keyvalue.TiedMapEntry" or xstream.class: "freemarker.template.utility.BooleanModel" or xstream.class: "java.util.HashSet" or xstream.class: "java.lang.Runtime" or xstream.class: "org.hsqldb.jdbc.JDBCDriver" or xstream.class: "org.apache.commons.dbcp2.BasicDataSource") and not xstream.class: "com.thoughtworks.xstream.security.NoTypePermission" and not xstream.class: "jetbrains.buildserver.server.security.ExclusiveAllowlist"

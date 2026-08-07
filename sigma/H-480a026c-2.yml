@@ -1,0 +1,5 @@
+title: TeamCity JSP Web Shell Deployment
+logsource:
+  product: teamcity
+  service: webserver
+condition: 'event.type: "file_write" and file.path: "*.jsp" and file.path: "*/webapps/teamcity/" and file.content: "<%@ page import=\"java.io.*\"%>" or file.content: "<%@ page import=\"java.lang.Runtime\"%>" or file.content: "Runtime.getRuntime().exec(" or file.content: "org.apache.jasper.servlet.JspServlet" and file.size > 5000'

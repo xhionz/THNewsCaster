@@ -1,0 +1,5 @@
+title: TeamCity Freemarker Template Injection via XStream
+logsource:
+  product: teamcity
+  service: server
+condition: 'xstream.class: "freemarker.template.utility.BooleanModel" or xstream.class: "freemarker.core.TemplateHashModel" or xstream.class: "freemarker.template.utility.ObjectMethod" or xstream.class: "freemarker.template.utility.Execute" and event.type: "deserialization" and not xstream.class: "com.thoughtworks.xstream.security.NoTypePermission"'
