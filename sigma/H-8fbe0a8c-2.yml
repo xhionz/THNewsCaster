@@ -1,0 +1,31 @@
+title: Metabase Server Command-Line Post-Exploitation
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+description: Detects suspicious command-line execution on Metabase server hosts following SQLi
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process:
+    - 'cmd.exe'
+    - 'powershell.exe'
+    - 'sh'
+    - 'bash'
+  command_line:
+    - 'SELECT '
+    - 'pg_exec('
+    - 'xp_cmdshell'
+    - 'curl http://'
+    - 'wget http://'
+    - 'nc -e '
+    - 'base64 '
+    - 'tar -czf '
+    - 'scp '
+  image:
+    - 'java'
+    - 'metabase.jar'
+condition: process and command_line and image
+keywords:
+  - rce
+  - post-exploitation
+  - metabase
+  - command-line

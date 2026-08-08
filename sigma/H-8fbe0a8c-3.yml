@@ -1,0 +1,26 @@
+title: Suspicious Cloud Upload from Internal Host
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+description: Detects file uploads to known cloud storage domains from internal hosts during incident window
+logsource:
+  product: network
+  service: dns
+  category: dns_query
+detection:
+  domain:
+    - '*.dropbox.com'
+    - '*.googleusercontent.com'
+    - '*.onedrive.com'
+    - '*.box.com'
+    - '*.mega.nz'
+    - '*.drive.google.com'
+  query_type: 'A'
+  source_ip:
+    - '192.168.0.0/16'
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+condition: domain and query_type and source_ip
+keywords:
+  - exfiltration
+  - cloud
+  - phishing
+  - data-theft

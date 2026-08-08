@@ -1,0 +1,32 @@
+title: Metabase Unauthenticated SQLi Exploit
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+description: Detects potential unauthenticated SQL injection attempts against Metabase via common payload patterns in HTTP requests
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_uri:
+    - '/api/'
+  req_body:
+    - 'UNION SELECT'
+    - '1=1'
+    - '-- '
+    - "';--"
+    - 'admin'--'
+    - 'OR 1=1'
+    - 'SELECT * FROM '
+    - 'DROP TABLE '
+    - 'EXEC xp_cmdshell'
+  status_code:
+    - 200
+    - 500
+    - 400
+  user_agent:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+condition: req_uri and (req_body or user_agent) and status_code
+keywords:
+  - sqli
+  - metabase
+  - zero-day
