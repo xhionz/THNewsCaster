@@ -1,0 +1,12 @@
+title: Detect Suspicious DLL Load from Orion Process
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects DLL load events from Orion processes initiated by non-whitelisted parent processes
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 7
+  Image: '*Orion*'
+  ParentImage: '*powershell.exe' | '*wscript.exe' | '*cscript.exe' | '*cmd.exe'
+condition: EventID and Image and ParentImage
