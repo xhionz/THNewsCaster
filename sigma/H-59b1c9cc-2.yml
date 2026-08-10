@@ -1,0 +1,22 @@
+title: SonicWall SMA1000 Command Injection via Web Interface
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects command injection attempts via shell metacharacters in web parameters on SMA1000
+logsource:
+  product: linux
+  service: http
+  definition: 'SonicWall SMA1000 appliance'
+detection:
+  selection:
+    request_uri:
+      - '*;*'
+      - '*|*'
+      - '*&*'
+      - '*$(*)*'
+    user_agent:
+      - 'curl'
+      - 'wget'
+      - 'python-requests'
+    status_code: 200
+  condition: selection
+level: high

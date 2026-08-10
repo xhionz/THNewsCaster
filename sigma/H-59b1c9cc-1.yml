@@ -1,0 +1,21 @@
+title: SonicWall SMA1000 SSRF Exploitation Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects potential SSRF exploitation via unusual HTTP requests to internal metadata services on SMA1000
+logsource:
+  product: linux
+  service: http
+  definition: 'SonicWall SMA1000 appliance'
+detection:
+  selection:
+    request_uri:
+      - '/cgi-bin/export-config'
+      - '/cgi-bin/webproc?getpage=html/index.html&var:page=login'
+      - '/cgi-bin/webproc?getpage=/etc/passwd'
+    user_agent:
+      - 'curl'
+      - 'wget'
+      - 'python-requests'
+    status_code: 200
+  condition: selection
+level: high
