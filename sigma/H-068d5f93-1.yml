@@ -1,0 +1,9 @@
+title: Gunra - FortiOS CVE Exploit Detection
+logsource:
+  product: fortinet
+  service: firewall
+detection:
+  selection:
+    event_type: 'attack'
+    cve_id: ['CVE-2024-55591', 'CVE-2025-24472']
+  condition: selection

@@ -1,0 +1,14 @@
+title: Gunra - Lateral Movement via RDP/SMB with Privileged Accounts
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: [3, 10]
+    Account_Name: ['Administrator', 'Domain Admin', 'Enterprise Admin']
+    Source_Network_Address: ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16']
+    Logon_Process: ['Advapi', 'NtLmSsp']
+  condition: selection
+  filter:
+    Source_Network_Address: ['10.10.10.10', '10.10.10.11'] # exclude known domain controllers

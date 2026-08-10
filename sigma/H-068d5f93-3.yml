@@ -1,0 +1,9 @@
+title: Gunra - Ransomware Deployment and Exfiltration
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    Image: ['C:\\ProgramData\\cryptor.exe', 'C:\\Windows\\Temp\\msmp.exe', 'C:\\Users\\*\\AppData\\Local\\Temp\\cryptor.exe']
+    ParentImage: ['C:\\Windows\\System32\\cmd.exe', 'C:\\Windows\\System32\\powershell.exe', 'C:\\Windows\\System32\\wscript.exe']
+  condition: selection
