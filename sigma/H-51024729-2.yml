@@ -1,0 +1,10 @@
+title: LoadMaster Internal Network Reconnaissance
+logsource:
+  product: network
+  service: dns
+detection:
+  src_ip: '10.10.10.50'
+  dst_ip: '10.10.0.0/16'
+  query_type: 'PTR'
+  query: 'in-addr.arpa'
+condition: all of them

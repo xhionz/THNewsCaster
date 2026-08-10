@@ -1,0 +1,19 @@
+title: LoadMaster Command Injection via HTTP Payload
+logsource:
+  product: firewall
+  service: http
+detection:
+  req_uri:
+    - '/admin/api/v1/exec'
+    - '/admin/api/v1/shell'
+  user_agent:
+    - 'curl'
+    - 'wget'
+    - 'Python-urllib'
+  http_method: 'POST'
+  http_content_type: 'application/x-www-form-urlencoded'
+  http_body:
+    - 'cmd='
+    - 'exec('
+    - 'system('
+condition: all of them

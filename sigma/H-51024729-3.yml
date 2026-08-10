@@ -1,0 +1,14 @@
+title: Ransomware File Encryption via Suspicious Extension
+logsource:
+  product: windows
+  service: file_event
+detection:
+  file_extension:
+    - '.cryx'
+    - '.phobos'
+    - '.lockbit'
+    - '.vault'
+    - '.crypt'
+  file_path: 'C:\\shared\\'
+  process_name: 'powershell.exe'
+condition: all of them
