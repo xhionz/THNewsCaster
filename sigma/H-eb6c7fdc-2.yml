@@ -1,0 +1,15 @@
+title: Suspicious iOS Device Sideloading Detected
+logsource:
+  product: ios
+  service: edr
+condition: 'bundle_id: com.altstore.* or bundle_id: com.apple.iTunes or bundle_id: com.altserver.*'
+detection:
+  selection:
+    - bundle_id: com.altstore.*
+    - bundle_id: com.apple.iTunes
+    - bundle_id: com.altserver.*
+  condition: 1 of selection
+  filter:
+    - device_connected: true
+    - usb_connection_type: 'non-corporate'
+  condition: 1 of selection and filter

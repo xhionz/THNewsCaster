@@ -1,0 +1,17 @@
+title: Suspicious URL Access Leading to iOS Exploit
+logsource:
+  product: dns
+  service: proxy
+condition: 'url: *.php?* or url: *.html?* or url: *.js?*'
+detection:
+  selection:
+    - url: '*?id=*'
+    - url: '*?q=*'
+    - url: '*?cmd=*'
+    - url: '*?pwn=*'
+    - url: '*?exploit=*'
+  condition: 1 of selection
+  filter:
+    - user_agent: '*iPhone*' or user_agent: '*iPad*'
+    - destination_ip: not in (whitelist_ips)
+  condition: 1 of selection and filter

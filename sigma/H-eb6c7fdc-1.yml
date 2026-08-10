@@ -1,0 +1,20 @@
+title: Suspicious WebKit Process Chain Detected
+logsource:
+  product: ios
+  service: edr
+condition: 'process_name: webkit2webpluginprocess or process_name: webcontent or process_name: safari'
+selection:
+  - process_name: webkit2webpluginprocess
+  - process_name: webcontent
+  - process_name: safari
+detection:
+  selection:
+    - process_name: webkit2webpluginprocess
+    - process_name: webcontent
+    - process_name: safari
+  condition: 1 of selection
+  filter:
+    - parent_process_name: 'launchd'
+    - parent_process_name: 'backboardd'
+    - parent_process_name: 'SpringBoard'
+  condition: 1 of selection and filter
