@@ -1,0 +1,14 @@
+title: Detect Suspicious Login to LoadMaster Admin UI
+logsource:
+  product: loadmaster
+  service: http
+detection:
+  req_uri: '/admin/login'
+  status_code: 200
+  user_agent:
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+    - 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)'
+  src_ip:
+    - '192.168.10.0/24'
+    - '10.0.0.0/8'
+condition: all of them

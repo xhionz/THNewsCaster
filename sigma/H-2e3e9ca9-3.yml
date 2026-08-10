@@ -1,0 +1,16 @@
+title: Detect Internal Scanning from LoadMaster
+logsource:
+  product: loadmaster
+  service: network
+detection:
+  src_ip:
+    - '10.10.10.10'
+    - '10.10.10.11'
+  dst_port:
+    - 445
+    - 3389
+    - 139
+    - 22
+  protocol: tcp
+  connection_count: 10
+condition: all of them

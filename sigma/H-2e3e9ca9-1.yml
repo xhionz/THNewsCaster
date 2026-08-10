@@ -1,0 +1,14 @@
+title: Detect CVE-2023-34362 Exploitation on LoadMaster
+logsource:
+  product: loadmaster
+  service: http
+detection:
+  req_uri:
+    - '/admin/api/v1/exec'
+    - '/admin/api/v1/command'
+  user_agent:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+  status_code: 200
+condition: all of them
