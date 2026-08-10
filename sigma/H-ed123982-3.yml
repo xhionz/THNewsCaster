@@ -1,0 +1,13 @@
+title: Detect domain admin logon followed by file encryption
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 and account_name IN (admin_accounts) and event_id: 4663 and file_name ENDS WITH ".encrypted" and time_delta < 3600'
+detection:
+  selection:
+    event_id: 4624
+    account_name:
+      - "Administrator"
+      - "domainadmin"
+      - "svc_admin"
+  condition: selection

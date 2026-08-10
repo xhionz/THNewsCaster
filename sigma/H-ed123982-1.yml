@@ -1,0 +1,14 @@
+title: Detect N-Central CVE-2024-21762 Exploitation
+logsource:
+  product: windows
+  service: http
+condition: 'http_method: GET and http_uri: /remote/fgt_lang or http_uri: /remote/login and status_code: 200 and user_agent: contains "Mozilla"'
+detection:
+  selection:
+    http_method: GET
+    http_uri:
+      - /remote/fgt_lang
+      - /remote/login
+    status_code: 200
+    user_agent: "Mozilla/5.0"
+  condition: selection
