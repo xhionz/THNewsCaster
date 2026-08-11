@@ -1,0 +1,24 @@
+title: Detection of DLL Hijacking via CVE-2026-72971
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects suspicious DLL loading from non-standard paths during process execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  image:
+    - '*\svchost.exe'
+    - '*\explorer.exe'
+    - '*\winlogon.exe'
+  parent_image:
+    - '*\services.exe'
+    - '*\lsass.exe'
+  image_loaded:
+    - '*\temp\*.dll'
+    - '*\appdata\local\temp\*.dll'
+    - '*\windows\system32\drivers\*.dll'
+    - '*\windows\syswow64\*.dll'
+    - '*\windows\system32\spool\drivers\*.dll'
+condition: event_id == 1 and (image endswith '\svchost.exe' or image endswith '\explorer.exe' or image endswith '\winlogon.exe') and (parent_image endswith '\services.exe' or parent_image endswith '\lsass.exe') and (image_loaded contains '\temp\' or image_loaded contains '\appdata\local\temp\' or image_loaded contains '\drivers\' or image_loaded contains '\spool\drivers\')
+level: high

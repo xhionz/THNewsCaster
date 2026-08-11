@@ -1,0 +1,20 @@
+title: Detection of CVE-2026-68820 Exploitation via AFD.SYS Process Creation
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects suspicious process creation linked to exploitation of CVE-2026-68820 via afd.sys
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  image:
+    - '*\afd.sys'
+  command_line:
+    - '* -accepteula*'
+    - '* -s*'
+    - '* -b*'
+  parent_image:
+    - '*\svchost.exe'
+    - '*\services.exe'
+condition: event_id == 1 and (image contains 'afd.sys') and (command_line contains any of ['-accepteula', '-s', '-b']) and (parent_image endswith '\svchost.exe' or parent_image endswith '\services.exe')
+level: high
