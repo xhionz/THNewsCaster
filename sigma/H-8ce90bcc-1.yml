@@ -1,0 +1,20 @@
+title: Exploitation of CVE-2026-68820 via RDP to Domain Controller
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects anomalous RDP authentication patterns consistent with CVE-2026-68820 exploitation targeting domain controllers
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4624
+    LogonType: 10
+    AccountName: 'DOMAIN\DC$'
+    IpAddress: '10.0.0.0/8'
+  Condition: Selection
+  Keywords:
+    - 'atbroker.exe'
+    - 'http.sys'
+falsepositives:
+  - Legitimate RDP admin sessions from known jump hosts
+level: high

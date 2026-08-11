@@ -1,0 +1,20 @@
+title: Suspicious Entra ID Token Abuse via atbroker.exe
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects atbroker.exe spawning from non-standard processes or making unusual token requests in Entra ID environment
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4688
+    CommandLine: '*atbroker.exe*'
+    ParentProcessName: 'svchost.exe'
+    ParentProcessId: '!= 4'
+  Condition: Selection
+  Keywords:
+    - 'AzureAD'
+    - 'OAuth2'
+falsepositives:
+  - Legitimate Azure AD Connect sync processes
+level: high
