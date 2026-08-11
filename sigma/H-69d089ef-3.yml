@@ -1,0 +1,12 @@
+title: Detection of Ransomware File Renaming via Suspicious Child Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: \*\*.exe
+    ParentImage: \*\*.exe
+    CommandLine: '*encrypt*' OR '*ransom*' OR '*.lock' OR '*.crypt'
+  Condition: Selection
+condition: selection

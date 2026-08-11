@@ -1,0 +1,12 @@
+title: Detection of Direct LSASS Memory Access from Kernel Process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 10
+    TargetImage: \*lsass.exe
+    GrantedAccess: 0x14
+    ProcessId: 4
+  Condition: Selection
+condition: selection

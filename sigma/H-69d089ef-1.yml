@@ -1,0 +1,10 @@
+title: Detection of AFD.SYS Kernel Exploit via Driver Load Anomaly
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 11
+    Image: \*\afd.sys
+  Condition: Selection
+condition: selection
