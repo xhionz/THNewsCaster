@@ -1,0 +1,12 @@
+title: Suspicious HTTP Requests to SharePoint _vti_bin Endpoints
+logsource:
+  product: iis
+  category: web
+detection:
+  uri_path:
+    - '*_vti_bin/*'
+  status_code:
+    - 200
+    - 500
+    - 403
+condition: all of them

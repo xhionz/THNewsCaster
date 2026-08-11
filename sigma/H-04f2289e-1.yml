@@ -1,0 +1,11 @@
+title: Suspicious SharePoint BCS Type Instantiation via w3wp.exe
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  Image:
+    - '*\w3wp.exe'
+  CommandLine:
+    - '*System.Activator.CreateInstance*'
+    - '*Business Connectivity Services*'
+condition: all of them

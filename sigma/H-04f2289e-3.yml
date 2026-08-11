@@ -1,0 +1,11 @@
+title: Suspicious Logon Using SharePoint Service Account
+logsource:
+  product: windows
+  category: logon
+detection:
+  Account_Name:
+    - '*svc_sharepoint*'
+  Logon_Type:
+    - 3
+    - 10
+condition: all of them
