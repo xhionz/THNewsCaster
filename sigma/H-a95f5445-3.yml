@@ -1,0 +1,10 @@
+title: Suspicious Scheduled Task Creation with Signed Binary
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image: '*\schtasks.exe'
+  CommandLine: '* /create * /tr *\regsvr32.exe * /sc onstart *'
+  UtcTime: '>2026-08-11T00:00:00'
+  User: 'SYSTEM'
+condition: Image and CommandLine and UtcTime and User

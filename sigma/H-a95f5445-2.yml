@@ -1,0 +1,11 @@
+title: Suspicious DCOM/RPC Process Creation Post-PrivEsc
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image: '*\svchost.exe'
+  CommandLine: '*-k DcomLaunch*'
+  ParentImage: '*\svchost.exe'
+  UtcTime: '>2026-08-11T00:00:00'
+  User: 'SYSTEM'
+condition: Image and CommandLine and ParentImage and UtcTime and User
