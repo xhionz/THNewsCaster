@@ -1,0 +1,17 @@
+title: Suspicious DNS queries mimicking Microsoft update domains
+logsource:
+  product: dns
+  service: dns_query
+condition: 1 of detection_*
+detection:
+  detection_1:
+    query|endswith: ".secureupdate.xyz"
+  detection_2:
+    query|endswith: ".microsoft-update.info"
+  detection_3:
+    query|endswith: ".microsoft-security.net"
+  detection_4:
+    query|contains: "update" and query|contains: ".xyz" and query|contains: "-"
+  detection_5:
+    query|contains: "microsoft" and query|endswith: ".info" and query|contains: "-"
+condition: 1 of detection_1,2,3,4,5

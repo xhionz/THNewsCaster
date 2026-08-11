@@ -1,0 +1,14 @@
+title: Suspicious PowerShell execution from SharePoint server
+logsource:
+  product: windows
+  service: sysmon
+condition: 1 of detection_*
+detection:
+  detection_1:
+    image: "C:\\Program Files\\Microsoft Office Servers\\16.0\\*"
+    parent_image: "C:\\Windows\\System32\\w3wp.exe"
+  detection_2:
+    command_line|contains: "-nop" and "-enc" or "-e" or "IEX" or "Invoke-Expression" or "DownloadString"
+  detection_3:
+    target_process: "lsass.exe" or "ntds.dit" or "sam"
+condition: 1 of detection_1 and 1 of detection_2

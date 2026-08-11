@@ -1,0 +1,20 @@
+title: Suspicious POST to author.dll with RCE payload
+logsource:
+  product: iis
+  service: web
+condition: 1 of detection_*
+detection:
+  detection_1:
+    method: POST
+    url: /_vti_bin/author.dll
+  detection_2:
+    body|contains: 'base64'
+  detection_3:
+    body|contains: 'powershell -nop -c'
+  detection_4:
+    body|contains: 'cmd.exe /c'
+  detection_5:
+    status: 200
+  detection_6:
+    user_agent: contains 'Mozilla/5.0' and not contains 'Windows NT'
+condition: 1 of detection_* and 1 of detection_2,3,4
