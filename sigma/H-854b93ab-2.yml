@@ -1,0 +1,24 @@
+title: Gunra - In-Place File Encryption Behavior
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  sel1:
+    EventID: 11
+    Image: '*\svchost.exe'
+    FileCreate: '*'
+  sel2:
+    EventID: 11
+    Image: '*\explorer.exe'
+    FileCreate: '*'
+  sel3:
+    EventID: 11
+    Image: '*\lsass.exe'
+    FileCreate: '*'
+  sel4:
+    EventID: 11
+    Image: '*\winlogon.exe'
+    FileCreate: '*'
+  condition: (sel1 or sel2 or sel3 or sel4) and (count(sel1) > 50 or count(sel2) > 50 or count(sel3) > 50 or count(sel4) > 50)
+  timeframe: 10m
+condition: sel1 or sel2 or sel3 or sel4

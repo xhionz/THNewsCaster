@@ -1,0 +1,18 @@
+title: Gunra - Suspicious Fortinet SSLVPN Access
+logsource:
+  product: firewall
+  service: sslvpn
+detection:
+  sel1:
+    type: traffic
+    subtype: sslvpn
+    action: deny
+    status: failed
+    user_agent: *
+  sel2:
+    src_ip: '10.0.0.0/8'
+    dst_ip: '192.168.0.0/16'
+    dst_port: 443
+  condition: sel1 and sel2
+  timeframe: 5m
+condition: sel1 and sel2

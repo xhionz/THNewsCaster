@@ -1,0 +1,18 @@
+title: Gunra - Anomalous Modbus Write Command
+logsource:
+  product: network
+  service: modbus
+detection:
+  sel1:
+    function_code: 16
+    write_data_length: '>100'
+    src_ip: '192.168.100.0/24'
+    dst_ip: '192.168.200.0/24'
+  sel2:
+    function_code: 16
+    write_data_length: '>100'
+    src_ip: '10.0.0.0/8'
+    dst_ip: '192.168.200.0/24'
+  condition: sel1 or sel2
+  timeframe: 1m
+condition: sel1 or sel2
