@@ -1,0 +1,15 @@
+title: Lazarus Phishing Script Attachment
+logsource:
+  product: exchange
+detection:
+  selection:
+    AttachmentName:
+      - '*.hta'
+      - '*.js'
+      - '*.vbs'
+    SenderDomain: '!^.*\.ourdomain\.com$'
+  condition: selection
+fields:
+  - AttachmentName
+  - SenderAddress
+  - Subject

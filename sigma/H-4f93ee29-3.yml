@@ -1,0 +1,15 @@
+title: Suspicious High-Entropy DNS Queries
+logsource:
+  product: dns
+  service: bind
+detection:
+  selection:
+    query: '*'
+    query_length: '>15'
+    query_count: '>5'
+  timeframe: 60s
+  condition: selection
+fields:
+  - query
+  - client_ip
+  - query_length
