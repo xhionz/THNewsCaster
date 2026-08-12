@@ -1,0 +1,11 @@
+title: Detection of AFD Kernel Exploit via ETW Kernel Memory Allocation Patterns
+logsource:
+  product: windows
+  service: etw
+condition: 'EventID: 1 and Provider: Microsoft-Windows-Kernel-EventTracing and EventData.EventName: "KernelMemoryAllocation" and EventData.AllocationSize > 0x10000'
+detection:
+  EventID: 1
+  Provider: Microsoft-Windows-Kernel-EventTracing
+  EventData.EventName: KernelMemoryAllocation
+  EventData.AllocationSize: '>0x10000'
+condition: all

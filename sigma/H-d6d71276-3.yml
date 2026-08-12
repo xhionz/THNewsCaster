@@ -1,0 +1,14 @@
+title: Detection of Internal Reconnaissance via PowerShell Commands
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 1
+  Image: '*\powershell.exe'
+  CommandLine: ('Get-ADDomain' or 'Get-ADUser' or 'Get-NetDomain' or 'Test-Connection' or 'Get-NetNeighbor' or 'Get-NetTCPConnection' or 'Get-Service' or 'net view' or 'nltest' or 'dsquery')
+condition: all
+fields:
+  - Image
+  - CommandLine
+  - User
+  - ProcessId

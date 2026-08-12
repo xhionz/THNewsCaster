@@ -1,0 +1,14 @@
+title: Detection of Lazarus-style Persistence via Registry, Service, or Task Creation
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4697 or EventID: 4698 or EventID: 4657
+  Image: ('svchost.exe' or 'services.exe' or 'reg.exe' or 'schtasks.exe')
+  CommandLine: ('add' or 'set' or 'create' or 'install') and ('Run' or 'Service' or 'Task')
+condition: all
+fields:
+  - Image
+  - CommandLine
+  - User
+  - ProcessId
