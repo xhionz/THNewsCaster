@@ -1,0 +1,10 @@
+title: Suspicious LSASS Access from Zoom Process
+logsource:
+  product: windows
+  service: process_access
+condition: 'target_image' == 'lsass.exe' and 'process.image' contains 'zoom.exe' and 'access_mask' contains '0x10'
+detection:
+  'target_image': 'lsass.exe'
+  'process.image': 'contains "zoom.exe"'
+  'access_mask': 'contains "0x10"'
+  condition: 'target_image' == 'lsass.exe' and 'process.image' contains 'zoom.exe' and 'access_mask' contains '0x10'

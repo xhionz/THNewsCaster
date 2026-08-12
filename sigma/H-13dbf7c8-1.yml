@@ -1,0 +1,9 @@
+title: Zoom Annotation Buffer Overflow Detection
+logsource:
+  product: zoom
+  service: client
+condition: 'zoom.annotation.packet.length' > 256 and 'zoom.client.version' in ['7.0.0', '7.0.1', '7.0.2', '7.0.3', '7.0.4', '7.0.5', '7.1.0', '7.1.1', '7.1.2', '7.1.3', '7.1.4']
+detection:
+  'zoom.annotation.packet.length': '>= 257'
+  'zoom.client.version': 'in_list'
+  condition: 'zoom.annotation.packet.length' > 256

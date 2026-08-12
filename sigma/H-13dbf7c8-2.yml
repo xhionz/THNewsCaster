@@ -1,0 +1,10 @@
+title: Zoom SDK Memory Injection via Anomalous Process Tree
+logsource:
+  product: windows
+  service: process_creation
+condition: 'process.parent_image' contains 'zoomsdk.exe' and 'process.image' in ['lsass.exe', 'svchost.exe', 'explorer.exe'] and 'process.command_line' != ''
+detection:
+  'process.parent_image': 'zoomsdk.exe'
+  'process.image': 'in_list'
+  'process.command_line': '!= ""'
+  condition: 'process.parent_image' contains 'zoomsdk.exe' and 'process.image' in ['lsass.exe', 'svchost.exe', 'explorer.exe']
