@@ -1,0 +1,13 @@
+title: Detect Internal Host Sending Malformed HTTP to ASA/FTD
+logsource:
+  product: firewall
+  service: http
+detection:
+  src_ip: 
+    - '10.10.20.0/24'
+  req_uri:
+    - '/admin'
+    - '/api/v1/config'
+  http_user_agent: '.*\x00.*'
+  status_code: 500
+condition: all of them

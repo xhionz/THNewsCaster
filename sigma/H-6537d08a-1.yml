@@ -1,0 +1,13 @@
+title: Detect Malformed HTTP Request to ASA/FTD (CVE-2026-20349)
+logsource:
+  product: firewall
+  service: http
+detection:
+  req_uri:
+    - '/admin'
+    - '/api/v1/config'
+    - '/cli'
+  http_user_agent: '.*\x00.*'
+  http_method: 'POST'
+  status_code: 500
+condition: all of them
