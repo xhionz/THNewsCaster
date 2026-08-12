@@ -1,0 +1,18 @@
+title: Suspicious Defender Registry Modification
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects modification of Defender registry keys used to disable real-time protection
+logsource:
+  product: windows
+  service: registry
+detection:
+  Selection1:
+    EventType: 'SetValue'
+    TargetObject: '*\SOFTWARE\Microsoft\Windows Defender\Features\Real-Time Protection'
+    Details: 'Value: 0'
+  Selection2:
+    EventType: 'SetValue'
+    TargetObject: '*\SOFTWARE\Microsoft\Windows Defender\Features\Behavior Monitoring'
+    Details: 'Value: 0'
+  Condition: Selection1 or Selection2
+level: medium

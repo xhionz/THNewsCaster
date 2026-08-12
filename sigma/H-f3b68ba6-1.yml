@@ -1,0 +1,18 @@
+title: Suspicious MpCmdRun.exe Execution with DisableFlags
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects MpCmdRun.exe being invoked with flags commonly used to disable Defender real-time protection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\Windows Defender\MpCmdRun.exe'
+  Selection2:
+    CommandLine: '*-DisableRealtime*'
+  Selection3:
+    CommandLine: '*-DisableBehaviorMonitoring*'
+  Selection4:
+    CommandLine: '*-ScanType 1*'
+  Condition: Selection1 and (Selection2 or Selection3 or Selection4)
+level: medium
