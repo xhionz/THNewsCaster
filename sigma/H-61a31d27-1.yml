@@ -1,0 +1,17 @@
+title: Detect Malformed IKEv2 DoS Attempt (Simulated CVE-XXXX-XXXX)
+logsource:
+  product: cisco_asa
+  category: firewall
+detection:
+  selection:
+    action: 'deny'
+    reason: 'invalid packet'
+    protocol: 'ike'
+    src_ip: '10.0.0.0/8'
+    dst_ip: '192.168.1.0/24'
+    payload_length: '>65000'
+  condition: selection
+fields:
+  - src_ip
+  - dst_ip
+  - payload_length

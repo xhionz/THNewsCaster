@@ -1,0 +1,14 @@
+title: Detect Ransomware File Encryption Pattern
+logsource:
+  product: windows
+  category: file_event
+detection:
+  selection:
+    process_name: 'ransomware.exe'
+    file_extension: '.locked' OR '.crypt' OR '.encrypt'
+    file_path: 'C:\\Users\\*'
+  condition: selection
+fields:
+  - process_name
+  - file_path
+  - file_extension

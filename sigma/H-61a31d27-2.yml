@@ -1,0 +1,15 @@
+title: Detect SMB Brute Force from ASA/FTD IP Range
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    source_ip: '192.168.1.0/24'
+    destination_port: '445'
+    action: 'connect'
+    connection_count: '>100'
+  condition: selection
+fields:
+  - source_ip
+  - destination_ip
+  - connection_count
