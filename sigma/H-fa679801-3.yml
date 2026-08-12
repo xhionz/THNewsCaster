@@ -1,0 +1,5 @@
+title: Detect Suspicious Data Exfiltration via HTTPS
+logsource:
+  product: webserver
+  service: apache
+condition: 'src_ip: ["192.168.1.10", "192.168.1.11"] and uri_path|contains|: "/upload" or uri_path|contains|: "/api/v1/data" and response_bytes > 1000000 and user_agent|contains|: ["curl", "wget", "python-requests", "Go-http-client"]'

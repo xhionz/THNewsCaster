@@ -1,0 +1,6 @@
+title: Detect ColdFusion CVE-2023-26467 Command Injection
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'query|contains|: ["exec", "system", "cmd", "powershell", "bash", "sh"] and uri_path|contains|: "/CFIDE/adminapi/"'

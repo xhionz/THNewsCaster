@@ -1,0 +1,5 @@
+title: Detect Lateral Movement from ColdFusion Server
+logsource:
+  product: windows
+  service: security
+condition: 'src_ip: ["192.168.1.10", "192.168.1.11"] and (event_id: 5140 or event_id: 4624) and (target_server: "*fileserver*" or target_server: "*dc*" or target_server: "*linux*")'
