@@ -1,0 +1,9 @@
+title: Detect Suspicious PowerShell Execution from SharePoint Server
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process_creation: 'Image: "*\powershell.exe" or Image: "*\pwsh.exe"'
+  suspicious_args: 'CommandLine: "-nop" or CommandLine: "-enc" or CommandLine: "-e" or CommandLine: "IEX" or CommandLine: "Invoke-Expression" or CommandLine: "DownloadFile" or CommandLine: "New-Object System.Net.WebClient"'
+  source_ip: 'SourceIp: ["10.1.2.10", "10.1.2.11", "10.1.2.12"]'
+condition: process_creation and suspicious_args and source_ip

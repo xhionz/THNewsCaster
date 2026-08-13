@@ -1,0 +1,12 @@
+title: Detect CVE-2023-21712 Auth Header Bypass Attempts
+logsource:
+  product: iis
+  service: http
+condition: 'request_uri: "*/_vti_bin/" or request_uri: "*/_layouts/" or request_uri: "*/_vti_bin/_vti_aut/" and (auth_header: "" or auth_header: "Basic" or auth_header: "Bearer" or auth_header: "Digest")
+  and not auth_header: "Basic """ and not auth_header: "Basic [A-Za-z0-9+/=]+"'
+detection:
+  auth_header_missing: 'auth_header: ""'
+  auth_header_basic_empty: 'auth_header: "Basic"'
+  auth_header_bearer: 'auth_header: "Bearer"'
+  auth_header_digest: 'auth_header: "Digest"'
+condition: any of auth_header_*

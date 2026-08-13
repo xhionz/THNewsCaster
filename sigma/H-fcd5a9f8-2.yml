@@ -1,0 +1,9 @@
+title: Detect SharePoint Phishing Landing Pages
+logsource:
+  product: dns
+  service: query
+detection:
+  suspicious_domain: 'domain: "*.sharepoint[0-9].com" or domain: "*.microsoft-sharepoint.net" or domain: "*.sharepoint-login.com" or domain: "*.office365-auth.net"'
+  suspicious_url: 'url: "https://*.sharepoint[0-9].com/login" or url: "https://*.microsoft-sharepoint.net/auth"'
+  body_keywords: 'body_pattern: ["Sign in", "Enter your credentials", "Microsoft SharePoint", "Office 365", "Password"]'
+condition: all of suspicious_domain and body_keywords
