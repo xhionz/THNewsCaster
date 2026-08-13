@@ -1,0 +1,22 @@
+title: Reverse SSH Tunnel Detection via vCenter RCE Exploitation
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects outbound SSH connections from ESXi hosts to external IPs not in approved list, indicative of reverse tunneling post-CVE-2021-21972 exploitation
+logsource:
+  product: esxi
+  service: syslog
+detection:
+  ssh_outbound:
+    - dst_ip: '192.168.100.0/24'
+    - dst_port: 22
+    - event_id: 'SSH_CONNECTION_ESTABLISHED'
+  not_approved:
+    - dst_ip|contains: '10.'
+    - dst_ip|contains: '172.16.'
+    - dst_ip|contains: '172.17.'
+    - dst_ip|contains: '172.18.'
+    - dst_ip|contains: '172.19.'
+    - dst_ip|contains: '192.168.'
+    - dst_ip|contains: '127.0.0.1'
+condition: ssh_outbound and not_approved
+level: high

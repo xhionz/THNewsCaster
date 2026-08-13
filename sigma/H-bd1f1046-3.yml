@@ -1,0 +1,54 @@
+title: Suspicious DNS Tunneling from vCenter/ESXi Hosts
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects high-volume, long-domain DNS queries from vCenter or ESXi hosts, indicative of DNS tunneling C2
+logsource:
+  product: dns
+  service: query
+detection:
+  high_entropy_domains:
+    - query|contains: 'a.'
+    - query|contains: 'b.'
+    - query|contains: 'c.'
+    - query|contains: 'd.'
+    - query|contains: 'e.'
+    - query|contains: 'f.'
+    - query|contains: 'g.'
+    - query|contains: 'h.'
+    - query|contains: 'i.'
+    - query|contains: 'j.'
+    - query|contains: 'k.'
+    - query|contains: 'l.'
+    - query|contains: 'm.'
+    - query|contains: 'n.'
+    - query|contains: 'o.'
+    - query|contains: 'p.'
+    - query|contains: 'q.'
+    - query|contains: 'r.'
+    - query|contains: 's.'
+    - query|contains: 't.'
+    - query|contains: 'u.'
+    - query|contains: 'v.'
+    - query|contains: 'w.'
+    - query|contains: 'x.'
+    - query|contains: 'y.'
+    - query|contains: 'z.'
+    - query|contains: '0.'
+    - query|contains: '1.'
+    - query|contains: '2.'
+    - query|contains: '3.'
+    - query|contains: '4.'
+    - query|contains: '5.'
+    - query|contains: '6.'
+    - query|contains: '7.'
+    - query|contains: '8.'
+    - query|contains: '9.'
+  high_query_rate:
+    - src_ip IN ['192.168.10.10', '192.168.10.11']
+    - count > 50
+    - timeframe: 60s
+  not_whitelisted:
+    - query|endswith: '.internal.domain.com'
+    - query|endswith: '.vmware.local'
+condition: high_entropy_domains and high_query_rate and not_whitelisted
+level: high

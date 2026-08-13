@@ -1,0 +1,21 @@
+title: SSH Key Injection Detected on ESXi Hosts via vCenter Exploitation
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects unauthorized modifications to authorized_keys files on ESXi hosts, indicative of SSH key injection post-CVE-2020-3992 exploitation
+logsource:
+  product: esxi
+  service: syslog
+detection:
+  key_modification:
+    - file_path: '/etc/ssh/keys-root/authorized_keys'
+    - event_id: 'file_modify'
+    - file_size_change: '>100'
+  not_known_admin:
+    - file_content|contains: 'ssh-rsa AAAAB3NzaC1yc2E'
+    - file_content|contains: 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5'
+    - file_content|contains: 'ssh-dss AAAAB3NzaC1kc3M='
+  not_trusted_key:
+    - file_content|contains: 'trusted_admin_key_1'
+    - file_content|contains: 'trusted_admin_key_2'
+condition: key_modification and not_known_admin and not_trusted_key
+level: high
