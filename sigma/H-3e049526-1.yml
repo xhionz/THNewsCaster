@@ -1,0 +1,15 @@
+title: Suspicious COM Hijack Registry Modification
+logsource:
+  product: windows
+  service: registry
+detection:
+  selection:
+    EventID: 12
+    TargetObject: '*\Software\Classes\CLSID\*\InprocServer32'
+    Image: '*\svchost.exe'
+  keywords:
+    - 'C:\\Windows\\System32\\comsvcs.dll'
+    - 'C:\\Windows\\System32\\mscoree.dll'
+    - 'C:\\Windows\\System32\\shdocvw.dll'
+  condition: selection and 1 of keywords
+condition: selection and 1 of keywords

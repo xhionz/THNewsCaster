@@ -1,0 +1,17 @@
+title: Defender Bypass via Reflective DLL Injection
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 11
+    Image: '*\svchost.exe'
+    TargetFilename: '*'
+    Urllist: '*'
+  keywords:
+    - 'C:\\Windows\\System32\\kernel32.dll'
+    - 'VirtualAllocEx'
+    - 'WriteProcessMemory'
+    - 'CreateRemoteThread'
+  condition: selection and 1 of keywords
+condition: selection and 1 of keywords

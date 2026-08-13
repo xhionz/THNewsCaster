@@ -1,0 +1,17 @@
+title: Browser-Initiated PowerShell Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\powershell.exe'
+    ParentImage: '*\chrome.exe'
+    CommandLine: '*-nop* -enc*'
+  keywords:
+    - '-nop -enc'
+    - '-w hidden -enc'
+    - '-e '
+    - '-Command [System.Text.Encoding]::UTF8.GetString('
+  condition: selection and 1 of keywords
+condition: selection and 1 of keywords
