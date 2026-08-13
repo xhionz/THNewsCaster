@@ -1,0 +1,24 @@
+title: Detect Lateral Movement via WMI or SMB Remote Execution
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4624 # Successful logon
+    - 4688 # Process creation
+  LogonType:
+    - 3 # Network logon
+    - 10 # RemoteInteractive
+  Image:
+    - '*\wmiprvse.exe'
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+  ParentImage:
+    - '*\svchost.exe'
+    - '*\dllhost.exe'
+  CommandLine:
+    - '*\net use*'
+    - '*\wbem\wmic*'
+    - '*\smbclient*'
+condition: EventID of (4624, 4688) and LogonType in (3, 10) and (Image in ('*\wmiprvse.exe', '*\cmd.exe', '*\powershell.exe') and ParentImage in ('*\svchost.exe', '*\dllhost.exe')) or CommandLine contains ('net use', 'wbem\wmic', 'smbclient')
+level: high

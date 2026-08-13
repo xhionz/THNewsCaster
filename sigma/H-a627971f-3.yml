@@ -1,0 +1,22 @@
+title: Detect Malicious Office Macro Triggering Suspicious Child Processes
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4688 # Process creation
+  ParentImage:
+    - '*\WINWORD.EXE'
+    - '*\EXCEL.EXE'
+    - '*\POWERPNT.EXE'
+  Image:
+    - '*\mshta.exe'
+    - '*\rundll32.exe'
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+  CommandLine:
+    - '*http*'
+    - '*\temp\*.tmp'
+    - '*-e *'
+condition: EventID: 4688 and ParentImage in ('*\WINWORD.EXE', '*\EXCEL.EXE', '*\POWERPNT.EXE') and Image in ('*\mshta.exe', '*\rundll32.exe', '*\cmd.exe', '*\powershell.exe') and (CommandLine contains 'http' or CommandLine contains '\temp\' or CommandLine contains '-e')
+level: high

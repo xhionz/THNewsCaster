@@ -1,0 +1,18 @@
+title: Detect Potential LegacyHive Privilege Escalation via Unusual Token Manipulation
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID:
+    - 4670 # Permissions changed on object
+    - 4672 # Special privileges assigned to new logon
+  SubjectUserName:
+    - '*'
+  SubjectDomainName:
+    - '*'
+  SubjectLogonId:
+    - '0x3e7' # SYSTEM
+  Keywords:
+    - '0x8020000000000000' # Audit Success + Privilege Use
+condition: EventID of (4670, 4672) and SubjectLogonId: '0x3e7' and Keywords: '0x8020000000000000'
+level: high
