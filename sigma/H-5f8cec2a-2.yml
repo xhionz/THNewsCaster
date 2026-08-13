@@ -1,0 +1,18 @@
+title: Suspicious vCenter API Access from ESXi Host
+logsource:
+  product: esxi
+  service: http
+condition: 'request_uri contains "/sdk" and user_agent contains "VMware" and status_code == 200'
+detection:
+  request_uri:
+    - "/sdk"
+    - "/vimService.wsdl"
+  user_agent:
+    - "VMware-vSphere-*"
+    - "VMware-SDK-*"
+  status_code:
+    - 200
+  src_ip:
+    - "192.168.10.0/24"
+    - "192.168.11.0/24"
+condition: all of them

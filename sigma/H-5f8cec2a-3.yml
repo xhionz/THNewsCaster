@@ -1,0 +1,12 @@
+title: Suspicious ESXi Scheduled Task Creation
+logsource:
+  product: esxi
+  service: system
+condition: 'message contains "ScheduledTask" and message contains "add"'
+detection:
+  message:
+    - "ScheduledTask.*add"
+    - "esxcli.*system.*cron.*add"
+  process:
+    - "esxcli"
+condition: all of them

@@ -1,0 +1,16 @@
+title: Exploit Attempt - CVE-2021-21972 on ESXi
+logsource:
+  product: esxi
+  service: http
+condition: 'request_uri contains "/ui/vcopsuiext/rest/diagnostic/report" and status_code == 200'
+detection:
+  request_uri:
+    - "/ui/vcopsuiext/rest/diagnostic/report"
+  status_code:
+    - 200
+  method:
+    - "POST"
+  user_agent:
+    - "*curl*"
+    - "*Python-urllib*"
+condition: all of them
