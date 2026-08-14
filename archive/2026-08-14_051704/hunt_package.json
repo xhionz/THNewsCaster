@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T06:52:56+00:00",
+  "generated_at": "2026-08-14T05:17:01+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -13351,7 +13351,7 @@
       ]
     }
   ],
-  "skipped": 304,
+  "skipped": 305,
   "total_seen": 305,
   "brief": "Dominant threat is exploitation of critical zero-day vulnerabilities in VMware vCenter and Cisco firewalls targeting manufacturing sectors, with active reverse SSH and DoS attacks in the wild. Prioritize patching CVE-2026-59310 (VMware) and CVE-2026-20349 (Cisco ASA/FTD) immediately due to confirmed exploitation and sector concentration. Lazarus is actively exploiting CVE-2026-68820 in a KEV-listed campaign to target defense firms with SYSTEM-level backdoors."
 }
