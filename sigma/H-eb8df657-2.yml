@@ -1,0 +1,11 @@
+title: Detect CVE-2026-15409 SonicWall SMA1000 Exploitation
+logsource:
+  product: firewall
+  service: https
+detection:
+  req_uri:
+    - '/api/v1/auth/login'
+    - '/api/v1/system/info'
+    - '/api/v1/user/profile'
+  user_agent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+  condition: all of them

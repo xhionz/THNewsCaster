@@ -1,0 +1,13 @@
+title: Detect Fragnesia Kernel Exploit (CVE-2026-46300) Memory Corruption
+logsource:
+  product: linux
+  service: kernel
+detection:
+  syscall:
+    - 'execve'
+    - 'open'
+  args:
+    - '/tmp/.X11-unix'
+    - '/dev/shm/.X0-lock'
+    - '/proc/self/fd'
+  condition: all of them
