@@ -1,0 +1,5 @@
+title: Detect AS-REP Roasting Attempt
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4768 AND kerberos_error_code: "0x1d" AND pre_auth_requested: "false"'

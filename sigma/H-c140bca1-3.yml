@@ -1,0 +1,5 @@
+title: Detect Ransomware File Encryption and Shadow Copy Deletion
+logsource:
+  product: windows
+  service: sysmon
+condition: '(event_id: 11 AND target_filename: "*.encrypted" OR target_filename: "*.lock" OR target_filename: "*.crypt") OR (event_id: 1 AND parent_image: "*vssadmin.exe" AND image: "*cmd.exe" AND command_line: "*delete shadows*" )'
