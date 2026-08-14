@@ -1,0 +1,13 @@
+title: Detect CVE-2023-4966 Exploitation Attempt
+logsource:
+  product: citrix_netscaler
+  service: http
+detection:
+  req_uri:
+    - '/vpn/../cvpn/'
+    - '/vpn/js/..
+    - '/vpn/..;/'
+  user_agent:
+    - 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+  status_code: 200
+condition: all of them

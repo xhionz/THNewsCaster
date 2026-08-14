@@ -1,0 +1,15 @@
+title: Detect Suspicious Outbound TCP/443 from NetScaler IPs
+logsource:
+  product: netflow
+  service: network_traffic
+detection:
+  src_ip:
+    - '10.10.10.0/24'
+  dst_port: 443
+  bytes_out: '>100000'
+  duration: '>300'
+  dst_ip:
+    - '185.143.224.0/24'
+    - '194.169.128.0/24'
+    - 'lookup:external_c2_ips'
+condition: all of them

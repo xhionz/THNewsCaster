@@ -1,0 +1,17 @@
+title: Detect Suspicious nsrd.exe Execution via Parent Process
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  parent_image:
+    - '\\Citrix\nsrd.exe'
+  image:
+    - '\\cmd.exe'
+    - '\\powershell.exe'
+    - '\\certutil.exe'
+    - '\\bitsadmin.exe'
+  command_line:
+    - ' -enc '
+    - ' -nop -c '
+    - ' download '
+condition: all of them
