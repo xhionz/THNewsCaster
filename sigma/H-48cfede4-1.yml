@@ -1,0 +1,17 @@
+title: Suspicious JWT Bypass Attempt via Authorization Header
+logsource:
+  product: iis
+  service: http
+condition: '1 of them'
+detection:
+  selection:
+    http_header_name: 'Authorization'
+    http_header_value: 'Bearer eyJ*'
+  selection2:
+    http_header_name: 'Authorization'
+    http_header_value: 'Bearer *.*.*'
+  selection3:
+    http_header_name: 'Authorization'
+    http_header_value: 'Bearer %'
+  condition: selection or selection2 or selection3
+timeframe: 5m

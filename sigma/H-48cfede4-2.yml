@@ -1,0 +1,17 @@
+title: Suspicious CVE-2026-55040 Header Injection
+logsource:
+  product: iis
+  service: http
+condition: '1 of them'
+detection:
+  selection:
+    http_header_name: 'X-CVE-2026-55040'
+    http_header_value: '1'
+  selection2:
+    http_header_name: 'X-CVE-2026-55040'
+    http_header_value: 'true'
+  selection3:
+    http_header_name: 'X-CVE-2026-55040'
+    http_header_value: 'enable'
+  condition: selection or selection2 or selection3
+timeframe: 5m

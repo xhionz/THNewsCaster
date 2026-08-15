@@ -1,0 +1,14 @@
+title: Suspicious Reddit Domain Access from Internal Network
+logsource:
+  product: proxy
+  service: http
+condition: '1 of them'
+detection:
+  selection:
+    url_domain: 'reddit.com'
+    url_path: '/r/blueteamsec'
+  selection2:
+    url_domain: 'reddit.com'
+    url_path: '/r/blueteamsec/'
+  condition: selection or selection2
+timeframe: 1h
