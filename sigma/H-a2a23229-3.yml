@@ -1,0 +1,15 @@
+title: Suspicious Large Blob Query from Unauthenticated User
+logsource:
+  product: gitlab
+  service: graphql
+condition: 'query_name: blob' and ('user_id': '' or 'username': '' or 'actor': '') and 'variables.path': '*' and 'response_size': > 50000
+detection:
+  query_name:
+    - blob
+  auth_missing:
+    - 'user_id': ''
+    - 'username': ''
+    - 'actor': ''
+  response_size:
+    - '> 50000'
+condition: all

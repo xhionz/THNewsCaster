@@ -1,0 +1,14 @@
+title: Suspicious GraphQL Project Enumeration Pattern
+logsource:
+  product: gitlab
+  service: graphql
+condition: 'query_name: projects' and ('search: manufacturing' or 'search: factory' or 'search: plant' or 'search: production')
+detection:
+  query_name:
+    - projects
+  search_term:
+    - 'search: manufacturing'
+    - 'search: factory'
+    - 'search: plant'
+    - 'search: production'
+condition: all

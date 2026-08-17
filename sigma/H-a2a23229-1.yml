@@ -1,0 +1,13 @@
+title: Suspicious GraphQL deleteProject Mutation Without Authentication
+logsource:
+  product: gitlab
+  service: graphql
+condition: 'query_name: deleteProject' and not ('user_id': '*' or 'username': '*' or 'actor': '*')
+detection:
+  query_name:
+    - deleteProject
+  auth_missing:
+    - 'user_id': ''
+    - 'username': ''
+    - 'actor': ''
+condition: all
