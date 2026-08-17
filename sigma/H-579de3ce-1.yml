@@ -1,0 +1,11 @@
+title: Suspicious Certificate Template Enrollment by Non-Admins
+logsource:
+  product: windows
+  service: certsvc
+detection:
+  selection:
+    EventID: 4885
+    SubjectUserName not in ["Administrator", "Domain Admins", "Enterprise Admins", "SYSTEM"]
+    TemplateName in ["DomainController", "Machine", "User"]
+  condition: selection
+condition: selection

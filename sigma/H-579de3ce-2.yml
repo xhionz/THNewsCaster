@@ -1,0 +1,11 @@
+title: Suspicious Certificate-Based Kerberos Authentication
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4768
+    AuthenticationPackage: 'PKINIT'
+    AccountName not in ["krbtgt", "ANONYMOUS LOGON"]
+  condition: selection
+condition: selection

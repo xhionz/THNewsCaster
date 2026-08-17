@@ -1,0 +1,10 @@
+title: Repeated Certificate Serial Numbers in Kerberos Auth
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4768
+    CertificateSerialNumber: "*"
+  condition: selection
+condition: selection
