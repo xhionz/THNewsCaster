@@ -1,0 +1,14 @@
+title: Suspected China-Nexus APT Initial Access via CVE-2026-59310
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects HTTP requests to vCenter with directory traversal payloads indicative of CVE-2026-59310 exploitation
+logsource:
+  product: vmware_vcenter
+  service: http
+Detection:
+  selection:
+    uri: '*../*'
+    user_agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+    status_code: 200
+  condition: selection
+level: high

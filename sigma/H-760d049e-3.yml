@@ -1,0 +1,16 @@
+title: Ransomware Deployment via Compromised vCenter Credentials
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects ransomware-like behavior initiated via vCenter API after credential compromise
+logsource:
+  product: vmware_vcenter
+  service: api
+Detection:
+  selection:
+    endpoint: '/rest/vcenter/vm/*/power/stop'
+    action: 'power_off'
+    user: 'administrator'
+    timestamp: > '2026-07-01T00:00:00Z'
+  condition: selection
+  filter: not (user == 'administrator' AND reason == 'scheduled_maintenance')
+level: critical

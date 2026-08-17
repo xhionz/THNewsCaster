@@ -1,0 +1,14 @@
+title: Exploit of CVE-2026-59310 via VMware vCenter Directory Traversal
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects potential exploitation of CVE-2026-59310 via unusual directory traversal patterns in vCenter HTTP requests
+logsource:
+  product: vmware_vcenter
+  service: http
+Detection:
+  selection:
+    uri: '*../*'
+    status_code: 200
+    user_agent: 'Mozilla/*'
+  condition: selection
+level: critical
