@@ -1,0 +1,15 @@
+title: Forminator Unauthenticated PHP Upload
+logsource:
+  product: apache
+  service: access
+detection:
+  selection:
+    uri|contains: '/wp-content/uploads/forminator/'
+    uri|endswith: '.php'
+    status: '200'
+    user_agent|contains: 'WordPress'
+  condition: selection
+fields:
+  - uri
+  - client_ip
+  - user_agent

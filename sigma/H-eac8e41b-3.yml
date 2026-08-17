@@ -1,0 +1,18 @@
+title: Suspicious Random PHP Beaconing
+logsource:
+  product: apache
+  service: access
+detection:
+  selection:
+    uri|contains: '/wp-content/uploads/'
+    uri|endswith: '.php'
+    uri|contains: '/'
+    uri|contains: '.'
+    status: '200'
+    method: 'GET'
+    client_ip|contains: '.'
+  condition: selection and (uri|contains: '/' and uri|contains: '.' and uri|length > 15)
+fields:
+  - uri
+  - client_ip
+  - user_agent
