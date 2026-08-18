@@ -1,0 +1,13 @@
+title: Detection of Unauthorized SharePoint Access via CVE-2026-55040
+logsource:
+  product: microsoft_sharepoint
+  service: http
+condition: 'request_uri contains "/_layouts/" and status_code == 200 and user_agent contains "Mozilla" and auth_type == "None"'
+detection:
+  unauthorized_access:
+    - auth_type == "None"
+    - request_uri contains "/_layouts/"
+    - status_code == 200
+  user_agent_legit:
+    - user_agent contains "Mozilla"
+condition: unauthorized_access and user_agent_legit

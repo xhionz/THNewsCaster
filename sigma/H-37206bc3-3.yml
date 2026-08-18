@@ -1,0 +1,13 @@
+title: Detection of IKEv2 Exploitation Attempt via CVE-2026-33824
+logsource:
+  product: windows
+  service: ikeext
+condition: 'event_id == 500 and event_data.IkeAuthMethod == "IKEv2" and event_data.Status == "ERROR_INVALID_PARAMETER"'
+detection:
+  ikev2_error:
+    - event_id == 500
+    - event_data.IkeAuthMethod == "IKEv2"
+    - event_data.Status == "ERROR_INVALID_PARAMETER"
+  high_frequency:
+    - count(event_id) > 10 over 5m
+condition: ikev2_error and high_frequency

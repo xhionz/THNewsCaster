@@ -1,0 +1,16 @@
+title: Detection of Path Traversal Attempt in VMware vCenter via CVE-2026-59310
+logsource:
+  product: vmware_vcenter
+  service: http
+condition: 'request_uri contains "../" or request_uri contains "..%2f" or request_uri contains "..%5c" and status_code == 200 and user_agent contains "curl" or user_agent contains "wget"'
+detection:
+  path_traversal:
+    - request_uri contains "../"
+    - request_uri contains "..%2f"
+    - request_uri contains "..%5c"
+  status_ok:
+    - status_code == 200
+  user_agent_suspicious:
+    - user_agent contains "curl"
+    - user_agent contains "wget"
+condition: path_traversal and status_ok and user_agent_suspicious
