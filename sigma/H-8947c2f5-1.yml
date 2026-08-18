@@ -1,0 +1,17 @@
+title: Suspicious schtasks.exe Execution with SYSTEM Privilege
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4688
+    NewProcessName: '*\schtasks.exe'
+    CommandLine: '* /create *'
+    CommandLine: '* /RU "NT AUTHORITY\SYSTEM" *'
+    CommandLine: '* /RU "SYSTEM" *'
+  Condition: Selection
+fields:
+  - NewProcessName
+  - CommandLine
+  - ParentProcessName
+  - User

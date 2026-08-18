@@ -1,0 +1,17 @@
+title: Suspicious Logon After Privilege Escalation Event
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4624
+    LogonType: 3
+    User: '*'
+    TimeGenerated: '> [last_schtasks_or_taskhost_time - 10m] AND < [last_schtasks_or_taskhost_time + 10m]'
+    ProcessName: '*\lsass.exe'
+  Condition: Selection
+fields:
+  - User
+  - LogonType
+  - ProcessName
+  - SourceNetworkAddress

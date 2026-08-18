@@ -1,0 +1,18 @@
+title: Suspicious TaskHost.exe Loading Untrusted DLL
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 4688
+    NewProcessName: '*\TaskHost.exe'
+    ParentProcessName: '*\svchost.exe'
+    CommandLine: '*-Embedding*'
+    ImageLoaded: '*\temp\*' OR ImageLoaded: '*\appdata\local\temp\*' OR ImageLoaded: '*\windows\temp\*'
+  Condition: Selection
+fields:
+  - NewProcessName
+  - ParentProcessName
+  - CommandLine
+  - ImageLoaded
+  - User
