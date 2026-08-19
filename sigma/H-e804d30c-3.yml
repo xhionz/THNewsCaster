@@ -1,0 +1,11 @@
+title: Detect Lateral Movement via Screen Sharing
+logsource:
+  product: macos
+  service: securityd
+detection:
+  selection:
+    eventtype: 'ScreenSharingAuth'
+    auth_status: 'success'
+    auth_method: 'none'
+  condition: selection
+condition: selection

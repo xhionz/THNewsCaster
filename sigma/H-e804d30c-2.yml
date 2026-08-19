@@ -1,0 +1,10 @@
+title: Detect Screen Sharing Port Scanning
+logsource:
+  product: network
+  service: firewall
+detection:
+  selection:
+    destination_port: 5900
+    connection_count: 10
+  timeframe: 60s
+condition: selection

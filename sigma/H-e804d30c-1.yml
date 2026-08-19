@@ -1,0 +1,11 @@
+title: Detect CVE-2024-27835 Screen Sharing Auth Bypass
+logsource:
+  product: macos
+  service: securityd
+detection:
+  selection:
+    eventtype: 'ScreenSharingAuth'
+    auth_status: 'success'
+    auth_method: 'none'
+  condition: selection
+condition: selection
