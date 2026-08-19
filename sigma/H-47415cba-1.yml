@@ -1,0 +1,10 @@
+title: Detect Medusa Initial Access via CVE-2020-5902
+logsource:
+  product: f5_bigip
+  service: http
+detection:
+  req_uri: '/remote/fgt_lang'
+  req_method: 'POST'
+  req_body: 'shell_exec|system|exec|cmd|powershell'
+  condition: all of them
+condition: selection

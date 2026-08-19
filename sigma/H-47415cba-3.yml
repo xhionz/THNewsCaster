@@ -1,0 +1,11 @@
+title: Detect RDP Brute Force Leading to Medusa Access
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 4625
+  logon_type: 10
+  account_name: '*'
+  source_network_address: '192.168.0.0/16'
+  condition: event_id and logon_type and source_network_address
+condition: selection

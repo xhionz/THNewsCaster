@@ -1,0 +1,11 @@
+title: Detect Medusa Phishing Payload via PowerShell Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  parent_image: '*\winword.exe' OR '*\excel.exe' OR '*\powerpoint.exe'
+  image: '*\powershell.exe'
+  command_line: '*-e*' OR '*-enc*' OR '*-nop*' OR '*-w hidden*' OR '*IEX*' OR '*Invoke-Expression*'
+  condition: all of them
+condition: selection
