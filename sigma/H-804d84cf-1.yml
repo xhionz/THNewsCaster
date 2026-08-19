@@ -1,0 +1,26 @@
+title: Detection of MLflow SSRF Exploitation via CVE-2026-64849
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects HTTP requests to MLflow endpoints that match patterns indicative of SSRF exploitation targeting internal metadata services.
+logsource:
+  product: mlflow
+  service: http
+  category: web
+
+detection:
+  selection:
+    uri: "/api/2.0/mlflow/experiments/*"
+    user_agent: "*python-requests*"
+    request_method: "GET"
+  condition: selection
+  filters:
+    - uri: "*internal*"
+    - uri: "*169.254*"
+    - uri: "*127.0.0.1*"
+    - uri: "*metadata.google.internal*"
+    - uri: "*169.254.169.254*"
+    - uri: "*amazonaws.com/latest/meta-data*"
+    - uri: "*azure*metadata*"
+    - uri: "*oci*metadata*"
+
+level: high

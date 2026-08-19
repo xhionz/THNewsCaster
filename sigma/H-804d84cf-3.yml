@@ -1,0 +1,25 @@
+title: Cloud Metadata Credential Theft via MLflow SSRF
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects SSRF exploitation in MLflow that retrieves cloud metadata credentials (e.g., AWS, Azure, GCP).
+logsource:
+  product: mlflow
+  service: http
+  category: web
+
+detection:
+  selection:
+    uri: "/api/2.0/mlflow/experiments/*"
+    request_method: "GET"
+    user_agent: "*python-requests*"
+  filters:
+    - uri: "*169.254.169.254*"
+    - uri: "*metadata.google.internal*"
+    - uri: "*azure*metadata*"
+    - uri: "*oci*metadata*"
+  condition: selection
+  # Correlate with credential patterns in response
+  additional:
+    - response_body: "access_key_id" OR "secret_access_key" OR "token" OR "session_token" OR "private_key"
+
+level: critical

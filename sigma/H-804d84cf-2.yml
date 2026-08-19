@@ -1,0 +1,26 @@
+title: MLflow SSRF as Initial Access Vector
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects SSRF exploitation in MLflow followed by execution of shell commands or credential dumping on the same host.
+logsource:
+  product: mlflow
+  service: http
+  category: web
+
+detection:
+  selection:
+    uri: "/api/2.0/mlflow/experiments/*"
+    request_method: "GET"
+    user_agent: "*python-requests*"
+  filters:
+    - uri: "*169.254*"
+    - uri: "*metadata.google.internal*"
+  condition: selection
+  # Correlate with EDR process execution
+  additional:
+    - event_type: "process_creation"
+      image: "*cmd.exe" OR "*powershell.exe" OR "*bash"
+      parent_image: "*mlflow*"
+      command_line: "*whoami*" OR "*net user*" OR "*aws sts get-caller-identity*"
+
+level: high
