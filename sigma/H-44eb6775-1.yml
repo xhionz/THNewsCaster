@@ -1,0 +1,12 @@
+title: Suspicious DNS Query Leading to RCE (CVE-2020-1350)
+logsource:
+  product: windows
+  service: dns
+condition: 'EventID: 255 and QueryName: "*" and QueryType: 1 and QueryResult: "NOERROR" and QueryTime: > "2026-08-15T00:00:00Z" and QueryTime: < "2026-08-20T23:59:59Z" and QueryNameLength: > 255'
+detection:
+  QueryName: "*"
+  QueryType: 1
+  QueryResult: "NOERROR"
+  QueryNameLength: > 255
+  EventID: 255
+condition: all

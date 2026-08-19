@@ -1,0 +1,11 @@
+title: Suspicious Outlook Web Access (OWA) Request Leading to RCE (CVE-2023-23397)
+logsource:
+  product: iis
+  service: exchange
+condition: 'EventID: 400 and RequestUri: "*/owa/auth/" and UserAgent: "*Mozilla*" and StatusCode: 200 and RequestLength: > 10000'
+detection:
+  RequestUri: "*/owa/auth/"
+  UserAgent: "*Mozilla*"
+  StatusCode: 200
+  RequestLength: > 10000
+condition: all

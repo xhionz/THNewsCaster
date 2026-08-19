@@ -1,0 +1,12 @@
+title: Suspicious SMB NTLM Authentication from Unusual Source
+logsource:
+  product: windows
+  service: security
+condition: 'EventID: 4624 and LogonType: 3 and AuthenticationPackage: NTLM and LogonProcessName: 'SmbLsa' and AccountName: "*" and IpAddress: "*"'
+detection:
+  EventID: 4624
+  LogonType: 3
+  AuthenticationPackage: NTLM
+  LogonProcessName: 'SmbLsa'
+  IpAddress: "*"
+condition: all
