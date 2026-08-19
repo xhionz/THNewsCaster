@@ -1,0 +1,17 @@
+title: Detect Suspicious NSC_Cookie Reuse Across Multiple IPs
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'request_headers: "Cookie: NSC_"'
+  and
+  source_ip: ["192.168.1.100", "10.0.0.5", "172.16.0.20"]
+  and
+  dest_port: [80, 443, 8080, 8443]
+detection:
+  cookie_pattern:
+    - request_headers: "Cookie: NSC_"
+  suspicious_ips:
+    - source_ip: ["192.168.1.100", "10.0.0.5", "172.16.0.20"]
+  internal_dest:
+    - dest_port: [80, 443, 8080, 8443]
+condition: '1 of cookie_pattern and 1 of suspicious_ips and 1 of internal_dest and COUNT_DISTINCT(source_ip) > 1 by request_headers'

@@ -1,0 +1,17 @@
+title: Detect DNS Tunneling or HTTP Exfiltration from NetScaler
+logsource:
+  product: citrix_netscaler
+  service: dns or http
+condition: 'dest_port: [53, 80, 443, 5353]'
+  and
+  dest_domain: "*.duckdns.org" or dest_domain: "*.dynamic-dns.net" or dest_domain: "*.cloudfront.net" or dest_domain: "*.azureedge.net"
+  and
+  request_headers: "User-Agent: Mozilla/5.0" or request_headers: "Content-Length: >5000"
+detection:
+  exfil_domain:
+    - dest_domain: ["*.duckdns.org", "*.dynamic-dns.net", "*.cloudfront.net", "*.azureedge.net"]
+  high_content_length:
+    - request_headers: "Content-Length: >5000"
+  dns_query_length:
+    - query: "*.*.*.*.*.*.*.*.*.*"  # Long subdomain pattern
+condition: '1 of exfil_domain and (1 of high_content_length or 1 of dns_query_length)'
