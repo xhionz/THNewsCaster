@@ -1,0 +1,10 @@
+title: Dahua Backdoor Login via Port 37777
+logsource:
+  product: network
+  service: tcp
+  definition: 'EventID=4624 or event_type=connection_established'
+detection:
+  dest_port: 37777
+  user.name: 'admin'
+  condition: dest_port == 37777 and user.name == 'admin'
+level: medium

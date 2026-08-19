@@ -1,0 +1,9 @@
+title: Dahua Credential Enumeration via API
+logsource:
+  product: web
+  service: http
+detection:
+  http.request.uri: '/api/user/list' OR '/api/account/list' OR '/api/user/get'
+  http.method: 'GET'
+  condition: any of http.request.uri
+level: high

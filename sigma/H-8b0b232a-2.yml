@@ -1,0 +1,9 @@
+title: Suspicious NetKeyboard HTTP Requests to Dahua API
+logsource:
+  product: web
+  service: http
+detection:
+  user_agent: 'NetKeyboard'
+  http.request.uri: '/api/login'
+  condition: user_agent contains 'NetKeyboard' and http.request.uri contains '/api/login'
+level: medium
