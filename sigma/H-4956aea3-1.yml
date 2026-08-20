@@ -1,0 +1,5 @@
+title: Detect CVE-2023-3519 Exploitation Attempt
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'request_uri: /vpn/index.html' and 'status_code: 302' or 'status_code: 404' or 'status_code: 500' and 'user_agent: /.*\b(?:Mozilla|curl|wget|Python-urllib|Go-http-client|Java).*\b/' and 'referer: ""' and 'src_ip not in (trusted_netscaler_ips)'

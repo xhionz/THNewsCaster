@@ -1,0 +1,5 @@
+title: Detect Redirects to Suspicious Domains via NetScaler
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'status_code: 302' and 'location: /.*\.(phishing|fake|malicious|secure-login|citrix-auth|verify-account)\.(com|net|org|info|xyz)/' and 'src_ip not in (trusted_netscaler_ips)' and 'referer: /vpn/index.html'

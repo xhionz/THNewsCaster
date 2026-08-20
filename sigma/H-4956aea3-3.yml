@@ -1,0 +1,5 @@
+title: Detect DNS Tunneling via Unusually Long Subdomains
+logsource:
+  product: dns
+  service: query
+condition: 'query: /.*\.[a-zA-Z0-9]{30,}\.(com|net|org|info|xyz)/' and 'src_ip in (internal_hosts)' and 'query not in (whitelisted_domains)'
