@@ -1,0 +1,20 @@
+title: SPECTRE Credential Theft via Open-Source Tool Execution
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects execution of known credential theft tools used by SPECTRE
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    Image: '*\secretsdump.py'
+    or
+    Image: '*\cmdkey.exe' AND CommandLine: '*/list:*'
+    or
+    Image: '*\juicypotato.exe'
+    or
+    Image: '*\godpotato.exe'
+    or
+    Image: '*\msfvenom*'
+  Condition: Selection
+level: high

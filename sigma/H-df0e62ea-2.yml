@@ -1,0 +1,16 @@
+title: SPECTRE Linux Kernel Rootkit Persistence Detection
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects suspicious systemd service or kernel module loading consistent with SPECTRE Linux rootkit
+logsource:
+  product: linux
+  service: audit
+detection:
+  Selection:
+    syscall: "create_module" OR "init_module" OR "finit_module"
+    and
+    arg1: '*spectre*' OR arg1: '*sysinit*' OR arg1: '*unix.rootkit*'
+    or
+    service: "sysinit.target" AND action: "start" AND user: "root"
+  Condition: Selection
+level: high
