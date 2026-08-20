@@ -1,0 +1,18 @@
+title: Detect Suspicious Code Injection via TrueConf Server Process Creation
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects process creation with obfuscated PowerShell or certutil commands from TrueConf server
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  image: 'C:\\Program Files\\TrueConf\\TrueConfServer.exe'
+  command_line:
+    - '*powershell -enc*'
+    - '*certutil -decode*'
+    - '*bitsadmin /transfer*'
+    - '*rundll32.exe javascript:*'
+  time: '2026-08-15T00:00:00Z - 2026-08-20T23:59:59Z'
+condition: all
+level: high

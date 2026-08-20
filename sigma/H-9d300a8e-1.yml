@@ -1,0 +1,16 @@
+title: Detect Unauthenticated TrueConf API Access Leading to SMB Connection
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects outbound SMB connections from TrueConf server after unauthenticated API call
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 5145
+  share_name: '\\*\IPC$'
+  access_mask: '0x12019f'
+  subject_user_name: 'TrueConfService'
+  source_ip: '10.1.1.10'
+  time: '2026-08-15T00:00:00Z - 2026-08-20T23:59:59Z'
+condition: all
+level: high

@@ -1,0 +1,21 @@
+title: Detect Lateral Movement from TrueConf Server via SMB/WMI
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects SMB or WMI lateral movement originating from TrueConf server
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 5145  # SMB share access
+    - 4688  # Process creation
+  subject_user_name: 'TrueConfService'
+  source_ip: '10.1.1.10'
+  target_server: '10.1.1.*'
+  command_line:
+    - '*wmic.exe*'
+    - '*psexec.exe*'
+    - '*net use*'
+  time: '2026-08-16T00:00:00Z - 2026-08-20T23:59:59Z'
+condition: all
+level: high
