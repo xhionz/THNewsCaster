@@ -1,0 +1,18 @@
+title: Suspicious Git Push with Malicious Payload Pattern
+logsource:
+  product: gitlab
+  service: access
+condition: 'request_uri contains "/api/v4/projects/" and request_method == "POST" and user != "-" and (request_body contains "shell" or request_body contains "bash" or request_body contains "curl" or request_body contains "wget" or request_body contains "base64" or request_body contains "rm -rf" or request_body contains "chmod +x") and timestamp >= "2026-08-18T00:00:00Z" and timestamp <= "2026-08-20T23:59:59Z"'
+detection:
+  malicious_push:
+    - request_uri contains "/api/v4/projects/"
+    - request_method == "POST"
+    - user != "-"
+    - request_body contains "shell"
+    - request_body contains "bash"
+    - request_body contains "curl"
+    - request_body contains "wget"
+    - request_body contains "base64"
+    - request_body contains "rm -rf"
+    - request_body contains "chmod +x"
+condition: malicious_push

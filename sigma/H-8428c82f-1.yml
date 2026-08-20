@@ -1,0 +1,15 @@
+title: Unauthenticated GitLab Project Metadata Modification via CVE-2026-19478
+logsource:
+  product: gitlab
+  service: access
+condition: 'request_uri contains "/api/v4/projects/" and status_code == 200 and user == "-" and (request_body contains "visibility" or request_body contains "default_branch" or request_body contains "issues_enabled" or request_body contains "merge_requests_enabled") and timestamp >= "2026-08-18T00:00:00Z" and timestamp <= "2026-08-20T23:59:59Z"'
+detection:
+  unauth_api_call:
+    - request_uri contains "/api/v4/projects/"
+    - status_code == 200
+    - user == "-"
+    - request_body contains "visibility"
+    - request_body contains "default_branch"
+    - request_body contains "issues_enabled"
+    - request_body contains "merge_requests_enabled"
+condition: unauth_api_call

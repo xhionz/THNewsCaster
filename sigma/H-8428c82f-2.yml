@@ -1,0 +1,12 @@
+title: Suspicious GitLab Login from Unusual Location or Time
+logsource:
+  product: gitlab
+  service: access
+condition: 'user != "-" and status_code == 200 and (src_ip not in trusted_ip_ranges or hour(timestamp) in [0,1,2,3,4,5]) and timestamp >= "2026-08-18T00:00:00Z" and timestamp <= "2026-08-20T23:59:59Z"'
+detection:
+  unusual_login:
+    - user != "-"
+    - status_code == 200
+    - src_ip not in trusted_ip_ranges
+    - hour(timestamp) in [0,1,2,3,4,5]
+condition: unusual_login
