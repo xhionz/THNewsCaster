@@ -1,0 +1,19 @@
+title: Suspicious Graph API Access After Phishing-Style Auth
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects successful Graph API access following failed authentications from high-risk IPs or users with phishing email indicators
+logsource:
+  product: azure_ad
+  service: signinlogs
+detection:
+  selection:
+    ResultType: '50126'  # Invalid username or password
+    IPAddress: '185.143.221.0/24'  # Known malicious IP range
+  selection2:
+    ResultType: '0'
+    ClientAppId: '00000002-0000-0000-c000-000000000000'  # Microsoft Graph
+    UserPrincipalName: '*@company.com'
+  condition: selection and selection2
+  timeframe: 5m
+  by: UserPrincipalName, IPAddress
+level: high

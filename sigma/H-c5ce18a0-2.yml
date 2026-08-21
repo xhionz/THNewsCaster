@@ -1,0 +1,14 @@
+title: Phishing Email with Urgent Subject Lines to Admins
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects high-volume emails with urgent subject lines sent to privileged accounts
+logsource:
+  product: exchange_online
+  service: message_trace
+detection:
+  selection:
+    Subject: '*Urgent*' OR Subject: '*Action Required*' OR Subject: '*Security Alert*'
+    RecipientAddress: '*admin*' OR RecipientAddress: '*administrator*' OR RecipientAddress: '*owner*'
+    RecipientCount: '>5'
+  condition: selection
+level: high

@@ -1,0 +1,16 @@
+title: Excessive Graph API Permissions Used by Non-Admin User
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects non-admin users accessing Graph API with high-risk permissions (e.g., User.ReadWrite.All, Directory.ReadWrite.All)
+logsource:
+  product: azure_ad
+  service: signinlogs
+detection:
+  selection:
+    ResultType: '0'
+    ClientAppId: '00000002-0000-0000-c000-000000000000'
+    UserPrincipalName: '*@company.com'
+    AppDisplayName: 'Non-Admin App'
+    Permissions: 'User.ReadWrite.All' OR Permissions: 'Directory.ReadWrite.All'
+  condition: selection
+level: high
