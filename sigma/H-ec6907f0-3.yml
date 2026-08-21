@@ -1,0 +1,17 @@
+title: Token Replay Detected via Federated Sign-In to Partner Domain
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  selection:
+    ConditionalAccessStatus: 'success'
+    UserPrincipalName: '*@manufacturing*.com'
+    SignInStatus: 'Success'
+    TokenIssuer: 'https://sts.partner-company.com'
+    ClientAppId: '00000002-0000-0000-c000-000000000000'
+  condition: selection
+fields:
+  - UserPrincipalName
+  - TokenIssuer
+  - ClientAppId
+  - IPAddress

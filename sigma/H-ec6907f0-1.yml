@@ -1,0 +1,16 @@
+title: Suspicious Entra ID Sign-In from Unusual Location or Device
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  selection:
+    ConditionalAccessStatus: 'success'
+    UserPrincipalName: '*@manufacturing*.com'
+    ClientAppId: '00000002-0000-0000-c000-000000000000'
+    IPAddress: '192.168.1.*'
+    DeviceDetail: 'DevicePlatform: Linux'
+  condition: selection
+fields:
+  - UserPrincipalName
+  - IPAddress
+  - ClientAppId

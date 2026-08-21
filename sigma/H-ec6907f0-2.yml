@@ -1,0 +1,15 @@
+title: Suspicious OAuth Consent Grant by Unknown Application
+logsource:
+  product: azure_ad
+  service: audit
+detection:
+  selection:
+    OperationName: 'Add oauth2PermissionGrant'
+    TargetResources[*].displayName: '*'
+    InitiatingUser.userPrincipalName: '*@manufacturing*.com'
+    TargetResources[*].modifiedProperties[*].newValue: '*openid* *offline_access* *User.Read.All*'
+  condition: selection
+fields:
+  - InitiatingUser.userPrincipalName
+  - TargetResources[*].displayName
+  - TargetResources[*].modifiedProperties[*].newValue
