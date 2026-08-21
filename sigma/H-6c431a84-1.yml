@@ -1,0 +1,9 @@
+title: Suspicious CI/CD Pipeline Command Injection
+logsource:
+  product: gitlab
+  service: ci_cd
+condition: 'content: ".*\b(\$\(|system\(|exec\(|shell_exec\()\).*"'
+detection:
+  selection:
+    content: '.*\b(\$\(|system\(|exec\(|shell_exec\()\).*'
+  condition: selection

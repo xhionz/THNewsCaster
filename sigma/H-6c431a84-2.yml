@@ -1,0 +1,13 @@
+title: Suspicious API Token Usage by Non-Admin User
+logsource:
+  product: gitlab
+  service: api
+condition: 'selection and not trusted_users'
+detection:
+  selection:
+    user: ['ci-bot', 'deploy-user', 'automation']
+    action: ['update_project', 'push_to_repository', 'trigger_pipeline']
+  trusted_users:
+    - 'admin'
+    - 'security-team'
+  condition: selection and not trusted_users

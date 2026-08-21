@@ -1,0 +1,11 @@
+title: Suspicious Merge Request with External URL
+logsource:
+  product: gitlab
+  service: merge_request
+condition: 'selection'
+detection:
+  selection:
+    title: '.*https?://.*'
+    description: '.*https?://.*'
+    author: ['unknown_user', 'bot', 'anonymous']
+  condition: selection
