@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-21T14:37:01+00:00",
+  "generated_at": "2026-08-21T13:53:35+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -13449,7 +13449,7 @@
       ]
     }
   ],
-  "skipped": 303,
+  "skipped": 305,
   "total_seen": 305,
   "brief": "Critical vulnerabilities in Microsoft Entra ID, Citrix NetScaler, and CISA-known exploited flaws are being actively weaponized in wild attacks, with a dominant theme of authentication bypass and remote code execution targeting critical infrastructure. Prioritize patching CVE-2026-69836 (Entra ID RCE), CVE-2026-19490 (Citrix), and CISA KEVs CVE-2026-72529, CVE-2026-72530, and CVE-2026-64849 due to confirmed exploitation and high impact in manufacturing and government sectors. Notable actor activity is unattributed, but Medusa ransomware has compromised 500+ critical infrastructure entities, with manufacturing and government as primary targets."
 }
