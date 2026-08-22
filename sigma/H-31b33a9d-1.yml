@@ -1,0 +1,13 @@
+title: Suspicious HGFS Buffer Read Detected
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects HGFS buffer reads exceeding 512KB that may indicate CVE-2024-37085 exploitation
+logsource:
+  product: vmware_esxi
+  service: hgfs
+detection:
+  selection:
+    buffer_offset: '>524288'
+    buffer_length: '>524288'
+  condition: selection
+timeframe: 1h

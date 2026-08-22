@@ -1,0 +1,21 @@
+title: Suspicious Credential Dumping After HGFS Read
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects credential dumping tools executed within 30s of large HGFS buffer read
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\mimikatz.exe'
+  selection2:
+    EventID: 1
+    Image: '*\lsass.exe'
+    CommandLine: '*-dump*'
+  selection3:
+    EventID: 1
+    Image: '*\procdump.exe'
+    CommandLine: '*-ma* -p lsass*'
+  condition: selection1 or selection2 or selection3
+timeframe: 30s
