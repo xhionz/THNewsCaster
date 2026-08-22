@@ -1,0 +1,18 @@
+title: Detection of Lateral Movement from HMI Gateway
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects suspicious outbound connections from Haiwell HMI gateway IPs to internal systems on common lateral movement ports
+logsource:
+  product: netflow
+  service: network_traffic
+detection:
+  selection:
+    source.ip: '192.168.100.10'  # Replace with actual HMI gateway IP
+    destination.port: [445, 139, 22, 3389]
+    direction: 'outbound'
+  condition: selection
+falsepositives:
+  - 'Scheduled backups'
+  - 'Internal patch management'
+  - 'IT maintenance windows'
+level: medium

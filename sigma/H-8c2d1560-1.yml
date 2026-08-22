@@ -1,0 +1,23 @@
+title: Detection of cmdPing Command Injection Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects suspicious cmdPing Socket.io events indicative of OS command injection
+logsource:
+  product: websocket
+  service: socketio
+detection:
+  selection:
+    event.action: 'cmdPing'
+    message|contains:
+      - ';'
+      - '|'
+      - '&&'
+      - '||'
+      - 'cat /etc/passwd'
+      - 'curl http://'
+      - 'wget http://'
+  condition: selection
+falsepositives:
+  - 'Legitimate network diagnostics'
+  - 'Internal monitoring scripts'
+level: critical

@@ -1,0 +1,22 @@
+title: Detection of Suspicious DNS Tunneling or HTTP Exfiltration from HMI Gateway
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects high-volume or anomalous DNS queries or HTTP requests from HMI gateway to external domains
+logsource:
+  product: dns
+  service: dns_query
+detection:
+  selection:
+    source.ip: '192.168.100.10'  # Replace with actual HMI gateway IP
+    query|contains:
+      - '.data.'
+      - '.exfil.'
+      - '.info.'
+      - '.upload.'
+    count: > 50
+  condition: selection
+falsepositives:
+  - 'Internal monitoring tools'
+  - 'Legitimate cloud sync services'
+  - 'Scheduled firmware updates'
+level: high
