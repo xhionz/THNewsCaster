@@ -1,0 +1,15 @@
+title: Detect Internal Proxy Abuse via WebLogic
+logsource:
+  product: web_server
+  service: weblogic
+  category: web
+condition: 'dest_ip in [internal_targets] and src_ip in [proxy_hosts] and request_uri contains "/weblogic/" and status_code == 200'
+detection:
+  internal_targets:
+    - '10.10.0.0/16'
+    - '172.16.0.0/12'
+  proxy_hosts:
+    - '10.10.5.10'
+    - '10.10.5.11'
+    - '10.10.5.12'
+condition: all of internal_targets and any of proxy_hosts and request_uri contains '/weblogic/' and status_code == 200

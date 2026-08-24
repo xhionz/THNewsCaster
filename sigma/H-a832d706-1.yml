@@ -1,0 +1,19 @@
+title: Detect Oracle Proxy Plug-in Exploitation Attempts
+logsource:
+  product: web_server
+  service: apache
+  category: web
+condition: 'request_uri contains "/servlets/" or request_uri contains "/weblogic/" or request_uri contains "/console/" and status_code in [403, 401, 500] and user_agent contains "curl" or user_agent contains "wget"'
+detection:
+  exploit_paths:
+    - '/servlets/'
+    - '/weblogic/'
+    - '/console/'
+  suspicious_ua:
+    - 'curl'
+    - 'wget'
+  error_codes:
+    - 401
+    - 403
+    - 500
+condition: all of exploit_paths and any of suspicious_ua and any of error_codes
