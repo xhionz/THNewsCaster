@@ -1,0 +1,14 @@
+title: Malicious MDM Enrollment via dmwushell.exe
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects execution of dmwushell.exe with MDM enrollment parameters
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\dmwushell.exe'
+    CommandLine: '*enroll*' or '*configure*' or '*provision*' or '*device*' or '*MDM*' or '*ManagedDevice*'
+  condition: selection
+level: medium

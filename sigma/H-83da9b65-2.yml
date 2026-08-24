@@ -1,0 +1,14 @@
+title: Malicious MDM Deployment via WMI
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects WMI class manipulation for MDM enrollment
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\wmiprvse.exe' or '*\svchost.exe'
+    CommandLine: '*Win32_EnrollManagementAgent*' or '*SetManagementAgent*' or '*MDM*' or '*DeviceManagement*'
+  condition: selection
+level: medium
