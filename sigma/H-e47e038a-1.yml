@@ -1,0 +1,16 @@
+title: Suspicious BTR.sys Usage for Boot-Time File Deletion
+logsource:
+  product: windows
+  service: driver
+condition: 'Image|endswith: "\BTR.sys" and (CommandLine|contains: "delete" or CommandLine|contains: "remove" or CommandLine|contains: "-f" or CommandLine|contains: "/f") and ParentImage|endswith: "\smss.exe"'
+detection:
+  Image:
+    - "\BTR.sys"
+  CommandLine:
+    - "delete"
+    - "remove"
+    - "-f"
+    - "/f"
+  ParentImage:
+    - "\smss.exe"
+condition: all
