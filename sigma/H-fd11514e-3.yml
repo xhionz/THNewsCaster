@@ -1,0 +1,14 @@
+title: Suspicious Buffer.allocUnsafe Usage in Node.js
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects use of Buffer.allocUnsafe with dynamic size indicative of memory corruption exploitation
+logsource:
+  product: nodejs
+  service: application
+detection:
+  keywords:
+    - 'Buffer.allocUnsafe('
+    - 'new Buffer('
+    - 'Buffer.from('
+  condition: keywords AND (log.message CONTAINS 'parseInt(' OR log.message CONTAINS 'process.argv' OR log.message CONTAINS 'req.query')
+level: high

@@ -1,0 +1,14 @@
+title: Suspicious npm install of isolated-vm detected
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects installation of isolated-vm with version known to contain CVE-2023-30559
+logsource:
+  product: ci_cd
+  service: npm
+  category: package_install
+detection:
+  selection:
+    command: 'npm install isolated-vm'
+    version: '>=4.0.0 <4.1.2'
+  condition: selection
+level: medium

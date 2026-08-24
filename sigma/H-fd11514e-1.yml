@@ -1,0 +1,15 @@
+title: Suspicious isolated-vm Usage Detected
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects use of isolated-vm with dangerous options indicative of CVE-2023-30559 exploitation
+logsource:
+  product: nodejs
+  service: application
+detection:
+  keywords:
+    - 'require("isolated-vm")'
+    - 'allowSharedArrayBuffer: true'
+    - 'wasm: true'
+    - 'allowNative: true'
+  condition: keywords
+level: high
