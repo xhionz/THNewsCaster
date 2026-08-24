@@ -1,0 +1,11 @@
+title: Malicious Autostart File Created by Build Script
+logsource:
+  product: linux
+  service: file_event
+detection:
+  file_path: '/home/*/.config/autostart/*.desktop'
+  file_name: '*.desktop'
+  parent_process_name: 'sh'
+  parent_process_cmdline: 'cargo build'
+  file_content: 'Exec=.*\s+(curl|wget|bash|sh|python)'
+condition: all of them

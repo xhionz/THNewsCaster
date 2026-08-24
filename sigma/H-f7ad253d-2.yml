@@ -1,0 +1,12 @@
+title: Suspicious HTTP Request from Cargo Build Process
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  process_name: 'sh'
+  parent_process_name: 'cargo'
+  parent_process_cmdline: 'build'
+  cmdline: 'curl|wget|python -c "import requests"'
+  destination_ip: '169.254.169.254'
+  destination_port: 80
+condition: all of them

@@ -1,0 +1,11 @@
+title: Suspicious Cargo Build Execution via build.rs
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  process_name: 'cargo'
+  process_cmdline: 'build'
+  parent_process_name: 'sh'
+  child_process_name: 'sh'
+  child_process_cmdline: '.*\.(bash|sh)\s+.*'
+condition: all of them
