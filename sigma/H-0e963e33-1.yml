@@ -1,0 +1,11 @@
+title: Detect Zimbra SOAP RCE Attempt via JNDI Injection
+logsource:
+  product: zimbra
+  service: http
+  category: web
+condition: 'request_uri: "/service/soap" and request_body: "${jndi:ldap:" and request_method: "POST"'
+detection:
+  request_uri: "/service/soap"
+  request_body: "${jndi:ldap:"
+  request_method: "POST"
+condition: all

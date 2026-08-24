@@ -1,0 +1,12 @@
+title: Detect NTLMv2 Authentication from Zimbra Servers to Non-DC Hosts
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4624 and authentication_package: "NTLM" and logon_type: 3 and account_name: "ZIMBRA$" and workstation_name: "*"'
+detection:
+  event_id: 4624
+  authentication_package: "NTLM"
+  logon_type: 3
+  account_name: "ZIMBRA$"
+  workstation_name: "*"
+condition: all

@@ -1,0 +1,14 @@
+title: Detect Suspicious Zimbra Web Export/Download Actions
+logsource:
+  product: zimbra
+  service: http
+  category: web
+condition: 'request_uri: "/zimbra/h/" and (query: "action=export" or query: "action=download" or query: "folder=INBOX") and user_agent: "Mozilla/5.0"'
+detection:
+  request_uri: "/zimbra/h/"
+  query: "action=export"
+  or:
+    - query: "action=download"
+    - query: "folder=INBOX"
+  user_agent: "Mozilla/5.0"
+condition: all
