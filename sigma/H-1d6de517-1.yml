@@ -1,0 +1,9 @@
+title: Detect Zimbra CVE-2023-34362 SOAP Exploitation
+logsource:
+  product: zimbra
+  service: http
+condition: 'event_id: 400 or event_id: 500'
+detection:
+  suspicious_endpoint: 'path|contains: "/service/soap"'
+  non_admin_source: 'src_ip|not in: ["10.0.0.1", "10.0.0.2", "10.0.0.3"]'
+  condition: 'suspicious_endpoint and non_admin_source and (event_id: 400 or event_id: 500)'

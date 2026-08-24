@@ -1,0 +1,10 @@
+title: Detect Successful Zimbra Web/IMAP Logins from Suspicious IPs
+logsource:
+  product: zimbra
+  service: authentication
+condition: 'event_id: 4624'
+detection:
+  zimbra_login: 'event_id: 4624'
+  suspicious_ip: 'src_ip|not in: ["10.0.0.1", "10.0.0.2", "10.0.0.3"]'
+  remote_logon: 'logon_type: 10'
+  condition: 'zimbra_login and suspicious_ip and remote_logon'

@@ -1,0 +1,10 @@
+title: Detect Phishing Email Campaign Targeting Zimbra Users
+logsource:
+  product: email
+  service: smtp
+condition: 'all of suspicious_sender and suspicious_subject_keywords and high_recipient_count'
+detection:
+  suspicious_sender: 'from|contains: "zimbra-support" or from|contains: "security@zimbra.com"'
+  suspicious_subject_keywords: 'subject|contains: "Urgent: Your Zimbra Account Will Be Disabled" or subject|contains: "Verify Your Zimbra Credentials"'
+  high_recipient_count: 'recipient_count > 5'
+  condition: 'suspicious_sender and suspicious_subject_keywords and high_recipient_count'
