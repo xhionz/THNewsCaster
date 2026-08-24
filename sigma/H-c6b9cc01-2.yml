@@ -1,0 +1,10 @@
+title: Keycloak Reset Token Usage Anomaly
+logsource:
+  product: webserver
+  service: http
+condition: 'request_uri contains "/auth/realms/" and request_uri contains "/account/confirm-email" and user_agent !~ "^Mozilla/" and status_code == 200 and method == "POST"'
+detection:
+  keywords:
+    - "/auth/realms/"
+    - "/account/confirm-email"
+  condition: 'request_uri contains "/auth/realms/" and request_uri contains "/account/confirm-email" and user_agent !~ "^Mozilla/" and status_code == 200 and method == "POST"'

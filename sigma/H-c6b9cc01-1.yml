@@ -1,0 +1,10 @@
+title: Keycloak Unauthenticated Password Reset Exploit
+logsource:
+  product: webserver
+  service: http
+condition: 'request_uri contains "/auth/realms/" and request_uri contains "/account/password" and user_agent !~ "^Mozilla/" and status_code == 200 and method == "POST"'
+detection:
+  keywords:
+    - "/auth/realms/"
+    - "/account/password"
+  condition: 'request_uri contains "/auth/realms/" and request_uri contains "/account/password" and user_agent !~ "^Mozilla/" and status_code == 200 and method == "POST"'

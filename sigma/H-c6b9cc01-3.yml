@@ -1,0 +1,11 @@
+title: Keycloak Compromise Leading to OT Protocol Traffic
+logsource:
+  product: network
+  service: traffic
+condition: 'src_ip in ("192.168.10.0/24", "10.10.10.0/24") and (dst_port == 502 or dst_port == 4840 or dst_port == 20000) and src_ip in ("192.168.10.15", "192.168.10.22")'
+detection:
+  keywords:
+    - "502"
+    - "4840"
+    - "20000"
+  condition: 'src_ip in ("192.168.10.0/24", "10.10.10.0/24") and (dst_port == 502 or dst_port == 4840 or dst_port == 20000) and src_ip in ("192.168.10.15", "192.168.10.22")'
