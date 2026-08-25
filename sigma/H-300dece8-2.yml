@@ -1,0 +1,17 @@
+title: Suspicious SMBv1 Connection from WebLogic Server
+logsource:
+  product: windows
+  service: smb
+detection:
+  selection:
+    event_id: 3
+    source_ip: '10.10.10.0/24'
+    destination_ip: '192.168.0.0/16'
+    protocol: 'TCP'
+    destination_port: 445
+    smb_version: 'SMBv1'
+  condition: selection
+keywords:
+  - 'SMBv1'
+  - 'lateral movement'
+  - 'WebLogic'

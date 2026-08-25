@@ -1,0 +1,15 @@
+title: Suspicious WebLogic Deserialization via Proxy Plug-in
+logsource:
+  product: web_server
+  service: weblogic
+detection:
+  selection:
+    http_method: 'POST'
+    uri: '*/_async/AsyncResponseService'
+    user_agent: 'Java/'
+    status_code: 200
+  condition: selection
+keywords:
+  - 'WebLogic'
+  - 'AsyncResponseService'
+  - 'deserialization'

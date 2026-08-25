@@ -1,0 +1,16 @@
+title: Suspicious DNS Tunneling from Internal Hosts
+logsource:
+  product: dns
+  service: dns_server
+detection:
+  selection:
+    query_type: 'A'
+    query: '*.*.*.*.*.*.*'
+    query_length: '>60'
+    response_code: 'NOERROR'
+    source_ip: '192.168.0.0/16'
+  condition: selection
+keywords:
+  - 'DNS tunneling'
+  - 'exfiltration'
+  - 'long subdomain'
