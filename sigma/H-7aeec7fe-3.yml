@@ -1,0 +1,12 @@
+title: External Access to ZoneMinder Web Interface
+logsource:
+  product: firewall
+  service: http
+condition: 'selection'
+detection:
+  selection:
+    dest_ip: '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16'
+    dest_port: 80 OR 443
+    src_ip: '!10.0.0.0/8' AND '!172.16.0.0/12' AND '!192.168.0.0/16'
+    uri: '*zm*' OR '*zoneminder*' OR '*exportFile*'
+  condition: selection

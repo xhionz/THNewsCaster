@@ -1,0 +1,10 @@
+title: Phishing Email with ZoneMinder-Themed Lure
+logsource:
+  product: email
+condition: 'selection'
+detection:
+  selection:
+    subject: '*ZoneMinder*' OR '*security update*' OR '*CISA advisory*'
+    sender_domain: '*zoneminder.com*' OR '*cisa.gov*' OR '*security-update.net*'
+    body: '*download installer*' OR '*patch now*' OR '*github.com/ZoneMinder*'
+  condition: selection

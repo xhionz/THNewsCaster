@@ -1,0 +1,11 @@
+title: ZoneMinder CVE-2021-29438 Command Injection Detection
+logsource:
+  product: apache
+  service: http
+condition: 'selection'
+detection:
+  selection:
+    uri: '*exportFile=*'
+    method: 'GET'
+    user_agent: 'Mozilla/*'
+  condition: selection
