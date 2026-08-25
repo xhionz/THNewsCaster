@@ -1,0 +1,19 @@
+title: Detection of CVE-2020-14882 Exploitation via WebLogic AdminServer
+logsource:
+  product: weblogic
+  service: http
+condition: 'request_uri|contains: "/console/j_security_check" and request_method: "POST" and user_agent|contains: "curl" or user_agent|contains: "wget" or not "Cookie" in headers and not "JSESSIONID" in headers and status_code: 200'
+detection:
+  selection1:
+    request_uri|contains: "/console/j_security_check"
+  selection2:
+    request_method: "POST"
+  selection3:
+    user_agent|contains: "curl"
+  selection4:
+    user_agent|contains: "wget"
+  selection5:
+    not "Cookie" in headers
+  selection6:
+    not "JSESSIONID" in headers
+  condition: selection1 and selection2 and (selection3 or selection4 or (selection5 and selection6))

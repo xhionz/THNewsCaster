@@ -1,0 +1,19 @@
+title: Detection of Ransomware File Encryption via WebLogic Java Process
+logsource:
+  product: linux
+  service: process_creation
+condition: 'process_name: java and parent_process_name: weblogic.Server and file_name|endswith: ['.enc', '.locked', '.crypt'] and file_path|contains: '/domains/' and not file_name|contains: '.tmp' and not file_name|contains: '.log'
+detection:
+  selection1:
+    process_name: java
+  selection2:
+    parent_process_name: weblogic.Server
+  selection3:
+    file_name|endswith: ['.enc', '.locked', '.crypt']
+  selection4:
+    file_path|contains: '/domains/'
+  selection5:
+    not file_name|contains: '.tmp'
+  selection6:
+    not file_name|contains: '.log'
+  condition: selection1 and selection2 and selection3 and selection4 and selection5 and selection6

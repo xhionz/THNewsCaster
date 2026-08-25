@@ -1,0 +1,21 @@
+title: Detection of Credential Dumping via Java Memory Access
+logsource:
+  product: linux
+  service: process_creation
+condition: 'process_name: java and parent_process_name: weblogic.Server and (command_line|contains: 'secretsdump.py' or command_line|contains: 'jmap' or command_line|contains: 'jstack' or file_name|endswith: '.dmp' or file_path|contains: '/tmp/' and file_name|contains: 'heapdump')'
+detection:
+  selection1:
+    process_name: java
+  selection2:
+    parent_process_name: weblogic.Server
+  selection3:
+    command_line|contains: 'secretsdump.py'
+  selection4:
+    command_line|contains: 'jmap'
+  selection5:
+    command_line|contains: 'jstack'
+  selection6:
+    file_name|endswith: '.dmp'
+  selection7:
+    file_path|contains: '/tmp/' and file_name|contains: 'heapdump'
+  condition: selection1 and selection2 and (selection3 or selection4 or selection5 or selection6 or selection7)
