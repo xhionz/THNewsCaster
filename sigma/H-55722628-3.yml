@@ -1,0 +1,15 @@
+title: Mirage2FA - Spoofed Microsoft Email Sender
+logsource:
+  product: exchange_online
+  service: email
+detection:
+  spoofed_sender:
+    - 'sender: "*noreply@microsoft.com"'
+  malicious_subject:
+    - 'subject: "*Security Alert*"'
+    - 'subject: "*Action Required: Your Microsoft Account*"'
+  malicious_attachment:
+    - 'attachment_names: "*.exe"'
+    - 'attachment_names: "*.js"'
+    - 'attachment_names: "*.scr"'
+condition: spoofed_sender and (malicious_subject or malicious_attachment)

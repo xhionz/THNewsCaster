@@ -1,0 +1,9 @@
+title: Mirage2FA - Phishing Referer Detection
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  referer_malicious:
+    - 'http.referer: "*any.run*"'
+    - 'http.referer: "*phishing-domain*"'
+condition: referer_malicious

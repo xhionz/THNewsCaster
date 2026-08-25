@@ -1,0 +1,10 @@
+title: Mirage2FA - Non-MSAL Refresh Token Requests
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  non_msal_client:
+    - 'client_app_id: "*" AND client_app_id NOT IN ["Microsoft Azure Portal", "Microsoft Office", "Microsoft Teams", "MSAL"]'
+  token_type_refresh:
+    - 'token_type: "refresh_token"'
+condition: non_msal_client and token_type_refresh
