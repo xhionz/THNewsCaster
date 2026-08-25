@@ -1,0 +1,16 @@
+title: Suspicious RDP Connection from WordPress Server IP
+logsource:
+  product: windows
+  service: security
+  category: logon
+detection:
+  selection:
+    - EventID: 4624
+    - LogonType: 3
+    - SourceNetworkAddress: '192.168.1.0/24'
+  condition: selection
+keywords:
+  - '192.168.1.0/24'
+falsepositives:
+  - Legitimate RDP access from known internal IPs
+level: medium

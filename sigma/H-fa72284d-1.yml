@@ -1,0 +1,14 @@
+title: Suspicious MiniOrange Plugin Authentication Bypass Attempt
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri contains "/wp-content/plugins/miniorange-saml-20-single-sign-on/" and (request_uri contains "saml" or request_uri contains "acs") and status_code == 200 and user_agent !~ "^(Mozilla/5.0|Googlebot|Bingbot|YandexBot)"'
+detection:
+  selection:
+    - request_uri contains "/wp-content/plugins/miniorange-saml-20-single-sign-on/"
+    - request_uri contains "saml"
+    - request_uri contains "acs"
+    - status_code == 200
+    - user_agent !~ "^(Mozilla/5.0|Googlebot|Bingbot|YandexBot)"
+  condition: selection

@@ -1,0 +1,12 @@
+title: Suspicious MiniOrange SAML Redirect to External Domain
+logsource:
+  product: webserver
+  service: apache
+  category: web
+detection:
+  selection:
+    - request_uri contains "/wp-content/plugins/miniorange-saml-20-single-sign-on/"
+    - request_uri contains "SAMLResponse"
+    - referer !~ "^(https?://(www\.)?yourdomain\.com|https?://yourdomain\.com)"
+    - status_code == 302
+  condition: selection
