@@ -1,0 +1,11 @@
+title: Detect Gitea SSH Key Injection via API
+logsource:
+  product: linux
+  service: gitea
+detection:
+  http_method: 'POST'
+  request_uri: '*/admin/users/*
+  http_user_agent: ['*curl*', '*python-requests*']
+  request_body: 'ssh_key='
+condition: all of them
+timeframe: 10m

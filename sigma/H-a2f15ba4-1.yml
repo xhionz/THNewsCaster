@@ -1,0 +1,16 @@
+title: Detect Gitea CVE-2023-27473 Exploitation
+logsource:
+  product: linux
+  service: gitea
+detection:
+  http_user_agent:
+    - '*curl*'
+    - '*python-requests*'
+    - '*wget*'
+  request_uri:
+    - '*/user/login*'
+    - '*/api/v1/repos/*
+    - '*/admin/config*'
+  status_code: 200
+condition: all of them
+timeframe: 5m

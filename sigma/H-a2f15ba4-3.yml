@@ -1,0 +1,12 @@
+title: Detect Ransomware File Patterns on Gitea Server
+logsource:
+  product: linux
+  service: filesystem
+detection:
+  file_path: 
+    - '*/data/gitea/repos/*.git*'
+    - '*/data/gitea/log/*.log*'
+  file_extension: ['.lock', '.encrypted', '.crypt', '.pwned']
+  event_type: 'file_modified'
+condition: all of them
+timeframe: 1h
