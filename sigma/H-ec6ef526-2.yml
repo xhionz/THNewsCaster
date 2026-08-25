@@ -1,0 +1,15 @@
+title: Suspicious WMI or PsExec Execution Leading to DC Access
+logsource:
+  product: windows
+  service: security
+condition: 'EventID: 4688' and ('NewProcessName: *\wmiprvse.exe' or 'NewProcessName: *\psexec.exe' or 'NewProcessName: *\cmd.exe' and 'CommandLine: *\dcsync*') and 'TargetUserName: *$' and 'LogonType: 3'
+detection:
+  selection:
+    EventID: 4688
+    NewProcessName:
+      - '*\wmiprvse.exe'
+      - '*\psexec.exe'
+    CommandLine: '*\dcsync*'
+    TargetUserName: '*$'
+    LogonType: 3
+  condition: selection

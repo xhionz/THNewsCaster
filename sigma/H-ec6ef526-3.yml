@@ -1,0 +1,13 @@
+title: Suspicious Azure AD Sign-In from MDM-Enrolled Device with High-Risk Permissions
+logsource:
+  product: microsoft365
+  service: azuread_signin
+condition: 'AppDisplayName: Microsoft Graph' and 'AppId: 00000003-0000-0000-c000-000000000000' and 'DeviceDetail.IsCompliant: true' and 'RiskLevel: high' and 'AppPermissionGrants[*].PermissionName: application.readwrite.all'
+detection:
+  selection:
+    AppDisplayName: Microsoft Graph
+    AppId: '00000003-0000-0000-c000-000000000000'
+    DeviceDetail.IsCompliant: true
+    RiskLevel: high
+    AppPermissionGrants[*].PermissionName: application.readwrite.all
+  condition: selection

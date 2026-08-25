@@ -1,0 +1,15 @@
+title: Suspicious OAuth Permission Grant via App Role Assignment
+logsource:
+  product: microsoft365
+  service: azuread_audit
+condition: 'Category: AppRoleAssignment' and 'TargetResources[*].Type: AppRoleAssignment' and ('TargetResources[*].ModifiedProperties[*].NewValue: application.readwrite.all' or 'TargetResources[*].ModifiedProperties[*].NewValue: rolemanagement.readwrite.directory') and 'InitiatedBy.UserType: External' and 'ResultType: Success'
+detection:
+  selection:
+    Category: AppRoleAssignment
+    TargetResources[*].Type: AppRoleAssignment
+    TargetResources[*].ModifiedProperties[*].NewValue:
+      - application.readwrite.all
+      - rolemanagement.readwrite.directory
+    InitiatorBy.UserType: External
+    ResultType: Success
+  condition: selection
