@@ -1,0 +1,12 @@
+title: Suspicious SMB Access from SharePoint Server
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection:
+    EventID: 5140
+    ShareName: "*\*" 
+    SubjectUserName: "*\*"
+    SubjectDomainName: "SHAREPOINT-SERVER"
+    AccessMask: "0x100000" or "0x20089"  # READ + WRITE
+  Condition: Selection

@@ -1,0 +1,7 @@
+title: Suspicious SharePoint File Exfiltration via HTTP POST
+logsource:
+  product: iis
+  service: http
+condition: 'http_method: "POST" and http_uri: "*.aspx" and http_user_agent: ("curl" or "wget" or "python-requests" or "Go-http-client") and http_status_code: 200 and http_content_length > 10000000
+filter:
+  - http_uri: "*/_layouts/" or http_uri: "*/_vti_bin/" or http_uri: "*/_api/"'

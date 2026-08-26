@@ -1,0 +1,19 @@
+title: Detect NoChain Loader Beaconing to Ethereum Smart Contracts
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects HTTP requests from suspicious processes containing Ethereum contract addresses (0x...) in URL or body
+logsource:
+  product: windows
+  service: http
+detection:
+  process:
+    - 'process_name: svchost.exe'
+    - 'process_name: powershell.exe'
+  http_request:
+    - 'url: *0x*'
+    - 'url: *contract*'
+    - 'url: *eth*'
+    - 'body: *0x*'
+    - 'body: *contract*'
+condition: 'process and (http_request)'
+level: high

@@ -1,0 +1,17 @@
+title: Detect ownCloud WebDAV Enumeration via CVE-2023-49105
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects high-volume PROPFIND requests from a single IP targeting ownCloud, indicative of file enumeration
+logsource:
+  product: apache
+  service: http
+  definition: 'request_method: PROPFIND and url: /remote.php/dav/'
+detection:
+  source_ip:
+    - '192.168.1.100'
+  request_method: PROPFIND
+  url: '/remote.php/dav/'
+  headers:
+    - 'Depth: 1'
+condition: 'source_ip | count() > 50 by source_ip within 10m'
+level: high

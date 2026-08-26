@@ -1,0 +1,22 @@
+title: Detect LiteSpeed Cache Path Traversal and XML-RPC Brute Force
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects path traversal attempts via LiteSpeed Cache (CVE-2024-28000) followed by XML-RPC brute force
+logsource:
+  product: apache
+  service: http
+detection:
+  # Phase 1: LiteSpeed path traversal
+  path_traversal:
+    - 'url: *../*'
+    - 'url: *wp-content/plugins/*'
+    - 'url: *wp-config.php*'
+    - 'user_agent: *libwww-perl*'
+  # Phase 2: XML-RPC brute force
+  xmlrpc_brute:
+    - 'url: /xmlrpc.php'
+    - 'content: <methodName>wp.getUsersBlogs</methodName>'
+    - 'request_method: POST'
+    - 'user_agent: *WordPress*'
+condition: 'path_traversal or xmlrpc_brute'
+level: high

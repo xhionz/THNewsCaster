@@ -1,0 +1,11 @@
+title: Suspicious Token Manipulation via Process Creation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: "*\svchost.exe"
+    ParentImage: "*\w3wp.exe" or "*\iisexpress.exe"
+    CommandLine: "* /impersonate*" or "*CreateProcessAsUser*" or "*DuplicateTokenEx*"
+  Condition: Selection
