@@ -1,0 +1,24 @@
+title: SharePoint RCE Exploit - SOAP/XML Payload Detection
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+status: experimental
+description: Detects HTTP POST requests with SOAP/XML payloads indicative of SharePoint RCE exploitation
+logsource:
+  product: webserver
+  service: iis
+detection:
+  selection:
+    Method: 'POST'
+    Uri: '*_vti_bin/*.asmx'
+    Content-Type: '*xml*'
+    User-Agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+  condition: selection
+fields:
+  - Method
+  - Uri
+  - Content-Type
+  - User-Agent
+  - ClientIP
+  - ServerIP
+falsepositives:
+  - Legitimate SOAP clients
+level: high

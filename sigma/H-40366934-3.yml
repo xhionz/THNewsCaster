@@ -1,0 +1,21 @@
+title: Suspicious Scheduled Task Creation via schtasks.exe
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+status: experimental
+description: Detects creation of scheduled tasks by non-administrative users or from web processes
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*schtasks.exe /create*'
+    ParentProcessName: 'w3wp.exe'
+  condition: selection
+fields:
+  - CommandLine
+  - ParentProcessName
+  - NewProcessName
+  - User
+falsepositives:
+  - Legitimate admin task creation
+level: high

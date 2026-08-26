@@ -1,0 +1,22 @@
+title: Lateral Movement via SMB Share Access from SharePoint Server
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+status: experimental
+description: Detects SMB share access from SharePoint server to internal hosts, indicating lateral movement
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 5140
+    SubjectUserName: 'SHAREPOINT$'
+    ShareName: '*'
+    IpAddress: '*'
+  condition: selection
+fields:
+  - SubjectUserName
+  - ShareName
+  - IpAddress
+  - LogonId
+falsepositives:
+  - Legitimate admin access
+level: high
