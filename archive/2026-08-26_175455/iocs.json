@@ -1,0 +1,600 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-76060",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-73570",
+      "sources": [
+        "https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch"
+      ]
+    },
+    {
+      "value": "CVE-2026-72530",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-72529",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-69836",
+      "sources": [
+        "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-65400",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-64849",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-63520",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/"
+      ]
+    },
+    {
+      "value": "CVE-2026-63030",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-61979",
+      "sources": [
+        "https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-60137",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-60004",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-59310",
+      "sources": [
+        "https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html",
+        "https://www.bleepingcomputer.com/news/security/critical-vmware-vcenter-rce-flaw-exploited-for-reverse-ssh-access/",
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-55040",
+      "sources": [
+        "https://thehackernews.com/2026/08/attackers-exploit-sharepoint.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.reddit.com/r/blueteamsec/comments/1votnh2/microsoft_sharepoint_jwt_token_authentication/",
+        "https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/"
+      ]
+    },
+    {
+      "value": "CVE-2026-54121",
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/"
+      ]
+    },
+    {
+      "value": "CVE-2026-52806",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-48907",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-46300",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-33824",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-33017",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-29053",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-27760",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-22594",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-21962",
+      "sources": [
+        "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/24/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "https://www.securityweek.com/cisa-warns-of-exploited-oracle-weblogic-vulnerability/"
+      ]
+    },
+    {
+      "value": "CVE-2026-19490",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway"
+      ]
+    },
+    {
+      "value": "CVE-2026-19478",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
+        "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
+        "https://www.securityweek.com/critical-gitlab-flaw-exploited-shortly-after-disclosure/"
+      ]
+    },
+    {
+      "value": "CVE-2026-19188",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-18963",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-15981",
+      "sources": [
+        "https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-15748",
+      "sources": [
+        "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-15409",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2026-8452",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vo06pz/youre_back_in_the_room_citrix_netscaler_preauth/"
+      ]
+    },
+    {
+      "value": "CVE-2026-3891",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2025-49132",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "CVE-2025-22226",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vvev5w/vulnerability_analysis_of_cve202522226/"
+      ]
+    },
+    {
+      "value": "CVE-2024-28000",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/"
+      ]
+    },
+    {
+      "value": "CVE-2023-49105",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/"
+      ]
+    },
+    {
+      "value": "CVE-2021-21551",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2019-16098",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "2.9.99.4",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "3.40.1.12",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+      ]
+    },
+    {
+      "value": "127.0.0.1",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vrwaca/operation_cameraswarm_over_14000_dahua_cameras/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "any.run",
+      "sources": [
+        "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html"
+      ]
+    },
+    {
+      "value": "application.readwrite.all",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "approleassignment.readwrite.all",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "asp.rootkit.badiis",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "btr.sys",
+      "sources": [
+        "https://thehackernews.com/2026/08/microsoft-defenders-own-driver-can-be.html"
+      ]
+    },
+    {
+      "value": "chat.read.all",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "cisa.dhs.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "cmd.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "cmdkey.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "connections.json",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "demo.pdb",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "docs.metasploit.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "efspotato.pdb",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "en.haiwell.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+      ]
+    },
+    {
+      "value": "entrance.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+      ]
+    },
+    {
+      "value": "files.read.all",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "hardware-monitor.service",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "hunt.io",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vrwaca/operation_cameraswarm_over_14000_dahua_cameras/",
+        "https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/"
+      ]
+    },
+    {
+      "value": "index.crates.io",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "locale.json",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "mail.read",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "mail.readwrite",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "ntoskrnl.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "portal.azure.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "product-preferences.xml",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "profiles.import",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "rockyou.txt",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/"
+      ]
+    },
+    {
+      "value": "rolemanagement.readwrite.directory",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a"
+      ]
+    },
+    {
+      "value": "rtcore64.sys",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "runtimebroker.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "secretsdump.py",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "service.pdb",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "shandler.processrequest",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "socket.io",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02"
+      ]
+    },
+    {
+      "value": "svchost.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "sysinit.target",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "ucstring.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.backdoor.msfvenom",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.rootkit.malware",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.rootkit.spectre",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.trojan.backdoor",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "vn.xyz",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.exploit.marte",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.loader",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.badiis",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.badpotato",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.generic",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.ulise",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.tool.godpotato",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.tool.juicypotato",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-225-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02"
+      ]
+    },
+    {
+      "value": "www.rapid7.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles"
+      ]
+    },
+    {
+      "value": "xmlrpc.php",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/"
+      ]
+    },
+    {
+      "value": "zoneminder.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02"
+      ]
+    }
+  ],
+  "sha256": [],
+  "sha1": [],
+  "md5": []
+}
