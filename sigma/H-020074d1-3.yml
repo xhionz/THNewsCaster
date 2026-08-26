@@ -1,0 +1,14 @@
+title: Suspicious Data Exfiltration via HTTP POST
+logsource:
+  product: webserver
+  service: access
+Detection:
+  http_method: 'POST'
+  http_uri:
+    - '/upload'
+    - '/api/v1/data'
+    - '/submit'
+    - '/collect'
+  http_content_type: 'application/octet-stream'
+  response_bytes: '>1000000'
+condition: all of them

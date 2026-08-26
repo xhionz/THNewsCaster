@@ -1,0 +1,13 @@
+title: Suspicious CI/CD Build Trigger from Compromised Repo
+logsource:
+  product: gitea
+  service: webhook
+Detection:
+  http_request_body:
+    - 'git clone'
+    - 'npm install'
+    - 'pip install'
+    - 'make'
+    - 'docker build'
+    - 'curl -o /tmp/'
+condition: all of them

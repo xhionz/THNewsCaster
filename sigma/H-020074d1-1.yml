@@ -1,0 +1,15 @@
+title: Suspicious Git Hook Execution via CVE-2026-60004
+logsource:
+  product: gitea
+  service: webhook
+Detection:
+  http_request_body:
+    - 'hook.post-receive'
+    - 'hook.pre-receive'
+    - 'git push'
+    - 'sh -c'
+    - 'curl http'
+    - 'wget http'
+    - 'base64 -d'
+    - 'chmod +x'
+condition: all of them
