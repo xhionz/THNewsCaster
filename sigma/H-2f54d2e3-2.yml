@@ -1,0 +1,17 @@
+title: Suspicious Zimbra Admin Login from Unusual Location
+logsource:
+  product: webserver
+  service: zimbra
+detection:
+  uri_path: '/zimbra/admin/'
+  status_code: 200
+  user_agent: 
+    - 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+    - 'python-requests/*'
+    - 'curl/*'
+    - 'wget/*'
+  source_ip: 
+    - '192.168.100.10'
+    - '10.0.0.5'
+    - '172.16.0.20'
+condition: selection and not source_ip in trusted_admin_ips

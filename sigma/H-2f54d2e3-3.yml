@@ -1,0 +1,13 @@
+title: High Volume SMTP Relay from Zimbra Server
+logsource:
+  product: mail
+  service: smtp
+detection:
+  source_ip: 'zimbra_server_ip'
+  recipient_count: > 100
+  subject:
+    - 'Urgent: Account Verification'
+    - 'Invoice attached'
+    - 'Click here to claim'
+    - 'Your password has expired'
+condition: selection and recipient_count > 100

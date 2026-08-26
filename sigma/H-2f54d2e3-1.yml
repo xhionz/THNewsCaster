@@ -1,0 +1,19 @@
+title: Suspicious Zimbra Java Process Spawn
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  image:
+    - '*zimbra*/java'
+    - '*zimbra*/jre/bin/java'
+  command_line:
+    - '*-jar*'
+    - '*-cp*'
+    - '*http*'
+    - '*curl*'
+    - '*wget*'
+    - '*bash*'
+    - '*sh*'
+    - '*nc*'
+    - '*telnet*'
+condition: selection and not image: '*zimbra*/bin/zmmailboxdctl'
