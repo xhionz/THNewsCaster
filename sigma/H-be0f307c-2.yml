@@ -1,0 +1,9 @@
+title: Detection of Ajax.NET Professional Deserialization Exploit
+logsource:
+  product: iis
+  service: application
+detection:
+  selection:
+    http.request.uri.query: '*__VIEWSTATE*' OR http.request.uri.query: '*__EVENTVALIDATION*' OR http.request.uri.query: '*__VIEWSTATEGENERATOR*'
+    http.request.uri.query: '*eJw*' OR http.request.uri.query: '*H4sIA*'  # Common base64-encoded serialized payload patterns
+  condition: selection

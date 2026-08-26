@@ -1,0 +1,9 @@
+title: Detection of SQL Server RCE via xp_cmdshell execution
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*xp_cmdshell*' OR '*sp_oacreate*' OR '*sp_addextendedproc*'
+  condition: selection

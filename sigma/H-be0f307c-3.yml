@@ -1,0 +1,11 @@
+title: Detection of CVE-2022-0995 Kernel Exploit Activity
+logsource:
+  product: linux
+  service: audit
+detection:
+  selection:
+    syscall: 'write' OR 'writev'
+    comm: 'bash' OR 'sh' OR 'python' OR 'perl' OR 'curl' OR 'wget'
+    a0: 0x0 OR a0: 0x1  # Common target file descriptors
+    a2: 0x1000  # Size indicative of buffer overflow
+  condition: selection
