@@ -1,0 +1,12 @@
+title: Detect DNS-based JNDI Exploitation
+logsource:
+  product: dns
+  service: resolver
+detection:
+  selection:
+    query:
+      - '*jndi:ldap://*'
+      - '*jndi:rmi://*'
+      - '*jndi:ldaps://*'
+  condition: selection
+condition: selection

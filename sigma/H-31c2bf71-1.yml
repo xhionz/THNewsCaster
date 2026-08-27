@@ -1,0 +1,13 @@
+title: Detect Non-Standard JNDI Lookup Bypass
+logsource:
+  product: java
+  service: log4j2
+detection:
+  selection:
+    message:
+      - '*ldap://rmi://*'
+      - '*ldap://dns://*'
+      - '*rmi://ldap://*'
+      - '*jndi:ldap://rmi://*'
+  condition: selection
+condition: selection

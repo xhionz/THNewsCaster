@@ -1,0 +1,17 @@
+title: Detect Suspicious Java Deserialization in HTTP Payloads
+logsource:
+  product: webserver
+  service: apache
+  category: http
+detection:
+  selection:
+    http_user_agent:
+      - '*Java/*'
+    http_content_type:
+      - 'application/x-java-serialized-object'
+      - 'application/octet-stream'
+    http_request_body:
+      - '*ac ed 00 05*'
+      - '*rO0AB*'
+  condition: selection
+condition: selection
