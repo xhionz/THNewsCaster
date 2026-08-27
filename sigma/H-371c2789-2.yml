@@ -1,0 +1,10 @@
+title: Detect Suspicious Crontab Modifications on NetScaler
+logsource:
+  product: linux
+  service: process_creation
+detection:
+  selection:
+    image: "/usr/bin/crontab"
+    command_line: '.*-.* /tmp/.*|.*-.* /var/tmp/.*|.*-.* /opt/.*'
+  condition: selection
+status: experimental

@@ -1,0 +1,11 @@
+title: Detect Unauthorized SSH Authorized Keys Modification
+logsource:
+  product: linux
+  service: file_event
+detection:
+  selection:
+    file_path: '/nsconfig/ssh/authorized_keys'
+    event_type: 'file_modified'
+    file_content: 'ssh-rsa|ssh-dss|ecdsa-sha2-nistp256|ssh-ed25519'
+  condition: selection
+status: experimental

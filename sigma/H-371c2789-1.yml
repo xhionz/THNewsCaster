@@ -1,0 +1,11 @@
+title: Detect Web Shell Upload via NetScaler CVE-2021-35547
+logsource:
+  product: linux
+  service: webserver
+detection:
+  selection:
+    uri: "/cgi-bin/*"
+    method: "POST"
+    uri_pattern: "*.php|*.jsp|*.asp"
+  condition: selection
+status: experimental
