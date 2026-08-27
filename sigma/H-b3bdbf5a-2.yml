@@ -1,0 +1,11 @@
+title: Suspicious Office Document Execution via Macro or Embedded Script
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*winword.exe*' OR '*excel.exe*' OR '*powerpnt.exe*'
+    ParentCommandLine: '*mshta.exe*' OR '*wscript.exe*' OR '*cscript.exe*' OR '*powershell.exe*'
+  condition: selection
+fields: ['CommandLine', 'ParentCommandLine', 'User']

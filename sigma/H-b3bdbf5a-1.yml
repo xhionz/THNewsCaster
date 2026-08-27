@@ -1,0 +1,16 @@
+title: Suspicious Package Installation from Internal Build Hosts
+logsource:
+  product: linux
+  service: auditd
+detection:
+  selection:
+    comm: ['pip', 'npm', 'apt', 'yum']
+    args: '*install*'
+  condition: selection
+  keywords:
+    - 'https://pypi.org'
+    - 'https://registry.npmjs.org'
+    - 'https://github.com'
+    - 'https://bitbucket.org'
+condition: selection and not (args contains 'trusted-host' or args contains '--no-deps')
+fields: ['comm', 'args', 'auid']

@@ -1,0 +1,12 @@
+title: Suspicious Exchange Web Shell Activity
+logsource:
+  product: windows
+  service: iis
+detection:
+  selection:
+    cs-uri-stem: '/ecp/default.aspx' OR '/owa/auth/' OR '/powershell/'
+    cs-method: 'POST'
+    cs-uri-query: '*FormDigestValue*' OR '*__VIEWSTATE*' OR '*cmd*'
+    cs(User-Agent): '*curl*' OR '*wget*' OR '*python-requests*'
+  condition: selection
+fields: ['cs-uri-stem', 'cs-method', 'cs-uri-query', 'cs(User-Agent)', 'c-ip']
