@@ -1,0 +1,13 @@
+title: Detection of ownCloud CVE-2023-49105 Authentication Bypass Attempt
+logsource:
+  product: webserver
+  service: owncloud
+detection:
+  selection:
+    uri: '/index.php/login'
+    status: 200
+    user_agent: 'Mozilla/*'
+    query: 'user=*' AND 'password=*' AND 'remember_me=1'
+  condition: selection
+  timeframe: 5m
+level: high

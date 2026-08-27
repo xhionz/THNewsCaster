@@ -1,0 +1,12 @@
+title: Detection of JFrog Artifactory CVE-2026-66384 Path Traversal
+logsource:
+  product: webserver
+  service: jfrog-artifactory
+detection:
+  selection:
+    uri: '*../*' or uri: '*%2e%2e/*' or uri: '*..\\*' or uri: '*%252e%252e/*'
+    status: 200
+    method: 'GET'
+  condition: selection
+  timeframe: 10m
+level: high

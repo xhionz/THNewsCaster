@@ -1,0 +1,14 @@
+title: Detection of Linux Kernel Privilege Escalation Attempt via CVE-2026-53362
+logsource:
+  product: linux
+  service: kernel
+detection:
+  selection:
+    syscall: 'execve'
+    args: '*/bin/sh' or '*/bash'
+    parent_process: 'sshd' or 'systemd'
+    euid: 0
+    ruid: 1000
+  condition: selection
+  timeframe: 10m
+level: high
