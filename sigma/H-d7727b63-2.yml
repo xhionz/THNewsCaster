@@ -1,0 +1,5 @@
+title: Detect SSH Brute Force Originating from NetScaler IPs
+logsource:
+  product: linux
+  service: sshd
+condition: 'source_ip IN ["192.168.10.10", "192.168.10.11", "192.168.10.12"] AND event_type == "failed_login" AND timestamp >= "2026-08-25T00:00:00Z" AND timestamp <= "2026-08-27T23:59:59Z" AND login_attempts > 10 within 5m'

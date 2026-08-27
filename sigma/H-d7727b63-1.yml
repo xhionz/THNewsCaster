@@ -1,0 +1,5 @@
+title: Detect CVE-2024-21762 Exploitation Attempts
+logsource:
+  product: citrix_netscaler
+  service: http
+condition: 'request_uri contains "/dana-na/" or request_uri contains "/vpn/" or request_uri contains "/cgi-bin/" and content_length > 5000 and user_agent not contains "Mozilla/" and user_agent not contains "Chrome/" and user_agent not contains "Safari/" and user_agent not contains "Edge/" and status_code in [401, 403, 404, 405, 500, 502, 503, 504]'
