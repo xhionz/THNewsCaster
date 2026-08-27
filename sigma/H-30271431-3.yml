@@ -1,0 +1,15 @@
+title: Suspicious Large Print Job in PaperCut MF
+logsource:
+  product: papercut
+  service: printjob
+detection:
+  selection:
+    job_size: > 50000000
+    user: "*"
+    job_status: "completed"
+  exclusion:
+    user:
+      - "SYSTEM"
+      - "Administrator"
+      - "papercut"
+condition: selection and not exclusion

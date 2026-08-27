@@ -1,0 +1,13 @@
+title: Detect CVE-2019-11043 FastCGI Null Byte Exploit
+logsource:
+  product: webserver
+  service: fastcgi
+detection:
+  selection:
+    - 'fastcgi.script_filename: *\x00*'
+    - 'fastcgi.path_info: *\x00*'
+  condition: selection
+fields:
+  - client_ip
+  - fastcgi.script_filename
+  - fastcgi.path_info

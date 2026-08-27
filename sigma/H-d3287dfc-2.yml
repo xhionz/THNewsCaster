@@ -1,0 +1,12 @@
+title: Detect IMAP Response Buffer Overflow via Size
+logsource:
+  product: network
+  service: imap
+detection:
+  selection:
+    response_size: "10000-"
+  condition: selection
+fields:
+  - destination.ip
+  - response_size
+  - source.ip

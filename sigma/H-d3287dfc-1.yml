@@ -1,0 +1,13 @@
+title: Detect IMAP Argument Injection via -oProxyCommand
+logsource:
+  product: network
+  service: imap
+detection:
+  selection:
+    - 'imap.server: *-oProxyCommand=*'
+    - 'imap.server: *-oProxyCommand:\"*"'
+  condition: selection
+fields:
+  - imap.server
+  - destination.host
+  - source.ip

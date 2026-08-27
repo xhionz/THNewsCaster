@@ -1,0 +1,13 @@
+title: Suspicious PaperCut MF RCE Attempt via /app/admin/print
+logsource:
+  product: webserver
+detection:
+  selection:
+    uri_path: '/app/admin/print'
+    status: '200'
+  exclusion:
+    user_agent: 'PaperCut MF'
+    src_ip:
+      - '192.168.1.0/24'
+      - '10.0.0.0/8'
+condition: selection and not exclusion
