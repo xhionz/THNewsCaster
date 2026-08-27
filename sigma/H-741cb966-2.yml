@@ -1,0 +1,13 @@
+title: Detection of CVE-2019-1978 NetScaler Path Traversal
+logsource:
+  product: citrix_netscaler
+  service: access
+detection:
+  selection:
+    request_uri: '*../' OR request_uri: '*../../'*
+    status_code: 200
+  condition: selection
+fields:
+  - client_ip
+  - request_uri
+  - user_agent

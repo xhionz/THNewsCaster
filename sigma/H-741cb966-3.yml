@@ -1,0 +1,15 @@
+title: Detection of KEV Exploitation via Anomalous Auth or Network Behavior
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    Logon_Type: 3
+    Account_Name: '*$'
+    Source_Network_Address: '10.0.0.0/8'
+  condition: selection
+fields:
+  - Account_Name
+  - Source_Network_Address
+  - Logon_Type
