@@ -1,0 +1,11 @@
+title: Suspicious ServiceNow AI Platform Remote Code Execution Attempt
+logsource:
+  product: servicenow
+  service: ai_platform
+condition: 'request_uri contains "/api/ai/" and status_code == 200 and user_agent contains "curl" and request_body contains "exec("'
+detection:
+  keywords:
+    - "exec(" 
+    - "system(" 
+    - "shell_exec(" 
+  condition: keywords

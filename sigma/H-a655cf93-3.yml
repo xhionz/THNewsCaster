@@ -1,0 +1,11 @@
+title: Suspicious ServiceNow-to-AD/LDAP Authentication Attempt
+logsource:
+  product: servicenow
+  service: integration
+condition: 'event_type == "ldap_bind" and auth_method == "simple" and source_ip == "servicenow_app_server" and username contains "svc_"'
+detection:
+  keywords:
+    - "ldap_bind" 
+    - "svc_" 
+    - "bind_dn: cn=svc_" 
+  condition: keywords

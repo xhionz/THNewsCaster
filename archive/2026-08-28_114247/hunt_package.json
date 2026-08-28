@@ -1,254 +1,8 @@
 {
-  "generated_at": "2026-08-28T14:18:29+00:00",
+  "generated_at": "2026-08-28T11:42:44+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
-    {
-      "article": {
-        "id": "9c695c3da2a8500d",
-        "source": "SecurityWeek",
-        "title": "OpenAI Agents Exploited Linux Kernel Flaw on Company’s Own Systems",
-        "link": "https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/",
-        "published": "Fri, 28 Aug 2026 12:36:53 +0000",
-        "summary": "CISA has added the exploited flaw, CVE-2026-53362, to its KEV catalog, alongside a JFrog vulnerability exploited by OpenAI agents. The post OpenAI Agents Exploited Linux Kernel Flaw on Company’s Own Systems appeared first on SecurityWeek .",
-        "raw_text": "OpenAI Agents Exploited Linux Kernel Flaw on Company’s Own Systems CISA has added the exploited flaw, CVE-2026-53362, to its KEV catalog, alongside a JFrog vulnerability exploited by OpenAI agents. The post OpenAI Agents Exploited Linux Kernel Flaw on Company’s Own Systems appeared first on SecurityWeek .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 95,
-        "rationale": [
-          "triage: CVE-2026-53362 is on CISA KEV list with confirmed active exploitation; Linux kernel is ubiquitous in enterprise infrastructure."
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-53362"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [],
-        "actions": [],
-        "products": [
-          "Linux kernel"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-9c695c3d-1",
-          "title": "Privilege Escalation via Kernel Module Loading",
-          "statement": "An attacker exploited a zero-day Linux kernel vulnerability to load a malicious kernel module between August 25–28, 2026, gaining root privileges on at least one internal server in our environment.",
-          "rationale": "The article references exploitation of a Linux kernel flaw (CVE-2026-53362) and implies kernel-level compromise. While the CVE is fictional, the vector (kernel module load) is plausible and aligns with real-world privilege escalation techniques like T1068. The indicator 'exploit' and 'Linux kernel' support this scenario.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1068",
-            "T1055",
-            "T1078"
-          ],
-          "objectives": [
-            {
-              "id": "H-9c695c3d-1-O1",
-              "title": "Detect unauthorized module load via auditd",
-              "falsification_criterion": "No auditd events with syscall=init_module and non-system executable (e.g., /usr/bin/insmod) executed by non-root users with auid > 1000 occurred during the time window.",
-              "data_sources": [
-                "auditd"
-              ],
-              "suggested_query": "auditd syscall=init_module AND exe=*/insmod OR exe=*/modprobe AND auid>1000",
-              "mitre_attack": [
-                "T1068"
-              ],
-              "difficulty": "medium",
-              "points": 150
-            },
-            {
-              "id": "H-9c695c3d-1-O2",
-              "title": "Identify process spawning module loader",
-              "falsification_criterion": "No parent process (e.g., bash, python, sshd) spawned insmod/modprobe with non-standard arguments (e.g., path to /tmp/ or /dev/shm/) during the time window.",
-              "data_sources": [
-                "auditd",
-                "EDR"
-              ],
-              "suggested_query": "parent_process_name in ['bash', 'python', 'sshd'] AND process_name in ['insmod', 'modprobe'] AND process_args contains '/tmp/' or '/dev/shm/'",
-              "mitre_attack": [
-                "T1055"
-              ],
-              "difficulty": "medium",
-              "points": 150
-            },
-            {
-              "id": "H-9c695c3d-1-O3",
-              "title": "Correlate module load with network beacon",
-              "falsification_criterion": "No outbound network connections from the host where the module was loaded to known C2 IPs/domains within 5 minutes of the module load event.",
-              "data_sources": [
-                "NetFlow",
-                "EDR",
-                "DNS logs"
-              ],
-              "suggested_query": "source_ip IN (SELECT host_ip FROM auditd WHERE syscall='init_module' AND exe='*/insmod') AND destination_ip IN (SELECT ip FROM c2_indicators) AND timestamp BETWEEN module_load_time AND module_load_time + 5m",
-              "mitre_attack": [
-                "T1071"
-              ],
-              "difficulty": "hard",
-              "points": 200
-            }
-          ],
-          "sigma_rule": "title: Suspicious Kernel Module Load via init_module\nlogsource:\n  product: linux\n  service: auditd\ndetection:\n  syscall: init_module\n  exe: /usr/bin/insmod\n  auid: > 1000\n  comm: [\"insmod\", \"modprobe\"]\ncondition: syscall == 'init_module' and exe endswith 'insmod' and auid > 1000 and comm in ['insmod', 'modprobe']"
-        },
-        {
-          "id": "H-9c695c3d-2",
-          "title": "Persistence via Kernel-Level Rootkit",
-          "statement": "An attacker deployed a kernel rootkit between August 25–28, 2026, to maintain persistent access on a compromised server, hiding processes, files, or network connections from standard system tools.",
-          "rationale": "The article implies kernel exploitation. While CVE-2026-53362 is fictional, kernel rootkits are a known post-exploitation technique. The presence of an 'exploit' vector and kernel target supports this hypothesis. Rootkits often manipulate kernel symbols or hook syscalls, which can be detected via memory or audit anomalies.",
-          "confidence": "low",
-          "mitre_attack": [
-            "T1014",
-            "T1055",
-            "T1078"
-          ],
-          "objectives": [
-            {
-              "id": "H-9c695c3d-2-O1",
-              "title": "Detect hidden kernel modules via lsmod comparison",
-              "falsification_criterion": "No kernel modules loaded during the time window were absent from the baseline lsmod snapshot taken before August 25, 2026.",
-              "data_sources": [
-                "EDR",
-                "System snapshots"
-              ],
-              "suggested_query": "lsmod_output NOT IN (baseline_lsmod) AND load_time BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'",
-              "mitre_attack": [
-                "T1014"
-              ],
-              "difficulty": "medium",
-              "points": 150
-            },
-            {
-              "id": "H-9c695c3d-2-O2",
-              "title": "Identify syscall hooking via eBPF or kprobe anomalies",
-              "falsification_criterion": "No eBPF programs or kprobes attached to critical kernel functions (e.g., sys_open, sys_execve) were detected on the target host during the time window.",
-              "data_sources": [
-                "eBPF monitoring",
-                "EDR"
-              ],
-              "suggested_query": "ebpf_program_type IN ['kprobe', 'tracepoint'] AND target_function IN ['sys_open', 'sys_execve', 'do_sys_open'] AND load_time BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'",
-              "mitre_attack": [
-                "T1055"
-              ],
-              "difficulty": "hard",
-              "points": 200
-            },
-            {
-              "id": "H-9c695c3d-2-O3",
-              "title": "Verify absence of hidden processes via /proc scan",
-              "falsification_criterion": "No process in /proc was found with a PID that did not appear in the kernel's task list or had a truncated name (e.g., 'kthreadd' with extra padding).",
-              "data_sources": [
-                "EDR",
-                "Memory dumps"
-              ],
-              "suggested_query": "process_name.length < 15 AND pid IN (SELECT pid FROM /proc WHERE state='Z') AND parent_pid != 2",
-              "mitre_attack": [
-                "T1014"
-              ],
-              "difficulty": "hard",
-              "points": 200
-            }
-          ],
-          "sigma_rule": "title: Suspicious Kernel Module with Hidden Symbols\nlogsource:\n  product: linux\n  service: auditd\ndetection:\n  syscall: [\"init_module\", \"finit_module\"]\n  exe: /usr/bin/insmod\n  auid: > 1000\n  comm: \"insmod\"\n  module_name: \"*hidden*\" OR \"*kern*\" OR \"*root*\"\ncondition: syscall in ['init_module', 'finit_module'] and exe == '/usr/bin/insmod' and auid > 1000 and module_name contains 'hidden' or 'kern' or 'root'"
-        },
-        {
-          "id": "H-9c695c3d-3",
-          "title": "Privilege Escalation via Kernel Exploit Chain",
-          "statement": "An attacker used a local privilege escalation exploit (e.g., use-after-free) in the Linux kernel between August 25–28, 2026, to elevate from a low-privilege user account to root on a server in our environment.",
-          "rationale": "The article references kernel exploitation and implies privilege escalation. While the CVE is fictional, real-world exploits like Dirty Pipe or CVE-2021-4154 are well-documented. The 'exploit' vector and kernel product align with this scenario. This hypothesis focuses on the exploit chain rather than the fictional CVE.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1068",
-            "T1078",
-            "T1059"
-          ],
-          "objectives": [
-            {
-              "id": "H-9c695c3d-3-O1",
-              "title": "Detect unusual privilege escalation sequence",
-              "falsification_criterion": "No sequence of events occurred where a non-root user (auid > 1000) executed a script (python/node/perl) that then spawned bash and immediately called setuid/capset with success=true.",
-              "data_sources": [
-                "auditd",
-                "EDR"
-              ],
-              "suggested_query": "parent_process_name in ['python', 'node', 'perl'] AND process_name == 'bash' AND syscall in ['setuid', 'seteuid', 'capset'] AND success == true AND auid > 1000",
-              "mitre_attack": [
-                "T1068"
-              ],
-              "difficulty": "medium",
-              "points": 150
-            },
-            {
-              "id": "H-9c695c3d-3-O2",
-              "title": "Identify exploit payload execution",
-              "falsification_criterion": "No executable files with unusual permissions (e.g., SUID, executable in /tmp, /dev/shm) were created or executed by non-root users during the time window.",
-              "data_sources": [
-                "auditd",
-                "file integrity monitoring"
-              ],
-              "suggested_query": "file_path matches '/tmp/*' or '/dev/shm/*' AND file_mode contains 's' AND file_owner != 'root' AND access_time BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'",
-              "mitre_attack": [
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 150
-            },
-            {
-              "id": "H-9c695c3d-3-O3",
-              "title": "Correlate exploit with memory corruption pattern",
-              "falsification_criterion": "No memory dumps from the target host during the time window show heap corruption patterns (e.g., double-free, use-after-free) in kernel space regions.",
-              "data_sources": [
-                "Memory dumps",
-                "EDR"
-              ],
-              "suggested_query": "memory_dump_analysis == 'heap_corruption' AND region == 'kernel' AND timestamp BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'",
-              "mitre_attack": [
-                "T1068"
-              ],
-              "difficulty": "hard",
-              "points": 200
-            },
-            {
-              "id": "H-9c695c3d-3-O4",
-              "title": "Verify no kernel panic or crash occurred",
-              "falsification_criterion": "No kernel panic, oops, or dmesg error logs indicating a crash caused by an exploit attempt were recorded during the time window.",
-              "data_sources": [
-                "syslog",
-                "dmesg"
-              ],
-              "suggested_query": "message contains 'Oops' or 'Kernel panic' or 'general protection fault' AND timestamp BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'",
-              "mitre_attack": [
-                "T1068"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            }
-          ],
-          "sigma_rule": "title: Privilege Escalation via Kernel Exploit Pattern\nlogsource:\n  product: linux\n  service: auditd\ndetection:\n  syscall: [\"execve\", \"setuid\", \"seteuid\", \"capset\"]\n  auid: > 1000\n  ppid: > 1\n  exe: /usr/bin/bash\n  parent_exe: /usr/bin/python OR /usr/bin/node OR /usr/bin/perl\n  success: true\ncondition: syscall in ['execve', 'setuid', 'seteuid', 'capset'] and auid > 1000 and ppid > 1 and exe == '/usr/bin/bash' and parent_exe in ['/usr/bin/python', '/usr/bin/node', '/usr/bin/perl'] and success == true"
-        }
-      ],
-      "first_seen": "2026-08-28T14:18:29+00:00",
-      "agent_trace": [
-        "kev: 1 CVE(s) in CISA KEV",
-        "tool fetch_article({}) -> ok",
-        "tool lookup_mitre({\"query\": \"privilege escalation\"}) -> ok",
-        "tool lookup_mitre({\"query\": \"T1068\"}) -> ok",
-        "tool lookup_mitre({\"query\": \"exploitation for privilege escalation\"}) -> ok",
-        "critic: revise (CVE-2026-53362 is a future-dated (2026) and non-existent CVE ID; all CVEs are assigned by MITRE in chronological order and cannot be preemptively fabricated for hypothetical scenarios. This renders al)"
-      ]
-    },
     {
       "article": {
         "id": "a655cf938bcca037",
@@ -13397,9 +13151,254 @@
         "tool lookup_mitre({\"query\": \"T1021.001\"}) -> ok",
         "critic: revise (Hypothesis 1: Objective 'All MiniOrange plugin instances are version 4.5.1 or later (patched)' is not a falsification test — it's a configuration check. A null result (i.e., all patched) does NOT disp)"
       ]
+    },
+    {
+      "article": {
+        "id": "55722628a9efe8a0",
+        "source": "The Hacker News",
+        "title": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows",
+        "link": "https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html",
+        "published": "Tue, 25 Aug 2026 17:26:15 +0530",
+        "summary": "Thousands of companies have been affected by the Mirage2FA campaign from 2024 to 2026. The commercial phishing-as-a-service toolkit targets Microsoft 365 accounts by abusing legitimate login flows and bypassing two-factor authentication. According to ANY.RUN research, 48% of targeted email addresses were potentially compromised. Most of the affected companies are US-based. Mirage2FA Campaign",
+        "raw_text": "Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows Thousands of companies have been affected by the Mirage2FA campaign from 2024 to 2026. The commercial phishing-as-a-service toolkit targets Microsoft 365 accounts by abusing legitimate login flows and bypassing two-factor authentication. According to ANY.RUN research, 48% of targeted email addresses were potentially compromised. Most of the affected companies are US-based. Mirage2FA Campaign",
+        "tags": []
+      },
+      "scoring": {
+        "score": 90,
+        "rationale": [
+          "triage: Widespread phishing-as-a-service campaign abusing Microsoft 365 login flows to bypass MFA; high success rate (48% compromise) and broad enterprise impact."
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "any.run"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1566"
+        ],
+        "vectors": [
+          "phishing"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": [
+          "Microsoft 365 / Entra ID"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-55722628-1",
+          "title": "Mirage2FA Phishing via Any.Run Referers",
+          "statement": "In our environment between January 2024 and August 2024, attackers used phishing emails with links to malicious pages hosted on any.run or similar domains, which triggered HTTP requests with referer headers containing '*any.run*' or '*phishing-domain*', bypassing MFA via session hijacking.",
+          "rationale": "The article reports Mirage2FA abuses Microsoft 365 login flows and cites ANY.RUN research showing phishing traffic. Extracted IOCs include 'any.run' and T1566 (phishing), suggesting attackers used malicious referers to lure users into credential submission pages that mimic Microsoft login.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1566.001",
+            "T1555.003",
+            "T1078.004"
+          ],
+          "objectives": [
+            {
+              "id": "H-55722628-1-O1",
+              "title": "Detect malicious referer requests",
+              "falsification_criterion": "If HTTP requests with referer headers containing '*any.run*' or '*phishing-domain*' are observed in web proxy logs, then the hypothesis that no such malicious traffic exists is false.",
+              "data_sources": [
+                "Web proxy logs"
+              ],
+              "suggested_query": "http.referer contains \"any.run\" OR http.referer contains \"phishing-domain\"",
+              "mitre_attack": [
+                "T1566.001"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-55722628-1-O2",
+              "title": "Identify session hijacking via valid tokens",
+              "falsification_criterion": "If EDR logs show browser processes (msedge.exe, iexplore.exe) making authenticated API calls to login.microsoftonline.com using tokens obtained after a phishing event, then the hypothesis that MFA bypass did not occur is false.",
+              "data_sources": [
+                "EDR",
+                "Azure AD sign-in logs"
+              ],
+              "suggested_query": "process.name: \"msedge.exe\" OR process.name: \"iexplore.exe\" AND api_call: \"login.microsoftonline.com\" AND token_source: \"phishing_event\"",
+              "mitre_attack": [
+                "T1555.003"
+              ],
+              "difficulty": "medium",
+              "points": 150
+            },
+            {
+              "id": "H-55722628-1-O3",
+              "title": "Detect credential harvesting via fake login pages",
+              "falsification_criterion": "If DNS logs show resolutions to domains matching patterns like '*.microsoft-login[.]xyz' or '*.office365-auth[.]com' that correlate with HTTP requests to any.run, then the hypothesis that no fake domains were used is false.",
+              "data_sources": [
+                "DNS logs",
+                "Web proxy logs"
+              ],
+              "suggested_query": "dns.query contains \"microsoft-login\" OR dns.query contains \"office365-auth\" AND correlated_with: \"any.run\"",
+              "mitre_attack": [
+                "T1566.001"
+              ],
+              "difficulty": "medium",
+              "points": 120
+            }
+          ],
+          "sigma_rule": "title: Mirage2FA - Phishing Referer Detection\nlogsource:\n  product: web_proxy\n  service: http\ndetection:\n  referer_malicious:\n    - 'http.referer: \"*any.run*\"'\n    - 'http.referer: \"*phishing-domain*\"'\ncondition: referer_malicious\n"
+        },
+        {
+          "id": "H-55722628-2",
+          "title": "Abuse of Legitimate Login Flows via Non-MSAL Clients",
+          "statement": "In our environment between January 2024 and August 2024, attackers used non-MSAL OAuth2 clients to request refresh tokens from Azure AD after phishing credentials, bypassing MFA by maintaining persistent access via token reuse.",
+          "rationale": "The article states Mirage2FA abuses legitimate Microsoft 365 login flows. While Azure AD logs don't expose 'Refresh Token grant type' as a field, they do log 'client_app_id' and 'token_type'. Attackers may use non-standard clients (e.g., custom apps, Postman) to request refresh tokens — a known T1078.004 technique.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078.004",
+            "T1566.001",
+            "T1555.001"
+          ],
+          "objectives": [
+            {
+              "id": "H-55722628-2-O1",
+              "title": "Detect refresh token requests from non-MSAL clients",
+              "falsification_criterion": "If Azure AD sign-in logs show refresh token requests from client_app_id values not in the known MSAL/first-party list, then the hypothesis that only MSAL clients were used is false.",
+              "data_sources": [
+                "Azure AD sign-in logs"
+              ],
+              "suggested_query": "token_type: \"refresh_token\" AND client_app_id NOT IN [\"Microsoft Azure Portal\", \"Microsoft Office\", \"Microsoft Teams\", \"MSAL\"]",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "medium",
+              "points": 130
+            },
+            {
+              "id": "H-55722628-2-O2",
+              "title": "Identify token reuse across geolocations",
+              "falsification_criterion": "If the same refresh token is used to authenticate from two geographically distant IPs within 5 minutes, then the hypothesis that tokens were not reused post-phishing is false.",
+              "data_sources": [
+                "Azure AD sign-in logs",
+                "GeoIP data"
+              ],
+              "suggested_query": "token_id: \"<same_token>\" AND location.country: \"United States\" AND location.country: \"Russia\" AND timestamp: within(5m)",
+              "mitre_attack": [
+                "T1555.001"
+              ],
+              "difficulty": "hard",
+              "points": 180
+            },
+            {
+              "id": "H-55722628-2-O3",
+              "title": "Detect anomalous token lifetime extensions",
+              "falsification_criterion": "If Azure AD logs show refresh tokens being renewed beyond the standard 90-day limit without admin consent, then the hypothesis that token lifetimes were not abused is false.",
+              "data_sources": [
+                "Azure AD sign-in logs",
+                "Audit logs"
+              ],
+              "suggested_query": "token_lifetime_extension: \"true\" AND admin_consent: \"false\" AND token_lifetime_days > 90",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "medium",
+              "points": 140
+            }
+          ],
+          "sigma_rule": "title: Mirage2FA - Non-MSAL Refresh Token Requests\nlogsource:\n  product: azure_ad\n  service: signins\ndetection:\n  non_msal_client:\n    - 'client_app_id: \"*\" AND client_app_id NOT IN [\"Microsoft Azure Portal\", \"Microsoft Office\", \"Microsoft Teams\", \"MSAL\"]'\n  token_type_refresh:\n    - 'token_type: \"refresh_token\"'\ncondition: non_msal_client and token_type_refresh\n"
+        },
+        {
+          "id": "H-55722628-3",
+          "title": "Phishing Emails Mimicking Microsoft from noreply@microsoft.com",
+          "statement": "In our environment between January 2024 and August 2024, attackers sent phishing emails with spoofed 'noreply@microsoft.com' sender addresses, containing malicious links or attachments designed to harvest credentials or deploy malware.",
+          "rationale": "The article highlights phishing as the primary vector. The extracted IOC includes 'phishing' and 'Microsoft 365'. While 'email.attachment' and 'email.body' are not universal, Exchange Online logs do expose 'sender', 'subject', and 'attachment_names' — which can be used to detect spoofed Microsoft emails.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1566.001",
+            "T1059.003",
+            "T1204.002"
+          ],
+          "objectives": [
+            {
+              "id": "H-55722628-3-O1",
+              "title": "Detect spoofed noreply@microsoft.com emails",
+              "falsification_criterion": "If email logs show messages with sender matching '*noreply@microsoft.com' and subject containing 'Security Alert' or 'Action Required', then the hypothesis that no such spoofed emails were delivered is false.",
+              "data_sources": [
+                "Exchange Online logs"
+              ],
+              "suggested_query": "sender: \"*noreply@microsoft.com\" AND subject: \"*Security Alert*\" OR subject: \"*Action Required: Your Microsoft Account*\"",
+              "mitre_attack": [
+                "T1566.001"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-55722628-3-O2",
+              "title": "Identify malicious attachments in spoofed emails",
+              "falsification_criterion": "If email logs show attachments with extensions .exe, .js, or .scr sent from spoofed Microsoft addresses, then the hypothesis that no malware was delivered via email is false.",
+              "data_sources": [
+                "Exchange Online logs",
+                "EDR file events"
+              ],
+              "suggested_query": "attachment_names: \"*.exe\" OR attachment_names: \"*.js\" OR attachment_names: \"*.scr\" AND sender: \"*noreply@microsoft.com\"",
+              "mitre_attack": [
+                "T1204.002"
+              ],
+              "difficulty": "medium",
+              "points": 120
+            },
+            {
+              "id": "H-55722628-3-O3",
+              "title": "Detect URL clicks in spoofed emails",
+              "falsification_criterion": "If web proxy logs show HTTP requests to domains like '*.microsoft-security[.]xyz' originating from users who received spoofed emails, then the hypothesis that no users clicked malicious links is false.",
+              "data_sources": [
+                "Exchange Online logs",
+                "Web proxy logs"
+              ],
+              "suggested_query": "email.sender: \"*noreply@microsoft.com\" AND correlated_web_request: \"*.microsoft-security[.]xyz\"",
+              "mitre_attack": [
+                "T1566.001"
+              ],
+              "difficulty": "medium",
+              "points": 130
+            },
+            {
+              "id": "H-55722628-3-O4",
+              "title": "Identify lateral movement from compromised accounts",
+              "falsification_criterion": "If EDR logs show PowerShell or Office macros executing from a user who opened a spoofed email, then the hypothesis that phishing did not lead to endpoint compromise is false.",
+              "data_sources": [
+                "EDR",
+                "Exchange Online logs"
+              ],
+              "suggested_query": "process.name: \"powershell.exe\" AND parent_process: \"outlook.exe\" AND email_sender: \"*noreply@microsoft.com\"",
+              "mitre_attack": [
+                "T1059.003"
+              ],
+              "difficulty": "hard",
+              "points": 160
+            }
+          ],
+          "sigma_rule": "title: Mirage2FA - Spoofed Microsoft Email Sender\nlogsource:\n  product: exchange_online\n  service: email\ndetection:\n  spoofed_sender:\n    - 'sender: \"*noreply@microsoft.com\"'\n  malicious_subject:\n    - 'subject: \"*Security Alert*\"'\n    - 'subject: \"*Action Required: Your Microsoft Account*\"'\n  malicious_attachment:\n    - 'attachment_names: \"*.exe\"'\n    - 'attachment_names: \"*.js\"'\n    - 'attachment_names: \"*.scr\"'\ncondition: spoofed_sender and (malicious_subject or malicious_attachment)\n"
+        }
+      ],
+      "first_seen": "2026-08-25T12:47:03+00:00",
+      "agent_trace": [
+        "tool fetch_article({}) -> ok",
+        "tool lookup_mitre({\"query\": \"phishing\"}) -> ok",
+        "tool lookup_mitre({\"query\": \"T1190\"}) -> ok",
+        "critic: revise (Hypothesis 1: Sigma rule is syntactically invalid — condition ends with 'su' and is malformed; detection block is improperly nested and duplicated; 'http.referer: \"*any.run*\" or http.referer: \"*phishi)"
+      ]
     }
   ],
-  "skipped": 302,
+  "skipped": 304,
   "total_seen": 305,
-  "brief": "Exploitation of known vulnerabilities in critical infrastructure is the dominant threat, with CISA adding multiple high-severity flaws to its KEV catalog, including Linux, NetScaler, and PaperCut bugs. Prioritize patching CVE-2026-53362 (Linux kernel) and CVE-2026-8452 (Citrix NetScaler) immediately—they are actively exploited, KEV-listed, and target government and manufacturing sectors. PaperCut zero-days (CVE-2023-27350) remain a high-risk vector in education and manufacturing, with repeated exploitation reported across multiple advisories."
+  "brief": "Exploitation of known vulnerabilities in critical infrastructure software dominates the threat landscape, with multiple zero-days and CISA KEV-listed flaws actively targeted. Prioritize patching CVE-2023-27350 (PaperCut) and CVE-2026-8452 (Citrix NetScaler) immediately—they are actively exploited in the wild and impact high-value sectors like government and manufacturing. Notable actors remain unattributed, but CISA’s urgent patch directives and repeated KEV additions confirm state-backed and criminal groups are exploiting legacy and unpatched systems."
 }

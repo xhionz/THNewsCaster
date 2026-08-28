@@ -1,0 +1,11 @@
+title: Suspicious Kernel Module with Hidden Symbols
+logsource:
+  product: linux
+  service: auditd
+detection:
+  syscall: ["init_module", "finit_module"]
+  exe: /usr/bin/insmod
+  auid: > 1000
+  comm: "insmod"
+  module_name: "*hidden*" OR "*kern*" OR "*root*"
+condition: syscall in ['init_module', 'finit_module'] and exe == '/usr/bin/insmod' and auid > 1000 and module_name contains 'hidden' or 'kern' or 'root'

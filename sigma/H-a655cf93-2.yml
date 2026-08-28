@@ -1,0 +1,12 @@
+title: Suspicious SQL Injection Attempt in ServiceNow AI Query
+logsource:
+  product: servicenow
+  service: ai_query
+condition: 'request_uri contains "/api/ai/query" and request_body contains "' OR 1=1--" or request_body contains "UNION SELECT"'
+detection:
+  keywords:
+    - "' OR 1=1--" 
+    - "UNION SELECT" 
+    - "--" 
+    - "'; DROP TABLE" 
+  condition: keywords

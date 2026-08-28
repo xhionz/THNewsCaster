@@ -15,7 +15,7 @@ cves,CVE-2026-60004,2,https://thehackernews.com/2026/08/critical-gitea-rce-activ
 cves,CVE-2026-59310,2,https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html | https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-55040,3,https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1votnh2/microsoft_sharepoint_jwt_token_authentication/ | https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/
 cves,CVE-2026-54121,1,https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/
-cves,CVE-2026-53362,2,https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/
+cves,CVE-2026-53362,1,https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-52806,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles
 cves,CVE-2026-48907,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles
 cves,CVE-2026-46300,1,https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles
@@ -54,6 +54,7 @@ ips,127.0.0.1,1,https://www.reddit.com/r/blueteamsec/comments/1vrwaca/operation_
 ips,211.27.196.111,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
 domains,abr.business.gov.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
 domains,ajax.net,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+domains,any.run,1,https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html
 domains,application.readwrite.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
 domains,approleassignment.readwrite.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
 domains,archive.org,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/

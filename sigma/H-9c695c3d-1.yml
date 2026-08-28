@@ -1,0 +1,10 @@
+title: Suspicious Kernel Module Load via init_module
+logsource:
+  product: linux
+  service: auditd
+detection:
+  syscall: init_module
+  exe: /usr/bin/insmod
+  auid: > 1000
+  comm: ["insmod", "modprobe"]
+condition: syscall == 'init_module' and exe endswith 'insmod' and auid > 1000 and comm in ['insmod', 'modprobe']

@@ -1,0 +1,12 @@
+title: Privilege Escalation via Kernel Exploit Pattern
+logsource:
+  product: linux
+  service: auditd
+detection:
+  syscall: ["execve", "setuid", "seteuid", "capset"]
+  auid: > 1000
+  ppid: > 1
+  exe: /usr/bin/bash
+  parent_exe: /usr/bin/python OR /usr/bin/node OR /usr/bin/perl
+  success: true
+condition: syscall in ['execve', 'setuid', 'seteuid', 'capset'] and auid > 1000 and ppid > 1 and exe == '/usr/bin/bash' and parent_exe in ['/usr/bin/python', '/usr/bin/node', '/usr/bin/perl'] and success == true

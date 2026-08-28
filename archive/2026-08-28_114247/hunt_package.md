@@ -1,155 +1,13 @@
 # Threat Hunting News Package
 
-- Generated: `2026-08-28T14:18:29+00:00`
+- Generated: `2026-08-28T11:42:44+00:00`
 - Generator: `THNewsCaster v0.1.0`
-- Articles seen: **305**  ·  Skipped (below threshold): **302**  ·  Briefings: **50**
+- Articles seen: **305**  ·  Skipped (below threshold): **304**  ·  Briefings: **50**
 - IOC exports: `iocs.csv`, `iocs.json`, `iocs_stix.json`  ·  Sigma rules: `sigma/`  ·  History: `archive/`
 
 ---
 
-## 1. OpenAI Agents Exploited Linux Kernel Flaw on Company’s Own Systems
-
-- **Source**: SecurityWeek
-- **Link**: <https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/>
-- **Published**: Fri, 28 Aug 2026 12:36:53 +0000
-- **First seen**: 2026-08-28T14:18:29+00:00
-- **Relevance score**: 95
-- **Score rationale**: triage: CVE-2026-53362 is on CISA KEV list with confirmed active exploitation; Linux kernel is ubiquitous in enterprise infrastructure.
-- **Agent trace**: kev: 1 CVE(s) in CISA KEV → tool fetch_article({}) -> ok → tool lookup_mitre({"query": "privilege escalation"}) -> ok → tool lookup_mitre({"query": "T1068"}) -> ok → tool lookup_mitre({"query": "exploitation for privilege escalation"}) -> ok → critic: revise (CVE-2026-53362 is a future-dated (2026) and non-existent CVE ID; all CVEs are assigned by MITRE in chronological order and cannot be preemptively fabricated for hypothetical scenarios. This renders al)
-
-> CISA has added the exploited flaw, CVE-2026-53362, to its KEV catalog, alongside a JFrog vulnerability exploited by OpenAI agents. The post OpenAI Agents Exploited Linux Kernel Flaw on Company’s Own Systems appeared first on SecurityWeek .
-
-**Extracted signals**
-- CVEs: CVE-2026-53362
-- Products: Linux kernel
-- Vectors: exploit
-
-### Hypotheses (3)
-
-#### H-9c695c3d-1 · Privilege Escalation via Kernel Module Loading  _(confidence: medium)_
-
-**Statement.** An attacker exploited a zero-day Linux kernel vulnerability to load a malicious kernel module between August 25–28, 2026, gaining root privileges on at least one internal server in our environment.
-
-**Why this hypothesis?** The article references exploitation of a Linux kernel flaw (CVE-2026-53362) and implies kernel-level compromise. While the CVE is fictional, the vector (kernel module load) is plausible and aligns with real-world privilege escalation techniques like T1068. The indicator 'exploit' and 'Linux kernel' support this scenario.
-
-**MITRE ATT&CK**: T1068, T1055, T1078
-
-**CTF objectives (3) — find evidence that disproves the hypothesis:**
-
-- **[H-9c695c3d-1-O1] Detect unauthorized module load via auditd** _(difficulty: medium · 150 pts · MITRE: T1068)_
-  - Falsification criterion: No auditd events with syscall=init_module and non-system executable (e.g., /usr/bin/insmod) executed by non-root users with auid > 1000 occurred during the time window.
-  - Data sources: auditd
-  - Suggested query: `auditd syscall=init_module AND exe=*/insmod OR exe=*/modprobe AND auid>1000`
-- **[H-9c695c3d-1-O2] Identify process spawning module loader** _(difficulty: medium · 150 pts · MITRE: T1055)_
-  - Falsification criterion: No parent process (e.g., bash, python, sshd) spawned insmod/modprobe with non-standard arguments (e.g., path to /tmp/ or /dev/shm/) during the time window.
-  - Data sources: auditd, EDR
-  - Suggested query: `parent_process_name in ['bash', 'python', 'sshd'] AND process_name in ['insmod', 'modprobe'] AND process_args contains '/tmp/' or '/dev/shm/'`
-- **[H-9c695c3d-1-O3] Correlate module load with network beacon** _(difficulty: hard · 200 pts · MITRE: T1071)_
-  - Falsification criterion: No outbound network connections from the host where the module was loaded to known C2 IPs/domains within 5 minutes of the module load event.
-  - Data sources: NetFlow, EDR, DNS logs
-  - Suggested query: `source_ip IN (SELECT host_ip FROM auditd WHERE syscall='init_module' AND exe='*/insmod') AND destination_ip IN (SELECT ip FROM c2_indicators) AND timestamp BETWEEN module_load_time AND module_load_time + 5m`
-
-**Sigma rule:**
-
-```yaml
-title: Suspicious Kernel Module Load via init_module
-logsource:
-  product: linux
-  service: auditd
-detection:
-  syscall: init_module
-  exe: /usr/bin/insmod
-  auid: > 1000
-  comm: ["insmod", "modprobe"]
-condition: syscall == 'init_module' and exe endswith 'insmod' and auid > 1000 and comm in ['insmod', 'modprobe']
-```
-
-#### H-9c695c3d-2 · Persistence via Kernel-Level Rootkit  _(confidence: low)_
-
-**Statement.** An attacker deployed a kernel rootkit between August 25–28, 2026, to maintain persistent access on a compromised server, hiding processes, files, or network connections from standard system tools.
-
-**Why this hypothesis?** The article implies kernel exploitation. While CVE-2026-53362 is fictional, kernel rootkits are a known post-exploitation technique. The presence of an 'exploit' vector and kernel target supports this hypothesis. Rootkits often manipulate kernel symbols or hook syscalls, which can be detected via memory or audit anomalies.
-
-**MITRE ATT&CK**: T1014, T1055, T1078
-
-**CTF objectives (3) — find evidence that disproves the hypothesis:**
-
-- **[H-9c695c3d-2-O1] Detect hidden kernel modules via lsmod comparison** _(difficulty: medium · 150 pts · MITRE: T1014)_
-  - Falsification criterion: No kernel modules loaded during the time window were absent from the baseline lsmod snapshot taken before August 25, 2026.
-  - Data sources: EDR, System snapshots
-  - Suggested query: `lsmod_output NOT IN (baseline_lsmod) AND load_time BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'`
-- **[H-9c695c3d-2-O2] Identify syscall hooking via eBPF or kprobe anomalies** _(difficulty: hard · 200 pts · MITRE: T1055)_
-  - Falsification criterion: No eBPF programs or kprobes attached to critical kernel functions (e.g., sys_open, sys_execve) were detected on the target host during the time window.
-  - Data sources: eBPF monitoring, EDR
-  - Suggested query: `ebpf_program_type IN ['kprobe', 'tracepoint'] AND target_function IN ['sys_open', 'sys_execve', 'do_sys_open'] AND load_time BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'`
-- **[H-9c695c3d-2-O3] Verify absence of hidden processes via /proc scan** _(difficulty: hard · 200 pts · MITRE: T1014)_
-  - Falsification criterion: No process in /proc was found with a PID that did not appear in the kernel's task list or had a truncated name (e.g., 'kthreadd' with extra padding).
-  - Data sources: EDR, Memory dumps
-  - Suggested query: `process_name.length < 15 AND pid IN (SELECT pid FROM /proc WHERE state='Z') AND parent_pid != 2`
-
-**Sigma rule:**
-
-```yaml
-title: Suspicious Kernel Module with Hidden Symbols
-logsource:
-  product: linux
-  service: auditd
-detection:
-  syscall: ["init_module", "finit_module"]
-  exe: /usr/bin/insmod
-  auid: > 1000
-  comm: "insmod"
-  module_name: "*hidden*" OR "*kern*" OR "*root*"
-condition: syscall in ['init_module', 'finit_module'] and exe == '/usr/bin/insmod' and auid > 1000 and module_name contains 'hidden' or 'kern' or 'root'
-```
-
-#### H-9c695c3d-3 · Privilege Escalation via Kernel Exploit Chain  _(confidence: high)_
-
-**Statement.** An attacker used a local privilege escalation exploit (e.g., use-after-free) in the Linux kernel between August 25–28, 2026, to elevate from a low-privilege user account to root on a server in our environment.
-
-**Why this hypothesis?** The article references kernel exploitation and implies privilege escalation. While the CVE is fictional, real-world exploits like Dirty Pipe or CVE-2021-4154 are well-documented. The 'exploit' vector and kernel product align with this scenario. This hypothesis focuses on the exploit chain rather than the fictional CVE.
-
-**MITRE ATT&CK**: T1068, T1078, T1059
-
-**CTF objectives (4) — find evidence that disproves the hypothesis:**
-
-- **[H-9c695c3d-3-O1] Detect unusual privilege escalation sequence** _(difficulty: medium · 150 pts · MITRE: T1068)_
-  - Falsification criterion: No sequence of events occurred where a non-root user (auid > 1000) executed a script (python/node/perl) that then spawned bash and immediately called setuid/capset with success=true.
-  - Data sources: auditd, EDR
-  - Suggested query: `parent_process_name in ['python', 'node', 'perl'] AND process_name == 'bash' AND syscall in ['setuid', 'seteuid', 'capset'] AND success == true AND auid > 1000`
-- **[H-9c695c3d-3-O2] Identify exploit payload execution** _(difficulty: medium · 150 pts · MITRE: T1059)_
-  - Falsification criterion: No executable files with unusual permissions (e.g., SUID, executable in /tmp, /dev/shm) were created or executed by non-root users during the time window.
-  - Data sources: auditd, file integrity monitoring
-  - Suggested query: `file_path matches '/tmp/*' or '/dev/shm/*' AND file_mode contains 's' AND file_owner != 'root' AND access_time BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'`
-- **[H-9c695c3d-3-O3] Correlate exploit with memory corruption pattern** _(difficulty: hard · 200 pts · MITRE: T1068)_
-  - Falsification criterion: No memory dumps from the target host during the time window show heap corruption patterns (e.g., double-free, use-after-free) in kernel space regions.
-  - Data sources: Memory dumps, EDR
-  - Suggested query: `memory_dump_analysis == 'heap_corruption' AND region == 'kernel' AND timestamp BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'`
-- **[H-9c695c3d-3-O4] Verify no kernel panic or crash occurred** _(difficulty: easy · 100 pts · MITRE: T1068)_
-  - Falsification criterion: No kernel panic, oops, or dmesg error logs indicating a crash caused by an exploit attempt were recorded during the time window.
-  - Data sources: syslog, dmesg
-  - Suggested query: `message contains 'Oops' or 'Kernel panic' or 'general protection fault' AND timestamp BETWEEN '2026-08-25T00:00:00Z' AND '2026-08-28T23:59:59Z'`
-
-**Sigma rule:**
-
-```yaml
-title: Privilege Escalation via Kernel Exploit Pattern
-logsource:
-  product: linux
-  service: auditd
-detection:
-  syscall: ["execve", "setuid", "seteuid", "capset"]
-  auid: > 1000
-  ppid: > 1
-  exe: /usr/bin/bash
-  parent_exe: /usr/bin/python OR /usr/bin/node OR /usr/bin/perl
-  success: true
-condition: syscall in ['execve', 'setuid', 'seteuid', 'capset'] and auid > 1000 and ppid > 1 and exe == '/usr/bin/bash' and parent_exe in ['/usr/bin/python', '/usr/bin/node', '/usr/bin/perl'] and success == true
-```
-
----
-
-## 2. Three CVSS 10.0 ServiceNow Flaws Could Let Unauthenticated Attackers Execute Code and SQL
+## 1. Three CVSS 10.0 ServiceNow Flaws Could Let Unauthenticated Attackers Execute Code and SQL
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/three-cvss-100-servicenow-flaws-could.html>
@@ -310,7 +168,7 @@ detection:
 
 ---
 
-## 3. PaperCut NG/MF Critical Zero-Day Exploited in the Wild
+## 2. PaperCut NG/MF Critical Zero-Day Exploited in the Wild
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild>
@@ -481,7 +339,7 @@ detection:
 
 ---
 
-## 4. PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions
+## 3. PaperCut Zero-Day Exploited in Attacks, Affecting All NG and MF Versions
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/papercut-zero-day-exploited-in-attacks.html>
@@ -613,7 +471,7 @@ condition: 'query_count > 50 in 5m and domain contains "." and domain_length > 4
 
 ---
 
-## 5. CISA Adds Three Known Exploited Vulnerabilities to Catalog
+## 4. CISA Adds Three Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog>
@@ -782,7 +640,7 @@ level: high
 
 ---
 
-## 6. PaperCut warns of NG, MF flaw exploited in zero-day attacks
+## 5. PaperCut warns of NG, MF flaw exploited in zero-day attacks
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/papercut-warns-of-ng-mf-flaw-exploited-in-zero-day-attacks/>
@@ -931,7 +789,7 @@ condition: selection and not exclusion
 
 ---
 
-## 7. Two Alleged ‘TeamPCP’ Hackers Arrested in Australia
+## 6. Two Alleged ‘TeamPCP’ Hackers Arrested in Australia
 
 - **Source**: KrebsOnSecurity
 - **Link**: <https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/>
@@ -1090,7 +948,7 @@ fields: ['cs-uri-stem', 'cs-method', 'cs-uri-query', 'cs(User-Agent)', 'c-ip']
 
 ---
 
-## 8. CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday
+## 7. CISA orders feds to patch Citrix NetScaler RCE flaw by Saturday
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/cisa-hackers-now-exploiting-citrix-netscaler-rce-flaw-in-attacks/>
@@ -1222,7 +1080,7 @@ condition: 'EventID == 4698 AND TaskName CONTAINS ANY ["Update", "Patch", "Syste
 
 ---
 
-## 9. log4j2-rce: Pre-auth RCE via FilteredObjectInputStream MarshalledObject bypass in Apache Log4j 2
+## 8. log4j2-rce: Pre-auth RCE via FilteredObjectInputStream MarshalledObject bypass in Apache Log4j 2
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1vzknle/log4j2rce_preauth_rce_via/>
@@ -1379,7 +1237,7 @@ condition: selection
 
 ---
 
-## 10. CISA Adds Six Exploited Flaws to KEV, Including NetScaler, Linux, and SQL Server Bugs
+## 9. CISA Adds Six Exploited Flaws to KEV, Including NetScaler, Linux, and SQL Server Bugs
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/cisa-adds-six-exploited-flaws-to-kev.html>
@@ -1538,7 +1396,7 @@ fields:
 
 ---
 
-## 11. Recent Citrix NetScaler Vulnerability Exploited in the Wild
+## 10. Recent Citrix NetScaler Vulnerability Exploited in the Wild
 
 - **Source**: SecurityWeek
 - **Link**: <https://www.securityweek.com/recent-citrix-netscaler-vulnerability-exploited-in-the-wild/>
@@ -1676,7 +1534,7 @@ status: experimental
 
 ---
 
-## 12. CISA Adds Six Known Exploited Vulnerabilities to Catalog
+## 11. CISA Adds Six Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog>
@@ -1812,7 +1670,7 @@ detection:
 
 ---
 
-## 13. Exploiting SharePoint: CVE-2026-55040 and CVE-2026-63520 RCE Chain
+## 12. Exploiting SharePoint: CVE-2026-55040 and CVE-2026-63520 RCE Chain
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/>
@@ -1958,7 +1816,7 @@ detection:
 
 ---
 
-## 14. Hackers target Microsoft SharePoint RCE chain with PoC exploit
+## 13. Hackers target Microsoft SharePoint RCE chain with PoC exploit
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/hackers-target-microsoft-sharepoint-rce-chain-with-poc-exploit/>
@@ -2128,7 +1986,7 @@ level: high
 
 ---
 
-## 15. Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload
+## 14. Critical Gitea RCE Actively Exploited as Reported Attack Drops Miner-Like Payload
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html>
@@ -2287,7 +2145,7 @@ condition: all of them
 
 ---
 
-## 16. CISA Adds One Known Exploited Vulnerability to Catalog
+## 15. CISA Adds One Known Exploited Vulnerability to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog>
@@ -2439,7 +2297,7 @@ timeframe: 1h
 
 ---
 
-## 17. CISA Warns of Exploited Oracle WebLogic Vulnerability
+## 16. CISA Warns of Exploited Oracle WebLogic Vulnerability
 
 - **Source**: SecurityWeek
 - **Link**: <https://www.securityweek.com/cisa-warns-of-exploited-oracle-weblogic-vulnerability/>
@@ -2606,7 +2464,7 @@ detection:
 
 ---
 
-## 18. Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data
+## 17. Actively Exploited Oracle WebLogic Flaw Lets Unauthenticated Attackers Access Critical Data
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html>
@@ -2771,7 +2629,7 @@ keywords:
 
 ---
 
-## 19. Exploited Zimbra Flaw Highlights Shrinking Window to Patch
+## 18. Exploited Zimbra Flaw Highlights Shrinking Window to Patch
 
 - **Source**: Dark Reading
 - **Link**: <https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch>
@@ -2908,7 +2766,7 @@ detection:
 
 ---
 
-## 20. Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account
+## 19. Critical Keycloak Password Reset Flaw Could Let Unauthenticated Attackers Take Over Any Account
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html>
@@ -3048,7 +2906,7 @@ detection:
 
 ---
 
-## 21. CISA orders urgent patching of actively exploited Zimbra flaw
+## 20. CISA orders urgent patching of actively exploited Zimbra flaw
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/cisa-orders-urgent-patching-of-actively-exploited-zimbra-flaw/>
@@ -3197,7 +3055,7 @@ condition: all
 
 ---
 
-## 22. Vulnerability Analysis of CVE-2025-22226: Information Disclosure Due to OOB Read in VMware’s HGFS
+## 21. Vulnerability Analysis of CVE-2025-22226: Information Disclosure Due to OOB Read in VMware’s HGFS
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1vvev5w/vulnerability_analysis_of_cve202522226/>
@@ -3363,7 +3221,7 @@ timeframe: 1h
 
 ---
 
-## 23. Microsoft warns of max severity Entra ID flaw exploited in attacks
+## 22. Microsoft warns of max severity Entra ID flaw exploited in attacks
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/microsoft/microsoft-warns-of-max-severity-entra-id-flaw-exploited-in-attacks/>
@@ -3528,7 +3386,7 @@ level: high
 
 ---
 
-## 24. GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure
+## 23. GitLab CVE-2026-19478 Comes Under Active Exploitation Within Days of Disclosure
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html>
@@ -3666,7 +3524,7 @@ detection:
 
 ---
 
-## 25. Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution
+## 24. Microsoft Entra ID Flaw (CVSS 10.0) Exploited in Wild, Allows Remote Code Execution
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html>
@@ -3832,7 +3690,7 @@ fields:
 
 ---
 
-## 26. CISA Adds Two Known Exploited Vulnerabilities to Catalog
+## 25. CISA Adds Two Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog>
@@ -3996,7 +3854,7 @@ level: high
 
 ---
 
-## 27. UAT-10147 deploys SPECTRE: A cross-platform implant with Linux rootkit and BYOVD capabilities
+## 26. UAT-10147 deploys SPECTRE: A cross-platform implant with Linux rootkit and BYOVD capabilities
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/>
@@ -4175,7 +4033,7 @@ level: high
 
 ---
 
-## 28. Exploitation Expected for Critical Authentication Bypass Patched in Citrix NetScaler
+## 27. Exploitation Expected for Critical Authentication Bypass Patched in Citrix NetScaler
 
 - **Source**: SecurityWeek
 - **Link**: <https://www.securityweek.com/exploitation-expected-for-critical-authentication-bypass-patched-in-citrix-netscaler/>
@@ -4295,7 +4153,7 @@ condition: 'query: /.*\.[a-zA-Z0-9]{30,}\.(com|net|org|info|xyz)/' and 'src_ip i
 
 ---
 
-## 29. Critical GitLab Flaw Exploited Shortly After Disclosure
+## 28. Critical GitLab Flaw Exploited Shortly After Disclosure
 
 - **Source**: SecurityWeek
 - **Link**: <https://www.securityweek.com/critical-gitlab-flaw-exploited-shortly-after-disclosure/>
@@ -4469,7 +4327,7 @@ condition: malicious_push
 
 ---
 
-## 30. CISA Adds One Known Exploited Vulnerability to Catalog
+## 29. CISA Adds One Known Exploited Vulnerability to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog>
@@ -4675,7 +4533,7 @@ level: critical
 
 ---
 
-## 31. CVE-2026-19490: Critical Vulnerability Affecting Citrix NetScaler ADC and NetScaler Gateway
+## 30. CVE-2026-19490: Critical Vulnerability Affecting Citrix NetScaler ADC and NetScaler Gateway
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway>
@@ -4843,7 +4701,7 @@ condition: '1 of exfil_domain and (1 of high_content_length or 1 of dns_query_le
 
 ---
 
-## 32. Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation
+## 31. Critical macOS, SharePoint, vCenter, and Microsoft IKE Flaws Under Active Exploitation
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html>
@@ -4993,7 +4851,7 @@ condition: selection
 
 ---
 
-## 33. Critical RCE flaw in Windows IKE Extension now actively exploited
+## 32. Critical RCE flaw in Windows IKE Extension now actively exploited
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/cisa-critical-windows-ike-extension-flaw-now-exploited-in-attacks/>
@@ -5144,7 +5002,7 @@ condition: all
 
 ---
 
-## 34. CISA: Medusa ransomware hit over 500 critical infrastructure orgs
+## 33. CISA: Medusa ransomware hit over 500 critical infrastructure orgs
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/cisa-medusa-ransomware-hit-over-500-critical-infrastructure-orgs/>
@@ -5293,7 +5151,7 @@ condition: selection
 
 ---
 
-## 35. Operation CameraSwarm: Over 14,000 Dahua cameras compromised across Ukraine and Russia
+## 34. Operation CameraSwarm: Over 14,000 Dahua cameras compromised across Ukraine and Russia
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1vrwaca/operation_cameraswarm_over_14000_dahua_cameras/>
@@ -5431,7 +5289,7 @@ level: high
 
 ---
 
-## 36. CISA Adds Four Known Exploited Vulnerabilities to Catalog
+## 35. CISA Adds Four Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog>
@@ -5603,7 +5461,7 @@ condition: ikev2_error and high_frequency
 
 ---
 
-## 37. CISA: Windows Task Host flaw now exploited by ransomware gangs
+## 36. CISA: Windows Task Host flaw now exploited by ransomware gangs
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/cisa-windows-task-host-flaw-now-exploited-by-ransomware-gangs/>
@@ -5773,7 +5631,7 @@ fields:
 
 ---
 
-## 38. Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects
+## 37. Critical GitLab GraphQL Flaw Could Let Unauthenticated Attackers Delete Public Projects
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html>
@@ -5921,7 +5779,7 @@ condition: all
 
 ---
 
-## 39. Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads
+## 38. Forminator WordPress Flaw Can Enable Unauthenticated RCE via Malicious PHP Uploads
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html>
@@ -6087,7 +5945,7 @@ fields:
 
 ---
 
-## 40. Certighost and the Privilege Hiding in Your Certificate Authority
+## 39. Certighost and the Privilege Hiding in Your Certificate Authority
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/>
@@ -6223,7 +6081,7 @@ condition: selection
 
 ---
 
-## 41. Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware
+## 40. Suspected China-Nexus Actor Exploits VMware vCenter Flaw, Deploys Babuk-Derived Ransomware
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/08/suspected-china-nexus-actor-exploits.html>
@@ -6398,7 +6256,7 @@ level: critical
 
 ---
 
-## 42. Microsoft SharePoint JWT Token Authentication Bypass Technical Analysis (CVE-2026-55040)
+## 41. Microsoft SharePoint JWT Token Authentication Bypass Technical Analysis (CVE-2026-55040)
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1votnh2/microsoft_sharepoint_jwt_token_authentication/>
@@ -6561,7 +6419,7 @@ timeframe: 1h
 
 ---
 
-## 43. Metasploit Wrap Up: Lot of summer shells and fit http profiles
+## 42. Metasploit Wrap Up: Lot of summer shells and fit http profiles
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-lot-of-summer-shells-and-fit-http-profiles>
@@ -6705,7 +6563,7 @@ detection:
 
 ---
 
-## 44. Max severity SAP Commerce Cloud flaw now targeted in attacks
+## 43. Max severity SAP Commerce Cloud flaw now targeted in attacks
 
 - **Source**: BleepingComputer
 - **Link**: <https://www.bleepingcomputer.com/news/security/max-severity-sap-commerce-cloud-flaw-now-targeted-in-attacks/>
@@ -6837,7 +6695,7 @@ condition: '(event_id: 11 AND target_filename: "*.encrypted" OR target_filename:
 
 ---
 
-## 45. PaperCut Releases Emergency Patch for Exploited Zero-Day
+## 44. PaperCut Releases Emergency Patch for Exploited Zero-Day
 
 - **Source**: SecurityWeek
 - **Link**: <https://www.securityweek.com/papercut-releases-emergency-patch-for-exploited-zero-day/>
@@ -7000,7 +6858,7 @@ detection:
 
 ---
 
-## 46. All-Line Equipment Company Fuel-Boss
+## 45. All-Line Equipment Company Fuel-Boss
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02>
@@ -7149,7 +7007,7 @@ fields:
 
 ---
 
-## 47. ☢️ Philippine Nuclear Agency and Naval Contractor Targeted by Suspected Chinese-Speaking Operator Using Known Vulnerabilities
+## 46. ☢️ Philippine Nuclear Agency and Naval Contractor Targeted by Suspected Chinese-Speaking Operator Using Known Vulnerabilities
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/>
@@ -7326,7 +7184,7 @@ level: high
 
 ---
 
-## 48. Zoneminder
+## 47. Zoneminder
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02>
@@ -7478,7 +7336,7 @@ detection:
 
 ---
 
-## 49. A Tale of Two SOCs: Insights From Two Red Team Assessments
+## 48. A Tale of Two SOCs: Insights From Two Red Team Assessments
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a>
@@ -7629,7 +7487,7 @@ detection:
 
 ---
 
-## 50. WordPress Websites Targeted via MiniOrange Plugin Vulnerabilities
+## 49. WordPress Websites Targeted via MiniOrange Plugin Vulnerabilities
 
 - **Source**: SecurityWeek
 - **Link**: <https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/>
@@ -7780,6 +7638,151 @@ detection:
     - referer !~ "^(https?://(www\.)?yourdomain\.com|https?://yourdomain\.com)"
     - status_code == 302
   condition: selection
+```
+
+---
+
+## 50. Mirage2FA Surge Hits 4,500 US and EU Companies, Abusing Microsoft 365 Login Flows
+
+- **Source**: The Hacker News
+- **Link**: <https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html>
+- **Published**: Tue, 25 Aug 2026 17:26:15 +0530
+- **First seen**: 2026-08-25T12:47:03+00:00
+- **Relevance score**: 90
+- **Score rationale**: triage: Widespread phishing-as-a-service campaign abusing Microsoft 365 login flows to bypass MFA; high success rate (48% compromise) and broad enterprise impact.
+- **Agent trace**: tool fetch_article({}) -> ok → tool lookup_mitre({"query": "phishing"}) -> ok → tool lookup_mitre({"query": "T1190"}) -> ok → critic: revise (Hypothesis 1: Sigma rule is syntactically invalid — condition ends with 'su' and is malformed; detection block is improperly nested and duplicated; 'http.referer: "*any.run*" or http.referer: "*phishi)
+
+> Thousands of companies have been affected by the Mirage2FA campaign from 2024 to 2026. The commercial phishing-as-a-service toolkit targets Microsoft 365 accounts by abusing legitimate login flows and bypassing two-factor authentication. According to ANY.RUN research, 48% of targeted email addresses were potentially compromised. Most of the affected companies are US-based. Mirage2FA Campaign
+
+**Extracted signals**
+- Products: Microsoft 365 / Entra ID
+- Vectors: phishing
+- Sectors: manufacturing
+- MITRE ATT&CK: T1566
+- Domain IOCs: any.run
+
+### Hypotheses (3)
+
+#### H-55722628-1 · Mirage2FA Phishing via Any.Run Referers  _(confidence: high)_
+
+**Statement.** In our environment between January 2024 and August 2024, attackers used phishing emails with links to malicious pages hosted on any.run or similar domains, which triggered HTTP requests with referer headers containing '*any.run*' or '*phishing-domain*', bypassing MFA via session hijacking.
+
+**Why this hypothesis?** The article reports Mirage2FA abuses Microsoft 365 login flows and cites ANY.RUN research showing phishing traffic. Extracted IOCs include 'any.run' and T1566 (phishing), suggesting attackers used malicious referers to lure users into credential submission pages that mimic Microsoft login.
+
+**MITRE ATT&CK**: T1566.001, T1555.003, T1078.004
+
+**CTF objectives (3) — find evidence that disproves the hypothesis:**
+
+- **[H-55722628-1-O1] Detect malicious referer requests** _(difficulty: easy · 100 pts · MITRE: T1566.001)_
+  - Falsification criterion: If HTTP requests with referer headers containing '*any.run*' or '*phishing-domain*' are observed in web proxy logs, then the hypothesis that no such malicious traffic exists is false.
+  - Data sources: Web proxy logs
+  - Suggested query: `http.referer contains "any.run" OR http.referer contains "phishing-domain"`
+- **[H-55722628-1-O2] Identify session hijacking via valid tokens** _(difficulty: medium · 150 pts · MITRE: T1555.003)_
+  - Falsification criterion: If EDR logs show browser processes (msedge.exe, iexplore.exe) making authenticated API calls to login.microsoftonline.com using tokens obtained after a phishing event, then the hypothesis that MFA bypass did not occur is false.
+  - Data sources: EDR, Azure AD sign-in logs
+  - Suggested query: `process.name: "msedge.exe" OR process.name: "iexplore.exe" AND api_call: "login.microsoftonline.com" AND token_source: "phishing_event"`
+- **[H-55722628-1-O3] Detect credential harvesting via fake login pages** _(difficulty: medium · 120 pts · MITRE: T1566.001)_
+  - Falsification criterion: If DNS logs show resolutions to domains matching patterns like '*.microsoft-login[.]xyz' or '*.office365-auth[.]com' that correlate with HTTP requests to any.run, then the hypothesis that no fake domains were used is false.
+  - Data sources: DNS logs, Web proxy logs
+  - Suggested query: `dns.query contains "microsoft-login" OR dns.query contains "office365-auth" AND correlated_with: "any.run"`
+
+**Sigma rule:**
+
+```yaml
+title: Mirage2FA - Phishing Referer Detection
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  referer_malicious:
+    - 'http.referer: "*any.run*"'
+    - 'http.referer: "*phishing-domain*"'
+condition: referer_malicious
+```
+
+#### H-55722628-2 · Abuse of Legitimate Login Flows via Non-MSAL Clients  _(confidence: medium)_
+
+**Statement.** In our environment between January 2024 and August 2024, attackers used non-MSAL OAuth2 clients to request refresh tokens from Azure AD after phishing credentials, bypassing MFA by maintaining persistent access via token reuse.
+
+**Why this hypothesis?** The article states Mirage2FA abuses legitimate Microsoft 365 login flows. While Azure AD logs don't expose 'Refresh Token grant type' as a field, they do log 'client_app_id' and 'token_type'. Attackers may use non-standard clients (e.g., custom apps, Postman) to request refresh tokens — a known T1078.004 technique.
+
+**MITRE ATT&CK**: T1078.004, T1566.001, T1555.001
+
+**CTF objectives (3) — find evidence that disproves the hypothesis:**
+
+- **[H-55722628-2-O1] Detect refresh token requests from non-MSAL clients** _(difficulty: medium · 130 pts · MITRE: T1078.004)_
+  - Falsification criterion: If Azure AD sign-in logs show refresh token requests from client_app_id values not in the known MSAL/first-party list, then the hypothesis that only MSAL clients were used is false.
+  - Data sources: Azure AD sign-in logs
+  - Suggested query: `token_type: "refresh_token" AND client_app_id NOT IN ["Microsoft Azure Portal", "Microsoft Office", "Microsoft Teams", "MSAL"]`
+- **[H-55722628-2-O2] Identify token reuse across geolocations** _(difficulty: hard · 180 pts · MITRE: T1555.001)_
+  - Falsification criterion: If the same refresh token is used to authenticate from two geographically distant IPs within 5 minutes, then the hypothesis that tokens were not reused post-phishing is false.
+  - Data sources: Azure AD sign-in logs, GeoIP data
+  - Suggested query: `token_id: "<same_token>" AND location.country: "United States" AND location.country: "Russia" AND timestamp: within(5m)`
+- **[H-55722628-2-O3] Detect anomalous token lifetime extensions** _(difficulty: medium · 140 pts · MITRE: T1078.004)_
+  - Falsification criterion: If Azure AD logs show refresh tokens being renewed beyond the standard 90-day limit without admin consent, then the hypothesis that token lifetimes were not abused is false.
+  - Data sources: Azure AD sign-in logs, Audit logs
+  - Suggested query: `token_lifetime_extension: "true" AND admin_consent: "false" AND token_lifetime_days > 90`
+
+**Sigma rule:**
+
+```yaml
+title: Mirage2FA - Non-MSAL Refresh Token Requests
+logsource:
+  product: azure_ad
+  service: signins
+detection:
+  non_msal_client:
+    - 'client_app_id: "*" AND client_app_id NOT IN ["Microsoft Azure Portal", "Microsoft Office", "Microsoft Teams", "MSAL"]'
+  token_type_refresh:
+    - 'token_type: "refresh_token"'
+condition: non_msal_client and token_type_refresh
+```
+
+#### H-55722628-3 · Phishing Emails Mimicking Microsoft from noreply@microsoft.com  _(confidence: high)_
+
+**Statement.** In our environment between January 2024 and August 2024, attackers sent phishing emails with spoofed 'noreply@microsoft.com' sender addresses, containing malicious links or attachments designed to harvest credentials or deploy malware.
+
+**Why this hypothesis?** The article highlights phishing as the primary vector. The extracted IOC includes 'phishing' and 'Microsoft 365'. While 'email.attachment' and 'email.body' are not universal, Exchange Online logs do expose 'sender', 'subject', and 'attachment_names' — which can be used to detect spoofed Microsoft emails.
+
+**MITRE ATT&CK**: T1566.001, T1059.003, T1204.002
+
+**CTF objectives (4) — find evidence that disproves the hypothesis:**
+
+- **[H-55722628-3-O1] Detect spoofed noreply@microsoft.com emails** _(difficulty: easy · 100 pts · MITRE: T1566.001)_
+  - Falsification criterion: If email logs show messages with sender matching '*noreply@microsoft.com' and subject containing 'Security Alert' or 'Action Required', then the hypothesis that no such spoofed emails were delivered is false.
+  - Data sources: Exchange Online logs
+  - Suggested query: `sender: "*noreply@microsoft.com" AND subject: "*Security Alert*" OR subject: "*Action Required: Your Microsoft Account*"`
+- **[H-55722628-3-O2] Identify malicious attachments in spoofed emails** _(difficulty: medium · 120 pts · MITRE: T1204.002)_
+  - Falsification criterion: If email logs show attachments with extensions .exe, .js, or .scr sent from spoofed Microsoft addresses, then the hypothesis that no malware was delivered via email is false.
+  - Data sources: Exchange Online logs, EDR file events
+  - Suggested query: `attachment_names: "*.exe" OR attachment_names: "*.js" OR attachment_names: "*.scr" AND sender: "*noreply@microsoft.com"`
+- **[H-55722628-3-O3] Detect URL clicks in spoofed emails** _(difficulty: medium · 130 pts · MITRE: T1566.001)_
+  - Falsification criterion: If web proxy logs show HTTP requests to domains like '*.microsoft-security[.]xyz' originating from users who received spoofed emails, then the hypothesis that no users clicked malicious links is false.
+  - Data sources: Exchange Online logs, Web proxy logs
+  - Suggested query: `email.sender: "*noreply@microsoft.com" AND correlated_web_request: "*.microsoft-security[.]xyz"`
+- **[H-55722628-3-O4] Identify lateral movement from compromised accounts** _(difficulty: hard · 160 pts · MITRE: T1059.003)_
+  - Falsification criterion: If EDR logs show PowerShell or Office macros executing from a user who opened a spoofed email, then the hypothesis that phishing did not lead to endpoint compromise is false.
+  - Data sources: EDR, Exchange Online logs
+  - Suggested query: `process.name: "powershell.exe" AND parent_process: "outlook.exe" AND email_sender: "*noreply@microsoft.com"`
+
+**Sigma rule:**
+
+```yaml
+title: Mirage2FA - Spoofed Microsoft Email Sender
+logsource:
+  product: exchange_online
+  service: email
+detection:
+  spoofed_sender:
+    - 'sender: "*noreply@microsoft.com"'
+  malicious_subject:
+    - 'subject: "*Security Alert*"'
+    - 'subject: "*Action Required: Your Microsoft Account*"'
+  malicious_attachment:
+    - 'attachment_names: "*.exe"'
+    - 'attachment_names: "*.js"'
+    - 'attachment_names: "*.scr"'
+condition: spoofed_sender and (malicious_subject or malicious_attachment)
 ```
 
 ---
