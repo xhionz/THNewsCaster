@@ -1,0 +1,25 @@
+title: Detect Suspicious FileWrite Events Post-Exploitation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  suspicious_eventid:
+    - 15
+  suspicious_file_extension:
+    - '.locked'
+    - '.crypt'
+    - '.enc'
+    - '.pwn'
+  suspicious_process:
+    - 'powershell.exe'
+    - 'certutil.exe'
+    - 'bitsadmin.exe'
+    - 'wmic.exe'
+  suspicious_parent:
+    - 'svchost.exe'
+    - 'explorer.exe'
+condition: all of suspicious_eventid and any of suspicious_file_extension and any of suspicious_process and not suspicious_parent
+keywords:
+  - 'ransomware'
+  - 'file encryption'
+  - 'Sysmon'

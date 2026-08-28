@@ -1,0 +1,20 @@
+title: Detect Suspicious SMB Connections to Domain Controllers
+logsource:
+  product: windows
+  service: smb
+detection:
+  suspicious_target:
+    - 'DC01*'
+    - 'DC02*'
+    - '*-DC'
+  suspicious_source:
+    - 'PAPER CUT SERVER 01'
+    - 'PAPER CUT SERVER 02'
+  suspicious_time:
+    - '2026-08-26T00:00:00Z'
+    - '2026-08-28T23:59:59Z'
+condition: all of suspicious_target and suspicious_source and suspicious_time
+keywords:
+  - 'SMB'
+  - 'lateral movement'
+  - 'PaperCut'

@@ -1,0 +1,21 @@
+title: Detect PaperCut CVE-2023-27372 Exploitation
+logsource:
+  product: web_server
+  service: http
+detection:
+  suspicious_path:
+    - '/app/admin/.*'
+    - '/app/api/.*'
+  suspicious_ua:
+    - 'curl'
+    - 'python-requests'
+    - 'wget'
+    - 'libwww-perl'
+  suspicious_method:
+    - 'POST'
+  suspicious_status:
+    - 200
+condition: all of suspicious_path and any of suspicious_ua and suspicious_method and suspicious_status
+keywords:
+  - 'PaperCut'
+  - 'CVE-2023-27372'
