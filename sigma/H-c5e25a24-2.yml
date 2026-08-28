@@ -1,0 +1,18 @@
+title: Suspicious Kerberos TGT/TGS Requests from PaperCut Server
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects TGT (4768) or TGS (4769) requests originating from PaperCut server IP
+logsource:
+  product: windows
+  service: security
+detection:
+  event:
+    - EventID: 4768
+    - EventID: 4769
+  client:
+    ClientAddress: PAPERCUT_SERVER_IP
+condition: event and client
+keywords:
+  - kerberos
+  - delegation
+  - lateral-movement

@@ -1,0 +1,23 @@
+title: Suspicious JSP Web Shell Upload via Multipart POST
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects POST to .jsp with multipart/form-data and malicious payload patterns
+logsource:
+  product: webserver
+  service: http
+detection:
+  req:
+    - 'method: POST'
+    - 'url: *.jsp'
+    - 'content_type: multipart/form-data'
+  payload:
+    - 'body: *cmd=*'
+    - 'body: *exec=*'
+    - 'body: *base64*'
+    - 'body: *ProcessBuilder*'
+    - 'body: *Runtime.getRuntime()*'
+condition: req and (payload)
+keywords:
+  - webshell
+  - jsp
+  - rce

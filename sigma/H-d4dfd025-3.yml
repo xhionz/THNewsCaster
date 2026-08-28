@@ -1,0 +1,13 @@
+title: Detect Large Unauthenticated WebDAV Downloads
+logsource:
+  product: owncloud
+  service: http
+condition: 'request_uri: /remote.php/dav/files/ and http_method: GET and not auth_type: "basic" and not auth_type: "digest" and response_bytes: >100000000'
+detection:
+  large_download:
+    - request_uri: /remote.php/dav/files/
+    - http_method: GET
+    - not auth_type: "basic"
+    - not auth_type: "digest"
+    - response_bytes: >100000000
+condition: all

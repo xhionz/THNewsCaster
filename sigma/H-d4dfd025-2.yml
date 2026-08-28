@@ -1,0 +1,11 @@
+title: Detect Suspicious Phishing Email Domains
+logsource:
+  product: email
+  service: smtp
+condition: 'sender_domain: not /ourcompany.com|trusted-partner.com/i and subject: /ownCloud|login|password|verify/i and body: /click|login|secure|account/i'
+detection:
+  phishing_email:
+    - sender_domain: not /ourcompany.com|trusted-partner.com/i
+    - subject: /ownCloud|login|password|verify/i
+    - body: /click|login|secure|account/i
+condition: all

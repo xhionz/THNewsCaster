@@ -1,0 +1,15 @@
+title: Suspicious PaperCut RCE via CVE-2023-27373
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects POST requests to /app/api/ with Java UA and subsequent java.exe execution with suspicious args
+logsource:
+  product: webserver
+  service: http
+detection:
+  req:
+    - 'method: POST'
+    - 'url: /app/api/*'
+    - 'user_agent: Java/*'
+  proc:
+    condition: 'req and (process_name: java.exe and process_command_line: (*-jar* OR *exec* OR *Runtime.exec* OR *ProcessBuilder*))'
+condition: req and proc
