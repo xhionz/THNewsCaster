@@ -1,0 +1,16 @@
+title: Suspicious PaperCut Web Exploit Leading to Ransomware File Creation
+logsource:
+  product: webserver
+  service: papercut
+  category: access
+detection:
+  exploit_attempt:
+    request_uri: /SetupCompleted
+    query: 'user-lookup.db' | 'user-lookup.id' | 'user-lookup.enabled'
+    status_code: 200
+  file_creation:
+    logsource:
+      product: windows
+      service: file_server
+    condition: 'TargetFilename: *.crypt OR TargetFilename: *.locked OR TargetFilename: *.encrypted'
+  condition: exploit_attempt and file_creation

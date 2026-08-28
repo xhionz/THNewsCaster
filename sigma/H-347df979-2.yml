@@ -1,0 +1,12 @@
+title: Exploit Attempt on Unpatched PaperCut Before Patch Time
+logsource:
+  product: webserver
+  service: papercut
+  category: access
+detection:
+  exploit_request:
+    request_uri: /SetupCompleted
+    query: 'user-lookup.db' | 'user-lookup.id' | 'user-lookup.enabled'
+    status_code: 200
+    timestamp: '2026-08-27T00:00:00Z' to '2026-08-28T02:10:00Z'
+  condition: exploit_request

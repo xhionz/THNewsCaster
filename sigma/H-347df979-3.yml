@@ -1,0 +1,11 @@
+title: Ransomware File Encryption via Elevated Process on File Server
+logsource:
+  product: windows
+  service: file_server
+  category: file_access
+detection:
+  suspicious_access:
+    TargetFilename: '*.crypt' or '*.locked' or '*.encrypted'
+    ProcessId: '0x4' or '0x3e8'  # SYSTEM or elevated token
+    AccessMask: '0x100000'  # FILE_WRITE_DATA
+  condition: suspicious_access
