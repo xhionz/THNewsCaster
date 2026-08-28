@@ -1,0 +1,19 @@
+title: Detect Password Hash Extraction from GMS users.dat
+id: 6b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+status: experimental
+description: Detects cmd.exe or powershell.exe reading the GMS users.dat file
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+    - '*\pwsh.exe'
+  CommandLine:
+    - '*type C:\\GMS\\data\\users.dat*'
+    - '*Get-Content C:\\GMS\\data\\users.dat*'
+    - '*cat C:\\GMS\\data\\users.dat*'
+    - '*Copy-Item C:\\GMS\\data\\users.dat*'
+condition: all of them
+level: high

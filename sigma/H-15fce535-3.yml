@@ -1,0 +1,19 @@
+title: Detect Lateral Movement from GMS Server via SMB
+id: 7c3d4e5f-6a7b-8c9d-0e1f-2a3b4c5d6e7f
+status: experimental
+description: Detects SMB client connections initiated from GMS server to internal hosts
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  Image:
+    - '*\gmsweb.exe'
+    - '*\gmsd.exe'
+  CommandLine:
+    - '*smbclient*'
+    - '*net use*'
+    - '*psexec*'
+    - '*wmic*'
+    - '*evil-winrm*'
+condition: all of them
+level: high
