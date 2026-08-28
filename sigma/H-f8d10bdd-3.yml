@@ -1,0 +1,15 @@
+title: Suspicious outbound connections to known C2 IPs after print job events
+logsource:
+  product: windows
+  service: firewall
+detection:
+  selection:
+    DestinationIp:
+      - '185.130.105.22'
+      - '194.169.221.15'
+      - '104.248.102.18'
+    DestinationPort: 80
+    Protocol: TCP
+    EventID: 3
+  condition: selection
+  timeframe: 72h

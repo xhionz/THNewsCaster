@@ -1,0 +1,6 @@
+title: Suspicious PaperCut RCE Attempt
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'req_uri contains "/pc-web/" or req_uri contains "/app/" and status_code == 200 and user_agent !~ "(Mozilla|PaperCut|curl|wget)" and request_method == "POST" and content_length > 1000

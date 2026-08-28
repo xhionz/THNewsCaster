@@ -1,0 +1,12 @@
+title: Suspicious Process Creation from spoolsv.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\spoolsv.exe'
+    ParentImage: '*\svchost.exe'
+    CommandLine: '*powershell*' OR '*certutil*' OR '*bitsadmin*' OR '*mshta*'
+  condition: selection
+  timeframe: 72h

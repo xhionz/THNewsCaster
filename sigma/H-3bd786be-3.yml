@@ -1,0 +1,5 @@
+title: Suspicious DNS Tunneling from PaperCut Server
+logsource:
+  product: dns
+  category: dns_query
+condition: 'query_count > 50 in 5m and domain contains "." and domain_length > 40 and query NOT IN ["google.com", "microsoft.com", "ntp.pool.org", "time.windows.com"] and source_ip IN [paperCut_server_ips]'

@@ -1,0 +1,20 @@
+title: Suspicious POST to PaperCut Endpoints with Non-Browser UA
+logsource:
+  product: papercut
+detection:
+  selection:
+    method: 'POST'
+    path:
+      - '/app/'
+      - '/print/'
+      - '/servlet/'
+      - '/admin/'
+    user_agent:
+      - '*Mozilla*'
+      - '*Chrome*'
+      - '*Safari*'
+      - '*Firefox*'
+      - '*Edge*'
+  condition: selection and not (user_agent contains 'Mozilla' or user_agent contains 'Chrome' or user_agent contains 'Safari' or user_agent contains 'Firefox' or user_agent contains 'Edge')
+  timeframe: 72h
+condition: selection

@@ -1,0 +1,6 @@
+title: Suspicious Print Driver Installation via Spooler
+logsource:
+  product: windows
+  service: printservice
+  category: process_creation
+condition: 'event_id: 307 and image: "*\spoolsv.exe" and (command_line contains "/addprinterdriver" or command_line contains "-i" or command_line contains "-p" and not user: "SYSTEM" and not user: "NT AUTHORITY\SYSTEM")
