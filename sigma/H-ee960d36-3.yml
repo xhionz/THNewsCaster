@@ -1,0 +1,12 @@
+title: Detect Misconfigured Rule Triggering on Reddit Metadata
+logsource:
+  product: siem
+  service: alert
+detection:
+  alert_title:
+    - contains: 'URGENT Security Advisory'
+    - contains: 'PaperCut'
+  alert_source:
+    - contains: '/r/blueteamsec'
+  alert_status: 'triggered'
+condition: all of them

@@ -1,0 +1,16 @@
+title: Detect Bot-Generated Content Patterns in Web Scrapes
+logsource:
+  product: web
+  service: http
+detection:
+  uri:
+    - contains: '/r/blueteamsec'
+  user_agent:
+    - contains: 'Python-urllib'
+    - contains: 'Scrapy'
+    - contains: 'bot'
+  response_body:
+    - contains: 'submitted by /u/'
+    - contains: '[link] [comments]'
+    - contains: '2026-08-29T19:44:44+00:00'
+condition: all of them

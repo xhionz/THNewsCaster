@@ -1,0 +1,21 @@
+title: Suspicious AWS Key Commit to Public Repository
+logsource:
+  product: git
+  service: github
+condition: 'keywords: ["AKIA", "ASIA"] and not keywords: ["test", "dummy", "example"] and file_path: /.*\.(yml|yaml|json|env|cfg|ini|txt)$/ and repository: !"internal-repo-*" and event_type: "push"'
+detection:
+  keywords:
+    - AKIA
+    - ASIA
+  file_path:
+    - '*.yml'
+    - '*.yaml'
+    - '*.json'
+    - '*.env'
+    - '*.cfg'
+    - '*.ini'
+    - '*.txt'
+  repository:
+    - '!internal-repo-*'
+  event_type: push
+condition: keywords and file_path and repository and event_type

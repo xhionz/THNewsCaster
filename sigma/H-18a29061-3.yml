@@ -1,0 +1,10 @@
+title: Suspicious AWS Role Assumption by Vendor Account
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  event_source: sts.amazonaws.com
+  event_name: AssumeRole
+  user_identity_arn: 'arn:aws:sts::*:assumed-role/*-vendor-*'
+  source_ip: !'10.0.0.0/8' and !'172.16.0.0/12' and !'192.168.0.0/16'
+condition: event_source and event_name and user_identity_arn and source_ip

@@ -1,0 +1,13 @@
+title: Detect PaperCut Web Interface Exposure
+logsource:
+  product: web
+  service: http
+detection:
+  user_agent:
+    - contains: 'PaperCut'
+  status_code: 200
+  source_ip:
+    - not startswith: '10.'
+    - not startswith: '192.168.'
+    - not startswith: '172.16.'
+condition: all of them

@@ -1,0 +1,17 @@
+title: Suspicious Process Accessing AWS Credential Files
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  image:
+    - 'cmd.exe'
+    - 'powershell.exe'
+    - 'pwsh.exe'
+    - 'wscript.exe'
+    - 'cscript.exe'
+    - 'rundll32.exe'
+  target_path:
+    - '*\\.aws\\credentials'
+    - '*\\.aws\\config'
+    - 'HKCU\\Software\\Amazon\\AWS\\Credentials'
+condition: image and target_path

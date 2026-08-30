@@ -1,0 +1,10 @@
+title: Detection of Suspicious Driver Load/Unload via Kaspersky Driver Path
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 6
+    ImageLoaded: '*\kav*.sys'
+    Signed: 'false'
+  condition: selection

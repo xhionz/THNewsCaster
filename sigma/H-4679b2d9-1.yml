@@ -1,0 +1,12 @@
+title: Detection of Suspicious Kaspersky Process Spawn with Elevated Privileges
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\kav*.exe'
+    ParentImage: '*\cmd.exe'
+    CommandLine: '*-service*'
+  condition: selection
+  timeframe: 1h

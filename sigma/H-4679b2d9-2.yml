@@ -1,0 +1,12 @@
+title: Detection of KSC Admin Tool Execution from Non-Admin Workstation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\ksc*.exe'
+    ParentImage: '*\powershell.exe'
+    CommandLine: '*-deploy*'
+  condition: selection
+  timeframe: 1h
