@@ -1,0 +1,12 @@
+title: Suspicious PaperCut NG/MF Access via Missing Auth
+logsource:
+  product: webserver
+  service: http
+detection:
+  request_uri:
+    - '/app?func='
+  status_code: 200
+  user_agent:
+    - 'curl'
+    - 'python-requests'
+condition: (request_uri contains '/app?func=') and (status_code == 200) and (user_agent contains 'curl' or user_agent contains 'python-requests')

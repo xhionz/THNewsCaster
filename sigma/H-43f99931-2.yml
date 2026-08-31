@@ -1,0 +1,12 @@
+title: Suspicious Java Reflection in PaperCut Query String
+logsource:
+  product: webserver
+  service: http
+detection:
+  query_string:
+    - 'class='
+    - 'forName='
+    - 'newInstance='
+    - 'loadClass='
+  status_code: 200
+condition: (query_string contains 'class=' or query_string contains 'forName=' or query_string contains 'newInstance=' or query_string contains 'loadClass=') and (status_code == 200)

@@ -1,0 +1,12 @@
+title: Suspicious Network Logon to Domain Controller from PaperCut Server
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 4624
+    - 4625
+  logon_type: 3
+  src_ip: ['192.168.10.10', '192.168.10.11']
+  dst_ip: ['192.168.1.10', '192.168.1.11']
+condition: event_id in (4624, 4625) and logon_type == 3 and src_ip in ('192.168.10.10', '192.168.10.11') and dst_ip in ('192.168.1.10', '192.168.1.11')
