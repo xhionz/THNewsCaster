@@ -1,0 +1,20 @@
+title: Suspicious PaperCut RCE Exploit Attempt
+logsource:
+  product: webserver
+  service: apache
+  category: web
+
+detection:
+  suspicious_methods:
+    - POST
+    - PUT
+  suspicious_paths:
+    - '/pc-api/*'
+    - '/app/*'
+    - '/admin/*'
+  suspicious_ua:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+    - 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+condition: suspicious_methods and suspicious_paths and suspicious_ua

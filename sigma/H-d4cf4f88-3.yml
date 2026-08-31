@@ -1,0 +1,15 @@
+title: Suspicious lsass.exe Memory Dumping
+logsource:
+  product: windows
+  category: process_creation
+
+detection:
+  lsass_dump_processes:
+    - 'mimikatz.exe'
+    - 'procdump.exe'
+    - 'taskmgr.exe'
+    - 'rundll32.exe'
+    - 'powershell.exe'
+  lsass_child:
+    - 'lsass.exe'
+condition: process_name in lsass_dump_processes and parent_process_name == 'lsass.exe' or process_name == 'lsass.exe' and parent_process_name in lsass_dump_processes

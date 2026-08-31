@@ -1,0 +1,18 @@
+title: Suspicious Bulk File Renaming for Ransomware
+logsource:
+  product: windows
+  category: file_event
+
+detection:
+  suspicious_extensions:
+    - '.locked'
+    - '.crypt'
+    - '.enc'
+    - '.ransom'
+  target_directories:
+    - '\\*\shared\*'
+    - '\\*\data\*'
+    - '\\*\users\*'
+  file_rename_count:
+    - 'file_name CHANGE > 100 within 5m'
+condition: suspicious_extensions and target_directories
