@@ -1,0 +1,579 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-82078",
+      "sources": [
+        "https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-81578",
+      "sources": [
+        "https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2026-73570",
+      "sources": [
+        "https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch"
+      ]
+    },
+    {
+      "value": "CVE-2026-72530",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-72529",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-69836",
+      "sources": [
+        "https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-66384",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-66145",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1w0t1u8/sonicwall_gms_unauthenticated_rce_and_encrypted/"
+      ]
+    },
+    {
+      "value": "CVE-2026-65400",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-macos-sharepoint-vcenter-and.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-64849",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/19/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-63520",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/"
+      ]
+    },
+    {
+      "value": "CVE-2026-60004",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-59310",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-55040",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/"
+      ]
+    },
+    {
+      "value": "CVE-2026-54121",
+      "sources": [
+        "https://www.bleepingcomputer.com/news/security/certighost-and-the-privilege-hiding-in-your-certificate-authority/"
+      ]
+    },
+    {
+      "value": "CVE-2026-53362",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/"
+      ]
+    },
+    {
+      "value": "CVE-2026-33824",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/18/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-21962",
+      "sources": [
+        "https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html",
+        "https://www.securityweek.com/cisa-warns-of-exploited-oracle-weblogic-vulnerability/"
+      ]
+    },
+    {
+      "value": "CVE-2026-19490",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-19490-critical-vulnerability-affecting-citrix-netscaler-adc-and-netscaler-gateway"
+      ]
+    },
+    {
+      "value": "CVE-2026-19478",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-gitlab-graphql-flaw-could-let.html",
+        "https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html",
+        "https://www.securityweek.com/critical-gitlab-flaw-exploited-shortly-after-disclosure/"
+      ]
+    },
+    {
+      "value": "CVE-2026-18963",
+      "sources": [
+        "https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-15748",
+      "sources": [
+        "https://thehackernews.com/2026/08/forminator-wordpress-flaw-can-enable.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-8452",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/recent-citrix-netscaler-vulnerability-exploited-in-the-wild/"
+      ]
+    },
+    {
+      "value": "CVE-2025-22226",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vvev5w/vulnerability_analysis_of_cve202522226/"
+      ]
+    },
+    {
+      "value": "CVE-2023-49105",
+      "sources": [
+        "https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2023-27350",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "CVE-2022-0995",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2021-23758",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2021-21551",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2019-16098",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "CVE-2019-11043",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02"
+      ]
+    },
+    {
+      "value": "CVE-2019-1068",
+      "sources": [
+        "https://thehackernews.com/2026/08/cisa-adds-six-exploited-flaws-to-kev.html",
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2018-19518",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02"
+      ]
+    },
+    {
+      "value": "CVE-2015-5287",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2015-3246",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "10.141.230.15",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "110.141.230.15",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "127.0.0.1",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vrwaca/operation_cameraswarm_over_14000_dahua_cameras/"
+      ]
+    },
+    {
+      "value": "211.27.196.111",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "abr.business.gov.au",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "ajax.net",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "archive.org",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "asp.rootkit.badiis",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "cmd.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "cmdkey.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "dataminr.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "demo.pdb",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "domaintools.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "efspotato.pdb",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "flare.io",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "gmail.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "hardware-monitor.service",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "hunt.io",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1vrwaca/operation_cameraswarm_over_14000_dahua_cameras/"
+      ]
+    },
+    {
+      "value": "index.crates.io",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "ithomson.direct.quickconnect.to",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "joshuawthomson39.myqnapcloud.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "ke-la.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "kthomson0061.direct.quickconnect.to",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "kwe.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "ntoskrnl.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "pc-app.exe",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "rtcore64.sys",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "rubenthomson.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "runtimebroker.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "secretsdump.py",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "securecomputing.au",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "server.log",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "service.pdb",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "shandler.processrequest",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "svchost.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "sysinit.target",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "thomson.org.au",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "thomsonfamily.net.au",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "ucstring.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.backdoor.msfvenom",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.rootkit.malware",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.rootkit.spectre",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "unix.trojan.backdoor",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "upwork.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    },
+    {
+      "value": "user-lookup.db",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "user-lookup.enabled",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "user-lookup.id",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "vn.xyz",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.exploit.marte",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.loader",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.badiis",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.badpotato",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.generic",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.malware.ulise",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.tool.godpotato",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "win.tool.juicypotato",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-10147-deploys-spectre-a-cross-platform-implant-with-linux-rootkit-and-byovd-capabilities/"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02"
+      ]
+    },
+    {
+      "value": "yakuza.cc",
+      "sources": [
+        "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+      ]
+    }
+  ],
+  "sha256": [],
+  "sha1": [],
+  "md5": []
+}
