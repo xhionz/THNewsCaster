@@ -1,0 +1,19 @@
+title: Suspicious Virtualizor Update Package Download
+id: 5a1b2c3d-4e5f-6a7b-8c9d-0e1f2a3b4c5d
+status: experimental
+description: Detects HTTP downloads of suspicious Virtualizor update packages from non-whitelisted domains
+logsource:
+  product: linux
+  service: http
+detection:
+  req_host:
+    - '*.virtualizor.com'
+    - 'update.virtualizor.com'
+    - 'panel.virtualizor.com'
+  req_path:
+    - '/update/'
+    - '/install/'
+    - '/pkg/'
+  req_method: GET
+  condition: all of req_* and not req_host in ('trusted-update.internal')
+level: medium

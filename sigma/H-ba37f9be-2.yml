@@ -1,0 +1,23 @@
+title: Suspicious HTTP Request to Virtualizor Domain with Suspicious User-Agent
+id: 6b2c3d4e-5f6a-7b8c-9d0e-1f2a3b4c5d6e
+status: experimental
+description: Detects HTTP requests to Virtualizor domains with anomalous user agents indicative of automated phishing or malware delivery
+logsource:
+  product: linux
+  service: http
+detection:
+  req_host:
+    - '*.virtualizor.com'
+    - 'update.virtualizor.com'
+    - 'panel.virtualizor.com'
+  req_path:
+    - '/login'
+    - '/download'
+    - '/update'
+  user_agent:
+    - '*curl*'
+    - '*wget*'
+    - '*python-requests*'
+    - '*Nmap*'
+  condition: all of req_* and any of user_agent
+level: high

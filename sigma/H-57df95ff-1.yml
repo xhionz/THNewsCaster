@@ -1,0 +1,12 @@
+title: Suspicious .war Upload to PaperCut
+logsource:
+  product: webserver
+  service: apache
+  category: web
+condition: 'request_uri: "*/admin/" and request_uri: "*.war" and status_code: 200'
+detection:
+  request_uri:
+    - "*/admin/"
+    - "*.war"
+  status_code: 200
+condition: all

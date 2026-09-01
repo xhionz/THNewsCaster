@@ -1,0 +1,19 @@
+title: Suspicious SMB/WinRM Connection from PaperCut to DC
+logsource:
+  product: windows
+  service: sysmon
+  category: network_connection
+condition: 'Image: '*\PaperCut\*.exe' and DestinationIp: 'DC_IP_RANGE' and DestinationPort: '445' or '5985' and User: 'DOMAIN\*' and not User: 'DOMAIN\SYSTEM'
+detection:
+  Image:
+    - '*\PaperCut\*.exe'
+  DestinationIp:
+    - '10.10.0.0/16'
+  DestinationPort:
+    - '445'
+    - '5985'
+  User:
+    - 'DOMAIN\*'
+  not_User:
+    - 'DOMAIN\SYSTEM'
+condition: all

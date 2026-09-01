@@ -1,0 +1,15 @@
+title: Suspicious PowerShell Execution from PaperCut Process
+logsource:
+  product: windows
+  service: sysmon
+  category: process_access
+condition: 'Image: '*\PaperCut\*.exe' and CommandLine: '*powershell*' and not CommandLine: '*-ExecutionPolicy Bypass*' and not CommandLine: '*-Command Get-Help*'
+detection:
+  Image:
+    - '*\PaperCut\*.exe'
+  CommandLine:
+    - '*powershell*'
+  not_CommandLine:
+    - '*-ExecutionPolicy Bypass*'
+    - '*-Command Get-Help*'
+condition: all
