@@ -1,0 +1,16 @@
+title: IKE Protocol Abuse Pattern
+logsource:
+  product: fireware_os
+  service: iked
+detection:
+  selection:
+    event_type: ike_negotiation
+    phase: 1
+    proposal_count: > 10
+    encryption_algo: 'null'
+    auth_method: 'anonymous'
+  condition: selection
+fields:
+  - source_ip
+  - proposal_count
+  - encryption_algo

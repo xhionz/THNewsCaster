@@ -1,0 +1,16 @@
+title: Internal Scanning from Firebox
+logsource:
+  product: fireware_os
+  service: firewall
+detection:
+  selection:
+    source_ip: firebox_ip
+    destination_ip: '192.168.0.0/16'
+    protocol: tcp
+    destination_port: [22, 445, 3389, 135]
+    action: allowed
+  condition: selection
+fields:
+  - source_ip
+  - destination_ip
+  - destination_port

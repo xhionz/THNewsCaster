@@ -1,0 +1,16 @@
+title: Suspicious iked Traffic Pattern
+logsource:
+  product: fireware_os
+  service: iked
+detection:
+  selection:
+    event_type: connection_attempt
+    source_ip: '10.0.0.0/8'
+    destination_port: 500
+    protocol: udp
+    status: failed
+  condition: selection
+fields:
+  - source_ip
+  - destination_port
+  - protocol
