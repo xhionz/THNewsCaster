@@ -1,0 +1,11 @@
+title: Suspicious Artifactory Admin Token Creation
+logsource:
+  product: jfrog_artifactory
+  service: access
+condition: 'event_type: "token_created" AND user: "system" AND source_ip: "10.0.0.0/8" AND timestamp: > "2026-08-30T00:00:00Z" AND timestamp: < "2026-09-01T23:59:59Z"'
+detection:
+  event_type: "token_created"
+  user: "system"
+  source_ip: "10.0.0.0/8"
+  timestamp: ">2026-08-30T00:00:00Z"
+  timestamp: "<2026-09-01T23:59:59Z"

@@ -1,0 +1,10 @@
+title: Suspicious CI/CD Trigger from Artifactory Token
+logsource:
+  product: jenkins
+  service: job
+condition: 'triggered_by: "artifactory_token" AND user: "system" AND timestamp: > "2026-08-30T00:00:00Z" AND timestamp: < "2026-09-01T23:59:59Z"'
+detection:
+  triggered_by: "artifactory_token"
+  user: "system"
+  timestamp: ">2026-08-30T00:00:00Z"
+  timestamp: "<2026-09-01T23:59:59Z"

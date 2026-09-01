@@ -1,0 +1,12 @@
+title: Suspicious Bulk Artifact Download from Artifactory
+logsource:
+  product: jfrog_artifactory
+  service: access
+condition: 'event_type: "artifact_downloaded" AND user: "system" AND bytes_sent: ">100000000" AND destination_ip: "!10.0.0.0/8" AND timestamp: > "2026-08-30T00:00:00Z" AND timestamp: < "2026-09-01T23:59:59Z"'
+detection:
+  event_type: "artifact_downloaded"
+  user: "system"
+  bytes_sent: ">100000000"
+  destination_ip: "!10.0.0.0/8"
+  timestamp: ">2026-08-30T00:00:00Z"
+  timestamp: "<2026-09-01T23:59:59Z"
