@@ -1,0 +1,11 @@
+title: Artifactory Unsigned Artifact Pull - Suspicious CI Access
+logsource:
+  product: jfrog_artifactory
+  service: access
+condition: 'user: ""' and 'requestUri: /api/storage/' and 'userAgent: *Jenkins* OR *GitLab*' and not 'X-GPG-Signature: *'
+detection:
+  ci_useragent: 'userAgent: *Jenkins* OR userAgent: *GitLab*'
+  anon_access: 'user: ""'
+  storage_access: 'requestUri: /api/storage/'
+  no_gpg: 'not X-GPG-Signature: *'
+condition: all of them

@@ -1,0 +1,11 @@
+title: Artifactory Credential Enumeration - Suspicious API Access
+logsource:
+  product: jfrog_artifactory
+  service: access
+condition: 'requestUri: /api/security/' and 'requestMethod: GET' and 'user: ""' and 'responseCode: 200'
+detection:
+  security_api: 'requestUri: /api/security/'
+  get_method: 'requestMethod: GET'
+  anon_user: 'user: ""'
+  success_resp: 'responseCode: 200'
+condition: all of them

@@ -1,0 +1,10 @@
+title: Artifactory Anonymous Auth Bypass - CVE-2023-38042
+logsource:
+  product: jfrog_artifactory
+  service: access
+condition: 'authType: "anonymous"' and not 'user: ""' and 'requestUri: /api/storage/'
+detection:
+  auth_anon: 'authType: "anonymous"'
+  access_storage: 'requestUri: /api/storage/'
+  not_null_user: 'not user: ""'
+condition: all of them
