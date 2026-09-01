@@ -1,0 +1,13 @@
+title: Suspicious Credential Access via Exchange Impersonation
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4624
+    LogonType: 3
+    AccountName: 'DOMAIN\user'
+    SourceNetworkAddress: '[ExchangeServerIP]'
+    LogonProcessName: 'NtLmSsp'
+  Condition: Selection1
+condition: Selection1

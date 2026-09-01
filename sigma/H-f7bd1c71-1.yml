@@ -1,0 +1,13 @@
+title: Suspicious OWA Impersonation via CVE-2021-26855
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4624
+    LogonType: 3
+    AccountName: 'NT AUTHORITY\SYSTEM'
+    TargetUserName: 'ExchangeServer$'
+    SourceNetworkAddress: '192.168.10.0/24'
+  Condition: Selection1
+condition: Selection1

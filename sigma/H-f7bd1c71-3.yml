@@ -1,0 +1,13 @@
+title: Lateral Movement via SMB from Compromised Exchange Server
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4624
+    LogonType: 3
+    SourceNetworkAddress: '[ExchangeServerIP]'
+    TargetUserName: 'DOMAIN\\*' 
+    LogonProcessName: 'Svchost'
+  Condition: Selection1
+condition: Selection1
