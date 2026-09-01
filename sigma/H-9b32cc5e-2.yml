@@ -1,0 +1,11 @@
+title: Detect AI-Generated Exploit Script Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  event_id: 1
+  image: '*\java.exe'
+  command_line: '*-jar*PaperCut*'
+  parent_image: '*\python.exe' OR '*\node.exe' OR '*\powershell.exe'
+  child_image: '*\curl.exe' OR '*\wget.exe'
+condition: all of them

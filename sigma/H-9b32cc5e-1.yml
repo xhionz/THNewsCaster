@@ -1,0 +1,11 @@
+title: Detect CVE-2023-27351 Exploit Attempt in PaperCut NG
+logsource:
+  product: webserver
+  service: papercut-ng
+detection:
+  req_method: 'POST'
+  req_uri: '/servlets/SecurityRequestFilter'
+  req_header_user-agent: '.*\b(Claude|Anthropic|CodeGen)\b.*'
+  req_param_action: 'getPrinterList'
+  resp_status: 200
+condition: all of them

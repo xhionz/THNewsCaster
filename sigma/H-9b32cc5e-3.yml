@@ -1,0 +1,11 @@
+title: Detect Suspicious DNS Tunneling from Internal Network
+logsource:
+  product: dns
+  service: dns-server
+detection:
+  query_count: '>100'
+  query_length: '>40'
+  query_domain: '^[a-z0-9]{30,}\.(com|net|org)$'
+  response_code: 'NOERROR'
+  src_ip: '192.168.0.0/16'
+condition: all of them
