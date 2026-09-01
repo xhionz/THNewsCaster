@@ -1,0 +1,18 @@
+title: Langflow RCE Exploitation via Unauthenticated API Endpoint
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects POST requests to Langflow's /api/v1/run endpoint with suspicious payloads indicative of RCE exploitation
+logsource:
+  product: webserver
+  service: http
+  category: web
+condition: 'selection'
+detection:
+  selection:
+    method: 'POST'
+    path: '/api/v1/run'
+    user_agent: 'curl/*' | 'python-requests/*' | 'wget/*'
+    status: 200
+    body: 'import os' | 'import subprocess' | 'base64' | 'echo $AWS_ACCESS_KEY_ID' | 'cat ~/.aws/credentials'
+  condition: selection
+level: high

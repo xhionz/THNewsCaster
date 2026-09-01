@@ -1,0 +1,15 @@
+title: Malicious Langflow Plugin Loaded via Python Execution
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects Python execution from Langflow plugin directories with suspicious imports or execution patterns
+logsource:
+  product: linux
+  service: process_creation
+condition: 'selection'
+detection:
+  selection:
+    image_path: '*langflow/plugins/*/__init__.py'
+    parent_image_path: '*python*'
+    command_line: '*import requests*' | '*import os*' | '*exec(*' | '*eval(*' | '*base64.b64decode*' | '*urllib.request.urlopen*'
+  condition: selection
+level: high
