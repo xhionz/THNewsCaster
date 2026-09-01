@@ -1,0 +1,5 @@
+title: Detect DCSync via Kerberos TGS Request with RC4
+logsource:
+  product: windows
+  service: security
+condition: 'event_id: 4769 and (kerberos_etypes: "0x17" or kerberos_etypes: "0x12") and (target_username: "krbtgt" or target_username: "*DC$") and (client_name: "*PaperCut*" or client_name: "*SERVER*" or client_name: "*DC*" and client_name != "*DC$")

@@ -1,0 +1,5 @@
+title: Detect PaperCut CVE-2021-44528 Exploitation
+logsource:
+  product: windows
+  service: http
+condition: 'event_id: 4688 and (process_name: "java.exe" or process_name: "javaw.exe") and (command_line: "*PrintJob*" or command_line: "*servlet/PrintJob*") and (parent_process_name: "cmd.exe" or parent_process_name: "powershell.exe")

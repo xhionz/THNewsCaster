@@ -1,0 +1,5 @@
+title: Detect Suspicious Token Elevation via Sysmon
+logsource:
+  product: windows
+  service: sysmon
+condition: 'event_id: 1 and (token_elevation_type: "TokenElevationTypeDefault" or token_elevation_type: "TokenElevationTypeFull") and (process_name: "cmd.exe" or process_name: "powershell.exe") and parent_process_name: "java.exe" and user_name: "NT AUTHORITY\SYSTEM" and (command_line: "*net user*" or command_line: "*net localgroup*" or command_line: "*whoami /priv*")
