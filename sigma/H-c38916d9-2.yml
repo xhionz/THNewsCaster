@@ -1,0 +1,10 @@
+title: Suspicious Artifact Download from CI/CD Agent in Artifactory
+logsource:
+  product: artifactory
+detection:
+  selection:
+    user: ('jenkins' OR 'gitlab-runner' OR 'teamcity')
+    uri: '/artifactory/*/maven-local/'
+    status: 200
+    file_extension: ('exe' OR 'dll' OR 'ps1' OR 'bat')
+  condition: selection

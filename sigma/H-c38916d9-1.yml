@@ -1,0 +1,10 @@
+title: Artifactory CVE-2021-27965 Authentication Bypass Attempt
+logsource:
+  product: artifactory
+detection:
+  selection:
+    uri: '/artifactory/api/system/security/authenticate'
+    method: 'POST'
+    status: 200
+    user: 'anonymous'
+  condition: selection

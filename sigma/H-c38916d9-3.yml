@@ -1,0 +1,10 @@
+title: Artifactory Service Account Accessing Sensitive Config Files
+logsource:
+  product: artifactory
+detection:
+  selection:
+    user: 'artifactory-service'
+    uri: '/artifactory/api/system/configuration'
+    method: 'GET'
+    status: 200
+  condition: selection
