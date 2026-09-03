@@ -1,0 +1,73 @@
+type,value,article_count,sources
+cves,CVE-2026-82329,3,https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html | https://www.darkreading.com/application-security/attackers-pounce-critical-artifactory-flaw-disclosure | https://www.securityweek.com/critical-jfrog-artifactory-vulnerability-reportedly-exploited-in-the-wild/
+cves,CVE-2026-82078,3,https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/ | https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/
+cves,CVE-2026-81578,3,https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/ | https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/
+cves,CVE-2026-76060,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02
+cves,CVE-2026-73570,1,https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch
+cves,CVE-2026-72530,1,https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-72529,1,https://www.cisa.gov/news-events/alerts/2026/08/20/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-69836,1,https://thehackernews.com/2026/08/microsoft-entra-id-flaw-cvss-100.html
+cves,CVE-2026-66384,1,https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-66145,1,https://www.reddit.com/r/blueteamsec/comments/1w0t1u8/sonicwall_gms_unauthenticated_rce_and_encrypted/
+cves,CVE-2026-63520,1,https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/
+cves,CVE-2026-60004,2,https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html | https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog
+cves,CVE-2026-55040,1,https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/
+cves,CVE-2026-53362,2,https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/
+cves,CVE-2026-21962,2,https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html | https://www.securityweek.com/cisa-warns-of-exploited-oracle-weblogic-vulnerability/
+cves,CVE-2026-19478,1,https://thehackernews.com/2026/08/gitlab-cve-2026-19478-comes-under.html
+cves,CVE-2026-18963,1,https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html
+cves,CVE-2026-8452,2,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/recent-citrix-netscaler-vulnerability-exploited-in-the-wild/
+cves,CVE-2026-0768,1,https://www.bleepingcomputer.com/news/security/critical-langflow-flaw-exploited-to-steal-openai-and-aws-keys/
+cves,CVE-2025-22226,1,https://www.reddit.com/r/blueteamsec/comments/1vvev5w/vulnerability_analysis_of_cve202522226/
+cves,CVE-2024-28000,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+cves,CVE-2023-49105,3,https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets.html | https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+cves,CVE-2023-27350,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+cves,CVE-2022-0995,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2021-23758,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2019-11043,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02
+cves,CVE-2019-1068,2,https://thehackernews.com/2026/08/cisa-adds-six-exploited-flaws-to-kev.html | https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2018-19518,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02
+cves,CVE-2015-5287,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2015-3246,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+ips,10.141.230.15,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+ips,110.141.230.15,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+ips,211.27.196.111,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,abr.business.gov.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,ajax.net,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+domains,application.readwrite.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,approleassignment.readwrite.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,archive.org,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,chat.read.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,cisa.dhs.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,connections.json,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,dataminr.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,domaintools.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,files.read.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,flare.io,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,gmail.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,hunt.io,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+domains,ithomson.direct.quickconnect.to,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,joshuawthomson39.myqnapcloud.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,ke-la.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,kthomson0061.direct.quickconnect.to,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,kwe.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,mail.read,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,mail.readwrite,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,pc-app.exe,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,portal.azure.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,product-preferences.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,rockyou.txt,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+domains,rolemanagement.readwrite.directory,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,rubenthomson.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,securecomputing.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,server.log,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,thomson.org.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,thomsonfamily.net.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,upwork.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,user-lookup.db,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,user-lookup.enabled,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,user-lookup.id,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,www.cisa.gov,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02
+domains,xmlrpc.php,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+domains,yakuza.cc,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,zoneminder.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02
