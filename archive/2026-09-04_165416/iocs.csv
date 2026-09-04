@@ -1,0 +1,111 @@
+type,value,article_count,sources
+cves,CVE-2026-82329,3,https://thehackernews.com/2026/09/attackers-exploit-critical-jfrog.html | https://www.darkreading.com/application-security/attackers-pounce-critical-artifactory-flaw-disclosure | https://www.securityweek.com/critical-jfrog-artifactory-vulnerability-reportedly-exploited-in-the-wild/
+cves,CVE-2026-82078,3,https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/ | https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/
+cves,CVE-2026-81578,3,https://www.cisa.gov/news-events/alerts/2026/08/31/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/more-details-emerge-on-exploited-papercut-vulnerabilities/ | https://www.securityweek.com/papercut-exploitation-escalates-to-active-intrusions/
+cves,CVE-2026-76060,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02
+cves,CVE-2026-73570,1,https://www.darkreading.com/vulnerabilities-threats/zimbra-flaw-exploitation-shrinking-window-patch
+cves,CVE-2026-66384,1,https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-66145,1,https://www.reddit.com/r/blueteamsec/comments/1w0t1u8/sonicwall_gms_unauthenticated_rce_and_encrypted/
+cves,CVE-2026-63520,1,https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/
+cves,CVE-2026-61979,1,https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/
+cves,CVE-2026-60004,2,https://thehackernews.com/2026/08/critical-gitea-rce-actively-exploited.html | https://www.cisa.gov/news-events/alerts/2026/08/25/cisa-adds-one-known-exploited-vulnerability-catalog
+cves,CVE-2026-55040,1,https://www.reddit.com/r/blueteamsec/comments/1vxr4tp/exploiting_sharepoint_cve202655040_and/
+cves,CVE-2026-53362,2,https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/openai-agents-exploited-linux-kernel-flaw-on-companys-own-systems/
+cves,CVE-2026-21962,3,https://thehackernews.com/2026/08/actively-exploited-oracle-weblogic-flaw.html | https://www.cisa.gov/news-events/alerts/2026/08/24/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.securityweek.com/cisa-warns-of-exploited-oracle-weblogic-vulnerability/
+cves,CVE-2026-18963,1,https://thehackernews.com/2026/08/critical-keycloak-password-reset-flaw.html
+cves,CVE-2026-15981,1,https://www.securityweek.com/wordpress-websites-targeted-via-miniorange-plugin-vulnerabilities/
+cves,CVE-2026-8452,2,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/recent-citrix-netscaler-vulnerability-exploited-in-the-wild/
+cves,CVE-2026-0768,1,https://www.bleepingcomputer.com/news/security/critical-langflow-flaw-exploited-to-steal-openai-and-aws-keys/
+cves,CVE-2025-22226,1,https://www.reddit.com/r/blueteamsec/comments/1vvev5w/vulnerability_analysis_of_cve202522226/
+cves,CVE-2024-28000,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+cves,CVE-2023-49105,3,https://thehackernews.com/2026/08/snowflake-github-actions-flaw-lets.html | https://www.cisa.gov/news-events/alerts/2026/08/27/cisa-adds-three-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+cves,CVE-2023-27350,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+cves,CVE-2022-0995,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2021-23758,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2019-11043,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02
+cves,CVE-2019-1068,2,https://thehackernews.com/2026/08/cisa-adds-six-exploited-flaws-to-kev.html | https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2018-19518,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02
+cves,CVE-2015-5287,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+cves,CVE-2015-3246,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+ips,10.141.230.15,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+ips,110.141.230.15,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+ips,211.27.196.111,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,abr.business.gov.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,ajax.net,1,https://www.cisa.gov/news-events/alerts/2026/08/26/cisa-adds-six-known-exploited-vulnerabilities-catalog
+domains,any.run,1,https://thehackernews.com/2026/08/mirage2fa-surge-hits-4500-us-and-eu.html
+domains,application.readwrite.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,approleassignment.readwrite.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,archive.org,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,audit.log,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,auth.log,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,buf.data,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,buf.head,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,chat.read.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,cisa.dhs.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,cmd.log,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,connections.json,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,dataminr.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,domaintools.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,files.read.all,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,flare.io,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,gmail.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,haproxy-1000.cache,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,haproxy-1000.cache.bak,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,haproxy-1001.cache,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,haproxy-1002.cache,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,haproxy.pid,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,hunt.io,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+domains,img.darklights.store,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,img.monderhouse.space,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,img.responsive.pstatic.autos,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,img.smartnords.site,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,img.socialteams.store,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,img.worksongo.store,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,ithomson.direct.quickconnect.to,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,joshuawthomson39.myqnapcloud.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,ke-la.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,kthomson0061.direct.quickconnect.to,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,kwe.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,libvirtlog.so,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,mail.read,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,mail.readwrite,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,nimon.unix,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,pc-app.exe,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,portal.azure.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,product-preferences.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,pstatic.net,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+domains,rockyou.txt,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+domains,rolemanagement.readwrite.directory,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-237a
+domains,rubenthomson.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,securecomputing.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,server.log,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,thomson.org.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,thomsonfamily.net.au,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,upwork.com,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,user-lookup.db,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,user-lookup.enabled,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,user-lookup.id,1,https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild
+domains,www.cisa.gov,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-239-02
+domains,xmlrpc.php,1,https://www.reddit.com/r/blueteamsec/comments/1vyy37m/philippine_nuclear_agency_and_naval_contractor/
+domains,yakuza.cc,1,https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/
+domains,zoneminder.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-237-02
+sha256,009a1e2d7a582a24e50cf2ffc2a005482c8e38f22bf5ed416053855f8d054e1e,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,09739441ed4599bac2f8159028f772f71e4b25c8badfff95574e56d7384f3dbe,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,12810854c8b2c391b23e2e18b013e873d0369b0637aa3cf993136c07188ba3b8,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,2f02b09d61d432134e994ad671258f523bbf289ae6091fd4eae192c60bd51b6f,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,4bb923eb040aa13ca8fd409c31ee4729c60ddff32e350efe1c5a4a9168a065f5,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,5db1b6d52faf60b4f32d6fd0c7c938e4d05d29a14c32ded4a9668357c08b6a91,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,6cf1b5e92a9c0756f597a5ddefb38eba32961c52efac7ab2a0aa52c639a8fc53,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,7007a78d50a993cb174c685eba96eb442c9507e38fd9d8e5dffc712f613ec110,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,72e70936f0dbe459142a1d867617c35f8d0cce5d18c6a49e1090a2a5adc8e558,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,83f7d565b0465546027052b597af46eae3a199e7a91fcc2ab936341147349130,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,8f30b57928934ae67478d0e690c91d046e35a638da098d02922a4a88a0fdb66c,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,94630b96f628c96a6bff7904b40ffc9ad67c86f8a4ff6080c3b524831c93f402,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,a1d8af3a6acb731f07f72040eccb3450c1c83d40e29f736c2a63d35388660be4,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,a8bfab4de81a1acb04aacdf757346946b0f5e30f0c9f402004016d0e425119c7,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,d53c760c23b4405eb04ad0f20ead375440344b3bdf1fb7854ed12e40d155eabe,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,ed72f4cd8d467b5c5d95ae6aeca4aaeea14d79565d379c1ca5871a714727be16,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,fea1bc36632c71e5a839803469ef60ac47595d36b2c50934ac109ade6df06e61,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+sha256,feeea9d0bf6ae7396d28271baa51ae50df5169ce5d32a516865856f91abc50b3,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+md5,c8c68e629bba773a10ac80012d10bf19,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
+md5,ecd427ea8330a4ff73618483e00b9b41,1,https://www.rapid7.com/blog/post/tr-dprk-apts-ted-backdoor-curlrat-target-south-korean-media-automotive-sectors
