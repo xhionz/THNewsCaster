@@ -1,0 +1,18 @@
+title: Detect Suspicious HTTPS Traffic to Siemens Domains
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  domain: 
+    - "www.siemens.com"
+    - "support.industry.siemens.com"
+    - "www.cisa.gov"
+  user_agent: 
+    - "curl"
+    - "wget"
+    - "python-requests"
+    - "Go-http-client"
+  method: "POST"
+  status: 200
+  bytes_out: > 10000
+condition: all of them

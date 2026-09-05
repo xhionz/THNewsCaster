@@ -1,0 +1,15 @@
+title: Detect Unauthenticated Node-RED Flow Creation
+logsource:
+  product: web_server
+  service: http
+detection:
+  req_url: "/flow"
+  method: "POST"
+  user_agent: 
+    - "curl"
+    - "wget"
+    - "python-requests"
+    - "Go-http-client"
+    - "*"
+  status: 200
+condition: all of them

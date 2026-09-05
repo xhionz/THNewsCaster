@@ -1,0 +1,10 @@
+title: Detect OT Subnet Scanning from IoT2050 Device
+logsource:
+  product: network
+  service: flow
+detection:
+  src_ip: "192.168.100.0/24"  # Example IoT2050 subnet
+  dst_ip: "10.10.0.0/16"       # Example OT subnet
+  conn_state: "ESTABLISHED"
+  service: "tcp"
+condition: all of them
