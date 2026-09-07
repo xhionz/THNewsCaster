@@ -1,0 +1,32 @@
+title: Mirage Kitten SMB Brute Force to Lateral Movement
+logsource:
+  product: windows
+  service: security
+condition: 1 of selection_*
+selection:
+  EventID:
+    - 4625
+  AccountName:
+    - '*'
+  SourceNetworkAddress:
+    - '10.10.*'
+  TargetAccountName:
+    - 'Administrator'
+    - 'Domain Admin'
+    - 'Enterprise Admin'
+  Count:
+    - '>= 6 within 5 minutes'
+selection2:
+  EventID:
+    - 4624
+  AccountName:
+    - 'Administrator'
+    - 'Domain Admin'
+    - 'Enterprise Admin'
+  LogonType:
+    - 3
+  SourceNetworkAddress:
+    - '10.10.*'
+  Timestamp:
+    - 'within 10 minutes after selection1'
+condition: selection1 and selection2

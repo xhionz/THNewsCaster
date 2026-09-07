@@ -1,0 +1,19 @@
+title: Mirage Kitten C2 via Cloud Service with High DNS Entropy
+logsource:
+  product: windows
+  service: dns
+condition: 1 of selection_*
+selection:
+  Query:
+    - '*.azurewebsites.net'
+    - '*.cloudapp.net'
+    - '*.s3.amazonaws.com'
+    - '*.googleapis.com'
+    - '*.storage.googleapis.com'
+  Response:
+    - 'A record count > 5'
+    - 'Entropy > 4.5'
+    - 'Query length > 40 chars'
+  Timestamp:
+    - 'within 1 hour of EDR alert for suspicious process'
+condition: 1 of selection_*

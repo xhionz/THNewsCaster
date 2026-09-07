@@ -1,0 +1,25 @@
+title: Mirage Kitten Phishing Email with Malicious Attachment
+logsource:
+  product: windows
+  service: exchange
+condition: 1 of selection_*
+selection:
+  Subject:
+    - 'Urgent: Invoice #*** for payment'
+    - 'Action Required: Your document is ready'
+    - 'Re: Your recent transaction'
+  From:
+    - '*.kitten-consulting[.]com'
+    - '*.mideast-finance[.]net'
+    - '*.gulf-trust[.]org'
+  Attachment:
+    - '*.doc'
+    - '*.docx'
+    - '*.pdf'
+    - '*.js'
+    - '*.vbs'
+  Body:
+    - 'Click here to view'
+    - 'Download attachment'
+    - 'Enable content to display'
+condition: 1 of selection_*
