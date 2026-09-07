@@ -1,0 +1,17 @@
+title: Suspicious Process Executing and Exfiltrating to idscan.net
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  process_name:
+    - 'idscan-sdk.exe'
+    - 'idscan_update.exe'
+    - 'identity_verify.exe'
+  network_connection:
+    - 'destination_ip in (resolve_domain("idscan.net"))'
+    - 'destination_port == 443'
+  file_write:
+    - 'image endswith "idscan-sdk.exe"'
+    - 'target_filename endswith ".tmp"'
+    - 'file_size > 10000000'
+condition: process_name and network_connection and file_write

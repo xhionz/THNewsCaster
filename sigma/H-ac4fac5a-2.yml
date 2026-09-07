@@ -1,0 +1,18 @@
+title: Phishing Email with Identity Verification Lure
+logsource:
+  product: email
+  service: smtp
+detection:
+  subject:
+    - 'Urgent: Your Driver’s License Verification Required'
+    - 'Action Needed: Identity Scan Update'
+    - 'Your ID has been flagged for review'
+  attachment:
+    - 'filename endswith ".exe"'
+    - 'filename endswith ".js"'
+    - 'filename endswith ".scr"'
+    - 'content contains "idscan"'
+  link:
+    - 'url contains "idscan.net"'
+    - 'url contains "verify-id"'
+condition: any of subject and (any of attachment or any of link)

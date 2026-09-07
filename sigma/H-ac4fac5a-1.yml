@@ -1,0 +1,13 @@
+title: Suspicious Access to idscan.net API
+logsource:
+  product: web_proxy
+  service: http
+detection:
+  domain: idscan.net
+  user_agent: 
+    - 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+    - 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/'
+  high_volume: 
+    - 'count > 500'
+    - 'timeframe: 1h'
+condition: domain and high_volume
