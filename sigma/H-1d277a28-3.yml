@@ -1,0 +1,15 @@
+title: Suspicious Use of Legitimate Windows Binaries for Malicious Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\\msedge.exe' OR '*\\svchost.exe' OR '*\\explorer.exe' OR '*\\cmd.exe' OR '*\\powershell.exe'
+    CommandLine: '*-e *' OR '*-w *' OR '*-c *' OR '*-nop *' OR '*-enc *' OR '*-f *' OR '*-file *'
+    ParentImage: '*\\*.exe'
+    ParentImage not in ['*\\Windows\\System32\\cmd.exe', '*\\Windows\\System32\\powershell.exe']
+  condition: selection
+  timeframe: 10m
+  falsepositives:
+    - Legitimate admin scripting
+  level: high

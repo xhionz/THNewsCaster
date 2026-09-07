@@ -1,0 +1,14 @@
+title: Phishing Email with Malicious Software Installer Domain in Body or Attachment
+logsource:
+  product: email
+  service: o365
+detection:
+  selection:
+    Subject: '*Microsoft*' OR '*Kaspersky*' OR '*Baidu*' OR '*Edge*' OR '*WinRAR*'
+    Body: '*download*' AND ('gehie246.com' OR 'calibre-ebook.com.cn' OR 'app-microsoft-edge.com.cn' OR 'kaspersky-lab.hl.cn' OR 'baidu-pan.com.cn')
+    AttachmentName: '*.zip' OR '*.exe'
+  condition: selection
+  timeframe: 1d
+  falsepositives:
+    - Legitimate software update notifications
+  level: high

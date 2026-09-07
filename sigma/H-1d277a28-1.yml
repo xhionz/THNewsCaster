@@ -1,0 +1,14 @@
+title: Suspicious Counterfeit Software Installer Download and Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\\*.exe'
+    CommandLine: '*-e *' OR '*-w *' OR '*-c *' OR '*-f *'
+    ParentImage: '*\\*.zip'
+  condition: selection
+  timeframe: 5m
+  falsepositives:
+    - Legitimate script execution from zip extraction tools
+  level: high
