@@ -1,0 +1,17 @@
+title: Suspicious Office Document Execution via PowerShell
+id: 9f1a2b3c-4d5e-6f7a-8b9c-0d1e2f3a4b5c
+description: Detect PowerShell execution from Microsoft Office processes, a common indicator of malicious document exploitation
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  ParentProcessName: 
+    - 'winword.exe'
+    - 'excel.exe'
+    - 'powerpoint.exe'
+    - 'acrobat.exe'
+  CommandLine: '*powershell* -nop -w hidden*'
+  ProcessName: 'powershell.exe'
+condition: all
+level: high

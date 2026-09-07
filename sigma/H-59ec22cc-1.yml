@@ -1,0 +1,16 @@
+title: Suspicious RDP Logins from Compromised Router IP Ranges
+id: 5a8b2c1d-4e6f-7a8b-9c0d-1e2f3a4b5c6d
+description: Detect RDP logins (Logon Type 10) from known router IP ranges to domain controllers, indicating potential credential theft and lateral movement
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4624
+  Logon_Type: 10
+  TargetUserName: !'*$'
+  IpAddress: 
+    - '192.168.10.0/24'
+    - '10.5.0.0/16'
+    - '172.16.0.0/12'
+condition: all
+level: high

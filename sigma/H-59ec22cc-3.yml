@@ -1,0 +1,25 @@
+title: Suspicious Cisco IOS HTTP Request Patterns Indicative of Exploitation
+id: 7e8f9a0b-1c2d-3e4f-5a6b-7c8d9e0f1a2b
+description: Detect HTTP requests to Cisco IOS devices with patterns matching known exploitation attempts (e.g., /admin/config, /cgi-bin/luci) that may indicate CVE-2023-20198 or similar
+logsource:
+  product: network
+  service: cisco
+  category: firewall
+detection:
+  src_ip: 
+    - '192.168.10.0/24'
+    - '10.5.0.0/16'
+  dst_ip: 
+    - '192.168.10.1'
+    - '192.168.10.2'
+    - '10.5.1.10'
+  http_uri: 
+    - '/admin/config'
+    - '/cgi-bin/luci'
+    - '/login.cgi'
+    - '/shell?'
+    - '/exec'
+  http_method: 'GET'
+  http_status_code: 200
+condition: all
+level: high
