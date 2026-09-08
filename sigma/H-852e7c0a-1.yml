@@ -1,0 +1,12 @@
+title: Infostealer - Session Cookie Harvesting from Browser Storage
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\chrome.exe'
+    CommandLine: '*--disable-features=SitePerProcess*'
+  condition: selection
+  falsepositives:
+    - Legitimate browser usage with extensions
+  level: medium

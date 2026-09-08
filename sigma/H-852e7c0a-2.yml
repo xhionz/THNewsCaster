@@ -1,0 +1,12 @@
+title: Infostealer - Clipboard Data Exfiltration
+logsource:
+  product: windows
+  service: process_creation
+detection:
+  selection:
+    Image: '*\rundll32.exe'
+    CommandLine: '*user32.dll,EmptyClipboard*'
+  condition: selection
+  falsepositives:
+    - Legitimate clipboard management tools
+  level: medium
