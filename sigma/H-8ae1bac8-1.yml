@@ -1,0 +1,13 @@
+title: Suspicious Langflow API Access - Unauthenticated RCE Attempt
+logsource:
+  product: linux
+  service: nginx
+  category: web
+condition: 'selection'
+detection:
+  selection:
+    uri: '/api/v1/run'
+    method: 'POST'
+    status: 200
+    user_agent: '-'
+  condition: selection

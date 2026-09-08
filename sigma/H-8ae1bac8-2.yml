@@ -1,0 +1,11 @@
+title: Suspicious Python Module Installation via Langflow
+logsource:
+  product: linux
+  service: auditd
+condition: 'selection'
+detection:
+  selection:
+    comm: 'pip'
+    args: 'install --user' OR args: 'install -t' OR args: 'install --target'
+    parent_comm: 'gunicorn' OR parent_comm: 'uvicorn'
+  condition: selection

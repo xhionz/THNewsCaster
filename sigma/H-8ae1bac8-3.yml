@@ -1,0 +1,12 @@
+title: Suspicious DNS Tunneling from Langflow Server
+logsource:
+  product: linux
+  service: dns
+condition: 'selection'
+detection:
+  selection:
+    src_ip: '10.5.1.100'
+    dns_query: '*.*.*.*.example.com' OR dns_query: '*.*.*.*.fastflux.net'
+    query_type: A
+    query_count: '>10' within 5m
+  condition: selection
