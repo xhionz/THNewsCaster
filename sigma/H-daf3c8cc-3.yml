@@ -1,0 +1,15 @@
+title: Suspicious File Download via Internal Proxy for Virtualizor
+logsource:
+  product: proxy
+  service: web
+condition: 'client.ip in ["10.10.0.0/16"] and destination.ip in ["10.10.0.5"] and http.url contains "/virtualizor/" and http.response.code == 200 and file.hash.sha256 != ""'
+detection:
+  client.ip:
+    - '10.10.0.0/16'
+  destination.ip: '10.10.0.5'
+  http.url:
+    - '*virtualizor*'
+  http.response.code: 200
+  file.hash.sha256:
+    - '*'
+condition: all of them

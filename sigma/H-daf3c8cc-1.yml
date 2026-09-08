@@ -1,0 +1,15 @@
+title: Suspicious Virtualizor Update Download via Hijacked IP
+logsource:
+  product: firewall
+  service: network
+condition: 'destination.ip in ["185.199.108.153", "185.199.109.153", "185.199.110.153", "185.199.111.153"] and http.user_agent contains "Virtualizor" and event.action == "connection_established"'
+detection:
+  destination.ip:
+    - '185.199.108.153'
+    - '185.199.109.153'
+    - '185.199.110.153'
+    - '185.199.111.153'
+  http.user_agent:
+    - '*Virtualizor*'
+  event.action: 'connection_established'
+condition: all of them

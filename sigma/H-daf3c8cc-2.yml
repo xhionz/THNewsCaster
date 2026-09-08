@@ -1,0 +1,16 @@
+title: Suspicious SSH Login from Control Server Triggering Update
+logsource:
+  product: linux
+  service: ssh
+condition: 'source.ip == "10.10.0.5" and event.action == "authentication_success" and user.name in ["root", "admin", "virtualizor"] and process.name == "bash" and process.args contains "virtualizor"'
+detection:
+  source.ip: '10.10.0.5'
+  event.action: 'authentication_success'
+  user.name:
+    - 'root'
+    - 'admin'
+    - 'virtualizor'
+  process.name: 'bash'
+  process.args:
+    - '*virtualizor*'
+condition: all of them
