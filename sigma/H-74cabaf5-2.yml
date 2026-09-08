@@ -1,0 +1,23 @@
+title: Detect Malicious Script Injection on Vendor Portal Access
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects JavaScript injection in HTTP responses from known vendor domains, correlated with subsequent clipboard and command events
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  vendor_domain_access:
+    EventID: 3
+    DestinationHostname: '*(vendor1.com|vendor2.net|vendor3.org)*'
+  clipboard_write:
+    EventID: 14
+    TargetObject: '.*'
+  command_execution:
+    EventID: 1
+    CommandLine: '.*(powershell|cmd).*'
+    ParentImage: '.*\explorer.exe'
+  time_window:
+    vendor_domain_access|clipboard_write: 60s
+    clipboard_write|command_execution: 30s
+condition: vendor_domain_access and clipboard_write and command_execution
+level: high

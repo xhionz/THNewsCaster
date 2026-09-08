@@ -1,0 +1,21 @@
+title: Detect Credential Theft via Phishing and Subsequent Logon
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects suspicious logons from unusual locations or devices following known phishing domain access
+logsource:
+  product: windows
+  service: security
+detection:
+  phishing_domain_access:
+    EventID: 3
+    DestinationHostname: '*(phish-domain1.com|phish-domain2.net)*'
+  suspicious_logon:
+    EventID: 4624
+    LogonType: 3
+    AccountName: '*(employee1|employee2|employee3)*'
+    IpAddress: '*(192.168.*|10.*|172.16.*)'
+    LogonProcessName: 'NtLmSsp'
+  time_window:
+    phishing_domain_access|suspicious_logon: 120s
+condition: phishing_domain_access and suspicious_logon
+level: high

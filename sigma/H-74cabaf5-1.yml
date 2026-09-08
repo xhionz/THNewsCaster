@@ -1,0 +1,19 @@
+title: Detect Clipboard Hijack Leading to Command Execution
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects suspicious clipboard write followed by command-line execution within 30 seconds
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  clipboard_write:
+    EventID: 14
+    TargetObject: '.*'
+  command_execution:
+    EventID: 1
+    CommandLine: '.*(powershell|cmd|certutil|bitsadmin|curl|wget).*'
+    ParentImage: '.*\explorer.exe'
+  time_window:
+    clipboard_write|command_execution: 30s
+condition: clipboard_write and command_execution
+level: medium
