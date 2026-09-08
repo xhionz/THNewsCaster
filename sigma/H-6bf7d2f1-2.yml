@@ -1,0 +1,12 @@
+title: Phishing Email with CVE-2026-25262 Attachment or Link
+logsource:
+  product: email
+  service: exchange
+detection:
+  selection1:
+    subject: '*CVE-2026-25262*'
+  selection2:
+    email_body: '*Qualcomm*firmware*patch*download*'
+  selection3:
+    attachment_extension: 'exe' | 'zip' | 'scr'
+  condition: selection1 and (selection2 or selection3)

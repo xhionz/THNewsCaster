@@ -1,0 +1,13 @@
+title: Suspicious CVE-2026-25262 Reference in Logs
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 1
+    Image: '*\cmd.exe'
+  selection2:
+    CommandLine: '*CVE-2026-25262*'
+  selection3:
+    Image: '*\powershell.exe'
+  condition: selection1 or selection2 or selection3

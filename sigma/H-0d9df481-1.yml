@@ -1,0 +1,10 @@
+title: Suspicious PaperCut API Access via HTTP
+logsource:
+  product: webserver
+  service: http
+detection:
+  uri_pattern1: '*/printers/*'
+  uri_pattern2: '*/api/*'
+  method: 'GET'
+  status: 200
+condition: (uri_pattern1 or uri_pattern2) and method and status

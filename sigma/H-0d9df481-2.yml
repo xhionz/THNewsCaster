@@ -1,0 +1,9 @@
+title: Suspicious Kerberos TGS Requests with RC4 Encryption
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id: 4769
+  encryption_type: '0x17' # RC4
+  service_name: 'cifs/' or 'host/' or 'ldap/'
+condition: event_id and encryption_type and (service_name)

@@ -1,0 +1,9 @@
+title: Suspicious Modification of PaperCut Print Script
+logsource:
+  product: windows
+  service: file_system
+detection:
+  file_path: 'C:\\Program Files\\PaperCut NG\\server\\custom\\*.js'
+  file_path: 'C:\\Program Files\\PaperCut MF\\server\\custom\\*.js'
+  event_type: 'file_created' or 'file_modified'
+condition: (file_path contains 'PaperCut' and file_path contains '\\custom\\' and file_path ENDS WITH '.js') and (event_type == 'file_created' or event_type == 'file_modified')
