@@ -1,0 +1,19 @@
+title: Suspicious API Access via Non-Browser User Agents
+logsource:
+  product: webserver
+  service: access_log
+detection:
+  selection:
+    user_agent|contains:
+      - 'curl'
+      - 'python-requests'
+      - 'wget'
+      - 'httpie'
+      - 'nmap'
+  condition: selection
+fields:
+  - client_ip
+  - user_agent
+  - uri
+  - status_code
+condition: selection

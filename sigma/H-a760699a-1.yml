@@ -1,0 +1,13 @@
+title: Suspicious Bulk S3 GetObject Requests
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  selection:
+    eventName: GetObject
+  condition: selection
+fields:
+  - requestParameters.bucketName
+  - userIdentity.arn
+  - sourceIPAddress
+condition: selection

@@ -1,0 +1,32 @@
+title: Suspicious ConsoleLogin from RFC1918 or Outside Business Hours
+logsource:
+  product: aws
+  service: cloudtrail
+detection:
+  selection:
+    eventName: ConsoleLogin
+    sourceIPAddress|contains:
+      - '192.168.'
+      - '10.'
+      - '172.16.'
+      - '172.17.'
+      - '172.18.'
+      - '172.19.'
+      - '172.20.'
+      - '172.21.'
+      - '172.22.'
+      - '172.23.'
+      - '172.24.'
+      - '172.25.'
+      - '172.26.'
+      - '172.27.'
+      - '172.28.'
+      - '172.29.'
+      - '172.30.'
+      - '172.31.'
+  condition: selection
+fields:
+  - userIdentity.arn
+  - sourceIPAddress
+  - eventTime
+condition: selection
