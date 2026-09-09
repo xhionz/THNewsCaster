@@ -1,0 +1,26 @@
+title: Detect Outbound PowerShell Connections from WindowsTerminal
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\WindowsTerminal.exe'
+  selection2:
+    ParentImage: '*\WindowsTerminal.exe'
+    Image: '*\powershell.exe'
+  selection3:
+    ParentImage: '*\WindowsTerminal.exe'
+    Image: '*\powershell.exe'
+    DestinationIp: '172.16.0.0/12'
+  selection4:
+    ParentImage: '*\WindowsTerminal.exe'
+    Image: '*\powershell.exe'
+    DestinationIp: '10.0.0.0/8'
+  selection5:
+    ParentImage: '*\WindowsTerminal.exe'
+    Image: '*\powershell.exe'
+    DestinationIp: '192.168.0.0/16'
+  condition: selection1 and selection2 and (selection3 or selection4 or selection5)
+falsepositives:
+  - Legitimate internal management tools
+level: high

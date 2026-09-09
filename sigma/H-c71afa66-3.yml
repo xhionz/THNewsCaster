@@ -1,0 +1,17 @@
+title: Correlate CAPTCHA Phishing with WindowsTerminal PowerShell Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  web_event:
+    Url: '*cloudflare-check*.xyz'
+    UserAgent: '*Mozilla*'
+    ClientIp: '*'
+  process_event:
+    Image: '*\WindowsTerminal.exe'
+    CommandLine: '*powershell* -enc*'
+    Time: '> 0 and < 300' # within 5 minutes of web event
+  condition: web_event and process_event
+falsepositives:
+  - Legitimate user visiting CAPTCHA site and manually running PowerShell
+level: medium

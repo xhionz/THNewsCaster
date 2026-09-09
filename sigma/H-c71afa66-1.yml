@@ -1,0 +1,28 @@
+title: Detect TerminalFix Attack via WindowsTerminal and Encoded PowerShell
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    Image: '*\WindowsTerminal.exe'
+    CommandLine: '*powershell* -enc*'
+  selection2:
+    Image: '*\WindowsTerminal.exe'
+    CommandLine: '*powershell* -e*'
+  selection3:
+    Image: '*\WindowsTerminal.exe'
+    CommandLine: '*powershell* -nop*'
+  selection4:
+    Image: '*\WindowsTerminal.exe'
+    CommandLine: '*powershell* -noprofile*'
+  condition: selection1 or selection2 or selection3 or selection4
+  keywords:
+    - 'WindowsTerminal.exe'
+    - 'powershell'
+    - '-enc'
+    - '-e'
+    - '-nop'
+    - '-noprofile'
+falsepositives:
+  - Legitimate admin scripts using encoded parameters
+level: high
