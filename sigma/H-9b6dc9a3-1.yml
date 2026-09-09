@@ -1,0 +1,16 @@
+title: SPECTRE - Suspicious UAT Pipeline Process Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  ParentImage:
+    - '*\jenkins.exe'
+    - '*\git.exe'
+    - '*\teamcity-agent.exe'
+  Image:
+    - '*\powershell.exe'
+    - '*\cmd.exe'
+    - '*\wscript.exe'
+    - '*\cscript.exe'
+  CommandLine: '*-e *' OR '*-enc *' OR '*Invoke-Expression *' OR '*ReflectiveLoader *'
+condition: all of them

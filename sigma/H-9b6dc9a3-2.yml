@@ -1,0 +1,9 @@
+title: SPECTRE - Certutil Base64 Decode and Execute
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - '*\certutil.exe'
+  CommandLine: '*-decode*' AND ('*.b64*' OR '*.dat*' OR '*.tmp*') AND ('http://' OR 'https://' OR 'dns://')
+condition: all of them

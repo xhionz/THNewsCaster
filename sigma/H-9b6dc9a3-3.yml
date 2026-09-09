@@ -1,0 +1,9 @@
+title: SPECTRE - PowerShell Reflection Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - '*\powershell.exe'
+  CommandLine: '*[System.Reflection.Assembly]::Load*' OR '*Invoke-ReflectivePEInjection*' OR '*Load-Assembly*' OR '*Assembly.Load*' OR '*CreateInstance*' AND ('-nop' OR '-enc' OR '-e')
+condition: all of them
