@@ -1,0 +1,14 @@
+title: Detect PowerShell with Netcat/Socat and Encoded Payloads
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  CommandLine:
+    - '*-nop*'
+    - '*-enc*'
+    - '*netcat*'
+    - '*socat*'
+    - '*-e *'
+    - '*-c *'
+  Image: '*\powershell.exe'
+condition: all of them

@@ -1,0 +1,13 @@
+title: Detect PowerShell Remoting over Non-Default WinRM Ports
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  CommandLine:
+    - '*Enter-PSSession*'
+    - '*Invoke-Command*'
+    - '*-Port 5986*'
+    - '*-Port 5985*'
+    - '*-Port *'
+  Image: '*\powershell.exe'
+condition: all of them

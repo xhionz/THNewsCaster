@@ -1,0 +1,19 @@
+title: Detect Suspicious Scheduled Task Creation
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 12 or 13
+  Image:
+    - '*\cmd.exe'
+    - '*\powershell.exe'
+    - '*\svchost.exe'
+  CommandLine:
+    - '*Register-ScheduledTask*'
+    - '*schtasks /create*'
+    - '*-tr *'
+    - '*-sc *'
+    - '*-st *'
+    - '*-ru *'
+  TaskName: '*Update*' OR '*Patch*' OR '*Service*' OR '*Task*'
+condition: all of them
