@@ -1,0 +1,16 @@
+title: Certificate-Based Logon as SYSTEM from IIS Server
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects Kerberos logon as SYSTEM using certificate authentication from IIS server IPs
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4624
+    LogonType: 3
+    AuthenticationPackageName: 'Kerberos'
+    CertificateBasedLogon: 'true'
+    IpAddress: 'IIS_SERVER_IP_RANGE'
+  condition: selection
+level: high

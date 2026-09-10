@@ -1,0 +1,11 @@
+title: Detection of TACACS Authentication Without MFA Challenge
+logsource:
+  product: tacacs
+  category: authentication
+condition: 'auth_result:success AND mfa_challenged:false AND user:admin'
+detection:
+  suspicious_tacacs:
+    - 'auth_result: success'
+    - 'mfa_challenged: false'
+    - 'user: admin'
+condition: 'suspicious_tacacs'

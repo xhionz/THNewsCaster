@@ -1,0 +1,15 @@
+title: Golden Certificate Detection via Certificate Enrollment
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects certificate enrollment by low-privilege accounts to templates that allow delegation or SYSTEM impersonation
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4886
+    RequesterName: 'IIS APPPOOL\*' | 'NT AUTHORITY\SYSTEM' | 'DOMAIN\*'
+    CertificateTemplate: 'WebServer' | 'User' | 'DomainControllerAuthentication'
+    CertificateTemplate: 'DomainController' | 'KerberosAuthentication'
+  condition: selection
+level: high

@@ -1,0 +1,12 @@
+title: Detection of CVE-2023-20198 Exploit Attempt on Cisco IOS XR
+logsource:
+  product: cisco_ios_xr
+  category: application
+condition: 'message contains "CRASH" and message contains "RPC" and message contains "HTTP" and message contains "404"'
+detection:
+  exploit_pattern:
+    - 'CRASH'
+    - 'RPC'
+    - 'HTTP'
+    - '404'
+condition: 'exploit_pattern'

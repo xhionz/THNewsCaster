@@ -1,0 +1,11 @@
+title: Detection of Unauthorized Root Shell Access via SSH on Linux Management Hosts
+logsource:
+  product: linux
+  category: authentication
+condition: 'event_type:session_opened AND user:root AND source_ip:trusted_networks'
+detection:
+  suspicious_ssh_root:
+    - 'session opened'
+    - 'user: root'
+    - 'source_ip: 10.0.0.0/8'
+condition: 'suspicious_ssh_root'

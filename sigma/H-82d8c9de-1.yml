@@ -1,0 +1,14 @@
+title: Suspicious AD CS Certificate Enrollment by IIS AppPool
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects certificate enrollment requests from IIS AppPool identities to templates with weak permissions
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4886
+    CertificateTemplate: 'WebServer' | 'User' | 'DomainControllerAuthentication'
+    RequesterName: 'IIS APPPOOL\*'
+  condition: selection
+level: medium
