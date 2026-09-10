@@ -1,0 +1,15 @@
+title: Detect Suspicious DNS Tunneling Patterns
+logsource:
+  product: dns
+  service: resolver
+detection:
+  long_query:
+    - '|re|^[a-zA-Z0-9]{30,}\.(com|net|org|io|co)$'
+  high_entropy:
+    - '|re|^[a-fA-F0-9]{40,}\.'
+  subdomain_length:
+    - '|re|^[^\.]+\.[^\.]{25,}\.'
+  query_count:
+    - 'query_count > 50 AND time_window = 1m'
+condition: long_query or high_entropy or subdomain_length and query_count
+level: medium

@@ -1,0 +1,14 @@
+title: Detect Rails ERB File Read Attempt
+logsource:
+  product: web_server
+  service: rails
+detection:
+  payload_pattern:
+    - '|re|<%=\s*File\.read\s*\([^)]+\)'
+    - '|re|<%=\s*open\s*\([^)]+\)'
+    - '|re|<%=\s*IO\.read\s*\([^)]+\)'
+    - '|re|<%=\s*system\s*\([^)]+\)'
+  request_uri:
+    - '|re|/.*\?.*=.*%3C%25%3D.*'
+condition: payload_pattern or request_uri
+level: high
