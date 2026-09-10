@@ -1,0 +1,9 @@
+title: Detect Unpatched Kaspersky Endpoint via Version Check
+logsource:
+  product: windows
+  service: application
+detection:
+  selection:
+    Image: '*\klnagent.exe'
+    Version: '15.2.1.999' | '15.2.1.998' | '15.2.1.997'
+  condition: selection

@@ -1,0 +1,11 @@
+title: Detect Kaspersky Service Stop or Disable
+logsource:
+  product: windows
+  service: system
+detection:
+  selection:
+    EventID: 7040
+    Image: '*\kavsvc.exe'
+    ServiceName: 'Kaspersky Anti-Virus Service'
+    StartType: 'Disabled'
+  condition: selection

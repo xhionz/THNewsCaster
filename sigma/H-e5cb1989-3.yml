@@ -1,0 +1,10 @@
+title: Detect Suspicious PowerShell Execution from Email Client
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4688
+    CommandLine: '*powershell* -nop -c *Invoke-WebRequest* -Uri *kaspersky*'
+    ParentProcessName: 'outlook.exe'
+  condition: selection
