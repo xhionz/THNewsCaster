@@ -1,0 +1,15 @@
+title: Detection of QNWallpaper.exe spawning remote lateral movement tools
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\QNWallpaper.exe'
+    CommandLine: '*\\*' OR CommandLine: '*-ComputerName*' OR CommandLine: '*-Host*' OR CommandLine: '*psexec*' OR CommandLine: '*wmic*' OR CommandLine: '*powershell* -c *Invoke-Command*'
+  Condition: Selection
+keywords:
+  - 'QNWallpaper.exe'
+  - 'psexec'
+  - 'wmic'
+level: high

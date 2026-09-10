@@ -1,0 +1,12 @@
+title: Detection of QNWallpaper.exe Execution as Initial Access
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\QNWallpaper.exe'
+  Condition: Selection
+keywords:
+  - 'QNWallpaper.exe'
+level: high

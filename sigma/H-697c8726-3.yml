@@ -1,0 +1,15 @@
+title: Detection of LSASS memory dumping after QNWallpaper.exe lateral movement
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\procdump.exe*' OR Image: '*\mimikatz.exe*' OR Image: '*\lsass.exe*' AND CommandLine: '*-o*' OR CommandLine: '*-p*' OR CommandLine: '*-dump*' OR CommandLine: '*-ep*'
+    ParentImage: '*\cmd.exe*' OR ParentImage: '*\powershell.exe*' OR ParentImage: '*\wscript.exe*' OR ParentImage: '*\cscript.exe*'
+  Condition: Selection
+keywords:
+  - 'procdump'
+  - 'mimikatz'
+  - 'lsass'
+level: high
