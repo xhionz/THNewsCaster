@@ -1,0 +1,23 @@
+title: Suspicious ServiceNow Lateral Movement via Internal API Access
+logsource:
+  product: servicenow
+  service: http
+condition: 'request_uri|contains: "/api/now/table/"'
+  and
+  (request_params.sysparm_query|contains: ["ip_address", "hostname", "mac_address", "internal_domain"]
+  or
+  destination_ip|in: ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16"])
+detection:
+  request_uri:
+    - '/api/now/table/cmdb_ci_server'
+    - '/api/now/table/cmdb_ci_network_device'
+  request_params.sysparm_query:
+    - 'ip_address='
+    - 'hostname='
+    - 'mac_address='
+    - 'internal_domain='
+  destination_ip:
+    - '10.0.0.0/8'
+    - '172.16.0.0/12'
+    - '192.168.0.0/16'
+condition: all of them

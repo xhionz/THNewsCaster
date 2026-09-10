@@ -1,0 +1,25 @@
+title: Suspicious ServiceNow API Code Injection Attempt
+logsource:
+  product: servicenow
+  service: http
+condition: 'request_uri|contains: ["/api/now/table", "/navpage.do"]'
+  and
+  (request_body|contains: ["<script>", "eval(", "system(", "exec(", "popen(", "shell_exec("]
+  or
+  request_headers.User-Agent|contains: ["curl", "wget", "python-requests"] and request_body|contains: [";", "&&", "||", "`", "$()"])
+detection:
+  request_uri:
+    - '/api/now/table'
+    - '/navpage.do'
+  request_body:
+    - '<script>'
+    - 'eval('
+    - 'system('
+    - 'exec('
+    - 'popen('
+    - 'shell_exec('
+  request_headers.User-Agent:
+    - 'curl'
+    - 'wget'
+    - 'python-requests'
+condition: all of them

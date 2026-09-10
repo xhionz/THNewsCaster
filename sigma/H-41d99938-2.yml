@@ -1,0 +1,18 @@
+title: Suspicious ServiceNow Credential Harvesting Query
+logsource:
+  product: servicenow
+  service: http
+condition: 'request_uri|contains: "/api/now/table/"'
+  and
+  request_params.sysparm_fields|contains: ["user_name", "password", "user_password", "sys_id", "email"]
+detection:
+  request_uri:
+    - '/api/now/table/sys_user'
+    - '/api/now/table/sys_user_group'
+  request_params.sysparm_fields:
+    - 'user_name'
+    - 'password'
+    - 'user_password'
+    - 'email'
+    - 'sys_id'
+condition: all of them
