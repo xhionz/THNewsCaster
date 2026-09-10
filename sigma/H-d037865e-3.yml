@@ -1,0 +1,11 @@
+title: Privileged Login from Unusual Vendor IP or Time
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4624
+  LogonType: 3
+  AccountName: '*vendor*'
+  IpAddress: '192.168.*|10.*|172.16.*'
+  WorkstationName: 'NOT McKesson-Workstation-*'
+condition: all of them

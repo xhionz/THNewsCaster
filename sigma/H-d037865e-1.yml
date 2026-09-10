@@ -1,0 +1,10 @@
+title: Suspicious Cloud Storage Upload from Healthcare Environment
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  EventID: 11
+  Image: '*\*.exe'
+  TargetFilename: '.*\.(zip|7z|rar|sql|csv|json)'
+  FilePath: '.*\\\\\\\\*.dropbox.com\\\\*|.*\\\\\\\\*.google-drive.com\\\\*|.*\\\\\\\\*.onedrive.com\\\\*'
+condition: all of them

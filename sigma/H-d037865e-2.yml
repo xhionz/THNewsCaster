@@ -1,0 +1,11 @@
+title: Suspicious HTTP Request to Healthcare Web App with Exploit Pattern
+logsource:
+  product: webserver
+  service: iis
+detection:
+  cs-uri-stem: '*\*.aspx*'
+  cs-uri-query: '*SELECT*|*UNION*|*DROP*|*xp_cmdshell*|*;--*'
+  cs-method: 'POST'
+  status: 200
+  user-agent: 'Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Trident/5.0)'
+condition: all of them
