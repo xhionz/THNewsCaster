@@ -1,0 +1,8 @@
+title: Detect Exploitation of CVE-2023-34362 in Rockwell Historian
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  CommandLine: '*\HistorianME.exe* -c* -t* -p*'
+condition: EventID == 4688

@@ -1,0 +1,9 @@
+title: Detect Suspicious Patch Download from Rockwell Domains
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  CommandLine: '*\bitsadmin.exe* /transfer* /download* support.rockwellautomation.com*'
+  Image: '*\bitsadmin.exe*' OR Image: '*\powershell.exe*' OR Image: '*\curl.exe*'
+condition: EventID == 4688 and (CommandLine:*support.rockwellautomation.com* AND (Image:*\bitsadmin.exe* OR Image:*\powershell.exe* OR Image:*\curl.exe*))

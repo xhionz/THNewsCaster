@@ -1,0 +1,10 @@
+title: Detect Phishing Email with Rockwell-Themed Attachment
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  ParentCommandLine: '*\outlook.exe*'
+  CommandLine: '*\mshta.exe*' OR '*\powershell.exe*' OR '*\bitsadmin.exe*' OR '*\certutil.exe*'
+  Image: '*\Downloads\*.exe' OR Image: '*\AppData\Local\Temp\*.exe'
+condition: EventID == 4688 and (CommandLine:*mshta* or CommandLine:*powershell* or CommandLine:*bitsadmin* or CommandLine:*certutil*) and (Image:*\Downloads\*.exe or Image:*\AppData\Local\Temp\*.exe)
