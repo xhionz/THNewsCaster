@@ -1,0 +1,12 @@
+title: Detect Phishing Email Leading to Extension Installation
+logsource:
+  product: office365
+  category: email
+detection:
+  Subject|contains: 'Update your Chrome extension'
+  Subject|contains: 'Security alert'
+  Sender|endswith: '.ru' or '.xyz' or '.info'
+  Attachments|contains: '.crx' or '.zip'
+  Body|contains: 'click here to install'
+  Body|contains: 'critical security patch'
+condition: all of them

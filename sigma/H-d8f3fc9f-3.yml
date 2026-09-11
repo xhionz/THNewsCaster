@@ -1,0 +1,14 @@
+title: Detect Exfiltration of Browser Cookies via HTTPS to Suspicious Domain
+logsource:
+  product: windows
+  service: sysmon
+  category: network_connect
+detection:
+  Image:
+    - '*\Chrome\Application\*.exe'
+    - '*\Edge\Application\*.exe'
+  DestinationIp|startswith: '185.' or '194.' or '176.'
+  DestinationPort: 443
+  DestinationHostname|contains: 'cdn[0-9]{2}.[a-z]{4,6}.com' or 'update[0-9]{2}.[a-z]{3,5}.net'
+  DestinationHostname|contains: 'analytics' or 'cdn' but not 'google.com' or 'microsoft.com' or 'cloudflare.com'
+condition: all of them

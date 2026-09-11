@@ -1,0 +1,15 @@
+title: Detect Malicious Extension Accessing localStorage via Chrome Extension Process
+logsource:
+  product: windows
+  service: sysmon
+  category: process_creation
+detection:
+  Image:
+    - '*\Chrome\Application\*.exe'
+    - '*\Edge\Application\*.exe'
+  CommandLine: 'chrome-extension://'
+  ParentImage: '*\Chrome\Application\*.exe'
+  CommandLine|contains: 'localStorage.getItem'
+  CommandLine|contains: 'localStorage.setItem'
+  CommandLine|contains: 'chrome.storage.local'
+condition: all of them
