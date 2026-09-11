@@ -1,0 +1,18 @@
+title: ShinyHunters Phishing Credential Theft via Third-Party Vendor
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects suspicious email delivery to known third-party vendor domains with malicious URL patterns and subsequent PowerShell execution
+logsource:
+  product: exchange
+  service: mail
+  category: email
+detection:
+  selection:
+    FromAddress: '*@*.com'
+    Subject: 'Urgent: Invoice Verification Required'
+    Body: 'https://[a-zA-Z0-9]{10,}.cloudfront.net/verify|https://[a-zA-Z0-9]{10,}.s3.amazonaws.com/secure'
+    Attachments: 'invoice.pdf.exe|invoice.zip'
+  condition: selection
+  timeframe: 1h
+condition: selection
+level: high

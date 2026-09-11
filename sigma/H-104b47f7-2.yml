@@ -1,0 +1,18 @@
+title: ShinyHunters API Data Exfiltration via EHR Integration
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects anomalous bulk API requests to McKesson EHR endpoints with high response size and non-human user-agent
+logsource:
+  product: webserver
+  service: application
+  category: web
+detection:
+  selection:
+    uri_path: '/api/patient/records|/ehr/v1/export'
+    http.status_code: 200
+    http.bytes_sent: '>50000000'
+    user_agent: 'curl|python-requests|Go-http-client'
+    request_rate: '>100 per 5m'
+  condition: selection
+  timeframe: 5m
+level: high

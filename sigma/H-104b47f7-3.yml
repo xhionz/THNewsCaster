@@ -1,0 +1,19 @@
+title: ShinyHunters RDP Brute Force from Vendor IP Range
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects multiple failed RDP logins followed by success from non-corporate IP range, indicative of credential stuffing
+logsource:
+  product: windows
+  service: security
+  category: logon
+detection:
+  selection:
+    EventID: 4625
+    SourceNetworkAddress: '185.120.144.0/22|195.123.12.0/24|176.111.123.0/24'
+    AccountName: '*vendor*'
+  selection2:
+    EventID: 4624
+    SourceNetworkAddress: '185.120.144.0/22|195.123.12.0/24|176.111.123.0/24'
+    AccountName: '*vendor*'
+  condition: selection and selection2 within 10m
+level: high
