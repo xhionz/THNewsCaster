@@ -1,0 +1,17 @@
+title: Detect Credential Dumping via PowerShell and 1.bat
+id: 3c4d5e6f-7a8b-9c0d-1e2f-3a4b5c6d7e8f
+description: Detects PowerShell executing 1.bat and accessing lsass.exe for credential dumping
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: "*\powershell.exe"
+    CommandLine: "*1.bat*"
+  selection2:
+    EventID: 10
+    TargetImage: "*\lsass.exe"
+    ProcessImage: "*\powershell.exe"
+  condition: selection or selection2
+level: high

@@ -1,0 +1,16 @@
+title: Detect Python Reverse Tunnel via gitnow.dev C2
+id: 1a2b3c4d-5e6f-7a8b-9c0d-1e2f3a4b5c6d
+description: Detects pythonw.exe establishing connection to known malicious domain gitnow.dev
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 3
+    Image: "*\pythonw.exe"
+    DestinationIp: "185.199.108.153" # gitnow.dev resolved IP (VT: https://virustotal.com)
+  selection2:
+    EventID: 22
+    Query: "gitnow.dev"
+  condition: selection or selection2
+level: medium

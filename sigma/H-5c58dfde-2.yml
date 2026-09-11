@@ -1,0 +1,13 @@
+title: Detect DLL Sideloading via dui70.dll
+id: 2b3c4d5e-6f7a-8b9c-0d1e-2f3a4b5c6d7e
+description: Detects malicious dui70.dll being loaded by lockscreencontentserver.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 7
+    ImageLoaded: "*\dui70.dll"
+    Image: "*\lockscreencontentserver.exe"
+  condition: selection
+level: high
