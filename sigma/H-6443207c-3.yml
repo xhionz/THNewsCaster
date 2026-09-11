@@ -1,0 +1,10 @@
+title: Suspicious RDP Connection from WordPress Subnet
+logsource:
+  product: windows
+  service: sysmon
+condition: 'EventID: 3' and 'DestinationIp: {{wordpress_server_subnet}}' and 'DestinationPort: 3389'
+detection:
+  EventID: 3
+  DestinationPort: 3389
+  DestinationIp: '{{wordpress_server_subnet}}'
+condition: all

@@ -1,0 +1,14 @@
+title: WPMU DEV Dashboard Auth Bypass - Suspicious POST Requests
+logsource:
+  product: apache
+  service: access
+condition: 'request_method: POST' and 'user_agent: *curl* or *Wget*' and 'uri: *wp-content/plugins/wpmudev-dashboard*'
+detection:
+  request_method: POST
+  user_agent:
+    - '*curl*'
+    - '*Wget*'
+    - '*libwww-perl*'
+  uri:
+    - '*wp-content/plugins/wpmudev-dashboard*'
+condition: all

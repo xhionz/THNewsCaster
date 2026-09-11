@@ -1,0 +1,14 @@
+title: Avada Theme RCE - Suspicious PHP File Upload via Web Log
+logsource:
+  product: apache
+  service: access
+condition: 'request_method: POST' and 'uri: *wp-content/themes/avada/*' and 'user_agent: *Mozilla* or *curl*' and 'status_code: 200'
+detection:
+  request_method: POST
+  uri:
+    - '*wp-content/themes/avada/*'
+  user_agent:
+    - '*Mozilla*'
+    - '*curl*'
+  status_code: 200
+condition: all
