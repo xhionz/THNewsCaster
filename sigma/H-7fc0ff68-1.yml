@@ -1,0 +1,13 @@
+title: Detect CVE-2023-27997 Exploitation Attempts
+logsource:
+  product: webserver
+  service: http
+detection:
+  selection:
+    uri_path:
+      - '/admin/'
+      - '/xml/'
+      - '/cgi-bin/'
+    user_agent: 'Switchvox*'
+  condition: selection and not user_agent contains 'Mozilla' and not user_agent contains 'curl'
+condition: selection within 5m

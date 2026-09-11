@@ -1,0 +1,11 @@
+title: Detect Non-Root User Executing sudo with Privilege Escalation
+logsource:
+  product: linux
+  service: syslog
+detection:
+  selection:
+    user: 'switchvox'
+    program: 'sudo'
+    action: 'successful'
+  condition: selection
+condition: selection within 10m

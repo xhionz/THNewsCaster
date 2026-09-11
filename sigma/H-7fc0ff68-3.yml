@@ -1,0 +1,12 @@
+title: Detect Large Outbound Data Exfiltration from Switchvox Server
+logsource:
+  product: network
+  service: flow
+detection:
+  selection:
+    src_ip: ['192.168.1.10']
+    bytes: > 50000
+    duration: > 30
+    dst_ip: not in ['192.168.1.0/24', '10.0.0.0/8', '172.16.0.0/12']
+  condition: selection
+condition: selection within 10m
