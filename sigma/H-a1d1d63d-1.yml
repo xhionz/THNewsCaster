@@ -1,0 +1,21 @@
+title: Suspicious Web Exploit Attempt
+id: 1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6
+status: experimental
+description: Detects HTTP requests with known exploit patterns to public web endpoints
+logsource:
+  product: webserver
+  service: http
+detection:
+  exploit_patterns:
+    - '.*\.(php|asp|aspx|jsp)\?cmd=.*'
+    - '.*\.(php|asp|aspx|jsp)\?exec=.*'
+    - '.*\.(php|asp|aspx|jsp)\?file=.*'
+    - '.*\.(php|asp|aspx|jsp)\?page=.*'
+  user_agent_suspicious:
+    - 'Mozilla/5.0 (compatible; Nmap Scripting Engine)'
+    - 'python-requests/*'
+    - 'curl/*'
+  source_not_private:
+    - 'source_ip not in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "169.254.0.0/16"]'
+condition: all of them
+level: high

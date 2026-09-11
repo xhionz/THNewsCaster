@@ -1,0 +1,30 @@
+title: Phishing Attachment Execution Leading to Credential Access
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    EventID: 1
+    CommandLine: '*\*.exe'
+    ParentImage: '*\outlook.exe'
+  Selection2:
+    EventID: 1
+    CommandLine: '*\*.exe'
+    ParentImage: '*\winword.exe'
+  Selection3:
+    EventID: 1
+    CommandLine: '*\*.exe'
+    ParentImage: '*\excel.exe'
+  Selection4:
+    EventID: 1
+    CommandLine: '*\*.exe'
+    ParentImage: '*\acrobat.exe'
+  Selection5:
+    EventID: 1
+    CommandLine: '*\*.exe'
+    ParentImage: '*\winzip.exe'
+  Condition: Selection1 or Selection2 or Selection3 or Selection4 or Selection5
+  timeframe: 5m
+keywords:
+  - phishing
+  - execution

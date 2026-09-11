@@ -1,0 +1,25 @@
+title: Suspicious Token Manipulation Targeting Lsass
+logsource:
+  product: windows
+  service: security
+detection:
+  Selection1:
+    EventID: 4674
+    ObjectName: 'lsass.exe'
+    AccessMask: '0x0010'
+    SubjectUserName: 'NOT SYSTEM' AND SubjectUserName: 'NOT NT AUTHORITY\SYSTEM'
+  Selection2:
+    EventID: 4674
+    ObjectName: 'lsass.exe'
+    AccessMask: '0x0002'
+    SubjectUserName: 'NOT SYSTEM' AND SubjectUserName: 'NOT NT AUTHORITY\SYSTEM'
+  Selection3:
+    EventID: 4674
+    ObjectName: 'lsass.exe'
+    AccessMask: '0x0008'
+    SubjectUserName: 'NOT SYSTEM' AND SubjectUserName: 'NOT NT AUTHORITY\SYSTEM'
+  Condition: Selection1 or Selection2 or Selection3
+  timeframe: 10m
+keywords:
+  - privilege escalation
+  - token manipulation

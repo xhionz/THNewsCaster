@@ -1,0 +1,20 @@
+title: Suspicious Package Download from Public Registry
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects downloads of packages with known malicious naming patterns from public registries
+logsource:
+  product: package_manager
+  service: npm|pip|mvn
+detection:
+  malicious_package_names:
+    - 'package_name == "lodash-security"'
+    - 'package_name == "axios-update"'
+    - 'package_name == "expressjs"'
+    - 'package_name == "jquery-core"'
+    - 'package_name == "node-sass-malicious"'
+  source_not_trusted:
+    - 'source_ip not in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "169.254.0.0/16"]'
+  registry_not_internal:
+    - 'registry_url not in ["https://npm.internal.corp", "https://pypi.internal.corp"]'
+condition: all of them
+level: high

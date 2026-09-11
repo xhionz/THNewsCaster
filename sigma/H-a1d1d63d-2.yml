@@ -1,0 +1,20 @@
+title: Suspicious Git Push from Unusual Context
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects Git push events from non-standard locations or with anomalous metadata
+logsource:
+  product: git
+  service: server
+detection:
+  push_event:
+    - 'action: push'
+  unusual_source_ip:
+    - 'source_ip not in ["10.0.0.0/8", "172.16.0.0/12", "192.168.0.0/16", "169.254.0.0/16", "203.0.113.0/24", "198.51.100.0/24"]'
+  unusual_user:
+    - 'user not in ["dev-team", "ci-cd-bot", "jenkins", "gitlab-runner"]'
+  suspicious_commit_message:
+    - 'commit_message contains "update dependencies"'
+    - 'commit_message contains "fix security"'
+    - 'commit_message contains "patch"'
+condition: all of them
+level: high
