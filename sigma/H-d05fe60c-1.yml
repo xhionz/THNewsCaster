@@ -1,0 +1,15 @@
+title: Detect NodeRabbit via Office Macro to PowerShell
+id: 1a2b3c4d-5e6f-7g8h-9i0j-1k2l3m4n5o6p
+status: experimental
+description: Detects Office document spawning PowerShell with suspicious arguments indicative of NodeRabbit
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\office*.exe'
+    CommandLine: '*powershell* -nop -w hidden -enc*'
+    ParentImage: '*\winword.exe' | '*\excel.exe' | '*\powerpoint.exe'
+  condition: selection
+level: medium

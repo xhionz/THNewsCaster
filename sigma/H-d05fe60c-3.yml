@@ -1,0 +1,15 @@
+title: Detect Mirage Kitten via LinkedIn-driven download and shell execution
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects PowerShell or cmd.exe downloading and executing files from non-standard domains after user interaction
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 1
+    Image: '*\powershell.exe' | '*\cmd.exe'
+    CommandLine: '*curl*' OR '*bitsadmin*' OR '*wget*' OR '*certutil*' AND ('-o' OR '/o' OR '-OutFile')
+    ParentImage: '*\chrome.exe' | '*\firefox.exe' | '*\iexplore.exe'
+  condition: selection
+level: medium

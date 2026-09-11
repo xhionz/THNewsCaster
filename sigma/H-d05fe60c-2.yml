@@ -1,0 +1,15 @@
+title: Detect PollCat DLL Side-Loading via Update Directory
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects non-standard DLLs loaded by trusted update executables in vendor update directories
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    EventID: 7
+    Image: '*\vendor-update\*.exe'
+    ImageLoaded: '*\temp\*.dll' | '*\appdata\local\temp\*.dll' | '*\vendor-update\*.dll'
+    ImageLoaded: '*\*.dll' AND NOT ImageLoaded: '*\windows\*' AND NOT ImageLoaded: '*\program files\*'
+  condition: selection
+level: medium
