@@ -1,0 +1,12 @@
+title: Successful Login from Phishing Recipient Account
+logsource:
+  product: windows
+  service: security
+detection:
+  event_id:
+    - 4624
+  account_name:
+    - 'user1@company.com'
+    - 'user2@company.com'
+    - 'user3@company.com'
+condition: all of them

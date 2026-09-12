@@ -1,0 +1,17 @@
+title: Multiple Unique Phishing Domains Resolved by Internal DNS
+logsource:
+  product: dns
+  service: resolver
+detection:
+  domain:
+    - '*\.tk/*'
+    - '*\.ml/*'
+    - '*\.ga/*'
+    - '*\.cf/*'
+    - '*\.gq/*'
+    - '*\.xyz/*'
+    - '*\.info/*'
+    - '*\.biz/*'
+    - '*\.online/*'
+    - '*\.shop/*'
+condition: any of them
