@@ -1,0 +1,14 @@
+title: Suspicious PowerShell AD CS Enumeration
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects PowerShell commands used to enumerate or interact with AD CS
+logsource:
+  product: windows
+  service: powershell
+detection:
+  EventID: 4104
+  ScriptBlockText: '*Get-Certificate*' OR '*certutil*' OR '*-Template*' OR '*root\cimv2\security\microsofttpm*' OR '*ADCS*' OR '*CertificateTemplate*'
+  - not: ScriptBlockText: '*Get-Help*'
+  - not: ScriptBlockText: '*Get-Command*'
+condition: all
+level: high

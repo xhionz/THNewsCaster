@@ -1,0 +1,16 @@
+title: Suspicious Certificate-Based Kerberos Authentication
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects Kerberos TGS requests using certificate-based authentication from unusual sources or users
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4769
+  TicketOptions: 0x40800000  # Certificate flag
+  ServiceName: 'krbtgt'
+  - not: AccountName: 'DOMAIN\Administrator'
+  - not: AccountName: 'DOMAIN\krbtgt'
+  - not: ClientName: 'DOMAIN\DC01$'
+condition: all
+level: high
