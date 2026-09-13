@@ -1,0 +1,13 @@
+title: Phishing Delivery of RM3ConfigTool.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\RM3ConfigTool.exe'
+    ParentImage: '*\outlook.exe' OR ParentImage: '*\chrome.exe' OR ParentImage: '*\firefox.exe'
+  Selection2:
+    Image: '*\RM3ConfigTool.exe'
+    CommandLine: '*-silent*' OR CommandLine: '*-install*'
+  Condition: Selection1 and Selection2
+level: high

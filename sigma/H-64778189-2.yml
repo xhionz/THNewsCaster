@@ -1,0 +1,10 @@
+title: ScreenConnect deployment within 48h of phishing
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\ScreenConnect\Client.exe'
+  timeframe: 48h
+condition: selection and timeframe(48h)
+level: high

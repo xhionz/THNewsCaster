@@ -1,0 +1,12 @@
+title: DLL Hijacking via RM3ConfigTool.exe
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\RM3ConfigTool.exe'
+    ImageLoaded: '*\*.dll'
+    ImageLoaded|contains: 'C:\\Program Files\\Rockwell\\' | not: 'C:\\Program Files\\Rockwell\\RM3ConfigTool\\'
+  Condition: Selection1
+  timeframe: 1h
+level: high

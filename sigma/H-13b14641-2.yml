@@ -1,0 +1,12 @@
+title: Suspicious NPM Publish Attempt from Non-Admin Account
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\npm.cmd'
+    CommandLine: '*publish*'
+    User: '*'
+    ParentImage: '*\code.exe'
+  condition: selection
+  timeframe: 1d

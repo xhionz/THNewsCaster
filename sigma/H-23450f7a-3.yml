@@ -1,0 +1,15 @@
+title: VPN-Edge Compromise Leading to DLL Hijack
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection1:
+    Image: '*\RM3ConfigTool.exe'
+    ImageLoaded: '*\*.dll'
+    ImageLoaded|contains: '\\networkshare\' OR ImageLoaded|contains: '\\dfs\'
+  Selection2:
+    ParentImage: '*\openvpn.exe' OR ParentImage: '*\cisco_anyconnect.exe'
+    Image: '*\cmd.exe'
+    CommandLine: '*net use*' OR '*copy*' OR '*xcopy*'
+  Condition: Selection1 and Selection2
+level: high

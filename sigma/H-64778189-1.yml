@@ -1,0 +1,10 @@
+title: Suspicious Faronics Deploy.exe Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\Faronics\Deploy\Deploy.exe'
+  timeframe: 5m
+condition: selection and timeframe(5m)
+level: high

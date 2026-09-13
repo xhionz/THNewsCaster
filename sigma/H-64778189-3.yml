@@ -1,0 +1,14 @@
+title: Suspicious Faronics Deploy.exe with invalid signature or parent
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\Faronics\Deploy\Deploy.exe'
+    Signature: 'Faronics Corporation'
+  filter:
+    - ParentImage: '*\cmd.exe'
+    - ParentImage: '*\powershell.exe'
+    - ParentImage: '*\wscript.exe'
+condition: selection and (ParentImage: '*\cmd.exe' or ParentImage: '*\powershell.exe' or ParentImage: '*\wscript.exe')
+level: high

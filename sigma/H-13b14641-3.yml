@@ -1,0 +1,11 @@
+title: Suspicious NPM Install in CI/CD Container
+logsource:
+  product: linux
+  service: docker
+detection:
+  selection:
+    Image: '*node:*'
+    Command: '*npm install*'
+    ContainerName: '*jenkins*' OR '*github-actions*'
+  condition: selection
+  timeframe: 1d

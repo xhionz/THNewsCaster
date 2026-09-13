@@ -1,0 +1,17 @@
+title: Detect Node.js Hosting Suspicious Web Server for Credential Harvesting
+logsource:
+  product: linux
+  service: syslog
+detection:
+  Image:
+    - '*node*'
+  CommandLine:
+    - '*express*'
+    - '*http.createServer*'
+    - '*body-parser*'
+    - '*app.post('/login'*'
+    - '*app.post('/auth'*'
+  ParentImage:
+    - '*bash*'
+    - '*sh*'
+condition: all of them

@@ -1,0 +1,13 @@
+title: Suspicious API Key Usage from Untrusted IP
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 4624
+    LogonType: 10
+    AccountName: 'AI_API_SERVICE_*'
+  selection2:
+    IpAddress: '185.130.105.*'
+  condition: selection1 and selection2
+timeframe: 1h

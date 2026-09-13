@@ -1,0 +1,11 @@
+title: Suspicious NPM Install from Coder Registry
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection:
+    Image: '*\npm.cmd'
+    CommandLine: '*install*'
+    ParentImage: '*\code.exe'
+  condition: selection
+  timeframe: 1d

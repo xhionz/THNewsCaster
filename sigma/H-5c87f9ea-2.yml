@@ -1,0 +1,15 @@
+title: Detect Node.js SSH Reverse Shell Activity
+logsource:
+  product: linux
+  service: syslog
+detection:
+  Image:
+    - '*node*'
+  CommandLine:
+    - '*ssh -R*'
+    - '*ssh -N -f*'
+    - '*netcat*'
+    - '*nc -e /bin/sh*'
+  ParentImage:
+    - '*node*'
+condition: all of them

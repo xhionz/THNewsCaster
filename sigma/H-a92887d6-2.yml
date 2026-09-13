@@ -1,0 +1,14 @@
+title: AI API Calls from Developer Workstation with Suspicious Parent
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 4688
+    CommandLine: '*openai*'
+    ParentImage: '*\dev-tools\*'
+  selection2:
+    Image: '*\python.exe'
+    CommandLine: '*requests.post*'
+  condition: selection1 or selection2
+timeframe: 1h

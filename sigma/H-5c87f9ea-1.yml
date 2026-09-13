@@ -1,0 +1,16 @@
+title: Detect Suspicious Node.js Execution from Job Portal Phishing
+logsource:
+  product: linux
+  service: syslog
+detection:
+  Image:
+    - '*node*'
+  CommandLine:
+    - '*require('fs')*'
+    - '*require('net')*'
+    - '*process.on('exit')*'
+  ParentImage:
+    - '*firefox*'
+    - '*chrome*'
+    - '*safari*'
+condition: all of them

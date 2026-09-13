@@ -1,0 +1,14 @@
+title: Automated AI API Calls from Server with High Volume
+logsource:
+  product: windows
+  service: security
+detection:
+  selection1:
+    EventID: 4688
+    CommandLine: '*curl*openai.com*'
+    Image: '*\server-tools\*'
+  selection2:
+    CommandLine: '*python*requests.post*openai.com*'
+    ParentImage: '*\system32\svchost.exe'
+  condition: selection1 or selection2
+timeframe: 1h
