@@ -1,0 +1,10 @@
+title: Suspicious System Account Configuration Changes
+logsource:
+  product: cisco_ios_xr
+  service: cisco_ios_xr_syslog
+detection:
+  selection:
+    event_type: "CONFIG_CHANGE"
+    config_commit_author: "system"
+    config_commit_comment: "" | "update" | "maintenance"
+  condition: selection

@@ -1,0 +1,11 @@
+title: Suspicious GRE Traffic on IKE Ports
+logsource:
+  product: cisco_ios_xr
+  service: cisco_netflow
+detection:
+  selection:
+    protocol: "gre"
+    dst_port: 500 | 4500
+    src_ip: "192.168.0.0/16"
+    dst_ip: "!192.168.0.0/16"
+  condition: selection
