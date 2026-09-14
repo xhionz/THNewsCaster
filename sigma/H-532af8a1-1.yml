@@ -1,0 +1,11 @@
+title: Detect Unauthenticated Access to Proxmox Ticket Endpoint
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_method: 'POST'
+  req_uri: '/api2/json/access/ticket'
+  auth_header: 'null'
+  user_agent: '.*'
+  status_code: 200
+condition: all

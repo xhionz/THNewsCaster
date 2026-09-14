@@ -1,0 +1,10 @@
+title: Detect Suspicious DNS Exfiltration from Proxmox Hosts
+logsource:
+  product: dns
+  service: dns
+detection:
+  query: ".*\.proxmox\.local$"
+  query_length: ">100"
+  response_size: ">500"
+  src_ip: "192.168.10.0/24"
+condition: all

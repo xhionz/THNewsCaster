@@ -1,0 +1,10 @@
+title: Detect Suspicious Proxmox Cluster API Activity
+logsource:
+  product: webserver
+  service: http
+detection:
+  req_uri: "/api2/json/nodes/*/qemu/*/clone" OR "/api2/json/nodes/*/qemu/*/migrate" OR "/api2/json/nodes/*/storage/*/content" OR "/api2/json/cluster/resources"
+  auth_header: !null
+  status_code: 200
+  user_agent: '.*'
+condition: any
