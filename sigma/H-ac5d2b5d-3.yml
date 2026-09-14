@@ -1,0 +1,14 @@
+title: Rhysida - Data Exfiltration via HTTPS to C2
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - 'powershell.exe'
+    - 'cmd.exe'
+    - 'rundll32.exe'
+  DestinationIp: IN('185.143.221.0/24', '194.182.156.10', '185.143.221.15')
+  DestinationPort: 443
+  Protocol: tcp
+  FileCreation: '*.zip' OR '*.7z' OR '*.rar'
+condition: all of them

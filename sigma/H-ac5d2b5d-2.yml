@@ -1,0 +1,13 @@
+title: Rhysida - Scheduled Task Execution Leading to Encryption
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - 'schtasks.exe'
+    - 'cmd.exe'
+  CommandLine: '.* /create .* /tr ".*powershell.*-e.*" .* /sc onlogon'
+  ParentImage:
+    - 'cmd.exe'
+    - 'powershell.exe'
+condition: all of them

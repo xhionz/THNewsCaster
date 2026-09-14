@@ -1,0 +1,14 @@
+title: Rhysida - Phishing-Driven Cmd.exe Payload Execution
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Image:
+    - 'cmd.exe'
+  ParentImage:
+    - 'outlook.exe'
+    - 'chrome.exe'
+    - 'firefox.exe'
+    - 'iexplore.exe'
+  CommandLine: '.* /c .*https?://.*\.rhysida.*'
+condition: all of them
