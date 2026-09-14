@@ -1,0 +1,13 @@
+title: Detect Studio 5000.exe Generating CIP Traffic
+logsource:
+  product: industrial_control_system
+  service: cip_protocol
+detection:
+  sel:
+    src_process: 'Studio 5000.exe'
+    cip_message_length: '>1024'
+  condition: sel
+fields:
+  - src_process
+  - cip_message_length
+  - src_ip

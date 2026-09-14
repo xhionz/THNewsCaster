@@ -1,0 +1,9 @@
+title: Suspicious Payment Service Account Execution
+logsource:
+  product: windows
+  service: security
+detection:
+  EventID: 4688
+  CommandLine: 'powershell.exe' | 'wmic.exe' | 'cscript.exe'
+  User: ['svc_payment', 'NT AUTHORITY\SYSTEM']
+condition: all of them

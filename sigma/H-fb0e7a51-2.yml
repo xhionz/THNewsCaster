@@ -1,0 +1,11 @@
+title: Suspicious Web Request to Payment API Endpoint
+logsource:
+  product: webserver
+  service: iis
+detection:
+  method: 'POST'
+  uri: ['/api/v1/processPayment', '/api/v2/charge', '/payment/execute']
+  user_agent: ['Mozilla/5.0', 'Chrome/120', 'Safari/605.1']
+  content_length: '>1000'
+  status: '200'
+condition: all of them

@@ -1,0 +1,11 @@
+title: Suspicious High-Volume DNS Queries to Uncommon Domains
+logsource:
+  product: dns
+  service: bind
+detection:
+  query_count: '>50'
+  query_duration: '1h'
+  domain: '.*\.xyz$|.*\.tk$|.*\.ga$|.*\.cf$|.*\.gq$'
+  query_length: '>60'
+  response_code: 'NOERROR'
+condition: all of them

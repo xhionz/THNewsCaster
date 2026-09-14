@@ -1,0 +1,15 @@
+title: Detect Phishing Email with Logix Firmware Update Keywords
+logsource:
+  product: email_gateway
+  service: smtp
+detection:
+  sel:
+    subject: '*Logix*'
+    subject: '*firmware*'
+    subject: '*update*'
+    from: '*@external-domain.com'
+  condition: sel
+fields:
+  - subject
+  - from
+  - to

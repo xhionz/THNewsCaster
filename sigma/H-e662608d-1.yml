@@ -1,0 +1,12 @@
+title: Detect Malformed CIP Messages Exceeding 1024 Bytes
+logsource:
+  product: industrial_control_system
+  service: cip_protocol
+detection:
+  sel:
+    cip_message_length: '>1024'
+  condition: sel
+fields:
+  - cip_message_length
+  - src_ip
+  - dst_ip
