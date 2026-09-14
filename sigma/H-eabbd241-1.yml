@@ -1,0 +1,14 @@
+title: Android Kernel Privilege Escalation via Setuid Exploit
+logsource:
+  product: android
+  service: kernel
+detection:
+  selection:
+    syscall: "setuid"
+    args: "0"
+    process: "com.untrusted.app"
+  condition: selection
+keywords:
+  - "setuid(0)"
+  - "root escalation"
+  - "kernel exploit"

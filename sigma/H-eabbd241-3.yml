@@ -1,0 +1,15 @@
+title: Suspicious File Drop in Shared Storage from Untrusted App
+logsource:
+  product: android
+  service: file_system
+detection:
+  selection:
+    event: "file_created"
+    path: "/sdcard/Download/|/storage/emulated/0/Download/"
+    file_name: "\.apk$|\.so$|\.sh$"
+    process: "com.untrusted.app|com.android.chrome|com.android.browser"
+  condition: selection
+keywords:
+  - "malicious payload drop"
+  - "shared storage exploit"
+  - "lateral movement"

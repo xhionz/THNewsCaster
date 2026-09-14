@@ -1,0 +1,15 @@
+title: Suspicious System App Installation from Non-Market Source
+logsource:
+  product: android
+  service: package_manager
+detection:
+  selection:
+    event: "package_installed"
+    package_name: "com.samsung.android.fota|com.android.systemui|com.google.android.gms"
+    installer_package: "com.android.vending|com.samsung.android.app.samsungapps"
+    source: "unknown"|"external"
+  condition: selection
+keywords:
+  - "system app spoofing"
+  - "malicious installer"
+  - "non-market install"
