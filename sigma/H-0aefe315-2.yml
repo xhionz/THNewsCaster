@@ -1,0 +1,14 @@
+title: Detect DNS Queries to Suspicious Blockchain Explorer Subdomains
+logsource:
+  product: dns
+condition: 'query'
+detection:
+  query:
+    - 'query: "*polygonscan.com"'
+    - 'query: "*etherscan.io"'
+    - 'query: "*bscscan.com"'
+    - 'query: "*blockscout.com"'
+    - 'query: "*api.*polygonscan.com"'
+    - 'query: "*api.*etherscan.io"'
+    - 'query: "*data.*blockscout.com"'
+    - 'query: "*contract.*polygonscan.com"'

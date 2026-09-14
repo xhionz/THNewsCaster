@@ -1,0 +1,20 @@
+title: Detect PowerShell Execution from Office Documents Fetching Blockchain Explorers
+logsource:
+  product: windows
+  service: sysmon
+condition: 'process and command_line and url'
+detection:
+  process:
+    - 'Image: \*\winword.exe'
+    - 'Image: \*\excel.exe'
+    - 'Image: \*\powerpoint.exe'
+  command_line:
+    - 'CommandLine: *powershell*'
+    - 'CommandLine: *-enc*'
+    - 'CommandLine: *-nop*'
+    - 'CommandLine: *-w hidden*'
+  url:
+    - 'Url: "*polygonscan.com/*"'
+    - 'Url: "*etherscan.io/*"'
+    - 'Url: "*bscscan.com/*"'
+    - 'Url: "*blockscout.com/polygon/*"'

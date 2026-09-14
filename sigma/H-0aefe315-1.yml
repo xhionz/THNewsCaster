@@ -1,0 +1,17 @@
+title: Detect HTTP Requests to Polygon Blockchain Explorers from Non-Browser Processes
+logsource:
+  product: windows
+  service: http
+condition: 'process and (url contains "polygonscan.com" or url contains "blockscout.com/polygon")'
+detection:
+  process:
+    - 'process_name: python.exe'
+    - 'process_name: bitsadmin.exe'
+    - 'process_name: wscript.exe'
+    - 'process_name: cscript.exe'
+    - 'process_name: powershell.exe'
+  url:
+    - 'url: "*polygonscan.com/*"'
+    - 'url: "*blockscout.com/polygon/*"'
+    - 'url: "*etherscan.io/*"'
+    - 'url: "*bscscan.com/*"'
