@@ -1,0 +1,12 @@
+title: Suspicious Process Access to lsass.exe
+logsource:
+  product: windows
+detection:
+  image:
+    - 'mimikatz.exe'
+    - 'procdump.exe'
+    - 'rundll32.exe'
+    - 'powershell.exe'
+  parent_process_name: 'python.exe' or parent_process_name: 'node.exe' or parent_process_name: 'java.exe'
+  target_image: 'lsass.exe'
+condition: 'image in ("mimikatz.exe", "procdump.exe", "rundll32.exe", "powershell.exe") and target_image == "lsass.exe" and (parent_process_name == "python.exe" or parent_process_name == "node.exe" or parent_process_name == "java.exe")'

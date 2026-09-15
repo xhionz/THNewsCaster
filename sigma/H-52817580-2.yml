@@ -1,0 +1,12 @@
+title: Suspicious RSLinx Classic Process Launch
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  sel:
+    Image: '*\RSLinxClassic.exe'
+    ParentImage: '*\powershell.exe' | '*\cmd.exe' | '*\wscript.exe' | '*\cscript.exe' | '*\mshta.exe'
+    CommandLine: '*-ExecutionPolicy*' | '*Invoke-Expression*' | '*DownloadFile*'
+    TimeCreated: '2024-01-01T00:00:00Z' - '2024-03-31T23:59:59Z'
+  condition: sel
+condition: '1 of them'

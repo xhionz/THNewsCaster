@@ -1,0 +1,12 @@
+title: Suspicious Execution from Rockwell Support Domain
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  sel:
+    Image: '*\*.exe' | '*\*.dll' | '*\*.bin'
+    CommandLine: '*support.rockwellautomation.com*' | '*security-advisories.html*'
+    ParentImage: '*\iexplore.exe' | '*\chrome.exe' | '*\firefox.exe' | '*\edge.exe'
+    TimeCreated: '2024-01-01T00:00:00Z' - '2024-03-31T23:59:59Z'
+  condition: sel
+condition: '1 of them'

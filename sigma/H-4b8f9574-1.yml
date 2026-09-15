@@ -1,0 +1,13 @@
+title: Suspicious Langflow API Access
+logsource:
+  product: webserver
+detection:
+  request_uri:
+    - '/api/v1/run'
+    - '/api/v1/execute'
+  request_method: 'POST'
+  content_length: '>5000'
+  user_agent:
+    - 'langflow'
+    - 'LangflowClient'
+condition: 'request_uri contains "/api/v1/" and request_method == "POST" and content_length > 5000 and (user_agent contains "langflow" or user_agent contains "LangflowClient")'

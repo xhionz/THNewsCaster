@@ -1,0 +1,13 @@
+title: Detect Malformed CIP Packet to RSLinx Classic
+logsource:
+  product: network
+  service: tcp
+  definition: 'Port 44818 traffic from untrusted sources'
+detection:
+  sel:
+    dst_port: 44818
+    src_ip: '10.0.0.0/8,172.16.0.0/12,192.168.0.0/16' | not
+    cip_command_code: 0x50  # Invalid CIP command code (e.g., 0x50 not in spec)
+    cip_length: '< 10' | '> 1000'  # Abnormal CIP packet length
+  condition: sel
+condition: '1 of them'

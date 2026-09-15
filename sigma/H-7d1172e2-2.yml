@@ -1,0 +1,10 @@
+title: Detect Macro-Driven Ransomware Execution via Sysmon
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image: '*\Office16\*.exe'
+    ParentImage: '*\WINWORD.EXE' OR '*\EXCEL.EXE' OR '*\POWERPNT.EXE'
+    CommandLine: '*-Embedding*' OR '*-Embed*' OR '*-o*' OR '*-t*'
+  condition: selection
