@@ -1,0 +1,13 @@
+title: Multiple Failed GitHub Login Attempts from Internal IP
+id: 2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q
+status: experimental
+description: Detects multiple failed authentication attempts to github.com from internal network IPs
+selection:
+  EventID: 4625
+  TargetUserName: '*'
+  IpAddress: '10.0.0.0/8' OR '172.16.0.0/12' OR '192.168.0.0/16'
+  LogonType: 3
+condition: selection
+logsource:
+  product: windows
+  service: security

@@ -1,0 +1,11 @@
+title: Scheduled Task Created with GitHub URL in Command
+id: 3c4d5e6f-7g8h-9i0j-1k2l-3m4n5o6p7q8r
+status: experimental
+description: Detects creation of a scheduled task with a command containing raw.githubusercontent.com
+selection:
+  EventID: 4698
+  Command: '*raw.githubusercontent.com*'
+condition: selection
+logsource:
+  product: windows
+  service: taskplaner
