@@ -1,0 +1,18 @@
+title: FactoryTalk Installer SYSTEM Console Hijack
+id: 1a2b3c4d-5e6f-7g8h-9i0j
+status: experimental
+description: Detects FactoryTalk Activation Manager spawning cmd.exe or powershell.exe with SYSTEM privileges from a non-system parent process
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\FactoryTalkActivationManager.exe'
+    ParentImage: '*\svchost.exe' | '*\services.exe' | '*\winlogon.exe'
+  Selection2:
+    Image: '*\cmd.exe' | '*\powershell.exe'
+    ParentImage: '*\FactoryTalkActivationManager.exe'
+    User: 'SYSTEM'
+  Condition: Selection and Selection2
+level: high

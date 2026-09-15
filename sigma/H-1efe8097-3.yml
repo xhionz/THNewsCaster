@@ -1,0 +1,16 @@
+title: FactoryTalk Host to OT Device via Local Admin
+id: 3c4d5e6f-7g8h-9i0j-1k2l
+status: experimental
+description: Detects network connections from FactoryTalkActivationManager.exe host to known OT device IPs (PLC/HMI) using local administrator credentials
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 3
+    Image: '*\FactoryTalkActivationManager.exe'
+    DestinationIp: '10.10.10.0/24' | '192.168.10.0/24' | '172.16.10.0/24'
+    DestinationPort: '44818' | '502' | '102' | '80' | '443'
+    User: 'Administrator' | 'LocalSystem'
+  Condition: Selection
+level: high

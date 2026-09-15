@@ -1,0 +1,17 @@
+title: Phishing-Driven FactoryTalk via Script Host
+id: 2b3c4d5e-6f7g-8h9i-0j1k
+status: experimental
+description: Detects FactoryTalkActivationManager.exe being spawned by mshta.exe, wscript.exe, or cscript.exe, indicating possible phishing delivery
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  Selection:
+    EventID: 1
+    Image: '*\mshta.exe' | '*\wscript.exe' | '*\cscript.exe'
+  Selection2:
+    ParentImage: '*\mshta.exe' | '*\wscript.exe' | '*\cscript.exe'
+    Image: '*\FactoryTalkActivationManager.exe'
+    CommandLine: ('/silent' OR '/s' OR '/quiet' OR '/q')
+  Condition: Selection and Selection2
+level: high
