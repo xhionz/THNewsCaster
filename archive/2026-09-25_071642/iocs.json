@@ -1,0 +1,3473 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-94127",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "CVE-2026-93952",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-93616",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-93291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93290",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93289",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-91018",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-89207",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-88956",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88761",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88259",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-88020",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09"
+      ]
+    },
+    {
+      "value": "CVE-2026-87886",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-87719",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-85706-critical-gitlab-path-traversal-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "CVE-2026-87121",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-87118",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-86924",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86917",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86911",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86910",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86909",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86905",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86904",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86903",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86902",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86901",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86900",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86898",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86897",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86895",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86894",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86893",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86892",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86891",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86890",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86889",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86888",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86887",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86886",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86885",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86884",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86883",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86882",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86881",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86879",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86878",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86876",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86870",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86869",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-86689",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-86520",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-85706",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-85706-critical-gitlab-path-traversal-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "CVE-2026-85497",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-85496",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-85478",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-85102",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-84869",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-84636",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84635",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84632",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84631",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84629",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84628",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84626",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84625",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84624",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84623",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84622",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84621",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84620",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84619",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84618",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84617",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84616",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84615",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84612",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84611",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84609",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84607",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84606",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84603",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84602",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84601",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84600",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84598",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84597",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84596",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84593",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84589",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84588",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84587",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84586",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84585",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84584",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84583",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84581",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84580",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84578",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84577",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84576",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84575",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84574",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84573",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84572",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84571",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84570",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84569",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84568",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84567",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84566",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84565",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84564",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84563",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84561",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84560",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84559",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84558",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84556",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84555",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84554",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84553",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84552",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84551",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84550",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84549",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84548",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84544",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84543",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84541",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84540",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84538",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84537",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84536",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84535",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84534",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84533",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84532",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84531",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84530",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84527",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84526",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84525",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84524",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84523",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84522",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84521",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84520",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84519",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84518",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84517",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84516",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84515",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84514",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84513",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84512",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84511",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84510",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84509",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84507",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84506",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84505",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84497",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84492",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84491",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84489",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84487",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-84403",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84400",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-84399",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84398",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-83549",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-83548",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-82716",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82708",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82585",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82567",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-82566",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82078",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-81861",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-81855",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-81630",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-81578",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-81321",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-81305",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-80465",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-79959",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-78225",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-77967",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-77960",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-76461",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-76461-critical-cisco-secure-email-gateway-vulnerability-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "CVE-2026-76460",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-75604",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-75558",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-73807",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-73570",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2026-71362",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/24/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-68953",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-68950",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-68070",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-67367",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-66890",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-66887",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-66372",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-65415",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65413",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65412",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65411",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65410",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65409",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65408",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65407",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65406",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65405",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65404",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65403",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65402",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65401",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65400",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65399",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65398",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65395",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65393",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65391",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65390",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65383",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65382",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65381",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65380",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65378",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65377",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65376",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65375",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65374",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65371",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65369",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65365",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65364",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65362",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65361",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65360",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65359",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65358",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65354",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65349",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65348",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65347",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65346",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65345",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65344",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65343",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65342",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65341",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65339",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65338",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65334",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65331",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-65329",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64790",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64788",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64787",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64784",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64782",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64781",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64780",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64779",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64778",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64761",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64760",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64758",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64756",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64753",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64752",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64736",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64718",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64715",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64714",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-64712",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-63077",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-62654",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62653",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62652",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62650",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62649",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62648",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62647",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62646",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-62645",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-58113",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-53266",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-50093",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-48558",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-43794",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43791",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43790",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43789",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43788",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43787",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43786",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43785",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43763",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43760",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43743",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43741",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43738",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43737",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43719",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43715",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43702",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43698",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43697",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43696",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43695",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43692",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43691",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43690",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43689",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43688",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43687",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43686",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43684",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43683",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43677",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43674",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43664",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-43661",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-42018",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-42016",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/11/cisa-adds-three-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-34979",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-34223",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-31431",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-28969",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28968",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28966",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28937",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28935",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28934",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28930",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-28899",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-23744",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-20929",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-20683",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2026-20079",
+      "sources": [
+        "https://thehackernews.com/2026/09/cisco-fmc-flaws-exploited-to-steal.html",
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-19295",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2026-18963",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-15688",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-13348",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-13337",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-13336",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-5430",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/24/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2025-66516",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2025-54988",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "CVE-2025-39964",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2025-27915",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2025-24799",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2025-6625",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04"
+      ]
+    },
+    {
+      "value": "CVE-2025-2479",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2024-45519",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2024-42392",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-42391",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-42386",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-42385",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-42384",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05"
+      ]
+    },
+    {
+      "value": "CVE-2024-7941",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-7940",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-4872",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-3982",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-3980",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2023-37580",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-37042",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-27925",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-3437",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "CVE-2020-1472",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "3.2.0.0",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+      ]
+    },
+    {
+      "value": "3.2.4.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+      ]
+    },
+    {
+      "value": "17.1.3.5",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "17.5.1.9",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "21.1.0.2",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "45.150.33.128",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "95.163.153.80",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "2017.successful",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+      ]
+    },
+    {
+      "value": "aact.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "adodb.stream",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "agents.md",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33332"
+      ]
+    },
+    {
+      "value": "api.deepseek.com",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "api.mistral.ai",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "assembly.load",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "bjmnsj.invoke",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "cdn.discordapp.com",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "cgit.git.savannah.gnu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "cloudflared.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "cmssnmptrap.sh",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "conhost.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "content.js",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "cryptography.aesm",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "deadman.py",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "detailsearch.page",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+      ]
+    },
+    {
+      "value": "dev.to",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "digital-watchdog.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01"
+      ]
+    },
+    {
+      "value": "docs.metasploit.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "earlyburb.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "enmcjw.iv",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "enmcjw.key",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "enmcjw.mode",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "enmcjw.padding",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "exodus.wallet",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "ext-b.4f9db6afd06a.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "gitlab.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-85706-critical-gitlab-path-traversal-exploited-in-the-wild"
+      ]
+    },
+    {
+      "value": "gohno-final.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "horizon3.ai",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "http.jl",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "http.method",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "iehub.eu1.edge.siemens.cloud",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06"
+      ]
+    },
+    {
+      "value": "io.file",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "ip.txt",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ipinfo.io",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33332",
+        "https://isc.sans.edu/diary/rss/33336",
+        "https://isc.sans.edu/diary/rss/33348",
+        "https://isc.sans.edu/diary/rss/33352",
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "kmsauto.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "learn.microsoft.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "left.onpremsid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "left.recipientobjectid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "left.remoteurl",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "logins.json",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "lsass.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "lwip.git",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "main.earlybirdinject",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.extractcryptowallets",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.intermodeldiscussion",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.lsassdump",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.main",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.modelorchestrator",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.queryllm",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.sendtodiscord",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "malware-traffic-analysis.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "marketplace.mendix.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-06"
+      ]
+    },
+    {
+      "value": "math.floor",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "math.random",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "next.js",
+      "sources": [
+        "https://www.rapid7.com/blog/post/pt-metasploit-wrap-up-goes-to-sixteen"
+      ]
+    },
+    {
+      "value": "node.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/17/from-guidance-to-action-security-fundamentals-that-materially-reduce-risk/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "ntds.dit",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ntds.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "ntdsutil.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ocxwzw.write",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "openrouter.ai",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "output.txt",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "overview.js",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-04"
+      ]
+    },
+    {
+      "value": "overview.jsp",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+      ]
+    },
+    {
+      "value": "photostudio.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "powershell.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/",
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "products.the",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+      ]
+    },
+    {
+      "value": "psexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "psexec64.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "pua.win.tool.hackkms",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "railway.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "rdp.bat",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "right.accountobjectid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "right.urlclickedbyusersid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "s.charset",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.close",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.open",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.savetofile",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.type",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.writetext",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s5cmd.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "sam.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "sample.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33336"
+      ]
+    },
+    {
+      "value": "savannah.nongnu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+      ]
+    },
+    {
+      "value": "schedule.service",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "schtasks.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "scripting.filesystemobject",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "secoh-qad.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "secretsdump.py",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+      ]
+    },
+    {
+      "value": "sion.gzips",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "siplant-support.de",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+      ]
+    },
+    {
+      "value": "sljdsq.length",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "string.fromcharcode",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "support.industry.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+      ]
+    },
+    {
+      "value": "support.sw.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-07"
+      ]
+    },
+    {
+      "value": "system.io.compres",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "system.io.compression.compressionmode",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "system.reflection.assemb",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "system.security",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "t.4b1009ff6c3f.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "t.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "target.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "v3560.charset",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.close",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.open",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.position",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.savetofile",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.type",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.writetext",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v5178.connect",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v5178.getfolder",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v6116.userdomain",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v6116.username",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8593.environment",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8593.expandenvironmentstrings",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8593.run",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8825.registertask",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v9719.copyfile",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v9719.createfolder",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v9719.folderexists",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "velvet-otter-glagceis.life",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "vercel.app",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "vid001.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "w32.38d053135d-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.9896a6fcb9-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.9f1f11a708-100.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.c4dd71e347-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "w32.fed979f93b-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "w32.superfluss",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "win.tool.procpatcher",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "workers.dev",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "wscript.createobject",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.network",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.scriptfullname",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.shell",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "www.botslab.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-08",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "www.hitachienergy.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "www.mitsubishielectric.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+      ]
+    },
+    {
+      "value": "www.myscada.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-03"
+      ]
+    },
+    {
+      "value": "www.rfc-editor.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "www.se.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+      ]
+    },
+    {
+      "value": "www.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+      ]
+    },
+    {
+      "value": "www.virustotal.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "www.w3.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "www.wartsila.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-258-02"
+      ]
+    },
+    {
+      "value": "yapw.life",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "zfqnba.read",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "1a3765e8cb0055ec31693b8f82ce9744106dee08368259661600b072c6805af4",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "250d4fa37488af9b025333fa17705573d721467b203765bc360890b4f5a90cd7",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "38d053135ddceaef0abb8296f3b0bf6114b25e10e6fa1bb8050aeecec4ba8f55",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "408b2df6e81824fa5bdf4f0fbd185a7e6db06e2be98fbeebce416f66954b9fa9",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "5191cf625dfc209a347f137b50aea199e82040fd5ee9086fb3e2de73c133f3cb",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "540080fea97d88ed902c5e4f9a026b4fcd32ab263706c520e00728f1a29578b8",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "6606a5f18184b224a56c9cb658fa26f7fce45099da548a30a8db2c5f2c70377c",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "9896a6fcb9bb5ac1ec5297b4a65be3f647589adf7c37b45f3f7466decd6a4a7f",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "9d87b41c2b29ccbeac851b98f1a7dce4ab4781fec0cbc55fa6f93a6299a3d564",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "b68cdb1b46502fbce67ce3f8110682936d06afd2116af096e30abd4c8376b6dc",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "be73e8b06c4356b5b4644d69b4f426bb3b32b4bf9f14cc5743f17532799f760b",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "c13cea04f598e2b0c248d603a6e31bd13aabb64d8149c1b6a77b64e0b983a86f",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "c4dc171f2513fcaf9d5ecc815a94aee4063b213ab380f80bd3ac422dee5205a7",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "c4dd71e347a076ba24bdd2d0ee532ef991c1ef25a2431a19f850942ba2ab16b2",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "cfa1997682e4ed41bc691ba848d845abbe0b75ec97e640c2b015b4d1624a108a",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "e4130bf8769a50106a963b6a43dfd4fe5b56c70eae76a0de971d25993159acfe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "eddbd0ecf7195d38fefae5b9d393abfa79e6f3f94bde19308ecef130a05a42e5",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "f5f1f8c3e7b883793800ab6ccf21b3e60bd0730f300b4595fe74a33adc17a63c",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    }
+  ],
+  "sha1": [
+    {
+      "value": "f873b6295933e4149a2132adf3e9a2d2a676a5ec",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "f89407ea711879c04d91c92b35d67be78bbaf0f1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+      ]
+    }
+  ],
+  "md5": [
+    {
+      "value": "207d9d891ac756b2bfad88aba5682c65",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "2915b3f8b703eb744fc54c81f4a9c67f",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "38de5b216c33833af710e88f7f64fc98",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "41444d7018601b599beac0c60ed1bf83",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "415898f14843d4a6537cf8f43d328eaf",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "4f0529f47320472732961318d7d0dfd1",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33360"
+      ]
+    },
+    {
+      "value": "5d92d1fb5d5fbd79a588f22e994a4aff",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "7acd5c5f1689332615c03357e143f51e",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "9a47c4d379998ade2f8f99e23a630c06",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "d65c7b544a97b0c3f2773b5fcc57d30e",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "f351968c76eefc80d4e292a3f179b7b9",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    }
+  ]
+}
