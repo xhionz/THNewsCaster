@@ -1,0 +1,2122 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-100299",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100298",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100297",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100296",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100295",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100294",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100293",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100292",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-96587",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-96274",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-94204",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-94127",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "CVE-2026-93952",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-93616",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-93291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93290",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93289",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-91191",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-91018",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-89207",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-88956",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88778",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88777",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88776",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88775",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88774",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88773",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88772",
+      "sources": [
+        "https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/",
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88771",
+      "sources": [
+        "https://unit42.paloaltonetworks.com/netscaler-zero-days-exploited/",
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88761",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88020",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09"
+      ]
+    },
+    {
+      "value": "CVE-2026-87902",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-87886",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-87121",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-87118",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-86950",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33376"
+      ]
+    },
+    {
+      "value": "CVE-2026-86689",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-86520",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-85496",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-85102",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/22/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-84411",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-84409",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84403",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84399",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82716",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82708",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82585",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82566",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-81630",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-79959",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-77967",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-77960",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-76460",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-75558",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-73570",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2026-72510",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-72507",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-71379",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-71302",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-71189",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-70356",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-69662",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-68954",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-68068",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-67367",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-63713",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-53266",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-50093",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-35273",
+      "sources": [
+        "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/"
+      ]
+    },
+    {
+      "value": "CVE-2026-34223",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-31431",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-22755",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-18963",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-15688",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-13348",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-13337",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-13336",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-39964",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/18/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2025-27915",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2025-24799",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2025-6625",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04"
+      ]
+    },
+    {
+      "value": "CVE-2025-2479",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2024-45519",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2024-7941",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-7940",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-4872",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-3982",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2024-3980",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "CVE-2023-37580",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-37042",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-27925",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2020-1472",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "2.57.241.246",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "3.2.0.0",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+      ]
+    },
+    {
+      "value": "3.2.4.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+      ]
+    },
+    {
+      "value": "3.3.2.4",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "17.1.3.5",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "17.5.1.9",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "21.1.0.2",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-94127-critical-unauthenticated-rce-in-f5-big-ip-apm"
+      ]
+    },
+    {
+      "value": "34.153.223.102",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+      ]
+    },
+    {
+      "value": "45.84.59.66",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "45.131.66.106",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+      ]
+    },
+    {
+      "value": "64.20.53.230",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+      ]
+    },
+    {
+      "value": "89.125.209.168",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "103.160.59.97",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "103.245.231.79",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "103.245.231.248",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "2017.successful",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06"
+      ]
+    },
+    {
+      "value": "7-zip.chm",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "7-zip.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "7-zip32.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "7z.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "aact.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "adodb.stream",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "api.deepseek.com",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "api.mistral.ai",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "apply.fbijobs.gov",
+      "sources": [
+        "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/"
+      ]
+    },
+    {
+      "value": "assembly.load",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "bjmnsj.invoke",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "bpdaersa.click",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "byveo.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "cdn.discordapp.com",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "cgit.git.savannah.gnu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "cloud.google.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "cloudflared.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "cmd.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "conhost.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "content.js",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "contoso-poedit.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "control.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "corp.tripswithengine.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "cryptography.aesm",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "cyrna.top",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "dbghelp.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "deadman.py",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "detailsearch.page",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+      ]
+    },
+    {
+      "value": "dev.to",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "disk2vhd.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "divekickspolic.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "dnsapi.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "documents.vhdx",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "documents.zip",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "drasw.club",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "dslua.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "earlyburb.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "enmcjw.iv",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "enmcjw.key",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "enmcjw.mode",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "enmcjw.padding",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "etia.ca",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "exodus.wallet",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "gliderrompercycl.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "gohno-final.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "groy.cc",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "guach.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "http.jl",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "http.method",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "iehub.eu1.edge.siemens.cloud",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06"
+      ]
+    },
+    {
+      "value": "io.file",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "ip.txt",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348",
+        "https://isc.sans.edu/diary/rss/33352",
+        "https://isc.sans.edu/diary/rss/33376"
+      ]
+    },
+    {
+      "value": "itechx.tel",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "jli.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "kernel32.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "kmsauto.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "lantronix.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "learn.microsoft.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "left.onpremsid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "left.recipientobjectid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "left.remoteurl",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "libcurl.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "list-129-cn.html",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "logins.json",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "lsass.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ltrxdev.atlassian.net",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "lwip.git",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "main.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "main.earlybirdinject",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.extractcryptowallets",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.intermodeldiscussion",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.lsassdump",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.main",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.modelorchestrator",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.queryllm",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "main.sendtodiscord",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "math.floor",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "math.random",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "matjk.click",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "mikrotik.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06"
+      ]
+    },
+    {
+      "value": "msiexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "msvcrt140.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "muvb.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "node.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/17/from-guidance-to-action-security-fundamentals-that-materially-reduce-risk/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "note.zip",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "ntds.dit",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ntds.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "ntdsutil.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "nvml.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "ocxwzw.write",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "openrouter.ai",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "output.txt",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "overview.jsp",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+      ]
+    },
+    {
+      "value": "photostudio.js",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "poedit.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "powershell.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/",
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "products.the",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05"
+      ]
+    },
+    {
+      "value": "proton.me",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "psexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "psexec64.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "pua.win.tool.hackkms",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "qumel.link",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "railway.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "rdp.bat",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "right.accountobjectid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "right.urlclickedbyusersid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "ruten.observer",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "s.charset",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.close",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.open",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.savetofile",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.type",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s.writetext",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "s5cmd.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "sam.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "sample.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33376"
+      ]
+    },
+    {
+      "value": "savannah.nongnu.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+      ]
+    },
+    {
+      "value": "schedule.service",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "schtasks.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "scripting.filesystemobject",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "secoh-qad.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "secretsdump.py",
+      "sources": [
+        "https://blog.talosintelligence.com/ransomware-incidents-in-japan-in-the-first-half-of-2026/"
+      ]
+    },
+    {
+      "value": "secure-dns-hub.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "securelist.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "shell32.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+      ]
+    },
+    {
+      "value": "sion.gzips",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "siplant-support.de",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07"
+      ]
+    },
+    {
+      "value": "sljdsq.length",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "ssh.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "string.fromcharcode",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "stuseamandesilt.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "support.industry.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+      ]
+    },
+    {
+      "value": "system.io.compres",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "system.io.compression.compressionmode",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "system.reflection.assemb",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "system.security",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "target.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "ukr.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "v3560.charset",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.close",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.open",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.position",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.savetofile",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.type",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v3560.writetext",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v5178.connect",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v5178.getfolder",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v6116.userdomain",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v6116.username",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8593.environment",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8593.expandenvironmentstrings",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8593.run",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v8825.registertask",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v9719.copyfile",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v9719.createfolder",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "v9719.folderexists",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "vercel.app",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "vid001.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "viidure.app",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+      ]
+    },
+    {
+      "value": "vim64.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "w32.38d053135d-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.9896a6fcb9-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.9f1f11a708-100.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.c4dd71e347-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "w32.fed979f93b-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "w32.superfluss",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "win.tool.procpatcher",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "winsparkle.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "winsparkle.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "workers.dev",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/22/unmasking-eviltokens-getting-to-the-root-of-device-code-phishing/"
+      ]
+    },
+    {
+      "value": "wscript.createobject",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.network",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.scriptfullname",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "wscript.shell",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "www.anjvision.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "www.baicells.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04"
+      ]
+    },
+    {
+      "value": "www.botslab.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-09",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "www.hitachienergy.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-03"
+      ]
+    },
+    {
+      "value": "www.lantronix.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "www.mitsubishielectric.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-02"
+      ]
+    },
+    {
+      "value": "www.rfc-editor.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33352"
+      ]
+    },
+    {
+      "value": "www.se.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-260-07"
+      ]
+    },
+    {
+      "value": "www.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-08"
+      ]
+    },
+    {
+      "value": "www.toptech.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "www.virustotal.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "www.vivotek.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03"
+      ]
+    },
+    {
+      "value": "www.w3.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "www.zscaler.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "yapw.life",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "zfqnba.read",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "1f2096ff906915fbf80778f0636446206197351f7e271af97936eeb6f32c179d",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "24b6e36a09eb2acfc2a95478ca685acb7593b1689be6a4a639fe0d222393cfa7",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "250d4fa37488af9b025333fa17705573d721467b203765bc360890b4f5a90cd7",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "38d053135ddceaef0abb8296f3b0bf6114b25e10e6fa1bb8050aeecec4ba8f55",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "408b2df6e81824fa5bdf4f0fbd185a7e6db06e2be98fbeebce416f66954b9fa9",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "5191cf625dfc209a347f137b50aea199e82040fd5ee9086fb3e2de73c133f3cb",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "540080fea97d88ed902c5e4f9a026b4fcd32ab263706c520e00728f1a29578b8",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "699e92a9e0edf7835879d5697bc67138c0b137117f459caf1a44df357407cad9",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "9707a8694e954e9ee13e839d6e5905ce626c0837c7c90da6d1025bfbe152866b",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "9896a6fcb9bb5ac1ec5297b4a65be3f647589adf7c37b45f3f7466decd6a4a7f",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "9cb68f986043a576e19d32184c583b7d8f571c7219d8dc0065dced1c13f077ef",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "be73e8b06c4356b5b4644d69b4f426bb3b32b4bf9f14cc5743f17532799f760b",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "c13cea04f598e2b0c248d603a6e31bd13aabb64d8149c1b6a77b64e0b983a86f",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "c4dc171f2513fcaf9d5ecc815a94aee4063b213ab380f80bd3ac422dee5205a7",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "c4dd71e347a076ba24bdd2d0ee532ef991c1ef25a2431a19f850942ba2ab16b2",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "c82520eb03c084226be4eafbff46f56dca0aa8804a2a7f23a085a96afe71ef77",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "cfa1997682e4ed41bc691ba848d845abbe0b75ec97e640c2b015b4d1624a108a",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "dd98dbc1a55afe6fd0ed2ed53a79c76f6bde15081a0060422185b74eb1799ee4",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "e4130bf8769a50106a963b6a43dfd4fe5b56c70eae76a0de971d25993159acfe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "e842dd7642c8e04b5ec20b6393848a9c904e4832930950c16664fe7800ba382e",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "eddbd0ecf7195d38fefae5b9d393abfa79e6f3f94bde19308ecef130a05a42e5",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "f5f1f8c3e7b883793800ab6ccf21b3e60bd0730f300b4595fe74a33adc17a63c",
+      "sources": [
+        "https://blog.talosintelligence.com/the-closed-quorum-inside-the-first-reported-autonomous-ai-c2-implant/"
+      ]
+    },
+    {
+      "value": "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    }
+  ],
+  "sha1": [
+    {
+      "value": "f873b6295933e4149a2132adf3e9a2d2a676a5ec",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-02"
+      ]
+    },
+    {
+      "value": "f89407ea711879c04d91c92b35d67be78bbaf0f1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-265-01"
+      ]
+    }
+  ],
+  "md5": [
+    {
+      "value": "207d9d891ac756b2bfad88aba5682c65",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "2915b3f8b703eb744fc54c81f4a9c67f",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "38de5b216c33833af710e88f7f64fc98",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "41444d7018601b599beac0c60ed1bf83",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "415898f14843d4a6537cf8f43d328eaf",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "5d92d1fb5d5fbd79a588f22e994a4aff",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "7acd5c5f1689332615c03357e143f51e",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    },
+    {
+      "value": "9a47c4d379998ade2f8f99e23a630c06",
+      "sources": [
+        "https://blog.talosintelligence.com/should-you-care-about-an-ai-slowdown/"
+      ]
+    },
+    {
+      "value": "d65c7b544a97b0c3f2773b5fcc57d30e",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "f351968c76eefc80d4e292a3f179b7b9",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33348"
+      ]
+    }
+  ]
+}
