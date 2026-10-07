@@ -1,0 +1,3411 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-102490",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-102489",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-101104",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-100299",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100298",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100297",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100296",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100295",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100294",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100293",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100292",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-100291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-97363",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-97212",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-96613",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-96587",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-96274",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-95102",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-94594",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-94593",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-94592",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-94591",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-94204",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+      ]
+    },
+    {
+      "value": "CVE-2026-93474",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93290",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-93289",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-91191",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90457",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90456",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90455",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90454",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90453",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90452",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90451",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90450",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90449",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90448",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90447",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90446",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90445",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90444",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-90443",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88956",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88779",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-88778",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88777",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88776",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88775",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88774",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88773",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88772",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88771",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
+        "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-88761",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-87902",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/09/25/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-87118",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-86950",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33376"
+      ]
+    },
+    {
+      "value": "CVE-2026-85496",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84411",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-84409",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84403",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-84399",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82716",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82708",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82585",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-82566",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-81630",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-79959",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-77967",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-76504",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "CVE-2026-75558",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-73570",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/",
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2026-72510",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-72507",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-71379",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-71302",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-71189",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-70356",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-69662",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-68954",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-68068",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-64893",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-64892",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-63713",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-35273",
+      "sources": [
+        "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/",
+        "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
+      ]
+    },
+    {
+      "value": "CVE-2026-34197",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-27873",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-27872",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-22755",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-21589",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products"
+      ]
+    },
+    {
+      "value": "CVE-2026-20182",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "CVE-2026-20127",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "CVE-2026-15953",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-15952",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-15340",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-11796",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-8067",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-8066",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-8065",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "CVE-2026-7395",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03"
+      ]
+    },
+    {
+      "value": "CVE-2025-59375",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
+      ]
+    },
+    {
+      "value": "CVE-2025-27915",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2024-45519",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2024-8176",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
+      ]
+    },
+    {
+      "value": "CVE-2023-46604",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "CVE-2023-46143",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "CVE-2023-37580",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-37042",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2022-27925",
+      "sources": [
+        "https://www.rapid7.com/blog/post/ve-business-email-compromise-rewriting-reality-zimbra-cve"
+      ]
+    },
+    {
+      "value": "CVE-2014-9195",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "CVE-2010-2965",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "1.34.200.85",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "2.57.241.246",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "3.3.2.4",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "3.209.137.175",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "8.3.3.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
+      ]
+    },
+    {
+      "value": "8.3.4.0",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
+      ]
+    },
+    {
+      "value": "20.9.10.1",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "20.12.8.2",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "20.15.6.1",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "20.18.4.1",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "26.1.2.1",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "34.153.223.102",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+      ]
+    },
+    {
+      "value": "45.32.30.235",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "45.84.59.66",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "45.131.66.106",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+      ]
+    },
+    {
+      "value": "59.125.211.65",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "64.20.53.230",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/25/storm-3168-agentic-driven-cloud-attacks-using-compromised-service-principals/"
+      ]
+    },
+    {
+      "value": "89.125.209.168",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "103.27.110.220",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "103.160.59.97",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "103.245.231.79",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "103.245.231.248",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "117.107.25.243",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "122.116.138.33",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "192.255.193.111",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "193.42.40.135",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "0u25laqy58or53ra.js",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "20carnival.hta",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "20carnival.wsf",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "20copy.hta",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "20copy.wsf",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "20tpie.hta",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "20tpie.wsf",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "29.hta",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "29.wsf",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "2lazib2zvnx04jze.js",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "4oye4n4ozlq0.log",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "7-zip.chm",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "7-zip.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "7-zip32.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "7chykauxbnuftp68.js",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "7z.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "8ypvqlxjvggmrz94.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "9q9ollkcm0an2ct1.js",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "acpp9fcvdjztmho8.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "action1.msi",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "adsaw.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "adswre.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "agent.sh",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "agent2.sh",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "agents.md",
+      "sources": [
+        "https://blog.talosintelligence.com/one-breach-please-and-make-no-mistakes/"
+      ]
+    },
+    {
+      "value": "aka.ms",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "apply.fbijobs.gov",
+      "sources": [
+        "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/"
+      ]
+    },
+    {
+      "value": "at5.nl",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
+      ]
+    },
+    {
+      "value": "bannerhider.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "bpdaersa.click",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "brokerservice.addconnector",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
+      ]
+    },
+    {
+      "value": "brokerservice.addnetworkconnector",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
+      ]
+    },
+    {
+      "value": "bunstar.harej.si",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "bypass.eu.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "byveo.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "bzp3ncrpgatherosstate.exe.thl",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "bzp3ncrposstate.dat.mxb",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "bzp3ncrpslc.dll.czh",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "chronyd-helper.service",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "clientsetup.msi",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "cloud.google.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "cloudflared.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "cmd.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "cmd.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "comsvcs.dll",
+      "sources": [
+        "https://blog.talosintelligence.com/the-fine-art-of-frustrating-the-adversary/"
+      ]
+    },
+    {
+      "value": "conhost.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "content.js",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "contoso-poedit.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "control.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "core.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "corp.tripswithengine.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "crowd.properties",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products"
+      ]
+    },
+    {
+      "value": "cyrna.top",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "d2nq35tel3ucuo.cloudfront.net",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "d32tpl7xt7175h.cloudfront.net",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "dbghelp.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "de.sh",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "defendercontrol.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "defenderdt.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "disk2vhd.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "divekickspolic.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "dnsapi.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "dnslog.pp.ua",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "documents.vhdx",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "documents.zip",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "drasw.club",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "dslua.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "etia.ca",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "eventcreate.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "exit.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "fakesysresolved.aa",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "faronicsdeployagent.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "final.tar.gz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "five.ico",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "gatherosstate.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "gliderrompercycl.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "gpv0irmtvto6e8t2.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "graph.microsoft.com",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "groy.cc",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "guach.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "heiqaw6zgatherosstate.exe.luy",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "heiqaw6zosgather.dat.syk",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "heiqaw6zslc.dll.pzs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "hidecursor.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "hidefromcontrolpanel.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "hidemouse.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "hidemouseapp.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "hideul.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "hjgzbskggatherosstate.exe.lzj",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "hjgzbskgosgather.dat.ael",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "hjgzbskgslc.dll.iwq",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "hsow0yu9s11dxyr1.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "html.trojan.uat",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "hzjnpgre9ir92e38.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "icsa-26-274-01.json",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "instance-v2e3e2-relay.screenconnect.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "ip.txt",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33376",
+        "https://isc.sans.edu/diary/rss/33388",
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "itechx.tel",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "jli.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "kernel32.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "kmsauto.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "kooot4a76st012bx.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "lantronix.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "libcurl.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "list-129-cn.html",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "load.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "localconfig.xml",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "login.aspx",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "login.microsoftonline.com",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "lolrmm.io",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "lsass.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ltrxdev.atlassian.net",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "ltvgussyutda.log",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "lwqpw64xl0ti3q7s.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "main.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "matjk.click",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "meeting.t11065885611.doc.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "mejuri.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "mexico-cashpay-test.s3.dualstack.mx-central-1.amazonaws.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "microsoft-flash.com",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "mikrotik.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06"
+      ]
+    },
+    {
+      "value": "mod.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "monta.app",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "mousehidergui.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "mshta.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "msiexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "msvcrt140.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "muvb.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "mx.zxopfds.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "mx1.wwstifsteel.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "my-3lyt6wcp.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-662ylt3w.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-6g16qsfe.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-goq6xmbm.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-h3qli6kq.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-qc39r814.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-sv7c1fzs.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-u0up9qri.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-vtsdod2n.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "my-wgoxp32b.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "note.zip",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "nsexec.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "ntds.dit",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "ntdsutil.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "nvml.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "oast.fun",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "oast.online",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "oisadjfoinsiduhfnoisdnfosdnoifnsoid.pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "ojsuyw.niyari.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "opencamera.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "org.apache.activemq",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
+      ]
+    },
+    {
+      "value": "osc-cdn.com",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "osgather.dat",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "page.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "pages.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "passwords.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "pdf-parser.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "phonelinkprompt.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "phonelinkupdate.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "phonepc.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "pin.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "poedit.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "powershell.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "proton.me",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "ps.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "psexec.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "psexec64.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "psk1zim.abrdns.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "pua.win.tool.hackkms",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "pub-0173d1566dcd4fd49fa25f11f14bfe4c.r2.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "pub-abfa7742e315485a98a5fafd6dbfb68e.r2.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "qumel.link",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "r2.dev",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "raw.githubusercontent.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "rdp.bat",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "registry.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "requestrepo.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "rewcon.co",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "rmm.agent.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "rmm.agent.launcher.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "roguemsp.mu",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "rsproxy.cn",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "rsync.service",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "run.rs",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "runtime.exec",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
+      ]
+    },
+    {
+      "value": "runtime.getruntime",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "ruten.observer",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "rutserv.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "s5cmd.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/24/beyond-ransomware-tracking-storm-2570-consistent-tradecraft-across-deployments/"
+      ]
+    },
+    {
+      "value": "sample.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33376"
+      ]
+    },
+    {
+      "value": "schider.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "screenconnect.client.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "screenconnect.clientservice.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "screenconnect.clientsetup.exe",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "screenconnect.windowsclient.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "sdfghj.rd-team.ru",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "sdiageng.dll",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "sdiagnhost.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "secoh-qad.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "secure-dns-hub.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "securelist.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "server.na-2.action1.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "serviceproxy-access.log",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "services.msc",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
+      ]
+    },
+    {
+      "value": "shell32.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "shelldropper.aa",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "slc.dll",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "spam.suwaccqi.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "spamsniper.pid",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "ssh.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "sshd.service",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "stuseamandesilt.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "swedcorry.stefneyv.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "system.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "system.windows.forms.axhost",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "tar.gz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "tdyvhhvcrci8.log",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "telegra.ph",
+      "sources": [
+        "https://blog.talosintelligence.com/the-fine-art-of-frustrating-the-adversary/"
+      ]
+    },
+    {
+      "value": "testassembly.dll",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "thelittlecupandsaucer.com.au",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "tls.psk1zim.abrdns.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "tmp00055df5.dll",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "transzimbra.linkpc.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "trews.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "txt.trojan.uat",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "tzzyylynj40z.log",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "uac.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "ub4rjznirfleri8t.txt",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "ukr.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "up-theta-rose.vercel.app",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "updiptable.php",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "urlrewrite.xml",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products"
+      ]
+    },
+    {
+      "value": "vd68bdmb2ky28gcc.js",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "vd7f3wxngatherosstate.exe.mtm",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "vd7f3wxnosstate.dat.pgy",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "vd7f3wxnslc.dll.fsc",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "viidure.app",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07"
+      ]
+    },
+    {
+      "value": "vim64.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "vmanage-server.log",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
+      ]
+    },
+    {
+      "value": "w32.38d053135d-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.540080fea9-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "w32.9896a6fcb9-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.9f1f11a708-100.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "w32.injector",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "w32.superfluss",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "webbrowserbookmarksview.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "webbrowserpassview.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "win.trojan.uat",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "windows.log",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "windowspasskey.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "windowsupdate.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "windverify.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "winsparkle.dll",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "winsparkle.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "wps-cn.com",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "wslogzimbra.linkpc.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "wsweb03.blob.core.windows.net",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "www.action1.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "www.anjvision.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05"
+      ]
+    },
+    {
+      "value": "www.baicells.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04"
+      ]
+    },
+    {
+      "value": "www.botslab.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-267-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06",
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "www.first.org",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "www.hitachienergy.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "www.johnsoncontrols.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01"
+      ]
+    },
+    {
+      "value": "www.lantronix.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01"
+      ]
+    },
+    {
+      "value": "www.meari.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
+      ]
+    },
+    {
+      "value": "www.screenconnect.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33388"
+      ]
+    },
+    {
+      "value": "www.toptech.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-02"
+      ]
+    },
+    {
+      "value": "www.vivotek.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-03"
+      ]
+    },
+    {
+      "value": "www.wps-cn.com",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "www.zscaler.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "wylwwcu43j1wf2pg.js",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "zimlog.service",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "zmmailboxd.out",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "01b5c6acb20e41799a0e96d9d1d6e1c44791883706b6285e874fcb15cc93b31a",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "02f2ce03a2650f17bfe6e8744eebbf58522016cbdb92af8f2217b5dd4a1ad550",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "06ad69b9bebad3cc75b594cc5bb1ca0035ea22bb8a683002ca051d948566426b",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "077bd873217d8abfbb6482d11966ca34f3fef7ad5166f24fbc5dc3ddefe894a1",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "079acd58a74479ac8b108b618d2a4da8a8bd560a04459cd90e2fec9da5027513",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "09ef7c736bccfafefc44d9910d499173b88063b73b221fc0dc9e9105107e5cff",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "0a6fb71ab1362d065c7ec2678c1e73d9a0721b0e7099d392ba7559bb2eec4970",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "0b4e5e017c0f0ccac79e13ca5d580a75af67a24ca0763f9ebfdaaeb1ba4fc739",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "0c39264337a1186b2e765e24073399cbdcba118306614eb411e315887af578bd",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "108ef7e628d7a20bd6241a5b57149e27a6061f467123eb64061975559f8f73dc",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "131ac3e0df777910e0a32e43d5744bccb0490750d4c2adc359da41d76d383c46",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "133a46ba41136ca21c93fb08c28446826d8c0d9b7923a16f2d152d595a710098",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "170b0eee60a335f32c1d0c19a0bb8d8bbc0a5b298ea9486b546f58d25cc8a464",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "17b53ffa8e005f0e82491d3f9c0a4984c44da52e1668a855c11a137f627c5b4b",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "19035c8e2520fb70b3e2ec5338c14311b88a26cc1fb8304a01494260b6b55af1",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "1a534d04bf30894d20764e91f7e94e0a73f060f0abacc9feeedba427995c83a8",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "1b19115d5ebdc216e0ab3adf2c643648cfc70a385f4caf0217c679f9f3b20342",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "1f2096ff906915fbf80778f0636446206197351f7e271af97936eeb6f32c179d",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "1fadc90b61ce536abda78eb387a7f3d745f00c16775d3f762845ccc0fde567da",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "22ef852f6ebc39ee71235b90648b4b200b385c47d25c79545986493f8c70db69",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "23d5f1af8581ae200615d9a66d539f2043c3248b649e862557b379d7e8b7a3ac",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "24b6e36a09eb2acfc2a95478ca685acb7593b1689be6a4a639fe0d222393cfa7",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "2bedc26d4b29b435c21962beed7db21188a0219a0d28334bba8b4fb1656d7b15",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "2f1513c822af0c6635dd3c69dc38f0b2f6e02012ea36415fff111a5d4d5fae05",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "2fe2dd402ee6f9c578fce6dd4b36daaa407e99133e5dd502f2afca80feb60150",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "334f39279ff3aae40fe74340c887ae018c75bc42790586bdf9070adb5889100c",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "374c4934b14a1151ea68847c8627c3f1c0b878f4e673bda3f15e4388dfde0187",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "38d053135ddceaef0abb8296f3b0bf6114b25e10e6fa1bb8050aeecec4ba8f55",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "3a4c9020eeb5ef22a1ff443e606ccb6705fe287c583121c713d2c9f9f1f2a2af",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "3a94910eb8022592ce030e6861359f7e980fc1b5a6ccd290cbb071d3e95ed02a",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "3ff5e49fd2f2bd0758467763c44d69e781b7460af84a6e3966e2621bc5bf7096",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "40e7e77aff603f4c2ef17b3bc8ea836e714d0734a1e5b946e52f95536ec5c91d",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "40f8e774e1e7a484b78c7ae4336bc47aa9cab20dc8e1e67d89838e807975f9b1",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "4188c6588f3dcda881c3f2d12df580051179a999f040b799af506edeb3211a26",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "4435fcd6862921092614dbeaa880e4192352984686ebcd98f0ba13ee8e226ef9",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "47f98dfe01759a464e22d5ec55d012dccb38ce010dd73e3ba8d7ffefca12b4b2",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "484ab497072ea09f12187b349f5b1c80754e4942408a009cccb20a2a3c8c6506",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "4925bcca085ec504f51191645da278d8e96698d91f3c6df44146336c697b4de8",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "499d07894f730fb685ee3cbfc1a933e0da93750c1ed25a49b2eb9c32adef156a",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "4b614e5c37abaddca162119e42a969945caa681305e246e0ed0060ea9984008b",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "4d0fdce4c098635fe9b296c3a82c74645f9885eb5e383aa44a0fe7e50da3ca3f",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "5168a2696a0ed858f996f388bfe94f952d475158f4ee6206816608936db005ca",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "518fe65dd349180191d9b258ab24876aaed6613cd657d0b626d1fc24e03a22b6",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "529543b4fe6a4c21d28be56dbf92fcac91d8df808d8518b4275c973fa547ad63",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "540080fea97d88ed902c5e4f9a026b4fcd32ab263706c520e00728f1a29578b8",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "5555e904101689351a2a1359c9c06da0a57139a9470df7d26823c1b75db55041",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "5a35fcd4458e808ab0fa52bb2a92923b60566ee4d7aaadaac7c95cad3d839562",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "5bf8cf29ac6803e7269b045dea48003af7cfe48bedfc081b57ff9e86cb08971b",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "5c5c060b272cd4a5c3767edc0e9478bd35b7e1756e183d0446a5491bd65519cb",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "61a8f5add6c35f99c389012dbb2343061fd0b54611b40490b9a7f0b49d707da0",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "652508a9cf40bee883dc0e5e219dfeba71fe7dac591d01c89f74c21f73b4963f",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "65a7576c389326b6cdf9c993d0be6e5d50fed9655d1cdf2a3a50f2c21c8ec435",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "65f4b9292e91abfa5adf42a03526932930c1c0a436bb186a7948fe6770295788",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "67c979dc13961b09f24f85a801e4c918420adca6117c92efbeeeaa68a6344f55",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "699e92a9e0edf7835879d5697bc67138c0b137117f459caf1a44df357407cad9",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "6a1dbbfcfe6867ac83d35012b2717084388b4a34707efd0b725466dfd0e8fa56",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "6a89de024ca62536de6f5fc10e49896bb1ac330ca39dce30203afdcc45ae237e",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "6ab7de2509038edf580aef6229c1c3db17f4da8f2d7d940818faf617d1938244",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "6cc665057c4a4fe42a309afd3a7fa96cf1af126e9c6e08e56df5105e05378bcc",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "747b1d13bdf06956b5da5f47250fefd5284ebcf7961971732c3d348aa1a2d533",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "75c12795016ae48b1bddd34a9f5adea63a12f58701eae01e1b4ab3d9dfa1513c",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "77fb0e75f4396cb57bbbd28f6dc5310369a87abec9e2acc457aa99a0063ed27a",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "7969ae5f11fc163049c8eadba06f814f5edece13a707e6087c1c49011a45b838",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "7c2ac9c040b3300bffa7d2e435dbb1bc12e7efd644d2216d603c72121266395c",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "7e667ba5f9df912e02275d3cfe3809d16f822fe776f4035c84b118ebd925b1b5",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "7fa98efba59614cec0b7291aedee98764f8dc037b6cc798c93951a31208e9e32",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "857c2f283de799faa74b56e862c0a9f96e67aa1b4fa4a9e46395098365b99de3",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "8e1d68906d6de92f359945d3a95da1480e72773a3e8dea7682d6bf0f6699f75f",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "925c041807d4fb9dfe2ad84f963c2a4c60ea1289f6a0bdccbfb944478ffc2cf2",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "941695d20d82dd5d62f74b0111feb23720637202f6c797df2a02e2cb6cb6e8e3",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "9707a8694e954e9ee13e839d6e5905ce626c0837c7c90da6d1025bfbe152866b",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "971cb2448b5d67dcc1f5eaa10d12e77f213035ad31230dc2ac7a510610a2059d",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "9896a6fcb9bb5ac1ec5297b4a65be3f647589adf7c37b45f3f7466decd6a4a7f",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "996b01e15f85e165899630721a141b178a9c372b6e878012180ec9e9d4e7bd06",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "9b7df409c9a89f7536d3ba7b6d43fb6dbac618c8bb52615ba34cc971ad71bbf3",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "9cb68f986043a576e19d32184c583b7d8f571c7219d8dc0065dced1c13f077ef",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "9fc50cf28f86201fda8306926817b1ede41fdd993202515905dd072f6803542f",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "a03c84ae9e569c04fdd271277f508bba5a299d53c3c0efe0819338d178fe1c5b",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "a0e91085f08956a9a7034ace73cee60cb211f5d96f02bc91a026601bde8f2221",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "a13182699a12a8dd9d07c336dbd8de5e9b086b9b09793b7de2e9761aa03ce1dc",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "a37ea9897221d4495b538de72b74f2aa1d2ff09b7b6dcedd395aee58931adbf3",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "a4379e115d3c4420f5d4b92561022d6e0897990e7297be65c033d47de68e6a6a",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "a65048eb30661e27f8edc2dd8d8c77ec87faec1f1750f6e04e7ecaf069a32858",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "a6f3b7f932761fb1fd5e74123f2482e36c65dd13e769af2ce08c65da195bfa7a",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "a93c946c237b981189d2668d938a9d4d1d9681757e48dae8d9d65ed25b5da657",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "ad0bd2b45e2416fb1384bf30af068d857e7c06b4226615d66b55b610a34c5670",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "ae1b45fb56b9f1b9cb3ee30d2bb1279c9b90b70bb62f8de305d198c6a4e0585e",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "aea5e9029f9212d05bde10f7806d1f2819be45d167e6fd877b9fb1b11088ac90",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "aea991f694911e321b0ab97534f2ad0291c392c0a43dabff664c563618bd036d",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "b31ca75f73a9363b0e35042a41216c3f581eaa0b9cd78cb58f089c2e40babd40",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "b3416726a064dd7f657bbb400adeb365eea7f8bb60783ad2d9da1a1d93768731",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "b594a42b8f1c6f090327bb9a3361c2d3515537fb7ac8da6b9061b9a3f330e159",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "b75492466462141c56d97b705f0c606faf272577631dc2822aa8d6bda53633b6",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "b8e6e83a73e6e07f8873c364dd2a4b830bceb60758163e2efcd7e387cb604655",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "b90a4e770869c28fd2140acb3ebdc50c113bb6f096b4bbdb9ac87c349c70e85e",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "bc8b1b0c80512ba0e8ffccfee5b507df16a3355db1143c3ba81ef42dac1baa6c",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "bd8ddc8f33e0fe43147ee6f1713654996420a27c5d2cd91751ad67124ebc6fe4",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "bf28f38122bf20d5fac969cc414daa6a890cdea872d389ca93d2092b6b7773cf",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "bf8135f46ecedfe5bd06fcecbb2e721c2367ff765b18f4aa3f868e6597f49e47",
+      "sources": [
+        "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
+      ]
+    },
+    {
+      "value": "c2c004a56de2a99f5b06ceb58d8a4b371fb60fd66ff5936786fe8d8037ead208",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "c82520eb03c084226be4eafbff46f56dca0aa8804a2a7f23a085a96afe71ef77",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "c8e1239d7276178b6620f47ec4880494be1cb394477b223fc54bffb0947bff50",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "ca14ad0344dc7216f6da29a5cbe4237d886cc5257e8c3a48fb4885a311c9b800",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "ccea4e1acc51ac43ba9da76ada00e7e308cc33d9c5c264dff82d1be83e957b88",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "cd3509fa82e506cc6f2eeafa0a45d4b8b76a07edadd29779daf00568febcaba7",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "ceb3f7fe9a618ff29a21b126383c23900fad58d6ae2b5552d7e306e4b6acf4b0",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "cfa1997682e4ed41bc691ba848d845abbe0b75ec97e640c2b015b4d1624a108a",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "d232d82e410de12702a67c58acf927304ee42f3e6d81a9d71eca99f9052126db",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "d3cb7ded277b49be06e6a1860f7c7e913e252802e9d32453a185e24797bf53ef",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "d49cc01641c3045bf3119f9d71e7ffd29bfce32ca4b27cc96340716ed4d41cdc",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "d4cb2f5df16ec9b9c5b796ae55848534e15d4f8b8806f0431108fc7a99a2548a",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "d753a615aedf8e58ffc75b2b7ebd320c0cbe6bcb5cbb885db749a2a85c55d3bf",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "d87201c1299a7f5854929645e6891c6c424d2a690031272bedacba7c5fe73a3e",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "dd434f3ffcafeda538d43226665115ba136ad0fdb43dad8536e1368ca9a17b64",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "dd98dbc1a55afe6fd0ed2ed53a79c76f6bde15081a0060422185b74eb1799ee4",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
+      ]
+    },
+    {
+      "value": "dee5af1c0f76b45d28bafd6e60c07bb8e391d98addf81ef8f13d073acdb3c48a",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "e2eb7703047b37b28dc34e6990205d758a2454b39bc655b460606745fadcb530",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "e2f59d8d5a81583ed482b6c7bf37699efdb2264e452cf7d8cfc0c54dfbd9ab3f",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "e31e5da7c58a7e8f89f9629f095edd7d741a1fb0b85fcb39f3818dbd9497b1e3",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "e6ff096a0562c0042b09d250bd60272ffcd8d72bd95c563842acf765a8dc8bcf",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "e7e3b0bcd6798634adf8b49d305f3a7b7682e4b76db549682a183c5a186df4bb",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "e809da86bd81463347fa7f922d3e088755a94a331889d32acb55aa8f57778a34",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "e842dd7642c8e04b5ec20b6393848a9c904e4832930950c16664fe7800ba382e",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/28/needymantis-unpacking-a-post-compromise-malware-family-used-in-targeted-operations/"
+      ]
+    },
+    {
+      "value": "eaff35d250c9b04f51c971e70082740dbfeee5dd846829d541f588ad43378727",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33400"
+      ]
+    },
+    {
+      "value": "f094b8263471c7b76dbed03d420736449920368fa0eca2ed6b1aea2645138d97",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "f0c1dc6d6daa4d010932c7818ed5f22929c182f58e5f495fabe2fb3cfc835b97",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "f1ef5fe4c0cdcff13cc750c867728b89719f81437bdc49041edd1ae1f3edb4e8",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "fc96a04c615847f0fb1391f04d9d1aac7f78ddfb7d459168df0a4172b98354e2",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "fdbd047031c13a17c9f491c9355f44d587584ebe2b8927be8482e6c236c8e1c1",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    }
+  ],
+  "sha1": [
+    {
+      "value": "614420f82c8729d070e01464c0dddb3c9525c772",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02"
+      ]
+    },
+    {
+      "value": "f34330d4c6e0aa978dc3af40360c14b31ad51127",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    }
+  ],
+  "md5": [
+    {
+      "value": "0173d1566dcd4fd49fa25f11f14bfe4c",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "2915b3f8b703eb744fc54c81f4a9c67f",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "38de5b216c33833af710e88f7f64fc98",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "41444d7018601b599beac0c60ed1bf83",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "415898f14843d4a6537cf8f43d328eaf",
+      "sources": [
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    },
+    {
+      "value": "aac3165ece2959f39ff98334618d10d9",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "abfa7742e315485a98a5fafd6dbfb68e",
+      "sources": [
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
+      ]
+    },
+    {
+      "value": "c2efb2dcacba6d3ccc175b6ce1b7ed0a",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
+      ]
+    },
+    {
+      "value": "d65c7b544a97b0c3f2773b5fcc57d30e",
+      "sources": [
+        "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
+        "https://blog.talosintelligence.com/trust-and-the-enticing-consultancy-offer/"
+      ]
+    }
+  ]
+}
