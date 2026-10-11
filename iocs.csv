@@ -55,8 +55,9 @@ cves,CVE-2026-88776,2,https://www.cisa.gov/news-events/alerts/2026/09/27/critica
 cves,CVE-2026-88775,2,https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
 cves,CVE-2026-88774,2,https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
 cves,CVE-2026-88773,2,https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
-cves,CVE-2026-88772,3,https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
-cves,CVE-2026-88771,3,https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
+cves,CVE-2026-88772,2,https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
+cves,CVE-2026-88771,2,https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway | https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772
+cves,CVE-2026-86950,1,https://isc.sans.edu/diary/rss/33376
 cves,CVE-2026-85479,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02
 cves,CVE-2026-84411,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-06
 cves,CVE-2026-84409,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-01
@@ -920,7 +921,7 @@ domains,instance-v2e3e2-relay.screenconnect.com,1,https://isc.sans.edu/diary/rss
 domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-domains,isc.sans.edu,3,https://isc.sans.edu/diary/rss/33388 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406
+domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33376 | https://isc.sans.edu/diary/rss/33388 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406
 domains,itechx.tel,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1053,7 +1054,7 @@ domains,ruten.observer,1,https://www.microsoft.com/en-us/security/blog/2026/09/2
 domains,rutserv.exe,1,https://isc.sans.edu/diary/rss/33388
 domains,s3crts.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,sample.exe,2,https://blog.talosintelligence.com/give-yourself-room-to-be-human/ | https://blog.talosintelligence.com/making-sure-the-checks-get-printed/
-domains,sans.edu,1,https://isc.sans.edu/diary/rss/33406
+domains,sans.edu,2,https://isc.sans.edu/diary/rss/33376 | https://isc.sans.edu/diary/rss/33406
 domains,scallpay.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,schider.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,screenconnect.client.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/

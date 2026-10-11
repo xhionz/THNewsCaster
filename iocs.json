@@ -345,7 +345,6 @@
     {
       "value": "CVE-2026-88772",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
         "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
       ]
@@ -353,9 +352,14 @@
     {
       "value": "CVE-2026-88771",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/09/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.cisa.gov/news-events/alerts/2026/09/27/critical-zero-day-vulnerabilities-exploited-citrix-netscaler-adc-gateway",
         "https://www.rapid7.com/blog/post/etr-zero-day-exploitation-of-citrix-netscaler-adc-and-gateway-cve-2026-88771-and-cve-2026-88772"
+      ]
+    },
+    {
+      "value": "CVE-2026-86950",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33376"
       ]
     },
     {
@@ -5549,6 +5553,7 @@
     {
       "value": "isc.sans.edu",
       "sources": [
+        "https://isc.sans.edu/diary/rss/33376",
         "https://isc.sans.edu/diary/rss/33388",
         "https://isc.sans.edu/diary/rss/33400",
         "https://isc.sans.edu/diary/rss/33406"
@@ -6352,6 +6357,7 @@
     {
       "value": "sans.edu",
       "sources": [
+        "https://isc.sans.edu/diary/rss/33376",
         "https://isc.sans.edu/diary/rss/33406"
       ]
     },
