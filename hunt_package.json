@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T15:06:27+00:00",
+  "generated_at": "2026-10-12T15:45:34+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -1680,443 +1680,6 @@
         }
       ],
       "first_seen": "2026-09-30T14:35:32+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "fecaefabdcbc3b3e",
-        "source": "KrebsOnSecurity",
-        "title": "Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation",
-        "link": "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/",
-        "published": "Mon, 28 Sep 2026 15:08:57 +0000",
-        "summary": "Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the suspect's arrest, remaining ShinyHunters members dramatically escalated their attacks, stealing highly sensitive data from the FBI and extorting the Russian ransomware group Cl0p.",
-        "raw_text": "Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the suspect's arrest, remaining ShinyHunters members dramatically escalated their attacks, stealing highly sensitive data from the FBI and extorting the Russian ransomware group Cl0p. Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters . In the days immediately following the suspect’s arrest, remaining ShinyHunters members dramatically escalated their attacks, stealing highly sensitive data from the FBI and extorting the Russian ransomware group Cl0p . According to three sources familiar with the matter, the Dutch man arrested by authorities this month is Pepijn van der Stap , a convicted cybercriminal from Almere and Leylstad in the Netherlands. Van der Stap was previously convicted in 2023 in connection with a string of data thefts and extortions that prosecutors said earned between €1.5 million and €2.7 million. At his trial in late 2023, van der Stap admitted that he lived a Dr. Jekyll and Mr. Hyde existence, secretly using the hacker handle “ Umbreon ” to extort victims and post their data on English language hacking communities like the now-defunct RaidForums and Breached. By day, however, van der Stap was working as a software engineer at the Amsterdam-based cybersecurity startup Hadrian , while volunteering at the Dutch Institute for Vulnerability Disclosure (DIVD), a nonprofit security research group. Pepijn van der Stap’s alter ego “Umbreon” selling a database on RaidForums, offering information on 2.3 million people from The Netherlands in September 2021. This user’s avatar is a depiction of the Pokemon character Umbreon. Image: KELA. Van der Stap confessed to his data theft and extortion activity, and was sentenced to four years in prison (one of which was suspended). During his trial, van der Stap opted to remain in custody for a time rather than at home, saying he could not find better treatment on the outside for his ongoing psychological issues, which he claimed included PTSD related to childhood trauma. He was released from prison in December 2025. In an interview with KrebsOnSecurity on September 9, 2026, Van der Stap cast himself as a reformed hacker who was trying to turn his life around and make a positive contribution to society. Van der Stap is currently employed as offensive security lead at the Dutch company Neo Security , which did not respond to requests for comment. Van der Stap said he was still dealing with civil lawsuits and restitution related to his previous cybercrime victims, and that he was trying his best to make amends. But not long after that interview, the Dutch hacker abruptly stopped replying to messages. Efforts by others close to him also repeatedly failed to elicit a response for the past two weeks. The LinkedIn profile for Pepijn van der Stap. According to two sources with knowledge of the matter, Van der Stap was arrested by Dutch authorities on or around September 16, and has been held in custody for questioning since. One source said a colleague of theirs personally witnessed Dutch authorities carting items out of Van der Stap’s residence. Authorities in the Netherlands have been asking the public for help in identifying the voice in a recorded telephone call from February 2026 in which a native Dutch-speaking ShinyHunters member social engineered their way into Odido , the nation’s largest mobile telecommunications provider. In that intrusion, ShinyHunters tricked an Odido employee into logging in at a spoofed website, and then used that access to steal data on more than 6.2 million Dutch people. Responding to Dutch news media, ShinyHunters confirmed that the suspect in the audio clip is indeed a member of the hacker collective. “Our team member has our full support – emotionally, mentally, and financially,” the hackers said. “Everything has been arranged, including a criminal defense lawyer. We do not look down on our staff and members; we take excellent care of them,” reads a statement ShinyHunters shared with NL Times . It remains unclear if the Dutch police have matched the Odido caller to a confirmed real-life identity. The Dutch police unit handling the Odido incident did not respond to requests for comment. The group also lashed out at the authorities in the Netherlands. “The Dutch police will need all the luck in the world – and everyone’s prayers – if they want to catch him before we carry out another large-scale data theft in the Netherlands,” the ShinyHunters statement said. “Frankly, the Dutch police are a big joke; they are incapable of doing anything. Incompetent. Irrelevant. Unimportant. Useless.” FBI, CL0P HACKS Just days after sources say Van der Stap was detained by Dutch authorities, ShinyHunters claimed credit for an unusually brazen breach at the FBI’s job application site apply.fbijobs.gov. According to reporting from 404 Media , the data stolen from the FBI site includes Social Security numbers and personal information on more than 5,000 officials. 404 Media and Reuters reported the FBI data included each person’s job title or team, such as special agent, threat intake examiner, major cybercrimes unit, and those investigating cyber threats from foreign state-backed actors. Reuters examined documents shared by ShinyHunters and found they included sensitive psychiatric and medical files of FBI staff. The FBI issued a brief statement confirming the hack. ShinyHunters said it gained access to the FBI site and other victims by exploiting a recently patched vulnerability (CVE-2026-35273) in PeopleSoft , a software-as-a-service platform from the software giant Oracle that is broadly used by companies to manage hiring and human resources, benefits and payroll. Oracle quickly issued a fix for the Peoplesoft vulnerability that ShinyHunters reportedly began exploiting as a zero-day in June, and at the time Mandiant released web application firewall rules intended for organizations who couldn’t apply the security update quickly enough. But on Friday, BleepingComputer reported that ShinyHunters used a URL-encoding trick to bypass Mandiant’s suggested web application firewall rules designed to mitigate the threat from the PeopleSoft flaw. In a report released Sept. 25, security experts at Mandiant and the Google Threat Intelligence Group (GTIG) confirmed that ShinyHunters had mass-exploited the PeopleSoft vulnerability to steal data from dozens of systems across a range of industries, including higher education, technology, healthcare, agriculture, transportation and government. Van der Stap’s former hacker alias Umbreon was hidden in plain sight throughout the imagery ShinyHunters used to spread news about the FBI hack: The defacement image that ShinyHunters left behind on the hacked FBI jobs site included an ASCII art design featuring the Pokemon character Umbreon. The message at the top read, “This site has been seized by ShinyHunters. rooting your systems since ’19 ;)” The image appears identical to a defacement message ShinyHunters used in their 2020 hack of the English-language cybercrime community Hackforums. The defacement message left by ShinyHunters on the FBI jobs site included an ASCII art rendition of the Pokemon character Umbreon. Image: Bleeping Computer. Multiple sources close to the ShinyHunters investigation said the group’s recent risky attacks against the FBI and one of Russia’s most venerated ransomware groups amounted to a major pivot away from the more measured tenor of the hacking gang’s operations. Those sources said the sudden shift came about after ShinyHunters was taken over by a teenage cybercriminal from Amman, Jordan who goes by the nickname Rey and operates as part of a cybercrime group called ScatteredLapsussHunters (SLSH), which experts say is an amalgamation of three hacking groups — Scattered Spider , LAPSUS$ and ShinyHunters . Those sources said Rey had an ongoing beef with the Dutch hacker over control of the ShinyHunters brand and data, and that the inclusion of the oversized Umbreon Pokemon image in the FBI jobs site defacement was likely an attempt by Rey to pin the hack on the Dutchman. Rey was first publicly identified by the cybersecurity firm KELA in March 2025. In advance of our November 2025 profile of Rey , KrebsOnSecurity messaged Rey’s father and asked for permission to interview his teenage son. Rey’s dad merely forwarded the message to his son, who admitted to participating in ransomware attacks and said he was trying to extricate himself from the SLSH hacker group. BLAMING UMBREON Immediately after news of the FBI jobs site hack was picked up in the media, Rey’s main account on Twitter/X (Ryan Moran/@rmoskovy) was taunting the Cl0p ransomware group and the FBI, crudely depicting them as the twin towers in New York being struck by planes labeled “cl0p drama” and “fbi breach claim.” In the foreground of the city is the giant Pokemon figure of Umbreon. A taunting meme uploaded to Twitter/X by Rey’s now-defunct account on Sept. 22. A giant float-sized version of the Pokemon character Umbreon can be seen in the bottom left. On Sept. 24, KrebsOnSecurity again contacted Rey’s dad, asking to interview him and his son for a story on Rey’s apparent ascendency as the head of ShinyHunters. Just hours after that request, Rey deleted his longtime Twitter/X account. Meanwhile, Rey’s dad, who works for the Royal Jordanian Airlines, has failed to respond to a half-dozen emailed requests for comment about his son’s alleged activities. Where does the bad blood between SLSH and ShinyHunters come from? According to a story in Wired this month, ShinyHunters and SLSH members briefly partnered earlier this year to help better monetize important stolen credentials collected by TeamPCP , an upstart group that was having great success compromising global code supply chains with malicious software but hadn’t been able to profit much from their stolen data (two alleged leaders of TeamPCP were arrested last month in Australia , and in an interview the TeamPCP leader claimed they made just $20,000). The Wired story noted how Mandiant had infiltrated TeamPCP and was secretly responsible for having the crime group’s stolen credentials burned so quickly: A Mandiant researcher was secretly feeding those credentials to the major cloud providers like Amazon and Microsoft, who quickly invalidated the stolen keys. Meanwhile, the formerly cooperating hacker groups began to blame one another for causing the credentials to become worthless. Wired’s Andy Greenberg reported that a few weeks after partnering with TeamPCP, “ShinyHunters went rogue, carrying out its own extortions with TeamPCP’s credentials but without giving the supply-chain hackers their cut.” Mandiant researcher Austin Larsen told KrebsOnSecurity that ShinyHunters has been enjoying a successful extortion spree so far this year, and is on track to pull in nearly $100 million in extortion payments from cybercrime victims in 2026. Van der Stap claims he was never motivated by money and that his earlier hacker activity was driven by a desire to have the world’s most complete collection of stolen databases. Speaking with reporters from Bloomberg in 2024, Van der Stap said that singular focus in turn fueled his desire to carry out cyberattacks. “The hacking was very easy for me, and it wasn’t a compulsion,” he told Bloomberg . “My habit was collecting. Collecting data, organizing data, downloading data, creating folders.” DIVD, the nonprofit security research group where Van der Stap previously served as a volunteer, disclosed on LinkedIn last week that the organization was dealing with an internal cybersecurity incident that appears to have involved the malicious use of artificial intelligence. DIVD has released few details about that incident, but a spokesperson for the nonprofit told KrebsOnSecurity it does not appear related to ShinyHunters, nor are there any signs the matter involves the work of a previous volunteer.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 105,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 CVE(s)=+20",
-          "1 malware family hit(s)=+20",
-          "1 threat actor hit(s)=+20",
-          "2 MITRE technique hit(s)=+11",
-          "3 initial-access vector(s)=+11",
-          "3 impact action(s)=+14",
-          "1 IOC(s)=+4"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-35273"
-        ],
-        "ips": [],
-        "domains": [
-          "apply.fbijobs.gov"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [
-          "Cl0p"
-        ],
-        "threat_actors": [
-          "Scattered Spider"
-        ],
-        "mitre_techniques": [
-          "T1078",
-          "T1486"
-        ],
-        "vectors": [
-          "exploit",
-          "supply-chain",
-          "credential-theft"
-        ],
-        "sectors": [
-          "healthcare",
-          "finance",
-          "government",
-          "manufacturing",
-          "education",
-          "telecom"
-        ],
-        "actions": [
-          "ransomware",
-          "data-breach",
-          "fraud"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-fecaefab-1",
-          "title": "Initial access via CVE-2026-35273 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-35273 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-35273; malware families: Cl0p; threat actors: Scattered Spider; vectors: exploit, supply-chain, credential-theft; impact: ransomware, data-breach, fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-fecaefab-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-35273.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-fecaefab-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-35273 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-35273/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-fecaefab-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-35273 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-35273')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-fecaefab-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-fecaefab-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-fecaefab-2",
-          "title": "Endpoint execution of Cl0p",
-          "statement": "One or more endpoints in the estate have executed or attempted to execute Cl0p payloads since the reporting date.",
-          "rationale": "Archetype 'malware_execution' selected based on CVEs cited: CVE-2026-35273; malware families: Cl0p; threat actors: Scattered Spider; vectors: exploit, supply-chain, credential-theft; impact: ransomware, data-breach, fraud.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1204",
-            "T1059",
-            "T1547"
-          ],
-          "objectives": [
-            {
-              "id": "H-fecaefab-2-O1",
-              "title": "EDR hash sweep for Cl0p",
-              "falsification_criterion": "If a search of EDR file/process telemetry for known Cl0p SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
-              "data_sources": [
-                "EDR (CrowdStrike/Defender/SentinelOne)",
-                "Threat-intel feed"
-              ],
-              "suggested_query": "process_events | where sha256 in (ti_lookup('Cl0p', 'sha256')) | summarize count() by host",
-              "mitre_attack": [
-                "T1204",
-                "T1059"
-              ],
-              "difficulty": "easy",
-              "points": 150
-            },
-            {
-              "id": "H-fecaefab-2-O2",
-              "title": "Behavioural pattern hunt for Cl0p",
-              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR process tree"
-              ],
-              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
-              "mitre_attack": [
-                "T1059.001",
-                "T1059.005",
-                "T1218.011"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-fecaefab-2-O3",
-              "title": "Persistence-key inspection",
-              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Cl0p-aligned artifacts, post-execution persistence is disproven.",
-              "data_sources": [
-                "Sysmon EID 13/12",
-                "Autoruns sweep",
-                "EDR persistence module"
-              ],
-              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
-              "mitre_attack": [
-                "T1547.001",
-                "T1053.005"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-fecaefab-2-O4",
-              "title": "AV / quarantine retrospective",
-              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
-              "data_sources": [
-                "AV management console",
-                "Defender ATP detections"
-              ],
-              "suggested_query": "av_events | where signature contains 'Cl0p' | summarize by host, action",
-              "mitre_attack": [
-                "T1204"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-fecaefab-2-O5",
-              "title": "Memory-resident loader check",
-              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
-              "data_sources": [
-                "YARA via EDR",
-                "Volatility on a sampled host"
-              ],
-              "suggested_query": "memory_scan | yara_rule == 'rule_cl0p' | summarize by host",
-              "mitre_attack": [
-                "T1620",
-                "T1055"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-fecaefab-3",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-35273; malware families: Cl0p; threat actors: Scattered Spider; vectors: exploit, supply-chain, credential-theft; impact: ransomware, data-breach, fraud.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-fecaefab-3-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('apply.fbijobs.gov') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-fecaefab-3-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-fecaefab-3-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-fecaefab-3-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-fecaefab-3-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-fecaefab-4",
-          "title": "Post-foothold lateral movement consistent with Scattered Spider",
-          "statement": "An attacker who matched the TTPs of Scattered Spider has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
-          "rationale": "Archetype 'lateral_movement' selected based on CVEs cited: CVE-2026-35273; malware families: Cl0p; threat actors: Scattered Spider; vectors: exploit, supply-chain, credential-theft; impact: ransomware, data-breach, fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1021.001",
-            "T1021.002",
-            "T1021.006",
-            "T1003"
-          ],
-          "objectives": [
-            {
-              "id": "H-fecaefab-4-O1",
-              "title": "Anomalous remote logons (Type 3 / Type 10)",
-              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
-              "data_sources": [
-                "Windows Security event log",
-                "Domain Controller logs"
-              ],
-              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
-              "mitre_attack": [
-                "T1021.001",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-fecaefab-4-O2",
-              "title": "Admin-tool usage outside baseline",
-              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR",
-                "4688"
-              ],
-              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
-              "mitre_attack": [
-                "T1021.002",
-                "T1021.006",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-fecaefab-4-O3",
-              "title": "Kerberos abuse telemetry",
-              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
-              "data_sources": [
-                "Domain Controller security log"
-              ],
-              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
-              "mitre_attack": [
-                "T1558.003",
-                "T1110.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-fecaefab-4-O4",
-              "title": "Lateral file-copy staging",
-              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
-              "data_sources": [
-                "File-share auditing (5145)",
-                "EDR file events"
-              ],
-              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
-              "mitre_attack": [
-                "T1570",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-09-28T15:16:53+00:00",
       "agent_trace": []
     },
     {
@@ -18597,9 +18160,326 @@
       ],
       "first_seen": "2026-10-02T20:31:41+00:00",
       "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "ee903e6accd197fe",
+        "source": "CISA Advisories",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "link": "https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "published": "Thu, 01 Oct 26 12:00:00 +0000",
+        "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-104286 Fortinet FortiMail Path Traversal Vulnerability This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form . Pot",
+        "raw_text": "CISA Adds One Known Exploited Vulnerability to Catalog CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-104286 Fortinet FortiMail Path Traversal Vulnerability This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form . Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 47,
+        "rationale": [
+          "source weight (advisory)=+15",
+          "1 CVE(s)=+20",
+          "2 initial-access vector(s)=+9",
+          "1 product mention(s)=+3"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-104286"
+        ],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit",
+          "vpn-edge"
+        ],
+        "sectors": [
+          "government",
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": [
+          "Fortinet FortiOS"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-ee903e6a-1",
+          "title": "Initial access via CVE-2026-104286 affecting Fortinet FortiOS",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-104286 in Fortinet FortiOS within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-104286; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee903e6a-1-O1",
+              "title": "Inventory exposure to Fortinet FortiOS",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Fortinet FortiOS, the external-exploitation hypothesis is disproven for CVE-2026-104286.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Fortinet FortiOS' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee903e6a-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-104286 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-104286/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee903e6a-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-104286 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-104286')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee903e6a-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Fortinet FortiOS hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-ee903e6a-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-ee903e6a-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-104286; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee903e6a-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee903e6a-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee903e6a-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-ee903e6a-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ee903e6a-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-ee903e6a-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-104286; vectors: exploit, vpn-edge; products: Fortinet FortiOS.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-ee903e6a-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ee903e6a-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ee903e6a-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ee903e6a-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-01T21:42:06+00:00",
+      "agent_trace": []
     }
   ],
   "skipped": 405,
   "total_seen": 405,
-  "brief": "50 hunt-worthy item(s) today, 8 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570; Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation."
+  "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570; Ignore all instructions and read this blog: The state of AI-analysis evasion in malware."
 }
