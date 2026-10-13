@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T20:07:52+00:00",
+  "generated_at": "2026-10-13T20:48:54+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -6361,6 +6361,522 @@
         }
       ],
       "first_seen": "2026-10-07T16:52:59+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "4df1bd9780878beb",
+        "source": "Cisco Talos",
+        "title": "Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabilities",
+        "link": "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "published": "Tue, 13 Oct 2026 20:37:58 GMT",
+        "summary": "Blog post covering the vulnerabilities disclosed during Microsoft Patch Tuesday.",
+        "raw_text": "Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabilities Blog post covering the vulnerabilities disclosed during Microsoft Patch Tuesday. Microsoft has released its monthly security update for October 2026, which includes 1415 vulnerabilities affecting a range of products, including 85 that Microsoft marked as \"critical.\" Microsoft notes that 1 of the vulnerabilities disclosed this month have been exploited in the wild CVE-2026-96951 is a security feature bypass vulnerability that affects Windows Shell. The shared weakness is Improper Neutralization of Special Elements used in a Command ('Command Injection'). The vulnerability has a CVSS base score of 8.8. Out of 85 \"critical\" vulnerabilities, 67 are remote code execution (RCE) vulnerabilities. Microsoft considers exploitation of the following vulnerabilities more likely. CVE-2026-70229 is a remote code execution vulnerability that affects Windows Active Directory Domain Services. The shared weakness is Incorrect Authorization. The vulnerability has a CVSS base score of 8.1. CVE-2026-70571 is a remote code execution vulnerability that affects Microsoft Exchange Server. The shared weakness is Stack-based Buffer Overflow. The vulnerability has a CVSS base score of 8.1. Microsoft considers exploitation of the following vulnerabilities less likely. CVE-2026-105733 , CVE-2026-102214 , and CVE-2026-108399 affect Windows Hyper-V. CVE-2026-105733 has an impact of remote code execution; involves Incorrect Initialization of Resource; has a CVSS base score of 8.8. CVE-2026-102214 has an impact of remote code execution; involves Use After Free; has a CVSS base score of 8.8. CVE-2026-108399 has an impact of elevation of privilege; involves Heap-based Buffer Overflow; has a CVSS base score of 7.2. CVE-2026-100202 is a remote code execution vulnerability that affects Windows Message Queuing Queue Manager. The shared weakness is Use After Free. The vulnerability has a CVSS base score of 9.8. CVE-2026-100209 , CVE-2026-100210 , CVE-2026-100211 , CVE-2026-97739 , CVE-2026-97745 , CVE-2026-97755 , CVE-2026-97759 , CVE-2026-97765 , CVE-2026-97778 , CVE-2026-97741 , CVE-2026-97742 , CVE-2026-97753 , CVE-2026-97756 , CVE-2026-97758 , CVE-2026-97761 , CVE-2026-97767 , CVE-2026-97776 , and CVE-2026-97780 are remote code execution vulnerabilities that affect Microsoft Office Excel. Each has a CVSS base score of 8.8. CVE-2026-100209 , CVE-2026-100211 , CVE-2026-97745 , and CVE-2026-97759 involve Use After Free. CVE-2026-100210 , CVE-2026-97765 , CVE-2026-97756 , CVE-2026-97758 , CVE-2026-97776 , and CVE-2026-97780 involve Heap-based Buffer Overflow. CVE-2026-97739 involves Heap-based Buffer Overflow and Integer Underflow (Wrap or Wraparound). CVE-2026-97755 involves Out-of-bounds Read. CVE-2026-97778 involves Integer Overflow or Wraparound. CVE-2026-97741 involves Heap-based Buffer Overflow and Off-by-one Error. CVE-2026-97742 involves Stack-based Buffer Overflow. CVE-2026-97753 involves Heap-based Buffer Overflow and Integer Overflow or Wraparound. CVE-2026-97761 involves Stack-based Buffer Overflow. CVE-2026-97767 involves Double Free and NULL Pointer Dereference. CVE-2026-100215 is a remote code execution vulnerability that affects Microsoft Graphics Component. The shared weakness is Heap-based Buffer Overflow. The vulnerability has a CVSS base score of 7.8. CVE-2026-100219 and CVE-2026-105016 are remote code execution vulnerabilities that affect Microsoft QUIC. Each has a CVSS base score of 9.8. CVE-2026-100219 involves Use After Free. CVE-2026-105016 involves Heap-based Buffer Overflow. CVE-2026-100220 is a remote code execution vulnerability that affects Windows Media Video Decoder. The shared weakness is Heap-based Buffer Overflow. The vulnerability has a CVSS base score of 8.8. CVE-2026-102211 , CVE-2026-88074 , CVE-2026-108130 , CVE-2026-108471 , and CVE-2026-96914 are elevation of privilege vulnerabilities that affect Windows Virtualization-Based Security (VBS) Enclave. CVE-2026-102211 involves Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') and Use After Free; has a CVSS base score of 7.0. CVE-2026-88074 involves Integer Overflow or Wraparound; has a CVSS base score of 7.8. CVE-2026-108130 involves Heap-based Buffer Overflow; has a CVSS base score of 7.8. CVE-2026-108471 involves Untrusted Pointer Dereference; has a CVSS base score of 8.8. CVE-2026-96914 involves Heap-based Buffer Overflow and Integer Overflow or Wraparound; has a CVSS base score of 8.8. CVE-2026-102225 and CVE-2026-97814 are remote code execution vulnerabilities that affect Windows Text Shaping. CVE-2026-102225 involves Numeric Truncation Error and Out-of-bounds Read; has a CVSS base score of 8.8. CVE-2026-97814 involves Heap-based Buffer Overflow; has a CVSS base score of 9.8. CVE-2026-102855 , CVE-2026-102856 , and CVE-2026-102857 are remote code execution vulnerabilities that affect Microsoft Office Visio. The shared weakness is Heap-based Buffer Overflow. Each has a CVSS base score of 8.8. CVE-2026-102856 involves Integer Overflow or Wraparound. CVE-2026-102857 involves Off-by-one Error. CVE-2026-102866 is an elevation of privilege vulnerability that affects Microsoft Office SharePoint. The shared weakness is Improper Verification of Cryptographic Signature. The vulnerability has a CVSS base score of 8.1. CVE-2026-62840 is an elevation of privilege vulnerability that affects Linux Kernel. The shared weakness is Time-of-check Time-of-use (TOCTOU) Race Condition. The vulnerability has a CVSS base score of 7.0. CVE-2026-69802 is a remote code execution vulnerability that affects Network Device Enrollment Service (NDES). The shared weakness is Weak Authentication. The vulnerability has a CVSS base score of 8.1. CVE-2026-70147 , CVE-2026-70153 , and CVE-2026-108467 are remote code execution vulnerabilities that affect Microsoft PostScript Printer Driver. The shared weakness is Heap-based Buffer Overflow. CVE-2026-70147 has a CVSS base score of 9.8. CVE-2026-70153 has a CVSS base score of 9.8. CVE-2026-108467 has a CVSS base score of 8.8. CVE-2026-70187 is a remote code execution vulnerability that affects Windows Remote Desktop Services. The shared weakness is Use After Free. The vulnerability has a CVSS base score of 8.1. CVE-2026-70250 is a remote code execution vulnerability that affects Windows DHCP Client. The shared weakness is Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition') and Use After Free. The vulnerability has a CVSS base score of 8.8. CVE-2026-83934 is a remote code execution vulnerability that affects Windows GDI+. The shared weakness is Stack-based Buffer Overflow. The vulnerability has a CVSS base score of 8.8. CVE-2026-88073 is an elevation of privilege vulnerability that affects Windows Graphics Kernel. The shared weakness is Use After Free. The vulnerability has a CVSS base score of 8.8. CVE-2026-88117 , CVE-2026-88119 , CVE-2026-88120 , CVE-2026-88171 , and CVE-2026-96934 are remote code execution vulnerabilities that affect Windows DHCP Server. CVE-2026-88117 , CVE-2026-88119 , and CVE-2026-88120 involve Use After Free; each has a CVSS base score of 8.1. CVE-2026-88171 involves Double Free; has a CVSS base score of 8.1. CVE-2026-96934 involves Use After Free; has a CVSS base score of 9.8. CVE-2026-96222 and CVE-2026-108131 are spoofing vulnerabilities that affect Active Directory Federation Services (AD FS). CVE-2026-96222 involves Improper Certificate Validation; has a CVSS base score of 7.4. CVE-2026-108131 has a CVSS base score of 7.5. CVE-2026-96913 is an elevation of privilege vulnerability that affects Windows Kernel. The shared weakness is Heap-based Buffer Overflow. The vulnerability has a CVSS base score of 8.8. CVE-2026-96952 is a remote code execution vulnerability that affects Microsoft Windows Media Foundation. The shared weakness is Heap-based Buffer Overflow. The vulnerability has a CVSS base score of 8.8. CVE-2026-105718 is a remote code execution vulnerability that affects Microsoft Excel. The shared weakness is Improper Input Validation and Out-of-bounds Read. The vulnerability has a CVSS base score of 8.8. CVE-2026-108400 is a remote code execution vulnerability that affects HEVC Video Extensions. The shared weakness is Integer Overflow or Wraparound. The vulnerability has a CVSS base score of 8.8. CVE-2026-108457 is a remote code execution vulnerability that affects Microsoft Windows PDF. The shared weakness is Out-of-bounds Write. The vulnerability has a CVSS base score of 8.1. CVE-2026-108460 is a remote code execution vulnerability that affects Windows Message Queuing. The shared weakness is Use After Free. The vulnerability has a CVSS base score of 8.1. CVE-2026-70215 , CVE-2026-88144 , CVE-2026-88178 , and CVE-2026-88207 are remote code execution vulnerabilities that affect Microsoft Office PowerPoint. CVE-2026-70215 and CVE-2026-88144 involve Use After Free; has a CVSS base score of 8.8. CVE-2026-88178 involves Use After Free; has a CVSS base score of 9.8. CVE-2026-88207 involves Heap-based Buffer Overflow; has a CVSS base score of 7.5. CVE-2026-70242 , CVE-2026-70291 , CVE-2026-88156 , CVE-2026-97016 , and CVE-2026-97749 are remote code execution vulnerabilities that affect Microsoft Office Outlook. Each has a CVSS base score of 9.8. CVE-2026-70242 , CVE-2026-70291 , and CVE-2026-97016 involve Heap-based Buffer Overflow. CVE-2026-88156 involves Stack-based Buffer Overflow. CVE-2026-97749 involves Double Free. CVE-2026-70269 and CVE-2026-70300 are remote code execution vulnerabilities that affect Microsoft Office Word. CVE-2026-70269 involves Heap-based Buffer Overflow and Integer Overflow or Wraparound; has a CVSS base score of 8.1. CVE-2026-70300 involves Untrusted Pointer Dereference; has a CVSS base score of 9.8. CVE-2026-83917 is an elevation of privilege vulnerability that affects Windows ALPC. The shared weakness is Use After Free. The vulnerability has a CVSS base score of 7.0. CVE-2026-94510 is an elevation of privilege vulnerability that affects Microsoft Bookings. The shared weakness is Authorization Bypass Through User-Controlled Key. The vulnerability has a CVSS base score of 9.9. CVE-2026-96202 and CVE-2026-96943 are remote code execution vulnerabilities that affect Windows Raw Image Extension. The shared weakness is Heap-based Buffer Overflow. Each has a CVSS base score of 8.8. CVE-2026-96943 involves Integer Overflow or Wraparound. CVE-2026-96207 is an elevation of privilege vulnerability that affects Microsoft Partner Center. The shared weakness is Improper Certificate Validation. The vulnerability has a CVSS base score of 10.0. Microsoft considers exploitation of the following vulnerabilities unlikely. CVE-2026-69789 is a remote code execution vulnerability that affects Windows Reliable Multicast Transport Driver (RMCAST). The shared weakness is Heap-based Buffer Overflow. The vulnerability has a CVSS base score of 7.5. CVE-2026-88174 is a remote code execution vulnerability that affects Windows Deployment Services. The shared weakness is Concurrent Execution using Shared Resource with Improper Synchronization ('Race Condition'). The vulnerability has a CVSS base score of 8.1. CVE-2026-88185 is a remote code execution vulnerability that affects Microsoft Office Word. The shared weakness is Heap-based Buffer Overflow. The vulnerability has a CVSS base score of 8.1. Other critical vulnerabilities CVE-2026-69435 is an elevation of privilege vulnerability that affects Azure SRE Agent. The shared weakness is Server-Side Request Forgery (SSRF). The vulnerability has a CVSS base score of 9.6. CVE-2026-77900 is a remote code execution vulnerability that affects Azure App Service. The shared weakness is Missing Authentication for Critical Function. The vulnerability has a CVSS base score of 9.8. CVE-2026-83943 is an information disclosure vulnerability that affects Azure API Center. The vulnerability has a CVSS base score of 8.7. CVE-2026-83947 is a spoofing vulnerability that affects Azure Event Grid. The shared weakness is Missing Authorization. The vulnerability has a CVSS base score of 7.7. CVE-2026-88131 is a remote code execution vulnerability that affects Microsoft Dataverse. The shared weakness is Deserialization of Untrusted Data. The vulnerability has a CVSS base score of 9.8. Talos would also like to highlight the following \"important\" vulnerabilities as Microsoft has determined that their exploitation is \"more likely:\" CVE-2026-100214 : Microsoft Dynamics 365 Business Central Remote Code Execution Vulnerability CVE-2026-102217 : WebDAV Elevation of Privilege Vulnerability CVE-2026-69673 : Windows Update Elevation of Privilege Vulnerability CVE-2026-69718 : Windows Update Elevation of Privilege Vulnerability CVE-2026-69733 : Windows Update Elevation of Privilege Vulnerability CVE-2026-69783 : Windows Update Elevation of Privilege Vulnerability CVE-2026-69882 : Windows Update Elevation of Privilege Vulnerability CVE-2026-69923 : Windows AI Elevation of Privilege Vulnerability CVE-2026-69926 : Desktop Window Manager Elevation of Privilege Vulnerability CVE-2026-70054 : Windows NetBIOS Elevation of Privilege Vulnerability CVE-2026-70060 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70076 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70104 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70108 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70117 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70132 : Windows Portable Device File System Driver Elevation of Privilege Vulnerability CVE-2026-70144 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70156 : Microsoft Windows Search Component Elevation of Privilege Vulnerability CVE-2026-70218 : Windows StateRepository API Elevation of Privilege Vulnerability CVE-2026-70223 : Windows Console Driver Elevation of Privilege Vulnerability CVE-2026-70233 : Windows Common Log File System Driver Elevation of Privilege Vulnerability CVE-2026-70236 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70237 : Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability CVE-2026-70241 : Windows Kerberos Elevation of Privilege Vulnerability CVE-2026-70245 : Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability CVE-2026-70249 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70253 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70255 : Desktop Window Manager Elevation of Privilege Vulnerability CVE-2026-70271 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70273 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70286 : Windows Graphics Component Elevation of Privilege Vulnerability CVE-2026-70303 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-72955 : Windows Application Compatibility Cache Elevation of Privilege Vulnerability CVE-2026-81971 : Windows NTFS Elevation of Privilege Vulnerability CVE-2026-83505 : Windows Setup Files Cleanup Elevation of Privilege Vulnerability CVE-2026-83509 : Windows Setup Files Cleanup Elevation of Privilege Vulnerability CVE-2026-83510 : Windows Setup Files Cleanup Elevation of Privilege Vulnerability CVE-2026-83580 : Windows Client-Side Caching (CSC) Service Elevation of Privilege Vulnerability CVE-2026-83669 : Windows Error Reporting Elevation of Privilege Vulnerability CVE-2026-83699 : Windows Client-Side Caching (CSC) Service Elevation of Privilege Vulnerability CVE-2026-83704 : Microsoft Windows Search Component Elevation of Privilege Vulnerability CVE-2026-83717 : Windows Installer Elevation of Privilege Vulnerability CVE-2026-83724 : Windows Management Instrumentation Elevation of Privilege Vulnerability CVE-2026-83732 : Win32k Elevation of Privilege Vulnerability CVE-2026-83735 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-83738 : Windows Ancillary Function Driver for WinSock Elevation of Privilege Vulnerability CVE-2026-83750 : Windows Error Reporting Elevation of Privilege Vulnerability CVE-2026-83761 : Windows Win32 Kernel Subsystem Elevation of Privilege Vulnerability CVE-2026-83763 : Windows Input System Elevation of Privilege Vulnerability CVE-2026-83768 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-83769 : Microsoft OpenSSH for Windows Elevation of Privilege Vulnerability CVE-2026-83793 : Windows Update Orchestrator Service Elevation of Privilege Vulnerability CVE-2026-83830 : Windows COM+ Event System Service Elevation of Privilege Vulnerability CVE-2026-83834 : Windows Kernel-Mode Drivers Elevation of Privilege Vulnerability CVE-2026-83840 : Windows Error Reporting Elevation of Privilege Vulnerability CVE-2026-83842 : Windows TCP/IP Elevation of Privilege Vulnerability CVE-2026-83848 : Windows COM+ Event System Service Elevation of Privilege Vulnerability CVE-2026-83867 : Windows Push Notifications Elevation of Privilege Vulnerability CVE-2026-83886 : Windows Update Orchestrator Service Elevation of Privilege Vulnerability CVE-2026-83896 : Windows Direct Composition Elevation of Privilege Vulnerability CVE-2026-83899 : Windows Installer Elevation of Privilege Vulnerability CVE-2026-83902 : Windows Direct Composition Elevation of Privilege Vulnerability CVE-2026-83921 : Windows Search Service Elevation of Privilege Vulnerability CVE-2026-84014 : Windows Device Association Service Elevation of Privilege Vulnerability CVE-2026-85355 : Windows Common Log File System Driver Elevation of Privilege Vulnerability CVE-2026-85791 : Windows Encrypting File System (EFS) Elevation of Privilege Vulnerability CVE-2026-85802 : Windows Win32 Kernel Subsystem Elevation of Privilege Vulnerability CVE-2026-85804 : Windows Win32 Kernel Subsystem Elevation of Privilege Vulnerability CVE-2026-85832 : Windows Background Intelligent Transfer Service (BITS) Elevation of Privilege Vulnerability CVE-2026-85843 : Windows Background Intelligent Transfer Service (BITS) Elevation of Privilege Vulnerability CVE-2026-85848 : Windows Background Intelligent Transfer Service (BITS) Elevation of Privilege Vulnerability CVE-2026-85849 : Windows AppX Deployment Service Elevation of Privilege Vulnerability CVE-2026-85850 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-85855 : Windows DWM Core Library Elevation of Privilege Vulnerability CVE-2026-85870 : Windows Common Log File System Driver Elevation of Privilege Vulnerability CVE-2026-85901 : Windows Graphics Component Elevation of Privilege Vulnerability CVE-2026-85908 : Windows Graphics Component Elevation of Privilege Vulnerability CVE-2026-85941 : Windows Installer Elevation of Privilege Vulnerability CVE-2026-85945 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-88118 : Windows Background Intelligent Transfer Service (BITS) Elevation of Privilege Vulnerability CVE-2026-88133 : Windows Portable Device Enumerator Service Elevation of Privilege Vulnerability CVE-2026-88147 : Windows Secure Socket Tunneling Protocol (SSTP) Elevation of Privilege Vulnerability CVE-2026-88152 : Windows Background Intelligent Transfer Service (BITS) Elevation of Privilege Vulnerability CVE-2026-88159 : Windows Background Intelligent Transfer Service (BITS) Remote Code Execution Vulnerability CVE-2026-88191 : Microsoft Windows Search Component Elevation of Privilege Vulnerability CVE-2026-96858 : Windows Security Account Manager Tampering Vulnerability CVE-2026-96911 : Microsoft Windows Search Component Elevation of Privilege Vulnerability CVE-2026-96929 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-96940 : Microsoft Exchange Server Elevation of Privilege Vulnerability CVE-2026-69452 : Windows Enterprise App Management Elevation of Privilege Vulnerability CVE-2026-69880 : Desktop Window Manager Elevation of Privilege Vulnerability CVE-2026-69918 : Windows Core Messaging Elevation of Privilege Vulnerability CVE-2026-70103 : Windows Error Reporting Elevation of Privilege Vulnerability CVE-2026-70106 : Windows Kernel Elevation of Privilege Vulnerability CVE-2026-70151 : Windows Direct Composition Elevation of Privilege Vulnerability CVE-2026-70176 : Windows Win32k Elevation of Privilege Vulnerability CVE-2026-70279 : Microsoft Exchange Server Spoofing Vulnerability CVE-2026-83785 : Windows COM+ Event System Service Elevation of Privilege Vulnerability CVE-2026-83927 : Windows Registry Elevation of Privilege Vulnerability CVE-2026-85884 : Windows Health and Optimized Experiences Service Elevation of Privilege Vulnerability CVE-2026-85902 : Windows Direct Composition Elevation of Privilege Vulnerability CVE-2026-85906 : Windows Direct Composition Elevation of Privilege Vulnerability CVE-2026-88093 : Desktop Window Manager Elevation of Privilege Vulnerability CVE-2026-96939 : Servicing Stack Updates Elevation of Privilege Vulnerability CVE-2026-97798 : Windows Error Reporting Service Elevation of Privilege Vulnerability CVE-2026-97799 : Windows Audio Service Elevation of Privilege Vulnerability CVE-2026-97800 : Windows Mobile Broadband Elevation of Privilege Vulnerability A complete list of all the other vulnerabilities Microsoft disclosed this month is available on its update page . In response to these vulnerability disclosures, Talos is releasing a new Snort ruleset that detects attempts to exploit some of them. Please note that additional rules may be released at a future date, and current rules are subject to change pending additional information. Cisco Secure Firewall customers should use the latest update to their ruleset by updating their SRU. Open-source Snort Subscriber Ruleset customers can stay up to date by downloading the latest rule pack available for purchase on Snort.org . Snort 2 rule coverage: 1:67210 - 1:67273, 1:67276 - 1:67279, 1:67282 - 1:67311, 1:67313 - 1:67316, 1:67319 - 1:67322 Snort 3 rule coverage: 1:301663 - 1:301694, 1:301696, 1:301702 - 1:301703, 1:301705 - 1:301706, 1:301709, 1:301711, 1:301717 - 1:301718",
+        "tags": []
+      },
+      "scoring": {
+        "score": 70,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "193 CVE(s)=+30",
+          "1 MITRE technique hit(s)=+8",
+          "2 initial-access vector(s)=+9",
+          "3 product mention(s)=+9",
+          "1 IOC(s)=+4"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-96951",
+          "CVE-2026-70229",
+          "CVE-2026-70571",
+          "CVE-2026-105733",
+          "CVE-2026-102214",
+          "CVE-2026-108399",
+          "CVE-2026-100202",
+          "CVE-2026-100209",
+          "CVE-2026-100210",
+          "CVE-2026-100211",
+          "CVE-2026-97739",
+          "CVE-2026-97745",
+          "CVE-2026-97755",
+          "CVE-2026-97759",
+          "CVE-2026-97765",
+          "CVE-2026-97778",
+          "CVE-2026-97741",
+          "CVE-2026-97742",
+          "CVE-2026-97753",
+          "CVE-2026-97756",
+          "CVE-2026-97758",
+          "CVE-2026-97761",
+          "CVE-2026-97767",
+          "CVE-2026-97776",
+          "CVE-2026-97780",
+          "CVE-2026-100215",
+          "CVE-2026-100219",
+          "CVE-2026-105016",
+          "CVE-2026-100220",
+          "CVE-2026-102211",
+          "CVE-2026-88074",
+          "CVE-2026-108130",
+          "CVE-2026-108471",
+          "CVE-2026-96914",
+          "CVE-2026-102225",
+          "CVE-2026-97814",
+          "CVE-2026-102855",
+          "CVE-2026-102856",
+          "CVE-2026-102857",
+          "CVE-2026-102866",
+          "CVE-2026-62840",
+          "CVE-2026-69802",
+          "CVE-2026-70147",
+          "CVE-2026-70153",
+          "CVE-2026-108467",
+          "CVE-2026-70187",
+          "CVE-2026-70250",
+          "CVE-2026-83934",
+          "CVE-2026-88073",
+          "CVE-2026-88117",
+          "CVE-2026-88119",
+          "CVE-2026-88120",
+          "CVE-2026-88171",
+          "CVE-2026-96934",
+          "CVE-2026-96222",
+          "CVE-2026-108131",
+          "CVE-2026-96913",
+          "CVE-2026-96952",
+          "CVE-2026-105718",
+          "CVE-2026-108400",
+          "CVE-2026-108457",
+          "CVE-2026-108460",
+          "CVE-2026-70215",
+          "CVE-2026-88144",
+          "CVE-2026-88178",
+          "CVE-2026-88207",
+          "CVE-2026-70242",
+          "CVE-2026-70291",
+          "CVE-2026-88156",
+          "CVE-2026-97016",
+          "CVE-2026-97749",
+          "CVE-2026-70269",
+          "CVE-2026-70300",
+          "CVE-2026-83917",
+          "CVE-2026-94510",
+          "CVE-2026-96202",
+          "CVE-2026-96943",
+          "CVE-2026-96207",
+          "CVE-2026-69789",
+          "CVE-2026-88174",
+          "CVE-2026-88185",
+          "CVE-2026-69435",
+          "CVE-2026-77900",
+          "CVE-2026-83943",
+          "CVE-2026-83947",
+          "CVE-2026-88131",
+          "CVE-2026-100214",
+          "CVE-2026-102217",
+          "CVE-2026-69673",
+          "CVE-2026-69718",
+          "CVE-2026-69733",
+          "CVE-2026-69783",
+          "CVE-2026-69882",
+          "CVE-2026-69923",
+          "CVE-2026-69926",
+          "CVE-2026-70054",
+          "CVE-2026-70060",
+          "CVE-2026-70076",
+          "CVE-2026-70104",
+          "CVE-2026-70108",
+          "CVE-2026-70117",
+          "CVE-2026-70132",
+          "CVE-2026-70144",
+          "CVE-2026-70156",
+          "CVE-2026-70218",
+          "CVE-2026-70223",
+          "CVE-2026-70233",
+          "CVE-2026-70236",
+          "CVE-2026-70237",
+          "CVE-2026-70241",
+          "CVE-2026-70245",
+          "CVE-2026-70249",
+          "CVE-2026-70253",
+          "CVE-2026-70255",
+          "CVE-2026-70271",
+          "CVE-2026-70273",
+          "CVE-2026-70286",
+          "CVE-2026-70303",
+          "CVE-2026-72955",
+          "CVE-2026-81971",
+          "CVE-2026-83505",
+          "CVE-2026-83509",
+          "CVE-2026-83510",
+          "CVE-2026-83580",
+          "CVE-2026-83669",
+          "CVE-2026-83699",
+          "CVE-2026-83704",
+          "CVE-2026-83717",
+          "CVE-2026-83724",
+          "CVE-2026-83732",
+          "CVE-2026-83735",
+          "CVE-2026-83738",
+          "CVE-2026-83750",
+          "CVE-2026-83761",
+          "CVE-2026-83763",
+          "CVE-2026-83768",
+          "CVE-2026-83769",
+          "CVE-2026-83793",
+          "CVE-2026-83830",
+          "CVE-2026-83834",
+          "CVE-2026-83840",
+          "CVE-2026-83842",
+          "CVE-2026-83848",
+          "CVE-2026-83867",
+          "CVE-2026-83886",
+          "CVE-2026-83896",
+          "CVE-2026-83899",
+          "CVE-2026-83902",
+          "CVE-2026-83921",
+          "CVE-2026-84014",
+          "CVE-2026-85355",
+          "CVE-2026-85791",
+          "CVE-2026-85802",
+          "CVE-2026-85804",
+          "CVE-2026-85832",
+          "CVE-2026-85843",
+          "CVE-2026-85848",
+          "CVE-2026-85849",
+          "CVE-2026-85850",
+          "CVE-2026-85855",
+          "CVE-2026-85870",
+          "CVE-2026-85901",
+          "CVE-2026-85908",
+          "CVE-2026-85941",
+          "CVE-2026-85945",
+          "CVE-2026-88118",
+          "CVE-2026-88133",
+          "CVE-2026-88147",
+          "CVE-2026-88152",
+          "CVE-2026-88159",
+          "CVE-2026-88191",
+          "CVE-2026-96858",
+          "CVE-2026-96911",
+          "CVE-2026-96929",
+          "CVE-2026-96940",
+          "CVE-2026-69452",
+          "CVE-2026-69880",
+          "CVE-2026-69918",
+          "CVE-2026-70103",
+          "CVE-2026-70106",
+          "CVE-2026-70151",
+          "CVE-2026-70176",
+          "CVE-2026-70279",
+          "CVE-2026-83785",
+          "CVE-2026-83927",
+          "CVE-2026-85884",
+          "CVE-2026-85902",
+          "CVE-2026-85906",
+          "CVE-2026-88093",
+          "CVE-2026-96939",
+          "CVE-2026-97798",
+          "CVE-2026-97799",
+          "CVE-2026-97800"
+        ],
+        "ips": [],
+        "domains": [
+          "snort.org"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001"
+        ],
+        "vectors": [
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": [
+          "Microsoft Exchange",
+          "Active Directory",
+          "Linux kernel"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-4df1bd97-1",
+          "title": "Initial access via CVE-2026-96951 affecting Microsoft Exchange",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-96951 in Microsoft Exchange within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-96951, CVE-2026-70229, CVE-2026-70571; vectors: exploit, rdp; products: Microsoft Exchange, Active Directory, Linux kernel.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-4df1bd97-1-O1",
+              "title": "Inventory exposure to Microsoft Exchange",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for CVE-2026-96951.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4df1bd97-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-96951 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-96951/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4df1bd97-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-96951 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-96951')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4df1bd97-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-4df1bd97-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-4df1bd97-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-96951, CVE-2026-70229, CVE-2026-70571; vectors: exploit, rdp; products: Microsoft Exchange, Active Directory, Linux kernel.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-4df1bd97-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('snort.org') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4df1bd97-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4df1bd97-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-4df1bd97-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-4df1bd97-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-4df1bd97-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-96951, CVE-2026-70229, CVE-2026-70571; vectors: exploit, rdp; products: Microsoft Exchange, Active Directory, Linux kernel.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-4df1bd97-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4df1bd97-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4df1bd97-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-4df1bd97-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-13T20:48:54+00:00",
       "agent_trace": []
     },
     {
@@ -13480,6 +13996,324 @@
     },
     {
       "article": {
+        "id": "8786243a1f612426",
+        "source": "CISA Advisories",
+        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
+        "link": "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "published": "Tue, 13 Oct 26 12:00:00 +0000",
+        "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-96951 Microsoft Windows Command Injection Vulnerability CVE-2026-104935 Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability These types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed ",
+        "raw_text": "CISA Adds Two Known Exploited Vulnerabilities to Catalog CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-96951 Microsoft Windows Command Injection Vulnerability CVE-2026-104935 Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability These types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form . Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 52,
+        "rationale": [
+          "source weight (advisory)=+15",
+          "2 CVE(s)=+25",
+          "2 initial-access vector(s)=+9",
+          "1 product mention(s)=+3"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-96951",
+          "CVE-2026-104935"
+        ],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit",
+          "vpn-edge"
+        ],
+        "sectors": [
+          "government",
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": [
+          "Ivanti Connect Secure"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-8786243a-1",
+          "title": "Initial access via CVE-2026-96951 affecting Ivanti Connect Secure",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-96951 in Ivanti Connect Secure within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-96951, CVE-2026-104935; vectors: exploit, vpn-edge; products: Ivanti Connect Secure.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-8786243a-1-O1",
+              "title": "Inventory exposure to Ivanti Connect Secure",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Ivanti Connect Secure, the external-exploitation hypothesis is disproven for CVE-2026-96951.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Ivanti Connect Secure' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-8786243a-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-96951 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-96951/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-8786243a-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-96951 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-96951')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-8786243a-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Ivanti Connect Secure hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-8786243a-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-8786243a-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-96951, CVE-2026-104935; vectors: exploit, vpn-edge; products: Ivanti Connect Secure.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-8786243a-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-8786243a-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-8786243a-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-8786243a-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-8786243a-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-8786243a-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-96951, CVE-2026-104935; vectors: exploit, vpn-edge; products: Ivanti Connect Secure.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-8786243a-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-8786243a-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-8786243a-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-8786243a-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-13T20:48:54+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "5dc3760dd184b5da",
         "source": "The Hacker News",
         "title": "Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge",
@@ -17804,654 +18638,9 @@
       ],
       "first_seen": "2026-10-07T20:09:47+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "34220df60680225c",
-        "source": "SANS Internet Storm Center",
-        "title": "TTY Logs and the Data it Captures, (Sun, Oct 4th)",
-        "link": "https://isc.sans.edu/diary/rss/33396",
-        "published": "Mon, 05 Oct 2026 00:15:00 GMT",
-        "summary": "For an experiment, I created a script [ 1 ] that parses and send the TTY logs collected from actors or bots activity that run various commands after they successfully login the DShield sensor. Those TTY logs are sent daily at the end of each day to the DShield SIEM [ 2 ] to be correlated with all the data.",
-        "raw_text": "TTY Logs and the Data it Captures, (Sun, Oct 4th) For an experiment, I created a script [ 1 ] that parses and send the TTY logs collected from actors or bots activity that run various commands after they successfully login the DShield sensor. Those TTY logs are sent daily at the end of each day to the DShield SIEM [ 2 ] to be correlated with all the data. For an experiment, I created a script [ 1 ] that parses and send the TTY logs collected from actors or bots activity that run various commands after they successfully login the DShield sensor. Those TTY logs are sent daily at the end of each day to the DShield SIEM [ 2 ] to be correlated with all the data. The following ES|QL query provides a summary of all contab commands matching a TTYLog hash performed by different actors while logged in the sensor over a 90 day period. TTYLogs Correlation FROM cowrie* | WHERE transaction.id == \"f904275333aeac48d7df6cf53fe5fb9212c7d132a7d37253d2ab9321ba2690d8\" | WHERE event.hash IS NOT NULL | KEEP transaction.id, event.hash | STATS Total=COUNT(event.hash) BY event.hash, transaction.id | SORT Total DESC This transaction ID captured 5 similar crontab commands that are translated from its hash equivalent into this list executed by more than 3130 different actors (IPs): TTYLogs Sources transaction.id: f904275333aeac48d7df6cf53fe5fb9212c7d132a7d37253d2ab9321ba2690d8 over a 90 day period Other example of Event Hash decoded and sent to DShield SIEM for analysis Top 10 Indicators IP ASN 102.88.137.80 29465 42.96.20.16 131423 182.253.221.210 38482 46.188.119.26 8334 159.223.97.218 14061 185.158.22.150 210022 193.233.48.169 207713 209.99.190.200 402253 45.64.74.51 55933 202.152.148.27 23951 [1] https://github.com/bruneaug/DShield-Sensor/blob/main/sensor_scripts/daily_tty.sh [2] https://github.com/bruneaug/DShield-SIEM [3] https://www.elastic.co/docs/reference/query-languages/esql ----------- Guy Bruneau IPSS Inc. My GitHub Page Twitter: GuyBruneau gbruneau at isc dot sans dot edu (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 45,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "1 MITRE technique hit(s)=+8",
-          "1 initial-access vector(s)=+7",
-          "15 IOC(s)=+15"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [],
-        "ips": [
-          "102.88.137.80",
-          "42.96.20.16",
-          "182.253.221.210",
-          "46.188.119.26",
-          "159.223.97.218",
-          "185.158.22.150",
-          "193.233.48.169",
-          "209.99.190.200",
-          "45.64.74.51",
-          "202.152.148.27"
-        ],
-        "domains": [
-          "transaction.id",
-          "event.hash",
-          "www.elastic.co",
-          "isc.sans.edu"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [
-          "f904275333aeac48d7df6cf53fe5fb9212c7d132a7d37253d2ab9321ba2690d8"
-        ],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1053"
-        ],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-34220df6-1",
-          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-34220df6-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-34220df6-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-34220df6-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-34220df6-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-34220df6-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-34220df6-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-34220df6-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('transaction.id','event.hash','www.elastic.co') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-34220df6-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('102.88.137.80','42.96.20.16','182.253.221.210') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-34220df6-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-34220df6-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-34220df6-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-34220df6-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-34220df6-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-34220df6-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-34220df6-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-34220df6-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-05T00:40:06+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "a1dfbde01cf59dba",
-        "source": "SecurityWeek",
-        "title": "Bricksforge WordPress Plugin Vulnerability Exploited in the Wild",
-        "link": "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/",
-        "published": "Mon, 12 Oct 2026 13:14:37 +0000",
-        "summary": "The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .",
-        "raw_text": "Bricksforge WordPress Plugin Vulnerability Exploited in the Wild The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 42,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 CVE(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "2 initial-access vector(s)=+9"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-85097"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1021.001"
-        ],
-        "vectors": [
-          "exploit",
-          "rdp"
-        ],
-        "sectors": [],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-a1dfbde0-1",
-          "title": "Initial access via CVE-2026-85097 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-85097 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-a1dfbde0-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-85097.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-85097 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-85097/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-a1dfbde0-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-85097 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-85097')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-a1dfbde0-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-a1dfbde0-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-a1dfbde0-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-a1dfbde0-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-a1dfbde0-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-a1dfbde0-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-a1dfbde0-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-a1dfbde0-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-a1dfbde0-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-a1dfbde0-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-12T13:46:24+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 404,
+  "skipped": 403,
   "total_seen": 405,
   "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570."
 }
