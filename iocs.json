@@ -145,6 +145,12 @@
       ]
     },
     {
+      "value": "CVE-2026-97229",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
       "value": "CVE-2026-97212",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
@@ -5189,6 +5195,18 @@
       ]
     },
     {
+      "value": "gitlab-ci.yml",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
+      "value": "gitlab.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
       "value": "gliderrompercycl.com",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/"
@@ -6115,12 +6133,6 @@
       "value": "random.cktime.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "rapid7.com",
-      "sources": [
-        "https://www.rapid7.com/blog/post/it-higher-education-under-siege-fragmented-security"
       ]
     },
     {

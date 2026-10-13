@@ -23,6 +23,7 @@ cves,CVE-2026-100293,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-100292,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05
 cves,CVE-2026-100291,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-05
 cves,CVE-2026-97363,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02
+cves,CVE-2026-97229,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
 cves,CVE-2026-97212,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02
 cves,CVE-2026-96613,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06
 cves,CVE-2026-96587,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-272-07
@@ -862,6 +863,8 @@ domains,fukua.org,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 domains,gate.sinica.edu.tw.checkapi.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gatherosstate.exe,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,gf.phtml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,gitlab-ci.yml,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
+domains,gitlab.com,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
 domains,gliderrompercycl.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,googles.ddns.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gpv0irmtvto6e8t2.txt,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
@@ -1016,7 +1019,6 @@ domains,pw2.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advis
 domains,qumel.link,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,r2.dev,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,random.cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,rapid7.com,1,https://www.rapid7.com/blog/post/it-higher-education-under-siege-fragmented-security
 domains,raw.githubusercontent.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01
 domains,registry.rs,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,requestrepo.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
