@@ -7,6 +7,7 @@ cves,CVE-2026-105278,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-105275,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03
 cves,CVE-2026-105269,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03
 cves,CVE-2026-105133,1,https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html
+cves,CVE-2026-104935,1,https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935
 cves,CVE-2026-104629,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02
 cves,CVE-2026-104628,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03
 cves,CVE-2026-104286,1,https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog
@@ -45,7 +46,7 @@ cves,CVE-2026-90443,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-25
 cves,CVE-2026-88779,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-88772,1,https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/
 cves,CVE-2026-85479,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02
-cves,CVE-2026-85097,2,https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html | https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
+cves,CVE-2026-85097,1,https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
 cves,CVE-2026-80093,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 cves,CVE-2026-76504,1,https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504
 cves,CVE-2026-73570,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
@@ -117,6 +118,11 @@ ips,20.12.8.2,1,https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-
 ips,20.15.6.1,1,https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504
 ips,20.18.4.1,1,https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504
 ips,24.199.101.184,1,https://isc.sans.edu/diary/rss/33406
+ips,25.1.1.1,1,https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935
+ips,25.1.1.2,1,https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935
+ips,25.1.2.2,1,https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935
+ips,25.1.3.0,1,https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935
+ips,25.1.3.1,1,https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935
 ips,26.1.2.1,1,https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504
 ips,27.149.79.35,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,27.149.115.78,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
