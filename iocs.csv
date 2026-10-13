@@ -45,7 +45,7 @@ cves,CVE-2026-90443,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-25
 cves,CVE-2026-88779,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-88772,1,https://www.bleepingcomputer.com/news/security/hackers-exploit-citrix-netscaler-zero-day-to-deploy-web-shells/
 cves,CVE-2026-85479,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02
-cves,CVE-2026-85097,1,https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
+cves,CVE-2026-85097,2,https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html | https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
 cves,CVE-2026-80093,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 cves,CVE-2026-76504,1,https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504
 cves,CVE-2026-73570,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
@@ -102,7 +102,6 @@ ips,1.34.200.85,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-av
 ips,2.3.20.2,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,2.3.24.1,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,2.11.0.30,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
-ips,2.57.241.246,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 ips,2.58.242.74,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,3.209.137.175,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
 ips,5.188.34.134,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -170,7 +169,6 @@ ips,45.77.28.77,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26
 ips,45.77.86.70,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.77.195.169,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.77.231.209,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,45.84.59.66,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 ips,45.123.189.19,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.131.69.197,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,46.188.119.26,1,https://isc.sans.edu/diary/rss/33396
@@ -218,7 +216,6 @@ ips,77.111.226.5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa2
 ips,78.141.221.241,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,78.141.238.97,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,84.17.57.40,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,89.125.209.168,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 ips,89.187.163.216,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,95.179.186.251,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,95.179.189.106,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -236,12 +233,9 @@ ips,103.77.211.193,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,103.106.230.88,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,103.107.198.117,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,103.149.200.44,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,103.160.59.97,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 ips,103.172.80.35,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,103.179.45.203,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,103.233.253.197,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,103.245.231.79,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-ips,103.245.231.248,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 ips,104.156.231.98,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,104.238.149.146,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,104.238.152.209,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -763,13 +757,11 @@ domains,bj-hk.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advi
 domains,bj-jp.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,blog.98aiblog.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,blog.didierstevens.com,1,https://isc.sans.edu/diary/rss/33394
-domains,bpdaersa.click,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,brokerservice.addconnector,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,brokerservice.addnetworkconnector,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,bsnl.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,bunstar.harej.si,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,bypass.eu.org,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
-domains,byveo.org,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,bzp3ncrpgatherosstate.exe.thl,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,bzp3ncrposstate.dat.mxb,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,bzp3ncrpslc.dll.czh,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
@@ -788,14 +780,12 @@ domains,cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-adviso
 domains,client.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,clientsetup.msi,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,cloud.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,cloud.google.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-domains,cmd.exe,3,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/ | https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/ | https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
+domains,cmd.exe,2,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/ | https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,cmd.rs,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,com.atlassian.bitbucket.server.bitbucket,1,https://isc.sans.edu/diary/rss/33406
 domains,com.atlassian.confluence.plugins.dashboard,1,https://isc.sans.edu/diary/rss/33406
 domains,comsvcs.dll,1,https://blog.talosintelligence.com/the-fine-art-of-frustrating-the-adversary/
-domains,conhost.exe,2,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a | https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-domains,control.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
+domains,conhost.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,core.rs,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,crowd.properties,1,https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products
 domains,csc.exe,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
@@ -805,7 +795,6 @@ domains,curlc4.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 domains,cyber.gc.ca,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,cyber.go.jp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,cyber.gov.au,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,cyrna.top,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,d2nq35tel3ucuo.cloudfront.net,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,d32tpl7xt7175h.cloudfront.net,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,dasxcyb.ga,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -823,22 +812,16 @@ domains,dellme.ml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 domains,diagtrack.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,dirmap.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,dirsearch.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,divekickspolic.org,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,dllhost.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,dns.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,dns361.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,dnslog.pp.ua,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
-domains,documents.vhdx,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-domains,documents.zip,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-domains,drasw.club,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,dsdsei.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,dslua.org,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,eburst.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,eck.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,eg.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,error.jsp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,etechhosting.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,etia.ca,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,event.hash,1,https://isc.sans.edu/diary/rss/33396
 domains,eventcreate.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,evidence.jsonl,1,https://isc.sans.edu/diary/rss/33410
@@ -859,12 +842,9 @@ domains,gatherosstate.exe,1,https://blog.talosintelligence.com/china-nexus-uat-1
 domains,gf.phtml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gitlab-ci.yml,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
 domains,gitlab.com,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
-domains,gliderrompercycl.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,googles.ddns.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gpv0irmtvto6e8t2.txt,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,graph.microsoft.com,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
-domains,groy.cc,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-domains,guach.net,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,gz-hk.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,h.secshow.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,h5.feeee.io,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -904,7 +884,6 @@ domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advis
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 domains,isc.sans.edu,6,https://isc.sans.edu/diary/rss/33388 | https://isc.sans.edu/diary/rss/33394 | https://isc.sans.edu/diary/rss/33396 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33410
-domains,itechx.tel,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,jira.webresources,1,https://isc.sans.edu/diary/rss/33406
@@ -930,7 +909,6 @@ domains,ma.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advi
 domains,mail.bailbonding.info,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,mail.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,masaplus.club,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,matjk.click,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,meeting.t11065885611.doc.exe,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,mejuri.com,1,https://isc.sans.edu/diary/rss/33388
 domains,mexico-cashpay-test.s3.dualstack.mx-central-1.amazonaws.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
@@ -943,8 +921,7 @@ domains,mousehidergui.exe,1,https://www.microsoft.com/en-us/security/blog/2026/0
 domains,ms.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,msedge.store,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,mshta.exe,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
-domains,msiexec.exe,2,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/ | https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
-domains,muvb.net,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
+domains,msiexec.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,mx.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,mx.zxopfds.com,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,mx1.wwstifsteel.com,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
@@ -965,7 +942,6 @@ domains,net.exe,1,https://blog.talosintelligence.com/making-sure-the-checks-get-
 domains,netio.sys,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 domains,nikoes.gq,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,node.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
-domains,note.zip,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,np.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ns1.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ns1.honey1314520.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -997,7 +973,6 @@ domains,phonepc.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/p
 domains,pin.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,pl.gz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,powershell.exe,2,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/ | https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
-domains,proton.me,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,ps.rs,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,psk1zim.abrdns.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
 domains,ptps.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1008,7 +983,6 @@ domains,pulsebrowser.29kh.in12.talos,1,https://blog.talosintelligence.com/making
 domains,purple76.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,pw.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,pw2.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,qumel.link,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,r2.dev,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,random.cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,rapid7.com,2,https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk | https://www.rapid7.com/blog/post/it-higher-education-under-siege-fragmented-security
@@ -1025,7 +999,6 @@ domains,rsync.service,1,https://www.microsoft.com/en-us/security/blog/2026/09/30
 domains,run.rs,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,runtime.exec,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,runtime.getruntime,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
-domains,ruten.observer,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,rutserv.exe,1,https://isc.sans.edu/diary/rss/33388
 domains,s3crts.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,sample.exe,2,https://blog.talosintelligence.com/give-yourself-room-to-be-human/ | https://blog.talosintelligence.com/making-sure-the-checks-get-printed/
@@ -1045,7 +1018,6 @@ domains,secretr.feeee.io,1,https://www.cisa.gov/news-events/cybersecurity-adviso
 domains,secretsdump.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,secretsdump.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,secshow.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,secure-dns-hub.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,senate.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,server.feeee.io,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,server.na-2.action1.com,1,https://isc.sans.edu/diary/rss/33400
@@ -1054,7 +1026,6 @@ domains,services.msc,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 domains,sess.zip,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,sh-jp.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,shell32.dll,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,shelldropper.aa,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
 domains,shifuj.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,shop.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1067,12 +1038,10 @@ domains,soudan.html,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,spam.suwaccqi.com,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,spamsniper.pid,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,sqlmap.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,ssh.exe,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,sshd.service,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
 domains,state.db,1,https://isc.sans.edu/diary/rss/33410
 domains,streescans.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,stuseamandesilt.org,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,subdomainsbrute.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,supper.feeee.io,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1109,7 +1078,6 @@ domains,txt.trojan.uat,1,https://blog.talosintelligence.com/china-nexus-uat-1158
 domains,tzzyylynj40z.log,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,uac.dll,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 domains,ub4rjznirfleri8t.txt,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
-domains,ukr.net,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,up-theta-rose.vercel.app,1,https://isc.sans.edu/diary/rss/33400
 domains,up.exe,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 domains,update.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1159,7 +1127,7 @@ domains,www.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisori
 domains,www.action1.com,1,https://isc.sans.edu/diary/rss/33400
 domains,www.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.chr0mail.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,www.cisa.gov,18,https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02 | https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
+domains,www.cisa.gov,17,https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02
 domains,www.cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.dns361.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.elastic.co,1,https://isc.sans.edu/diary/rss/33396
@@ -1182,7 +1150,6 @@ domains,www.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-adv
 domains,www.wps-cn.com,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,www.www.smtp.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.www.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,www.zscaler.com,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 domains,wylwwcu43j1wf2pg.js,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 domains,xassxxdns.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ximmd.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1208,11 +1175,9 @@ sha256,17b53ffa8e005f0e82491d3f9c0a4984c44da52e1668a855c11a137f627c5b4b,1,https:
 sha256,19035c8e2520fb70b3e2ec5338c14311b88a26cc1fb8304a01494260b6b55af1,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 sha256,1a534d04bf30894d20764e91f7e94e0a73f060f0abacc9feeedba427995c83a8,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 sha256,1b19115d5ebdc216e0ab3adf2c643648cfc70a385f4caf0217c679f9f3b20342,1,https://isc.sans.edu/diary/rss/33400
-sha256,1f2096ff906915fbf80778f0636446206197351f7e271af97936eeb6f32c179d,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 sha256,1fadc90b61ce536abda78eb387a7f3d745f00c16775d3f762845ccc0fde567da,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 sha256,22ef852f6ebc39ee71235b90648b4b200b385c47d25c79545986493f8c70db69,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
 sha256,23d5f1af8581ae200615d9a66d539f2043c3248b649e862557b379d7e8b7a3ac,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
-sha256,24b6e36a09eb2acfc2a95478ca685acb7593b1689be6a4a639fe0d222393cfa7,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 sha256,2aa7f13bf474e2ce5049fd4db2bf4da04b4ce51ac0d36dceb24865255241c937,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,2bedc26d4b29b435c21962beed7db21188a0219a0d28334bba8b4fb1656d7b15,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,2e3e1bcd44cc3cbec4f5ca9991d14a326d3cc6bf76fe6e0d434c9b5f7e1ae6ab,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
@@ -1263,7 +1228,6 @@ sha256,65f4b9292e91abfa5adf42a03526932930c1c0a436bb186a7948fe6770295788,1,https:
 sha256,670fa10a2ddde21fd594c4fef86b554d864089ed2de7153b472e921c623403ae,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,67c979dc13961b09f24f85a801e4c918420adca6117c92efbeeeaa68a6344f55,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 sha256,67db57a1f957031b78f29aa91e2e87780eae3835290259eff846d8f14afb794b,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,699e92a9e0edf7835879d5697bc67138c0b137117f459caf1a44df357407cad9,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 sha256,6a1dbbfcfe6867ac83d35012b2717084388b4a34707efd0b725466dfd0e8fa56,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 sha256,6a89de024ca62536de6f5fc10e49896bb1ac330ca39dce30203afdcc45ae237e,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
 sha256,6ab7de2509038edf580aef6229c1c3db17f4da8f2d7d940818faf617d1938244,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
@@ -1291,7 +1255,6 @@ sha256,90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59,1,https:
 sha256,925c041807d4fb9dfe2ad84f963c2a4c60ea1289f6a0bdccbfb944478ffc2cf2,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,941695d20d82dd5d62f74b0111feb23720637202f6c797df2a02e2cb6cb6e8e3,1,https://isc.sans.edu/diary/rss/33400
 sha256,96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974,1,https://blog.talosintelligence.com/give-yourself-room-to-be-human/
-sha256,9707a8694e954e9ee13e839d6e5905ce626c0837c7c90da6d1025bfbe152866b,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 sha256,971cb2448b5d67dcc1f5eaa10d12e77f213035ad31230dc2ac7a510610a2059d,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 sha256,9896a6fcb9bb5ac1ec5297b4a65be3f647589adf7c37b45f3f7466decd6a4a7f,2,https://blog.talosintelligence.com/give-yourself-room-to-be-human/ | https://blog.talosintelligence.com/making-sure-the-checks-get-printed/
 sha256,996b01e15f85e165899630721a141b178a9c372b6e878012180ec9e9d4e7bd06,1,https://isc.sans.edu/diary/rss/33400
@@ -1344,7 +1307,6 @@ sha256,d4cb2f5df16ec9b9c5b796ae55848534e15d4f8b8806f0431108fc7a99a2548a,1,https:
 sha256,d753a615aedf8e58ffc75b2b7ebd320c0cbe6bcb5cbb885db749a2a85c55d3bf,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 sha256,d87201c1299a7f5854929645e6891c6c424d2a690031272bedacba7c5fe73a3e,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 sha256,dd434f3ffcafeda538d43226665115ba136ad0fdb43dad8536e1368ca9a17b64,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/
-sha256,dd98dbc1a55afe6fd0ed2ed53a79c76f6bde15081a0060422185b74eb1799ee4,1,https://www.microsoft.com/en-us/security/blog/2026/09/29/star-blizzard-refines-phishing-and-malware-delivery-with-the-redflick-technique/
 sha256,dee5af1c0f76b45d28bafd6e60c07bb8e391d98addf81ef8f13d073acdb3c48a,1,https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/
 sha256,e2eb7703047b37b28dc34e6990205d758a2454b39bc655b460606745fadcb530,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
 sha256,e2f59d8d5a81583ed482b6c7bf37699efdb2264e452cf7d8cfc0c54dfbd9ab3f,1,https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/
