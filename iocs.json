@@ -39,7 +39,8 @@
     {
       "value": "CVE-2026-108398",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -371,7 +372,8 @@
     {
       "value": "CVE-2026-97749",
       "sources": [
-        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -419,7 +421,8 @@
     {
       "value": "CVE-2026-97016",
       "sources": [
-        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -433,7 +436,8 @@
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
         "https://isc.sans.edu/diary/rss/33422",
-        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -704,7 +708,8 @@
     {
       "value": "CVE-2026-88156",
       "sources": [
-        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -1167,7 +1172,8 @@
     {
       "value": "CVE-2026-70291",
       "sources": [
-        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -1233,7 +1239,8 @@
     {
       "value": "CVE-2026-70242",
       "sources": [
-        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -1685,6 +1692,12 @@
       "value": "CVE-2023-46143",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06"
+      ]
+    },
+    {
+      "value": "CVE-2023-23397",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
@@ -5541,18 +5554,6 @@
       ]
     },
     {
-      "value": "adsaw.cfd",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "adswre.cfd",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "agent.sh",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
@@ -5655,12 +5656,6 @@
       ]
     },
     {
-      "value": "bannerhider.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "bbs.sunmoon.website",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -5712,12 +5707,6 @@
       "value": "bsnl.twimg.co.uk",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "bunstar.harej.si",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -5823,12 +5812,6 @@
       ]
     },
     {
-      "value": "clientsetup.msi",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "cloud.96html.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -5837,8 +5820,7 @@
     {
       "value": "cmd.exe",
       "sources": [
-        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/",
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
       ]
     },
     {
@@ -5998,18 +5980,6 @@
       ]
     },
     {
-      "value": "defendercontrol.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "defenderdt.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "dellme.ml",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6094,12 +6064,6 @@
       ]
     },
     {
-      "value": "eventcreate.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "evidence.jsonl",
       "sources": [
         "https://isc.sans.edu/diary/rss/33410"
@@ -6112,15 +6076,15 @@
       ]
     },
     {
-      "value": "fakesysresolved.aa",
+      "value": "explorer.exe",
       "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
     {
-      "value": "faronicsdeployagent.exe",
+      "value": "fakesysresolved.aa",
       "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+        "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
       ]
     },
     {
@@ -6283,36 +6247,6 @@
       "value": "hgiga.96html.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "hidecursor.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "hidefromcontrolpanel.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "hidemouse.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "hidemouseapp.dll",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "hideul.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -6681,12 +6615,6 @@
       ]
     },
     {
-      "value": "mousehidergui.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "ms.studiocloud.xyz",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6702,12 +6630,6 @@
       "value": "mshta.exe",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "msiexec.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -6867,12 +6789,6 @@
       ]
     },
     {
-      "value": "nsexec.dll",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "oast.fun",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
@@ -6891,12 +6807,6 @@
       ]
     },
     {
-      "value": "ojsuyw.niyari.org",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "one.hmbiplc-01.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6906,12 +6816,6 @@
       "value": "oneforall.py",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "opencamera.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -6945,6 +6849,12 @@
       ]
     },
     {
+      "value": "outlook.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
       "value": "packerfuzzer.py",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6963,12 +6873,6 @@
       ]
     },
     {
-      "value": "passwords.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "payment.feeee.io",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6981,30 +6885,6 @@
       ]
     },
     {
-      "value": "phonelinkprompt.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "phonelinkupdate.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "phonepc.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "pin.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "pl.gz",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -7013,8 +6893,7 @@
     {
       "value": "powershell.exe",
       "sources": [
-        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/",
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+        "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
       ]
     },
     {
@@ -7126,27 +7005,9 @@
       ]
     },
     {
-      "value": "rmm.agent.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "rmm.agent.launcher.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "rndismp6.sys",
       "sources": [
         "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
-      "value": "roguemsp.mu",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -7212,39 +7073,9 @@
       ]
     },
     {
-      "value": "schider.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "screenconnect.client.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "screenconnect.clientservice.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "screenconnect.clientsetup.exe",
       "sources": [
         "https://isc.sans.edu/diary/rss/33388"
-      ]
-    },
-    {
-      "value": "screenconnect.windowsclient.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "sdfghj.rd-team.ru",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -7478,18 +7309,6 @@
       ]
     },
     {
-      "value": "swedcorry.stefneyv.com",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "system.dll",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "system.windows.forms.axhost",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -7586,12 +7405,6 @@
       ]
     },
     {
-      "value": "trews.cfd",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "trust.feeee",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -7643,12 +7456,6 @@
       "value": "tzzyylynj40z.log",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "uac.dll",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -7847,18 +7654,6 @@
       ]
     },
     {
-      "value": "webbrowserbookmarksview.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "webbrowserpassview.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "webdisk.bailbonding.info",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -7886,24 +7681,6 @@
       "value": "windows.log",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
-      ]
-    },
-    {
-      "value": "windowspasskey.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "windowsupdate.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "windverify.exe",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8170,18 +7947,6 @@
       ]
     },
     {
-      "value": "02f2ce03a2650f17bfe6e8744eebbf58522016cbdb92af8f2217b5dd4a1ad550",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "06ad69b9bebad3cc75b594cc5bb1ca0035ea22bb8a683002ca051d948566426b",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "077bd873217d8abfbb6482d11966ca34f3fef7ad5166f24fbc5dc3ddefe894a1",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -8224,12 +7989,6 @@
       ]
     },
     {
-      "value": "108ef7e628d7a20bd6241a5b57149e27a6061f467123eb64061975559f8f73dc",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "131ac3e0df777910e0a32e43d5744bccb0490750d4c2adc359da41d76d383c46",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -8251,18 +8010,6 @@
       "value": "17b53ffa8e005f0e82491d3f9c0a4984c44da52e1668a855c11a137f627c5b4b",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "19035c8e2520fb70b3e2ec5338c14311b88a26cc1fb8304a01494260b6b55af1",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "1a534d04bf30894d20764e91f7e94e0a73f060f0abacc9feeedba427995c83a8",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8362,12 +8109,6 @@
       ]
     },
     {
-      "value": "374c4934b14a1151ea68847c8627c3f1c0b878f4e673bda3f15e4388dfde0187",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "389066bd5543aeea363d23a4dce7f7a21c7f2c73c61f506a93a69f594cf48ecf",
       "sources": [
         "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
@@ -8386,27 +8127,9 @@
       ]
     },
     {
-      "value": "3ff5e49fd2f2bd0758467763c44d69e781b7460af84a6e3966e2621bc5bf7096",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "40e7e77aff603f4c2ef17b3bc8ea836e714d0734a1e5b946e52f95536ec5c91d",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "40f8e774e1e7a484b78c7ae4336bc47aa9cab20dc8e1e67d89838e807975f9b1",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "4188c6588f3dcda881c3f2d12df580051179a999f040b799af506edeb3211a26",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8446,12 +8169,6 @@
       ]
     },
     {
-      "value": "499d07894f730fb685ee3cbfc1a933e0da93750c1ed25a49b2eb9c32adef156a",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "4b614e5c37abaddca162119e42a969945caa681305e246e0ed0060ea9984008b",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -8482,12 +8199,6 @@
       ]
     },
     {
-      "value": "529543b4fe6a4c21d28be56dbf92fcac91d8df808d8518b4275c973fa547ad63",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "540080fea97d88ed902c5e4f9a026b4fcd32ab263706c520e00728f1a29578b8",
       "sources": [
         "https://blog.talosintelligence.com/give-yourself-room-to-be-human/"
@@ -8515,12 +8226,6 @@
       "value": "5a35fcd4458e808ab0fa52bb2a92923b60566ee4d7aaadaac7c95cad3d839562",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "5bf8cf29ac6803e7269b045dea48003af7cfe48bedfc081b57ff9e86cb08971b",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8578,12 +8283,6 @@
       ]
     },
     {
-      "value": "67c979dc13961b09f24f85a801e4c918420adca6117c92efbeeeaa68a6344f55",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "67db57a1f957031b78f29aa91e2e87780eae3835290259eff846d8f14afb794b",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -8596,21 +8295,9 @@
       ]
     },
     {
-      "value": "6a89de024ca62536de6f5fc10e49896bb1ac330ca39dce30203afdcc45ae237e",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "6ab7de2509038edf580aef6229c1c3db17f4da8f2d7d940818faf617d1938244",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
-      ]
-    },
-    {
-      "value": "6cc665057c4a4fe42a309afd3a7fa96cf1af126e9c6e08e56df5105e05378bcc",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8641,12 +8328,6 @@
       "value": "75c12795016ae48b1bddd34a9f5adea63a12f58701eae01e1b4ab3d9dfa1513c",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "77fb0e75f4396cb57bbbd28f6dc5310369a87abec9e2acc457aa99a0063ed27a",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8689,12 +8370,6 @@
       "value": "804a53be802378a8ec4c94602fd3d6584e0d472d83148e8a42c731950fec415d",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "857c2f283de799faa74b56e862c0a9f96e67aa1b4fa4a9e46395098365b99de3",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8802,12 +8477,6 @@
       ]
     },
     {
-      "value": "a03c84ae9e569c04fdd271277f508bba5a299d53c3c0efe0819338d178fe1c5b",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "a0e91085f08956a9a7034ace73cee60cb211f5d96f02bc91a026601bde8f2221",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -8853,12 +8522,6 @@
       "value": "a6f3b7f932761fb1fd5e74123f2482e36c65dd13e769af2ce08c65da195bfa7a",
       "sources": [
         "https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge"
-      ]
-    },
-    {
-      "value": "a93c946c237b981189d2668d938a9d4d1d9681757e48dae8d9d65ed25b5da657",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -8940,12 +8603,6 @@
       ]
     },
     {
-      "value": "bc8b1b0c80512ba0e8ffccfee5b507df16a3355db1143c3ba81ef42dac1baa6c",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "bd8ddc8f33e0fe43147ee6f1713654996420a27c5d2cd91751ad67124ebc6fe4",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -8967,12 +8624,6 @@
       "value": "c17bf76d02163863c251c3bb3a12725eeb525fab5522521923925e0469ca269f",
       "sources": [
         "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
-      ]
-    },
-    {
-      "value": "c2c004a56de2a99f5b06ceb58d8a4b371fb60fd66ff5936786fe8d8037ead208",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -9006,39 +8657,9 @@
       ]
     },
     {
-      "value": "ccea4e1acc51ac43ba9da76ada00e7e308cc33d9c5c264dff82d1be83e957b88",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "cd3509fa82e506cc6f2eeafa0a45d4b8b76a07edadd29779daf00568febcaba7",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "ceb3f7fe9a618ff29a21b126383c23900fad58d6ae2b5552d7e306e4b6acf4b0",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "d232d82e410de12702a67c58acf927304ee42f3e6d81a9d71eca99f9052126db",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "d3cb7ded277b49be06e6a1860f7c7e913e252802e9d32453a185e24797bf53ef",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
-      "value": "d49cc01641c3045bf3119f9d71e7ffd29bfce32ca4b27cc96340716ed4d41cdc",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -9060,12 +8681,6 @@
       ]
     },
     {
-      "value": "dd434f3ffcafeda538d43226665115ba136ad0fdb43dad8536e1368ca9a17b64",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "dee5af1c0f76b45d28bafd6e60c07bb8e391d98addf81ef8f13d073acdb3c48a",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
@@ -9081,12 +8696,6 @@
       "value": "e2f59d8d5a81583ed482b6c7bf37699efdb2264e452cf7d8cfc0c54dfbd9ab3f",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "e31e5da7c58a7e8f89f9629f095edd7d741a1fb0b85fcb39f3818dbd9497b1e3",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -9132,12 +8741,6 @@
       ]
     },
     {
-      "value": "f094b8263471c7b76dbed03d420736449920368fa0eca2ed6b1aea2645138d97",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
-      ]
-    },
-    {
       "value": "f0c1dc6d6daa4d010932c7818ed5f22929c182f58e5f495fabe2fb3cfc835b97",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -9153,12 +8756,6 @@
       "value": "f8f5e0440c57c7deffd75ca33e2511867039796aa803e7ef847396a379188a7d",
       "sources": [
         "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
-      ]
-    },
-    {
-      "value": "fc96a04c615847f0fb1391f04d9d1aac7f78ddfb7d459168df0a4172b98354e2",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     },
     {
@@ -9179,12 +8776,6 @@
       "value": "614420f82c8729d070e01464c0dddb3c9525c772",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02"
-      ]
-    },
-    {
-      "value": "f34330d4c6e0aa978dc3af40360c14b31ad51127",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
       ]
     }
   ],
