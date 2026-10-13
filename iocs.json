@@ -1,6 +1,12 @@
 {
   "cves": [
     {
+      "value": "CVE-2026-108398",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
       "value": "CVE-2026-107607",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
@@ -124,6 +130,12 @@
       "value": "CVE-2026-97212",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-96951",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -280,7 +292,6 @@
     {
       "value": "CVE-2026-85097",
       "sources": [
-        "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
         "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/"
       ]
     },
@@ -300,6 +311,12 @@
       "value": "CVE-2026-73570",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70571",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -4497,6 +4514,12 @@
       ]
     },
     {
+      "value": "asp.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
       "value": "at5.nl",
       "sources": [
         "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
@@ -4780,6 +4803,12 @@
       ]
     },
     {
+      "value": "csc.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
       "value": "csrfproxy.studiocloud.xyz",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -5017,6 +5046,12 @@
       "value": "fcchk.twimg.co.uk",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "fdwsd.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -5260,6 +5295,12 @@
       ]
     },
     {
+      "value": "http.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
       "value": "hus1.ptps.tk",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -5351,7 +5392,8 @@
         "https://isc.sans.edu/diary/rss/33396",
         "https://isc.sans.edu/diary/rss/33400",
         "https://isc.sans.edu/diary/rss/33406",
-        "https://isc.sans.edu/diary/rss/33410"
+        "https://isc.sans.edu/diary/rss/33410",
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -5382,6 +5424,12 @@
       "value": "just.checkapi.cf",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "kernel32.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -6011,6 +6059,12 @@
       ]
     },
     {
+      "value": "rndismp6.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
       "value": "roguemsp.mu",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
@@ -6068,7 +6122,8 @@
     {
       "value": "sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
+        "https://isc.sans.edu/diary/rss/33406",
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -6262,6 +6317,12 @@
       "value": "soudan.html",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "spaceport.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -6523,6 +6584,12 @@
       ]
     },
     {
+      "value": "unionfs.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
       "value": "up-theta-rose.vercel.app",
       "sources": [
         "https://isc.sans.edu/diary/rss/33400"
@@ -6763,6 +6830,12 @@
       "value": "windverify.exe",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/09/29/phishing-abuses-rmm-tools-persistent-access/"
+      ]
+    },
+    {
+      "value": "wininet.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
