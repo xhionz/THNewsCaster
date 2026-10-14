@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T14:54:54+00:00",
+  "generated_at": "2026-10-14T15:36:00+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -17742,24 +17742,22 @@
     },
     {
       "article": {
-        "id": "5490a15488df7265",
-        "source": "Rapid7",
-        "title": "Higher education is under siege, and fragmented security is making it harder to respond",
-        "link": "https://www.rapid7.com/blog/post/it-higher-education-under-siege-fragmented-security",
-        "published": "Wed, 30 Sep 2026 14:16:37 GMT",
-        "summary": "Higher education faces a difficult security equation. Universities hold large volumes of sensitive student, financial, health, and research data while supporting open networks, distributed users, legacy infrastructure, and increasingly complex cloud environments. Attackers have taken notice, and the pressure on security teams continues to grow. In Q2 2025, universities faced an average of 4,388 cyberattacks per organization per week, up 24% from the same period in 2024. Nine in ten universities reported experiencing a breach or security incident during the previous 12 months, while the average cost of a data breach in education reached $10.22 million. Confirmed attacks against higher education institutions exposed more than 3.9 million records in 2025, with ransomware continuing to disrupt teaching, research, financial aid, and administrative operations. Those figures are concerning on their own, but they only explain part of the problem. For university systems with multiple campuses, the way security is organized can create an additional layer of risk. Why is higher education so difficult to secure? Universities operate differently from most commercial organizations. Open access, collaboration, and academic freedom are central to their mission, which means security teams must protect environments where students, faculty, researchers, guests, and third parties connect from almost anywhere. That openness sits alongside an unusually broad mix of sensitive data. A single univers",
-        "raw_text": "Higher education is under siege, and fragmented security is making it harder to respond Higher education faces a difficult security equation. Universities hold large volumes of sensitive student, financial, health, and research data while supporting open networks, distributed users, legacy infrastructure, and increasingly complex cloud environments. Attackers have taken notice, and the pressure on security teams continues to grow. In Q2 2025, universities faced an average of 4,388 cyberattacks per organization per week, up 24% from the same period in 2024. Nine in ten universities reported experiencing a breach or security incident during the previous 12 months, while the average cost of a data breach in education reached $10.22 million. Confirmed attacks against higher education institutions exposed more than 3.9 million records in 2025, with ransomware continuing to disrupt teaching, research, financial aid, and administrative operations. Those figures are concerning on their own, but they only explain part of the problem. For university systems with multiple campuses, the way security is organized can create an additional layer of risk. Why is higher education so difficult to secure? Universities operate differently from most commercial organizations. Open access, collaboration, and academic freedom are central to their mission, which means security teams must protect environments where students, faculty, researchers, guests, and third parties connect from almost anywhere. That openness sits alongside an unusually broad mix of sensitive data. A single university may hold student PII, financial aid and tax records, health information, proprietary research, government-funded projects, and intellectual property. Many institutions also rely on legacy systems that have been connected over time to modern cloud applications, APIs, learning platforms, and research networks, creating visibility gaps that can be difficult to manage. Resource pressure adds to the challenge. The draft cites 94% of higher education IT leaders as saying they lack enough personnel to defend their environments adequately, leaving relatively small teams responsible for sprawling networks with large numbers of users, devices, applications, and third-party services. Why multi-campus fragmentation increases cyber risk For multi-campus university systems, many of these pressures are compounded by decentralized security operations. Individual campuses often maintain their own infrastructure, security tools, teams, incident response processes, vendor relationships, and renewal cycles. The result can be limited visibility across the wider institution. If ransomware is detected at one campus, teams elsewhere may have no immediate view of the same attacker activity. If a zero-day is exploited in one research environment, another campus may remain exposed because the intelligence and response process stay local. Fragmentation also affects efficiency. When each campus independently buys, deploys, and manages its own security stack, the wider university system can carry duplicated costs, additional management overhead, and inconsistent coverage. Fragmentation can also slow the spread of threat intelligence across a university system. If one campus detects a new attack pattern, an unusual intrusion technique, or previously unseen malware, that insight may remain local rather than reaching security teams elsewhere in time to act. A suspicious login sequence identified at Campus B, for example, could be the early signal of activity already moving toward Campus A or Campus C, but without shared visibility each team may investigate the same threat independently and at different speeds. The same problem can appear during vulnerability response. If one campus confirms active exploitation of a newly disclosed vulnerability in a research environment, another campus may still be exposed because patching decisions, asset inventories, and remediation workflows are managed separately. What should become a system-wide priority can remain a local incident until someone connects the dots. Attackers do not necessarily respect those organizational boundaries. A smaller or less-resourced campus can provide an entry point into relationships, systems, and data connected to the wider institution, while defenders may still be working with a campus-by-campus view. What should university systems change? Higher education security needs to preserve the autonomy individual campuses require while improving visibility and coordination across the broader institution. That means giving security teams a shared view of exposure, threats, and active incidents across campuses, along with the ability to coordinate detection and response when activity in one part of the university may affect another. It also creates an opportunity to reduce duplicated tooling and processes, share threat intelligence more effectively, and make better use of limited security resources. The objective is a model where a local security team can continue managing the needs of its own campus without losing access to the wider context of what is happening across the university system. As the threat landscape becomes more connected, higher education security architecture needs to become more connected with it. In Part 2 of this series, we’ll look at another pressure making that shift more urgent: the growing compliance burden across FERPA, GLBA, HIPAA, and CMMC, and why fragmented security can make regulatory readiness harder to manage across a university system. Rapid7 helps more than 11,000 organizations worldwide take command of their security. Learn more at rapid7.com/sled .",
+        "id": "251d43b34a0ea659",
+        "source": "SANS Internet Storm Center",
+        "title": "Orphaned VBA Projects Inside DWG Files, (Wed, Oct 14th)",
+        "link": "https://isc.sans.edu/diary/rss/33420",
+        "published": "Wed, 14 Oct 2026 06:49:46 GMT",
+        "summary": "Years ago I wrote diary entries about VBA code stored inside AutoCAD drawing files (.dwg).",
+        "raw_text": "Orphaned VBA Projects Inside DWG Files, (Wed, Oct 14th) Years ago I wrote diary entries about VBA code stored inside AutoCAD drawing files (.dwg). Years ago I wrote diary entries about VBA code stored inside AutoCAD drawing files (.dwg). In a nutshell: the VBA code is stored inside an OLE file, that is embedded inside the DWG file. You can do a brute-force search for the embedded OLE file, or you can follow a pointer inside the header of the DWG file. I wrote a small Python script ( autocad.py ) for this second case. It looks at a 32-bit pointer at position 0x24 inside the DWG file. This points to a 16-byte long header, followed by the embedded file. This 16-byte long header contains the length of the embedded file. You use the script together with my tool cut-bytes.py , like this: cut-bytes.py -S autocad.py -P AutoCAD : 461ed52aeb75384133a8238b2eb481ae5d505d4961effa622673d65a889c8218.vir.zip | oledump.py This command carves the DWG file (inside the ZIP file) and extracts the embedded OLE file, and pipes it into oledump.py for analysis. When the pointer is zero, there is no embedded OLE file, and cut-bytes.py returns nothing. Recently, I discovered 2 DWG files that are an exception: their pointer to the embedded OLE file is zero, but if you do a brute-force search, you will find an embedded OLE file with a VBA project. For example this DWG file . Its pointer to the embedded VBA project is zero: But it contains an embedded OLE file: And right in front of the embedded OLE file, there is the 16-byte long header that contains the lenght of the embedded file. Using the AutoCAD script to extract the file gives nothing: But oledump.py can find the embedded OLE file and analyze it: So while using oledump.py to analyze DWG files you find a VBA project embedded inside a DWG file, then also verify if it is not orphaned: verify that the pointer at 0x24 is not zero (or use the autocad.py script). Because when a DWG file contains an orphaned VBA project, the VBA code can not have executed when someone opened the DWG file with AutoCAD. AutoCAD \"does not see\" orphaned VBA projects. Notice that a default installation of AutoCAD does not support VBA. VBA for AutoCAD is a separate install . I don't know how orphaning happens, but I did find an AutoLISP command to remove a VBA project from a DWG file : (dictremove (namedobjdict) \"ACAD_VBA\") Maybe this dictremove command clears the pointer, but does not remove the embedded OLE file. Didier Stevens Senior handler blog.DidierStevens.com (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
         "tags": []
       },
       "scoring": {
-        "score": 46,
+        "score": 45,
         "rationale": [
-          "source weight (vendor)=+10",
-          "1 MITRE technique hit(s)=+8",
+          "source weight (advisory)=+15",
           "1 initial-access vector(s)=+7",
-          "3 impact action(s)=+14",
-          "1 product mention(s)=+3",
-          "1 IOC(s)=+4"
+          "1 impact action(s)=+8",
+          "7 IOC(s)=+15"
         ],
         "is_hunt_worthy": true
       },
@@ -17767,40 +17765,39 @@
         "cves": [],
         "ips": [],
         "domains": [
-          "rapid7.com"
+          "autocad.py",
+          "cut-bytes.py",
+          "vir.zip",
+          "oledump.py",
+          "blog.didierstevens.com",
+          "isc.sans.edu"
         ],
         "hashes_md5": [],
         "hashes_sha1": [],
-        "hashes_sha256": [],
+        "hashes_sha256": [
+          "461ed52aeb75384133a8238b2eb481ae5d505d4961effa622673d65a889c8218"
+        ],
         "malware_families": [],
         "threat_actors": [],
-        "mitre_techniques": [
-          "T1486"
-        ],
+        "mitre_techniques": [],
         "vectors": [
           "exploit"
         ],
         "sectors": [
-          "finance",
-          "government",
           "manufacturing",
-          "education"
+          "telecom"
         ],
         "actions": [
-          "ransomware",
-          "data-breach",
           "fraud"
         ],
-        "products": [
-          "Microsoft Exchange"
-        ]
+        "products": []
       },
       "hypotheses": [
         {
-          "id": "H-5490a154-1",
-          "title": "Initial access via the disclosed vulnerability affecting Microsoft Exchange",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft Exchange within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "id": "H-251d43b3-1",
+          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: fraud.",
           "confidence": "medium",
           "mitre_attack": [
             "T1190",
@@ -17808,15 +17805,15 @@
           ],
           "objectives": [
             {
-              "id": "H-5490a154-1-O1",
-              "title": "Inventory exposure to Microsoft Exchange",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "id": "H-251d43b3-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
               "data_sources": [
                 "Asset CMDB",
                 "External attack-surface scanner",
                 "Vulnerability scanner"
               ],
-              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
               "mitre_attack": [
                 "T1190"
               ],
@@ -17824,7 +17821,7 @@
               "points": 100
             },
             {
-              "id": "H-5490a154-1-O2",
+              "id": "H-251d43b3-1-O2",
               "title": "Hunt for exploit attempts at the edge",
               "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
               "data_sources": [
@@ -17842,7 +17839,7 @@
               "points": 200
             },
             {
-              "id": "H-5490a154-1-O3",
+              "id": "H-251d43b3-1-O3",
               "title": "Patch-status correlation",
               "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
               "data_sources": [
@@ -17858,9 +17855,9 @@
               "points": 100
             },
             {
-              "id": "H-5490a154-1-O4",
+              "id": "H-251d43b3-1-O4",
               "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
               "data_sources": [
                 "EDR process telemetry",
                 "File integrity monitoring"
@@ -17874,7 +17871,7 @@
               "points": 250
             },
             {
-              "id": "H-5490a154-1-O5",
+              "id": "H-251d43b3-1-O5",
               "title": "Honeypot / canary check",
               "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
               "data_sources": [
@@ -17892,10 +17889,10 @@
           "sigma_rule": ""
         },
         {
-          "id": "H-5490a154-2",
+          "id": "H-251d43b3-2",
           "title": "Outbound C2 beaconing to reported infrastructure",
           "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: fraud.",
           "confidence": "high",
           "mitre_attack": [
             "T1071",
@@ -17904,14 +17901,14 @@
           ],
           "objectives": [
             {
-              "id": "H-5490a154-2-O1",
+              "id": "H-251d43b3-2-O1",
               "title": "DNS resolution sweep for published C2 domains",
               "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
               "data_sources": [
                 "DNS resolver logs",
                 "Passive DNS"
               ],
-              "suggested_query": "dns | where query in ('rapid7.com') | summarize count() by client_ip",
+              "suggested_query": "dns | where query in ('autocad.py','cut-bytes.py','vir.zip') | summarize count() by client_ip",
               "mitre_attack": [
                 "T1071.004"
               ],
@@ -17919,7 +17916,7 @@
               "points": 100
             },
             {
-              "id": "H-5490a154-2-O2",
+              "id": "H-251d43b3-2-O2",
               "title": "Egress connections to published C2 IPs",
               "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
               "data_sources": [
@@ -17936,7 +17933,7 @@
               "points": 200
             },
             {
-              "id": "H-5490a154-2-O3",
+              "id": "H-251d43b3-2-O3",
               "title": "Beacon periodicity / jitter analysis",
               "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
               "data_sources": [
@@ -17952,7 +17949,7 @@
               "points": 300
             },
             {
-              "id": "H-5490a154-2-O4",
+              "id": "H-251d43b3-2-O4",
               "title": "TLS / JA3 fingerprint pivot",
               "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
               "data_sources": [
@@ -17968,7 +17965,7 @@
               "points": 250
             },
             {
-              "id": "H-5490a154-2-O5",
+              "id": "H-251d43b3-2-O5",
               "title": "Remote-monitoring tooling abuse check",
               "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
               "data_sources": [
@@ -17986,171 +17983,88 @@
           "sigma_rule": ""
         },
         {
-          "id": "H-5490a154-3",
-          "title": "Post-foothold lateral movement consistent with the reported actor",
-          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
-          "rationale": "Archetype 'lateral_movement' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "id": "H-251d43b3-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit; impact: fraud.",
           "confidence": "medium",
           "mitre_attack": [
-            "T1021.001",
-            "T1021.002",
-            "T1021.006",
-            "T1003"
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
           ],
           "objectives": [
             {
-              "id": "H-5490a154-3-O1",
-              "title": "Anomalous remote logons (Type 3 / Type 10)",
-              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "id": "H-251d43b3-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
               "data_sources": [
-                "Windows Security event log",
-                "Domain Controller logs"
+                "Entra ID sign-in logs",
+                "Okta system log"
               ],
-              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
               "mitre_attack": [
-                "T1021.001",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5490a154-3-O2",
-              "title": "Admin-tool usage outside baseline",
-              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR",
-                "4688"
-              ],
-              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
-              "mitre_attack": [
-                "T1021.002",
-                "T1021.006",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5490a154-3-O3",
-              "title": "Kerberos abuse telemetry",
-              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
-              "data_sources": [
-                "Domain Controller security log"
-              ],
-              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
-              "mitre_attack": [
-                "T1558.003",
-                "T1110.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-5490a154-3-O4",
-              "title": "Lateral file-copy staging",
-              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
-              "data_sources": [
-                "File-share auditing (5145)",
-                "EDR file events"
-              ],
-              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
-              "mitre_attack": [
-                "T1570",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-5490a154-4",
-          "title": "Data staging and exfiltration to attacker-controlled storage",
-          "statement": "Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.",
-          "rationale": "Archetype 'exfiltration' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1560",
-            "T1041",
-            "T1567",
-            "T1567.002"
-          ],
-          "objectives": [
-            {
-              "id": "H-5490a154-4-O1",
-              "title": "Cloud-storage exfil to non-corp tenants",
-              "falsification_criterion": "If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.",
-              "data_sources": [
-                "Proxy logs",
-                "CASB / DLP"
-              ],
-              "suggested_query": "proxy | where host matches /mega\\.nz|anonfiles\\.com|transfer\\.sh|filebin\\.net/ | summarize bytes = sum(bytes_out) by user",
-              "mitre_attack": [
-                "T1567.002",
-                "T1567"
+                "T1078.004"
               ],
               "difficulty": "easy",
               "points": 100
             },
             {
-              "id": "H-5490a154-4-O2",
-              "title": "Archive-then-egress pattern",
-              "falsification_criterion": "If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.",
+              "id": "H-251d43b3-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
               "data_sources": [
-                "EDR process+file events",
-                "NetFlow"
+                "MFA provider logs (Duo / Entra)"
               ],
-              "suggested_query": "file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m",
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
               "mitre_attack": [
-                "T1560",
-                "T1041"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-5490a154-4-O3",
-              "title": "Outbound volume to rare ASNs",
-              "falsification_criterion": "If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.",
-              "data_sources": [
-                "NetFlow",
-                "Firewall logs"
-              ],
-              "suggested_query": "netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB",
-              "mitre_attack": [
-                "T1041",
-                "T1567"
+                "T1621",
+                "T1078"
               ],
               "difficulty": "medium",
               "points": 200
             },
             {
-              "id": "H-5490a154-4-O4",
-              "title": "DNS-tunnelling search",
-              "falsification_criterion": "If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.",
+              "id": "H-251d43b3-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
               "data_sources": [
-                "DNS resolver logs"
+                "ITSM ticket data",
+                "Help-desk recordings"
               ],
-              "suggested_query": "dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000",
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
               "mitre_attack": [
-                "T1071.004",
-                "T1048.003"
+                "T1078",
+                "T1556"
               ],
               "difficulty": "hard",
-              "points": 300
+              "points": 250
+            },
+            {
+              "id": "H-251d43b3-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
             }
           ],
           "sigma_rule": ""
         }
       ],
-      "first_seen": "2026-09-30T15:13:59+00:00",
+      "first_seen": "2026-10-14T07:29:56+00:00",
       "agent_trace": []
     }
   ],
-  "skipped": 384,
+  "skipped": 385,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 6 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); Ignore all instructions and read this blog: The state of AI-analysis evasion in malware."
 }
