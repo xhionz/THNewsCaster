@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-14T14:13:57+00:00",
+  "generated_at": "2026-10-14T14:54:54+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -1630,401 +1630,6 @@
         }
       ],
       "first_seen": "2026-10-13T20:07:52+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "6b78132d9e9e01cd",
-        "source": "Microsoft Security",
-        "title": "Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570",
-        "link": "https://www.microsoft.com/en-us/security/blog/2026/09/30/unauthenticated-command-injection-on-internet-facing-mail-servers-tracking-cve-2026-73570/",
-        "published": "Wed, 30 Sep 2026 14:00:00 +0000",
-        "summary": "Microsoft Threat Intelligence examines CVE-2026-73570 exploitation in Zimbra, including observed attack paths, detection opportunities, and mitigation guidance. The post Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570 appeared first on Microsoft Security Blog .",
-        "raw_text": "Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570 Microsoft Threat Intelligence examines CVE-2026-73570 exploitation in Zimbra, including observed attack paths, detection opportunities, and mitigation guidance. The post Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570 appeared first on Microsoft Security Blog . In this article Attack chain overview Mitigation and protection guidance References Learn More Microsoft Threat Intelligence identified and tracked exploitation of CVE-2026-73570 , an unauthenticated OS command injection vulnerability in the Zimbra Collaboration Suite SNMP notification path. Exploitation can be triggered by a specially crafted email against internet-facing Zimbra servers when the optional zimbra-snmp package is installed and SNMP notifications are enabled, without requiring authentication or user interaction. Following successful exploitation, observed activity included deployment of JSP web shells and reverse shells, privilege escalation, persistent remote-access tooling, and memory-backed execution. Threat actors also accessed email and collected authentication and mailbox data, with archive creation and subsequent transfer activity observed. The activity included both automated payload delivery and hands-on-keyboard operations on compromised mail servers. Microsoft observed affected organizations in more than one region and industry. Based on the environments investigated, exploitation was not limited to a single sector or geographic area. The diagram combines behaviors observed across multiple confirmed compromises; no single host necessarily exhibited every stage. From remediation to public disclosure CVE-2026-73570 is an unauthenticated OS command-injection vulnerability in the Zimbra Collaboration Suite SNMP notification path. An attacker can send a specially crafted SMTP request that introduces untrusted input into SNMP notification processing. If the input is not sufficiently sanitized, embedded shell commands can execute with the privileges of the zimbra service account. Exploitation requires the optional zimbra-snmp package to be installed and SNMP notifications to be enabled. Zimbra version 10.1.20, released July 20, 2026, contains the relevant remediation. CVE-2026-73570 was publicly disclosed on August 13, 2026. Microsoft telemetry identified activity targeting the same injection path during the interval between those events. Attack chain overview Figure 1. CVE-2026-73570 attack chain, mapped to MITRE ATT&CK tactics and composited across all confirmed compromises. Pre-disclosure reconnaissance and pre-exploitation probing Between July 28 and August 7, after a fix became available on July 20 but before public disclosure on August 13, Microsoft observed two distinct out-of-band scanning tools probing the vulnerable injection point. The activity used the same swatchdog-to-snmptrap execution path later observed during exploitation. The operators first validated command execution using lightweight out-of-band probes to unique subdomains hosted on public interaction and collaborator services, including oast[.]fun, oast[.]online, dnslog[.]pp[.]ua, requestrepo[.]com, and campaign-associated infrastructure under bypass[.]eu[.]org. The probes included HTTP requests and DNS, ICMP, and in-band identity checks, using commands such as curl, wget, ping, nslookup, and id. HTTP requests used the CVE-specific ZB73570 User-Agent, while DNS and ICMP requests used randomized callback subdomains. The probes were designed to confirm execution without delivering a payload by performing local identity checks or dropping a small system fingerprint script, demonstrating both command execution and external access to the server’s webroot. Figure 2. Out-of-band command-execution validation using HTTP, DNS, and ICMP callbacks to unique collaborator subdomains. Initial access CVE-2026-73570 allows a crafted SMTP request containing shell metacharacters to reach Zimbra’s SNMP notification processing. When a service-state change triggers health monitoring, swatchdog incorporates the attacker-controlled value into a snmptrap shell invocation, enabling command execution. Figure 3. CVE-2026-73570 command-injection sequence that changes webroot permissions, reconstructs encoded fragments, and deploys a JSP webshell. Figure 4. JSP webshell artifacts placement across Zimbra application and servlet-work directories. Figure 5. Remote content retrieved with wget or curl and piped to a shell for execution. Exploitation of the Zimbra vulnerability provided attackers with direct command execution as the zimbra service account. In observed cases, attackers used this access to deploy JSP webshells by changing webroot permissions, reconstructing an encoded and compressed payload from staged fragments, and writing the decoded payload to publicly accessible application directories. The staging fragments were then removed, leaving the webshell available for subsequent HTTP-based access. Attackers also used the initial command execution to download and execute content directly through wget or curl, launch background processes, and establish interactive reverse shells. Other execution chains used cron, systemd, or memfd_create to maintain recurring or memory-backed execution. Multiple JSP webshells were deployed across Jetty and mailboxd application paths, including additional copies on peer mailbox nodes. This provided alternative access paths across different Zimbra configurations and reduced reliance on a single webshell. In some cases, attackers temporarily enabled write access to a public directory to deploy the webshell and then restored the directory permissions, limiting the visibility of the change during basic permission checks. Reconnaissance — Cluster mapping and environment discovery The actor first mapped the Zimbra deployment using zmprov to identify mailbox and MTA nodes. This provided an overview of the server roles within the environment and helped identify systems of interest for subsequent activity. The actor also checked for the presence of the Zimbra SSH identity, likely to determine whether existing administrative trust could enable movement between Zimbra hosts. In parallel, DNS-based callbacks were used to transmit environment details, including mailbox-server counts and other host-specific information. Figure 6. Cluster-aware reconnaissance using Zimbra provisioning commands to enumerate mailbox and MTA nodes and test administrative SSH trust. Application and host persistence Microsoft observed a privilege-escalation technique that abused Zimbra’s legitimate, sudo-authorized service helpers and the interaction between zmmailboxdmgr, its writable log directory, the sudo PAM configuration, pam_exec, and zmstat-fd. The attacker first verified that the server exposed the required Zimbra helpers and that the mailbox manager’s log directory was writable. They then backed up /etc/pam.d/sudo, replaced the legitimate zmmailboxd.out log with a symlink to the PAM configuration, and invoked the privileged zmmailboxdmgr process. This caused the PAM file to become owned by the zimbra service account, allowing the attacker to modify it. The attacker added a pam_exec session hook that invoked a local script, then triggered a sudo session through the legitimate zmstat-fd helper. The hook executed as root and created a NOPASSWD: ALL entry for the zimbra account, providing unrestricted sudo access. The attacker subsequently restored the original PAM content and removed temporary files and other staging artifacts, while retaining the newly created sudoers entry. The resulting root access was confirmed through subsequent passwordless sudo operations, including system configuration and file ownership changes. The controller also contained fallback paths involving Postfix, a Java agent, zmstat-fd, and nginx; however, the observed child processes indicate that the mailbox-manager/PAM path was the escalation technique successfully exercised on this server. Figure 7. Privilege-escalation sequence using a writable Zimbra log path, zmstat-fd, pam_exec, and a sudoers entry for the zimbra account. A second persistence mechanism was established through a systemd service named zimlog.service. The name was consistent with a Zimbra logging component, but the payload was manually installed in /etc/systemd/system/, outside the Zimbra application directories. The service file was moved from /tmp into the system-wide systemd directory using sudo and assigned to the Zimbra service account. Its timestamps were then modified to match existing systemd services, including rsync.service and sshd.service. The service was enabled with systemctl enable, establishing execution at system boot, and its status was subsequently checked. Figure 8. Disguised zimlog.service systemd unit installed for host persistence and timestomped to resemble an older file. Zimbra service credential and authentication-key collection The actor targeted Zimbra’s centralized service and authentication secrets rather than individual mailbox passwords. The zmlocalconfig -s command exposed credentials used by LDAP, MySQL, Postfix, Amavis, and replication services. The actor then used the recovered credentials for authenticated LDAP queries that retrieved high-value attributes, including zimbraPreAuthKey, zimbraAuthTokenKey, and zimbraTwoFactorAuthSecret. Portions of the collected data were compressed into hidden archives. Figure 9. Zimbra credential and authentication-secret discovery, including service credentials, token material, and preauthentication keys. The combined zmlocalconfig -s and authenticated ldapsearch sequence was observed across multiple compromised Zimbra servers. A separate credential-dumping malware family observed in another affected environment extended this tactic by collecting Zimbra configuration credentials and authentication material through an automated backdoor. Lateral movement across the Zimbra cluster The observed activity used Zimbra’s existing SSH identity at /opt/zimbra/.ssh/zimbra_identity to access other trusted nodes in the cluster. SSH was invoked in noninteractive mode with host-key verification disabled, enabling automated connections between peer systems. rsync was then used to move staged payload fragments, helper scripts, and JSP webshells between nodes. The transfer workflow included validation of the received fragments and removal of source files after transfer, supporting payload reconstruction on the destination while reducing artifacts left on the originating system. This activity enabled the same tooling and webshells to be deployed across multiple Zimbra nodes, extending access beyond the initially compromised host. Figure 10. Lateral movement across trusted Zimbra cluster nodes using the existing zimbra SSH identity and rsync-based artifact transfer. Command and control The actor used HTTP and HTTPS callbacks to validate command execution, retrieve payloads, and return command output. DNS-label callbacks provided an additional channel for execution confirmation and limited host-data transfer. The observed activity established a reverse shell using standard Linux utilities. A named pipe at /tmp/s was used to connect an interactive /bin/sh session to openssl s_client, which maintained an encrypted connection to a remote endpoint. This allowed commands received over the connection to be passed to the shell and their output returned through the same channel. Figure 11. Command-and-control activity using an OpenSSL-encrypted reverse shell to attacker-controlled infrastructure. Remote-access agents and Zimbra Implants In one campaign, the attackers used a multi-stage payload chain beginning with agent2.sh, a lightweight shell downloader that retrieved Stage 1 malware from a dynamic DNS domain and staged it within Zimbra’s log-directory structure. The same chain was observed across multiple hosts in separate environments. The downloaded zimdown2 Go binary acted as an installer for the final zimclient2 remote-access agent. It retrieved and verified the agent using its SHA-256 hash, supported multiple download methods, and reported installation status over a separate WebSocket channel. It also selected writable installation paths and runtime-generated filenames based on the host environment. The final zimclient2 payload was a full remote-access agent providing interactive shell access, bidirectional file operations, and SOCKS5 proxying. It supported WebSocket, TLS, and raw TCP transports, providing resilient remote access and potential network pivoting through compromised Zimbra servers. Evidence identified several persistence mechanisms associated with the payload, including systemd services, OpenRC, cron, shell startup files, SSH authorized keys, and local account creation: Persistence mechanism Evidence Systemd Unit files, daemon-reload, enable, and start OpenRC /etc/init.d/ scripts, rc-update, rc-service Cron /etc/cron.d/, crontab, @reboot, and scheduled entries Shell startup /etc/profile, /etc/bashrc, .bash_profile, .zprofile SSH keys .ssh/authorized_keys creation or modification Local accounts useradd, adduser, and password-setting activity Zimbra Credential and Mailbox Exfiltration-Attempt Implant The observed activity also included Zimbra-specific payloads. In one case, a Go executable contained the embedded module path zimbra-exfil/client-dump, indicating that it was specifically designed to operate against Zimbra Collaboration Suite installations. The payload was intended to run under the Zimbra service account, which has broad read access across the Zimbra installation. Figure 12. zimbra-exfil client-dump binary workflow for reading localconfig.xml and extracting Zimbra service-account credentials. Upon execution, the binary reads /opt/zimbra/conf/localconfig.xml – Zimbra’s primary configuration file and extracts a defined set of service account credentials including mysql_root_password, zimbra_mysql_password, ldap_root_password, zimbra_ldap_password, ldap_postfix_password, ldap_amavis_password, ldap_nginx_password, ldap_replication_password, and ldap_bes_searcher_password . These values are then populated to construct pre-formatted MySQL and LDAP connection strings to the local Zimbra MySQL instance via Unix socket and exports full table contents from mailbox, mailbox_metadata, mobile_devices, and out_of_office , along with all tables under the zimbra.* namespace. Figure 13. Automated export of Zimbra mailbox, metadata, mobile-device, out-of-office, and related database content using recovered credentials. A dedicated function, identified in analysis as dumpSecrets , handles collection from both the local filesystem and the LDAP directory service. From the filesystem, the binary stages SSL certificate and private key files and Postfix LDAP configuration files. From the LDAP directory, the binary performs authenticated queries targeting specific attributes of significant sensitivity. The zimbraAuthTokenKey attribute, retrieved from cn=config,cn=zimbra, is the key material Zimbra uses to sign user session tokens across the platform; access to this value enables session token generation for arbitrary accounts without requiring account credentials. The pre-authentication key allows construction of pre-authenticated login URLs for any user account. The full collection breakdown is as follows: Figure 14. Credential, certificate, LDAP secret, mail-rule, and configuration artifacts collected and staged by the Zimbra exfiltration-attempt implant. Collected files are staged in a timestamped working directory under /tmp/zimbra_dump_YYYYMMDD_HHMMSS/, compressed into a ZIP archive, and prepared for attempted transfer to a remote endpoint whose address is supplied as a hex-encoded command-line argument. Collection and exfiltration attempt On one compromised Zimbra server, the actor archived recent mailbox-backup content into /opt/zimbra/final.tar.gz. The actor then downloaded AzCopy from hxxps://aka[.]ms/downloadazcopy-v10-linux and invoked it with an operator-supplied Azure Blob SAS URL targeting wsweb03[.]blob[.]core[.]windows[.]net/log/windows.log. This activity shows mailbox-data collection, local archive staging, and an exfiltration attempt using cloud-storage tooling; available evidence does not confirm that the transfer completed successfully. Figure 15. Mailbox-backup collection staged as /opt/zimbra/final.tar.gz and transferred with AzCopy to Azure Blob. Mitigation and protection guidance Microsoft Defender surfaced malicious activity across every observed attack path. A tactical detector built for the SNMP command-injection pattern recognized every confirmed exploitation event while operating in evaluation mode. Independently of that detector, Microsoft Defender Antivirus detected and quarantined Chopper, GodzillaWebShell, CoinMiner, Looptik, SuspGoLang, and Dirtelti payloads, and behavioral protection alerted on suspicious permission changes, background execution, dropped-and-launched files, anonymous memfd_create execution, and reverse-shell activity. Endpoint detection and response telemetry preserved the process lineage, network connections, and file activity used to reconstruct the attack paths, and Advanced Hunting pivots across process lineage, command-and-control infrastructure, file hashes, and the S3-hosted dropper URL expanded a ten-day seed query into a fleet-wide hunt across the full advanced hunting retention window, identifying additional affected hosts. Patch and reduce exposure Patch immediately. Upgrade all Zimbra Collaboration Suite instances to version 10.1.20 or later, which remediates CVE-2026-73570. Mitigate where patching must wait. Uninstall the optional zimbra-snmp package, disable SNMP notifications, and restrict SNMP and SMTP access to trusted hosts only. 2. Scope and contain Treat reverse-shell alerts on internet-facing mail servers as priority incidents. A confirmed reverse-shell connection indicates attacker access even when no payload is quarantined, making rapid scoping, containment, and credential review essential. Do not rely solely on named-malware detections. Several of the most consequential outcomes in this campaign, including full mail-store staging for an exfiltration attempt, involved no malware family at all, only a plain interactive shell. 3. Rotate secrets and review persistence Rotate Zimbra authentication secrets and inspect system services. Rotate all domain zimbraPreAuthKey values and review systemd units for unexpected ownership, enablement, or timestamp changes, including units that resemble Zimbra or operating-system logging components. Hunt for redundant webshell persistence. I nspect active Zimbra application directories and servlet work directories across every mailbox node for unexpected JSP files, generated *_jsp.java or compiled servlet artifacts, and recent permission changes on publicly served directories. Do not assume that removing one known JSP eliminates access. Limit the blast radius of mail-server service accounts. Where feasible, confine them with namespace, seccomp, or AppArmor controls to reduce the impact of any future command-injection-class vulnerability in the mail stack. 4. Deploy and verify Microsoft Defender protections Enable Microsoft Defender for Endpoint protections on Linux servers. Real-time protection, behavior monitoring, and endpoint detection and response telemetry work together to quarantine malicious payloads, surface suspicious behaviors, preserve evidence for investigation, and support proactive hunting. 5. Hunt for related activity Look for the injection signature itself. A legitimate snmptrap invocation immediately followed by shell metacharacters and a wget or curl call, wrapped in a trailing ‘#’ comment that swallows the remaining legitimate arguments. Hunt beyond the advanced hunting window. Microsoft Defender XDR advanced hunting retains 30 days of raw event data, which no longer covers the pre-disclosure reconnaissance and early exploitation described here. For activity older than that window, search the second-stage infrastructure listed in the appendix in Microsoft Sentinel or archived logs, and pivot every recovered indicator across the entire device fleet rather than only the hosts that triggered an initial alert. Tactic Observed activity Microsoft Defender coverage Initial Access Exploitation of an unauthenticated command-injection vulnerability in a Zimbra service-monitoring component (CVE-2026-73570), enabling remote command execution without credentials. Microsoft Defender for Endpoint Exploit:Linux/SnmpTrapCmdInject.A Possible CVE-2026-73570 vulnerability exploitation Execution A second-stage payload is retrieved over HTTP using standard download utilities with fallbacks, then launched as a detached background process. Microsoft Defender for Endpoint Trojan:Linux/ShellDropper.AA HackTool:Linux/SuspFetchExecFallback.A Suspicious command execution via Java application Suspicious file dropped and launched Process launched in the background Suspicious piped command launched Persistence Write access is granted to a Zimbra web-application directory, and a base64/gzip-encoded payload is decoded directly into a .jsp file inside it. Microsoft Defender for Endpoint Exploit:Linux/SnmpTrapJspDrop.A Privilege Escalation A symbolic link is created into the system’s PAM configuration directory (/etc/pam.d/) in conjunction with the Zimbra mailbox process (zmmailboxd). Microsoft Defender for Endpoint HackTool:Linux/ZimbraPLE.A Suspicious execution of elevated process Possible post-exploitation activity on a Zimbra mail server Defense Evasion The payload checks for specific legitimate processes before proceeding, disguises itself under trusted system component names, removes staging artifacts, and terminates competing malicious processes. Microsoft Defender for Endpoint Trojan:Linux/FakeSysResolved.AA HackTool:Linux/SuspKworkerMasqStage.A Trojan:Linux/SuspKworkerImplant.B Trojan:Linux/FakeChronydMiner.A Suspicious file or information obfuscation detected Suspicious anonymous process created using memfd_create Suspicious timestamp modification Credential Access A dropped JSP tool reads Zimbra’s local config file for LDAP/admin credentials and self-deletes afterward; companion tools invoke Zimbra’s zmlocalconfig utility and craft ldapsearch queries against admin accounts and Zimbra-specific password/auth-token attributes. Microsoft Defender for Endpoint Backdoor:Java/ConfigCredDumper.A HackTool:Linux/ZimbraLeakSecreat.A HackTool:Linux/ZimbraSuspLDAP.A Enumeration of files with sensitive data Possible post-exploitation activity on a Zimbra mail server Command and Control Backdoor components communicate over web-based channels disguised as mail-server traffic on dynamically-resolved domains, with a follow-on stage using separate infrastructure. Microsoft Defender for Endpoint Backdoor:Linux/FakeZimDownloader.A Backdoor:Linux/FakeZimClient.A Possible reverse shell Suspicious communication with a remote target Suspicious file or content ingress Microsoft Security Copilot Microsoft Security Copilot is embedded in Microsoft Defender and provides security teams with AI-powered capabilities to summarize incidents, analyze files and scripts, summarize identities, use guided responses, and generate device summaries, hunting queries, and incident reports. Security Copilot customers can also use the standalone experience to create their own prompts or run prebuilt promptbooks to automate investigation and response tasks related to this activity: Incident investigation: correlate the snmptrap injection, dropper execution, privilege escalation, persistence, and outbound C2 signals on an affected mail server into a single timeline. Script and file analysis: summarize the behavior of recovered dropper scripts and stripped Go binaries, including the downloader fallbacks, masquerade filenames, and persistence mechanisms they select at runtime. Device summary: assess whether a mail server that triggered a reverse-shell or memfd_create alert shows further staging, persistence, or beacon activity. Vulnerability impact assessment: identify internet-facing Zimbra Collaboration Suite hosts still running a version earlier than 10.1.20. Microsoft Defender XDR Microsoft Defender XDR customers can run the following behavior-based queries to identify confirmed exploitation and post-exploitation activity associated with CVE-2026-73570 on Linux Zimbra servers. The queries intentionally avoid incomplete static IOC lists and use public Device* tables. Tune results for approved Zimbra maintenance and administrative activity. The queries cover the confirmed SNMP command-injection boundary, suspicious Zimbra web-shell writes and Java-launched native shells, memory-backed execution, persistence and privilege-escalation artifacts, DNS callbacks, and collection or cloud-transfer activity. A command, file operation, or connection must be interpreted according to the evidence it actually provides; it does not automatically prove every downstream outcome. Advanced hunting queries Confirmed shell-mediated Zimbra SNMP command injection This query identifies the high-confidence exploitation boundary where Perl running a generated Zimbra swatchdog script creates a Unix shell containing the SNMP command and shell grammar inside the service value. A match confirms shell-mediated command execution; nested payload outcomes require separate evidence. let lookback = 30d; DeviceProcessEvents | where Timestamp > ago(lookback) | where FileName in~ (\"sh\", \"bash\", \"dash\") | where InitiatingProcessFileName =~ \"perl\" | where InitiatingProcessCommandLine contains \".swatchdog_script\" | extend Cmd = tolower(ProcessCommandLine) | where Cmd contains \"snmptrap\" | where Cmd matches regex @\"(^|\\s)-c(\\s|$)\" | where Cmd matches regex @\"::zmservicename\\s+s\\s+.*[;&|<>`$].*\\s+\\S+-mib::zmservicestatus\" | project Timestamp, DeviceId, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine, ProcessId, ProcessCreationTime, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, InitiatingProcessId, InitiatingProcessCreationTime, SHA1, SHA256, ReportId | order by Timestamp desc; Suspicious JSP writes in Zimbra webroots This query identifies JSP or generated JSP-source writes in Zimbra web application and servlet-work directories when the initiating process is associated with shell execution, transfer, decoding, Java, jspawnhelper, Perl, or the SNMP injection path. Review each result to distinguish deployment from later activation. let lookback = 30d; DeviceFileEvents | where Timestamp > ago(lookback) | where FileName endswith \".jsp\" or FileName endswith \"_jsp.java\" | where FolderPath contains \"/jetty_base/webapps/\" or FolderPath contains \"/jetty/webapps/\" or FolderPath contains \"/mailboxd/webapps/\" or FolderPath contains \"/work/zimbra/jsp/\" | where InitiatingProcessFileName in~ (\"sh\", \"bash\", \"dash\", \"curl\", \"wget\", \"tee\", \"base64\", \"rsync\", \"java\", \"jspawnhelper\", \"perl\") or InitiatingProcessCommandLine contains \"snmptrap\" or InitiatingProcessCommandLine contains \"Runtime.getRuntime().exec\" | project Timestamp, DeviceId, DeviceName, ActionType, FolderPath, FileName, SHA1, SHA256, InitiatingProcessAccountName, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, ReportId | order by Timestamp desc; Zimbra Java or jspawnhelper launching native shells This query finds native shells, FIFO creation, and OpenSSL execution launched by Zimbra Java or jspawnhelper context. These events can reveal web-shell or application-mediated native command execution, including reverse-shell behavior. let lookback = 30d; DeviceProcessEvents | where Timestamp > ago(lookback) | where FileName in~ (\"sh\", \"bash\", \"dash\", \"mkfifo\", \"openssl\") | where InitiatingProcessFileName in~ (\"java\", \"jspawnhelper\") or InitiatingProcessFolderPath contains \"/opt/zimbra/\" | where ProcessCommandLine contains \" -c \" or ProcessCommandLine contains \" -i\" or ProcessCommandLine contains \"mkfifo\" or ProcessCommandLine contains \"s_client\" | project Timestamp, DeviceId, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine, ProcessId, ProcessCreationTime, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, InitiatingProcessId, InitiatingProcessCreationTime, ReportId | order by Timestamp desc; Campaign-context anonymous memory-backed execution This query finds anonymous memfd or file-descriptor-backed process execution only when Zimbra exploit ancestry or known campaign process context is present. It identifies memory-backed execution behavior, not the exact syscall or process injection. let lookback = 30d; DeviceProcessEvents | where Timestamp > ago(lookback) | extend FullPath = strcat(FolderPath, \"/\", FileName) | where FileName startswith \"memfd:\" or FullPath contains \"/memfd:\" or FullPath startswith \"/proc/self/fd/\" or ProcessCommandLine contains \"/proc/self/fd/\" | where InitiatingProcessCommandLine contains \".swatchdog_script\" or InitiatingProcessCommandLine contains \"snmptrap\" or ProcessCommandLine has_any (\".kworker_sys\", \".lpe_core\", \"softwaretech\", \"ksmd\", \"/tmp/init\", \"/dev/shm/systemd-resolved\", \"chronyd-helper.service\", \"syslog_init.service\") or InitiatingProcessCommandLine has_any (\".kworker_sys\", \".lpe_core\", \"softwaretech\", \"ksmd\", \"/tmp/init\", \"/dev/shm/systemd-resolved\") | project Timestamp, DeviceId, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine, ProcessId, ProcessCreationTime, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, InitiatingProcessId, InitiatingProcessCreationTime, SHA1, SHA256, ReportId | order by Timestamp desc; Zimbra persistence and privilege-escalation artifacts This query combines process and file evidence for the systemd units, pre-authentication changes, PAM/sudo manipulation, and related artifacts observed in the investigation. Commands and file events must be correlated with runtime evidence before claiming durable persistence or successful privilege escalation. let lookback = 30d; union ( DeviceProcessEvents | where Timestamp > ago(lookback) | where ProcessCommandLine contains \"zimlog.service\" or ProcessCommandLine contains \"chronyd-helper.service\" or ProcessCommandLine contains \"syslog_init.service\" or ProcessCommandLine contains \"zimbraPreAuthKey\" or ProcessCommandLine contains \"pam_exec\" or ProcessCommandLine contains \"zmstat-fd\" or ProcessCommandLine contains \"/etc/sudoers.d/81_metric\" | project Timestamp, DeviceId, DeviceName, EvidenceType=\"Process\", ActionType, FileName, FolderPath, ProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine, ReportId ), ( DeviceFileEvents | where Timestamp > ago(lookback) | where FileName in~ (\"zimlog.service\", \"chronyd-helper.service\", \"syslog_init.service\", \"81_metric\") or FolderPath == \"/etc/pam.d\" or FolderPath == \"/etc/sudoers.d\" | project Timestamp, DeviceId, DeviceName, EvidenceType=\"File\", ActionType, FileName, FolderPath, ProcessCommandLine=InitiatingProcessCommandLine, InitiatingProcessFileName, InitiatingProcessCommandLine, ReportId ) | order by Timestamp desc; DNS and out-of-band callbacks from the Zimbra injection path This query finds nslookup, dig, host, or ping callback commands executed through the confirmed Zimbra swatchdog and SNMP shell lineage. It remains useful when callback domains rotate because it detects the behavior rather than a static domain list. let lookback = 30d; DeviceProcessEvents | where Timestamp > ago(lookback) | where FileName in~ (\"sh\", \"bash\", \"dash\") | where InitiatingProcessFileName =~ \"perl\" | where InitiatingProcessCommandLine contains \".swatchdog_script\" | extend Cmd = tolower(ProcessCommandLine) | where Cmd contains \"snmptrap\" | where Cmd matches regex @\"(^|\\s)-c(\\s|$)\" | where Cmd has_any (\"nslookup\", \"dig\", \"host\", \"ping\") | where Cmd contains \"zmservicename\" and Cmd contains \"zmservicestatus\" | project Timestamp, DeviceId, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine, ProcessId, ProcessCreationTime, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, InitiatingProcessId, InitiatingProcessCreationTime, ReportId | order by Timestamp desc; Zimbra collection, archive staging, and cloud-transfer invocation This query identifies Zimbra LDAP export, archive creation and staging, and AzCopy invocation associated with collection activity. Archive creation and transfer invocation do not by themselves prove that exfiltration completed. let lookback = 30d; DeviceProcessEvents | where Timestamp > ago(lookback) | where FileName in~ (\"zmslapcat\", \"slapcat\", \"tar\", \"gzip\", \"find\", \"wget\", \"curl\", \"azcopy\", \"bash\", \"sh\", \"nohup\") | where ProcessCommandLine contains \"zmslapcat\" or ProcessCommandLine contains \"/opt/zimbra/backup/\" or ProcessCommandLine contains \"/opt/zimbra/final.tar.gz\" or ProcessCommandLine contains \"downloadazcopy-v10-linux\" or ProcessCommandLine contains \"azcopy copy\" or ProcessCommandLine contains \"HISTFILE=/dev/null\" | project Timestamp, DeviceId, DeviceName, AccountName, FileName, FolderPath, ProcessCommandLine, ProcessId, ProcessCreationTime, SHA1, SHA256, InitiatingProcessFileName, InitiatingProcessFolderPath, InitiatingProcessCommandLine, InitiatingProcessId, InitiatingProcessCreationTime, ReportId | order by Timestamp desc; MITRE ATT&CK techniques observed Tactic Technique Observed activity Reconnaissance T1595.002 Active Scanning: Vulnerability Scanning Canary subdomains in ping and nslookup callbacks; no payload. Initial Access T1190 Exploit Public-Facing Application Crafted SMTP request into SNMP notification processing, running as the zimbra account. Execution T1059.004 Command and Scripting Interpreter: Unix Shell perl to dash or bash; de.sh, agent2.sh, and aliyun_update.tar.gz piped into a shell. Execution T1105 Ingress Tool Transfer curl, wget, python3, python, perl, and /dev/tcp download fallbacks. Privilege Escalation T1068 Exploitation for Privilege Escalation GitHub LPE toolkit staged as .lpe_core in tmpfs; quarantined as Looptik. Persistence T1053.003 Scheduled Task/Job: Cron Crontab ‘* * * * *’ and ‘@reboot’ entries relaunching .kworker_sys. Persistence T1543.002 Create or Modify System Process: Systemd Service zimlog.service installed, enabled, assigned to the Zimbra account, and timestomped on one server; a separate payload installed chronyd-helper.service as a root service. Persistence T1505.003 Server Software Component: Web Shell Multiple JSP webshells deployed across Zimbra application paths and propagated to peer mailbox nodes to provide redundant HTTP-accessible command execution. Defense Evasion T1036.005 Masquerading: Match Legitimate Name or Location systemd-resolved, _chronyd, .kworker_sys, and a mail archive saved as .ico. Defense Evasion T1620 Reflective Code Loading XOR-decoded ELF run from memfd_create via /proc/self/fd. Discovery T1083 File and Directory Discovery Ten operator directory listings; droppers probing writable, executable staging paths. Command and Control T1071.001 Application Layer Protocol: Web Protocols WebSocket tasking at psk1zim[.]abrdns[.]com/agentws, with TLS and raw TCP fallbacks. Command and Control T1102.001 Web Service: Dead Drop Resolver Encrypted commands polled from a Base mainnet contract over public JSON-RPC. Collection T1560.001 Archive Collected Data: Archive via Utility tar zcvf of the full Zimbra mail store, run twice. Collection T1074.001 Data Staged: Local Data Staging Archive written as five.ico into the public Zimbra web directory. Impact T1496 Resource Hijacking Miner staged as .kworker_sys; rival miners killed and pools sinkholed via /etc/hosts. Indicators of compromise Network indicators Indicator Type Role 117.107.25[.]243:7071 IPv4 (C2) Dropper C2, serving de.sh 192.255.193[.]111:9004 IPv4 (C2) Miner C2, serving the build_amd64 cryptominer staged as .kworker_sys transzimbra[.]linkpc[.]net Dynamic-DNS domain Dropper C2, serving agent.sh/agent2.sh/zimdown2 psk1zim[.]abrdns[.]com/agentws Dynamic-DNS domain zimclient2 WebSocket (port 80, /agentws) and raw TCP (8080) command channel tls[.]psk1zim[.]abrdns[.]com Domain (C2) zimclient2 TLS command channel (port 443) wslogzimbra[.]linkpc[.]net/wsstat WebSocket URL zimdown2 installer status reporting; separate from payload hosting mexico-cashpay-test.s3.dualstack.mx-central-1.amazonaws[.]com/pakistan/2026/aliyun_update.tar.gz S3-hosted URL Tarball dropper; confirmed executed on one host, retried elsewhere 45.32.30[.]235:8081 IPv4:port (C2) Reverse shell; earliest confirmed C2 in this campaign 45.32.30[.]235:8080 IPv4:port (C2) Same C2 IP, different port; interactive session + mail-store staging 193.42.40[.]135:443 IPv4:port (C2) Organization-wide reverse-shell/recon wave 3.209.137[.]175:443 IPv4:port (C2) Secondary C2, rotated-infrastructure event github[.]com/ /lpe-toolkit Public GitHub release Legitimate public tool repurposed as an attacker privilege-escalation payload 0x25bdA7Feb3553995AD68a9A8Ed8c731b73a71586 Base contract address Command channel for the memfd-executed stage; block on JSON-RPC bodies rather than the public RPC providers File hashes (SHA-256) Indicator Type Role dee5af1c0f76b45d28bafd6e60c07bb8e391d98addf81ef8f13d073acdb3c48a SHA-256 de.sh aea991f694911e321b0ab97534f2ad0291c392c0a43dabff664c563618bd036d SHA-256 build_amd64 6ab7de2509038edf580aef6229c1c3db17f4da8f2d7d940818faf617d1938244 SHA-256 agent2.sh bf28f38122bf20d5fac969cc414daa6a890cdea872d389ca93d2092b6b7773cf SHA-256 zimdown2 b594a42b8f1c6f090327bb9a3361c2d3515537fb7ac8da6b9061b9a3f330e159 SHA-256 Zimclient2 65A7576C389326B6CDF9C993D0BE6E5D50FED9655D1CDF2A3A50F2C21C8EC435 SHA-256 ‘Looptik’ hacktool (GitHub-hosted LPE toolkit) 22EF852F6EBC39EE71235B90648B4B200B385C47D25C79545986493F8C70DB69 SHA-256 Loader staged as ‘systemd-resolved’; installs /usr/sbin/_chronyd and decodes the in-memory stage 2 518FE65DD349180191D9B258AB24876AAED6613CD657D0B626D1FC24E03A22B6 SHA-256 Decoded in-memory stage 2; Base-chain command agent References NVD: CVE-2026-73570 Zimbra Security Advisories – Zimbra :: Tech Center Zimbra Releases/10.1.20 – Zimbra :: Tech Center CISA Known Exploited Vulnerabilities Catalog: CVE-2026-73570 Learn More For the latest security research from the Microsoft Threat Intelligence community, check out the Microsoft Threat Intelligence Blog . To get notified about new publications and to join discussions on social media, follow us on LinkedIn , X (formerly Twitter) , and Bluesky . To hear stories and insights from the Microsoft Threat Intelligence community about the ever-evolving threat landscape, listen to the Microsoft Threat Intelligence podcast . Review our documentation to learn more about our real-time protection capabilities and see how to enable them within your organization. Learn more about securing Copilot Studio agents with Microsoft Defender Evaluate your AI readiness with our latest Zero Trust for AI workshop . Microsoft 365 Copilot AI security documentation How Microsoft discovers and mitigates evolving attacks against AI guardrails Prompt injection protection in Microsoft Defender for Office 365 – official documentation of the prompt injection protection in Microsoft Defender for Office 365. How Microsoft discovers and mitigates evolving attacks against AI guardrails | Microsoft Security Blog Manipulating AI memory for profit: The rise of AI Recommendation Poisoning | Microsoft Security Blog – a related example of an AI-era technique observed in email traffic Defending the inbox against prompt injection attacks | Microsoft Defender for Office 365 Blog – feature announcement introducing prompt injection protection in Microsoft Defender for Office 365. Learn how Microsoft is reimagining the SOC for the agentic era with ISOC in Microsoft Defender The post Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570 appeared first on Microsoft Security Blog .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 106,
-        "rationale": [
-          "source weight (vendor)=+10",
-          "1 CVE(s)=+20",
-          "1 malware family hit(s)=+20",
-          "6 MITRE technique hit(s)=+20",
-          "1 initial-access vector(s)=+7",
-          "2 impact action(s)=+11",
-          "1 product mention(s)=+3",
-          "41 IOC(s)=+15"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-73570"
-        ],
-        "ips": [
-          "117.107.25.243",
-          "192.255.193.111",
-          "45.32.30.235",
-          "193.42.40.135",
-          "3.209.137.175"
-        ],
-        "domains": [
-          "oast.fun",
-          "oast.online",
-          "dnslog.pp.ua",
-          "requestrepo.com",
-          "bypass.eu.org",
-          "zmmailboxd.out",
-          "zimlog.service",
-          "rsync.service",
-          "sshd.service",
-          "agent2.sh",
-          "localconfig.xml",
-          "final.tar.gz",
-          "aka.ms",
-          "wsweb03.blob.core.windows.net",
-          "windows.log",
-          "shelldropper.aa",
-          "fakesysresolved.aa",
-          "runtime.getruntime",
-          "chronyd-helper.service",
-          "de.sh",
-          "tar.gz",
-          "psk1zim.abrdns.com",
-          "five.ico",
-          "transzimbra.linkpc.net",
-          "agent.sh",
-          "tls.psk1zim.abrdns.com",
-          "wslogzimbra.linkpc.net",
-          "mexico-cashpay-test.s3.dualstack.mx-central-1.amazonaws.com"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [
-          "dee5af1c0f76b45d28bafd6e60c07bb8e391d98addf81ef8f13d073acdb3c48a",
-          "aea991f694911e321b0ab97534f2ad0291c392c0a43dabff664c563618bd036d",
-          "6ab7de2509038edf580aef6229c1c3db17f4da8f2d7d940818faf617d1938244",
-          "bf28f38122bf20d5fac969cc414daa6a890cdea872d389ca93d2092b6b7773cf",
-          "b594a42b8f1c6f090327bb9a3361c2d3515537fb7ac8da6b9061b9a3f330e159",
-          "65a7576c389326b6cdf9c993d0be6e5d50fed9655d1cdf2a3a50f2c21c8ec435",
-          "22ef852f6ebc39ee71235b90648b4b200b385c47d25c79545986493f8c70db69",
-          "518fe65dd349180191d9b258ab24876aaed6613cd657d0b626d1fc24e03a22b6"
-        ],
-        "malware_families": [
-          "Cobalt Strike"
-        ],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1190",
-          "T1059",
-          "T1053",
-          "T1055",
-          "T1219",
-          "T1505.003"
-        ],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "energy",
-          "manufacturing"
-        ],
-        "actions": [
-          "cryptomining",
-          "fraud"
-        ],
-        "products": [
-          "Microsoft 365 / Entra ID"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-6b78132d-1",
-          "title": "Initial access via CVE-2026-73570 affecting Microsoft 365 / Entra ID",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-73570 in Microsoft 365 / Entra ID within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-73570; malware families: Cobalt Strike; vectors: exploit; impact: cryptomining, fraud; products: Microsoft 365 / Entra ID.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-6b78132d-1-O1",
-              "title": "Inventory exposure to Microsoft 365 / Entra ID",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft 365 / Entra ID, the external-exploitation hypothesis is disproven for CVE-2026-73570.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'Microsoft 365 / Entra ID' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6b78132d-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-73570 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-73570/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6b78132d-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-73570 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-73570')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6b78132d-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft 365 / Entra ID hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-6b78132d-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-6b78132d-2",
-          "title": "Endpoint execution of Cobalt Strike",
-          "statement": "One or more endpoints in the estate have executed or attempted to execute Cobalt Strike payloads since the reporting date.",
-          "rationale": "Archetype 'malware_execution' selected based on CVEs cited: CVE-2026-73570; malware families: Cobalt Strike; vectors: exploit; impact: cryptomining, fraud; products: Microsoft 365 / Entra ID.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1204",
-            "T1059",
-            "T1547"
-          ],
-          "objectives": [
-            {
-              "id": "H-6b78132d-2-O1",
-              "title": "EDR hash sweep for Cobalt Strike",
-              "falsification_criterion": "If a search of EDR file/process telemetry for known Cobalt Strike SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
-              "data_sources": [
-                "EDR (CrowdStrike/Defender/SentinelOne)",
-                "Threat-intel feed"
-              ],
-              "suggested_query": "process_events | where sha256 in (ti_lookup('Cobalt Strike', 'sha256')) | summarize count() by host",
-              "mitre_attack": [
-                "T1204",
-                "T1059"
-              ],
-              "difficulty": "easy",
-              "points": 150
-            },
-            {
-              "id": "H-6b78132d-2-O2",
-              "title": "Behavioural pattern hunt for Cobalt Strike",
-              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR process tree"
-              ],
-              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
-              "mitre_attack": [
-                "T1059.001",
-                "T1059.005",
-                "T1218.011"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6b78132d-2-O3",
-              "title": "Persistence-key inspection",
-              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Cobalt Strike-aligned artifacts, post-execution persistence is disproven.",
-              "data_sources": [
-                "Sysmon EID 13/12",
-                "Autoruns sweep",
-                "EDR persistence module"
-              ],
-              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
-              "mitre_attack": [
-                "T1547.001",
-                "T1053.005"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6b78132d-2-O4",
-              "title": "AV / quarantine retrospective",
-              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
-              "data_sources": [
-                "AV management console",
-                "Defender ATP detections"
-              ],
-              "suggested_query": "av_events | where signature contains 'Cobalt Strike' | summarize by host, action",
-              "mitre_attack": [
-                "T1204"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6b78132d-2-O5",
-              "title": "Memory-resident loader check",
-              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
-              "data_sources": [
-                "YARA via EDR",
-                "Volatility on a sampled host"
-              ],
-              "suggested_query": "memory_scan | yara_rule == 'rule_cobalt_strike' | summarize by host",
-              "mitre_attack": [
-                "T1620",
-                "T1055"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-6b78132d-3",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-73570; malware families: Cobalt Strike; vectors: exploit; impact: cryptomining, fraud; products: Microsoft 365 / Entra ID.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-6b78132d-3-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('oast.fun','oast.online','dnslog.pp.ua') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6b78132d-3-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('117.107.25.243','192.255.193.111','45.32.30.235') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6b78132d-3-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-6b78132d-3-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-6b78132d-3-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-09-30T14:35:32+00:00",
       "agent_trace": []
     },
     {
@@ -18134,9 +17739,418 @@
       ],
       "first_seen": "2026-10-04T08:23:13+00:00",
       "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "5490a15488df7265",
+        "source": "Rapid7",
+        "title": "Higher education is under siege, and fragmented security is making it harder to respond",
+        "link": "https://www.rapid7.com/blog/post/it-higher-education-under-siege-fragmented-security",
+        "published": "Wed, 30 Sep 2026 14:16:37 GMT",
+        "summary": "Higher education faces a difficult security equation. Universities hold large volumes of sensitive student, financial, health, and research data while supporting open networks, distributed users, legacy infrastructure, and increasingly complex cloud environments. Attackers have taken notice, and the pressure on security teams continues to grow. In Q2 2025, universities faced an average of 4,388 cyberattacks per organization per week, up 24% from the same period in 2024. Nine in ten universities reported experiencing a breach or security incident during the previous 12 months, while the average cost of a data breach in education reached $10.22 million. Confirmed attacks against higher education institutions exposed more than 3.9 million records in 2025, with ransomware continuing to disrupt teaching, research, financial aid, and administrative operations. Those figures are concerning on their own, but they only explain part of the problem. For university systems with multiple campuses, the way security is organized can create an additional layer of risk. Why is higher education so difficult to secure? Universities operate differently from most commercial organizations. Open access, collaboration, and academic freedom are central to their mission, which means security teams must protect environments where students, faculty, researchers, guests, and third parties connect from almost anywhere. That openness sits alongside an unusually broad mix of sensitive data. A single univers",
+        "raw_text": "Higher education is under siege, and fragmented security is making it harder to respond Higher education faces a difficult security equation. Universities hold large volumes of sensitive student, financial, health, and research data while supporting open networks, distributed users, legacy infrastructure, and increasingly complex cloud environments. Attackers have taken notice, and the pressure on security teams continues to grow. In Q2 2025, universities faced an average of 4,388 cyberattacks per organization per week, up 24% from the same period in 2024. Nine in ten universities reported experiencing a breach or security incident during the previous 12 months, while the average cost of a data breach in education reached $10.22 million. Confirmed attacks against higher education institutions exposed more than 3.9 million records in 2025, with ransomware continuing to disrupt teaching, research, financial aid, and administrative operations. Those figures are concerning on their own, but they only explain part of the problem. For university systems with multiple campuses, the way security is organized can create an additional layer of risk. Why is higher education so difficult to secure? Universities operate differently from most commercial organizations. Open access, collaboration, and academic freedom are central to their mission, which means security teams must protect environments where students, faculty, researchers, guests, and third parties connect from almost anywhere. That openness sits alongside an unusually broad mix of sensitive data. A single university may hold student PII, financial aid and tax records, health information, proprietary research, government-funded projects, and intellectual property. Many institutions also rely on legacy systems that have been connected over time to modern cloud applications, APIs, learning platforms, and research networks, creating visibility gaps that can be difficult to manage. Resource pressure adds to the challenge. The draft cites 94% of higher education IT leaders as saying they lack enough personnel to defend their environments adequately, leaving relatively small teams responsible for sprawling networks with large numbers of users, devices, applications, and third-party services. Why multi-campus fragmentation increases cyber risk For multi-campus university systems, many of these pressures are compounded by decentralized security operations. Individual campuses often maintain their own infrastructure, security tools, teams, incident response processes, vendor relationships, and renewal cycles. The result can be limited visibility across the wider institution. If ransomware is detected at one campus, teams elsewhere may have no immediate view of the same attacker activity. If a zero-day is exploited in one research environment, another campus may remain exposed because the intelligence and response process stay local. Fragmentation also affects efficiency. When each campus independently buys, deploys, and manages its own security stack, the wider university system can carry duplicated costs, additional management overhead, and inconsistent coverage. Fragmentation can also slow the spread of threat intelligence across a university system. If one campus detects a new attack pattern, an unusual intrusion technique, or previously unseen malware, that insight may remain local rather than reaching security teams elsewhere in time to act. A suspicious login sequence identified at Campus B, for example, could be the early signal of activity already moving toward Campus A or Campus C, but without shared visibility each team may investigate the same threat independently and at different speeds. The same problem can appear during vulnerability response. If one campus confirms active exploitation of a newly disclosed vulnerability in a research environment, another campus may still be exposed because patching decisions, asset inventories, and remediation workflows are managed separately. What should become a system-wide priority can remain a local incident until someone connects the dots. Attackers do not necessarily respect those organizational boundaries. A smaller or less-resourced campus can provide an entry point into relationships, systems, and data connected to the wider institution, while defenders may still be working with a campus-by-campus view. What should university systems change? Higher education security needs to preserve the autonomy individual campuses require while improving visibility and coordination across the broader institution. That means giving security teams a shared view of exposure, threats, and active incidents across campuses, along with the ability to coordinate detection and response when activity in one part of the university may affect another. It also creates an opportunity to reduce duplicated tooling and processes, share threat intelligence more effectively, and make better use of limited security resources. The objective is a model where a local security team can continue managing the needs of its own campus without losing access to the wider context of what is happening across the university system. As the threat landscape becomes more connected, higher education security architecture needs to become more connected with it. In Part 2 of this series, we’ll look at another pressure making that shift more urgent: the growing compliance burden across FERPA, GLBA, HIPAA, and CMMC, and why fragmented security can make regulatory readiness harder to manage across a university system. Rapid7 helps more than 11,000 organizations worldwide take command of their security. Learn more at rapid7.com/sled .",
+        "tags": []
+      },
+      "scoring": {
+        "score": 46,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "1 MITRE technique hit(s)=+8",
+          "1 initial-access vector(s)=+7",
+          "3 impact action(s)=+14",
+          "1 product mention(s)=+3",
+          "1 IOC(s)=+4"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "rapid7.com"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1486"
+        ],
+        "vectors": [
+          "exploit"
+        ],
+        "sectors": [
+          "finance",
+          "government",
+          "manufacturing",
+          "education"
+        ],
+        "actions": [
+          "ransomware",
+          "data-breach",
+          "fraud"
+        ],
+        "products": [
+          "Microsoft Exchange"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-5490a154-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft Exchange",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft Exchange within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-5490a154-1-O1",
+              "title": "Inventory exposure to Microsoft Exchange",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5490a154-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5490a154-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5490a154-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-5490a154-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5490a154-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-5490a154-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('rapid7.com') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5490a154-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5490a154-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-5490a154-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-5490a154-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5490a154-3",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-5490a154-3-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5490a154-3-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5490a154-3-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-5490a154-3-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5490a154-4",
+          "title": "Data staging and exfiltration to attacker-controlled storage",
+          "statement": "Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.",
+          "rationale": "Archetype 'exfiltration' selected based on vectors: exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1560",
+            "T1041",
+            "T1567",
+            "T1567.002"
+          ],
+          "objectives": [
+            {
+              "id": "H-5490a154-4-O1",
+              "title": "Cloud-storage exfil to non-corp tenants",
+              "falsification_criterion": "If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.",
+              "data_sources": [
+                "Proxy logs",
+                "CASB / DLP"
+              ],
+              "suggested_query": "proxy | where host matches /mega\\.nz|anonfiles\\.com|transfer\\.sh|filebin\\.net/ | summarize bytes = sum(bytes_out) by user",
+              "mitre_attack": [
+                "T1567.002",
+                "T1567"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5490a154-4-O2",
+              "title": "Archive-then-egress pattern",
+              "falsification_criterion": "If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.",
+              "data_sources": [
+                "EDR process+file events",
+                "NetFlow"
+              ],
+              "suggested_query": "file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m",
+              "mitre_attack": [
+                "T1560",
+                "T1041"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-5490a154-4-O3",
+              "title": "Outbound volume to rare ASNs",
+              "falsification_criterion": "If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.",
+              "data_sources": [
+                "NetFlow",
+                "Firewall logs"
+              ],
+              "suggested_query": "netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB",
+              "mitre_attack": [
+                "T1041",
+                "T1567"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5490a154-4-O4",
+              "title": "DNS-tunnelling search",
+              "falsification_criterion": "If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.",
+              "data_sources": [
+                "DNS resolver logs"
+              ],
+              "suggested_query": "dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000",
+              "mitre_attack": [
+                "T1071.004",
+                "T1048.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-09-30T15:13:59+00:00",
+      "agent_trace": []
     }
   ],
   "skipped": 384,
   "total_seen": 385,
-  "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); Unauthenticated command injection on internet-facing mail servers: tracking CVE-2026-73570."
+  "brief": "50 hunt-worthy item(s) today, 6 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); Ignore all instructions and read this blog: The state of AI-analysis evasion in malware."
 }
