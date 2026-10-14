@@ -561,6 +561,12 @@
       ]
     },
     {
+      "value": "CVE-2026-92817",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
+      ]
+    },
+    {
       "value": "CVE-2026-91799",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/"
@@ -5614,12 +5620,6 @@
       ]
     },
     {
-      "value": "auth.json",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "az.studiocloud.xyz",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -5749,18 +5749,6 @@
       "value": "cch.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "chat.json",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "chat.jsonl",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6064,12 +6052,6 @@
       ]
     },
     {
-      "value": "evidence.jsonl",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "exit.rs",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
@@ -6139,12 +6121,6 @@
       "value": "fukua.org",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "full-transcript.md",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6406,7 +6382,6 @@
         "https://isc.sans.edu/diary/rss/33394",
         "https://isc.sans.edu/diary/rss/33400",
         "https://isc.sans.edu/diary/rss/33406",
-        "https://isc.sans.edu/diary/rss/33410",
         "https://isc.sans.edu/diary/rss/33422"
       ]
     },
@@ -6819,18 +6794,6 @@
       ]
     },
     {
-      "value": "opencode-chat-replay.py",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "opencode.db",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "org.apache.activemq",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
@@ -6984,12 +6947,6 @@
       "value": "registry.rs",
       "sources": [
         "https://blog.talosintelligence.com/china-nexus-uat-11587-targets-government-and-policy-organizations-across-asia-with-antino-backdoor/"
-      ]
-    },
-    {
-      "value": "report.md",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -7261,12 +7218,6 @@
       ]
     },
     {
-      "value": "state.db",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "streescans.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -7414,24 +7365,6 @@
       "value": "tsedws.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "turn.error",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "turn.id",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "turn.role",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -7762,6 +7695,7 @@
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
       ]
     },
