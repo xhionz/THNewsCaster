@@ -1139,12 +1139,6 @@
       ]
     },
     {
-      "value": "CVE-2026-76504",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
       "value": "CVE-2026-72955",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
@@ -1599,18 +1593,6 @@
       ]
     },
     {
-      "value": "CVE-2026-20182",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
-      "value": "CVE-2026-20127",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
       "value": "CVE-2026-15953",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
@@ -1866,30 +1848,6 @@
       ]
     },
     {
-      "value": "20.9.10.1",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
-      "value": "20.12.8.2",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
-      "value": "20.15.6.1",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
-      "value": "20.18.4.1",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
       "value": "24.199.101.184",
       "sources": [
         "https://isc.sans.edu/diary/rss/33406"
@@ -1925,12 +1883,6 @@
       "value": "25.1.3.1",
       "sources": [
         "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
-      ]
-    },
-    {
-      "value": "26.1.2.1",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
       ]
     },
     {
@@ -5488,6 +5440,12 @@
       ]
     },
     {
+      "value": "auth.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
       "value": "autocad.py",
       "sources": [
         "https://isc.sans.edu/diary/rss/33420"
@@ -5606,6 +5564,18 @@
       "value": "cch.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "chat.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "chat.jsonl",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -5867,6 +5837,12 @@
       ]
     },
     {
+      "value": "evidence.jsonl",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
       "value": "explorer.exe",
       "sources": [
         "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
@@ -5912,6 +5888,12 @@
       "value": "fukua.org",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "full-transcript.md",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6101,6 +6083,7 @@
         "https://isc.sans.edu/diary/rss/33394",
         "https://isc.sans.edu/diary/rss/33400",
         "https://isc.sans.edu/diary/rss/33406",
+        "https://isc.sans.edu/diary/rss/33410",
         "https://isc.sans.edu/diary/rss/33420",
         "https://isc.sans.edu/diary/rss/33422"
       ]
@@ -6382,6 +6365,18 @@
       ]
     },
     {
+      "value": "opencode-chat-replay.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "opencode.db",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
       "value": "org.apache.activemq",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
@@ -6463,6 +6458,12 @@
       "value": "raw.githubusercontent.com",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+      ]
+    },
+    {
+      "value": "report.md",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6577,12 +6578,6 @@
       ]
     },
     {
-      "value": "serviceproxy-access.log",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
-      ]
-    },
-    {
       "value": "services.msc",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
@@ -6671,6 +6666,12 @@
       "value": "sqlmap.py",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "state.db",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6788,6 +6789,24 @@
       ]
     },
     {
+      "value": "turn.error",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "turn.id",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "turn.role",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
       "value": "twimg.co.uk",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6864,12 +6883,6 @@
       "value": "vir.zip",
       "sources": [
         "https://isc.sans.edu/diary/rss/33420"
-      ]
-    },
-    {
-      "value": "vmanage-server.log",
-      "sources": [
-        "https://www.rapid7.com/blog/post/etr-critical-cisco-catalyst-sd-wan-manager-api-authentication-bypass-exploited-in-the-wild-cve-2026-76504"
       ]
     },
     {
