@@ -217,6 +217,7 @@
     {
       "value": "CVE-2026-104935",
       "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/",
         "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
         "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
@@ -1704,6 +1705,12 @@
       ]
     },
     {
+      "value": "CVE-2015-1000013",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
       "value": "CVE-2015-5477",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -1720,6 +1727,12 @@
       "value": "CVE-2015-2291",
       "sources": [
         "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
+      ]
+    },
+    {
+      "value": "CVE-2014-125110",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -2009,12 +2022,6 @@
       ]
     },
     {
-      "value": "42.96.20.16",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "45.32.61.246",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -2084,12 +2091,6 @@
       "value": "45.63.123.142",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "45.64.74.51",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -2174,12 +2175,6 @@
       "value": "45.131.69.197",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "46.188.119.26",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -2474,12 +2469,6 @@
       "value": "98.159.37.4",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "102.88.137.80",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -4325,12 +4314,6 @@
       ]
     },
     {
-      "value": "159.223.97.218",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "159.223.199.218",
       "sources": [
         "https://isc.sans.edu/diary/rss/33406"
@@ -4388,12 +4371,6 @@
       "value": "182.34.19.234",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "182.253.221.210",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -4475,12 +4452,6 @@
       ]
     },
     {
-      "value": "185.158.22.150",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "185.213.82.55",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4535,12 +4506,6 @@
       ]
     },
     {
-      "value": "193.233.48.169",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "198.13.38.211",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4568,12 +4533,6 @@
       "value": "202.101.145.22",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "202.152.148.27",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -4676,12 +4635,6 @@
       "value": "209.38.147.216",
       "sources": [
         "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "209.99.190.200",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -5906,12 +5859,6 @@
       ]
     },
     {
-      "value": "event.hash",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "evidence.jsonl",
       "sources": [
         "https://isc.sans.edu/diary/rss/33410"
@@ -6149,7 +6096,6 @@
       "value": "isc.sans.edu",
       "sources": [
         "https://isc.sans.edu/diary/rss/33394",
-        "https://isc.sans.edu/diary/rss/33396",
         "https://isc.sans.edu/diary/rss/33400",
         "https://isc.sans.edu/diary/rss/33406",
         "https://isc.sans.edu/diary/rss/33410",
@@ -6341,7 +6287,8 @@
     {
       "value": "net.exe",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -6485,7 +6432,8 @@
     {
       "value": "pulsebrowser.29kh.in12.talos",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -6552,7 +6500,8 @@
       "value": "sample.exe",
       "sources": [
         "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -6806,12 +6755,6 @@
       ]
     },
     {
-      "value": "transaction.id",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "trendmicro.96html.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6977,7 +6920,8 @@
     {
       "value": "w32.58d6fec4ba-95.sbx.tg",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -6991,13 +6935,15 @@
       "value": "w32.9f1f11a708-100.sbx.tg",
       "sources": [
         "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
       "value": "w32.fed979f93b-95.sbx.tg",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7009,7 +6955,8 @@
     {
       "value": "w32.pup",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7151,12 +7098,6 @@
       "value": "www.dns361.tk",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "www.elastic.co",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -7419,7 +7360,8 @@
     {
       "value": "58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7467,7 +7409,8 @@
     {
       "value": "73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7571,7 +7514,8 @@
       "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
       "sources": [
         "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7695,15 +7639,10 @@
       ]
     },
     {
-      "value": "f904275333aeac48d7df6cf53fe5fb9212c7d132a7d37253d2ab9321ba2690d8",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33396"
-      ]
-    },
-    {
       "value": "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     }
   ],
@@ -7737,14 +7676,16 @@
     {
       "value": "207d9d891ac756b2bfad88aba5682c65",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
       "value": "2915b3f8b703eb744fc54c81f4a9c67f",
       "sources": [
         "https://blog.talosintelligence.com/give-yourself-room-to-be-human/",
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7793,7 +7734,8 @@
     {
       "value": "63f3351cfdf618bec6045f60203e7978",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
@@ -7925,7 +7867,8 @@
     {
       "value": "f1fe671bcefd4630e5ed8b87c9283534",
       "sources": [
-        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
       ]
     },
     {
