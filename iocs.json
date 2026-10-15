@@ -235,6 +235,12 @@
       ]
     },
     {
+      "value": "CVE-2026-104286",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/01/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
       "value": "CVE-2026-102866",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
@@ -292,12 +298,6 @@
       "value": "CVE-2026-102211",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
-      ]
-    },
-    {
-      "value": "CVE-2026-101104",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
       ]
     },
     {
@@ -506,15 +506,9 @@
       ]
     },
     {
-      "value": "CVE-2026-97363",
+      "value": "CVE-2026-97229",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-97212",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
       ]
     },
     {
@@ -594,12 +588,6 @@
       ]
     },
     {
-      "value": "CVE-2026-96613",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
-      ]
-    },
-    {
       "value": "CVE-2026-96222",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
@@ -618,45 +606,9 @@
       ]
     },
     {
-      "value": "CVE-2026-95102",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-94594",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-94593",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-94592",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-94591",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
-      ]
-    },
-    {
       "value": "CVE-2026-94510",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
-      ]
-    },
-    {
-      "value": "CVE-2026-93474",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
       ]
     },
     {
@@ -669,96 +621,6 @@
       "value": "CVE-2026-91799",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/"
-      ]
-    },
-    {
-      "value": "CVE-2026-90457",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90456",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90455",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90454",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90453",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90452",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90451",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90450",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90449",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90448",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90447",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90446",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90445",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90444",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-90443",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01"
       ]
     },
     {
@@ -1565,18 +1427,6 @@
       ]
     },
     {
-      "value": "CVE-2026-64893",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-64892",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04"
-      ]
-    },
-    {
       "value": "CVE-2026-64563",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/"
@@ -1734,18 +1584,6 @@
       ]
     },
     {
-      "value": "CVE-2026-15953",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
-      ]
-    },
-    {
-      "value": "CVE-2026-15952",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
-      ]
-    },
-    {
       "value": "CVE-2026-15340",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02"
@@ -1821,12 +1659,6 @@
       "value": "CVE-2024-8176",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05"
-      ]
-    },
-    {
-      "value": "CVE-2023-46604",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
       ]
     },
     {
@@ -2177,6 +2009,12 @@
       ]
     },
     {
+      "value": "42.96.20.16",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
+      ]
+    },
+    {
       "value": "45.32.61.246",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -2246,6 +2084,12 @@
       "value": "45.63.123.142",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "45.64.74.51",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -2330,6 +2174,12 @@
       "value": "45.131.69.197",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "46.188.119.26",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -2624,6 +2474,12 @@
       "value": "98.159.37.4",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "102.88.137.80",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -4469,6 +4325,12 @@
       ]
     },
     {
+      "value": "159.223.97.218",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
+      ]
+    },
+    {
       "value": "159.223.199.218",
       "sources": [
         "https://isc.sans.edu/diary/rss/33406"
@@ -4526,6 +4388,12 @@
       "value": "182.34.19.234",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "182.253.221.210",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -4607,6 +4475,12 @@
       ]
     },
     {
+      "value": "185.158.22.150",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
+      ]
+    },
+    {
       "value": "185.213.82.55",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4661,6 +4535,12 @@
       ]
     },
     {
+      "value": "193.233.48.169",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
+      ]
+    },
+    {
       "value": "198.13.38.211",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4688,6 +4568,12 @@
       "value": "202.101.145.22",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "202.152.148.27",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -4790,6 +4676,12 @@
       "value": "209.38.147.216",
       "sources": [
         "https://isc.sans.edu/diary/rss/33406"
+      ]
+    },
+    {
+      "value": "209.99.190.200",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
@@ -5599,6 +5491,18 @@
       ]
     },
     {
+      "value": "auth.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "autocad.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
       "value": "az.studiocloud.xyz",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -5671,6 +5575,13 @@
       ]
     },
     {
+      "value": "blog.didierstevens.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33394",
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
       "value": "brokerservice.addconnector",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04"
@@ -5704,6 +5615,18 @@
       "value": "cch.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "chat.json",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "chat.jsonl",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -5818,6 +5741,12 @@
       "value": "curlc4.txt",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "cut-bytes.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
       ]
     },
     {
@@ -5977,6 +5906,18 @@
       ]
     },
     {
+      "value": "event.hash",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
+      ]
+    },
+    {
+      "value": "evidence.jsonl",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
       "value": "explorer.exe",
       "sources": [
         "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
@@ -6025,6 +5966,12 @@
       ]
     },
     {
+      "value": "full-transcript.md",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
       "value": "gate.sinica.edu.tw.checkapi.cf",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6034,6 +5981,18 @@
       "value": "gf.phtml",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "gitlab-ci.yml",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
+      "value": "gitlab.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
       ]
     },
     {
@@ -6139,12 +6098,6 @@
       ]
     },
     {
-      "value": "icsa-26-274-01.json",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
-      ]
-    },
-    {
       "value": "iepl.node.cm",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6195,8 +6148,12 @@
     {
       "value": "isc.sans.edu",
       "sources": [
+        "https://isc.sans.edu/diary/rss/33394",
+        "https://isc.sans.edu/diary/rss/33396",
         "https://isc.sans.edu/diary/rss/33400",
         "https://isc.sans.edu/diary/rss/33406",
+        "https://isc.sans.edu/diary/rss/33410",
+        "https://isc.sans.edu/diary/rss/33420",
         "https://isc.sans.edu/diary/rss/33422",
         "https://isc.sans.edu/diary/rss/33426"
       ]
@@ -6334,12 +6291,6 @@
       ]
     },
     {
-      "value": "monta.app",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
-      ]
-    },
-    {
       "value": "ms.studiocloud.xyz",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6448,6 +6399,12 @@
       ]
     },
     {
+      "value": "oledump.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
       "value": "one.hmbiplc-01.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6463,6 +6420,18 @@
       "value": "opcuaserverconfig.copy",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "opencode-chat-replay.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "opencode.db",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6544,15 +6513,15 @@
       ]
     },
     {
-      "value": "raw.githubusercontent.com",
+      "value": "rapid7.com",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+        "https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk"
       ]
     },
     {
-      "value": "rewcon.co",
+      "value": "report.md",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01"
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6656,12 +6625,6 @@
       ]
     },
     {
-      "value": "services.msc",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03"
-      ]
-    },
-    {
       "value": "sess.zip",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6744,6 +6707,12 @@
       "value": "sqlmap.py",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "state.db",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6837,6 +6806,12 @@
       ]
     },
     {
+      "value": "transaction.id",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
+      ]
+    },
+    {
       "value": "trendmicro.96html.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6852,6 +6827,24 @@
       "value": "tsedws.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "turn.error",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "turn.id",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
+      ]
+    },
+    {
+      "value": "turn.role",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6925,6 +6918,12 @@
       "value": "v3.streescans.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "vir.zip",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
       ]
     },
     {
@@ -7124,13 +7123,6 @@
     {
       "value": "www.cisa.gov",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-254-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-03",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03",
@@ -7162,15 +7154,15 @@
       ]
     },
     {
-      "value": "www.feeee.io",
+      "value": "www.elastic.co",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
-      "value": "www.first.org",
+      "value": "www.feeee.io",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02"
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
       ]
     },
     {
@@ -7197,8 +7189,6 @@
     {
       "value": "www.johnsoncontrols.com",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-04",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-05",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01"
       ]
     },
@@ -7206,12 +7196,6 @@
       "value": "www.leicc009.ga",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "www.meari.com",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-06"
       ]
     },
     {
@@ -7394,6 +7378,12 @@
       "value": "456586ababa08f70216c4459f4d6375676166ebfddd98a33b447ceb5099e8dc5",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "461ed52aeb75384133a8238b2eb481ae5d505d4961effa622673d65a889c8218",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
       ]
     },
     {
@@ -7702,6 +7692,12 @@
       "value": "f8f5e0440c57c7deffd75ca33e2511867039796aa803e7ef847396a379188a7d",
       "sources": [
         "https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/"
+      ]
+    },
+    {
+      "value": "f904275333aeac48d7df6cf53fe5fb9212c7d132a7d37253d2ab9321ba2690d8",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33396"
       ]
     },
     {
