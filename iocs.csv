@@ -906,6 +906,7 @@ domains,asean.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advis
 domains,asp.net,1,https://isc.sans.edu/diary/rss/33422
 domains,at5.nl,1,https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/
 domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
+domains,autocad.py,1,https://isc.sans.edu/diary/rss/33420
 domains,az.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,b.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,b.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -918,7 +919,7 @@ domains,bi.zone,1,https://blog.talosintelligence.com/break-the-silence-kazakhsta
 domains,bj-hk.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,bj-jp.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,blog.98aiblog.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,blog.didierstevens.com,1,https://isc.sans.edu/diary/rss/33394
+domains,blog.didierstevens.com,2,https://isc.sans.edu/diary/rss/33394 | https://isc.sans.edu/diary/rss/33420
 domains,brokerservice.addconnector,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,brokerservice.addnetworkconnector,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,bsnl.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -943,6 +944,7 @@ domains,csc.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,csrfproxy.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,css.js,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,curlc4.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,cut-bytes.py,1,https://isc.sans.edu/diary/rss/33420
 domains,cyber.gc.ca,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,cyber.go.jp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,cyber.gov.au,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1002,11 +1004,10 @@ domains,iepl.node.cm,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,im.arforcex.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,imap.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,info.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,instance-v2e3e2-relay.screenconnect.com,1,https://isc.sans.edu/diary/rss/33388
 domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-domains,isc.sans.edu,6,https://isc.sans.edu/diary/rss/33388 | https://isc.sans.edu/diary/rss/33394 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
+domains,isc.sans.edu,6,https://isc.sans.edu/diary/rss/33394 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,jewishchoice.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/
@@ -1019,7 +1020,6 @@ domains,leicc009.ga,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,live.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,llama.cpp,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 domains,login.aspx,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
-domains,lolrmm.io,1,https://isc.sans.edu/diary/rss/33388
 domains,lore.kernel.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 domains,ls.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,m.secshow.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1028,7 +1028,6 @@ domains,ma.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advi
 domains,mail.bailbonding.info,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,mail.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,masaplus.club,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,mejuri.com,1,https://isc.sans.edu/diary/rss/33388
 domains,microscan.me,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,mitt.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,monta.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-02
@@ -1050,6 +1049,7 @@ domains,ns1.honey1314520.com,1,https://www.cisa.gov/news-events/cybersecurity-ad
 domains,ns1.nikoes.gq,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ns2.nikoes.gq,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,nsa.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,oledump.py,1,https://isc.sans.edu/diary/rss/33420
 domains,one.hmbiplc-01.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,oneforall.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,org.apache.activemq,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
@@ -1069,12 +1069,10 @@ domains,raw.githubusercontent.com,1,https://www.cisa.gov/news-events/ics-advisor
 domains,rewcon.co,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-274-01
 domains,rndismp6.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,runtime.exec,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
-domains,rutserv.exe,1,https://isc.sans.edu/diary/rss/33388
 domains,s3crts.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,sample.exe,2,https://blog.talosintelligence.com/give-yourself-room-to-be-human/ | https://blog.talosintelligence.com/making-sure-the-checks-get-printed/
 domains,sans.edu,3,https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
 domains,scallpay.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,screenconnect.clientsetup.exe,1,https://isc.sans.edu/diary/rss/33388
 domains,search.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,secoh-qad.exe,2,https://blog.talosintelligence.com/give-yourself-room-to-be-human/ | https://blog.talosintelligence.com/making-sure-the-checks-get-printed/
 domains,secretr.feeee.io,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1111,7 +1109,6 @@ domains,t.checkinfo.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisori
 domains,tcpip.sys,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 domains,telegra.ph,1,https://blog.talosintelligence.com/the-fine-art-of-frustrating-the-adversary/
 domains,teyan.microscan.me,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,thelittlecupandsaucer.com.au,1,https://isc.sans.edu/diary/rss/33388
 domains,tj.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,tmp00055df5.dll,1,https://blog.talosintelligence.com/give-yourself-room-to-be-human/
 domains,traffic.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1130,6 +1127,7 @@ domains,upl.natcloudservice.com,1,https://www.cisa.gov/news-events/cybersecurity
 domains,upl.natcloudservice.com.ews,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,urlrewrite.xml,2,https://isc.sans.edu/diary/rss/33406 | https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products
 domains,v3.streescans.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,vir.zip,1,https://isc.sans.edu/diary/rss/33420
 domains,vnpt.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,vpn21.arforcex.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,vpn328433596.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1178,7 +1176,6 @@ domains,www.mx.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-
 domains,www.npa.go.jp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.purple76.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.sans.edu,1,https://isc.sans.edu/diary/rss/33426
-domains,www.screenconnect.com,1,https://isc.sans.edu/diary/rss/33388
 domains,www.smtp.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.sofeter.ml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1204,6 +1201,7 @@ sha256,36f3b7645609ef40444dbc68f01d26c543d67689eda4937272ea5cfa4df1b522,1,https:
 sha256,389066bd5543aeea363d23a4dce7f7a21c7f2c73c61f506a93a69f594cf48ecf,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,4435fcd6862921092614dbeaa880e4192352984686ebcd98f0ba13ee8e226ef9,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,456586ababa08f70216c4459f4d6375676166ebfddd98a33b447ceb5099e8dc5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+sha256,461ed52aeb75384133a8238b2eb481ae5d505d4961effa622673d65a889c8218,1,https://isc.sans.edu/diary/rss/33420
 sha256,46e59172c40c95d83c3a6f24f801fc2265653c8b575b66a726463e2a4eebd7f2,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,4925bcca085ec504f51191645da278d8e96698d91f3c6df44146336c697b4de8,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,4d488f21269b18e37aaca93ac2a61707c9b611e506cdb3b287277746e94636b5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
