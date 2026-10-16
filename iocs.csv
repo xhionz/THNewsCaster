@@ -140,6 +140,7 @@ cves,CVE-2026-85802,1,https://blog.talosintelligence.com/microsoft-patch-tuesday
 cves,CVE-2026-85791,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-85479,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02
 cves,CVE-2026-85355,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
+cves,CVE-2026-85097,1,https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
 cves,CVE-2026-84014,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-83947,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-83943,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
@@ -288,7 +289,6 @@ cves,CVE-2014-9195,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279
 cves,CVE-2014-6278,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 cves,CVE-2010-2965,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06
 ips,1.34.140.5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,1.34.200.85,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 ips,2.3.20.2,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,2.3.24.1,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,2.11.0.30,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
@@ -368,7 +368,6 @@ ips,59.120.144.153,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,59.120.167.25,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,59.124.120.178,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,59.125.128.54,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,59.125.211.65,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 ips,60.184.242.224,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,60.220.43.193,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,60.220.84.41,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -636,7 +635,6 @@ ips,120.233.10.212,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,121.207.60.123,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,122.116.33.118,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,122.116.102.93,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,122.116.138.33,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 ips,122.116.159.52,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,122.201.241.230,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,122.232.149.231,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1032,7 +1030,6 @@ domains,kk.dasxcyb.ga,1,https://www.cisa.gov/news-events/cybersecurity-advisorie
 domains,leicc009.ga,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,live.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,llama.cpp,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
-domains,login.aspx,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,lore.kernel.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 domains,ls.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,m.secshow.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1046,8 +1043,6 @@ domains,mitt.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisor
 domains,ms.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,msedge.store,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,mx.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,mx.zxopfds.com,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
-domains,mx1.wwstifsteel.com,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,natcloudservice.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,nbtscan.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ncsc.govt.nz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1109,8 +1104,6 @@ domains,smtp.sunmoon.website,1,https://www.cisa.gov/news-events/cybersecurity-ad
 domains,snort.org,2,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/ | https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 domains,soudan.html,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,spaceport.sys,1,https://isc.sans.edu/diary/rss/33422
-domains,spam.suwaccqi.com,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
-domains,spamsniper.pid,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,sqlmap.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,state.db,1,https://isc.sans.edu/diary/rss/33410
 domains,streescans.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1140,7 +1133,6 @@ domains,unionfs.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,up-theta-rose.vercel.app,1,https://isc.sans.edu/diary/rss/33400
 domains,up.exe,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 domains,update.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,updiptable.php,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 domains,upgrate.checkapi.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,upl.natcloudservice.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,upl.natcloudservice.com.ews,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1205,28 +1197,23 @@ domains,zerogravity1986.softether.net,1,https://www.cisa.gov/news-events/cyberse
 sha256,0e6fecb2d369b0eae63731616a3daada52036634885ab1b85b115af6bc5bcb86,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,1b19115d5ebdc216e0ab3adf2c643648cfc70a385f4caf0217c679f9f3b20342,1,https://isc.sans.edu/diary/rss/33400
 sha256,2aa7f13bf474e2ce5049fd4db2bf4da04b4ce51ac0d36dceb24865255241c937,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,2bedc26d4b29b435c21962beed7db21188a0219a0d28334bba8b4fb1656d7b15,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,2e3e1bcd44cc3cbec4f5ca9991d14a326d3cc6bf76fe6e0d434c9b5f7e1ae6ab,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,2ecb51d7fa3bc3fa7ad7df64c6d0cd1f4ff2b37ed6839d3cff529fb08af49fb0,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,2f5c406eb64ad8902c8e30610d43fd3efc05a14cdb8fb158818953eaf3dc6a81,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,2fbcb1995c458e5affd5fb8f1f979a08ddce21714a2e413aa3d5dc44f9f245fe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,2fe2dd402ee6f9c578fce6dd4b36daaa407e99133e5dd502f2afca80feb60150,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,33790218d5871af646feef5be29e0596d4703a45ce675c1eb2ca00140b3a1bde,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,34098fe0bc4c69c4c4eb3f74688fb375326804536d25e5574e8c4c28c113b5c3,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,36f3b7645609ef40444dbc68f01d26c543d67689eda4937272ea5cfa4df1b522,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,389066bd5543aeea363d23a4dce7f7a21c7f2c73c61f506a93a69f594cf48ecf,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,4435fcd6862921092614dbeaa880e4192352984686ebcd98f0ba13ee8e226ef9,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,456586ababa08f70216c4459f4d6375676166ebfddd98a33b447ceb5099e8dc5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,461ed52aeb75384133a8238b2eb481ae5d505d4961effa622673d65a889c8218,1,https://isc.sans.edu/diary/rss/33420
 sha256,46e59172c40c95d83c3a6f24f801fc2265653c8b575b66a726463e2a4eebd7f2,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,4925bcca085ec504f51191645da278d8e96698d91f3c6df44146336c697b4de8,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,4d488f21269b18e37aaca93ac2a61707c9b611e506cdb3b287277746e94636b5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,5782ff2c835c88cc1ee521d2e8c523cfad73db3f9a29c93b40c4223f0338ade9,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 sha256,5f60d16fa67ff8ef07817c33b7e6b7fa91c6c21060020df46b1f5c56e076e259,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,644decbc6ce8c52382f4755fa6fc2cb4d89a0e7ec0e574c11b398a6f2eed04b1,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,645f6f2667af01a94d04a9d7a71916a13d9426835d636b4ceee2e25ccb34e525,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,652508a9cf40bee883dc0e5e219dfeba71fe7dac591d01c89f74c21f73b4963f,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,670fa10a2ddde21fd594c4fef86b554d864089ed2de7153b472e921c623403ae,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,67db57a1f957031b78f29aa91e2e87780eae3835290259eff846d8f14afb794b,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,72c6af6a4be99e31c4a7a0aa4f01750792788e7f6f9749243a9f2c47c14a708f,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1234,13 +1221,11 @@ sha256,73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f,2,https:
 sha256,752b14c6e6936991d51fcd5ebf40d303e657c2372893604f96044848ad9a5f24,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,7b9efc7ef8957411cdd22582ce4bfb3a5f76d9c91cdb7e36bf85c9785a2480e9,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,7dd3747d777f9576a11004532b463351e7718b6af193d8ee7221ac41479d199a,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,7e667ba5f9df912e02275d3cfe3809d16f822fe776f4035c84b118ebd925b1b5,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,804a53be802378a8ec4c94602fd3d6584e0d472d83148e8a42c731950fec415d,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,86f1cfa6a2e0a8cb6fc1fbee28472308e6467932f8658a6a4885e29ed8c34a67,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,8a592e22c51311d482272ec5aba0103c9cd0cfd78e5b5ba75dfa8f1c56926672,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,8b869a5edaff74ff18bca3658a519a19771e66d00ff7849af7a142dd6fc8da85,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,8e1b56ef51ba70aa4c4cfd4430820f20875b354588d5d723ba4d3940ea6c924b,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,925c041807d4fb9dfe2ad84f963c2a4c60ea1289f6a0bdccbfb944478ffc2cf2,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,941695d20d82dd5d62f74b0111feb23720637202f6c797df2a02e2cb6cb6e8e3,1,https://isc.sans.edu/diary/rss/33400
 sha256,9896a6fcb9bb5ac1ec5297b4a65be3f647589adf7c37b45f3f7466decd6a4a7f,1,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/
 sha256,996b01e15f85e165899630721a141b178a9c372b6e878012180ec9e9d4e7bd06,1,https://isc.sans.edu/diary/rss/33400
@@ -1248,15 +1233,10 @@ sha256,9dc85f9569a15eaf51c7d34254767ea30dd67b2178cec4cc7125288b9544fe00,1,https:
 sha256,9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 sha256,a0294f7152f9c4c908e9def58279e9fa29952715947c950c8489949f26a15cc8,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,a14844e982f172d0f23910558c3f390a9d4c45dc32db825c2af7cf0ed8631db2,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,a37ea9897221d4495b538de72b74f2aa1d2ff09b7b6dcedd395aee58931adbf3,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,a42632c68d2dcea06300e790c9440fe0943ce0dee2075f29170fd2774eacf433,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,a4379e115d3c4420f5d4b92561022d6e0897990e7297be65c033d47de68e6a6a,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
-sha256,a65048eb30661e27f8edc2dd8d8c77ec87faec1f1750f6e04e7ecaf069a32858,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
-sha256,a6f3b7f932761fb1fd5e74123f2482e36c65dd13e769af2ce08c65da195bfa7a,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,add7dd142e4f7e2873bc8f7b7fb6308063608e0b49a773dea93abad4047f1489,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,b1552703ff0035f197c22cdb3a514bb6aa45ec98de3ef5409faab0978f18c35e,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,bacb5794a300f7a88c7f6d458382eb11d2f39c0f496b509ca512afe8588fc33f,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,bf8135f46ecedfe5bd06fcecbb2e721c2367ff765b18f4aa3f868e6597f49e47,1,https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge
 sha256,c17bf76d02163863c251c3bb3a12725eeb525fab5522521923925e0469ca269f,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,c4503db6ece93eddf4511e787607cb14606a1df9f526f1e39992497119437cec,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,c7f86a4623db5c90273cea041d43207849c5c6b0060c370b2095f13871b1366d,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a

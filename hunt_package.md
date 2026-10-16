@@ -1,8 +1,8 @@
 # Threat Hunting News Package
 
-- Generated: `2026-10-16T13:03:58+00:00`
+- Generated: `2026-10-16T13:43:27+00:00`
 - Generator: `THNewsCaster v0.1.0`
-- Articles seen: **375**  ·  Skipped (below threshold): **375**  ·  Briefings: **50**
+- Articles seen: **385**  ·  Skipped (below threshold): **385**  ·  Briefings: **50**
 - IOC exports: `iocs.csv`, `iocs.json`, `iocs_stix.json`  ·  Sigma rules: `sigma/`  ·  History: `archive/`
 
 ---
@@ -862,125 +862,7 @@
 
 ---
 
-## 8. SMTP is the key: BPFDoor and AVERAT hitting the network edge
-
-- **Source**: Rapid7
-- **Link**: <https://www.rapid7.com/blog/post/tr-smtp-is-the-key-bpfdoor-averat-hitting-the-network-edge>
-- **Published**: Fri, 02 Oct 2026 13:00:00 GMT
-- **First seen**: 2026-10-02T13:18:14+00:00
-- **Relevance score**: 84
-- **Score rationale**: source weight (vendor)=+10, 1 malware family hit(s)=+20, 5 MITRE technique hit(s)=+20, 3 initial-access vector(s)=+11, 1 impact action(s)=+8, 21 IOC(s)=+15
-
-> Overview Rapid7 tracked a set of Linux samples that blend into the software and device conventions of the telecom environments they target. The set spans a newly observed BPFDoor variant, a BPF Rekoobe build seen against South Korean targets, a dropper, and six builds of a Linux implant we track as AVERAT , deployed against Taiwanese appliances. Additionally, we provide source code details of the Rapid7 BPFDoor controller introduced in our April 2026 blog, Stealthy BPFDoor Variants are a Needle That Looks Like Hay . The chain uses two binaries. A dropper writes a shell script to the appliance's storage mount and executes it. The script stages both payloads into /sbin under the names ntpdate and udevds , launches them, and deletes each file ten seconds later while the processes continue running. One of those payloads is the dropper itself, re-executing as a resident watchdog, leaving both processes running without an on-disk image. The dropper derives its encryption key from the string ShareTech and lives in the appliance's own add-on package directory. The BPFDoor variants seen against South Korean systems impersonate the PID file of SpamSniper, a Korean anti-spam product, and rotate through ten Linux daemon names. Across the samples, each component adopts names and conventions designed to look unremarkable in the environment it targets. The common thread is regionalized disguise: each sample is aware of the vendor’s software running on the targeted systems and implements pro
-
-**Extracted signals**
-- Malware families: Cobalt Strike
-- Vectors: exploit, vpn-edge, smb
-- Actions: fraud
-- Sectors: manufacturing, retail, telecom
-- MITRE ATT&CK: T1133, T1053, T1021.002, T1041, T1573
-- IP IOCs: 59.125.211.65, 122.116.138.33, 1.34.200.85
-- Domain IOCs: login.aspx, spamsniper.pid, updiptable.php, mx.zxopfds.com, spam.suwaccqi.com, mx1.wwstifsteel.com
-- SHA256: a37ea9897221d4495b538de72b74f2aa1d2ff09b7b6dcedd395aee58931adbf3, 7e667ba5f9df912e02275d3cfe3809d16f822fe776f4035c84b118ebd925b1b5, a6f3b7f932761fb1fd5e74123f2482e36c65dd13e769af2ce08c65da195bfa7a, 4435fcd6862921092614dbeaa880e4192352984686ebcd98f0ba13ee8e226ef9, 652508a9cf40bee883dc0e5e219dfeba71fe7dac591d01c89f74c21f73b4963f, 2bedc26d4b29b435c21962beed7db21188a0219a0d28334bba8b4fb1656d7b15, bf8135f46ecedfe5bd06fcecbb2e721c2367ff765b18f4aa3f868e6597f49e47, 4925bcca085ec504f51191645da278d8e96698d91f3c6df44146336c697b4de8, a4379e115d3c4420f5d4b92561022d6e0897990e7297be65c033d47de68e6a6a, 925c041807d4fb9dfe2ad84f963c2a4c60ea1289f6a0bdccbfb944478ffc2cf2, 2fe2dd402ee6f9c578fce6dd4b36daaa407e99133e5dd502f2afca80feb60150, a65048eb30661e27f8edc2dd8d8c77ec87faec1f1750f6e04e7ecaf069a32858
-
-### Hypotheses (3)
-
-#### H-1f7f8b9f-1 · Initial access via the disclosed vulnerability affecting the affected product/service  _(confidence: medium)_
-
-**Statement.** A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.
-
-**Why this hypothesis?** Archetype 'initial_access_cve' selected based on malware families: Cobalt Strike; vectors: exploit, vpn-edge, smb; impact: fraud.
-
-**MITRE ATT&CK**: T1190, T1133
-
-**CTF objectives (5) — find evidence that disproves the hypothesis:**
-
-- **[H-1f7f8b9f-1-O1] Inventory exposure to the affected product** _(difficulty: easy · 100 pts · MITRE: T1190)_
-  - Falsification criterion: If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.
-  - Data sources: Asset CMDB, External attack-surface scanner, Vulnerability scanner
-  - Suggested query: `asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)`
-- **[H-1f7f8b9f-1-O2] Hunt for exploit attempts at the edge** _(difficulty: medium · 200 pts · MITRE: T1190, T1133)_
-  - Falsification criterion: If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.
-  - Data sources: WAF logs, IDS/IPS, Edge firewall, CDN logs
-  - Suggested query: `edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host`
-- **[H-1f7f8b9f-1-O3] Patch-status correlation** _(difficulty: easy · 100 pts · MITRE: T1190)_
-  - Falsification criterion: If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.
-  - Data sources: SCCM/Intune, Patch management, Tanium / Kandji
-  - Suggested query: `patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role`
-- **[H-1f7f8b9f-1-O4] Post-exploit web-shell sweep** _(difficulty: medium · 250 pts · MITRE: T1505.003, T1059)_
-  - Falsification criterion: If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.
-  - Data sources: EDR process telemetry, File integrity monitoring
-  - Suggested query: `process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')`
-- **[H-1f7f8b9f-1-O5] Honeypot / canary check** _(difficulty: hard · 300 pts · MITRE: T1190)_
-  - Falsification criterion: If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.
-  - Data sources: Honeypot logs, Canary tokens
-  - Suggested query: `canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip`
-
-#### H-1f7f8b9f-2 · Endpoint execution of Cobalt Strike  _(confidence: high)_
-
-**Statement.** One or more endpoints in the estate have executed or attempted to execute Cobalt Strike payloads since the reporting date.
-
-**Why this hypothesis?** Archetype 'malware_execution' selected based on malware families: Cobalt Strike; vectors: exploit, vpn-edge, smb; impact: fraud.
-
-**MITRE ATT&CK**: T1204, T1059, T1547
-
-**CTF objectives (5) — find evidence that disproves the hypothesis:**
-
-- **[H-1f7f8b9f-2-O1] EDR hash sweep for Cobalt Strike** _(difficulty: easy · 150 pts · MITRE: T1204, T1059)_
-  - Falsification criterion: If a search of EDR file/process telemetry for known Cobalt Strike SHA256s returns zero hits in the last 90 days, payload presence is disproven.
-  - Data sources: EDR (CrowdStrike/Defender/SentinelOne), Threat-intel feed
-  - Suggested query: `process_events | where sha256 in (ti_lookup('Cobalt Strike', 'sha256')) | summarize count() by host`
-- **[H-1f7f8b9f-2-O2] Behavioural pattern hunt for Cobalt Strike** _(difficulty: medium · 200 pts · MITRE: T1059.001, T1059.005, T1218.011)_
-  - Falsification criterion: If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.
-  - Data sources: Sysmon EID 1, EDR process tree
-  - Suggested query: `process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')`
-- **[H-1f7f8b9f-2-O3] Persistence-key inspection** _(difficulty: medium · 200 pts · MITRE: T1547.001, T1053.005)_
-  - Falsification criterion: If autoruns, scheduled tasks, services, and WMI subscriptions show no Cobalt Strike-aligned artifacts, post-execution persistence is disproven.
-  - Data sources: Sysmon EID 13/12, Autoruns sweep, EDR persistence module
-  - Suggested query: `registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/`
-- **[H-1f7f8b9f-2-O4] AV / quarantine retrospective** _(difficulty: easy · 100 pts · MITRE: T1204)_
-  - Falsification criterion: If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.
-  - Data sources: AV management console, Defender ATP detections
-  - Suggested query: `av_events | where signature contains 'Cobalt Strike' | summarize by host, action`
-- **[H-1f7f8b9f-2-O5] Memory-resident loader check** _(difficulty: hard · 300 pts · MITRE: T1620, T1055)_
-  - Falsification criterion: If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.
-  - Data sources: YARA via EDR, Volatility on a sampled host
-  - Suggested query: `memory_scan | yara_rule == 'rule_cobalt_strike' | summarize by host`
-
-#### H-1f7f8b9f-3 · Outbound C2 beaconing to reported infrastructure  _(confidence: high)_
-
-**Statement.** Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).
-
-**Why this hypothesis?** Archetype 'c2_beacon' selected based on malware families: Cobalt Strike; vectors: exploit, vpn-edge, smb; impact: fraud.
-
-**MITRE ATT&CK**: T1071, T1573, T1219
-
-**CTF objectives (5) — find evidence that disproves the hypothesis:**
-
-- **[H-1f7f8b9f-3-O1] DNS resolution sweep for published C2 domains** _(difficulty: easy · 100 pts · MITRE: T1071.004)_
-  - Falsification criterion: If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.
-  - Data sources: DNS resolver logs, Passive DNS
-  - Suggested query: `dns | where query in ('login.aspx','spamsniper.pid','updiptable.php') | summarize count() by client_ip`
-- **[H-1f7f8b9f-3-O2] Egress connections to published C2 IPs** _(difficulty: medium · 200 pts · MITRE: T1071, T1573)_
-  - Falsification criterion: If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.
-  - Data sources: Proxy logs, NetFlow, Firewall accept logs
-  - Suggested query: `egress | where dst_ip in ('59.125.211.65','122.116.138.33','1.34.200.85') | summarize bytes_out = sum(bytes_sent) by src_ip`
-- **[H-1f7f8b9f-3-O3] Beacon periodicity / jitter analysis** _(difficulty: hard · 300 pts · MITRE: T1071, T1095)_
-  - Falsification criterion: If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.
-  - Data sources: NetFlow, Zeek conn.log
-  - Suggested query: `conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s`
-- **[H-1f7f8b9f-3-O4] TLS / JA3 fingerprint pivot** _(difficulty: hard · 250 pts · MITRE: T1573.002)_
-  - Falsification criterion: If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.
-  - Data sources: Zeek ssl.log, Suricata TLS, NDR
-  - Suggested query: `tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni`
-- **[H-1f7f8b9f-3-O5] Remote-monitoring tooling abuse check** _(difficulty: medium · 200 pts · MITRE: T1219)_
-  - Falsification criterion: If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.
-  - Data sources: EDR installed-software, Process telemetry
-  - Suggested query: `process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'`
-
----
-
-## 9. Making sure the checks get printed
+## 8. Making sure the checks get printed
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/making-sure-the-checks-get-printed/>
@@ -1095,7 +977,7 @@
 
 ---
 
-## 10. Swann Communications SWIFI-SE2KIC
+## 9. Swann Communications SWIFI-SE2KIC
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02>
@@ -1207,7 +1089,7 @@
 
 ---
 
-## 11. Red Lion Controls N-Tron 700 Series
+## 10. Red Lion Controls N-Tron 700 Series
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01>
@@ -1319,7 +1201,7 @@
 
 ---
 
-## 12. One breach, please, and make no mistakes
+## 11. One breach, please, and make no mistakes
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/one-breach-please-and-make-no-mistakes/>
@@ -1463,7 +1345,7 @@
 
 ---
 
-## 13. Guangzhou Juan IoT Technology EseeCloud
+## 12. Guangzhou Juan IoT Technology EseeCloud
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02>
@@ -1574,7 +1456,7 @@
 
 ---
 
-## 14. 3 lessons from frontier AI vulnerability research
+## 13. 3 lessons from frontier AI vulnerability research
 
 - **Source**: Microsoft Security
 - **Link**: <https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/>
@@ -1686,7 +1568,7 @@
 
 ---
 
-## 15. J4Care dcm4che
+## 14. J4Care dcm4che
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02>
@@ -1797,7 +1679,7 @@
 
 ---
 
-## 16. Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabilities
+## 15. Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabilities
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/>
@@ -1909,7 +1791,7 @@
 
 ---
 
-## 17. Satel Netco Design
+## 16. Satel Netco Design
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03>
@@ -2020,7 +1902,7 @@
 
 ---
 
-## 18. Grid Protection Alliance openPDC and openHistorian
+## 17. Grid Protection Alliance openPDC and openHistorian
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02>
@@ -2131,7 +2013,7 @@
 
 ---
 
-## 19. Johnson Controls EasyIO FG
+## 18. Johnson Controls EasyIO FG
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01>
@@ -2242,7 +2124,7 @@
 
 ---
 
-## 20. Hitachi Energy REB500
+## 19. Hitachi Energy REB500
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05>
@@ -2354,7 +2236,7 @@
 
 ---
 
-## 21. Hitachi Energy SOI
+## 20. Hitachi Energy SOI
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04>
@@ -2465,7 +2347,7 @@
 
 ---
 
-## 22. Patch Tuesday - October 2026
+## 21. Patch Tuesday - October 2026
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026>
@@ -2577,7 +2459,7 @@
 
 ---
 
-## 23. CISA Urges Patching Newly Exploited Vulnerability in Ivanti Connect Secure
+## 22. CISA Urges Patching Newly Exploited Vulnerability in Ivanti Connect Secure
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure>
@@ -2689,7 +2571,7 @@
 
 ---
 
-## 24. Eclipse Foundation Eclipse Milo
+## 23. Eclipse Foundation Eclipse Milo
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01>
@@ -2799,7 +2681,7 @@
 
 ---
 
-## 25. Thermo Fisher Torrent Suite Software
+## 24. Thermo Fisher Torrent Suite Software
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01>
@@ -2910,7 +2792,7 @@
 
 ---
 
-## 26. Inductive Automation Ignition Software
+## 25. Inductive Automation Ignition Software
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01>
@@ -3021,7 +2903,7 @@
 
 ---
 
-## 27. Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th)
+## 26. Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33406>
@@ -3133,7 +3015,7 @@
 
 ---
 
-## 28. Hitachi Energy RTU500
+## 27. Hitachi Energy RTU500
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06>
@@ -3243,7 +3125,7 @@
 
 ---
 
-## 29. Microsoft, Adobe, Apple, and Foxit vulnerabilities
+## 28. Microsoft, Adobe, Apple, and Foxit vulnerabilities
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/>
@@ -3354,7 +3236,7 @@
 
 ---
 
-## 30. CISA Adds Four Known Exploited Vulnerabilities to Catalog
+## 29. CISA Adds Four Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog>
@@ -3464,7 +3346,7 @@
 
 ---
 
-## 31. Panchan's Mining Island [Guest Diary], (Wed, Oct 14th)
+## 30. Panchan's Mining Island [Guest Diary], (Wed, Oct 14th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33426>
@@ -3575,7 +3457,7 @@
 
 ---
 
-## 32. Hitachi Energy Asset Suite
+## 31. Hitachi Energy Asset Suite
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03>
@@ -3685,7 +3567,7 @@
 
 ---
 
-## 33. Ivanti Connect Secure zero-day exploited in the wild (CVE-2026-104935)
+## 32. Ivanti Connect Secure zero-day exploited in the wild (CVE-2026-104935)
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935>
@@ -3796,7 +3678,7 @@
 
 ---
 
-## 34. CVE-2026-21589: Critical unauthenticated arbitrary file access in Atlassian products
+## 33. CVE-2026-21589: Critical unauthenticated arbitrary file access in Atlassian products
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products>
@@ -3908,7 +3790,7 @@
 
 ---
 
-## 35. AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches
+## 34. AhsayCBS Flaws Exploited to Deploy Web Shells Get New Fixes After Incomplete Patches
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html>
@@ -4018,7 +3900,7 @@
 
 ---
 
-## 36. More RMM Tools In the Wild, (Tue, Oct 6th)
+## 35. More RMM Tools In the Wild, (Tue, Oct 6th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33400>
@@ -4130,7 +4012,7 @@
 
 ---
 
-## 37. CISA Adds Two Known Exploited Vulnerabilities to Catalog
+## 36. CISA Adds Two Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog>
@@ -4240,7 +4122,7 @@
 
 ---
 
-## 38. Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge
+## 37. Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html>
@@ -4352,7 +4234,7 @@
 
 ---
 
-## 39. Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies
+## 38. Flax Typhoon Exploits Five Flaws as CISA Sets October 11 Deadline for Federal Agencies
 
 - **Source**: The Hacker News
 - **Link**: <https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html>
@@ -4462,7 +4344,7 @@
 
 ---
 
-## 40. Savannah lwIP SMTP client
+## 39. Savannah lwIP SMTP client
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02>
@@ -4573,7 +4455,7 @@
 
 ---
 
-## 41. The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime
+## 40. The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime
 
 - **Source**: Microsoft Security
 - **Link**: <https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/>
@@ -4685,7 +4567,7 @@
 
 ---
 
-## 42. CISA Adds One Known Exploited Vulnerability to Catalog
+## 41. CISA Adds One Known Exploited Vulnerability to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/10/04/cisa-adds-one-known-exploited-vulnerability-catalog>
@@ -4795,7 +4677,7 @@
 
 ---
 
-## 43. CISA Adds Two Known Exploited Vulnerabilities to Catalog
+## 42. CISA Adds Two Known Exploited Vulnerabilities to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/10/02/cisa-adds-two-known-exploited-vulnerabilities-catalog>
@@ -4904,7 +4786,7 @@
 
 ---
 
-## 44. CVE-2026-97229: Critical Unauthenticated Remote Code Execution in GitLab
+## 43. CVE-2026-97229: Critical Unauthenticated Remote Code Execution in GitLab
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab>
@@ -5015,7 +4897,7 @@
 
 ---
 
-## 45. User Agent Strings Curiosities, (Sun, Oct 4th)
+## 44. User Agent Strings Curiosities, (Sun, Oct 4th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33394>
@@ -5126,7 +5008,7 @@
 
 ---
 
-## 46. Orphaned VBA Projects Inside DWG Files, (Wed, Oct 14th)
+## 45. Orphaned VBA Projects Inside DWG Files, (Wed, Oct 14th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33420>
@@ -5237,7 +5119,7 @@
 
 ---
 
-## 47. Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)
+## 46. Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33410>
@@ -5347,7 +5229,7 @@
 
 ---
 
-## 48. Four Compliance Frameworks, One Security Team. How Universities Can Stop Drowning in Regulatory Risk
+## 47. Four Compliance Frameworks, One Security Team. How Universities Can Stop Drowning in Regulatory Risk
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk>
@@ -5485,7 +5367,7 @@
 
 ---
 
-## 49. TTY Logs and the Data it Captures, (Sun, Oct 4th)
+## 48. TTY Logs and the Data it Captures, (Sun, Oct 4th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33396>
@@ -5597,7 +5479,7 @@
 
 ---
 
-## 50. CISA Adds One Known Exploited Vulnerability to Catalog
+## 49. CISA Adds One Known Exploited Vulnerability to Catalog
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog>
@@ -5700,6 +5582,115 @@
   - Data sources: ITSM ticket data, Help-desk recordings
   - Suggested query: `tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id`
 - **[H-93b83ac6-3-O4] OAuth illicit-consent grants** _(difficulty: medium · 200 pts · MITRE: T1528)_
+  - Falsification criterion: If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.
+  - Data sources: Entra ID audit log, Google Workspace audit
+  - Suggested query: `audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'`
+
+---
+
+## 50. Bricksforge WordPress Plugin Vulnerability Exploited in the Wild
+
+- **Source**: SecurityWeek
+- **Link**: <https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/>
+- **Published**: Mon, 12 Oct 2026 13:14:37 +0000
+- **First seen**: 2026-10-12T13:46:24+00:00
+- **Relevance score**: 42
+- **Score rationale**: source weight (news)=+5, 1 CVE(s)=+20, 1 MITRE technique hit(s)=+8, 2 initial-access vector(s)=+9
+
+> The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .
+
+**Extracted signals**
+- CVEs: CVE-2026-85097
+- Vectors: exploit, rdp
+- MITRE ATT&CK: T1021.001
+
+### Hypotheses (3)
+
+#### H-a1dfbde0-1 · Initial access via CVE-2026-85097 affecting the affected product/service  _(confidence: medium)_
+
+**Statement.** A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-85097 in the affected product/service within the last 30 days.
+
+**Why this hypothesis?** Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.
+
+**MITRE ATT&CK**: T1190, T1133
+
+**CTF objectives (5) — find evidence that disproves the hypothesis:**
+
+- **[H-a1dfbde0-1-O1] Inventory exposure to the affected product** _(difficulty: easy · 100 pts · MITRE: T1190)_
+  - Falsification criterion: If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-85097.
+  - Data sources: Asset CMDB, External attack-surface scanner, Vulnerability scanner
+  - Suggested query: `asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)`
+- **[H-a1dfbde0-1-O2] Hunt for exploit attempts at the edge** _(difficulty: medium · 200 pts · MITRE: T1190, T1133)_
+  - Falsification criterion: If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-85097 in the last 30 days, in-the-wild exploitation against us is unsupported.
+  - Data sources: WAF logs, IDS/IPS, Edge firewall, CDN logs
+  - Suggested query: `edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-85097/ | summarize count() by src_ip, dst_host`
+- **[H-a1dfbde0-1-O3] Patch-status correlation** _(difficulty: easy · 100 pts · MITRE: T1190)_
+  - Falsification criterion: If MDM / patch-management shows 100% deployment of the CVE-2026-85097 fix across exposed hosts, the hypothesis is disproven by remediation.
+  - Data sources: SCCM/Intune, Patch management, Tanium / Kandji
+  - Suggested query: `patch_state | where kb in (fixes_for('CVE-2026-85097')) | summarize coverage = avg(installed) by host_role`
+- **[H-a1dfbde0-1-O4] Post-exploit web-shell sweep** _(difficulty: medium · 250 pts · MITRE: T1505.003, T1059)_
+  - Falsification criterion: If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.
+  - Data sources: EDR process telemetry, File integrity monitoring
+  - Suggested query: `process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')`
+- **[H-a1dfbde0-1-O5] Honeypot / canary check** _(difficulty: hard · 300 pts · MITRE: T1190)_
+  - Falsification criterion: If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.
+  - Data sources: Honeypot logs, Canary tokens
+  - Suggested query: `canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip`
+
+#### H-a1dfbde0-2 · Outbound C2 beaconing to reported infrastructure  _(confidence: medium)_
+
+**Statement.** Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).
+
+**Why this hypothesis?** Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.
+
+**MITRE ATT&CK**: T1071, T1573, T1219
+
+**CTF objectives (5) — find evidence that disproves the hypothesis:**
+
+- **[H-a1dfbde0-2-O1] DNS resolution sweep for published C2 domains** _(difficulty: easy · 100 pts · MITRE: T1071.004)_
+  - Falsification criterion: If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.
+  - Data sources: DNS resolver logs, Passive DNS
+  - Suggested query: `dns | where query in ('the published C2 domains') | summarize count() by client_ip`
+- **[H-a1dfbde0-2-O2] Egress connections to published C2 IPs** _(difficulty: medium · 200 pts · MITRE: T1071, T1573)_
+  - Falsification criterion: If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.
+  - Data sources: Proxy logs, NetFlow, Firewall accept logs
+  - Suggested query: `egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip`
+- **[H-a1dfbde0-2-O3] Beacon periodicity / jitter analysis** _(difficulty: hard · 300 pts · MITRE: T1071, T1095)_
+  - Falsification criterion: If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.
+  - Data sources: NetFlow, Zeek conn.log
+  - Suggested query: `conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s`
+- **[H-a1dfbde0-2-O4] TLS / JA3 fingerprint pivot** _(difficulty: hard · 250 pts · MITRE: T1573.002)_
+  - Falsification criterion: If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.
+  - Data sources: Zeek ssl.log, Suricata TLS, NDR
+  - Suggested query: `tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni`
+- **[H-a1dfbde0-2-O5] Remote-monitoring tooling abuse check** _(difficulty: medium · 200 pts · MITRE: T1219)_
+  - Falsification criterion: If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.
+  - Data sources: EDR installed-software, Process telemetry
+  - Suggested query: `process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'`
+
+#### H-a1dfbde0-3 · Identity compromise of privileged users  _(confidence: medium)_
+
+**Statement.** Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.
+
+**Why this hypothesis?** Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.
+
+**MITRE ATT&CK**: T1078, T1621, T1528, T1556
+
+**CTF objectives (4) — find evidence that disproves the hypothesis:**
+
+- **[H-a1dfbde0-3-O1] Impossible-travel / atypical sign-ins** _(difficulty: easy · 100 pts · MITRE: T1078.004)_
+  - Falsification criterion: If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.
+  - Data sources: Entra ID sign-in logs, Okta system log
+  - Suggested query: `signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip`
+- **[H-a1dfbde0-3-O2] MFA-fatigue / push-bombing** _(difficulty: medium · 200 pts · MITRE: T1621, T1078)_
+  - Falsification criterion: If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.
+  - Data sources: MFA provider logs (Duo / Entra)
+  - Suggested query: `mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0`
+- **[H-a1dfbde0-3-O3] Help-desk social-engineering pivot** _(difficulty: hard · 250 pts · MITRE: T1078, T1556)_
+  - Falsification criterion: If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.
+  - Data sources: ITSM ticket data, Help-desk recordings
+  - Suggested query: `tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id`
+- **[H-a1dfbde0-3-O4] OAuth illicit-consent grants** _(difficulty: medium · 200 pts · MITRE: T1528)_
   - Falsification criterion: If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.
   - Data sources: Entra ID audit log, Google Workspace audit
   - Suggested query: `audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'`
