@@ -1570,7 +1570,6 @@
       "value": "CVE-2026-21589",
       "sources": [
         "https://isc.sans.edu/diary/rss/33406",
-        "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog",
         "https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products"
       ]
     },
@@ -1641,9 +1640,21 @@
       ]
     },
     {
+      "value": "CVE-2025-33073",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
       "value": "CVE-2025-25257",
       "sources": [
         "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "CVE-2025-24054",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
       ]
     },
     {
@@ -5876,6 +5887,12 @@
       "value": "eg.twimg.co.uk",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "endoflife.date",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
       ]
     },
     {
