@@ -257,7 +257,7 @@ cves,CVE-2026-29797,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-28
 cves,CVE-2026-28745,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01
 cves,CVE-2026-27873,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01
 cves,CVE-2026-27872,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01
-cves,CVE-2026-21589,2,https://isc.sans.edu/diary/rss/33406 | https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products
+cves,CVE-2026-21589,3,https://isc.sans.edu/diary/rss/33406 | https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.rapid7.com/blog/post/etr-cve-2026-21589-critical-unauthenticated-arbitrary-file-access-in-atlassian-products
 cves,CVE-2026-15340,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02
 cves,CVE-2026-13608,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 cves,CVE-2026-11796,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03
@@ -924,7 +924,7 @@ domains,bi.zone,1,https://blog.talosintelligence.com/break-the-silence-kazakhsta
 domains,bj-hk.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,bj-jp.hmbcloud.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,blog.98aiblog.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,blog.didierstevens.com,2,https://isc.sans.edu/diary/rss/33394 | https://isc.sans.edu/diary/rss/33420
+domains,blog.didierstevens.com,1,https://isc.sans.edu/diary/rss/33420
 domains,brokerservice.addconnector,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,brokerservice.addnetworkconnector,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04
 domains,bsnl.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1020,7 +1020,7 @@ domains,info.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisor
 domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-domains,isc.sans.edu,8,https://isc.sans.edu/diary/rss/33394 | https://isc.sans.edu/diary/rss/33396 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33410 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
+domains,isc.sans.edu,7,https://isc.sans.edu/diary/rss/33396 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33410 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,jewishchoice.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/
