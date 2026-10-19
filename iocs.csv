@@ -139,7 +139,7 @@ cves,CVE-2026-85802,1,https://blog.talosintelligence.com/microsoft-patch-tuesday
 cves,CVE-2026-85791,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-85479,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02
 cves,CVE-2026-85355,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
-cves,CVE-2026-85097,1,https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
+cves,CVE-2026-85097,2,https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html | https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/
 cves,CVE-2026-84014,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-83947,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-83943,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
@@ -333,7 +333,6 @@ ips,36.249.156.220,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,36.249.156.226,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,39.72.220.221,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,42.73.98.232,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,42.96.20.16,1,https://isc.sans.edu/diary/rss/33396
 ips,45.32.61.246,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.32.84.223,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.32.140.182,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -346,7 +345,6 @@ ips,45.63.94.71,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26
 ips,45.63.95.62,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.63.116.190,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.63.123.142,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,45.64.74.51,1,https://isc.sans.edu/diary/rss/33396
 ips,45.76.37.85,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.76.37.168,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.76.43.37,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -361,7 +359,6 @@ ips,45.77.195.169,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 ips,45.77.231.209,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.123.189.19,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,45.131.69.197,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,46.188.119.26,1,https://isc.sans.edu/diary/rss/33396
 ips,49.93.136.14,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,49.93.184.194,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,59.120.58.176,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -410,7 +407,6 @@ ips,95.179.186.251,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,95.179.189.106,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,95.179.235.135,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,98.159.37.4,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,102.88.137.80,1,https://isc.sans.edu/diary/rss/33396
 ips,103.16.231.220,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,103.16.231.254,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,103.25.254.210,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -717,7 +713,6 @@ ips,156.146.45.152,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,156.146.45.194,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,158.247.197.28,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,159.138.152.61,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,159.223.97.218,1,https://isc.sans.edu/diary/rss/33396
 ips,159.223.199.218,1,https://isc.sans.edu/diary/rss/33406
 ips,162.14.178.86,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,164.92.68.152,1,https://isc.sans.edu/diary/rss/33406
@@ -728,7 +723,6 @@ ips,171.120.88.137,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 ips,178.62.208.162,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,180.122.149.177,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,182.34.19.234,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,182.253.221.210,1,https://isc.sans.edu/diary/rss/33396
 ips,183.166.90.97,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,183.240.139.216,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,183.250.213.20,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -742,7 +736,6 @@ ips,183.253.29.66,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 ips,183.253.29.110,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,183.253.29.189,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,185.135.73.192,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,185.158.22.150,1,https://isc.sans.edu/diary/rss/33396
 ips,185.213.82.55,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,185.213.82.65,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,185.213.82.239,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -752,13 +745,11 @@ ips,190.92.241.15,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 ips,191.232.188.144,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,193.42.24.68,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,193.42.25.73,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,193.233.48.169,1,https://isc.sans.edu/diary/rss/33396
 ips,198.13.38.211,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,202.39.151.239,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,202.99.19.250,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,202.99.19.254,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,202.101.145.22,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-ips,202.152.148.27,1,https://isc.sans.edu/diary/rss/33396
 ips,202.182.106.31,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,202.182.109.151,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,203.69.36.122,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -776,7 +767,6 @@ ips,207.246.118.144,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 ips,207.246.127.64,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,208.72.154.55,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,209.38.147.216,1,https://isc.sans.edu/diary/rss/33406
-ips,209.99.190.200,1,https://isc.sans.edu/diary/rss/33396
 ips,210.66.220.39,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,210.71.166.50,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,210.242.38.241,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -981,7 +971,6 @@ domains,endoflife.date,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/t
 domains,error.jsp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,eseecloud.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
 domains,etechhosting.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,event.hash,1,https://isc.sans.edu/diary/rss/33396
 domains,evidence.jsonl,1,https://isc.sans.edu/diary/rss/33410
 domains,explorer.exe,1,https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 domains,fcchk.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1021,7 +1010,7 @@ domains,info.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisor
 domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-domains,isc.sans.edu,7,https://isc.sans.edu/diary/rss/33396 | https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33410 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
+domains,isc.sans.edu,6,https://isc.sans.edu/diary/rss/33400 | https://isc.sans.edu/diary/rss/33406 | https://isc.sans.edu/diary/rss/33410 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,jewishchoice.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/
@@ -1123,7 +1112,6 @@ domains,tcpip.sys,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and
 domains,teyan.microscan.me,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,tj.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,traffic.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,transaction.id,1,https://isc.sans.edu/diary/rss/33396
 domains,trendmicro.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,trust.feeee,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,tsedws.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1175,7 +1163,6 @@ domains,www.chr0mail.com,1,https://www.cisa.gov/news-events/cybersecurity-adviso
 domains,www.cisa.gov,16,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 domains,www.cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.dns361.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,www.elastic.co,1,https://isc.sans.edu/diary/rss/33396
 domains,www.feeee.io,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,www.hashicorp.com,1,https://isc.sans.edu/diary/rss/33426
 domains,www.hitachienergy.com,4,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-03 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-06
@@ -1249,7 +1236,6 @@ sha256,e93244080a749b521f63476343ce3c81cc8c1b672fa0d9e67359aee37544c784,1,https:
 sha256,eaff35d250c9b04f51c971e70082740dbfeee5dd846829d541f588ad43378727,1,https://isc.sans.edu/diary/rss/33400
 sha256,efb0437e6a6a0f07169952f1a8b734299ec9a8b1faadbed811fe017f2cf54976,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,f8f5e0440c57c7deffd75ca33e2511867039796aa803e7ef847396a379188a7d,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,f904275333aeac48d7df6cf53fe5fb9212c7d132a7d37253d2ab9321ba2690d8,1,https://isc.sans.edu/diary/rss/33396
 sha256,fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 sha1,614420f82c8729d070e01464c0dddb3c9525c772,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-279-02
 md5,1933c314041415939331fce183939547,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
