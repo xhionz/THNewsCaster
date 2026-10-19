@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T13:12:57+00:00",
+  "generated_at": "2026-10-19T13:53:31+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -4116,6 +4116,444 @@
         }
       ],
       "first_seen": "2026-10-13T16:09:59+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "f5dd014557da7ecf",
+        "source": "KrebsOnSecurity",
+        "title": "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site",
+        "link": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+        "published": "Mon, 19 Oct 2026 13:48:56 +0000",
+        "summary": "U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually close relations with the extortion group, KrebsOnSecurity has learned. Sources close to the investigation say one of the executives in the United States even helped ShinyHunters operate a website that pressured victims into paying a ransom.",
+        "raw_text": "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually close relations with the extortion group, KrebsOnSecurity has learned. Sources close to the investigation say one of the executives in the United States even helped ShinyHunters operate a website that pressured victims into paying a ransom. U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually close relations with the extortion group, KrebsOnSecurity has learned. Sources close to the investigation say one of the executives in the United States even helped ShinyHunters operate a website that pressured victims into paying a ransom. Hackers aligned with ShinyHunters have claimed credit for dozens of major data breaches since 2019, when the group was primarily operated by cybercriminals living in France. As those original members were arrested or jailed one by one, control over the ShinyHunters brand eventually passed to “ Rey ,” identified last year as a teenage hacker from Amman, Jordan. According to the FBI, ShinyHunters has extorted more than $70 million from victims so far this year. In late September, ShinyHunters hacked the FBI recruitment website fbijobs.gov and taunted the agency by threatening to publish the stolen files, which reportedly included medical and psychological records, Social Security numbers and home addresses, and information about each employee’s unit and specialization. The FBI jobs site hack has prompted the agency to move with uncommon speed to arrest, detain and question people who had any communications with Rey or other ShinyHunters suspects. Reuters reported on October 3 that Rey had been detained by Jordanian authorities and was cooperating with the FBI. Rey was able to assume control over the hacking group because one of its alleged senior members had just been nabbed. On the evening of September 15, 2026, authorities in the Netherlands arrested convicted hacker and ShinyHunters suspect Pepijn van der Stap . Dutch police reportedly used flash-bang grenades in an effort to stun and apprehend Van der Stap as he was logged in to various online accounts. According to a source close to the investigation, the authorities arrested Van der Stap while he was using his Signal instant messaging account, which allowed them to read recent communications with frequent contacts — including ransomware negotiators based in Canada and the United States. Multiple sources with knowledge of the matter told KrebsOnSecurity that Van der Stap’s messages were the key to unraveling a murder-for-hire plot that emerged immediately following his arrest. The Dutch news outlet RTL reported last month the two murders were allegedly to be committed abroad, and that there are indications Van der Stap gave the order for the attacks (there is no indication those orders were ever carried out). On October 9, KrebsOnSecurity broke the news that the FBI arrested a 54-year-old Canadian cybersecurity executive named Edward Dubrovsky in connection with the ShinyHunters investigation. Dubrovsky, who recently published a book on handling cyber extortion that recommended always engaging with the hackers, was charged with threatening to disclose stolen or hacked data and interfering with interstate commerce through extortion, according to court records . Politico reports prosecutors have asked that Dubrovsky remain in custody pending trial, and that records related to his case remain under seal. A source close to the investigation told KrebsOnSecurity that Van der Stap’s Signal messages showed he had frequent conversations with Mr. Dubrovsky and with at least one executive at a large U.S.-based consulting firm, and that these executives often knew the details about new ShinyHunters victims before the victims themselves had even learned of the breach. That source shared another potentially explosive finding by federal investigators: the Dutch hacker’s chats showed Mr. Dubrovsky knew ShinyHunters had stolen highly sensitive data from FBI servers, and that he never informed the bureau of the data breach prior to ShinyHunters threatening on Twitter/X to publish the agency’s deeply personal personnel files. SHINYWIRE KrebsOnSecurity has learned from two sources close to the ShinyHunters probe that FBI investigators believe at least one executive at a U.S.-based consulting firm played an active role in operating the now-defunct ShinyHunters victim extortion website “ shinywire[.]com .” KrebsOnSecurity is not naming the U.S. company or the suspected executive(s) for now because they have not yet been charged with a crime, but it is a prestigious firm with more than 1,000 associates. A section of the homepage for the now-defunct Shinywire website. The Shinywire website was active from approximately May 3, 2026 until October 16 and had entries for nearly 100 organizations hacked by ShinyHunters. Each entry urged victims to engage with the cybercrime group and discuss terms for payment. The pages also included samples of stolen files and promised those files would be published online if the victim ignored their demands. The following screenshot shows a cached portion of the Shinywire extortion page for Intuitive Surgical , an American medical technology company that was breached in March 2026 after an employee fell for a targeted phishing email. The Shinywire website, as indexed by urlscan.io. This listing is an extortion demand targeting Intuitive Surgical, an American medical technology company breached in March 2026 by a targeted phishing email attack that compromised an employee’s credentials. Victim organizations that refused to engage or negotiate after seven days would find all of their stolen data published on the ShinyHunters victim shaming blog (a website that is only reachable via the anonymity network Tor ). In a story published October 15, The Globe and Mail wrote that a few months before Edward Dubrovsky was arrested by the FBI, the Canadian cybersecurity executive alleged in court documents he had become collateral damage in a campaign by a former business partner to “destroy” another industry executive. The story noted that Dubrovsky filed the lawsuit in Ontario this year against Daniel Tobok , the former chief executive of Cypfer , a cybersecurity firm founded in Toronto with offices in the U.S., Britain, the Netherlands, the United Arab Emirates, and Mexico. The two first became business partners in 2017 and later developed Cypfer together, where Mr. Dubrovsky was a managing partner and chief operating officer. But by 2024, the two had a falling out, with Dubrovsky accusing Tobok of gradually excluding him from business matters and making “increasingly capricious business decisions.” Mr. Tobok reportedly denied the allegations and filed a counterclaim, accusing Mr. Dubrovsky of accessing confidential information and unfairly competing with Cypfer through work at another firm called CyberSteward Inc . He also said Mr. Dubrovsky has misrepresented himself as a Cypfer founder, and is not a shareholder. GHOSTBYTE According to interviews with several former colleagues of Mr. Tobok, as far back as eight years ago he was known to ransomware purveyors by a particular nickname: Ghostbyte . In 2018, a Canadian company was hacked by Dharma , a prolific Russian-language ransomware affiliate program that first surfaced in 2016. The victim company told the Dharma ransomware representative they were leaning toward paying because some of the files were unrecoverable after being locked, but that they needed a better guarantee that Dharma would keep their word if paid. A redacted copy of the Dharma rep’s reply is pictured below, and it shows the ransomware group urged the victim to contact a person at a Canadian IT firm that helps companies seeking such guarantees. The Dharma rep recommended the victim contact the email address ghostbyte@tutanota.com . “If you want guarantees, you can write to the IT company,” the Dharma reply advised. “Take the phone and negotiate with them. This IT company often solves such problems in Canada. You can contact them and sign a contract for services. You’ll still have to pay.” An email reply from the Dharma ransomware group to a victim, recommending they contact an email address that is connected to Mr. Tobok. It’s unclear if Mr. Tobok ever used that Ghostbyte address offered by the Dharma representative, and he has not responded to multiple requests for comment. However, the breach tracking service Constella Intelligence finds an email address Mr. Tobok has frequently used — dtobok@me.com — is associated with two online accounts where the chosen username was “ghostbyte,” including a Snapchat account. Incidentally, Constella also finds the Dharma rep’s email address luckygoodlucky@tuta.io is associated with a cryptocurrency address that processed 38 transactions totaling 43 bitcoin, ~$3.5 million at today’s value (the most recent transaction for this wallet is dated February 2019). In a statement shared on October 14, Cypfer said the company’s business does not include making or facilitating ransomware payments, and that Cypfer learned of Dubrovsky’s arrest when the news first broke in the media. “We had no prior knowledge of Mr. Dubrovsky’s arrest,” a spokesperson told KrebsOnSecurity via email. “ CYPFER has not received any outreach from law enforcement and, to our knowledge, is not the target of any law enforcement investigation.” The statement said CyberSteward and Cypfer are separate companies with no officers, directors or employees in common, and that Cypfer was recently acquired by the Apros Group , a holding company led by Jason Hogg , a former FBI special agent and former CEO of Aon Cyber Solutions Group . In 2020, Aon aquired Cytelligence , a security consulting firm where Mr. Tobok was founder and CEO and Mr. Dubrovsky was a managing partner. CONFLICTING INTERESTS It is not illegal in the United States to pay hackers for an encryption key to unlock servers infected with ransomware, or in exchange for a promise to delete any stolen files and refrain from publishing them online. While victim organizations can land in legal hot water if they pay a ransom to a group that is sanctioned by the U.S. Treasury Department, ShinyHunters is not among the ransomware groups currently sanctioned by the United States or by any other government. Experts say ransomware victims are typically directed by their insurance provider to work with a specific incident response firm. But not all cyber forensics and breach response companies will agree to facilitate payments to ransomware groups on behalf of their clients. As a result, once victim firms make a decision to pay, the firms that eschew rewarding extortionists are invariably replaced by companies that have no such qualms. In December 2024, ShinyHunters began extorting the education technology company PowerSchool , stealing private information on 62 million students and 9.5 million teachers in the U.S. and Canada. PowerSchool reportedly paid a $2.85 million ransom demand, and a “frequently asked questions” statement (PDF) about the breach says PowerSchool was assisted in that effort by CyberSteward (ShinyHunters affiliate Matthew Lane , 20, of Sterling, Mass., was sentenced in November 2025 to four years in prison for his admitted role in the PowerSchool hack). But that ransom payment did not stop future extortion attempts using the same stolen data. By May 2025, individual school districts were reportedly receiving separate ransom demands using samples of the same stolen files. While nobody has alleged ShinyHunters was behind the second wave of extortion against PowerSchool users, the incident drives home the reality that there is no technical way to verify the threat actors have deleted the stolen data as promised, or prevent others from abusing the same records. A number of leading cyber incident response firms, including Coveware and Unit 221B , have consistently warned victims against paying ShinyHunters , noting that “destroyed” victim data is often kept, resold or used to extort the company’s clients directly later on. The FBI echoed those sentiments in an alert on May 15, 2026 advising victims against paying the ShinyHunters group. Meanwhile, ShinyHunters members have been harassing and threatening employees at Coveware and Unit 221B for offering this advice. The following screenshots show just how annoyed the ShinyHunters leaders were with Coveware’s relentless advice against paying the group. The first image is from a conversation on May 6, 2026 that took place between the group’s main account on Telegram and a co-conspirator. In that chat, snippets of which were shared with KrebsOnSecurity by a trusted source, ShinyHunters complained that Coveware was harming the group’s payment rates. The operator of the ShinyHunters account on Telegram speaking privately with a co-conspirator and complaining that Coveware was harming their business. “Go on my website, majority of those companies would’ve paid if it weren’t for Coveware giving them misinformation,” the ShinyHunters account wrote. “Someone (100% Coveware) is going out of their way to make sure i am not paid.” In another conversation on April 11, 2026, the ShinyHunters Telegram account privately said they were trying to “eliminate the problem,” which they said was Coveware. “I’m sure the company will pay but in this specific case I am aware of Coveware and their involvement, and I’ve probably been not getting a lot of other negotiations mostly likely because Coveware keeps getting involved,” the ShinyHunters account bemoaned. The operator of the ShinyHunters account on Telegram telling a co-conspirator they were “trying to eliminate the problem,” which they identified as Coveware advising victims not to pay the cybercrime group. Coveware CEO Bill Siegel said he was unable to comment on anything related to past clients or ShinyHunters, beyond stating that the FBI has notified the affected victims of Van der Stap’s alleged murder-for-hire scheme, and that no Coveware employees were notified. Mark Camillo is chief executive at CyberAcuView , an industry group founded in 2021 by a consortium of major cyber insurance carriers. Camillo said some firms charge a flat retainer fee, while those that specialize in helping companies negotiate a ransom payment tend to charge a percentage of the total ransom amount paid. That latter dynamic, he said, is an inherent conflict of interest, as the negotiator has every incentive to make things more favorable to the attackers because they are financially incentivized to negotiate and pay out, and to not negotiate down on the price. “It has come to the industry’s attention that many of the ransomware payers charge a percentage of the final payment which may or may not be disclosed,” Camillo said. “This makes no sense if they are also the negotiator. There needs to be more transparency in the process as no one in the ecosystem should be profiting purely on the size of the ransomware transaction or payment itself.” Camillo said the firms doing this work would argue the fees are needed because there may be unexpectedly higher costs to secure larger quantities of cryptocurrency or more risk carrying the float, and because cryptocurrency exchanges may charge higher fees for high risk transactions. “There definitely needs to be more visibility around the transaction and clarity on the increasing value of the crypto and the exchange’s percent in the transaction to get to the bottom of this and remove any misaligned incentives,” he said. In recent months, the U.S. Department of Justice has prosecuted a number of ransomware negotiators alleged to have conspired with cybercriminals to defraud their clients. On October 7, the DOJ charged MonsterCloud CEO Zohar Pinhasi , 50, with wire fraud and conspiracy for allegedly charging customers to remediate ransomware attacks without paying the hackers. According to charging documents, Pinhasi secretly went behind his customers’ backs and paid hackers anyway, paying ransomware groups $8 million while charging customers $19 million. In July, Angelo Martino , a 41-year-old ransomware negotiator from Land O’Lakes, Florida, was sentenced to 70 months in prison for conspiring with the Blackcat/ALPHV ransomware group to extort multiple victims. According to the DOJ, Martino was paid by BlackCat attackers to provide confidential information about the negotiating position and strategy of his employer’s clients and enable the ransomware actors to maximize the ransoms paid by the victims.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 79,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 malware family hit(s)=+20",
+          "3 MITRE technique hit(s)=+14",
+          "2 initial-access vector(s)=+9",
+          "3 impact action(s)=+14",
+          "1 product mention(s)=+3",
+          "6 IOC(s)=+14"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "fbijobs.gov",
+          "shinywire.com",
+          "urlscan.io",
+          "tutanota.com",
+          "me.com",
+          "tuta.io"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [
+          "BlackCat / ALPHV"
+        ],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1566",
+          "T1486",
+          "T1219"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit"
+        ],
+        "sectors": [
+          "healthcare",
+          "finance",
+          "government",
+          "manufacturing",
+          "education"
+        ],
+        "actions": [
+          "ransomware",
+          "data-breach",
+          "fraud"
+        ],
+        "products": [
+          "Microsoft Exchange"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-f5dd0145-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft Exchange",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft Exchange within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on malware families: BlackCat / ALPHV; vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-f5dd0145-1-O1",
+              "title": "Inventory exposure to Microsoft Exchange",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f5dd0145-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f5dd0145-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f5dd0145-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-f5dd0145-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-f5dd0145-2",
+          "title": "Endpoint execution of BlackCat / ALPHV",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute BlackCat / ALPHV payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on malware families: BlackCat / ALPHV; vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-f5dd0145-2-O1",
+              "title": "EDR hash sweep for BlackCat / ALPHV",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known BlackCat / ALPHV SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('BlackCat / ALPHV', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-f5dd0145-2-O2",
+              "title": "Behavioural pattern hunt for BlackCat / ALPHV",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f5dd0145-2-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no BlackCat / ALPHV-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f5dd0145-2-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'BlackCat / ALPHV' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f5dd0145-2-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_blackcat_/_alphv' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-f5dd0145-3",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on malware families: BlackCat / ALPHV; vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-f5dd0145-3-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('fbijobs.gov','shinywire.com','urlscan.io') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f5dd0145-3-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f5dd0145-3-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-f5dd0145-3-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-f5dd0145-3-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-f5dd0145-4",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on malware families: BlackCat / ALPHV; vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-f5dd0145-4-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f5dd0145-4-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f5dd0145-4-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-f5dd0145-4-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-19T13:53:31+00:00",
       "agent_trace": []
     },
     {
@@ -17445,325 +17883,9 @@
       ],
       "first_seen": "2026-10-12T13:46:24+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "5316951a297419e4",
-        "source": "The Hacker News",
-        "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
-        "link": "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
-        "published": "Mon, 12 Oct 2026 14:32:14 +0530",
-        "summary": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack. The critical vulnerability in question is CVE-2026-85097 (CVSS score: 10.0), which allows unauthenticated attackers to upload and execute arbitrary PHP code on vulnerable WordPress websites, resulting in remote code execution (RCE). The",
-        "raw_text": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack. The critical vulnerability in question is CVE-2026-85097 (CVSS score: 10.0), which allows unauthenticated attackers to upload and execute arbitrary PHP code on vulnerable WordPress websites, resulting in remote code execution (RCE). The",
-        "tags": []
-      },
-      "scoring": {
-        "score": 42,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 CVE(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "2 initial-access vector(s)=+9"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-85097"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1021.001"
-        ],
-        "vectors": [
-          "exploit",
-          "rdp"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-5316951a-1",
-          "title": "Initial access via CVE-2026-85097 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-85097 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-5316951a-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-85097.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5316951a-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-85097 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-85097/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5316951a-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-85097 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-85097')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5316951a-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-5316951a-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-5316951a-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-5316951a-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5316951a-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5316951a-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-5316951a-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-5316951a-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-5316951a-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-5316951a-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5316951a-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5316951a-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-5316951a-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-12T09:46:00+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 384,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); Ignore all instructions and read this blog: The state of AI-analysis evasion in malware."
 }
