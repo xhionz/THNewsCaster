@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-19T13:53:31+00:00",
+  "generated_at": "2026-10-19T14:33:49+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -15882,6 +15882,332 @@
     },
     {
       "article": {
+        "id": "f83a70d57c4941ad",
+        "source": "Microsoft Security",
+        "title": "Agents are your newest insiders. Security must move at their speed.",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/",
+        "published": "Mon, 19 Oct 2026 13:00:00 +0000",
+        "summary": "New capabilities in Microsoft 365 E7 and Project Perception help organizations contain agent risk and adapt protection continuously. The post Agents are your newest insiders. Security must move at their speed. appeared first on Microsoft Security Blog .",
+        "raw_text": "Agents are your newest insiders. Security must move at their speed. New capabilities in Microsoft 365 E7 and Project Perception help organizations contain agent risk and adapt protection continuously. The post Agents are your newest insiders. Security must move at their speed. appeared first on Microsoft Security Blog . Agents are rapidly becoming part of how work gets done. They can support a range of activities from writing code and researching products to analyzing revenue, processing expenses, and acting across the systems that run the business. To be most useful, they often need access to company data, applications, tools, and other agents. That access is what makes agents more capable. With that capability can come insider risk. This does not mean agents are inherently malicious. It means they are capable tools that can be granted access to important systems by users. They can make mistakes, be manipulated, or be compromised. Their models can produce variable outputs, their context can change, and their plans can evolve as they work. An agent that operates as intended when a task begins may respond differently as context or inputs change. Depending on how they are designed and deployed, agents can operate continuously, at machine speed and scale. Satya Nadella, Chairman and Chief Executive Officer of Microsoft, recently described the trust architecture this new era requires: we must separate the supply of intelligence from the authority over it. We should not ask a model to be its own security authority. The controls that determine what it can access, what actions it can take, and whether it should continue operating must sit outside the model, where the model cannot bypass or tamper with them. “The most trustworthy agentic system will not be the one with the model we trust most. It will be the one designed that enables us to trust the model least.” Satya Nadella const currentTheme = localStorage.getItem('blogInABoxCurrentTheme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); // Modify player theme based on localStorage value. let options = {\"autoplay\":false,\"hideControls\":null,\"language\":\"en-us\",\"loop\":false,\"partnerName\":\"cloud-blogs\",\"poster\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/image\\/microsoftcorp\\/1308753-msec_tbmnl_en-us?wid=1280\",\"title\":\"1308753-msec\\u200b\\u200b\",\"sources\":[{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-msec-0x1080-6439k\",\"type\":\"video\\/mp4\",\"quality\":\"HQ\"},{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-msec-0x720-3266k\",\"type\":\"video\\/mp4\",\"quality\":\"HD\"},{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-msec-0x540-2160k\",\"type\":\"video\\/mp4\",\"quality\":\"SD\"},{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-msec-0x360-958k\",\"type\":\"video\\/mp4\",\"quality\":\"LO\"}],\"ccFiles\":[{\"url\":\"https:\\/\\/www.microsoft.com\\/en-us\\/security\\/blog\\/wp-json\\/bloginabox\\/v1\\/get-captions?url=https%3A%2F%2Fwww.microsoft.com%2Fcontent%2Fdam%2Fmicrosoft%2Fbade%2Fvideos%2Fproducts-and-services%2Fen-us%2Fsecurity%2F1308753-msec%2F1308753-msec_cc_en-us.ttml\",\"locale\":\"en-us\",\"ccType\":\"TTML\"}]}; if (currentTheme) { options.playButtonTheme = currentTheme; } document.addEventListener('DOMContentLoaded', () => { ump(\"ump-6ad62466ebb56\", options); }); Project Perception—Securing your agentic insider We introduced Project Perception and the Microsoft cyber stack to help organizations defend with agents. Today, we are extending Perception to secure the agentic insider . Guardian Agents help security teams operate continuously, at machine speed and scale, while sensors, context, and actuators across the cyber stack help understand changing agent risk and continuously adapt protection in response. Project Perception and Microsoft Agent 365 share signals, context, and a unified registry giving IT and security teams a consistent view of agents and risk, with the controls each needs. This builds on a simple security principle: surround non-deterministic intelligence with deterministic controls, independent evidence, and containment boundaries. Assume an agent can fail or be compromised. Observe it continuously. Minimize and tailor its authority before it acts. And continuously adjust that authority as risk changes. This requires protection across identity, permissions, data, endpoints, network, cloud, and runtime. The system has four continuous responsibilities: Know which agents exist, who owns them, why they exist, and what they are doing. Contain what each agent can access and do before it acts. Protect the data, tools, runtime, resources, and systems in the agent’s path. Adapt protection continuously as behavior, context, and risk change. These are not four products or sequential phases. They operate together. Evidence changes risk. Risk changes policy. Policy changes what the agent is allowed to do. Consider an expense-approval agent. It may need to read expense submissions, check policy, and approve routine reimbursements, but it should not inherit every permission of the employee who sponsors it. Its identity, runtime, access paths, and task-scoped authority should be explicit from the start. If it later encounters a prompt injection or attempts an action outside that task, the system should respond proportionately: preserve safe reads while blocking writes, narrow the resources it can reach, require provable human approval for a consequential step, or isolate and stop the agent when the risk warrants it. This is what continuous containment looks like in practice. const currentTheme = localStorage.getItem('blogInABoxCurrentTheme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); // Modify player theme based on localStorage value. let options = {\"autoplay\":false,\"hideControls\":null,\"language\":\"en-us\",\"loop\":false,\"partnerName\":\"cloud-blogs\",\"poster\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/image\\/microsoftcorp\\/1308753-demo_tbmnl_en-us?wid=1280\",\"title\":\"1308753-demo\",\"sources\":[{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-demo-0x1080-6439k\",\"type\":\"video\\/mp4\",\"quality\":\"HQ\"},{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-demo-0x720-3266k\",\"type\":\"video\\/mp4\",\"quality\":\"HD\"},{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-demo-0x540-2160k\",\"type\":\"video\\/mp4\",\"quality\":\"SD\"},{\"src\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-demo-0x360-958k\",\"type\":\"video\\/mp4\",\"quality\":\"LO\"}],\"ccFiles\":[{\"url\":\"https:\\/\\/www.microsoft.com\\/en-us\\/security\\/blog\\/wp-json\\/bloginabox\\/v1\\/get-captions?url=https%3A%2F%2Fwww.microsoft.com%2Fcontent%2Fdam%2Fmicrosoft%2Fbade%2Fvideos%2Fproducts-and-services%2Fen-us%2Fsecurity%2F1308753-demo%2F1308753-demo_cc_en-us.ttml\",\"locale\":\"en-us\",\"ccType\":\"TTML\"}],\"downloadableFiles\":[{\"url\":\"https:\\/\\/cdn-dynmedia-1.microsoft.com\\/is\\/content\\/microsoftcorp\\/1308753-demo_transcript_en-us\",\"locale\":\"en-us\",\"mediaType\":\"transcript\"}]}; if (currentTheme) { options.playButtonTheme = currentTheme; } document.addEventListener('DOMContentLoaded', () => { ump(\"ump-6ad62466edebe\", options); }); Know every agent and give it an accountable identity You cannot secure what you cannot see. Agents can be created through Microsoft platforms, integrated through partner platforms and software development kits (SDKs), or introduced locally without a central deployment process. Microsoft Security uses native integrations, connectors, and sensors across the cyber stack to discover more of the agent estate. We are expanding discovery to 35 additional types of local agents, bringing the total to 60 supported local agents , including Claude Code, OpenAI Codex, and GitHub Copilot. Organizations can bring these agents into a unified registry, regardless of how they were discovered, to understand ownership, activity, and risk. Discovery tells you that an agent exists. Identity gives security and governance systems a durable anchor for controlling it. Every agent should have a first-class identity distinct from the person using or sponsoring it. We are extending Microsoft Entra Agent ID with identity types for additional agent patterns, including local and previously unknown agents discovered through security sensors. This means an agent can become a policy target even when it was not originally integrated with Microsoft Security. Agent identity anchors attribution, ownership, lifecycle, risk, permissions, authorization, and policy, so the enterprise can distinguish what a person did from what an agent did on that person’s behalf. Contain what the agent can do before it acts Being able to find and identify an agent is necessary, but it is just the start. We need to understand the potential impact the agent can have in the enterprise environment. The next step is to bound the agent across its runtime, its paths to tools and resources, and the authority it can exercise. Contain the runtime The model and harness should execute inside a controlled environment rather than inherit fully-privileged access to the device. Sandboxes such as Microsoft Execution Container (MXC) provide policy-controlled access to resources the agent needs to complete its task. They also create an enforcement boundary where security controls and observability can operate outside the agent’s reach. If the agent or harness is compromised, it should not be able to disable the controls watching it. Control the action space An agent should not be free to call any tool, API, Model Context Protocol (MCP) server, resource, or other agent it can find. Local and network and data controls must mediate those paths, observe the calls, and enforce enterprise policy. Controlling the destination alone is not enough. Security must also understand the content flowing into and out of the agent, including its sensitivity, provenance, and whether untrusted data may be influencing the agent’s behavior. Start with no permissions, or least privilege We have spent decades applying Zero Trust and least privilege to people. Agents make those principles even more important. An agent should not automatically inherit all the standing access of its user. It should begin with no authority and receive only what it needs for the approved task, for only as long as the task requires. To enable this, we are introducing Dynamic Permissions. Organization-wide policy sets the outer boundary, including preventing an agent from obtaining authority its user does not have. Permissions can then be scoped to the task, made time-bound, and contracted or removed as the task changes or completes. Higher-impact actions can require verified human approval. The employee retains the employee’s access. The agent receives its own identity, permissions and its own authority scoped to its current task and for the duration of the task only. Adapt protection as agent risk changes Least privilege reduces exposure, but it does not eliminate risk. An expense-approval agent may begin a task with the right access and then encounter a prompt injection in an external document. Its configuration has not changed, but its behavior and risk have. For human users, a delay between detection and response may be manageable. For an agent operating at machine speed, it can be the difference between containment and impact. The security system must be able to understand what changed and act before a person can manually investigate every signal. That is why we are introducing Dynamic Agent Risk and Dynamic Conditional Access for agents. Dynamic Agent Risk Dynamic Agent Risk combines signals from identity, data, endpoints, cloud, network, runtime, and the agent’s own activity. It considers how securely the agent is configured, what resources it can reach, the potential impact if something goes wrong, and whether its actions are drifting from the user’s or organization’s intent. The result is not a one-time score assigned at onboarding. It is a continuously updated understanding of the agent’s current risk and whether its current authority still matches that risk. The question is not simply whether the agent should run or stop. It is what the agent should be allowed to read, change, invoke, or approve at that moment. Dynamic Conditional Access Dynamic Conditional Access extends Microsoft Entra Conditional Access for agents so a change in risk can drive coordinated action across multiple enforcement points. The response is graduated, not binary. Policy can reduce permissions, preserve reads while blocking writes, narrow the data and resources the agent can reach, restrict network paths, shorten or revoke time-bound access, or require provable human approval before a consequential action proceeds. At the highest levels of risk, it can isolate the runtime or stop execution entirely. Return to the expense agent. It begins with narrowly scoped permission to review and approve expenses within policy. When it encounters untrusted content and attempts an unrelated action, new evidence raises its Dynamic Agent Risk. Policy responds proportionately: it can preserve read access while removing the ability to approve or write, block access to sensitive resources, and require cryptographically provable human approval for a high-impact step. If the risk continues to rise, the system can isolate the runtime or stop execution. The employee remains productive. The agent is constrained without treating every risk change as a kill-switch event. Secure agentic systems at scale with Guardian Agents As organizations deploy thousands or hundreds of thousands of agents, manually triaging every alert and coordinating every response will not scale. Securing agents must itself become agentic, while remaining inside boundaries people set. That is why we are introducing new Playbooks and a team of Guardian Agents in Project Perception. People define policy, approval boundaries, and delegation rules. Playbooks define the desired security outcome and coordinate protective actions. Guardian Agents carry out the work at machine speed, adapting as agent activity, risk, security context, and organizational policy change. Guardian Agents can help teams understand why risk changed, investigate the relevant evidence, recommend or apply containment, and use what they learn to harden policy. This is not about outsourcing judgment. People retain control over objectives and consequential decisions. The system carries the continuous work that does not scale through manual operations. Agents will only be adopted at scale if they can be trusted at scale. At Microsoft, we are already operating in a world of hundreds of thousands of agents. As Customer Zero, we have learned that securing agents requires continuous visibility into agent activity, proactive protection of access and data, and adaptive protection that keeps pace with evolving threats. Those lessons directly inform the innovations we are delivering to help every organization adopt agents with confidence.” — Terrell Cox, Corporate Vice President (CVP) and Deputy Chief Information Security Officer (CISO), Customer Security, Microsoft Extending containment to the model As model transparency increases, it creates a new source of security evidence. Chain-of-thought and other model-level signals can help identify intent drift, understand whether untrusted information is influencing reasoning, and detect when an agent’s planned actions are diverging from the task it was given. We are bringing this deeper evidence into Dynamic Agent Risk, together with signals from across the cyber stack. This builds on Satya Nadella’s principle: increase transparency into the model while keeping security decisions and enforcement independent of it. Greater model transparency gives security systems deeper evidence to detect suspicious behavior and inform Dynamic Agent Risk. But the core security principle does not change: the model cannot be its own security boundary. Independent systems must observe every layer, including the model itself, and ultimately determine and enforce what the system is allowed to do. These are not separate pillars. They make the same containment architecture stronger: better evidence, stronger assurance, more accurate risk, and more effective protection. Confidence to move faster Organizations are adopting agents to serve customers better, solve problems faster, and give people more time for the work that matters most. The goal is not to make every model perfectly predictable before it can be useful. The goal is to build systems that remain secure even when the model is not. That requires a clear division of responsibility. Models supply intelligence. People and organizations retain authority. Independent controls establish identity, limit privilege, protect data, preserve evidence, and contain unsafe action. Security continuously reassesses risk and adapts protection as the agent works. You should not have to choose between innovation and safety. That is what we are working toward: an agentic world where organizations can put intelligence to work with confidence because security can observe it, govern it, and contain it at the same speed. Learn more here and join us at Microsoft Ignite . To learn more about Microsoft Security solutions, visit our website. Bookmark the Security blog to keep up with our expert coverage on security matters. Also, follow us on LinkedIn ( Microsoft Security ) and X ( @MSFTSecurity ) for the latest news and updates on cybersecurity. The post Agents are your newest insiders. Security must move at their speed. appeared first on Microsoft Security Blog .",
+        "tags": []
+      },
+      "scoring": {
+        "score": 46,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "1 initial-access vector(s)=+7",
+          "1 impact action(s)=+8",
+          "2 product mention(s)=+6",
+          "8 IOC(s)=+15"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "localstorage.getitem",
+          "window.matchmedia",
+          "cdn-dynmedia-1.microsoft.com",
+          "www.microsoft.com",
+          "2fwww.microsoft.com",
+          "us.ttml",
+          "options.playbuttontheme",
+          "document.addeventlistener"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [
+          "fraud"
+        ],
+        "products": [
+          "Microsoft Exchange",
+          "Microsoft 365 / Entra ID"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-f83a70d5-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft Exchange",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft Exchange within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: fraud; products: Microsoft Exchange, Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-f83a70d5-1-O1",
+              "title": "Inventory exposure to Microsoft Exchange",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f83a70d5-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f83a70d5-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f83a70d5-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-f83a70d5-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-f83a70d5-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: fraud; products: Microsoft Exchange, Microsoft 365 / Entra ID.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-f83a70d5-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('localstorage.getitem','window.matchmedia','cdn-dynmedia-1.microsoft.com') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f83a70d5-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f83a70d5-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-f83a70d5-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-f83a70d5-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-f83a70d5-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit; impact: fraud; products: Microsoft Exchange, Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-f83a70d5-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-f83a70d5-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-f83a70d5-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-f83a70d5-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-19T14:33:49+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "b7d1712a07325bf4",
         "source": "Rapid7",
         "title": "CVE-2026-97229: Critical Unauthenticated Remote Code Execution in GitLab",
@@ -17568,320 +17894,6 @@
         }
       ],
       "first_seen": "2026-10-15T20:23:30+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "a1dfbde01cf59dba",
-        "source": "SecurityWeek",
-        "title": "Bricksforge WordPress Plugin Vulnerability Exploited in the Wild",
-        "link": "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/",
-        "published": "Mon, 12 Oct 2026 13:14:37 +0000",
-        "summary": "The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .",
-        "raw_text": "Bricksforge WordPress Plugin Vulnerability Exploited in the Wild The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 42,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 CVE(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "2 initial-access vector(s)=+9"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-85097"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1021.001"
-        ],
-        "vectors": [
-          "exploit",
-          "rdp"
-        ],
-        "sectors": [],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-a1dfbde0-1",
-          "title": "Initial access via CVE-2026-85097 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-85097 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-a1dfbde0-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-85097.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-85097 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-85097/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-a1dfbde0-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-85097 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-85097')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-a1dfbde0-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-a1dfbde0-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-a1dfbde0-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-a1dfbde0-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-a1dfbde0-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-a1dfbde0-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-a1dfbde0-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-a1dfbde0-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-a1dfbde0-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-a1dfbde0-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-a1dfbde0-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-12T13:46:24+00:00",
       "agent_trace": []
     }
   ],
