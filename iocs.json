@@ -1,6 +1,12 @@
 {
   "cves": [
     {
+      "value": "CVE-2026-110936",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
       "value": "CVE-2026-110322",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
@@ -155,6 +161,12 @@
       "value": "CVE-2026-107333",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-106931",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -617,6 +629,30 @@
       "value": "CVE-2026-96858",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96656",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96655",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96654",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96652",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -6726,12 +6762,6 @@
       "value": "random.cktime.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "rapid7.com",
-      "sources": [
-        "https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk"
       ]
     },
     {
