@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T14:58:09+00:00",
+  "generated_at": "2026-10-21T15:39:09+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -4616,6 +4616,339 @@
     },
     {
       "article": {
+        "id": "efe58590593f9907",
+        "source": "Cisco Talos",
+        "title": "Two critical RCEs in PHP core",
+        "link": "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "published": "Wed, 21 Oct 2026 15:10:53 GMT",
+        "summary": "Cisco Talos is tracking the disclosure of two unauthenticated remote code execution (RCE) flaws in PHP core, dubbed “php2shell”, triggered by a plain HTTP request and exploitable before any application code runs, affecting every PHP build since 5.4. Based on the entities involved in the disclosure, artificial",
+        "raw_text": "Two critical RCEs in PHP core Cisco Talos is tracking the disclosure of two unauthenticated remote code execution (RCE) flaws in PHP core, dubbed “php2shell”, triggered by a plain HTTP request and exploitable before any application code runs, affecting every PHP build since 5.4. Based on the entities involved in the disclosure, artificial Cisco Talos is tracking the disclosure of two unauthenticated remote code execution (RCE) flaws in PHP core, dubbed “php2shell”, triggered by a plain HTTP request and exploitable before any application code runs, affecting every PHP build since 5.4. Based on the entities involved in the disclosure, artificial intelligence and associated technologies played a key role in the discovery of these vulnerabilities — yet another example of how these technologies are forcing change across the landscape, most notably on patching processes for organizations because of the wave of vulnerabilities being disclosed. Cisco customers are covered with the Cisco Talos Network Intrusion Prevention (SNORT®) signatures 67359 and 67360. These rules are also available in the Community Ruleset for open-source customers. Please refer to the following recommendations, detection, and coverage guidance for more information. Details CVE-2026-109618 and CVE-2026-109619 are both critical vulnerabilities with a CVSS v4.0 score of 9.2. CVE-2026-109618 occurs when out-of-memory handling interrupts PHP while internal request data is only partially initialized. Request cleanup may then treat invalid data as valid. CVE-2026-109619 occurs when a stale internal state is reused after its backing memory has already been freed, before normal initialization resets it. Impact The potential blast radius is enormous and extends across the PHP ecosystem. The vulnerability sits in PHP core, so applications running affected versions — including WordPress, Drupal, Magento, Shopware, WooCommerce, and Laravel, plus PHP sites hosted through cPanel or Plesk — may be exposed. Note that many older branches will no longer receive fixes, so customers are urged to upgrade to a supported version as soon as possible. Talos regularly investigates threat actor exploitation of vulnerabilities. State-sponsored and affiliated threat actors, as well as ransomware and other financially motivated groups, all employ tactics to exploit RCE. Talos assesses that all industries running PHP applications are at risk for exploitation if systems remain unpatched. PHP 8.1 and older are end of life (EOL), and PHP 8.2 security support ends Dec. 31, 2026. Talos’ initial estimates based on open-source intelligence show a significant corpus of PHP systems that will not receive a patch (~50%). If your organization is running PHP 8.1 or older, Talos very strongly advises immediate update to PHP 8.2 or later. There is no patch for PHP 8.1 or older. Talos is actively monitoring the impact of these CVEs and has not seen them being exploited in the wild yet (as of October 21, 2026 14:00 UTC/10:00 a.m. ET). Recommendations and detection guidance Talos strongly recommends all PHP users to upgrade to the available fixed releases . There are no intermediate or temporary controls that provide comprehensive protection; however, PHP advises that the following measure may reduce exposure to specific attack paths: CVE-2026-109618 Set memory_limit=-1, preferably in a way applications can't override, such as php_admin_value in the FPM pool or Apache configuration, and check that no pool, directory or application setting puts a finite limit back. This removes the controllable PHP memory limit failure, but an underlying allocation failure can still reach the vulnerable path. Set a low post_max_size. For applications that don't require file uploads, set post_max_size = 8M. If file uploads are necessary, set post_max_size = 32M. Keep upload_max_filesize below post_max_size. Consider enforcing limits at the web server or proxy level for decoded request size, input field count, multipart part count, header count, and nesting depth. These limits must also cover requests without a usable Content-Length. Use a container or cgroup limit as an availability boundary, preferably with a policy that kills only the affected worker. Do not substitute RLIMIT_AS or RLIMIT_DATA, as these can cause the vulnerable allocation failure. CVE-2026-109619 Set session.upload_progress.enabled=0 and restart every worker. Use php.ini, an FPM pool, or server configuration that applies before request parsing. Do not rely on ini_set() or FPM .user.ini. This blocks the confirmed session paths but not other variants. On PHP 8.5, set fatal_error_backtraces=0 and restart every worker. This blocks the confirmed fatal backtrace path only. Remove invalid or deprecated settings applied per request that emit diagnostics before initialization. Hiding diagnostics with error_reporting, display_errors, or @ does not help. Fix attacker-reachable fatal errors and execution timeouts, including failures in callbacks, upload or import processing, and cleanup. This is another vulnerability that owes its origin to AI and its associated technologies. As we move through 2026, the wave of vulnerabilities and related patches is building. Talos advises organizations to work on a triaged process for prioritizing vulnerabilities with a specific focus on public-facing systems and vulnerabilities that are under active exploitation. The glaring need to prioritize vulnerabilities along with a streamlined process for rolling out patching strongly indicates that the historic trend of “baking in” patches before deployment is not going to survive the AI era. The true impact of this vulnerability will take time to evaluate. These types of vulnerabilities that impact core technologies tend to cascade into other platforms and applications as they evaluate impact and provide associated patching, harkening back to the waves of exploitation that we saw after Log4J. Coverage SNORT® SIDs covering these vulnerabilities for subscribers: 67359, 67360. Free community rules are live through our Community Ruleset . Talos would like to highlight the efforts of Ankur Tyagi, Dalton Schaadt, Brandon Stultz and Matt Killion for providing emergency coverage and mitigations for these threats.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 74,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "2 CVE(s)=+25",
+          "2 MITRE technique hit(s)=+11",
+          "3 initial-access vector(s)=+11",
+          "2 impact action(s)=+11",
+          "2 IOC(s)=+6"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "ips": [],
+        "domains": [
+          "php.ini",
+          "user.ini"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001",
+          "T1486"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [
+          "finance",
+          "manufacturing",
+          "telecom"
+        ],
+        "actions": [
+          "ransomware",
+          "fraud"
+        ],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-efe58590-1",
+          "title": "Initial access via CVE-2026-109618 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-109618 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: phishing, exploit, rdp; impact: ransomware, fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-efe58590-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-109618.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-efe58590-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-109618 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-109618/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-efe58590-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-109618 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-109618')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-efe58590-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-efe58590-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-efe58590-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: phishing, exploit, rdp; impact: ransomware, fraud.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-efe58590-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('php.ini','user.ini') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-efe58590-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-efe58590-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-efe58590-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-efe58590-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-efe58590-3",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: phishing, exploit, rdp; impact: ransomware, fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-efe58590-3-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-efe58590-3-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-efe58590-3-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-efe58590-3-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-21T15:39:09+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "555f85ec64e15111",
         "source": "CISA Advisories",
         "title": "Red Lion Controls N-Tron 700 Series",
@@ -8404,6 +8737,332 @@
     },
     {
       "article": {
+        "id": "fd4a29f5961f91a7",
+        "source": "KrebsOnSecurity",
+        "title": "Widespread PHP Flaw May Cause Many Site Outages Today",
+        "link": "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "published": "Wed, 21 Oct 2026 15:26:07 +0000",
+        "summary": "Expect to see quite a few websites serving \"404\" or \"Page Not Found\" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild.",
+        "raw_text": "Widespread PHP Flaw May Cause Many Site Outages Today Expect to see quite a few websites serving \"404\" or \"Page Not Found\" errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild. Expect to see quite a few websites serving “404” or “Page Not Found” errors today: Nearly 70 percent of websites need to update their core software to fix a pair of vulnerabilities that allow an attacker to seize full control over affected servers. Experts say there are working exploits for the flaws, and that these critical bugs are already being exploited in the wild. Image: Shutterstock.com, Sashkin. The flaws at issue are present in PHP , the programming language that powers sites running on a large number of web publishing systems, including Drupal , Magento , Joomla and WordPress . Earlier today, PHP released an emergency security update to fix two critical bugs that can allow an attacker to execute code of their choosing on a vulnerable server. Reuters reports that government websites in Europe and elsewhere went offline today after the PHP vulnerabilities were disclosed. Cloudflare said it has already detected some exploitation of the flaw, and that at 3:02 am (UTC) it implemented web application firewall rules to protect websites from attack traffic seeking to exploit the bugs, which could cause a denial of service condition, remote code execution, and data exposure. OpenAI , which was involved in the vulnerability research and outreach, said “given the severity of these flaws and PHP’s widespread use, we consider this one of the most impactful security issues in recent memory.” Security experts at Wiz said every PHP version released in the last decade is affected by at least one of these vulnerabilities [full disclosure: Wiz is an advertiser on this blog]. “These findings rank among the most severe vulnerabilities discovered in PHP, and arguably in software history,” reads a blog post published today by a team of researchers at Wiz, which was one of several organizations credited with discovering the vulnerabilities. “The underlying flaws had been present for decades, but demonstrating their exploitability required an exceptionally complex chain of steps, at the edge of what human researchers could practically achieve. Frontier AI models substantially reduced that barrier, turning a longstanding flaw into an exploit.” The Wiz researchers say it is likely the PHP vulnerabilities will be mass-exploited to install web-based backdoors or “web shells,” which give attackers a web-based panel that allows them to remotely control infected sites. Wiz said that prior to the PHP bugs being publicly disclosed, the company worked with the PHP team, Calif and OpenAI to measure the size of the problem and coordinate patch verification and disclosure. The PHP zero-day vulnerabilities are being tracked by their CVE numbers, CVE-2026-109618 and CVE-2026-109619 , and they affect all web servers running PHP 5.4 or later. The bugs are fixed in PHP 8.5.12 , 8.4.27 , 8.3.36 , and 8.2.35 . According to Wiz, PHP is so deeply embedded in many web applications that we are likely to see organizations struggling to patch these vulnerabilities for some time to come, comparing this PHP vulnerability pair with the Log4Shell weakness that emerged in 2021 — a widespread, severe-as-it-gets security flaw in Log4j, a popular Java logging framework. “A vulnerability in core PHP reaches far beyond a single application,” the Wiz researchers wrote. “PHP runs across clouds, hosting providers, content-delivery networks and millions of independently managed servers. Reducing exposure before the technical details became public required coordinated work across that entire ecosystem.” The SANS Internet Storm Center is keeping an eye on major software platforms that are shipping updates to deal with these PHP flaws. For example, Ubuntu just released updated PHP packages. This is a fast-moving story. Updates will be noted here with timestamps.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 65,
+        "rationale": [
+          "source weight (news)=+5",
+          "2 CVE(s)=+25",
+          "2 MITRE technique hit(s)=+11",
+          "2 initial-access vector(s)=+9",
+          "2 impact action(s)=+11",
+          "1 IOC(s)=+4"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "ips": [],
+        "domains": [
+          "shutterstock.com"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001",
+          "T1505.003"
+        ],
+        "vectors": [
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [
+          "government",
+          "manufacturing"
+        ],
+        "actions": [
+          "ddos",
+          "fraud"
+        ],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-fd4a29f5-1",
+          "title": "Initial access via CVE-2026-109618 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-109618 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit, rdp; impact: ddos, fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-fd4a29f5-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-109618.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-fd4a29f5-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-109618 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-109618/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-fd4a29f5-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-109618 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-109618')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-fd4a29f5-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-fd4a29f5-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-fd4a29f5-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit, rdp; impact: ddos, fraud.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-fd4a29f5-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('shutterstock.com') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-fd4a29f5-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-fd4a29f5-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-fd4a29f5-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-fd4a29f5-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-fd4a29f5-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit, rdp; impact: ddos, fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-fd4a29f5-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-fd4a29f5-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-fd4a29f5-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-fd4a29f5-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-21T15:39:09+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "516d995a705f9022",
         "source": "Rapid7",
         "title": "Patch Tuesday - October 2026",
@@ -10664,344 +11323,6 @@
         }
       ],
       "first_seen": "2026-10-14T00:09:50+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "db2077a2d4b98b4b",
-        "source": "SANS Internet Storm Center",
-        "title": "Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th)",
-        "link": "https://isc.sans.edu/diary/rss/33406",
-        "published": "Wed, 07 Oct 2026 14:59:33 GMT",
-        "summary": "On October 5th, Atlassian published patches&#;x26;#;xc2;&#;x26;#;xa0;for multiple products to fix an \"Arbitrary File Access\" vulnerability &#;x26;#;x5b; CVE-2026-21589 &#;x26;#;x5d;. An attacker can read arbitrary files in the web application&#;x26;#;39;s directory, potentially exposing sensitive information such as configuration files.",
-        "raw_text": "Scans for Atlassian vulnerablity (CVE-2026-21589), (Wed, Oct 7th) On October 5th, Atlassian published patches&#;x26;#;xc2;&#;x26;#;xa0;for multiple products to fix an \"Arbitrary File Access\" vulnerability &#;x26;#;x5b; CVE-2026-21589 &#;x26;#;x5d;. An attacker can read arbitrary files in the web application&#;x26;#;39;s directory, potentially exposing sensitive information such as configuration files. On October 5th, Atlassian published patches for multiple products to fix an \"Arbitrary File Access\" vulnerability [ CVE-2026-21589 ]. An attacker can read arbitrary files in the web application's directory, potentially exposing sensitive information such as configuration files. This directory traversal vulnerability is a little bit different from the textbook case. Atlassian products replace slashes with the pattern \"::\". To avoid this issue, but may, in some cases, undo this escape to access files. Watchtowr has a great write-up with all the details and proof-of-concept URLs demonstrating the vulnerability [ Watchtowr ]. Starting yesterday, we saw some exploit attempts hitting our honeypot, using the exploit URLs mentioned in the Watchtowr blog. /download/resources/jira.webresources:color-picker-popup/images/..::..::..::..::..::WEB-INF::web.xml /s/1.0/_/download/resources/com.atlassian.bitbucket.server.bitbucket-webpack-INTERNAL:avatar/avatar/..::..::..::..::..::WEB-INF::urlrewrite.xml /s/1/_/download/resources/com.atlassian.confluence.plugins.dashboard-actions/images/..::..::..::..::..::..::..::..::WEB-INF::web.xml One condition for successful exploitation is that the file the user attempts to access exists. The exploit uses \"WEB-INF/web.xml\" as it is a required file for Tomcat applications, and can be used similarly to \"/etc/passwd\". The \"/etc/passwd\" file will not work in this case. Access is restricted to the web application's directory. The \"::\" pattern used in the exploit will be translated to \"/\" on the server, leading to the directory traversal. Based on the timing and the targets hit, I believe these scans are all triggered by the same threat actor. Oddly enough, all the source IPs are associated with Digital Ocean. The source IPs I see from our honeypots: 134.199.229.190 134.199.230.82 137.184.112.247 137.184.33.84 143.198.103.58 143.198.132.93 146.190.169.1 146.190.172.250 159.223.199.218 164.92.68.152 209.38.147.216 24.199.101.184 64.23.172.129 -- Johannes B. Ullrich, Ph.D. , Dean of Research, SANS.edu Twitter | (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 60,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "1 CVE(s)=+20",
-          "1 initial-access vector(s)=+7",
-          "1 product mention(s)=+3",
-          "20 IOC(s)=+15"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-21589"
-        ],
-        "ips": [
-          "134.199.229.190",
-          "134.199.230.82",
-          "137.184.112.247",
-          "137.184.33.84",
-          "143.198.103.58",
-          "143.198.132.93",
-          "146.190.169.1",
-          "146.190.172.250",
-          "159.223.199.218",
-          "164.92.68.152",
-          "209.38.147.216",
-          "24.199.101.184",
-          "64.23.172.129"
-        ],
-        "domains": [
-          "jira.webresources",
-          "web.xml",
-          "com.atlassian.bitbucket.server.bitbucket",
-          "urlrewrite.xml",
-          "com.atlassian.confluence.plugins.dashboard",
-          "sans.edu",
-          "isc.sans.edu"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": [
-          "Atlassian Confluence"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-db2077a2-1",
-          "title": "Initial access via CVE-2026-21589 affecting Atlassian Confluence",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-21589 in Atlassian Confluence within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-21589; vectors: exploit; products: Atlassian Confluence.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-db2077a2-1-O1",
-              "title": "Inventory exposure to Atlassian Confluence",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Atlassian Confluence, the external-exploitation hypothesis is disproven for CVE-2026-21589.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'Atlassian Confluence' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-db2077a2-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-21589 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-21589/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-db2077a2-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-21589 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-21589')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-db2077a2-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Atlassian Confluence hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-db2077a2-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-db2077a2-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-21589; vectors: exploit; products: Atlassian Confluence.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-db2077a2-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('jira.webresources','web.xml','com.atlassian.bitbucket.server.bitbucket') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-db2077a2-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('134.199.229.190','134.199.230.82','137.184.112.247') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-db2077a2-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-db2077a2-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-db2077a2-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-db2077a2-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-21589; vectors: exploit; products: Atlassian Confluence.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-db2077a2-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-db2077a2-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-db2077a2-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-db2077a2-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-07T15:33:28+00:00",
       "agent_trace": []
     },
     {
@@ -17438,417 +17759,9 @@
       ],
       "first_seen": "2026-10-08T17:15:04+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "9a1c8a791d9e033b",
-        "source": "Rapid7",
-        "title": "Four Compliance Frameworks, One Security Team. How Universities Can Stop Drowning in Regulatory Risk",
-        "link": "https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk",
-        "published": "Wed, 07 Oct 2026 19:29:23 GMT",
-        "summary": "Most industries manage one major compliance framework. Universities might manage four simultaneously, each bringing with it unique requirements, enforcement mechanisms, and consequences for failure. Here's what that actually looks like in practice. In Part 1 of this series, we laid out the scale of the threat facing higher education: 4,388 cyberattacks per organization per week, a 24% year-over-year increase, and the fundamental architectural flaw of defending each campus independently. If the threat picture alone wasn't enough to demand action, there's a second crisis unfolding in parallel that is, if anything, more immediately consequential. The regulatory environment for higher education has quietly become one of the most complex in any sector. Universities don't just face the legal and reputational fallout of a data breach. They face simultaneous obligations under four distinct federal frameworks, each with its own definition of adequate security, its own reporting timelines, and its own set of penalties for non-compliance. Managing those four frameworks across a single campus is hard. Managing them across a multi-campus system where each school operates its own IT environment, with its own tools, its own staff, and its own data governance practices, is a compounding nightmare that most institutions haven't fully reckoned with yet. Let's walk through each framework from the ground-level. FERPA: The 24-hour clock nobody talks about The Family Educational Rights and Privacy",
-        "raw_text": "Four Compliance Frameworks, One Security Team. How Universities Can Stop Drowning in Regulatory Risk Most industries manage one major compliance framework. Universities might manage four simultaneously, each bringing with it unique requirements, enforcement mechanisms, and consequences for failure. Here's what that actually looks like in practice. In Part 1 of this series, we laid out the scale of the threat facing higher education: 4,388 cyberattacks per organization per week, a 24% year-over-year increase, and the fundamental architectural flaw of defending each campus independently. If the threat picture alone wasn't enough to demand action, there's a second crisis unfolding in parallel that is, if anything, more immediately consequential. The regulatory environment for higher education has quietly become one of the most complex in any sector. Universities don't just face the legal and reputational fallout of a data breach. They face simultaneous obligations under four distinct federal frameworks, each with its own definition of adequate security, its own reporting timelines, and its own set of penalties for non-compliance. Managing those four frameworks across a single campus is hard. Managing them across a multi-campus system where each school operates its own IT environment, with its own tools, its own staff, and its own data governance practices, is a compounding nightmare that most institutions haven't fully reckoned with yet. Let's walk through each framework from the ground-level. FERPA: The 24-hour clock nobody talks about The Family Educational Rights and Privacy Act (FERPA) has governed the privacy of student education records since 1974. Most university administrators are broadly familiar with it, whereby students have the right to access their own records, institutions have an obligation to protect those records from unauthorized disclosure, and violations can result in loss of federal funding. Now, what has become far more operationally consequential in the age of sophisticated cyberattacks is the breach notification requirement for financial aid data. When a breach compromises student financial aid information, institutions must notify the Department of Education's Federal Student Aid office within 24 hours of discovering the incident. Not 72 hours, which is the standard under many commercial data breach frameworks. Not \"as soon as practicable,\" but twenty-four hours. Think about what that timeline actually demands. A ransomware attack is discovered at 9 PM on a Friday. By 9 PM Saturday, your institution needs to have identified that student financial aid data was involved, determined the scope of the breach, and filed formal notification with federal regulators, while simultaneously managing the technical response, communicating with affected students and faculty, engaging legal counsel, and trying to figure out what else the attackers may have accessed. That 24-hour window is not achievable through manual investigation. It requires automated detection capabilities that can identify the scope of a breach in real time, data classification that knows where financial aid information lives across your environment, and incident response processes that are tested, documented, and ready to execute under pressure at any hour of any day. For most universities, especially those operating with fragmented, campus-by-campus security tooling, this capability simply doesn't exist at the required level. The 24-hour clock starts ticking the moment you discover the breach. But in a complex, multi-campus environment, \"discovery\" often comes well after the actual compromise, and characterizing the scope of what was accessed can take days or weeks without unified visibility. Repeated FERPA violations can result in loss of eligibility for federal student aid programs, a consequence that would be existential for most institutions. GLBA: When a university becomes a financial institution The Gramm-Leach-Bliley Act's Safeguards Rule is probably the least intuitive compliance obligation for higher education administrators who don't think of their institutions as financial entities. But universities have been clearly defined as financial institutions under GLBA since 2002, because they originate and service student loans and manage financial aid disbursements. The Federal Trade Commission's updated Safeguards Rule, which took full effect in 2023, significantly expanded the security requirements for covered institutions. Universities must now maintain a comprehensive written information security program that includes risk assessments, access controls, encryption, multi-factor authentication, incident response planning, and vendor oversight, all aligned to NIST 800-171. More specifically, universities that handle Federal Tax Information (i.e. virtually every institution that processes FAFSA data) must treat that information as Controlled Unclassified Information. The CUI designation comes with its own set of handling requirements, access controls, and audit obligations that most institutions' current security programs weren't designed to address. The incident reporting requirement under GLBA is particularly demanding. If a security event affects 500 or more consumers, institutions must provide notification to federal law enforcement immediately upon discovering the breach. In practice, regulators have interpreted \"immediately\" to mean within hours, not days. The operational requirement is essentially identical to FERPA's 24-hour clock: you need to know what happened, who was affected, and what data was compromised before most human-driven investigation processes could possibly complete. For multi-campus university systems, GLBA creates an additional structural challenge: financial aid data doesn't necessarily stay within campus boundaries. Students who transfer between campuses within the same system carry their financial aid history with them. System-level financial aid administration often centralizes data from all campuses into shared databases. A breach that starts at one campus may quickly implicate financial aid data across the entire system. Moreover, the reporting obligation doesn't scale by campus. If your system's data is compromised, the institution as a whole is responsible for the response. HIPAA: The healthcare dimension universities underestimate The Health Insurance Portability and Accountability Act applies wherever protected health information is created, received, transmitted, or maintained. For universities, that means student health centers, counseling services, university hospitals, and any research program that involves human subjects data. The size of this compliance surface is frequently underestimated. A mid-size university with a student health clinic, a counseling center, a physical therapy program, and a research lab conducting clinical trials is handling significant volumes of protected health information, often spanning across IT systems that were procured and managed by clinical departments independently of the central IT organization. Under HIPAA, breaches affecting 500 or more individuals must be reported to the Department of Health and Human Services within 60 days of discovery, and affected individuals must be notified within the same timeframe. Breaches affecting 500 or more individuals in a single state also trigger media notification requirements. For institutions operating across multiple states, the geographic complexity multiplies quickly. The HIPAA enforcement environment has become significantly more aggressive in recent years. The HHS Office for Civil Rights has levied multi-million dollar penalties against healthcare organizations with security programs that would be considered industry-standard in other sectors. Universities that have historically operated their health services with a degree of IT independence from the main campus security program are increasingly exposed. The intersection of HIPAA with the multi-campus challenge is particularly acute. When a student health system shares infrastructure with academic IT, a breach that starts in the academic environment can propagate to health records, and the reporting obligations that apply to health data are more demanding than those for most other types of student information. Without unified visibility across all the environments where PHI might reside, institutions can't even reliably determine whether a given incident triggers HIPAA notification requirements. CMMC: The research funding stakes are getting higher The Cybersecurity Maturity Model Certification framework was developed by the Department of Defense to ensure that contractors and subcontractors handling Controlled Unclassified Information meet a consistent baseline of cybersecurity practices. For most of its history, CMMC's relevance to higher education was limited to a relatively small number of research universities with significant DoD contracts. That's changing. As the federal government has increased the scope and value of research contracts that involve sensitive national security applications — advanced materials, artificial intelligence, quantum computing, biotechnology — the number of universities with CMMC obligations has grown substantially. And the consequences of non-compliance are not administrative fines. They're loss of contract eligibility. For research universities where federal funding constitutes a significant portion of total revenue, that exposure is existential. CMMC Level 2 compliance requires demonstrating implementation of 110 security practices drawn from NIST 800-171, covering everything from access control and incident response to system and communications protection and risk assessment. At higher levels, institutions must undergo third-party assessment by a certified organization; there's no self-certification option. The practical challenge for universities is that research computing environments are often structurally separate from the main campus IT organization. Research labs build their own systems. Principal investigators make their own technology decisions. The research network may have evolved organically over decades without the kind of deliberate security architecture that CMMC requires. Bringing those environments into compliance while preserving the operational flexibility that researchers require is a genuinely difficult operational challenge. The compounding reality: Four frameworks at once The challenge isn't just that each of these frameworks is demanding in its own right. It's that they apply simultaneously, to the same institution, with overlapping (and sometimes conflicting) requirements and timelines. A data breach at a large research university with a hospital and a student health center can simultaneously trigger FERPA notification obligations (24-hour window for financial aid data), GLBA notification requirements (immediate notification if 500+ consumers affected), HIPAA breach reporting (60 days, plus potential media notification), and CMMC incident reporting (if the affected systems touched CUI). Each notification goes to a different federal agency. Each has its own documentation requirements. Each creates its own legal exposure if the response is delayed, incomplete, or inaccurate. Managing this in the aftermath of an active breach — while simultaneously running the technical response, communicating with campus leadership, engaging legal counsel, and trying to prevent further damage — is genuinely overwhelming. And it's made dramatically more difficult when the security team doesn't have unified visibility across the environments where all four categories of regulated data might reside. This is the core operational argument for consolidated security in higher education. Not just the threat landscape. Not just the operational efficiency of managing fewer tools. The compliance exposure created by fragmented, campus-by-campus security program is a material risk that university boards and general counsels are only beginning to fully understand. What compliance-ready security actually requires Meeting these four frameworks simultaneously, across a multi-campus environment, with the speed that their reporting requirements demand, requires security capabilities that most university systems don't currently have at the required level: Automated detection that operates at machine speed. You cannot investigate your way to a 24-hour notification window. You need detection capabilities that identify the nature and scope of a breach in real time; not in the hours or days that manual investigation requires. Unified data classification across all campuses. You cannot know whether a breach triggers FERPA, GLBA, HIPAA, or CMMC notification requirements unless you know where each category of regulated data lives, across every campus, every department, every research lab, and every shared service in the system. Centralized compliance reporting that spans campus boundaries. Each campus maintaining its own compliance evidence, in its own format, with its own audit trails, makes system-level compliance reporting a manual, error-prone, and enormously time-consuming exercise. A breach that crosses campus boundaries requires a consolidated view of what happened, when, and to whose data. Incident response processes that can execute at the required speed. The 24-hour clock doesn't care that your legal team doesn't work weekends. Pre-defined, pre-approved response playbooks that can be activated immediately are the only way to reliably meet notification deadlines that leave no room for deliberation. The good news is that a security platform built for multi-campus university environments can address all of these requirements. And not as separate point solutions, but as integrated capabilities that support each other. In Part 3 of this series, we'll look at exactly how that works and what it means for university security programs that are ready to move beyond the fragmented, campus-by-campus model. Coming up in Part 3: The architecture, the open source intelligence advantage, the real-world outcomes, and why consolidated security isn't just a better defense, but a smarter investment. Rapid7 helps more than 11,000 organizations worldwide take command of their security. Learn more at rapid7.com/sled .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 45,
-        "rationale": [
-          "source weight (vendor)=+10",
-          "1 MITRE technique hit(s)=+8",
-          "2 initial-access vector(s)=+9",
-          "3 impact action(s)=+14",
-          "1 IOC(s)=+4"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [],
-        "ips": [],
-        "domains": [
-          "rapid7.com"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1486"
-        ],
-        "vectors": [
-          "phishing",
-          "exploit"
-        ],
-        "sectors": [
-          "healthcare",
-          "finance",
-          "government",
-          "manufacturing",
-          "education"
-        ],
-        "actions": [
-          "ransomware",
-          "data-breach",
-          "fraud"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-9a1c8a79-1",
-          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-9a1c8a79-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-9a1c8a79-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-9a1c8a79-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-9a1c8a79-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-9a1c8a79-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-9a1c8a79-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-9a1c8a79-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('rapid7.com') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-9a1c8a79-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-9a1c8a79-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-9a1c8a79-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-9a1c8a79-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-9a1c8a79-3",
-          "title": "Post-foothold lateral movement consistent with the reported actor",
-          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
-          "rationale": "Archetype 'lateral_movement' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1021.001",
-            "T1021.002",
-            "T1021.006",
-            "T1003"
-          ],
-          "objectives": [
-            {
-              "id": "H-9a1c8a79-3-O1",
-              "title": "Anomalous remote logons (Type 3 / Type 10)",
-              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
-              "data_sources": [
-                "Windows Security event log",
-                "Domain Controller logs"
-              ],
-              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
-              "mitre_attack": [
-                "T1021.001",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-9a1c8a79-3-O2",
-              "title": "Admin-tool usage outside baseline",
-              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR",
-                "4688"
-              ],
-              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
-              "mitre_attack": [
-                "T1021.002",
-                "T1021.006",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-9a1c8a79-3-O3",
-              "title": "Kerberos abuse telemetry",
-              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
-              "data_sources": [
-                "Domain Controller security log"
-              ],
-              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
-              "mitre_attack": [
-                "T1558.003",
-                "T1110.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-9a1c8a79-3-O4",
-              "title": "Lateral file-copy staging",
-              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
-              "data_sources": [
-                "File-share auditing (5145)",
-                "EDR file events"
-              ],
-              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
-              "mitre_attack": [
-                "T1570",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-9a1c8a79-4",
-          "title": "Data staging and exfiltration to attacker-controlled storage",
-          "statement": "Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.",
-          "rationale": "Archetype 'exfiltration' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1560",
-            "T1041",
-            "T1567",
-            "T1567.002"
-          ],
-          "objectives": [
-            {
-              "id": "H-9a1c8a79-4-O1",
-              "title": "Cloud-storage exfil to non-corp tenants",
-              "falsification_criterion": "If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.",
-              "data_sources": [
-                "Proxy logs",
-                "CASB / DLP"
-              ],
-              "suggested_query": "proxy | where host matches /mega\\.nz|anonfiles\\.com|transfer\\.sh|filebin\\.net/ | summarize bytes = sum(bytes_out) by user",
-              "mitre_attack": [
-                "T1567.002",
-                "T1567"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-9a1c8a79-4-O2",
-              "title": "Archive-then-egress pattern",
-              "falsification_criterion": "If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.",
-              "data_sources": [
-                "EDR process+file events",
-                "NetFlow"
-              ],
-              "suggested_query": "file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m",
-              "mitre_attack": [
-                "T1560",
-                "T1041"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-9a1c8a79-4-O3",
-              "title": "Outbound volume to rare ASNs",
-              "falsification_criterion": "If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.",
-              "data_sources": [
-                "NetFlow",
-                "Firewall logs"
-              ],
-              "suggested_query": "netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB",
-              "mitre_attack": [
-                "T1041",
-                "T1567"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-9a1c8a79-4-O4",
-              "title": "DNS-tunnelling search",
-              "falsification_criterion": "If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.",
-              "data_sources": [
-                "DNS resolver logs"
-              ],
-              "suggested_query": "dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000",
-              "mitre_attack": [
-                "T1071.004",
-                "T1048.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-07T20:09:47+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 383,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; #StopRansomware: SafePay Ransomware; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)."
 }

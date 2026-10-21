@@ -27,13 +27,17 @@
     {
       "value": "CVE-2026-109619",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
       ]
     },
     {
       "value": "CVE-2026-109618",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
       ]
     },
     {
@@ -1656,12 +1660,6 @@
       ]
     },
     {
-      "value": "CVE-2026-21589",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
       "value": "CVE-2026-17539",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
@@ -1968,12 +1966,6 @@
       "value": "14.128.33.8",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "24.199.101.184",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
@@ -2492,12 +2484,6 @@
       "value": "61.247.165.27",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "64.23.172.129",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
@@ -4151,30 +4137,6 @@
       ]
     },
     {
-      "value": "134.199.229.190",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "134.199.230.82",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "137.184.33.84",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "137.184.112.247",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
       "value": "137.220.34.137",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4271,18 +4233,6 @@
       ]
     },
     {
-      "value": "143.198.103.58",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "143.198.132.93",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
       "value": "144.34.171.162",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4322,18 +4272,6 @@
       "value": "144.202.98.41",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "146.190.169.1",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "146.190.172.250",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
@@ -4463,21 +4401,9 @@
       ]
     },
     {
-      "value": "159.223.199.218",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
       "value": "162.14.178.86",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "164.92.68.152",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
@@ -4796,12 +4722,6 @@
       "value": "208.72.154.55",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "209.38.147.216",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
@@ -5828,18 +5748,6 @@
       ]
     },
     {
-      "value": "com.atlassian.bitbucket.server.bitbucket",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
-      "value": "com.atlassian.confluence.plugins.dashboard",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
       "value": "config.php",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
@@ -6334,7 +6242,6 @@
     {
       "value": "isc.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33406",
         "https://isc.sans.edu/diary/rss/33410",
         "https://isc.sans.edu/diary/rss/33420",
         "https://isc.sans.edu/diary/rss/33422",
@@ -6364,12 +6271,6 @@
       "value": "jewishchoice.org",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/"
-      ]
-    },
-    {
-      "value": "jira.webresources",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
@@ -6722,6 +6623,12 @@
       ]
     },
     {
+      "value": "php.ini",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+      ]
+    },
+    {
       "value": "php.net",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440"
@@ -6789,12 +6696,6 @@
       ]
     },
     {
-      "value": "rapid7.com",
-      "sources": [
-        "https://www.rapid7.com/blog/post/it-compliance-frameworks-for-universities-drowning-in-regulatory-risk"
-      ]
-    },
-    {
       "value": "report.md",
       "sources": [
         "https://isc.sans.edu/diary/rss/33410"
@@ -6828,7 +6729,6 @@
     {
       "value": "sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33406",
         "https://isc.sans.edu/diary/rss/33422",
         "https://isc.sans.edu/diary/rss/33426",
         "https://isc.sans.edu/diary/rss/33440"
@@ -6946,6 +6846,12 @@
       "value": "shuize.py",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "shutterstock.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
       ]
     },
     {
@@ -7196,12 +7102,6 @@
       ]
     },
     {
-      "value": "urlrewrite.xml",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
-      ]
-    },
-    {
       "value": "urlscan.io",
       "sources": [
         "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
@@ -7211,6 +7111,12 @@
       "value": "us.ttml",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "user.ini",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
       ]
     },
     {
@@ -7305,12 +7211,6 @@
       "value": "wanfang.accesscam.org",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "web.xml",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33406"
       ]
     },
     {
