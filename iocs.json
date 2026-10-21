@@ -1,6 +1,12 @@
 {
   "cves": [
     {
+      "value": "CVE-2026-111943",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
       "value": "CVE-2026-110936",
       "sources": [
         "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
@@ -1605,12 +1611,6 @@
       "value": "CVE-2026-28388",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-21589",
-      "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog"
       ]
     },
     {
@@ -4175,6 +4175,24 @@
       ]
     },
     {
+      "value": "144.172.64.60",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "144.172.64.99",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "144.172.64.128",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
       "value": "144.202.26.205",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -4508,6 +4526,24 @@
       "value": "185.216.118.71",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "187.15.88.186",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "187.15.89.186",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "187.15.90.217",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
       ]
     },
     {
@@ -5485,12 +5521,6 @@
       ]
     },
     {
-      "value": "auth.json",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "autocad.py",
       "sources": [
         "https://isc.sans.edu/diary/rss/33420"
@@ -5620,18 +5650,6 @@
       "value": "cdn-dynmedia-1.microsoft.com",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
-      ]
-    },
-    {
-      "value": "chat.json",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "chat.jsonl",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -5936,12 +5954,6 @@
       ]
     },
     {
-      "value": "evidence.jsonl",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "explorer.exe",
       "sources": [
         "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
@@ -5993,12 +6005,6 @@
       "value": "fukua.org",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "full-transcript.md",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6178,7 +6184,6 @@
     {
       "value": "isc.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33410",
         "https://isc.sans.edu/diary/rss/33420",
         "https://isc.sans.edu/diary/rss/33422",
         "https://isc.sans.edu/diary/rss/33426",
@@ -6397,6 +6402,12 @@
       ]
     },
     {
+      "value": "next.js",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
       "value": "nikoes.gq",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -6475,18 +6486,6 @@
       ]
     },
     {
-      "value": "opencode-chat-replay.py",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "opencode.db",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "options.playbuttontheme",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
@@ -6526,6 +6525,42 @@
       "value": "payment.feeee.io",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "permission.permissionname",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.permissiontype",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.privilegelevel",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.targetappdisplayname",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.targetappid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.usagestatus",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
       ]
     },
     {
@@ -6605,12 +6640,6 @@
       "value": "random.cktime.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "report.md",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6809,12 +6838,6 @@
       ]
     },
     {
-      "value": "state.db",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "stopransomware.gov",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -6926,24 +6949,6 @@
       "value": "tsedws.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "turn.error",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "turn.id",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "turn.role",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -7383,6 +7388,12 @@
   ],
   "sha256": [
     {
+      "value": "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
       "value": "0e6fecb2d369b0eae63731616a3daada52036634885ab1b85b115af6bc5bcb86",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -7449,6 +7460,18 @@
       ]
     },
     {
+      "value": "42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
       "value": "456586ababa08f70216c4459f4d6375676166ebfddd98a33b447ceb5099e8dc5",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
@@ -7464,6 +7487,12 @@
       "value": "46e59172c40c95d83c3a6f24f801fc2265653c8b575b66a726463e2a4eebd7f2",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
       ]
     },
     {
@@ -7595,9 +7624,21 @@
       ]
     },
     {
+      "value": "98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
       "value": "9dc85f9569a15eaf51c7d34254767ea30dd67b2178cec4cc7125288b9544fe00",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
       ]
     },
     {
@@ -7677,6 +7718,18 @@
       "value": "c9d5dc956841e000bfd8762e2f0b48b66c79b79500e894b4efa7fb9ba17e4e9e",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
+      ]
+    },
+    {
+      "value": "cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
       ]
     },
     {

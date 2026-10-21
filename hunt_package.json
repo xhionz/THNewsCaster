@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T20:20:48+00:00",
+  "generated_at": "2026-10-21T21:00:59+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -4616,6 +4616,355 @@
     },
     {
       "article": {
+        "id": "480410d4a4d5f979",
+        "source": "Microsoft Security",
+        "title": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/",
+        "published": "Wed, 21 Oct 2026 18:23:55 +0000",
+        "summary": "Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise appeared first on Microsoft Security Blog .",
+        "raw_text": "AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise Storm-0940 used ARTEX agentic AI to accelerate a ConnectWise supply chain compromise, enabling application credential abuse across Microsoft 365 environments. The post AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise appeared first on Microsoft Security Blog . In this article What’s happening What is ARTEX? Mitigation and protection guidance References Learn more As early as September 2026, Storm-0940, a China-state aligned actor, used the agentic AI penetration testing framework ARTEX to automate attacks targeting hundreds of organizations globally across a broad range of industries. Several of these Storm-0940 ARTEX-driven attacks have resulted in the actor obtaining privileged access to an organization’s cloud infrastructure – including multiple instances where the time from initial targeting to privileged access was less than 3 hours. Microsoft assesses that Storm-0940 was responsible for the recently disclosed ConnectWise supply chain compromise of a multi-tenant application. This activity demonstrates how threat actors are integrating agentic AI into existing offensive security workflows and allows them to scale their operations exponentially. Agents are not constrained by factors affecting humans – they can work around the clock, on weekends, and on holidays and attempt multiple breach paths simultaneously enabling significantly reduced time from selecting a target to achieving objectives, increasing the speed and impact of complex attacks like supply chain compromises. Storm-0940’s use of ARTEX accelerated the speed of compromised application abuse to authenticate to Microsoft 365 customer environments through applications that had already been granted access. This allowed the threat actor to operate without requiring an interactive user sign-in. In multiple affected environments, Microsoft observed AI-accelerated follow-on activity through Microsoft Graph, including reconnaissance, application credential changes, and attempts to modify privileges that could enable expanded or persistent access. The activity conducted by the threat actor through the usage of ARTEX framework did not result from a compromise of or a vulnerability in Microsoft corporate systems, products, or services. Although Microsoft identified Storm-0940-initiated authentication and follow-on activity in multiple customer environments, the presence of an affected application or successful threat actor authentication does not necessarily indicate that customer data was accessed or exfiltrated. Microsoft Defender XDR provides detections and hunting queries for suspicious Microsoft Graph activity and activity associated with known threat infrastructure. Customers should review service principal sign-ins, investigate unexpected application credential or privilege changes, and follow ConnectWise’s published containment guidance while preserving relevant evidence for investigation. For a full list of detections please see the detections section. What’s happening Storm-0940 is a China-state aligned actor (with no known industry aliases) that has been active since 2021 and targets organizations across multiple industries for data theft. The actor has historically gained initial access using password spraying and exploitation of internet-facing applications, before using compromised accounts to move through targeted environments. In cloud environments, the actor has also established persistence by adding credentials to existing OAuth applications, allowing continued access to Microsoft 365 resources. The actor has used these applications to access and exfiltrate email and other data through Microsoft Graph. As early as September 2026, Storm-0940 used the agentic AI penetration testing framework ARTEX to automate attacks targeting hundreds of organizations globally across a broad range of industries. These include aerospace and defense, automotive, chemicals, energy, financial services, government, legal, manufacturing, media, military, semiconductor, software, technology, and think tanks and non-profits. During the ConnectWise supply chain compromise, Storm-0940 used ARTEX to accelerate scanning and reconnaissance, password spraying, and OAuth application abuse at downstream victims. Several of these Storm-0940 ARTEX-driven attacks have resulted in the actor obtaining privileged access to an organization’s cloud infrastructure – including multiple instances where the time from initial targeting to privileged access was less than 3 hours. When automated with AI, these activities generate a large volume of traffic and log data that may generate alerts. However, the speed of the activity allows very little time for Defenders to respond to those alerts and remediate the actor’s access in a coordinated fashion. Storm-0940’s activity illustrates how a threat actor with a broad target set can use an agentic AI tool and privileged authentication material to quickly attempt to compromise many organizations. While the majority of the targeting wasn’t successful, Storm-0940 achieved privileged cloud persistence at many organizations in a brief time. What is ARTEX? ARTEX is an open-source penetration testing framework that can use any AI model to automate a variety of offensive security workflows. The ARTEX framework is a multi-agent LLM system written in GO with a Next.js frontend. While the UI and generated output default to English, the framework can be switched to Korean, Mandarin, Spanish, or Japanese. ARTEX is a system of LLM-driven agents that run an autonomous penetration test from reconnaissance through data exfiltration with little needed human interaction. The agents then accumulate the discovered assets and vulnerabilities into a graph during the penetration test. In October 2026, public reporting noted that the ARTEX framework was being used by threat actors, such as the personal data breaches targeting Korean financial institutions. Microsoft Threat Intelligence has identified threat actors across multiple geographic regions leveraging the ARTEX framework. On October 16, 2026, ConnectWise publicly reported unauthorized access to its customers’ tenants using multiple OAuth application identities. Following the unauthorized access, Storm-0940 used ARTEX to reach more than 2,250 tenants at 2,900 sign-in attempts per minute, a pace that leaves defenders with little time to detect and respond. While OAuth application abuse is a typical part of Storm-0940’s toolset, in this case the actor used ARTEX to accelerate the activity to machine speed. Figure 1. Scale and speed of a subset of Storm-0940’s automated ARTEX campaign on downstream tenants, including tenant reach and rapid sign-ins. Password Spraying Between October 10 and 14, 2026, Storm-0940 infrastructure at 144.172.64[.]99 conducted an automated cross-tenant password-spray campaign targeting 327 accounts across eight organizations to gain access to Microsoft 365 and Exchange Online. During this large campaign, Microsoft telemetry captured 151,000+ failed logon events, with activity peaking on October 11 at 2,900 failures per minute and concentrating more than 111,000 failures into a single day. The campaign blended broad, low-rate account spraying with sustained, high-volume authentication attempts against selected identities; 48 accounts received more than 1,000 failures, and lockout responses represented nearly 98% of all activity. Despite the scale, no successful authentication, token issuance, Graph call, or directory change was observed. Downstream customer access On October 15, immediately after this notable activity, public reports of the compromise of the popular cloud backup application ConnectWise started to surface with direct references to indicators of compromise matching the same network range observed for the earlier password-spray campaign (144.172.64.x). An advisory from the affected cloud backup vendor posted on October 16 shared later additional indicators with one IP address matching exactly the 144.172.64[.]99 infrastructure responsible for the earlier password-spray campaign. Additionally, after acquiring control of the identities of multiple ConnectWise cloud applications, the AI agents operating on behalf of the threat actor continued to use the same IP range to authenticate to customer environments using the illicit access acquired through these stolen app credentials, effectively taking advantage of the already established trust by these apps within a tenant. In some of these environments, the AI agents (on behalf of the threat actor) progressed beyond authentication to Microsoft Graph and directory operations, including reconnaissance, application credential modifications to establish persistence, and changes involving identities, groups, and privileged roles. Microsoft identified multiple customer environments with evidence of follow-on activity, highlighting how a compromised third-party application with high privileges could provide access beyond its originally intended purpose. The application credential modification made by Storm-0940’s associated agents in the targeted victims’ environments can lead to persistence through other identities, credentials, and cloud services. These changes can remain active as a backdoor even after the original compromised application is mediated. Organizations should examine service principal sign-ins alongside subsequent Microsoft Graph activity, directory changes, and resource access, correlating suspicious events with authorized administrative activity. The presence of an affected application, or even successful authentication, does not necessarily indicate unauthorized data access or data exfiltration. Mitigation and protection guidance Microsoft recommends the following mitigations to reduce the impact of this threat. Check the recommendations card for the deployment status of monitored mitigations. Immediate actions Keep affected ConnectWise application connections disabled until ConnectWise provides formal restoration instructions. Do not delete enterprise applications as the first response. Preserve configuration and evidence before making irreversible changes. Inventory all four application IDs listed in this profile and record the local service-principal Object ID in each tenant. Review every Microsoft 365 tenant where the affected applications are currently or were previously installed or authorized, even if the integration is no longer in use. Search by application ID rather than display name. Preserve available Microsoft Entra sign-in and audit records , Microsoft Purview Audit records, SIEM data, and previously configured Microsoft Graph telemetry. Do not delay urgent containment while waiting for exports. Review activity starting from at least October 15, 2026. Where records are available, extend service-principal sign-in review to October 1 and investigate earlier related activity, including failed authentications and volume anomalies. Review successful and failed service-principal sign-ins separately. Investigate unfamiliar sources and activity outside expected vendor infrastructure; do not limit review to the published IPs. Review Microsoft Entra audit records for application or service-principal credential additions; new applications, service principals, or owners; app-role assignments and consent grants; privileged role assignments; and changes to users, groups, authentication methods, or Conditional Access. On confirmed suspicious activity, revoke unnecessary permissions and rotate credentials. Review Microsoft 365 audit records to look for reconnaissance activities like listing directories, permissions, and approvals coming from unusual IPs. Review Microsoft 365 audit records for unusual mail or file access, downloads, forwarding, inbox or transport rules, delegated mailbox permissions, and related resource activity. Preserve evidence, then have an appropriately authorized responder remove confirmed unauthorized credentials, grants, owners, assignments, and identities. Additional recommendations Threat actor misuse of AI accelerates risk across enterprise environments by amplifying existing threats such as exploitation of vulnerabilities, phishing, malware threats, and insider activity. To help organizations stay ahead of AI-enabled threat activity, Microsoft has introduced the Security Dashboard for AI . The dashboard provides users with a unified view of AI security posture by aggregating security, identity, and data risk across Microsoft Defender , Microsoft Entra , and Microsoft Purview . This allows organizations to understand what AI assets exist in their environment, recognize emerging risk patterns, and prioritize governance and security across AI agents, applications, and platforms. To learn more about the Microsoft Security Dashboard for AI see: Assess your organization’s AI risk with Microsoft Security Dashboard for AI (Preview) . Enable threat protection for AI services in Microsoft Defender for Cloud to identify threats to generative AI applications in real time and for assistance in responding to security issues. Apply least privilege to multi-tenant application permissions and consent grants. Monitor credential additions, privilege assignments, and anomalous app-only activity, especially to applications with high privileged permissions and scopes. Verify that vendor credential rotation and any tenant-level remediation eliminated remaining unauthorized access. Assess the operational effect on backup and restore workflows and follow current ConnectWise restoration guidance. Microsoft Defender XDR detections Microsoft Defender XDR customers can refer to the list of applicable detections below. Microsoft Defender XDR coordinates detection, prevention, investigation, and response across endpoints, identities, email, and apps to provide integrated protection against attacks like the threat discussed in this blog. Customers with provisioned access can also use Microsoft Security Copilot in Microsoft Defender to investigate and respond to incidents, hunt for threats, and protect their organization with relevant threat intelligence. Tactic Observed activity Microsoft Defender coverage (Alert title) Discovery Unusual behavior attributes were observed from Graph API activity originating from associated ConnectWise Application. Unusual Microsoft Graph activity associated with Compromised ConnectWise Application Privilege Escalation Persistence Initial Access/Valid Accounts ConnectWise Management Application directly granted itself the Global Administrator role through the Add member to role operation, with no prior Global Administrator self-assignment observed for the same application in the preceding 7 days. Application self-assigned Global Administrator role Discovery Graph API activity for the user originated from an active, production Microsoft Threat Intelligence Center IP indicator. Graph API activity from a Microsoft threat intelligence IP address Valid Accounts A user sign-in from a nation-state threat actor infrastructure has been detected from this account. A threat actor might have compromised the user account to gain unauthorized access and conducted other malicious activities in your system. Investigate promptly to mitigate security risks. Suspicious sign-in from verified nation-state threat actor infrastructure Steal Application Access Token A sign-in was observed from a known threat actor IP address. We recommend promptly investigating this alert, as a threat actor might already be using the stolen credentials to move laterally in the network. Malicious sign-in from known threat actor IP address Microsoft Defender for Cloud Apps detections Tactic Observed activity Microsoft Defender coverage (Alert title) Persistence An application or service principal was granted a highly privileged app role. Suspicious addition of app role assignments to service principal Collection High-volume mailbox access by an OAuth app after a suspicious role grant. Suspicious mail access activity by OAuth application following role assignment Collection A suspicious OAuth app that was added recently started accessing the Teams Messages folder using an email client. Newly added OAuth application accessing Teams Messages folder via email client Credential Access An OAuth application activity from an uncommonly visited ISP has been observed, indicating potential suspicious behavior. OAuth application activity from an uncommonly visited ISP Exfiltration OAuth applications seen performing extensive Microsoft Graph SharePoint enumeration activities shortly after application creation or modification events Suspicious OAuth application created from a risky user context performing graph SharePoint enumeration Privilege Escalation Risky permissions that enable user to act as other entities or escalate to Global Admin provided to Service Principal High-privilege application roles assigned to a service principal Persistence A service principal added an application role assignment to itself Suspicious addition of application role assignments by service principal to itself Microsoft Security Copilot Security Copilot customers can use the standalone experience to create their own prompts or run the following prebuilt promptbooks to automate incident response or investigation tasks related to this threat: Incident investigation Threat actor profile Threat Intelligence 360 report based on MDTI article Note that some promptbooks require access to plugins for Microsoft products such as Microsoft Defender XDR or Microsoft Sentinel. Threat intelligence reports Microsoft customers can use the following reports in Microsoft products to get the most up-to-date information about the threat actor, malicious activity, and techniques discussed in this blog. These reports provide intelligence, protection information, and recommended actions to prevent, mitigate, or respond to associated threats found in customer environments. Microsoft Defender XDR Threat analytics Activity Profile: ConnectWise Cloud Backup credential abuse: assessment and response guidance Indicators of compromise (IOC) Indicator Type Description 144.172.64[.]128 IP These IPs were seen performing Sign-ins and Graph API activity in customer environments of ConnectWise apps. 144.172.64[.]99 IP 144.172.64[.]60 IP 187.15.88[.]186 187.15.90[.]217 187.15.89[.]186 IP These IPs were seen accessing the Graph API via the compromised apps. However, since they are VPN IPs, it is transient and relevant for investigation on October 15 and 16 in context with compromised applications. Python-urllib/3.12 User Agent These user agents were seen performing Sign-ins and Graph API activity on customer environments using ConnectWise apps. python-requests/2.31.0 User Agent python-requests/2.34.2 User Agent curl/7.88.1 User Agent azure-toolkit/1.0 User Agent Advanced hunting NOTE : The following sample queries let you search for a week’s worth of events. To explore up to 30 days’ worth of raw data to inspect events in your network and locate potential indicators related to this campaign for more than a week, go to the Advanced Hunting page > Query tab, select the calendar dropdown menu to update your query to hunt for the Last 30 days . Microsoft Defender XDR advanced hunting 1- OAuthAppInfo → Is the affected app present, enabled, and what permissions does it hold? Start with OAuthAppInfo to determine whether any of the affected ConnectWise applications are present in the tenant and understand the access they have been granted. The query identifies the application and its tenant-specific service principal, whether it is enabled, its privilege level, consent information, and the individual permissions assigned to it. This establishes the customer’s potential exposure and gives investigators the ServicePrincipalId needed for further hunting. A match does not mean the application was abused, only that it is present and potentially had access, so the next step is to determine whether the service principal was actually used. Run query let ConnectWiseApps = dynamic([ \"506e08f9-6e9a-4da4-942b-a099a03644ae\", // ConnectWise Cloud Backup \"24205314-2b89-4e07-a2a4-579e898a5640\", // ConnectWise - MS Teams \"0de14c77-b9b0-4137-9360-34878a929827\", // ConnectWise - MS Graph \"c921256f-04a7-44e8-9b2a-69c33929ba19\" // SkyKick Partner Portal ]); OAuthAppInfo | where OAuthAppId in (ConnectWiseApps) | mv-expand Permission = Permissions | extend PermissionName = tostring(Permission.PermissionName), TargetApp = tostring(Permission.TargetAppDisplayName), TargetAppId = tostring(Permission.TargetAppId), PermissionType = tostring(Permission.PermissionType), PermissionPrivilegeLevel = tostring(Permission.PrivilegeLevel), UsageStatus = tostring(Permission.UsageStatus) | project AppName, OAuthAppId, ServicePrincipalId, AppStatus, PrivilegeLevel, IsAdminConsented, PermissionName, PermissionType, PermissionPrivilegeLevel, TargetApp, TargetAppId, UsageStatus | order by AppName asc, PermissionPrivilegeLevel desc 2 – EntraIdSpnSignInEvents + GraphAPIAuditEvents → Did the service principal authenticate, and what Microsoft Graph activity followed? Use this query to investigate service-principal sign-ins and Microsoft Graph API activity associated with the identified ConnectWise applications and suspicious IP addresses, starting October 13, 2026. The query combines both event types into a chronological view, helping defenders identify suspicious authentication and related Graph operations, including potential credential changes, privilege modifications, and unusual resource access. Remove the IP filter for broader hunting. Results require further correlation, as authentication alone does not establish compromise. Run query let Apps = dynamic([ \"506e08f9-6e9a-4da4-942b-a099a03644ae\", \"24205314-2b89-4e07-a2a4-579e898a5640\", \"0de14c77-b9b0-4137-9360-34878a929827\", \"c921256f-04a7-44e8-9b2a-69c33929ba19\" ]); let IPs = dynamic([\"144.172.64.60\", \"144.172.64.99\", \"144.172.64.128\"]); union kind=outer (EntraIdSpnSignInEvents | extend EventType = \"Sign-in\"), (GraphAPIAuditEvents | extend EventType = \"Graph API\", IPAddress = IpAddress) | where Timestamp >= datetime(2026-10-13) | where ApplicationId in (Apps) | where IPAddress in (IPs) // Comment out for broader hunting | project-away IpAddress | order by Timestamp asc Sentinel hunting queries 1-SigninLogs → Did a service principal authenticate, from where, and against what resource? Use SigninLogs to determine whether an affected application identity actually authenticated. This moves the investigation from potential exposure to observed authentication, allowing defenders to examine the application and service principal alongside the source IP address, geographic information, authentication result, and resource being accessed. Investigators should evaluate these sign-ins against the application’s expected activity and look for unusual source infrastructure, resources, or authentication patterns before pivoting into subsequent Graph activity. Run query let IPIndicators = dynamic([ \"144.172.64.60\", // IP Indicator \"144.172.64.99\", // IP Indicator \"144.172.64.128\" // IP Indicator ]); let ConnectWiseApps = dynamic([ \"506e08f9-6e9a-4da4-942b-a099a03644ae\", // ConnectWise Cloud Backup \"24205314-2b89-4e07-a2a4-579e898a5640\", // ConnectWise - MS Teams \"0de14c77-b9b0-4137-9360-34878a929827\", // ConnectWise - MS Graph \"c921256f-04a7-44e8-9b2a-69c33929ba19\" // SkyKick Partner Portal ]); SigninLogs | where TimeGenerated >= datetime(2026-10-13) | where AppId in (ConnectWiseApps) //| where IPAddress in (IPIndicators) // Comment out to review all activity from these applications | project TimeGenerated, AppId, ServicePrincipalName, ResourceDisplayName, ResourceId, IPAddress, CorrelationId | order by TimeGenerated asc 2 – MicrosoftGraphActivityLogs → What observable Graph API activity followed? Use MicrosoftGraphActivityLogs to investigate observable Microsoft Graph activity following authentication. This query allows defenders to pivot on the affected ApplicationId or tenant-specific ServicePrincipalId and examine details such as the request URI, HTTP method, response status, scopes, source IP address, and target workload. This helps establish what Graph activity occurred after the service principal authenticated and provides additional context around the resources the application attempted to access. Importantly, the absence of results should not be treated as confirmation that no access occurred; Graph API telemetry should be considered alongside the application permissions and service principal authentication activity identified in the previous hunting steps. Run query let IPIndicators = dynamic([ \"144.172.64.60\", // IP Indicator \"144.172.64.99\", // IP Indicator \"144.172.64.128\" // IP Indicator ]); let ConnectWiseApps = dynamic([ \"506e08f9-6e9a-4da4-942b-a099a03644ae\", // ConnectWise Cloud Backup \"24205314-2b89-4e07-a2a4-579e898a5640\", // ConnectWise - MS Teams \"0de14c77-b9b0-4137-9360-34878a929827\", // ConnectWise - MS Graph \"c921256f-04a7-44e8-9b2a-69c33929ba19\" // SkyKick Partner Portal ]); MicrosoftGraphActivityLogs | where TimeGenerated >= datetime(2026-10-13) | where AppId in (ConnectWiseApps) | where IPAddress in (IPIndicators) // Comment out to review all Graph activity from these applications | project TimeGenerated, AppId, IPAddress, RequestMethod, RequestUri, ResponseStatusCode, Scopes, ClientRequestId, OperationId, RequestId | order by TimeGenerated asc MITRE ATT&CK Techniques observed This threat has exhibited use of the following attack techniques. For standard industry documentation about these techniques, refer to the MITRE ATT&CK framework . Reconnaissance T1595 Active Scanning | Scanning cloud resources to identify targets for compromise. Initial Access T1078.004 Valid Accounts: Cloud Accounts | Using compromised cloud accounts to obtain access. T1195 Supply Chain Compromise | Compromising a multi-tenant OAuth application to access downstream customer environments. Privilege Escalation T1098.003 Account Manipulation: Additional Cloud Roles | Addition of privileged cloud role assignments, including self assignment of global admin from one of the ConnectWise Management Application. T1098.001 Account Manipulation: Additional Cloud Credentials | Addition or modification of application credentials. Credential Access T1528 Steal Application Access Token | Compromising OAuth application authentication material. Discovery T1087.004 Account Discovery: Cloud Account | Identifying privileged cloud accounts for further targeting. T1580 Cloud Infrastructure Discovery | Mapping cloud infrastructure for further targeting. References 2026 – October SkyKick . Huntress (accessed 2026-10-19). ConnectWise Trust Center – Cloud Backup advisories . ConnectWise (accessed 2026-10-19). ConnectWise Cloud Backup technical investigation and remediation guide . ConnectWise (accessed 2026-10-19). Learn more For guidance on investigating and responding to compromised applications, see Compromised and malicious applications investigation . Learn how to investigate app-only authentication with Service principal sign-in logs . Review application credentials, permissions, role assignments, and configuration changes in Microsoft Entra security operations for applications . Learn how to proactively investigate threats with Advanced hunting in Microsoft Defender XDR . Explore the OAuthAppInfo and GraphAPIAuditEvents advanced hunting tables. Learn how to find Microsoft 365 activity with Search the audit log . Review guidance for reducing excessive application permissions in Secure applications using least privilege . For the latest security research from the Microsoft Threat Intelligence community, check out the Microsoft Threat Intelligence Blog . To get notified about new publications and to join discussions on social media, follow us on LinkedIn , X (formerly Twitter) , and Bluesky . To hear stories and insights from the Microsoft Threat Intelligence community about the ever-evolving threat landscape, listen to the Microsoft Threat Intelligence podcast . The post AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise appeared first on Microsoft Security Blog .",
+        "tags": []
+      },
+      "scoring": {
+        "score": 74,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "5 MITRE technique hit(s)=+20",
+          "5 initial-access vector(s)=+15",
+          "1 impact action(s)=+8",
+          "2 product mention(s)=+6",
+          "13 IOC(s)=+15"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [
+          "144.172.64.99",
+          "144.172.64.128",
+          "144.172.64.60",
+          "187.15.88.186",
+          "187.15.90.217",
+          "187.15.89.186"
+        ],
+        "domains": [
+          "next.js",
+          "permission.permissionname",
+          "permission.targetappdisplayname",
+          "permission.targetappid",
+          "permission.permissiontype",
+          "permission.privilegelevel",
+          "permission.usagestatus"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1566",
+          "T1078",
+          "T1219",
+          "T1098",
+          "T1110"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit",
+          "supply-chain",
+          "vpn-edge",
+          "credential-theft"
+        ],
+        "sectors": [
+          "finance",
+          "government",
+          "energy",
+          "manufacturing",
+          "telecom"
+        ],
+        "actions": [
+          "data-breach"
+        ],
+        "products": [
+          "Microsoft 365 / Entra ID",
+          "ConnectWise ScreenConnect"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-480410d4-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft 365 / Entra ID",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft 365 / Entra ID within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: phishing, exploit, supply-chain; impact: data-breach; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-480410d4-1-O1",
+              "title": "Inventory exposure to Microsoft 365 / Entra ID",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft 365 / Entra ID, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft 365 / Entra ID' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-480410d4-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-480410d4-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-480410d4-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft 365 / Entra ID hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-480410d4-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-480410d4-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: phishing, exploit, supply-chain; impact: data-breach; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-480410d4-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('next.js','permission.permissionname','permission.targetappdisplayname') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-480410d4-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('144.172.64.99','144.172.64.128','144.172.64.60') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-480410d4-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-480410d4-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-480410d4-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-480410d4-3",
+          "title": "Data staging and exfiltration to attacker-controlled storage",
+          "statement": "Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.",
+          "rationale": "Archetype 'exfiltration' selected based on vectors: phishing, exploit, supply-chain; impact: data-breach; products: Microsoft 365 / Entra ID, ConnectWise ScreenConnect.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1560",
+            "T1041",
+            "T1567",
+            "T1567.002"
+          ],
+          "objectives": [
+            {
+              "id": "H-480410d4-3-O1",
+              "title": "Cloud-storage exfil to non-corp tenants",
+              "falsification_criterion": "If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.",
+              "data_sources": [
+                "Proxy logs",
+                "CASB / DLP"
+              ],
+              "suggested_query": "proxy | where host matches /mega\\.nz|anonfiles\\.com|transfer\\.sh|filebin\\.net/ | summarize bytes = sum(bytes_out) by user",
+              "mitre_attack": [
+                "T1567.002",
+                "T1567"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-480410d4-3-O2",
+              "title": "Archive-then-egress pattern",
+              "falsification_criterion": "If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.",
+              "data_sources": [
+                "EDR process+file events",
+                "NetFlow"
+              ],
+              "suggested_query": "file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m",
+              "mitre_attack": [
+                "T1560",
+                "T1041"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-480410d4-3-O3",
+              "title": "Outbound volume to rare ASNs",
+              "falsification_criterion": "If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.",
+              "data_sources": [
+                "NetFlow",
+                "Firewall logs"
+              ],
+              "suggested_query": "netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB",
+              "mitre_attack": [
+                "T1041",
+                "T1567"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-480410d4-3-O4",
+              "title": "DNS-tunnelling search",
+              "falsification_criterion": "If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.",
+              "data_sources": [
+                "DNS resolver logs"
+              ],
+              "suggested_query": "dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000",
+              "mitre_attack": [
+                "T1071.004",
+                "T1048.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-21T21:00:59+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "efe58590593f9907",
         "source": "Cisco Talos",
         "title": "Two critical RCEs in PHP core",
@@ -8731,6 +9080,333 @@
         }
       ],
       "first_seen": "2026-10-21T15:39:09+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "820932a350d6a926",
+        "source": "Cisco Talos",
+        "title": "Compromised eMudhra intermediate certificates",
+        "link": "https://blog.talosintelligence.com/compromised-intermediate-certificates/",
+        "published": "Wed, 21 Oct 2026 20:43:29 GMT",
+        "summary": "Cisco Talos is aware of eight intermediate certificates belonging to the intermediate certificate authority, eMudhra.",
+        "raw_text": "Compromised eMudhra intermediate certificates Cisco Talos is aware of eight intermediate certificates belonging to the intermediate certificate authority, eMudhra. Cisco Talos is aware of eight intermediate certificates belonging to the intermediate certificate authority, eMudhra . Rather than possessing the mandatory 384 bits of pseudo-random security, several private keys evaluated single-digit and double-digit integers. This misconfiguration allows an attacker with the private key of any of the compromised intermediate CAs to impersonate any website or service. Six of the TLS certificates, trusted by Chrome, Mozilla, and Apple have been blocked by these vendors already. Two other certificates, used for codesigning by Microsoft, have also been blocked. Talos expects there will be additional patches available across a variety of technologies as software applications work to remediate the certificates’ exposure. Following the disclosure, eMudhra has revoked the compromised certificates and stopped issuing new certificates under its G3 root. Compromise details The cause of this issue, originated during an April 30, 2025 key generation activity conducted by eMudhra under its emSign Root TLS CA - G3 and cross-signed Comodo AAA Certificate Services. During a key generation ceremony for 24 subordinate CAs, a flaw in eMudhra’s key generation process created a second set of weak P-384 keys during a wrap/unwrap step. Those keys were mistakenly used for eight intermediate CA certificates. This flaw took the encryption from 384 bytes of entropy down to 3 – 8, making recovering the private keys trivial. The following are the impacted certificates, as illustrated in Mozilla’s bug report : EM EV TLS CA - G3B (eMudhra BV), CCADB A012304 SHA-256 E7568FE6E12331F4FD7DE61DA4C7559D0F8EB192A218D4741A3BA75184333838 serial c7c41efe92d825f05eae841a4a82c1, issuer emSign Root TLS CA - G3 EM OV TLS CA - G3B (eMudhra BV), CCADB A012308 SHA-256 98B896625C0C230ADEEC3EB2CF6AAD5001ECF9156A68644E82374CE5833BC25B serial 6cada367fb1c100088120ea202d568, issuer emSign Root TLS CA - G3 EM DV TLS CA - G3B (eMudhra BV), CCADB A012302 SHA-256 42C4ACCD12C4F59597925E1A08A7A90102608543809308D50EC427E118BA1493 serial a4aee678f23362b4c0e460b772f214, issuer emSign Root TLS CA - G3 EM EV TLS CA - G3C (eMudhra Inc), CCADB A012296 SHA-256 432EC25F0D28DE9006D97BF752F17BBB2CD41F669933FCB072D9A1148D0261F3 serial 8009928a64107601af05fa2f19f109, issuer emSign Root TLS CA - G3 EM OV TLS CA - G3C (eMudhra Inc), CCADB A012300 SHA-256 CB6E15165AC802E9B3F993F16C25D41F4E81C21EBDE71AE1B012AC00BF9C7C3F serial 296926c227a3a1526392b19482a504, issuer emSign Root TLS CA - G3 EM DV TLS CA - G3C (eMudhra Inc), CCADB A012294 SHA-256 0164D7CEAE5BB909C272AF151FF44B1177AE9B47D9424B94F1D9558C30934D19 serial 588b2e3c2bb8cda13e1a1209254321, issuer emSign Root TLS CA - G3 EM OV CS CA - G3B (eMudhra BV), CCADB A012306 SHA-256 9E39DE2881273ACC225A149C72BA3E0F51424963669AB633EE1DC7DF5DB067B4 serial 7818933f8f85b4619a2b35fba83d0a, issuer emSign Root CS CA - G3 EM OV CS CA - G3C (eMudhra Inc), CCADB A012298 SHA-256 4B2460A466F95FD40113BCDCCA2CEB29B3B093921DE45474DA7DF48874C630B1 serial 544b7f922c31ae220a4a922916f6e6, issuer emSign Root CS CA - G3 CVE-2026-111943 Unlike languages that defer entirely to external dynamic system libraries (like OpenSSL), the Go programming runtime implements its own X.509 chain verification engine in the standard library (crypto/x509). While Go usually queries platform certificates, several platforms or static container environments rely on embedded or legacy root certificate pools where certificate revocations are ignored. To eliminate exploitation across the entire cloud-native ecosystem including Docker, Kubernetes, Terraform, and Prometheus, the Go team designated the compromised certificates as a vulnerability, CVE-2026-111943, and released Go versions 1.27.3 and 1.26.10. The fixed versions filter out chains containingthe SHA-256 hashes of the SubjectPublicKeyInfo (SPKI) for all eight compromised eMudhra intermediate certificates. Impact These compromised certificates could allow adversaries to impersonate servers and intercept or modify traffic. The impact of their exposure is far more than just web browsers. Other programs that check for TLS certificates might still be impacted since they may not check revocation lists. One clear example is related to virtual private networks (VPNs); these technologies will likely require software updates to mitigate the issue. Based on this guidance, Talos strongly recommends users update software using and handling TLS certificates as fixes become available. Talos is actively monitoring the impact of these compromised certificates and has not seen any malicious incidents involving them in the wild yet (as of October 21, 2026 14:00 UTC / 10:00 a.m. ET). Significance of this breach Public key infrastructure relies on trust being delegated through certificate chains: root CAs authorize intermediate CAs, which can issue certificates within the scope of their authority. An attacker who obtains an intermediate CA’s private key may be able to issue fraudulent certificates that clients accept, subject to the intermediate certificate’s constraints and each client’s validation controls. In this incident, six compromised intermediates were for TLS and two were for code signing. For TLS, an attacker able to intercept or redirect a connection could use a fraudulent certificate to impersonate a server and potentially read or modify traffic if the client still trusts the affected key and no applicable protection blocks it. Protections such as revocation, key distrust, certificate transparency enforcement, and certificate pinning can prevent or expose such an attack. Browser vendors have blocked the affected TLS keys, but other applications may rely on separate trust stores or validation paths: Enterprise infrastructure and VPNs Organizations should assess TLS-using software and appliances, including proxies, reverse load balancers, VPN clients, and gateways. Exposure depends on the certificate chain being validated and the trust store and revocation behavior in use. A stale or separately managed trust store may need an application, operating-system, firmware, or trust-bundle update; verify the required action for each product. Software supply chains and CI/CD Build runners and package managers may be exposed if they fetch content over TLS while still trusting an affected key and an attacker can intercept the connection. A fraudulent TLS certificate could enable registry impersonation, but it would not by itself bypass separate package integrity checks, such as lockfile hashes, checksums, signatures, or provenance controls. Assess the actual package-manager configuration and dependency path. Industrial IoT and embedded systems Review devices that use bundled or independently managed CA stores, especially where certificate revocation or trust-store updates may be limited. Some devices may require a vendor update or compensating control, but the necessary action depends on each device’s validation and update mechanisms. Talos recommends updating affected software and trust stores as vendor fixes become available. Coverage The following SNORT® SIDs provide coverage for this threat: 67363 - 67374. Talos would like to highlight the efforts of Chris Morrison for providing emergency coverage and mitigations for this threat.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 64,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "1 CVE(s)=+20",
+          "3 initial-access vector(s)=+11",
+          "1 impact action(s)=+8",
+          "8 IOC(s)=+15"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-111943"
+        ],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [
+          "e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838",
+          "98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b",
+          "42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493",
+          "432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3",
+          "cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f",
+          "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19",
+          "9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4",
+          "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1"
+        ],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit",
+          "supply-chain",
+          "vpn-edge"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [
+          "fraud"
+        ],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-820932a3-1",
+          "title": "Initial access via CVE-2026-111943 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-111943 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-111943; vectors: exploit, supply-chain, vpn-edge; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-820932a3-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-111943.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-820932a3-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-111943 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-111943/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-820932a3-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-111943 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-111943')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-820932a3-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-820932a3-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-820932a3-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-111943; vectors: exploit, supply-chain, vpn-edge; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-820932a3-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-820932a3-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-820932a3-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-820932a3-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-820932a3-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-820932a3-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-111943; vectors: exploit, supply-chain, vpn-edge; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-820932a3-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-820932a3-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-820932a3-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-820932a3-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-21T21:00:59+00:00",
       "agent_trace": []
     },
     {
@@ -17091,649 +17767,9 @@
       ],
       "first_seen": "2026-10-14T07:29:56+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "0706d8a43c51eb88",
-        "source": "SANS Internet Storm Center",
-        "title": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)",
-        "link": "https://isc.sans.edu/diary/rss/33410",
-        "published": "Thu, 08 Oct 2026 16:52:53 GMT",
-        "summary": "We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located.",
-        "raw_text": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th) We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located. We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8 of the most popular AI coding assistants and agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I've been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located. I’ve added two new Python scripts to my GitHub repository for examining the records left behind by these two tools: opencode-chat-replay.py [ 1 ] and hermes_forensic_extract.py [ 2 ]. I absolutely had OpenCode write the opencode script and Hermes wrote the hermes script (which explains some of the differences between them). Both focus on reconstruction , but they approach it differently. The opencode script turns stored session data into readable chat transcripts or structured exports. The Hermes script extracts a broader collection of evidence, including conversation records, model usage, API request dumps, and application logs. These are forensic review tools, not tools for running or replaying an agent’s actions (the title of the opencode script not withstanding, opencode named it). The goal is to make recorded activity accessible for investigation: what the user asked, what the assistant returned, what tool activity was captured, and what surrounding context remains available. Both scripts require Python 3.10 or later and use only the Python standard library. Both tools allow use of --start and --end (in YYYY-mm-dd [HH[:MM[:SS]]] format) to narrow the time range of the extraction, and -f/--file to point to a specific sqlite db (which is probably insufficient for the hermes script, so may be removed in the future), or -d/--dir to point to the home directory (though the --hermes-home switch probably does this better for the hermes script) where the evidence can be found, e.g. from a mounted image or a tarball collected from a system under investigation. opencode Chat Replay: From SQLite to a Readable Conversation opencode-chat-replay.py reconstructs session transcripts from opencode’s SQLite database, located by default at: ~/.local/share/opencode/opencode.db The script supports both the separate message and part tables and the newer consolidated session_message storage. When consolidated storage is populated for a session, it uses that instead of the separate message and part records. That distinction matters because the transcript is more than a list of text messages. Stored turns can contain text, assistant reasoning, tool calls, completion information, errors, and token or cost accounting. Start with the session inventory Running the script without a selector lists sessions. You can also request that explicitly: python opencode-chat-replay.py --list The listing includes session IDs, slugs, message and part counts, creation times in UTC, and titles. From there, select the most recently created session, a specific session ID, or a slug: # Most recently created session ./opencode-chat-replay.py --latest # Exact session ID or unique ID prefix ./opencode-chat-replay.py --session ses_f074ee11 # Slug selection ./opencode-chat-replay.py --slug swift-star Ambiguous session ID prefixes abort rather than silently selecting a session. Slug selection first looks for an exact match, then uses a case-insensitive substring match. Readable reports or structured exports Markdown is the default output format for this script (again, a choice made by the tool, I will probably change it to json later). Each transcript starts with session metadata, including the session ID, slug, working directory, version, timestamps, cost, tokens, and turn count. The conversation follows in numbered role sections. Reasoning and tool calls appear in collapsible blocks, keeping the main transcript readable while retaining access to the supporting material. For a compact review copy: python opencode-chat-replay.py --latest --no-reasoning --no-tools --out report.md For structured analysis: python opencode-chat-replay.py --slug swift-star --format json --out chat.json JSON output contains a session object and an array of turns. One of the design goals for this script was to be able to reproduce the output of opencode export on an investigative system where opencode was not installed. JSONL output places one turn on each line, with session metadata embedded in each record: python opencode-chat-replay.py --all --format jsonl --out-dir ./exports/transcripts That exports every session to a separate file named using the session date and slug. Tool input and output rendering is capped at 2,000 characters by default. Truncation is explicitly annotated rather than silently dropping the remainder. To remove the cap: python opencode-chat-replay.py \\ --latest \\ --max-tool-output 0 \\ --out full-transcript.md The --include-children option also attaches child-session metadata when examining sessions that have associated sub-sessions. Working with the exported data The structured formats make targeted review straightforward. For example, extract user prompts from a JSON transcript: jq -r ' .turns[] | select(.role == \"user\") | .parts[] | select(.type == \"text\") | .text ' chat.json Or identify turns with recorded errors in JSONL: jq -c ' select(.turn.error != null) | {id: .turn.id, role: .turn.role, error: .turn.error} ' chat.jsonl Source handling Before querying SQLite, both scripts copy the sqlite database and any present -wal and -shm sidecars into a temporary directory (this works around a potential issue in opening the db read-only, that still might result in a write to the database due to partially staged results when we don't want to potentially tamper with the evidece). It opens that snapshot with SQLite’s read-only URI mode and removes the temporary directory on exit. It does not write to or delete files in the original opencode data location. A custom database path also allows examination of a copied database: python opencode-chat-replay.py --db /mnt/evidence/opencode.db --list Original epoch-millisecond timestamps remain in JSON and JSONL output; Markdown renders timestamps in ISO-8601 UTC. The script never opens auth.json . That does not make the resulting transcript nonsensitive: recorded tool inputs and outputs may still contain secrets. Hermes Forensic Extractor: Conversations Plus Supporting Artifacts hermes_forensic_extract.py takes a broader extraction approach. Its documented sources include: ~/.hermes/state.db for sessions, messages, and model usage. ~/.hermes/sessions/request_dump_*.json for full LLM API request and response payloads. ~/.hermes/logs/*.log for agent, error, gateway, and GUI activity. The output is newline-delimited JSON, with one JSON object per line. Each record identifies its source category through _extraction_type , such as session , message , model_usage , request_dump , or log_entry . Records also carry extraction and source-file metadata, original fields, parsed JSON variants, and timestamp representations. Binary fields are represented as base64 with an accompanying binary flag. Extract broadly, then narrow the review The basic extraction command writes the available data to a JSONL file: python hermes_forensic_extract.py -o evidence.jsonl You can narrow extraction using a session ID substring: python hermes_forensic_extract.py --session 20261005_140841_b266b9 -o session_evidence.jsonl Additional filters include an exact source match, a Unix timestamp range, and a maximum record count per source. Source toggles let you include or exclude particular categories. For example, extract only request dumps or only application logs: python hermes_forensic_extract.py --only-dumps -o api_dumps.jsonl python hermes_forensic_extract.py --only-logs -o app_logs.jsonl Request dumps provide a different view from stored conversation messages: they include API payload material such as headers, bodies, model information, tools, and messages sent to the provider. The log extraction adds application context, with parsed fields for component, timestamp, level, session ID, logger, and message. Profiles are separate evidence locations Hermes profiles have their own databases, session directories, logs, and configuration under: ~/.hermes/profiles/ / The extractor can target a specific profile directly: python hermes_forensic_extract.py --hermes-home ~/.hermes/profiles/suspect_profile -o profile_evidence.jsonl This makes the selected Hermes home explicit rather than treating the default directory as the only location of interest. Review with jq Extract user message content: jq ' select(._extraction_type == \"message\" and .role == \"user\") | .content ' evidence.jsonl Review logged errors: jq ' select(._extraction_type == \"log_entry\" and .level == \"ERROR\") ' evidence.jsonl Summarize the extracted record categories: jq -s ' group_by(._extraction_type) | map({type: .[0]._extraction_type, count: length}) ' evidence.jsonl The extractor opens state.db in read-only mode and does not write to Hermes data directories. Its _extracted_at and _source_file fields document when records were extracted and where they came from. Unlike the opencode script’s documented temporary-snapshot process, the Hermes README describes read-only database access without documenting an equivalent database-and-sidecar snapshot step. Two Tools, Two Views of Agent Activity The distinction between these scripts is deliberate: Script Primary purpose Output opencode-chat-replay.py Reconstruct opencode conversations from stored session data Markdown, JSON, JSONL hermes_forensic_extract.py Extract Hermes conversations and supporting application artifacts NDJSON/JSONL For opencode, the emphasis is moving from database records to an understandable conversation, with structured exports available for deeper analysis. For Hermes, the emphasis is collecting multiple artifact types into a common, filterable format while retaining source and extraction metadata. Neither should be read as proof that every action or every interaction was recorded. They expose the artifacts available in their documented sources. The useful investigative question is not just what appears in the export, but which source supports it—and what context is still outside that export. References: 1. https://github.com/clausing/scripts/blob/master/opencode-chat-replay.py 2. https://github.com/clausing/scripts/blob/master/hermes_forensic_extract.py --------------- Jim Clausing, GIAC GSE #26 jclausing --at-- isc [dot] sans (dot) edu (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 45,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "1 initial-access vector(s)=+7",
-          "1 impact action(s)=+8",
-          "13 IOC(s)=+15"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [],
-        "ips": [],
-        "domains": [
-          "opencode-chat-replay.py",
-          "opencode.db",
-          "report.md",
-          "chat.json",
-          "full-transcript.md",
-          "turn.error",
-          "turn.id",
-          "turn.role",
-          "chat.jsonl",
-          "auth.json",
-          "state.db",
-          "evidence.jsonl",
-          "isc.sans.edu"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [
-          "fraud"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-0706d8a4-1",
-          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-0706d8a4-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-0706d8a4-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-0706d8a4-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-0706d8a4-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-0706d8a4-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-0706d8a4-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: fraud.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-0706d8a4-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('opencode-chat-replay.py','opencode.db','report.md') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-0706d8a4-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-0706d8a4-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-0706d8a4-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-0706d8a4-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-0706d8a4-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit; impact: fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-0706d8a4-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-0706d8a4-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-0706d8a4-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-0706d8a4-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-08T17:15:04+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "93b83ac6c11cfdeb",
-        "source": "CISA Advisories",
-        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
-        "link": "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog",
-        "published": "Thu, 15 Oct 26 12:00:00 +0000",
-        "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21589 Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addi",
-        "raw_text": "CISA Adds One Known Exploited Vulnerability to Catalog CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21589 Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form . Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 42,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "1 CVE(s)=+20",
-          "1 initial-access vector(s)=+7"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-21589"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "government",
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-93b83ac6-1",
-          "title": "Initial access via CVE-2026-21589 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-21589 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-21589; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-93b83ac6-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-21589.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-93b83ac6-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-21589 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-21589/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-93b83ac6-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-21589 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-21589')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-93b83ac6-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-93b83ac6-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-93b83ac6-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-21589; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-93b83ac6-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-93b83ac6-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-93b83ac6-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-93b83ac6-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-93b83ac6-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-93b83ac6-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-21589; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-93b83ac6-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-93b83ac6-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-93b83ac6-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-93b83ac6-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-15T20:23:30+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 383,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; #StopRansomware: SafePay Ransomware; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)."
 }
