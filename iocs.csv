@@ -250,7 +250,6 @@ cves,CVE-2026-69718,1,https://blog.talosintelligence.com/microsoft-patch-tuesday
 cves,CVE-2026-69673,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-69452,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-69435,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
-cves,CVE-2026-64563,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 cves,CVE-2026-63252,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 cves,CVE-2026-63248,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 cves,CVE-2026-62927,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
@@ -260,7 +259,6 @@ cves,CVE-2026-60007,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-28
 cves,CVE-2026-58613,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 cves,CVE-2026-58080,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 cves,CVE-2026-57256,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
-cves,CVE-2026-56848,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 cves,CVE-2026-50475,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 cves,CVE-2026-49177,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
 cves,CVE-2026-48388,1,https://blog.talosintelligence.com/microsoft-adobe-apple-and-foxit-vulnerabilities/
@@ -273,12 +271,10 @@ cves,CVE-2026-29797,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-28
 cves,CVE-2026-28745,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01
 cves,CVE-2026-28388,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-17539,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
-cves,CVE-2026-13608,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 cves,CVE-2026-11856,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-9854,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04
 cves,CVE-2026-9853,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04
 cves,CVE-2026-9852,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04
-cves,CVE-2026-9545,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 cves,CVE-2026-9079,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-8932,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-8927,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
@@ -919,6 +915,7 @@ domains,arforcex.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,asean.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,asp.net,1,https://isc.sans.edu/diary/rss/33422
 domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
+domains,auth.json,1,https://isc.sans.edu/diary/rss/33410
 domains,autocad.py,1,https://isc.sans.edu/diary/rss/33420
 domains,az.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,b.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -941,6 +938,8 @@ domains,cch.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisorie
 domains,ccleaner.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,ccleaner64.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,cdn-dynmedia-1.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
+domains,chat.json,1,https://isc.sans.edu/diary/rss/33410
+domains,chat.jsonl,1,https://isc.sans.edu/diary/rss/33410
 domains,check.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,checkapi.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,checkinfo.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -991,6 +990,7 @@ domains,endoflife.date,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/t
 domains,error.jsp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,eseecloud.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
 domains,etechhosting.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,evidence.jsonl,1,https://isc.sans.edu/diary/rss/33410
 domains,explorer.exe,1,https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 domains,fbijobs.gov,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,fcchk.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1000,6 +1000,7 @@ domains,findfindx.com,1,https://www.cisa.gov/news-events/cybersecurity-advisorie
 domains,fm.run,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,fscan.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,fukua.org,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,full-transcript.md,1,https://isc.sans.edu/diary/rss/33410
 domains,gate.sinica.edu.tw.checkapi.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gf.phtml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gitlab-ci.yml,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
@@ -1029,7 +1030,7 @@ domains,info.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisor
 domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440
+domains,isc.sans.edu,5,https://isc.sans.edu/diary/rss/33410 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1042,10 +1043,8 @@ domains,leicc009.ga,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,libsmb2.dll,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,license.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,live.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,llama.cpp,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 domains,localstorage.getitem,1,https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
 domains,locker.dll,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,lore.kernel.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 domains,ls.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,m.secshow.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,m2k.js,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1070,7 +1069,6 @@ domains,netscan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,netscannew.zip,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,nikoes.gq,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,nltest.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,node.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/
 domains,np.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ns1.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,ns1.honey1314520.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1082,6 +1080,8 @@ domains,oledump.py,1,https://isc.sans.edu/diary/rss/33420
 domains,one.hmbiplc-01.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,oneforall.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,opcuaserverconfig.copy,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
+domains,opencode-chat-replay.py,1,https://isc.sans.edu/diary/rss/33410
+domains,opencode.db,1,https://isc.sans.edu/diary/rss/33410
 domains,options.playbuttontheme,1,https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
 domains,order.dell.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
 domains,orders.staples.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
@@ -1102,6 +1102,7 @@ domains,purple76.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,pw.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,pw2.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,random.cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,report.md,1,https://isc.sans.edu/diary/rss/33410
 domains,rndismp6.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,s3crts.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,safe-extract.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
@@ -1134,6 +1135,7 @@ domains,socks.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 domains,soudan.html,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,spaceport.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,sqlmap.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,state.db,1,https://isc.sans.edu/diary/rss/33410
 domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,streescans.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1154,6 +1156,9 @@ domains,traffic.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advi
 domains,trendmicro.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,trust.feeee,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,tsedws.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,turn.error,1,https://isc.sans.edu/diary/rss/33410
+domains,turn.id,1,https://isc.sans.edu/diary/rss/33410
+domains,turn.role,1,https://isc.sans.edu/diary/rss/33410
 domains,tuta.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,tutanota.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a

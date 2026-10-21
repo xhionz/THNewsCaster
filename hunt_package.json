@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T16:18:47+00:00",
+  "generated_at": "2026-10-21T16:59:29+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -5603,334 +5603,6 @@
         }
       ],
       "first_seen": "2026-10-15T17:01:00+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "96e71ee12cce6c6e",
-        "source": "Microsoft Security",
-        "title": "3 lessons from frontier AI vulnerability research",
-        "link": "https://www.microsoft.com/en-us/security/blog/2026/10/07/3-lessons-from-frontier-ai-vulnerability-research/",
-        "published": "Wed, 07 Oct 2026 16:00:00 +0000",
-        "summary": "Read how How Microsoft Security's FORGE Lab is scaling vulnerability research from Windows to the Linux kernel. The post 3 lessons from frontier AI vulnerability research appeared first on Microsoft Security Blog .",
-        "raw_text": "3 lessons from frontier AI vulnerability research Read how How Microsoft Security's FORGE Lab is scaling vulnerability research from Windows to the Linux kernel. The post 3 lessons from frontier AI vulnerability research appeared first on Microsoft Security Blog . In this article Shift 1. From frontier capability to scale Shift 2. From token consumption to reasoning economics Shift 3. Validation and remediation as a continuous learning loop Transferring security research to help open source projects Open-source vulnerability reporting snapshot Measured costs of automated validation FORGE OSS Bug Hunt Party: Human coordination at scale (Hackathon) Akrites: Coordinated effort to remediate vulnerabilities What’s next for FORGE Lab? The mission of Microsoft Security’s Frontier Offensive Research & Generative Exploitation (FORGE) Lab is to advance the frontier of autonomous security engineering. We’re building a team that enables AI-native vulnerability research at Microsoft, pushing the boundaries of finding and fixing zero-day vulnerabilities. Four principles guide that work: autonomy over labor, defense through offense, building ecosystems over individual examples, and understanding over findings. This post reflects those principles in practice across Windows, the Linux kernel, and widely used open-source projects. Learn more about the Microsoft FORGE Lab From May 2026 through September 2026, FORGE helped discover Windows vulnerabilities assigned 140 common vulnerabilities and exposures (CVEs), including 52 addressed in September 2026’s security release alone. The work reaches well beyond Windows. FORGE members submitted 155 internally validated reports across 23 open-source projects, including the Linux kernel. And through Akrites, a Linux Foundation initiative that coordinates confidential remediation and disclosure for vulnerabilities in critical open-source software, one of our Linux reports became the first Akrites submission to result in a patch merged into the Linux kernel. These results demonstrate that agentic discovery can operate at meaningful volume, but they also expose the next constraint. Finding a difficult vulnerability proves an agent’s frontier capability. Repeatedly converting such findings into security updates requires a different kind of system—one that can move credible work through validation, remediation, and release. Discovery creates security value only when validation and remediation can keep pace. For security leaders, the question is no longer only whether AI can find vulnerabilities, but whether an organization can validate and fix them as fast as they are found. Three lessons follow, each marking a shift in how we approach vulnerability research: From frontier capability to scale. From token consumption to reasoning economics. From isolated discovery to coordinated validation and remediation. The scarce resource is not always model intelligence. It can be a working build and deployment, a reproducible trigger, or even an engineer’s time. At FORGE Lab, we use the multi-model agentic scanning harness, codename MDASH, to organize this work. Our May 2026 introduction detailed its design, while the June 2026 update covered pipeline improvements and benchmark analysis. Here, we focus on what those experiences teach us about operating vulnerability research at scale—across Windows and open-source projects. 140 CVEs addressed through Microsoft Patch Tuesday since May 2026. Monthly totals reflect announcement and servicing cohorts, not discovery dates or scan throughput. Source: Microsoft FORGE Lab study, May 2026 to September 2026 . Shift 1. From frontier capability to scale The frontier question is whether a system can find a bug that demands deep reasoning, as we explored in our early work on the CyberGym benchmark. The scale question is whether it can repeat that result across targets without rebuilding every environment, investigation, and review process from scratch. Better models still matter, especially for difficult or unfamiliar bug classes. But once discovery becomes repeatable, model capability is only one constraint on useful output. Adding auditors can increase candidate volume without increasing the rate of validated findings or shipped fixes. If reports arrive faster than reviewers—in our case, Microsoft Security Response Center (MSRC) —can resolve them, the immediate result is a growing queue. A larger search budget can even reduce useful throughput when duplicate or poorly supported reports consume attention that stronger findings need. The unit to optimize, therefore, is neither the scan nor the report. It is a reproducible finding that advances with enough evidence for the next stage to act. Reusable preparation, deduplication, and review capacity are therefore core components of the research system. As agentic systems produce more candidates, the bottleneck shifts from discovery to determining which reports are real, reachable, and security-relevant. Project-specific automated provers—such as proof of vulnerability (PoV)/proof of concept (PoC) generators, harness builders, and trigger-input finders—turn plausible reports into reproducible evidence that engineers and maintainers can act on. By finding crashing inputs, confirming reachable execution paths, and producing regression-ready triggers within each project’s build and test environment, these tools can help reduce human triage, accelerate remediation, and make vulnerability research sustainable at scale. For example, by leveraging deterministic algorithms such as abstract syntax tree (AST), one of our internal projects reduced about 45% duplicate findings across multiple scans of the same code which reduced the load on the PoC generator and subsequently human triage effort. More candidates do not create more throughput when the review queue grows faster than fixes ship. Shift 2. From token consumption to reasoning economics At scale, every repeated orientation, speculative branch, and redundant debate carries a cost. But minimizing tokens alone is the wrong objective. A short, ambiguous report may be cheap to generate yet expensive to investigate; a longer analysis that establishes the missing execution path may reduce total system cost. The key question is where the next unit of reasoning will change a decision. If an index can identify callers, asking a frontier model to rediscover them wastes capacity. If the uncertainty is whether two lifetime conditions can coexist across callbacks, deeper reasoning may be warranted. If the question is whether an input triggers the failure, an executable check can provide evidence that more prose cannot. MDASH combines frontier and distilled models, specialized auditors, and code-analysis tools, enabling work to be allocated by task. That flexibility does not guarantee optimal allocation. Routing routine work to cheaper models, reusing verified context, and escalating unresolved questions to stronger reasoning are hypotheses to test—not efficiency gains to assume. A useful allocation policy starts by identifying what remains unknown: a caller, a build configuration, a reproducer, or a causal explanation. The next action should close that specific evidence gap. Repeating a review without adding evidence spends more tokens while preserving the same uncertainty. Early filtering can also discard real bugs, so any savings must be measured against coverage and missed findings. Scan outcomes can also become training data. At scale, vulnerability scanning should become a training loop, not only a discovery pipeline. Each MDASH run produces signals that can improve future models: true-positive and false-positive verdicts, duplicate findings, failed reachability claims, reviewer feedback, verifier results, severity assessments, patch outcomes, and regression-test evidence. Capturing those signals with the code context and causal argument behind each candidate creates the dataset needed for reinforcement learning and fine-tuning specialized cyber models. The goal is for future models to learn not just what a vulnerability looks like, but which findings survive validation, which explanations help humans and provers act, and which patterns lead to useful remediation. Spend reasoning to remove uncertainty, not simply to produce more analysis. Shift 3. Validation and remediation as a continuous learning loop Validation and remediation are not downstream cleanup; they are part of the discovery loop. Each candidate should move through automated verification, human review, patch development, and regression testing, with every stage returning evidence to the system. A reproducible trigger strengthens the report, guides the fix, and can seed a regression test. A failed validation is also useful when it records why: an unreachable path, missing precondition, incorrect build configuration, insufficient attacker control, duplicate report, or incomplete causal explanation. That evidence is how the system improves. Project-specific provers, harnesses, and trigger generators accumulate operational knowledge about how each target builds, runs, fails, and accepts fixes. Remediation outcomes show the discovery pipeline which evidence changed a decision, which assumptions failed, and which bug patterns warrant more or less attention. The objective is to make every investigation leave reusable capacity behind: a validated trigger, clearer invariant, better harness, stronger regression test, or routing rule that prevents the same mistake. Human attention remains essential, but it should concentrate where judgment has the highest leverage: assessing security impact, reviewing patches, and determining whether a change restores the component’s intended invariant. Automation can handle the repeatable work of establishing reachability, reproducing behavior, and preserving evidence. Over time, this loop converts individual findings into system knowledge—raising the quality of future discovery while shortening the path from credible report to shipped fix. A reproducible defect is not yet a serviced fix. To shorten the path from discovery to remediation, MDASH needs to operate as part of the engineering loop: continuously scanning code, connecting findings to the builds and artifacts produced by continuous integration and continuous delivery (CI/CD), and feeding validation results back into development, as described in the Windows team’s blog post . Broad analysis can identify suspicious code paths, but component-specific proving needs the right binaries, symbols, configurations, harnesses, and runtime conditions to reproduce a candidate defect against the version that matters for customers and releases. Each handoff should be both owned and machine-usable: research supplies the candidate claim, causal path, and uncertainty; proving supplies execution evidence from the relevant build artifact; component teams assess the violated invariant, repair strategy, compatibility risk, and related variants; and servicing connects the approved change to release validation. A failed reproduction, rejected finding, incomplete patch, or regression result should feed back into MDASH as structured evidence, not simply move a ticket into another queue. The goal is not to remove human code review or release validation, but to automate the repeatable work around them—finding candidates, selecting artifacts, reproducing behavior, preserving evidence, suggesting related paths, and returning what was learned to the next scan. The goal is to build an organization-wide system that automates repeatable work while preserving clear engineering accountability. Transferring security research to help open source projects In open source, all three constraints apply at once. Each project has its own setup costs, mix of analysis and execution work, and maintainer workflows and review capacity. Within Windows, vulnerability research connects to established component owners and servicing infrastructure. Across open-source projects, reusable methods can reduce repeated setup, but they cannot replace the technical and human context required to move a finding toward a fix. Open-source vulnerability reporting snapshot Over three months, FORGE members audited open-source projects spanning kernels, runtimes, networking libraries, container technologies, and media parsers. The team submitted 155 internally validated reports across 23 projects. At the time of writing, 93 reports across 14 projects or project families had documented maintainer acknowledgement or acceptance: apple/container, apple/containerization, curl, Escargot, FFmpeg, Hyperlight, Linux, llama.cpp, Node.js, PyRIT, Rust, SQLite, vLLM, etc. Since the reports are at different stages of that process, only subsets are publicly disclosed today, such as curl’s CVE-2026-9545 and CVE-2026-13608 , Node.js’s CVE-2026-56848 , and Linux kernel CVE-2026-64563 . Our public CVE index lists the CVEs currently cleared for disclosure, and you can find all our public channel Linux kernel reports through lore.kernel.org query . Measured costs of automated validation MDASH surfaced thousands of suspicious locations in the Linux kernel, and our validation agents produced supporting evidences for 627 findings. The figures below summarize automated validation costs for a subset of these efforts. Across 182 confirmed crash findings, generating a PoC averaged $3.61 in model cost and 21.5 minutes. For six selected cases, using automatic exploit generation (AEG) to test local privilege-escalation potential averaged $8.56 and 25.4 minutes. Average model and time cost for Linux kernel automated validation. Per-case averages reflect all attempts for successful cases using GPT-5.5. Source: Microsoft FORGE Lab Linux kernel automated validation study, 2026 . These evaluations used GPT-5.5, without extensive task-specific tuning of either the model or the harness. These averages include all attempts associated with the successful cases shown, but exclude initial screening, candidates that failed or were filtered out, and human investigation and patch preparation. Within those limits, the results still strongly indicate that automated validation can produce useful results at practical cost and latency, even at Linux-kernel scale. Tighter co-design of models and agent harnesses could improve both validation yield and efficiency. If costs fell by another order of magnitude, for example, 10x or even 50x, the range of findings that could be economically validated would expand substantially, further reshaping vulnerability research. FORGE OSS Bug Hunt Party: Human coordination at scale (Hackathon) Looking back to those efforts, technical evidence was only part of the job. Getting it fixed also required understanding and respecting each project’s context and workflow: some required a patch while others did not; some preferred private disclosure while others used public channels; and maintainers sometimes differed on whether an issue crossed a security boundary. In practice, this meant adapting to each project’s submission requirements, working with maintainers to reproduce the issue, and, where applicable, refining and retesting a proposed fix. As AI-assisted discovery increases report volume, open-source security research can scale only if research teams absorb the resulting complexity rather than pass it on to maintainers. Scaling this work also requires more developers who understand the full security workflow. At Microsoft’s annual Hackathon, we hosted the FORGE Open Source Software (OSS) Bug Hunt Party (Project Sunshine) as a forum where developers across Microsoft could exchange security research practices and gain hands-on experience with vulnerability investigation, validation, and responsible reporting. With MDASH and supporting guidance, 50 participants produced 39 reports across six projects, including Microsoft’s open-source Hyperlight project, Linux, vLLM, Gemini CLI, and llama.cpp. Those 39 reports are included in the 155-report snapshot above. Project Sunshine has continued beyond the Hackathon as a forum for open-source security collaboration within Microsoft. Akrites: Coordinated effort to remediate vulnerabilities Akrites is a Linux Foundation initiative that coordinates confidential remediation and disclosure for vulnerabilities in critical open-source software. FORGE has submitted nine Linux findings with internally assessed common vulnerability scoring system (CVSS) scores above 7.0. Together with submissions from other participants, including Google, these cases helped test and refine Akrites’ early Coordinated Vulnerability Disclosure (CVD) workflow. One of those reports was the first Akrites submission to result in a patch merged into the Linux kernel. FORGE will keep contributing to those responsible disclosure efforts. The work also showed that a systematic approach is not just a larger scan. It is a repeatable path from a finding to an upstream fix and coordinated disclosure. Each case needs reproducible evidence, a clear causal explanation, a severity assessment, and an understanding of which downstream projects may be affected. The right owners and collaborators can then be brought in at the right time and on a need-to-know basis. What’s next for FORGE Lab? In a matter of months, FORGE Lab has helped discover Windows vulnerabilities and assigned 140 CVEs, including 52 in September 2026’s security release. Beyond Windows, FORGE submitted 155 internally validated reports across 23 open-source projects—93 of which had documented maintainer acknowledgement or acceptance at the time of writing—and one of our Linux reports became the first Akrites submission to result in a patch merged into the Linux kernel. Our Linux kernel results also indicate that automated validation can work at practical cost, with proofs of concept averaging $3.61 in model cost and 21.5 minutes per successful case. The lesson behind those numbers: once agents can find difficult bugs, progress depends on the system around them, how it scales, where it spends reasoning, and how quickly it turns discoveries into validated fixes. These three lessons are becoming foundational guidelines for FORGE’s next phase of research: Moving from frontier capability to scale means measuring the full pipeline, not just the number of findings: candidate arrivals, duplicates, rejected reports, validated defects, queue age, unresolved cases, and time through each stage. Moving from token consumption to reasoning economics means evaluating model and execution cost alongside human review time, and asking whether each additional pass removes uncertainty, improves coverage, or produces independently validated findings. Moving from isolated discovery to continuous validation and remediation means tracking reproduction success, patch rework, regression evidence, and elapsed time from validated defect to approved fix and release. For security leaders evaluating AI-powered vulnerability discovery, these are useful measures too: count validated fixes, not just findings, and weigh model cost alongside the human review time it takes to act on them. The next advance won’t come from a better model alone. It will come from research systems that combine frontier capability, systems engineering, and reasoning economics, focusing machine reasoning and human attention on turning credible findings into validated fixes. Our team is growing. Check out our open positions at FORGE Lab . Learn more about the Microsoft FORGE Lab Further reading: Defense at AI speed: Microsoft’s new multi-model agentic security system tops leading industry benchmark . Beyond the benchmark: Advancing security at AI speed . Evolving Windows vulnerability management to meet the speed of AI-powered discovery . From research to reality: An interview with Microsoft VP of Security Research Taesoo Kim . Microsoft Security FORGE Lab . Berkeley Vulnerability Initiative—Agentic Vulnerability Coverage Map . Akrites | Patch the Commons, Together . Introducing MAI-Cyber-1-Flash inside MDASH | Microsoft AI . To learn more about Microsoft Security solutions, visit our website. Bookmark the Security blog to keep up with our expert coverage on security matters. Also, follow us on LinkedIn ( Microsoft Security ) and X ( @MSFTSecurity ) for the latest news and updates on cybersecurity. The post 3 lessons from frontier AI vulnerability research appeared first on Microsoft Security Blog .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 71,
-        "rationale": [
-          "source weight (vendor)=+10",
-          "4 CVE(s)=+30",
-          "2 initial-access vector(s)=+9",
-          "1 impact action(s)=+8",
-          "2 product mention(s)=+6",
-          "3 IOC(s)=+8"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-9545",
-          "CVE-2026-13608",
-          "CVE-2026-56848",
-          "CVE-2026-64563"
-        ],
-        "ips": [],
-        "domains": [
-          "llama.cpp",
-          "node.js",
-          "lore.kernel.org"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "phishing",
-          "exploit"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [
-          "fraud"
-        ],
-        "products": [
-          "Microsoft Exchange",
-          "Linux kernel"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-96e71ee1-1",
-          "title": "Initial access via CVE-2026-9545 affecting Microsoft Exchange",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-9545 in Microsoft Exchange within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-9545, CVE-2026-13608, CVE-2026-56848; vectors: phishing, exploit; impact: fraud; products: Microsoft Exchange, Linux kernel.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-96e71ee1-1-O1",
-              "title": "Inventory exposure to Microsoft Exchange",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for CVE-2026-9545.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-96e71ee1-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-9545 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-9545/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-96e71ee1-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-9545 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-9545')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-96e71ee1-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-96e71ee1-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-96e71ee1-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-9545, CVE-2026-13608, CVE-2026-56848; vectors: phishing, exploit; impact: fraud; products: Microsoft Exchange, Linux kernel.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-96e71ee1-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('llama.cpp','node.js','lore.kernel.org') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-96e71ee1-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-96e71ee1-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-96e71ee1-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-96e71ee1-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-96e71ee1-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-9545, CVE-2026-13608, CVE-2026-56848; vectors: phishing, exploit; impact: fraud; products: Microsoft Exchange, Linux kernel.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-96e71ee1-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-96e71ee1-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-96e71ee1-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-96e71ee1-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-07T16:52:59+00:00",
       "agent_trace": []
     },
     {
@@ -17745,9 +17417,336 @@
       ],
       "first_seen": "2026-10-14T07:29:56+00:00",
       "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "0706d8a43c51eb88",
+        "source": "SANS Internet Storm Center",
+        "title": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)",
+        "link": "https://isc.sans.edu/diary/rss/33410",
+        "published": "Thu, 08 Oct 2026 16:52:53 GMT",
+        "summary": "We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located.",
+        "raw_text": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th) We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located. We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8 of the most popular AI coding assistants and agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I've been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located. I’ve added two new Python scripts to my GitHub repository for examining the records left behind by these two tools: opencode-chat-replay.py [ 1 ] and hermes_forensic_extract.py [ 2 ]. I absolutely had OpenCode write the opencode script and Hermes wrote the hermes script (which explains some of the differences between them). Both focus on reconstruction , but they approach it differently. The opencode script turns stored session data into readable chat transcripts or structured exports. The Hermes script extracts a broader collection of evidence, including conversation records, model usage, API request dumps, and application logs. These are forensic review tools, not tools for running or replaying an agent’s actions (the title of the opencode script not withstanding, opencode named it). The goal is to make recorded activity accessible for investigation: what the user asked, what the assistant returned, what tool activity was captured, and what surrounding context remains available. Both scripts require Python 3.10 or later and use only the Python standard library. Both tools allow use of --start and --end (in YYYY-mm-dd [HH[:MM[:SS]]] format) to narrow the time range of the extraction, and -f/--file to point to a specific sqlite db (which is probably insufficient for the hermes script, so may be removed in the future), or -d/--dir to point to the home directory (though the --hermes-home switch probably does this better for the hermes script) where the evidence can be found, e.g. from a mounted image or a tarball collected from a system under investigation. opencode Chat Replay: From SQLite to a Readable Conversation opencode-chat-replay.py reconstructs session transcripts from opencode’s SQLite database, located by default at: ~/.local/share/opencode/opencode.db The script supports both the separate message and part tables and the newer consolidated session_message storage. When consolidated storage is populated for a session, it uses that instead of the separate message and part records. That distinction matters because the transcript is more than a list of text messages. Stored turns can contain text, assistant reasoning, tool calls, completion information, errors, and token or cost accounting. Start with the session inventory Running the script without a selector lists sessions. You can also request that explicitly: python opencode-chat-replay.py --list The listing includes session IDs, slugs, message and part counts, creation times in UTC, and titles. From there, select the most recently created session, a specific session ID, or a slug: # Most recently created session ./opencode-chat-replay.py --latest # Exact session ID or unique ID prefix ./opencode-chat-replay.py --session ses_f074ee11 # Slug selection ./opencode-chat-replay.py --slug swift-star Ambiguous session ID prefixes abort rather than silently selecting a session. Slug selection first looks for an exact match, then uses a case-insensitive substring match. Readable reports or structured exports Markdown is the default output format for this script (again, a choice made by the tool, I will probably change it to json later). Each transcript starts with session metadata, including the session ID, slug, working directory, version, timestamps, cost, tokens, and turn count. The conversation follows in numbered role sections. Reasoning and tool calls appear in collapsible blocks, keeping the main transcript readable while retaining access to the supporting material. For a compact review copy: python opencode-chat-replay.py --latest --no-reasoning --no-tools --out report.md For structured analysis: python opencode-chat-replay.py --slug swift-star --format json --out chat.json JSON output contains a session object and an array of turns. One of the design goals for this script was to be able to reproduce the output of opencode export on an investigative system where opencode was not installed. JSONL output places one turn on each line, with session metadata embedded in each record: python opencode-chat-replay.py --all --format jsonl --out-dir ./exports/transcripts That exports every session to a separate file named using the session date and slug. Tool input and output rendering is capped at 2,000 characters by default. Truncation is explicitly annotated rather than silently dropping the remainder. To remove the cap: python opencode-chat-replay.py \\ --latest \\ --max-tool-output 0 \\ --out full-transcript.md The --include-children option also attaches child-session metadata when examining sessions that have associated sub-sessions. Working with the exported data The structured formats make targeted review straightforward. For example, extract user prompts from a JSON transcript: jq -r ' .turns[] | select(.role == \"user\") | .parts[] | select(.type == \"text\") | .text ' chat.json Or identify turns with recorded errors in JSONL: jq -c ' select(.turn.error != null) | {id: .turn.id, role: .turn.role, error: .turn.error} ' chat.jsonl Source handling Before querying SQLite, both scripts copy the sqlite database and any present -wal and -shm sidecars into a temporary directory (this works around a potential issue in opening the db read-only, that still might result in a write to the database due to partially staged results when we don't want to potentially tamper with the evidece). It opens that snapshot with SQLite’s read-only URI mode and removes the temporary directory on exit. It does not write to or delete files in the original opencode data location. A custom database path also allows examination of a copied database: python opencode-chat-replay.py --db /mnt/evidence/opencode.db --list Original epoch-millisecond timestamps remain in JSON and JSONL output; Markdown renders timestamps in ISO-8601 UTC. The script never opens auth.json . That does not make the resulting transcript nonsensitive: recorded tool inputs and outputs may still contain secrets. Hermes Forensic Extractor: Conversations Plus Supporting Artifacts hermes_forensic_extract.py takes a broader extraction approach. Its documented sources include: ~/.hermes/state.db for sessions, messages, and model usage. ~/.hermes/sessions/request_dump_*.json for full LLM API request and response payloads. ~/.hermes/logs/*.log for agent, error, gateway, and GUI activity. The output is newline-delimited JSON, with one JSON object per line. Each record identifies its source category through _extraction_type , such as session , message , model_usage , request_dump , or log_entry . Records also carry extraction and source-file metadata, original fields, parsed JSON variants, and timestamp representations. Binary fields are represented as base64 with an accompanying binary flag. Extract broadly, then narrow the review The basic extraction command writes the available data to a JSONL file: python hermes_forensic_extract.py -o evidence.jsonl You can narrow extraction using a session ID substring: python hermes_forensic_extract.py --session 20261005_140841_b266b9 -o session_evidence.jsonl Additional filters include an exact source match, a Unix timestamp range, and a maximum record count per source. Source toggles let you include or exclude particular categories. For example, extract only request dumps or only application logs: python hermes_forensic_extract.py --only-dumps -o api_dumps.jsonl python hermes_forensic_extract.py --only-logs -o app_logs.jsonl Request dumps provide a different view from stored conversation messages: they include API payload material such as headers, bodies, model information, tools, and messages sent to the provider. The log extraction adds application context, with parsed fields for component, timestamp, level, session ID, logger, and message. Profiles are separate evidence locations Hermes profiles have their own databases, session directories, logs, and configuration under: ~/.hermes/profiles/ / The extractor can target a specific profile directly: python hermes_forensic_extract.py --hermes-home ~/.hermes/profiles/suspect_profile -o profile_evidence.jsonl This makes the selected Hermes home explicit rather than treating the default directory as the only location of interest. Review with jq Extract user message content: jq ' select(._extraction_type == \"message\" and .role == \"user\") | .content ' evidence.jsonl Review logged errors: jq ' select(._extraction_type == \"log_entry\" and .level == \"ERROR\") ' evidence.jsonl Summarize the extracted record categories: jq -s ' group_by(._extraction_type) | map({type: .[0]._extraction_type, count: length}) ' evidence.jsonl The extractor opens state.db in read-only mode and does not write to Hermes data directories. Its _extracted_at and _source_file fields document when records were extracted and where they came from. Unlike the opencode script’s documented temporary-snapshot process, the Hermes README describes read-only database access without documenting an equivalent database-and-sidecar snapshot step. Two Tools, Two Views of Agent Activity The distinction between these scripts is deliberate: Script Primary purpose Output opencode-chat-replay.py Reconstruct opencode conversations from stored session data Markdown, JSON, JSONL hermes_forensic_extract.py Extract Hermes conversations and supporting application artifacts NDJSON/JSONL For opencode, the emphasis is moving from database records to an understandable conversation, with structured exports available for deeper analysis. For Hermes, the emphasis is collecting multiple artifact types into a common, filterable format while retaining source and extraction metadata. Neither should be read as proof that every action or every interaction was recorded. They expose the artifacts available in their documented sources. The useful investigative question is not just what appears in the export, but which source supports it—and what context is still outside that export. References: 1. https://github.com/clausing/scripts/blob/master/opencode-chat-replay.py 2. https://github.com/clausing/scripts/blob/master/hermes_forensic_extract.py --------------- Jim Clausing, GIAC GSE #26 jclausing --at-- isc [dot] sans (dot) edu (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 45,
+        "rationale": [
+          "source weight (advisory)=+15",
+          "1 initial-access vector(s)=+7",
+          "1 impact action(s)=+8",
+          "13 IOC(s)=+15"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "opencode-chat-replay.py",
+          "opencode.db",
+          "report.md",
+          "chat.json",
+          "full-transcript.md",
+          "turn.error",
+          "turn.id",
+          "turn.role",
+          "chat.jsonl",
+          "auth.json",
+          "state.db",
+          "evidence.jsonl",
+          "isc.sans.edu"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [
+          "fraud"
+        ],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-0706d8a4-1",
+          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-0706d8a4-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0706d8a4-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0706d8a4-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0706d8a4-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-0706d8a4-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-0706d8a4-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: fraud.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-0706d8a4-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('opencode-chat-replay.py','opencode.db','report.md') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0706d8a4-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0706d8a4-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-0706d8a4-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-0706d8a4-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-0706d8a4-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-0706d8a4-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-0706d8a4-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-0706d8a4-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-0706d8a4-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-08T17:15:04+00:00",
+      "agent_trace": []
     }
   ],
-  "skipped": 384,
+  "skipped": 385,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 7 rated critical. Prioritise the highest-scored items first. Top of the list: Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data; #StopRansomware: SafePay Ransomware; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)."
 }
