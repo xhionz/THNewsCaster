@@ -224,39 +224,15 @@
       ]
     },
     {
-      "value": "CVE-2026-105281",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
-      ]
-    },
-    {
       "value": "CVE-2026-105279",
       "sources": [
         "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
       ]
     },
     {
-      "value": "CVE-2026-105278",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-105275",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
-      ]
-    },
-    {
       "value": "CVE-2026-105273",
       "sources": [
         "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-105269",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
       ]
     },
     {
@@ -287,18 +263,6 @@
         "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
         "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
-      ]
-    },
-    {
-      "value": "CVE-2026-104629",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-104628",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
       ]
     },
     {
@@ -369,27 +333,9 @@
       ]
     },
     {
-      "value": "CVE-2026-101024",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03"
-      ]
-    },
-    {
-      "value": "CVE-2026-101022",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
-      ]
-    },
-    {
       "value": "CVE-2026-101021",
       "sources": [
         "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-100730",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
       ]
     },
     {
@@ -951,15 +897,16 @@
       ]
     },
     {
-      "value": "CVE-2026-85479",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02"
-      ]
-    },
-    {
       "value": "CVE-2026-85355",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85097",
+      "sources": [
+        "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
+        "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/"
       ]
     },
     {
@@ -1566,51 +1513,15 @@
       ]
     },
     {
-      "value": "CVE-2026-39460",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-39453",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-33367",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-33272",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-32645",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-29797",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-28745",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01"
-      ]
-    },
-    {
       "value": "CVE-2026-28388",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-21589",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog"
       ]
     },
     {
@@ -5515,12 +5426,6 @@
       ]
     },
     {
-      "value": "auth.json",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "autocad.py",
       "sources": [
         "https://isc.sans.edu/diary/rss/33420"
@@ -5650,18 +5555,6 @@
       "value": "cdn-dynmedia-1.microsoft.com",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
-      ]
-    },
-    {
-      "value": "chat.json",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "chat.jsonl",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -5960,12 +5853,6 @@
       ]
     },
     {
-      "value": "evidence.jsonl",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "explorer.exe",
       "sources": [
         "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
@@ -6017,12 +5904,6 @@
       "value": "fukua.org",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "full-transcript.md",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6196,7 +6077,6 @@
     {
       "value": "isc.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33410",
         "https://isc.sans.edu/diary/rss/33420",
         "https://isc.sans.edu/diary/rss/33422",
         "https://isc.sans.edu/diary/rss/33426",
@@ -6499,18 +6379,6 @@
       ]
     },
     {
-      "value": "opencode-chat-replay.py",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "opencode.db",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "options.playbuttontheme",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
@@ -6665,12 +6533,6 @@
       "value": "random.cktime.ooguy.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "report.md",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -6869,12 +6731,6 @@
       ]
     },
     {
-      "value": "state.db",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
       "value": "stopransomware.gov",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -6986,24 +6842,6 @@
       "value": "tsedws.com",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a"
-      ]
-    },
-    {
-      "value": "turn.error",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "turn.id",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
-      ]
-    },
-    {
-      "value": "turn.role",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33410"
       ]
     },
     {
@@ -7278,9 +7116,6 @@
       "value": "www.cisa.gov",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",

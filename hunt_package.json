@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-22T17:02:29+00:00",
+  "generated_at": "2026-10-22T17:43:28+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -4950,336 +4950,6 @@
     },
     {
       "article": {
-        "id": "555f85ec64e15111",
-        "source": "CISA Advisories",
-        "title": "Red Lion Controls N-Tron 700 Series",
-        "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-01",
-        "published": "Thu, 08 Oct 26 12:00:00 +0000",
-        "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow a malicious user to access the device and gain administrative access. This access would allow the user to view, edit, and upload configuration files. Further, a malicious user can cause the switch to reboot by navigating to a specific URL on the device. This action can be scripted on the malicious user's local machine to cause continuous rebooting of the switch. The following versions of Red Lion Controls N-Tron 700 Series are affected: 700 Series 700 Series CVSS Vendor Equipment v3 8.3 Red Lion Controls 700 Series 7 Vulnerabilities Use of Hard-coded Credentials, Insufficiently Protected Credentials, Storing Passwords in a Recoverable Format, Missing Authentication for Critical Function, Download of Code Without Integrity Check, Reachable Assertion, Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities, Communications, Critical Manufacturing, Information Technology Countries/Areas Deployed: Worldwide Company Headquarters Location: Sweden Vulnerabilities Expand All + CVE-2026-32645 Default factory credentials with administrative access are enabled and persist even after configuring other administrator accounts. Read More 2 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware",
-        "raw_text": "Red Lion Controls N-Tron 700 Series View CSAF Summary Successful exploitation of these vulnerabilities could allow a malicious user to access the device and gain administrative access. This access would allow the user to view, edit, and upload configuration files. Further, a malicious user can cause the switch to reboot by navigating to a specific URL on the device. This action can be scripted on the malicious user's local machine to cause continuous rebooting of the switch. The following versions of Red Lion Controls N-Tron 700 Series are affected: 700 Series 700 Series CVSS Vendor Equipment v3 8.3 Red Lion Controls 700 Series 7 Vulnerabilities Use of Hard-coded Credentials, Insufficiently Protected Credentials, Storing Passwords in a Recoverable Format, Missing Authentication for Critical Function, Download of Code Without Integrity Check, Reachable Assertion, Authentication Bypass Using an Alternate Path or Channel Background Critical Infrastructure Sectors: Commercial Facilities, Communications, Critical Manufacturing, Information Technology Countries/Areas Deployed: Worldwide Company Headquarters Location: Sweden Vulnerabilities Expand All + CVE-2026-32645 Default factory credentials with administrative access are enabled and persist even after configuring other administrator accounts. Read More 2 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-798 Use of Hard-coded Credentials CVSS Version Base Score Base Severity Vector String 3.1 6 MEDIUM CVSS:3.1/AV:L/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:N 4.0 9.2 CRITICAL CVSS:4.0/AV:L/AC:L/AT:N/PR:H/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N View CVE Details CVE-2026-39460 Usernames and passwords, including the default factory credentials, are stored in plaintext within the configuration file. With administrator rights, the configuration file can be viewed through the CLI or they can be exported from the device through a TFTP transfer from the web interface. A TFTP transfer can be initiated through SNMP which does not require authentication. Read More 4 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-522 Insufficiently Protected Credentials CVSS Version Base Score Base Severity Vector String 3.1 8.1 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N 4.0 9.3 CRITICAL CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N View CVE Details CVE-2026-28745 Usernames and passwords, including the default credentials, are stored in the configuration file using weak encryption. If the default credentials are known by a malicious user, they could obtain other credentials on the system. Read More 6 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-257 Storing Passwords in a Recoverable Format CVSS Version Base Score Base Severity Vector String 3.1 7.5 HIGH CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H 4.0 9.3 CRITICAL CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N View CVE Details CVE-2026-33367 SNMP can be used to perform administrative actions such as retrieving configuration files, modifying user accounts or device settings, and initiating firmware or bootloader upgrades or downgrades-all without any authentication. Read More 8 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-306 Missing Authentication for Critical Function CVSS Version Base Score Base Severity Vector String 3.1 8.1 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N 4.0 9.3 CRITICAL CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:N/SC:H/SI:H/SA:N View CVE Details CVE-2026-29797 No authentication is required when updating firmware or bootloader, making it easy for malicious files to be pushed to the device. Additionally, anyone with the same software can scan a network for N-Tron devices and push/pull firmware without authenticating by using SNMP/TFTP. Read More 10 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-494 Download of Code Without Integrity Check CVSS Version Base Score Base Severity Vector String 3.1 7.1 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N 4.0 8.4 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:L/SI:H/SA:N View CVE Details CVE-2026-39453 Navigating to a certain URL on the switch's web server causes the switch to reboot. This can be automated using a tool like curl to create DoS conditions where the switch constantly reboots. Read More 12 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-617 Reachable Assertion CVSS Version Base Score Base Severity Vector String 3.1 8.3 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:H 4.0 8.5 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:H/SC:L/SI:H/SA:H View CVE Details CVE-2026-33272 A malicious user with physical access to the device can boot the switch from factory settings without authentication, use the default administrative credentials to obtain administrative access, and save changes to the configuration file so that they persist next time the switch boots normally. Read More 14 Affected Products Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Red Lion Controls 700 Series: Product Status: known_affected Remediations Vendor fix Red Lion controls recommends the following upgrades for the N-Tron 700 Series: Mitigation Upgrade to firmware version 3.11.1 or greater Mitigation Configure or disable the SNMP communities Mitigation Disable access to the web GUI Mitigation The upgrade procedure document can be viewed here.. Mitigation The advisory issued by HMS Networks regarding these vulnerabilities can be viewed here Additional Metrics Relevant CWE: CWE-288 Authentication Bypass Using an Alternate Path or Channel CVSS Version Base Score Base Severity Vector String 3.1 4.9 MEDIUM CVSS:3.1/AV:P/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N 4.0 6.8 MEDIUM CVSS:4.0/AV:P/AC:L/AT:N/PR:L/UI:N/VC:L/VI:H/VA:N/SC:L/SI:H/SA:N View CVE Details Acknowledgments Gabrianna (Ria) Milloway of Idaho National Laboratory reported these vulnerabilities to CISA. Legal Notice and Terms of Use This product is provided subject to this Notification ( https://www.cisa.gov/notification ) and this Privacy & Use policy ( https://www.cisa.gov/privacy-policy ). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. CISA also recommends users take the following measures to protect themselves from social engineering attacks: Do not click web links or open attachments in unsolicited email messages. Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams. Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks. No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time. Revision History Initial Release Date: 2026-10-08 Date Revision Summary 2026-10-08 1 Initial Publication Legal Notice and Terms of Use",
-        "tags": []
-      },
-      "scoring": {
-        "score": 73,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "7 CVE(s)=+30",
-          "1 MITRE technique hit(s)=+8",
-          "4 initial-access vector(s)=+13",
-          "1 product mention(s)=+3",
-          "1 IOC(s)=+4"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-32645",
-          "CVE-2026-39460",
-          "CVE-2026-28745",
-          "CVE-2026-33367",
-          "CVE-2026-29797",
-          "CVE-2026-39453",
-          "CVE-2026-33272"
-        ],
-        "ips": [],
-        "domains": [
-          "www.cisa.gov"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1566"
-        ],
-        "vectors": [
-          "phishing",
-          "exploit",
-          "vpn-edge",
-          "social-engineering"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": [
-          "Microsoft Exchange"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-555f85ec-1",
-          "title": "Initial access via CVE-2026-32645 affecting Microsoft Exchange",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-32645 in Microsoft Exchange within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-32645, CVE-2026-39460, CVE-2026-28745; vectors: phishing, exploit, vpn-edge; products: Microsoft Exchange.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-555f85ec-1-O1",
-              "title": "Inventory exposure to Microsoft Exchange",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for CVE-2026-32645.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-555f85ec-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-32645 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-32645/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-555f85ec-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-32645 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-32645')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-555f85ec-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-555f85ec-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-555f85ec-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-32645, CVE-2026-39460, CVE-2026-28745; vectors: phishing, exploit, vpn-edge; products: Microsoft Exchange.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-555f85ec-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('www.cisa.gov') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-555f85ec-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-555f85ec-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-555f85ec-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-555f85ec-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-555f85ec-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-32645, CVE-2026-39460, CVE-2026-28745; vectors: phishing, exploit, vpn-edge; products: Microsoft Exchange.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-555f85ec-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-555f85ec-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-555f85ec-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-555f85ec-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-08T17:15:04+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
         "id": "08e658570d22e668",
         "source": "CISA Advisories",
         "title": "Guangzhou Juan IoT Technology EseeCloud",
@@ -7102,657 +6772,6 @@
         }
       ],
       "first_seen": "2026-10-13T20:48:54+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "6792f9e08782d2b6",
-        "source": "CISA Advisories",
-        "title": "Satel Netco Design",
-        "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-03",
-        "published": "Thu, 08 Oct 26 12:00:00 +0000",
-        "summary": "View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary scripts in a user's browser, consume excessive system resources, enumerate files, create or modify files, and potentially execute arbitrary code. The following versions of Satel Netco Design are affected: Satel Netco Design CVSS Vendor Equipment v3 8.8 Satel Satel Netco Design 3 Vulnerabilities Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Inefficient Regular Expression Complexity, Relative Path Traversal Background Critical Infrastructure Sectors: Communications Countries/Areas Deployed: Worldwide Company Headquarters Location: Finland Vulnerabilities Expand All + CVE-2026-105269 Satel Netco Design versions prior to v2.1.7 contains a stored cross site scripting vulnerability. An authenticated user with Network Operator privileges could store untrusted content that is rendered without adequate neutralization. Successful exploitation could allow script execution in another user's browser when the affected content is viewed. Read More 1 Affected Product Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Additional Metrics Relevant CWE: CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') CVSS Version Base Score Base Severity Vector String 3.1 6.8 MEDIUM CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H 4.0 ",
-        "raw_text": "Satel Netco Design View CSAF Summary Successful exploitation of these vulnerabilities could allow an attacker to execute arbitrary scripts in a user's browser, consume excessive system resources, enumerate files, create or modify files, and potentially execute arbitrary code. The following versions of Satel Netco Design are affected: Satel Netco Design CVSS Vendor Equipment v3 8.8 Satel Satel Netco Design 3 Vulnerabilities Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting'), Inefficient Regular Expression Complexity, Relative Path Traversal Background Critical Infrastructure Sectors: Communications Countries/Areas Deployed: Worldwide Company Headquarters Location: Finland Vulnerabilities Expand All + CVE-2026-105269 Satel Netco Design versions prior to v2.1.7 contains a stored cross site scripting vulnerability. An authenticated user with Network Operator privileges could store untrusted content that is rendered without adequate neutralization. Successful exploitation could allow script execution in another user's browser when the affected content is viewed. Read More 1 Affected Product Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Additional Metrics Relevant CWE: CWE-79 Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') CVSS Version Base Score Base Severity Vector String 3.1 6.8 MEDIUM CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:H/A:H 4.0 8.5 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:H/UI:P/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N View CVE Details CVE-2026-104628 Satel Netco Design versions prior to v2.1.7 contains an inefficient regular expression complexity vulnerability. An authenticated user with Viewer privileges could submit crafted search input that causes excessive processing, potentially degrading the availability of the application. Read More 2 Affected Products Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Additional Metrics Relevant CWE: CWE-1333 Inefficient Regular Expression Complexity CVSS Version Base Score Base Severity Vector String 3.1 6.5 MEDIUM CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H 4.0 7.1 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N View CVE Details CVE-2026-105275 Satel Netco Design versions prior to v2.1.7 contains a relative path traversal vulnerability in its data import functionality. An authenticated user with Viewer privileges could access file paths outside the intended directory and use observable application responses to determine whether files exist on the host system. Read More 3 Affected Products Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Additional Metrics Relevant CWE: CWE-23 Relative Path Traversal CVSS Version Base Score Base Severity Vector String 3.1 4.3 MEDIUM CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N 4.0 5.3 MEDIUM CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N View CVE Details CVE-2026-101024 Satel Netco Design versions prior to v2.1.7 contains a relative path traversal vulnerability in its data export functionality. An authenticated user with Viewer privileges could write attacker influenced content to file system locations accessible to the application service. Successful exploitation could result in unauthorized file creation or modification and, under certain conditions, arbitrary code execution. Read More 4 Affected Products Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Satel Satel Netco Design: Product Status: known_affected Remediations Vendor fix Satel advises users to update to Satel Netco Design v2.1.7. Additional Metrics Relevant CWE: CWE-23 Relative Path Traversal CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 4.0 8.7 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N View CVE Details Acknowledgments Alex Williams of Pellera Technologies reported these vulnerabilities to CISA. Legal Notice and Terms of Use This product is provided subject to this Notification ( https://www.cisa.gov/notification ) and this Privacy & Use policy ( https://www.cisa.gov/privacy-policy ). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. CISA also recommends users take the following measures to protect themselves from social engineering attacks: Do not click web links or open attachments in unsolicited email messages. Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams. Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks. No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time. Revision History Initial Release Date: 2026-10-08 Date Revision Summary 2026-10-08 1 Initial Publication Legal Notice and Terms of Use",
-        "tags": []
-      },
-      "scoring": {
-        "score": 70,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "4 CVE(s)=+30",
-          "1 MITRE technique hit(s)=+8",
-          "4 initial-access vector(s)=+13",
-          "1 IOC(s)=+4"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-105269",
-          "CVE-2026-104628",
-          "CVE-2026-105275",
-          "CVE-2026-101024"
-        ],
-        "ips": [],
-        "domains": [
-          "www.cisa.gov"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1566"
-        ],
-        "vectors": [
-          "phishing",
-          "exploit",
-          "vpn-edge",
-          "social-engineering"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-6792f9e0-1",
-          "title": "Initial access via CVE-2026-105269 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-105269 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-105269, CVE-2026-104628, CVE-2026-105275; vectors: phishing, exploit, vpn-edge.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-6792f9e0-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-105269.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6792f9e0-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-105269 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-105269/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6792f9e0-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-105269 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-105269')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6792f9e0-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-6792f9e0-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-6792f9e0-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-105269, CVE-2026-104628, CVE-2026-105275; vectors: phishing, exploit, vpn-edge.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-6792f9e0-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('www.cisa.gov') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6792f9e0-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6792f9e0-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-6792f9e0-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-6792f9e0-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-6792f9e0-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-105269, CVE-2026-104628, CVE-2026-105275; vectors: phishing, exploit, vpn-edge.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-6792f9e0-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-6792f9e0-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-6792f9e0-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-6792f9e0-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-08T17:15:04+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "f4fe30fed2f91eb8",
-        "source": "CISA Advisories",
-        "title": "Grid Protection Alliance openPDC and openHistorian",
-        "link": "https://www.cisa.gov/news-events/ics-advisories/icsa-26-281-02",
-        "published": "Thu, 08 Oct 26 12:00:00 +0000",
-        "summary": "View CSAF Summary The following versions of Grid Protection Alliance openPDC and openHistorian are affected: openPDC openPDC (Docker image) openHistorian CVSS Vendor Equipment v3 9.8 Grid Protection Alliance openPDC 5 Vulnerabilities Deserialization of Untrusted Data, Missing Authentication for Critical Function, Server-Side Request Forgery (SSRF), Use of Hard-coded Credentials, Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-100730 A service console interface on openPDC and openHistorian deserializes a client-supplied data structure. On systems using Windows Authentication, an attacker must already be authenticated to reach this function; on systems without Windows Authentication, this is reachable by an unauthenticated network attacker. This allows an attacker to trigger deserialization of an arbitrary object graph, which could allow remote code execution under the privileges of the affected service account. Read More 3 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance has added additional validation into serialization logic in openPDC version 2.9.482 and later and openHistorian version 2.8.585 and later. Systems using Windows Authentication are additionally protected, as they require the atta",
-        "raw_text": "Grid Protection Alliance openPDC and openHistorian View CSAF Summary The following versions of Grid Protection Alliance openPDC and openHistorian are affected: openPDC openPDC (Docker image) openHistorian CVSS Vendor Equipment v3 9.8 Grid Protection Alliance openPDC 5 Vulnerabilities Deserialization of Untrusted Data, Missing Authentication for Critical Function, Server-Side Request Forgery (SSRF), Use of Hard-coded Credentials, Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') Background Critical Infrastructure Sectors: Energy Countries/Areas Deployed: Worldwide Company Headquarters Location: United States Vulnerabilities Expand All + CVE-2026-100730 A service console interface on openPDC and openHistorian deserializes a client-supplied data structure. On systems using Windows Authentication, an attacker must already be authenticated to reach this function; on systems without Windows Authentication, this is reachable by an unauthenticated network attacker. This allows an attacker to trigger deserialization of an arbitrary object graph, which could allow remote code execution under the privileges of the affected service account. Read More 3 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance has added additional validation into serialization logic in openPDC version 2.9.482 and later and openHistorian version 2.8.585 and later. Systems using Windows Authentication are additionally protected, as they require the attacker to already be authenticated to reach this function. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance has added additional validation into serialization logic in openPDC version 2.9.482 and later and openHistorian version 2.8.585 and later. Systems using Windows Authentication are additionally protected, as they require the attacker to already be authenticated to reach this function. Additional Metrics Relevant CWE: CWE-502 Deserialization of Untrusted Data CVSS Version Base Score Base Severity Vector String 3.1 9.8 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H 4.0 9.3 CRITICAL CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N View CVE Details CVE-2026-105281 The internal data publisher on openPDC accepts network connections without authentication in its default configuration. An unauthenticated network attacker can connect to this interface and retrieve the complete device and measurement topology of the system. Read More 6 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Additional Metrics Relevant CWE: CWE-306 Missing Authentication for Critical Function CVSS Version Base Score Base Severity Vector String 3.1 7.5 HIGH CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N 4.0 8.7 HIGH CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N View CVE Details CVE-2026-85479 The STTP-based data publisher on openPDC accepts network connections without authentication in its default configuration. An unauthenticated network attacker can connect to this interface and exchange data with it. Read More 9 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance updated the default configuration to bind this interface to the local loopback address only. This change applies to new installations; existing installations upgraded from an earlier version retain their prior configuration and will not receive the new default automatically. Operators should verify their configuration explicitly and update the interface binding if it is still set to accept connections on all interfaces. Additional Metrics Relevant CWE: CWE-306 Missing Authentication for Critical Function CVSS Version Base Score Base Severity Vector String 3.1 5.3 MEDIUM CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N 4.0 6.9 MEDIUM CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N View CVE Details CVE-2026-101022 A Modbus connection feature on openPDC accepts a caller-specified destination address and port with no restriction on which internal hosts may be targeted. An authenticated user can attempt connections to arbitrary internal network destinations, revealing which destinations are reachable. With repeated attempts, an attacker may be able to map the internal network. Read More 12 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Mitigation Grid Protection Alliance recommends restricting network access to modbus using a firewall, and disallowing connections to loopback and private (RFC 1918) address ranges unless explicitly required. Additional Metrics Relevant CWE: CWE-918 Server-Side Request Forgery (SSRF) CVSS Version Base Score Base Severity Vector String 3.1 4.3 MEDIUM CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N 4.0 5.3 MEDIUM CVSS:4.0/AV:N/AC:L/AT:N/PR:L/UI:N/VC:L/VI:N/VA:N/SC:N/SI:N/SA:N View CVE Details CVE-2026-105278 The published Docker image for openPDC includes a fixed administrative credential with no forced change on first use. An attacker with network access to the management interface can authenticate using this credential and gain full administrative control of the application. Read More 13 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Additional Metrics Relevant CWE: CWE-798 Use of Hard-coded Credentials CVSS Version Base Score Base Severity Vector String 3.1 9.8 CRITICAL CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H 4.0 9.3 CRITICAL CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N View CVE Details CVE-2026-104629 A component loading mechanism in openPDC and openHistorian will construct and run any specified type, which may be an invalid component to load. An attacker with an authenticated user account and the ability to place a file on the host filesystem can use this to run arbitrary constructor code, and this code runs with the privileges of the affected service account. Read More 16 Affected Products Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Grid Protection Alliance openHistorian Product Status: known_affected Remediations Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations Grid Protection Alliance openPDC Product Status: known_affected Remediations Vendor fix Grid Protection Alliance has added additional verification and integrity checks of adapters in openPDC version 2.9.477 and later and openHistorian version 2.8.580 and later. Grid Protection Alliance openPDC (Docker image) Product Status: known_affected Remediations No fix planned Grid Protection Alliance does not recommend production use of published Docker images in any case. The fix for this vulnerability has not been published to the Docker image. Grid Protection Alliance openHistorian Product Status: known_affected Remediations Vendor fix Grid Protection Alliance has added additional verification and integrity checks of adapters in openPDC version 2.9.477 and later and openHistorian version 2.8.580 and later. Additional Metrics Relevant CWE: CWE-470 Use of Externally-Controlled Input to Select Classes or Code ('Unsafe Reflection') CVSS Version Base Score Base Severity Vector String 3.1 8.8 HIGH CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H 4.0 7.7 HIGH CVSS:4.0/AV:N/AC:L/AT:P/PR:L/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N View CVE Details Acknowledgments Shubham Raj (Cipher) of Causal Security reported these vulnerabilities to CISA. Legal Notice and Terms of Use This product is provided subject to this Notification ( https://www.cisa.gov/notification ) and this Privacy & Use policy ( https://www.cisa.gov/privacy-policy ). Recommended Practices CISA recommends users take defensive measures to minimize the risk of exploitation of these vulnerabilities. Minimize network exposure for all control system devices and/or systems, ensuring they are not accessible from the internet. Locate control system networks and remote devices behind firewalls and isolating them from business networks. When remote access is required, use more secure methods, such as Virtual Private Networks (VPNs), recognizing VPNs may have vulnerabilities and should be updated to the most current version available. Also recognize VPN is only as secure as the connected devices. CISA reminds organizations to perform proper impact analysis and risk assessment prior to deploying defensive measures. CISA also provides a section for control systems security recommended practices on the ICS webpage on cisa.gov/ics. Several CISA products detailing cyber defense best practices are available for reading and download, including Improving Industrial Control Systems Cybersecurity with Defense-in-Depth Strategies. CISA encourages organizations to implement recommended cybersecurity strategies for proactive defense of ICS assets. Additional mitigation guidance and recommended practices are publicly available on the ICS webpage at cisa.gov/ics in the technical information paper, ICS-TIP-12-146-01B--Targeted Cyber Intrusion Detection and Mitigation Strategies. Organizations observing suspected malicious activity should follow established internal procedures and report findings to CISA for tracking and correlation against other incidents. CISA also recommends users take the following measures to protect themselves from social engineering attacks: Do not click web links or open attachments in unsolicited email messages. Refer to Recognizing and Avoiding Email Scams for more information on avoiding email scams. Refer to Avoiding Social Engineering and Phishing Attacks for more information on social engineering attacks. No known public exploitation specifically targeting these vulnerabilities has been reported to CISA at this time. Revision History Initial Release Date: 2026-10-08 Date Revision Summary 2026-10-08 1 Initial Publication Legal Notice and Terms of Use",
-        "tags": []
-      },
-      "scoring": {
-        "score": 70,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "6 CVE(s)=+30",
-          "1 MITRE technique hit(s)=+8",
-          "4 initial-access vector(s)=+13",
-          "1 IOC(s)=+4"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-100730",
-          "CVE-2026-105281",
-          "CVE-2026-85479",
-          "CVE-2026-101022",
-          "CVE-2026-105278",
-          "CVE-2026-104629"
-        ],
-        "ips": [],
-        "domains": [
-          "www.cisa.gov"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1566"
-        ],
-        "vectors": [
-          "phishing",
-          "exploit",
-          "vpn-edge",
-          "social-engineering"
-        ],
-        "sectors": [
-          "energy",
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-f4fe30fe-1",
-          "title": "Initial access via CVE-2026-100730 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-100730 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-100730, CVE-2026-105281, CVE-2026-85479; vectors: phishing, exploit, vpn-edge.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-f4fe30fe-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-100730.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-f4fe30fe-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-100730 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-100730/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-f4fe30fe-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-100730 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-100730')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-f4fe30fe-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-f4fe30fe-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-f4fe30fe-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-100730, CVE-2026-105281, CVE-2026-85479; vectors: phishing, exploit, vpn-edge.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-f4fe30fe-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('www.cisa.gov') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-f4fe30fe-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-f4fe30fe-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-f4fe30fe-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-f4fe30fe-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-f4fe30fe-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-100730, CVE-2026-105281, CVE-2026-85479; vectors: phishing, exploit, vpn-edge.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-f4fe30fe-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-f4fe30fe-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-f4fe30fe-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-f4fe30fe-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-08T17:15:04+00:00",
       "agent_trace": []
     },
     {
@@ -17422,43 +16441,30 @@
     },
     {
       "article": {
-        "id": "0706d8a43c51eb88",
-        "source": "SANS Internet Storm Center",
-        "title": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th)",
-        "link": "https://isc.sans.edu/diary/rss/33410",
-        "published": "Thu, 08 Oct 2026 16:52:53 GMT",
-        "summary": "We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located.",
-        "raw_text": "Reconstructing AI Agent Activity: Two New Scripts for Forensic Review, (Thu, Oct 8th) We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8&#;x26;#;xc2;&#;x26;#;xa0;of the most popular AI coding assistants and&#;x26;#;xc2;&#;x26;#;xa0;agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I&#;x26;#;39;ve been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located. We just did a major update to FOR577 and added a lot of new material on day 5 about investigating AI usage in incident response. In the new material we dicsuss 8 of the most popular AI coding assistants and agents including Claude Code, Codex, Gemini CLI, Cursor, Copilot, Warp, Windsurf, and Qwen Code. I've been using Claude Code and a little bit of Codex, but I also have recently been playing with OpenCode and am setting up Hermes. I decided to figure out where the chat history was in OpenCode and where any Hermes evidence might be located. I’ve added two new Python scripts to my GitHub repository for examining the records left behind by these two tools: opencode-chat-replay.py [ 1 ] and hermes_forensic_extract.py [ 2 ]. I absolutely had OpenCode write the opencode script and Hermes wrote the hermes script (which explains some of the differences between them). Both focus on reconstruction , but they approach it differently. The opencode script turns stored session data into readable chat transcripts or structured exports. The Hermes script extracts a broader collection of evidence, including conversation records, model usage, API request dumps, and application logs. These are forensic review tools, not tools for running or replaying an agent’s actions (the title of the opencode script not withstanding, opencode named it). The goal is to make recorded activity accessible for investigation: what the user asked, what the assistant returned, what tool activity was captured, and what surrounding context remains available. Both scripts require Python 3.10 or later and use only the Python standard library. Both tools allow use of --start and --end (in YYYY-mm-dd [HH[:MM[:SS]]] format) to narrow the time range of the extraction, and -f/--file to point to a specific sqlite db (which is probably insufficient for the hermes script, so may be removed in the future), or -d/--dir to point to the home directory (though the --hermes-home switch probably does this better for the hermes script) where the evidence can be found, e.g. from a mounted image or a tarball collected from a system under investigation. opencode Chat Replay: From SQLite to a Readable Conversation opencode-chat-replay.py reconstructs session transcripts from opencode’s SQLite database, located by default at: ~/.local/share/opencode/opencode.db The script supports both the separate message and part tables and the newer consolidated session_message storage. When consolidated storage is populated for a session, it uses that instead of the separate message and part records. That distinction matters because the transcript is more than a list of text messages. Stored turns can contain text, assistant reasoning, tool calls, completion information, errors, and token or cost accounting. Start with the session inventory Running the script without a selector lists sessions. You can also request that explicitly: python opencode-chat-replay.py --list The listing includes session IDs, slugs, message and part counts, creation times in UTC, and titles. From there, select the most recently created session, a specific session ID, or a slug: # Most recently created session ./opencode-chat-replay.py --latest # Exact session ID or unique ID prefix ./opencode-chat-replay.py --session ses_f074ee11 # Slug selection ./opencode-chat-replay.py --slug swift-star Ambiguous session ID prefixes abort rather than silently selecting a session. Slug selection first looks for an exact match, then uses a case-insensitive substring match. Readable reports or structured exports Markdown is the default output format for this script (again, a choice made by the tool, I will probably change it to json later). Each transcript starts with session metadata, including the session ID, slug, working directory, version, timestamps, cost, tokens, and turn count. The conversation follows in numbered role sections. Reasoning and tool calls appear in collapsible blocks, keeping the main transcript readable while retaining access to the supporting material. For a compact review copy: python opencode-chat-replay.py --latest --no-reasoning --no-tools --out report.md For structured analysis: python opencode-chat-replay.py --slug swift-star --format json --out chat.json JSON output contains a session object and an array of turns. One of the design goals for this script was to be able to reproduce the output of opencode export on an investigative system where opencode was not installed. JSONL output places one turn on each line, with session metadata embedded in each record: python opencode-chat-replay.py --all --format jsonl --out-dir ./exports/transcripts That exports every session to a separate file named using the session date and slug. Tool input and output rendering is capped at 2,000 characters by default. Truncation is explicitly annotated rather than silently dropping the remainder. To remove the cap: python opencode-chat-replay.py \\ --latest \\ --max-tool-output 0 \\ --out full-transcript.md The --include-children option also attaches child-session metadata when examining sessions that have associated sub-sessions. Working with the exported data The structured formats make targeted review straightforward. For example, extract user prompts from a JSON transcript: jq -r ' .turns[] | select(.role == \"user\") | .parts[] | select(.type == \"text\") | .text ' chat.json Or identify turns with recorded errors in JSONL: jq -c ' select(.turn.error != null) | {id: .turn.id, role: .turn.role, error: .turn.error} ' chat.jsonl Source handling Before querying SQLite, both scripts copy the sqlite database and any present -wal and -shm sidecars into a temporary directory (this works around a potential issue in opening the db read-only, that still might result in a write to the database due to partially staged results when we don't want to potentially tamper with the evidece). It opens that snapshot with SQLite’s read-only URI mode and removes the temporary directory on exit. It does not write to or delete files in the original opencode data location. A custom database path also allows examination of a copied database: python opencode-chat-replay.py --db /mnt/evidence/opencode.db --list Original epoch-millisecond timestamps remain in JSON and JSONL output; Markdown renders timestamps in ISO-8601 UTC. The script never opens auth.json . That does not make the resulting transcript nonsensitive: recorded tool inputs and outputs may still contain secrets. Hermes Forensic Extractor: Conversations Plus Supporting Artifacts hermes_forensic_extract.py takes a broader extraction approach. Its documented sources include: ~/.hermes/state.db for sessions, messages, and model usage. ~/.hermes/sessions/request_dump_*.json for full LLM API request and response payloads. ~/.hermes/logs/*.log for agent, error, gateway, and GUI activity. The output is newline-delimited JSON, with one JSON object per line. Each record identifies its source category through _extraction_type , such as session , message , model_usage , request_dump , or log_entry . Records also carry extraction and source-file metadata, original fields, parsed JSON variants, and timestamp representations. Binary fields are represented as base64 with an accompanying binary flag. Extract broadly, then narrow the review The basic extraction command writes the available data to a JSONL file: python hermes_forensic_extract.py -o evidence.jsonl You can narrow extraction using a session ID substring: python hermes_forensic_extract.py --session 20261005_140841_b266b9 -o session_evidence.jsonl Additional filters include an exact source match, a Unix timestamp range, and a maximum record count per source. Source toggles let you include or exclude particular categories. For example, extract only request dumps or only application logs: python hermes_forensic_extract.py --only-dumps -o api_dumps.jsonl python hermes_forensic_extract.py --only-logs -o app_logs.jsonl Request dumps provide a different view from stored conversation messages: they include API payload material such as headers, bodies, model information, tools, and messages sent to the provider. The log extraction adds application context, with parsed fields for component, timestamp, level, session ID, logger, and message. Profiles are separate evidence locations Hermes profiles have their own databases, session directories, logs, and configuration under: ~/.hermes/profiles/ / The extractor can target a specific profile directly: python hermes_forensic_extract.py --hermes-home ~/.hermes/profiles/suspect_profile -o profile_evidence.jsonl This makes the selected Hermes home explicit rather than treating the default directory as the only location of interest. Review with jq Extract user message content: jq ' select(._extraction_type == \"message\" and .role == \"user\") | .content ' evidence.jsonl Review logged errors: jq ' select(._extraction_type == \"log_entry\" and .level == \"ERROR\") ' evidence.jsonl Summarize the extracted record categories: jq -s ' group_by(._extraction_type) | map({type: .[0]._extraction_type, count: length}) ' evidence.jsonl The extractor opens state.db in read-only mode and does not write to Hermes data directories. Its _extracted_at and _source_file fields document when records were extracted and where they came from. Unlike the opencode script’s documented temporary-snapshot process, the Hermes README describes read-only database access without documenting an equivalent database-and-sidecar snapshot step. Two Tools, Two Views of Agent Activity The distinction between these scripts is deliberate: Script Primary purpose Output opencode-chat-replay.py Reconstruct opencode conversations from stored session data Markdown, JSON, JSONL hermes_forensic_extract.py Extract Hermes conversations and supporting application artifacts NDJSON/JSONL For opencode, the emphasis is moving from database records to an understandable conversation, with structured exports available for deeper analysis. For Hermes, the emphasis is collecting multiple artifact types into a common, filterable format while retaining source and extraction metadata. Neither should be read as proof that every action or every interaction was recorded. They expose the artifacts available in their documented sources. The useful investigative question is not just what appears in the export, but which source supports it—and what context is still outside that export. References: 1. https://github.com/clausing/scripts/blob/master/opencode-chat-replay.py 2. https://github.com/clausing/scripts/blob/master/hermes_forensic_extract.py --------------- Jim Clausing, GIAC GSE #26 jclausing --at-- isc [dot] sans (dot) edu (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+        "id": "93b83ac6c11cfdeb",
+        "source": "CISA Advisories",
+        "title": "CISA Adds One Known Exploited Vulnerability to Catalog",
+        "link": "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "published": "Thu, 15 Oct 26 12:00:00 +0000",
+        "summary": "CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21589 Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addi",
+        "raw_text": "CISA Adds One Known Exploited Vulnerability to Catalog CISA has added one new vulnerability to its Known Exploited Vulnerabilities (KEV) Catalog , based on evidence of active exploitation. CVE-2026-21589 Atlassian Multiple Products Files or Directories Accessible to External Parties Vulnerability This type of vulnerability is a frequent attack vector for malicious cyber actors and poses significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form . Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
         "tags": []
       },
       "scoring": {
-        "score": 45,
+        "score": 42,
         "rationale": [
           "source weight (advisory)=+15",
-          "1 initial-access vector(s)=+7",
-          "1 impact action(s)=+8",
-          "13 IOC(s)=+15"
+          "1 CVE(s)=+20",
+          "1 initial-access vector(s)=+7"
         ],
         "is_hunt_worthy": true
       },
       "extraction": {
-        "cves": [],
-        "ips": [],
-        "domains": [
-          "opencode-chat-replay.py",
-          "opencode.db",
-          "report.md",
-          "chat.json",
-          "full-transcript.md",
-          "turn.error",
-          "turn.id",
-          "turn.role",
-          "chat.jsonl",
-          "auth.json",
-          "state.db",
-          "evidence.jsonl",
-          "isc.sans.edu"
+        "cves": [
+          "CVE-2026-21589"
         ],
+        "ips": [],
+        "domains": [],
         "hashes_md5": [],
         "hashes_sha1": [],
         "hashes_sha256": [],
@@ -17469,19 +16475,18 @@
           "exploit"
         ],
         "sectors": [
+          "government",
           "manufacturing"
         ],
-        "actions": [
-          "fraud"
-        ],
+        "actions": [],
         "products": []
       },
       "hypotheses": [
         {
-          "id": "H-0706d8a4-1",
-          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit; impact: fraud.",
+          "id": "H-93b83ac6-1",
+          "title": "Initial access via CVE-2026-21589 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-21589 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-21589; vectors: exploit.",
           "confidence": "medium",
           "mitre_attack": [
             "T1190",
@@ -17489,9 +16494,9 @@
           ],
           "objectives": [
             {
-              "id": "H-0706d8a4-1-O1",
+              "id": "H-93b83ac6-1-O1",
               "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-21589.",
               "data_sources": [
                 "Asset CMDB",
                 "External attack-surface scanner",
@@ -17505,16 +16510,16 @@
               "points": 100
             },
             {
-              "id": "H-0706d8a4-1-O2",
+              "id": "H-93b83ac6-1-O2",
               "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-21589 in the last 30 days, in-the-wild exploitation against us is unsupported.",
               "data_sources": [
                 "WAF logs",
                 "IDS/IPS",
                 "Edge firewall",
                 "CDN logs"
               ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-21589/ | summarize count() by src_ip, dst_host",
               "mitre_attack": [
                 "T1190",
                 "T1133"
@@ -17523,15 +16528,15 @@
               "points": 200
             },
             {
-              "id": "H-0706d8a4-1-O3",
+              "id": "H-93b83ac6-1-O3",
               "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-21589 fix across exposed hosts, the hypothesis is disproven by remediation.",
               "data_sources": [
                 "SCCM/Intune",
                 "Patch management",
                 "Tanium / Kandji"
               ],
-              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-21589')) | summarize coverage = avg(installed) by host_role",
               "mitre_attack": [
                 "T1190"
               ],
@@ -17539,7 +16544,7 @@
               "points": 100
             },
             {
-              "id": "H-0706d8a4-1-O4",
+              "id": "H-93b83ac6-1-O4",
               "title": "Post-exploit web-shell sweep",
               "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
               "data_sources": [
@@ -17555,7 +16560,7 @@
               "points": 250
             },
             {
-              "id": "H-0706d8a4-1-O5",
+              "id": "H-93b83ac6-1-O5",
               "title": "Honeypot / canary check",
               "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
               "data_sources": [
@@ -17573,11 +16578,11 @@
           "sigma_rule": ""
         },
         {
-          "id": "H-0706d8a4-2",
+          "id": "H-93b83ac6-2",
           "title": "Outbound C2 beaconing to reported infrastructure",
           "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit; impact: fraud.",
-          "confidence": "high",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-21589; vectors: exploit.",
+          "confidence": "medium",
           "mitre_attack": [
             "T1071",
             "T1573",
@@ -17585,14 +16590,14 @@
           ],
           "objectives": [
             {
-              "id": "H-0706d8a4-2-O1",
+              "id": "H-93b83ac6-2-O1",
               "title": "DNS resolution sweep for published C2 domains",
               "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
               "data_sources": [
                 "DNS resolver logs",
                 "Passive DNS"
               ],
-              "suggested_query": "dns | where query in ('opencode-chat-replay.py','opencode.db','report.md') | summarize count() by client_ip",
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
               "mitre_attack": [
                 "T1071.004"
               ],
@@ -17600,7 +16605,7 @@
               "points": 100
             },
             {
-              "id": "H-0706d8a4-2-O2",
+              "id": "H-93b83ac6-2-O2",
               "title": "Egress connections to published C2 IPs",
               "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
               "data_sources": [
@@ -17617,7 +16622,7 @@
               "points": 200
             },
             {
-              "id": "H-0706d8a4-2-O3",
+              "id": "H-93b83ac6-2-O3",
               "title": "Beacon periodicity / jitter analysis",
               "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
               "data_sources": [
@@ -17633,7 +16638,7 @@
               "points": 300
             },
             {
-              "id": "H-0706d8a4-2-O4",
+              "id": "H-93b83ac6-2-O4",
               "title": "TLS / JA3 fingerprint pivot",
               "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
               "data_sources": [
@@ -17649,7 +16654,7 @@
               "points": 250
             },
             {
-              "id": "H-0706d8a4-2-O5",
+              "id": "H-93b83ac6-2-O5",
               "title": "Remote-monitoring tooling abuse check",
               "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
               "data_sources": [
@@ -17667,10 +16672,10 @@
           "sigma_rule": ""
         },
         {
-          "id": "H-0706d8a4-3",
+          "id": "H-93b83ac6-3",
           "title": "Identity compromise of privileged users",
           "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit; impact: fraud.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-21589; vectors: exploit.",
           "confidence": "medium",
           "mitre_attack": [
             "T1078",
@@ -17680,7 +16685,7 @@
           ],
           "objectives": [
             {
-              "id": "H-0706d8a4-3-O1",
+              "id": "H-93b83ac6-3-O1",
               "title": "Impossible-travel / atypical sign-ins",
               "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
               "data_sources": [
@@ -17695,7 +16700,7 @@
               "points": 100
             },
             {
-              "id": "H-0706d8a4-3-O2",
+              "id": "H-93b83ac6-3-O2",
               "title": "MFA-fatigue / push-bombing",
               "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
               "data_sources": [
@@ -17710,7 +16715,7 @@
               "points": 200
             },
             {
-              "id": "H-0706d8a4-3-O3",
+              "id": "H-93b83ac6-3-O3",
               "title": "Help-desk social-engineering pivot",
               "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
               "data_sources": [
@@ -17726,7 +16731,7 @@
               "points": 250
             },
             {
-              "id": "H-0706d8a4-3-O4",
+              "id": "H-93b83ac6-3-O4",
               "title": "OAuth illicit-consent grants",
               "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
               "data_sources": [
@@ -17744,7 +16749,970 @@
           "sigma_rule": ""
         }
       ],
-      "first_seen": "2026-10-08T17:15:04+00:00",
+      "first_seen": "2026-10-15T20:23:30+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "a1dfbde01cf59dba",
+        "source": "SecurityWeek",
+        "title": "Bricksforge WordPress Plugin Vulnerability Exploited in the Wild",
+        "link": "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/",
+        "published": "Mon, 12 Oct 2026 13:14:37 +0000",
+        "summary": "The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .",
+        "raw_text": "Bricksforge WordPress Plugin Vulnerability Exploited in the Wild The vulnerability tracked as CVE-2026-85097 can allow threat actors to take control of the targeted WordPress websites. The post Bricksforge WordPress Plugin Vulnerability Exploited in the Wild appeared first on SecurityWeek .",
+        "tags": []
+      },
+      "scoring": {
+        "score": 42,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 CVE(s)=+20",
+          "1 MITRE technique hit(s)=+8",
+          "2 initial-access vector(s)=+9"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-85097"
+        ],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001"
+        ],
+        "vectors": [
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [],
+        "actions": [],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-a1dfbde0-1",
+          "title": "Initial access via CVE-2026-85097 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-85097 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-a1dfbde0-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-85097.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-a1dfbde0-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-85097 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-85097/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-a1dfbde0-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-85097 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-85097')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-a1dfbde0-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-a1dfbde0-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-a1dfbde0-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-a1dfbde0-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-a1dfbde0-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-a1dfbde0-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-a1dfbde0-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-a1dfbde0-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-a1dfbde0-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-a1dfbde0-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-a1dfbde0-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-a1dfbde0-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-a1dfbde0-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-12T13:46:24+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "5316951a297419e4",
+        "source": "The Hacker News",
+        "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
+        "link": "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
+        "published": "Mon, 12 Oct 2026 14:32:14 +0530",
+        "summary": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack. The critical vulnerability in question is CVE-2026-85097 (CVSS score: 10.0), which allows unauthenticated attackers to upload and execute arbitrary PHP code on vulnerable WordPress websites, resulting in remote code execution (RCE). The",
+        "raw_text": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstack. The critical vulnerability in question is CVE-2026-85097 (CVSS score: 10.0), which allows unauthenticated attackers to upload and execute arbitrary PHP code on vulnerable WordPress websites, resulting in remote code execution (RCE). The",
+        "tags": []
+      },
+      "scoring": {
+        "score": 42,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 CVE(s)=+20",
+          "1 MITRE technique hit(s)=+8",
+          "2 initial-access vector(s)=+9"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-85097"
+        ],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001"
+        ],
+        "vectors": [
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-5316951a-1",
+          "title": "Initial access via CVE-2026-85097 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-85097 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-5316951a-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-85097.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5316951a-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-85097 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-85097/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5316951a-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-85097 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-85097')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5316951a-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-5316951a-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5316951a-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-5316951a-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5316951a-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5316951a-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-5316951a-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-5316951a-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5316951a-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-85097; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-5316951a-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5316951a-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5316951a-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-5316951a-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-12T09:46:00+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "4e7a06412b533795",
+        "source": "The Hacker News",
+        "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
+        "link": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
+        "published": "Mon, 12 Oct 2026 12:56:12 +0530",
+        "summary": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in Ukraine. The activity, which brings together commodity offensive tools like Cobalt Strike with an AI orchestration layer powered by Anthropic's Claude Code, has been attributed",
+        "raw_text": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress sites, e-commerce platforms, and critical infrastructure entities in Ukraine. The activity, which brings together commodity offensive tools like Cobalt Strike with an AI orchestration layer powered by Anthropic's Claude Code, has been attributed",
+        "tags": []
+      },
+      "scoring": {
+        "score": 42,
+        "rationale": [
+          "source weight (news)=+5",
+          "1 malware family hit(s)=+20",
+          "1 MITRE technique hit(s)=+8",
+          "2 initial-access vector(s)=+9"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [
+          "Cobalt Strike"
+        ],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.001"
+        ],
+        "vectors": [
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [],
+        "actions": [],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-4e7a0641-1",
+          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on malware families: Cobalt Strike; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-4e7a0641-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4e7a0641-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4e7a0641-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4e7a0641-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-4e7a0641-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-4e7a0641-2",
+          "title": "Endpoint execution of Cobalt Strike",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute Cobalt Strike payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on malware families: Cobalt Strike; vectors: exploit, rdp.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-4e7a0641-2-O1",
+              "title": "EDR hash sweep for Cobalt Strike",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known Cobalt Strike SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('Cobalt Strike', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-4e7a0641-2-O2",
+              "title": "Behavioural pattern hunt for Cobalt Strike",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4e7a0641-2-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Cobalt Strike-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4e7a0641-2-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'Cobalt Strike' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4e7a0641-2-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_cobalt_strike' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-4e7a0641-3",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on malware families: Cobalt Strike; vectors: exploit, rdp.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-4e7a0641-3-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-4e7a0641-3-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-4e7a0641-3-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-4e7a0641-3-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-4e7a0641-3-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-12T08:26:31+00:00",
       "agent_trace": []
     }
   ],
