@@ -1,0 +1,2831 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-111943",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "CVE-2026-110936",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-110322",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-109813",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-109812",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-109619",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching"
+      ]
+    },
+    {
+      "value": "CVE-2026-109618",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching"
+      ]
+    },
+    {
+      "value": "CVE-2026-109576",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-108471",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108467",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108460",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108457",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108400",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108399",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108398",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-108131",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108130",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-107777",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107621",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107617",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107607",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107606",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107605",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107362",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107361",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107337",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107336",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107335",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107334",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107333",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-106931",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-105960",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-105733",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-105718",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-105667",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105664",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105279",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105273",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105134",
+      "sources": [
+        "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html",
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-105133",
+      "sources": [
+        "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html",
+        "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html",
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-105016",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-104935",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "CVE-2026-103672",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-102866",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102857",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102856",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102855",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102764",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support"
+      ]
+    },
+    {
+      "value": "CVE-2026-102225",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102217",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102214",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102211",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-101103",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-101021",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-100220",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100219",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100215",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100214",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100211",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100210",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100209",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100202",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97858",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-97851",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-97814",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97800",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97799",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97798",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97780",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97778",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97776",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97767",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97765",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97761",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97759",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97758",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97756",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97755",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97753",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97749",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-97745",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97742",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97741",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97739",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97229",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
+      "value": "CVE-2026-97016",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-96952",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96951",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-96943",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96940",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96939",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96934",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96929",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96914",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96913",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96911",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96858",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96656",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96655",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96654",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96652",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96222",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96207",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96202",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-94510",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-94188",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-92817",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-88850",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-88779",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88207",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88191",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88185",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88178",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88174",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88171",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88159",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88156",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-88152",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88147",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88144",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88133",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88131",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88120",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88119",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88118",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88117",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88093",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88074",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88073",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85945",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85941",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85908",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85906",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85902",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85901",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85884",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85870",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85855",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85850",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85849",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85848",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85843",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85832",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85804",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85802",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85791",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85355",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85097",
+      "sources": [
+        "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
+        "https://www.securityweek.com/bricksforge-wordpress-plugin-vulnerability-exploited-in-the-wild/"
+      ]
+    },
+    {
+      "value": "CVE-2026-84014",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83947",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83943",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83934",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83927",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83921",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83917",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83902",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83899",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83896",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83886",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83867",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83848",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83842",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83840",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83834",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83830",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83793",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83785",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83769",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83768",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83763",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83761",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83750",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83738",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83735",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83732",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83724",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83717",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83704",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83699",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83669",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83580",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83510",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83509",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83505",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-81971",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-80466",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-77900",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-76519",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-72955",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70571",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "CVE-2026-70303",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70300",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70291",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-70286",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70279",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70273",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70271",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70269",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70255",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70253",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70250",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70249",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70245",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70242",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-70241",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70237",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70236",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70233",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70229",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70223",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70218",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70215",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70187",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70176",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70156",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70153",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70151",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70147",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70144",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70132",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70117",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70108",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70106",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70104",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70103",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70076",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70060",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70054",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69926",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69923",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69918",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69882",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69880",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69802",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69789",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69783",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69733",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69718",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69673",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69452",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69435",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-63252",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-63248",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-62927",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-62840",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-61387",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-60007",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-58080",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-28388",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-21589",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/15/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-17539",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-11856",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-9854",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-9853",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-9852",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-9079",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-8932",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-8927",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-6732",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-6653",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-6276",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-0322",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-0257",
+      "sources": [
+        "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html"
+      ]
+    },
+    {
+      "value": "CVE-2025-61624",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2025-33073",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
+      "value": "CVE-2025-25257",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "CVE-2025-24054",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
+      "value": "CVE-2025-8088",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "CVE-2024-40766",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2024-40711",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2023-27532",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2023-23397",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2023-20269",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2021-44228",
+      "sources": [
+        "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
+      ]
+    },
+    {
+      "value": "CVE-2020-3259",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2015-1000013",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "CVE-2015-3306",
+      "sources": [
+        "https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html"
+      ]
+    },
+    {
+      "value": "CVE-2014-125110",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "2.1.7.5",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "5.255.11.134",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "25.1.1.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.1.2",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.2.2",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.3.0",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.3.1",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "37.10.71.188",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "77.37.49.40",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "88.119.167.239",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "104.26.2.223",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "140.82.114.4",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "144.172.64.60",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "144.172.64.99",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "144.172.64.128",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "167.235.225.149",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "173.194.194.94",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "185.199.108.133",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "187.15.88.186",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "187.15.89.186",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "187.15.90.217",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "1.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "2026.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "2fwww.microsoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "485055033bcddfde56325c0d2feea4f2.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "68tadmin.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "acro.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "acronis.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "anydesk.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "apistructsaction.java",
+      "sources": [
+        "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"
+      ]
+    },
+    {
+      "value": "appcatalog.readwrite.all",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/"
+      ]
+    },
+    {
+      "value": "asp.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "attack.mitre.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "autocad.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
+      "value": "b2.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "bi.zone",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "blog.didierstevens.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
+      "value": "cca616647db9370c88998ae25da6997f.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "ccleaner.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "ccleaner64.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "cdn-dynmedia-1.microsoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "cisa.dhs.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "config.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "control.py",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "copy.bat",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "csc.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "cut-bytes.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
+      "value": "dcsync.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "developer.hashicorp.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "diskdirector.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "document.addeventlistener",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "domains.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "dyraswtb.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "endoflife.date",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
+      "value": "eseecloud.app",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "explorer.exe",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "fbijobs.gov",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "fdwsd.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "gitlab-ci.yml",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
+      "value": "gitlab.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab"
+      ]
+    },
+    {
+      "value": "http.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "index.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420",
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://isc.sans.edu/diary/rss/33426",
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "jackalsyn.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "jewishchoice.org",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/"
+      ]
+    },
+    {
+      "value": "kernel32.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "libsmb2.dll",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "license.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "localstorage.getitem",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "locker.dll",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "me.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "net.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "netscan.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "netscan.lic",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "netscan.xml",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "netscannew.zip",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "next.js",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "nltest.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "nxc.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "oledump.py",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
+      "value": "opcuaserverconfig.copy",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "options.playbuttontheme",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "order.dell.com",
+      "sources": [
+        "https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/"
+      ]
+    },
+    {
+      "value": "orders.staples.com",
+      "sources": [
+        "https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/"
+      ]
+    },
+    {
+      "value": "oui.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "outlook.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "permission.permissionname",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.permissiontype",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.privilegelevel",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.targetappdisplayname",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.targetappid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.usagestatus",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "php-up-2026.html",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "php.ini",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+      ]
+    },
+    {
+      "value": "php.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "ping.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "portable.dat",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "pulsebrowser.29kh.in12.talos",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "rndismp6.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "safe-extract.py",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "sample.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://isc.sans.edu/diary/rss/33426",
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "scan.xml",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "secoh-qad.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+      ]
+    },
+    {
+      "value": "sharpshares.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "shinywire.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "shutterstock.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+      ]
+    },
+    {
+      "value": "snort.org",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "soc.dll",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "socks.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "spaceport.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "stopransomware.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "submit.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "subs.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "support.swann.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "svchost.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "tuta.io",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "tutanota.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "unionfs.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "urlscan.io",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "us.ttml",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "user.ini",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+      ]
+    },
+    {
+      "value": "vir.zip",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
+      "value": "w32.58d6fec4ba-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "w32.9896a6fcb9-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+      ]
+    },
+    {
+      "value": "w32.9f1f11a708-100.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "w32.fed979f93b-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "w32.pup",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "win.backdoor.chvost",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.backdoor.pickleshell",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.malware.generic",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.malware.laplas",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.proxy.generic",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.tool.kmsauto",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "win.worm.zard",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "window.matchmedia",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "wininet.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "winrar.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "www.akamai.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "www.hashicorp.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "www.hitachienergy.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "www.microsoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/"
+      ]
+    },
+    {
+      "value": "www.php.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "www.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "www.wago.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "327b8b61eb446cc4f710771e44484f62b804ae3d262b57a56575053e2df67917",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "461ed52aeb75384133a8238b2eb481ae5d505d4961effa622673d65a889c8218",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33420"
+      ]
+    },
+    {
+      "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "6c1d36df94ebe367823e73ba33cfb4f40756a5e8ee1e30e8f0ae55d47e220a6a",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "921df888aaabcd828a3723f4c9f5fe8b8379c6b7067d16b2ea10152300417eae",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "985c3972712218c62d2418b41056dba5fe883ca5104d8ec12041f8611db344f9",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "9896a6fcb9bb5ac1ec5297b4a65be3f647589adf7c37b45f3f7466decd6a4a7f",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+      ]
+    },
+    {
+      "value": "98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "a0dc80a37eb7e2716c02a94adc8df9baedec192a77bde31669faed228d9ff526",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "bbdd3620a67aedec4b9a68b2c9cc880b6631215e129816aea19902a6f4bc6f41",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    }
+  ],
+  "sha1": [
+    {
+      "value": "07353237350c35d6dc2c8f143b649cd07c71f62b",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "b498a2683640c983bb069fa2ea9e67cef4a3797d",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "bbfed53e3bb1f306f4da97d995cf4ae5b73ad081",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "d711a5af5aed48a3b36b98f4fcf52809aebef7a2",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    }
+  ],
+  "md5": [
+    {
+      "value": "0c883b1d66afce606d9830f48d69d74b",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "207d9d891ac756b2bfad88aba5682c65",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "2915b3f8b703eb744fc54c81f4a9c67f",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "38de5b216c33833af710e88f7f64fc98",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/"
+      ]
+    },
+    {
+      "value": "485055033bcddfde56325c0d2feea4f2",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "63f3351cfdf618bec6045f60203e7978",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "cca616647db9370c88998ae25da6997f",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "f1fe671bcefd4630e5ed8b87c9283534",
+      "sources": [
+        "https://blog.talosintelligence.com/making-sure-the-checks-get-printed/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    }
+  ]
+}

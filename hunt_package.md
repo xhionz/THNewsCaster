@@ -1,157 +1,13 @@
 # Threat Hunting News Package
 
-- Generated: `2026-10-22T17:43:28+00:00`
+- Generated: `2026-10-22T18:23:03+00:00`
 - Generator: `THNewsCaster v0.1.0`
-- Articles seen: **385**  ·  Skipped (below threshold): **385**  ·  Briefings: **50**
+- Articles seen: **385**  ·  Skipped (below threshold): **384**  ·  Briefings: **50**
 - IOC exports: `iocs.csv`, `iocs.json`, `iocs_stix.json`  ·  Sigma rules: `sigma/`  ·  History: `archive/`
 
 ---
 
-## 1. Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data
-
-- **Source**: CISA Advisories
-- **Link**: <https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a>
-- **Published**: Thu, 08 Oct 26 12:00:00 +0000
-- **First seen**: 2026-10-08T17:54:37+00:00
-- **Relevance score**: 138
-- **Score rationale**: source weight (advisory)=+15, 8 CVE(s)=+30, 1 threat actor hit(s)=+20, 9 MITRE technique hit(s)=+20, 4 initial-access vector(s)=+13, 4 impact action(s)=+15, 5 product mention(s)=+10, 842 IOC(s)=+15
-
-> Advisory at a Glance Title Chinese Government-linked Cyber Threat Actors Combine Automated and Hands-on Hacking Tools to Steal Sensitive Data Original Publication October 8, 2026 Executive Summary Chinese government-linked cyber threat actors, enabled by the Integrity Technology Group, are combining automated scanning tools, large-scale botnets, and hands-on exploitation techniques to target and steal sensitive data from organizations worldwide, including US critical infrastructure sectors. These actors exploit vulnerabilities by using scanning tools, cross-site scripting attacks, and password spraying on Microsoft Exchange servers, while establishing persistence through VPN software and exfiltrating emails and credentials using scripts. To help mitigate against this activity, organizations should prioritize disabling unused services and ports, sanitizing web application inputs to prevent injection attacks, implementing multifactor authentication for all services, and applying timely patches to reduce risks of compromise. Affected Products CVE-2014-6278 CVE-2015-3306 CVE-2015-5477 CVE-2016-3081 CVE-2019-11510 CVE-2021-22205 CVE-2021-3199 CVE-2023-22894 Key Actions Disable unused services and ports , such as automatic configuration, remote access, or file sharing protocols. Sanitize user input in web applications to prevent possible cross-site scripting (XSS) payload injection. Implement identity, credential, and access management (ICAM) policies , and then require multifactor
-
-**Extracted signals**
-- CVEs: CVE-2014-6278, CVE-2015-3306, CVE-2015-5477, CVE-2016-3081, CVE-2019-11510, CVE-2021-22205, CVE-2021-3199, CVE-2023-22894
-- Threat actors: Flax Typhoon
-- Products: Microsoft Exchange, Active Directory, Ivanti Connect Secure, GitLab, Apache Struts
-- Vectors: phishing, exploit, vpn-edge, rdp
-- Actions: ransomware, data-breach, ddos, fraud
-- Sectors: healthcare, government, energy, manufacturing, education, telecom
-- MITRE ATT&CK: T1566, T1133, T1059, T1059.001, T1003, T1021.001, T1486, T1110, T1505.003
-- IP IOCs: 149.28.132.137, 1.34.140.5, 2.58.242.74, 5.188.34.134, 5.188.230.69, 8.219.119.5, 14.1.98.160, 14.128.33.8, 14.1.98.223, 27.154.215.126, 27.154.105.36, 27.149.115.78, 27.149.79.35, 31.232.221.35, 36.112.10.102, 36.112.188.119, 36.112.186.135, 36.112.206.121, 36.249.156.117, 36.249.156.122, 36.249.156.159, 36.249.156.178, 36.249.156.205, 36.249.156.206, 36.249.156.220, 36.249.156.226, 36.112.200.35, 36.249.156.51, 36.112.198.68, 36.249.156.69, 36.112.10.99, 39.72.220.221, 42.73.98.232, 45.123.189.19, 45.32.140.182, 45.32.232.146, 45.63.123.142, 45.63.116.190, 45.131.69.197, 45.76.169.12, 45.77.195.169, 45.32.61.246, 45.77.231.209, 45.76.37.168, 45.63.59.121, 45.77.11.47, 45.32.84.223, 45.63.62.217, 45.63.48.36, 45.76.43.37, 45.76.66.19, 45.76.243.67, 45.63.17.9, 45.77.28.77, 45.76.194.89, 45.76.37.85, 45.63.95.62, 45.63.94.71, 45.77.86.70, 49.93.136.14, 49.93.184.194, 59.120.144.153, 59.124.120.178, 59.120.167.25, 59.125.128.54, 59.120.58.176, 60.250.199.112, 60.250.146.19, 60.251.155.19, 60.248.152.204, 59.120.82.67, 60.184.242.224, 60.251.205.37, 60.220.43.193, 60.251.58.145, 60.248.1.64, 60.251.201.8, 60.248.88.151, 60.248.110.97, 60.249.239.86, 61.220.112.137, 60.220.84.41, 61.247.165.27, 60.220.84.63, 61.220.35.15, 61.221.55.4, 61.222.245.73, 61.219.118.99, 61.216.74.97, 64.176.38.35, 65.20.97.251, 66.42.103.188, 66.42.42.109, 66.42.40.189, 66.42.36.236, 66.42.60.242, 66.42.77.138, 77.111.226.5, 78.141.221.241, 78.141.238.97, 84.17.57.40, 89.187.163.216, 95.179.189.106, 95.179.235.135, 95.179.186.251, 98.159.37.4, 103.107.198.117, 103.16.231.220, 103.16.231.254, 103.233.253.197, 103.25.254.210, 103.149.200.44, 103.179.45.203, 103.73.160.232, 103.77.211.193, 103.106.230.88, 103.172.80.35, 104.238.149.146, 104.238.182.153, 104.238.152.209, 103.51.145.98, 103.73.162.99, 104.156.231.98, 106.53.181.231, 106.122.171.92, 108.61.181.104, 108.61.177.81, 110.42.10.148, 110.85.170.125, 111.203.153.245, 110.74.172.80, 111.55.138.141, 111.55.137.40, 111.203.153.95, 112.5.168.102, 112.5.168.104, 112.5.145.154, 112.5.143.161, 112.5.168.138, 112.5.168.151, 112.5.168.160, 112.54.132.162, 112.5.168.187, 112.5.168.218, 112.5.168.231, 112.5.168.234, 112.5.168.238, 112.51.26.151, 112.66.108.16, 112.5.168.29, 112.51.44.102, 112.51.44.142, 112.51.44.143, 112.51.44.188, 112.51.44.189, 112.51.44.20, 112.51.44.206, 112.51.44.217, 112.51.44.234, 112.5.168.65, 112.51.44.37, 112.80.50.138, 112.51.44.57, 112.5.168.93, 113.76.136.171, 114.246.237.111, 114.255.70.18, 114.255.70.20, 114.255.70.30, 114.246.93.103, 114.246.94.102, 114.35.122.83, 114.246.94.154, 114.246.92.58, 114.246.92.71, 117.133.51.176, 117.61.244.135, 117.56.214.246, 117.132.198.70, 117.92.127.132, 117.130.201.90, 118.163.217.199, 118.163.197.241, 118.163.31.226, 118.163.104.67, 118.163.142.80, 118.163.3.76, 119.116.159.217, 119.13.79.145, 120.233.10.212, 120.36.251.100, 120.36.248.104, 120.42.128.165, 120.36.250.103, 120.36.254.100, 120.36.248.109, 120.36.253.106, 120.36.255.105, 120.36.251.110, 120.36.251.11, 120.36.249.114, 120.36.251.114, 120.36.254.112, 120.36.249.121, 120.36.249.122, 120.36.254.119, 120.36.254.120, 120.36.249.127, 120.36.251.130, 120.36.255.127, 120.36.252.13, 120.36.250.133, 120.36.250.134, 120.36.250.135, 120.36.254.131, 120.36.254.135, 120.36.251.141, 120.36.250.142, 120.41.125.225, 120.36.253.148, 120.36.250.152, 120.36.252.151, 120.36.253.152, 120.36.254.151, 120.36.255.153, 120.36.252.157, 120.37.162.246, 120.36.252.166, 120.36.249.172, 120.36.253.169, 120.36.252.175, 120.36.254.175, 120.36.251.179, 120.36.253.178, 120.36.252.18, 120.36.252.181, 120.36.248.185, 120.36.253.180, 120.36.255.179, 120.36.253.186, 120.36.253.187, 120.36.250.19, 120.36.251.19, 120.36.251.190, 120.36.255.189, 120.41.244.15, 120.36.254.192, 120.36.249.197, 120.36.248.200, 120.36.253.195, 120.36.251.2, 120.36.251.20, 120.36.255.196, 120.36.251.202, 120.36.254.202, 120.36.250.207, 120.36.250.210, 120.36.249.213, 120.36.251.213, 120.36.253.212, 120.36.251.215, 120.36.252.215, 120.36.255.214, 120.36.250.221, 120.36.255.22, 120.36.251.230, 120.36.255.228, 120.36.253.23, 120.36.253.231, 120.36.251.234, 120.36.248.237, 120.36.253.232, 120.36.253.233, 120.36.249.238, 120.36.251.237, 120.36.255.233, 120.36.255.237, 120.36.249.245, 120.36.252.242, 120.36.255.24, 120.36.249.248, 120.36.250.247, 120.36.253.247, 120.36.253.248, 120.36.251.25, 120.36.251.254, 120.36.249.28, 120.36.251.3, 120.36.251.30, 120.36.254.3, 120.36.254.32, 120.36.249.33, 120.36.250.4, 120.36.250.43, 120.36.249.47, 120.36.248.48, 120.36.250.48, 120.36.249.52, 120.36.250.53, 120.36.249.54, 120.36.251.54, 120.36.249.55, 120.36.251.56, 120.36.248.57, 120.36.250.58, 120.36.250.6, 120.36.253.6, 120.36.254.63, 120.36.250.65, 120.36.251.65, 120.36.250.67, 120.36.252.69, 120.36.248.73, 120.36.255.74, 120.36.250.76, 120.41.222.74, 120.36.248.80, 120.36.251.80, 120.36.251.84, 120.36.252.90, 120.36.249.91, 120.36.251.91, 120.36.252.91, 120.36.254.92, 120.36.254.94, 120.36.248.97, 120.36.251.97, 120.36.249.98, 120.36.252.98, 121.207.60.123, 122.116.33.118, 122.232.149.231, 122.201.241.230, 122.116.159.52, 122.116.102.93, 123.121.157.240, 123.51.237.194, 123.252.121.7, 123.252.122.7, 123.12.90.227, 123.60.61.104, 124.126.158.130, 124.126.139.199, 124.127.17.171, 124.127.220.223, 124.150.135.3, 123.51.223.96, 124.64.22.13, 124.126.141.74, 124.127.78.22, 124.127.72.52, 125.227.147.106, 125.227.140.168, 125.227.1.220, 125.227.196.157, 125.227.219.145, 125.228.239.13, 125.227.218.2, 124.64.23.80, 125.229.172.48, 125.227.136.60, 137.220.34.137, 137.220.39.222, 137.220.43.47, 137.220.36.87, 138.199.62.148, 139.180.137.219, 139.180.217.19, 139.180.158.51, 139.84.174.129, 140.82.27.163, 140.82.50.151, 141.164.41.128, 140.82.48.6, 141.164.55.227, 141.164.56.93, 144.202.26.205, 144.34.171.162, 144.202.33.164, 144.202.62.109, 144.202.91.107, 144.202.94.216, 144.202.98.41, 147.139.133.246, 149.28.132.161, 149.28.201.146, 149.28.188.184, 149.248.34.100, 149.28.149.29, 149.28.252.19, 149.248.38.179, 149.248.39.202, 149.248.44.191, 149.248.51.22, 149.28.72.106, 155.138.155.170, 155.138.136.190, 155.138.151.225, 155.138.133.56, 156.146.45.152, 156.146.45.194, 158.247.197.28, 159.138.152.61, 162.14.178.86, 167.172.33.16, 167.179.87.215, 167.179.97.121, 171.120.88.137, 178.62.208.162, 180.122.149.177, 182.34.19.234, 183.240.139.216, 183.253.28.104, 183.253.29.110, 183.253.28.121, 183.250.213.20, 183.253.29.189, 183.250.213.55, 183.253.29.66, 183.253.28.67, 183.250.213.80, 183.250.213.83, 183.166.90.97, 185.216.118.71, 185.135.73.192, 185.213.82.239, 185.213.82.243, 185.213.82.55, 185.213.82.65, 190.92.241.15, 191.232.188.144, 193.42.24.68, 193.42.25.73, 198.13.38.211, 202.182.109.151, 202.101.145.22, 202.182.106.31, 202.39.151.239, 202.99.19.250, 202.99.19.254, 203.74.126.20, 203.69.36.122, 207.246.118.144, 207.246.117.149, 207.246.114.173, 207.148.68.131, 207.148.122.69, 207.148.67.146, 207.246.108.64, 207.246.127.64, 207.148.73.238, 207.148.92.220, 207.148.4.96, 208.72.154.55, 210.242.152.155, 210.242.38.241, 210.243.225.41, 210.66.220.39, 210.242.76.32, 210.71.166.50, 211.20.144.116, 211.20.104.187, 211.21.19.11, 211.22.143.228, 211.20.115.60, 211.20.154.60, 211.20.100.78, 211.20.100.79, 211.99.103.102, 211.21.61.46, 211.75.185.37, 211.99.103.243, 212.107.28.16, 212.107.28.22, 212.107.28.23, 211.78.84.17, 211.20.91.77, 211.99.100.90, 211.99.100.91, 211.99.98.197, 216.128.149.106, 216.128.128.238, 218.26.159.254, 218.5.173.137, 218.5.157.171, 218.66.163.188, 219.143.179.250, 220.128.108.164, 220.130.153.127, 220.130.176.23, 220.128.125.3, 220.130.254.251, 219.92.229.53, 220.162.9.150, 220.250.44.62, 221.218.143.112, 221.218.136.12, 221.218.138.123, 221.218.143.122, 221.218.143.184, 221.218.136.192, 221.216.116.238, 221.218.137.229, 221.218.139.248, 221.216.208.188, 221.218.142.26, 221.218.141.96, 222.92.153.125, 223.104.40.128, 223.104.41.13, 223.104.40.142, 223.104.40.204, 223.27.34.132, 223.104.55.183, 223.104.39.82, 2.3.20.2, 2.3.24.1
-- Domain IOCs: diagtrack.exe, dns.studiocloud.xyz, conhost.exe, dllhost.exe, 98aiblog.com, hmbcloud.com, hmbcloud.net, hmbiplc-01.com, iepl.node.cm, javacheck.ooguy.com, javaupdate.giize.com, sexytube0.com, twimg.co.uk, 001.gif, pl.gz, css.js, m2k.js, curlc4.txt, upl.natcloudservice.com, natcloudservice.com, sess.zip, upl.natcloudservice.com.ews, fm.run, dc.exe, eburst.py, cisa.dhs.gov, nsa.gov, cyber.gov.au, cyber.gc.ca, cyber.go.jp, www.npa.go.jp, soudan.html, ncsc.govt.nz, cktime.ooguy.com, 067.cz, 1421.client.96html.com, 1421.cloud.96html.com, 1421.support.96html.com, 154-119-131-252-103-58-216-162-36.m.secshow.net, 20656.hus1.ptps.tk, 20656.hus3.ptps.tk, 2-12-44-140-78-81-211-109-241.h.secshow.net, 22852.careers.96html.com, 22852.careers.trendmicro.96html.com, 22852.trendmicro.96html.com, 23175.careers.96html.com, 23175.careers.trendmicro.96html.com, 24280.hus1.ptps.tk, 2637596418.softether.net, 28394.careers.96html.com, 28394.careers.trendmicro.96html.com, 28394.trendmicro.96html.com, 28733.careers.trendmicro.96html.com, 28733.trendmicro.96html.com, 30773.hus2.ptps.tk, 30773.hus3.ptps.tk, 35584.careers.96html.com, 35584.careers.trendmicro.96html.com, 35584.trendmicro.96html.com, 39583.b.alitagotest.cf, 3w.feeee.io, 44673.careers.96html.com, 44673.trendmicro.96html.com, 47298.96html.com, 47298.client.96html.com, 47298.cloud.96html.com, 47298.support.96html.com, 50669.careers.trendmicro.96html.com, 51640.careers.trendmicro.96html.com, 51943.hus1.ptps.tk, 51943.hus3.ptps.tk, 54-2-32-236-208-2-40-107-38.h.secshow.net, 60928.hus1.ptps.tk, 66-37-178-96-110-2-40-107-38.h.secshow.net, 74788.careers.96html.com, 74788.trendmicro.96html.com, 77692.careers.96html.com, 77692.careers.trendmicro.96html.com, 77692.trendmicro.96html.com, 82262.careers.96html.com, 82262.careers.trendmicro.96html.com, 85005.careers.96html.com, 85005.careers.trendmicro.96html.com, 85005.trendmicro.96html.com, 88783.hus1.ptps.tk, 90174.careers.96html.com, 90174.careers.trendmicro.96html.com, 96976.careers.96html.com, 96976.trendmicro.96html.com, 96cee.com, 96html.com, a.alitagotest.cf, a.studiocloud.xyz, admin.dellme.ml, alitagotest.cf, arforcex.com, asean.twimg.co.uk, az.studiocloud.xyz, b.alitagotest.cf, bailbonding.info, bbs.sunmoon.website, bj-hk.hmbcloud.net, bj-jp.hmbcloud.net, blog.98aiblog.com, bsnl.twimg.co.uk, careers.96html.com, careers.trendmicro.96html.com, cch.ooguy.com, check.96html.com, checkapi.tk, checkinfo.tk, chr0mail.com, client.96html.com, cloud.96html.com, csrfproxy.studiocloud.xyz, dasxcyb.ga, dc-29465b27aa45.96html.com, dc-4fe9871cb224.96html.com, dc-582fc0f46da9.96html.com, dc-843d98722400.96html.com, dc-bb503834b7dc.96html.com, dc-c11a983d7f83.96html.com, dellme.ml, dns361.tk, dsdsei.com, eck.giize.com, eg.twimg.co.uk, etechhosting.twimg.co.uk, fcchk.twimg.co.uk, feeee.io, findfindx.com, fukua.org, gate.sinica.edu.tw.checkapi.cf, googles.ddns.net, gz-hk.hmbcloud.net, h.secshow.net, h5.feeee.io, halloween.checkapi.cf, helpuself.ptps.tk, hgiga.96html.com, honey1314520.com, hook.studiocloud.xyz, hus1.ptps.tk, hus3.ptps.tk, hw1.ptps.tk, ica.96html.com, im.arforcex.com, imap.sunmoon.website, info.96html.com, integritytoch.com, iplc-hk.hmbcloud.com, just.checkapi.cf, kk.dasxcyb.ga, leicc009.ga, live.studiocloud.xyz, ls.twimg.co.uk, m.secshow.net, ma.studiocloud.xyz, mail.bailbonding.info, mail.sunmoon.website, masaplus.club, microscan.me, mitt.96html.com, ms.studiocloud.xyz, msedge.store, mx.sunmoon.website, nikoes.gq, np.twimg.co.uk, ns1.alitagotest.cf, ns1.honey1314520.com, ns1.nikoes.gq, ns2.nikoes.gq, one.hmbiplc-01.com, payment.feeee.io, ptps.tk, puc.checkapi.tk, purple76.com, pw.sexytube0.com, pw2.sexytube0.com, random.cktime.ooguy.com, s3crts.softether.net, scallpay.com, search.96html.com, secretr.feeee.io, secshow.net, senate.twimg.co.uk, server.feeee.io, shifuj.com, sh-jp.hmbcloud.net, shop.96html.com, shopify.feeee.io, smtp.sunmoon.website, streescans.com, studiocloud.xyz, sunmoon.website, supper.feeee.io, support.96html.com, szxcm-hkg01.iepl.node.cm, t.checkinfo.tk, teyan.microscan.me, tj.twimg.co.uk, traffic.96html.com, trendmicro.96html.com, trust.feeee, tsedws.com, txt.studiocloud.xyz, update.96html.com, upgrate.checkapi.cf, v3.streescans.com, vnpt.sexytube0.com, vpn21.arforcex.com, vpn328433596.softether.net, vpn614174689.softether.net, vpn677190427.softether.net, vpn718535264.softether.net, vpn823494147.softether.net, wanfang.accesscam.org, webdisk.bailbonding.info, webmail.studiocloud.xyz, well.96html.com, ws.studiocloud.xyz, wss.studiocloud.xyz, www.96html.com, www.alitagotest.cf, www.chr0mail.com, www.cktime.ooguy.com, www.dns361.tk, www.feeee.io, www.javacheck.ooguy.com, www.leicc009.ga, www.msedge.store, www.mx.sunmoon.website, www.purple76.com, www.smtp.sunmoon.website, www.sofeter.ml, www.studiocloud.xyz, www.sunmoon.website, www.www.smtp.sunmoon.website, www.www.sunmoon.website, xassxxdns.alitagotest.cf, ximmd.sexytube0.com, zerogravity1986.softether.net, b374.php, back.pl, error.jsp, gf.phtml, yaml-payload.jar, oneforall.py, subdomainsbrute.py, juicypotato.exe, bbscan.py, dirmap.py, dirsearch.py, fscan.exe, nbtscan.exe, packerfuzzer.py, shuize.py, sqlmap.py, b.exe, secretsdump.exe, secretsdump.py
-- SHA256: 72c6af6a4be99e31c4a7a0aa4f01750792788e7f6f9749243a9f2c47c14a708f, 456586ababa08f70216c4459f4d6375676166ebfddd98a33b447ceb5099e8dc5, 2f5c406eb64ad8902c8e30610d43fd3efc05a14cdb8fb158818953eaf3dc6a81, 5782ff2c835c88cc1ee521d2e8c523cfad73db3f9a29c93b40c4223f0338ade9, 0e6fecb2d369b0eae63731616a3daada52036634885ab1b85b115af6bc5bcb86, 36f3b7645609ef40444dbc68f01d26c543d67689eda4937272ea5cfa4df1b522, 670fa10a2ddde21fd594c4fef86b554d864089ed2de7153b472e921c623403ae, 645f6f2667af01a94d04a9d7a71916a13d9426835d636b4ceee2e25ccb34e525, 4d488f21269b18e37aaca93ac2a61707c9b611e506cdb3b287277746e94636b5, a14844e982f172d0f23910558c3f390a9d4c45dc32db825c2af7cf0ed8631db2, add7dd142e4f7e2873bc8f7b7fb6308063608e0b49a773dea93abad4047f1489, e7e727458f573dded05537baddac2867d2801db1c3c74410398d063dfd6f6575, 8e1b56ef51ba70aa4c4cfd4430820f20875b354588d5d723ba4d3940ea6c924b, 46e59172c40c95d83c3a6f24f801fc2265653c8b575b66a726463e2a4eebd7f2, 752b14c6e6936991d51fcd5ebf40d303e657c2372893604f96044848ad9a5f24, 7b9efc7ef8957411cdd22582ce4bfb3a5f76d9c91cdb7e36bf85c9785a2480e9, c9d5dc956841e000bfd8762e2f0b48b66c79b79500e894b4efa7fb9ba17e4e9e, 2fbcb1995c458e5affd5fb8f1f979a08ddce21714a2e413aa3d5dc44f9f245fe, 33790218d5871af646feef5be29e0596d4703a45ce675c1eb2ca00140b3a1bde, c7f86a4623db5c90273cea041d43207849c5c6b0060c370b2095f13871b1366d, 2ecb51d7fa3bc3fa7ad7df64c6d0cd1f4ff2b37ed6839d3cff529fb08af49fb0, efb0437e6a6a0f07169952f1a8b734299ec9a8b1faadbed811fe017f2cf54976, 8b869a5edaff74ff18bca3658a519a19771e66d00ff7849af7a142dd6fc8da85, 804a53be802378a8ec4c94602fd3d6584e0d472d83148e8a42c731950fec415d, c4503db6ece93eddf4511e787607cb14606a1df9f526f1e39992497119437cec, b1552703ff0035f197c22cdb3a514bb6aa45ec98de3ef5409faab0978f18c35e, 8a592e22c51311d482272ec5aba0103c9cd0cfd78e5b5ba75dfa8f1c56926672, 86f1cfa6a2e0a8cb6fc1fbee28472308e6467932f8658a6a4885e29ed8c34a67, e93244080a749b521f63476343ce3c81cc8c1b672fa0d9e67359aee37544c784, 9dc85f9569a15eaf51c7d34254767ea30dd67b2178cec4cc7125288b9544fe00, 644decbc6ce8c52382f4755fa6fc2cb4d89a0e7ec0e574c11b398a6f2eed04b1, 67db57a1f957031b78f29aa91e2e87780eae3835290259eff846d8f14afb794b
-- MD5: 48ca18a25424a0f52276290b619a7a83, 38f5ff8169423e2c756848c02e8cac3b, d61326c4e6d24aa9b67e2b7a3ef7cedf, f8de2e99dc7523d2c83d1a48e844c5ff, 5b5a2c7fa705d8b1eb04da5db900b0d7, 655cd134976d3e80c521708aa8be418b, dae8f50ea44225fae3ba1f160b42bfdc, fdece34bc084f1e252aeae274650eb8d, 596b990b0b389d906a8f4384837c1878, a73eca669fe80628dbbd2c7d9bb14c8f, be121e707f817aa9392c55af1e7ec2aa, 7ce68f0dd85355ba2897a68521167e56, f82694de2f19e1bff333c27bb7eb7a56, 1933c314041415939331fce183939547, 8829f6f1cc5fc0aab2f6e71bfd7dc53d, cf903e4a1629aa0582fd0363b5786676, f01a9a2d1e31332ed36c1a4d2839f412, ef713447f18f5b7ee16af4ac37ec4133, 8dcc4f9ccc6b6adf7eeeb3f51c95afad, b04375cca637f0702bf27feaff22a92d, bcacc7ca999980d26c186ef791242fb5, 1b8e29b6b7972fb124425aaa257f8f6d, 4f61b9ab907f351bb40b37b10f4974d0, 6d57c42dee8bd7789969e2dd28671162, 776807750280daad05348f931a33e4ef, a973c0ab904c1b74655a906b99b76850, f62cbbbdf35c7790909c26c7c5fbce05, a05cdf6afcbb107961307f59cbab5e4f, 7d5a182f70bed0e4fa2f8615aba070de, 1bcaef76b2063f1b80b0fa0d277ec9c5, 4d33bfb75e27fefaa72526899604d557, fc6e8ca41cf4f6100177352660e520b4
-
-### Hypotheses (4)
-
-#### H-64f83085-1 · Initial access via CVE-2014-6278 affecting Microsoft Exchange  _(confidence: high)_
-
-**Statement.** A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2014-6278 in Microsoft Exchange within the last 30 days.
-
-**Why this hypothesis?** Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2014-6278, CVE-2015-3306, CVE-2015-5477; threat actors: Flax Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, ddos; products: Microsoft Exchange, Active Directory, Ivanti Connect Secure.
-
-**MITRE ATT&CK**: T1190, T1133
-
-**CTF objectives (5) — find evidence that disproves the hypothesis:**
-
-- **[H-64f83085-1-O1] Inventory exposure to Microsoft Exchange** _(difficulty: easy · 100 pts · MITRE: T1190)_
-  - Falsification criterion: If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for CVE-2014-6278.
-  - Data sources: Asset CMDB, External attack-surface scanner, Vulnerability scanner
-  - Suggested query: `asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)`
-- **[H-64f83085-1-O2] Hunt for exploit attempts at the edge** _(difficulty: medium · 200 pts · MITRE: T1190, T1133)_
-  - Falsification criterion: If WAF / firewall / IDS show no exploit-signature hits for CVE-2014-6278 in the last 30 days, in-the-wild exploitation against us is unsupported.
-  - Data sources: WAF logs, IDS/IPS, Edge firewall, CDN logs
-  - Suggested query: `edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2014-6278/ | summarize count() by src_ip, dst_host`
-- **[H-64f83085-1-O3] Patch-status correlation** _(difficulty: easy · 100 pts · MITRE: T1190)_
-  - Falsification criterion: If MDM / patch-management shows 100% deployment of the CVE-2014-6278 fix across exposed hosts, the hypothesis is disproven by remediation.
-  - Data sources: SCCM/Intune, Patch management, Tanium / Kandji
-  - Suggested query: `patch_state | where kb in (fixes_for('CVE-2014-6278')) | summarize coverage = avg(installed) by host_role`
-- **[H-64f83085-1-O4] Post-exploit web-shell sweep** _(difficulty: medium · 250 pts · MITRE: T1505.003, T1059)_
-  - Falsification criterion: If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.
-  - Data sources: EDR process telemetry, File integrity monitoring
-  - Suggested query: `process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')`
-- **[H-64f83085-1-O5] Honeypot / canary check** _(difficulty: hard · 300 pts · MITRE: T1190)_
-  - Falsification criterion: If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.
-  - Data sources: Honeypot logs, Canary tokens
-  - Suggested query: `canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip`
-
-#### H-64f83085-2 · Outbound C2 beaconing to reported infrastructure  _(confidence: high)_
-
-**Statement.** Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).
-
-**Why this hypothesis?** Archetype 'c2_beacon' selected based on CVEs cited: CVE-2014-6278, CVE-2015-3306, CVE-2015-5477; threat actors: Flax Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, ddos; products: Microsoft Exchange, Active Directory, Ivanti Connect Secure.
-
-**MITRE ATT&CK**: T1071, T1573, T1219
-
-**CTF objectives (5) — find evidence that disproves the hypothesis:**
-
-- **[H-64f83085-2-O1] DNS resolution sweep for published C2 domains** _(difficulty: easy · 100 pts · MITRE: T1071.004)_
-  - Falsification criterion: If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.
-  - Data sources: DNS resolver logs, Passive DNS
-  - Suggested query: `dns | where query in ('diagtrack.exe','dns.studiocloud.xyz','conhost.exe') | summarize count() by client_ip`
-- **[H-64f83085-2-O2] Egress connections to published C2 IPs** _(difficulty: medium · 200 pts · MITRE: T1071, T1573)_
-  - Falsification criterion: If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.
-  - Data sources: Proxy logs, NetFlow, Firewall accept logs
-  - Suggested query: `egress | where dst_ip in ('149.28.132.137','1.34.140.5','2.58.242.74') | summarize bytes_out = sum(bytes_sent) by src_ip`
-- **[H-64f83085-2-O3] Beacon periodicity / jitter analysis** _(difficulty: hard · 300 pts · MITRE: T1071, T1095)_
-  - Falsification criterion: If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.
-  - Data sources: NetFlow, Zeek conn.log
-  - Suggested query: `conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s`
-- **[H-64f83085-2-O4] TLS / JA3 fingerprint pivot** _(difficulty: hard · 250 pts · MITRE: T1573.002)_
-  - Falsification criterion: If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.
-  - Data sources: Zeek ssl.log, Suricata TLS, NDR
-  - Suggested query: `tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni`
-- **[H-64f83085-2-O5] Remote-monitoring tooling abuse check** _(difficulty: medium · 200 pts · MITRE: T1219)_
-  - Falsification criterion: If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.
-  - Data sources: EDR installed-software, Process telemetry
-  - Suggested query: `process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'`
-
-#### H-64f83085-3 · Post-foothold lateral movement consistent with Flax Typhoon  _(confidence: medium)_
-
-**Statement.** An attacker who matched the TTPs of Flax Typhoon has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.
-
-**Why this hypothesis?** Archetype 'lateral_movement' selected based on CVEs cited: CVE-2014-6278, CVE-2015-3306, CVE-2015-5477; threat actors: Flax Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, ddos; products: Microsoft Exchange, Active Directory, Ivanti Connect Secure.
-
-**MITRE ATT&CK**: T1021.001, T1021.002, T1021.006, T1003
-
-**CTF objectives (4) — find evidence that disproves the hypothesis:**
-
-- **[H-64f83085-3-O1] Anomalous remote logons (Type 3 / Type 10)** _(difficulty: medium · 200 pts · MITRE: T1021.001, T1021.002)_
-  - Falsification criterion: If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.
-  - Data sources: Windows Security event log, Domain Controller logs
-  - Suggested query: `security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10`
-- **[H-64f83085-3-O2] Admin-tool usage outside baseline** _(difficulty: medium · 200 pts · MITRE: T1021.002, T1021.006, T1059)_
-  - Falsification criterion: If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.
-  - Data sources: Sysmon EID 1, EDR, 4688
-  - Suggested query: `process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)`
-- **[H-64f83085-3-O3] Kerberos abuse telemetry** _(difficulty: hard · 300 pts · MITRE: T1558.003, T1110.003)_
-  - Falsification criterion: If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.
-  - Data sources: Domain Controller security log
-  - Suggested query: `security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name`
-- **[H-64f83085-3-O4] Lateral file-copy staging** _(difficulty: medium · 200 pts · MITRE: T1570, T1021.002)_
-  - Falsification criterion: If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.
-  - Data sources: File-share auditing (5145), EDR file events
-  - Suggested query: `file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\.*\\(C\$|admin\$)/`
-
-#### H-64f83085-4 · Data staging and exfiltration to attacker-controlled storage  _(confidence: medium)_
-
-**Statement.** Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.
-
-**Why this hypothesis?** Archetype 'exfiltration' selected based on CVEs cited: CVE-2014-6278, CVE-2015-3306, CVE-2015-5477; threat actors: Flax Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, ddos; products: Microsoft Exchange, Active Directory, Ivanti Connect Secure.
-
-**MITRE ATT&CK**: T1560, T1041, T1567, T1567.002
-
-**CTF objectives (4) — find evidence that disproves the hypothesis:**
-
-- **[H-64f83085-4-O1] Cloud-storage exfil to non-corp tenants** _(difficulty: easy · 100 pts · MITRE: T1567.002, T1567)_
-  - Falsification criterion: If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.
-  - Data sources: Proxy logs, CASB / DLP
-  - Suggested query: `proxy | where host matches /mega\.nz|anonfiles\.com|transfer\.sh|filebin\.net/ | summarize bytes = sum(bytes_out) by user`
-- **[H-64f83085-4-O2] Archive-then-egress pattern** _(difficulty: medium · 250 pts · MITRE: T1560, T1041)_
-  - Falsification criterion: If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.
-  - Data sources: EDR process+file events, NetFlow
-  - Suggested query: `file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m`
-- **[H-64f83085-4-O3] Outbound volume to rare ASNs** _(difficulty: medium · 200 pts · MITRE: T1041, T1567)_
-  - Falsification criterion: If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.
-  - Data sources: NetFlow, Firewall logs
-  - Suggested query: `netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB`
-- **[H-64f83085-4-O4] DNS-tunnelling search** _(difficulty: hard · 300 pts · MITRE: T1071.004, T1048.003)_
-  - Falsification criterion: If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.
-  - Data sources: DNS resolver logs
-  - Suggested query: `dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000`
-
----
-
-## 2. #StopRansomware: SafePay Ransomware
+## 1. #StopRansomware: SafePay Ransomware
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a>
@@ -294,7 +150,7 @@
 
 ---
 
-## 3. October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)
+## 2. October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33422>
@@ -407,7 +263,7 @@
 
 ---
 
-## 4. The Q3 Vulnerability Pulse: Discovery ≠ Exploitation
+## 3. The Q3 Vulnerability Pulse: Discovery ≠ Exploitation
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/>
@@ -522,7 +378,7 @@
 
 ---
 
-## 5. CISA Malcolm
+## 4. CISA Malcolm
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01>
@@ -634,7 +490,7 @@
 
 ---
 
-## 6. Break the silence: Kazakhstan-nexus UAT-6275 targets CIS government organizations
+## 5. Break the silence: Kazakhstan-nexus UAT-6275 targets CIS government organizations
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/>
@@ -746,7 +602,7 @@
 
 ---
 
-## 7. Making sure the checks get printed
+## 6. Making sure the checks get printed
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/making-sure-the-checks-get-printed/>
@@ -861,7 +717,7 @@
 
 ---
 
-## 8. Swann Communications SWIFI-SE2KIC
+## 7. Swann Communications SWIFI-SE2KIC
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02>
@@ -973,7 +829,7 @@
 
 ---
 
-## 9. Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site
+## 8. Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site
 
 - **Source**: KrebsOnSecurity
 - **Link**: <https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/>
@@ -1117,7 +973,7 @@
 
 ---
 
-## 10. AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise
+## 9. AI-driven, large-scale nation-state campaign using ARTEX enables supply chain compromise
 
 - **Source**: Microsoft Security
 - **Link**: <https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/>
@@ -1230,7 +1086,7 @@
 
 ---
 
-## 11. Two critical RCEs in PHP core
+## 10. Two critical RCEs in PHP core
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/two-critical-rces-in-php-core/>
@@ -1342,7 +1198,7 @@
 
 ---
 
-## 12. Guangzhou Juan IoT Technology EseeCloud
+## 11. Guangzhou Juan IoT Technology EseeCloud
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02>
@@ -1453,7 +1309,7 @@
 
 ---
 
-## 13. Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)
+## 12. Critical PHP Vulnerability (CVE-2026-109618, CVE-2026-109619) [infocon yellow], (Wed, Oct 21st)
 
 - **Source**: SANS Internet Storm Center
 - **Link**: <https://isc.sans.edu/diary/rss/33440>
@@ -1564,7 +1420,7 @@
 
 ---
 
-## 14. Two hardening tools (AD+Windows) in ps1
+## 13. Two hardening tools (AD+Windows) in ps1
 
 - **Source**: /r/blueteamsec
 - **Link**: <https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/>
@@ -1677,7 +1533,7 @@
 
 ---
 
-## 15. J4Care dcm4che
+## 14. J4Care dcm4che
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02>
@@ -1788,7 +1644,7 @@
 
 ---
 
-## 16. Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabilities
+## 15. Microsoft Patch Tuesday for October 2026 — Snort rules and prominent vulnerabilities
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/>
@@ -1900,7 +1756,7 @@
 
 ---
 
-## 17. HMS Networks PEAK-System PCAN Windows drivers
+## 16. HMS Networks PEAK-System PCAN Windows drivers
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01>
@@ -2010,7 +1866,7 @@
 
 ---
 
-## 18. Hitachi Energy RTU500 Product
+## 17. Hitachi Energy RTU500 Product
 
 - **Source**: CISA Advisories
 - **Link**: <https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05>
@@ -2121,7 +1977,7 @@
 
 ---
 
-## 19. Widespread PHP Flaw May Cause Many Site Outages Today
+## 18. Widespread PHP Flaw May Cause Many Site Outages Today
 
 - **Source**: KrebsOnSecurity
 - **Link**: <https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/>
@@ -2233,7 +2089,7 @@
 
 ---
 
-## 20. Compromised eMudhra intermediate certificates
+## 19. Compromised eMudhra intermediate certificates
 
 - **Source**: Cisco Talos
 - **Link**: <https://blog.talosintelligence.com/compromised-intermediate-certificates/>
@@ -2344,7 +2200,7 @@
 
 ---
 
-## 21. Patch Tuesday - October 2026
+## 20. Patch Tuesday - October 2026
 
 - **Source**: Rapid7
 - **Link**: <https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026>
@@ -2453,6 +2309,119 @@
   - Falsification criterion: If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.
   - Data sources: Entra ID audit log, Google Workspace audit
   - Suggested query: `audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'`
+
+---
+
+## 21. I had plans for that second
+
+- **Source**: Cisco Talos
+- **Link**: <https://blog.talosintelligence.com/i-had-plans-for-that-second/>
+- **Published**: Thu, 22 Oct 2026 18:04:32 GMT
+- **First seen**: 2026-10-22T18:23:03+00:00
+- **Relevance score**: 63
+- **Score rationale**: source weight (vendor)=+10, 3 MITRE technique hit(s)=+14, 4 initial-access vector(s)=+13, 2 impact action(s)=+11, 15 IOC(s)=+15
+
+> The Earth is speeding up, the leap second is being abolished, oh, and there's critical vulnerabilities in PHP.
+
+**Extracted signals**
+- Vectors: phishing, exploit, rdp, credential-theft
+- Actions: ransomware, fraud
+- Sectors: manufacturing
+- MITRE ATT&CK: T1078, T1021.001, T1486
+- Domain IOCs: sample.exe, w32.9f1f11a708-100.sbx.tg, cca616647db9370c88998ae25da6997f.exe, win.tool.kmsauto, 485055033bcddfde56325c0d2feea4f2.exe, win.worm.zard, 95.sbx.tg
+- SHA256: 9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507, 7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f, 985c3972712218c62d2418b41056dba5fe883ca5104d8ec12041f8611db344f9, d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1
+- MD5: 2915b3f8b703eb744fc54c81f4a9c67f, cca616647db9370c88998ae25da6997f, 485055033bcddfde56325c0d2feea4f2, 0c883b1d66afce606d9830f48d69d74b
+
+### Hypotheses (3)
+
+#### H-2a076e19-1 · Initial access via the disclosed vulnerability affecting the affected product/service  _(confidence: medium)_
+
+**Statement.** A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.
+
+**Why this hypothesis?** Archetype 'initial_access_cve' selected based on vectors: phishing, exploit, rdp; impact: ransomware, fraud.
+
+**MITRE ATT&CK**: T1190, T1133
+
+**CTF objectives (5) — find evidence that disproves the hypothesis:**
+
+- **[H-2a076e19-1-O1] Inventory exposure to the affected product** _(difficulty: easy · 100 pts · MITRE: T1190)_
+  - Falsification criterion: If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.
+  - Data sources: Asset CMDB, External attack-surface scanner, Vulnerability scanner
+  - Suggested query: `asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)`
+- **[H-2a076e19-1-O2] Hunt for exploit attempts at the edge** _(difficulty: medium · 200 pts · MITRE: T1190, T1133)_
+  - Falsification criterion: If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.
+  - Data sources: WAF logs, IDS/IPS, Edge firewall, CDN logs
+  - Suggested query: `edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host`
+- **[H-2a076e19-1-O3] Patch-status correlation** _(difficulty: easy · 100 pts · MITRE: T1190)_
+  - Falsification criterion: If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.
+  - Data sources: SCCM/Intune, Patch management, Tanium / Kandji
+  - Suggested query: `patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role`
+- **[H-2a076e19-1-O4] Post-exploit web-shell sweep** _(difficulty: medium · 250 pts · MITRE: T1505.003, T1059)_
+  - Falsification criterion: If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.
+  - Data sources: EDR process telemetry, File integrity monitoring
+  - Suggested query: `process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')`
+- **[H-2a076e19-1-O5] Honeypot / canary check** _(difficulty: hard · 300 pts · MITRE: T1190)_
+  - Falsification criterion: If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.
+  - Data sources: Honeypot logs, Canary tokens
+  - Suggested query: `canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip`
+
+#### H-2a076e19-2 · Outbound C2 beaconing to reported infrastructure  _(confidence: high)_
+
+**Statement.** Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).
+
+**Why this hypothesis?** Archetype 'c2_beacon' selected based on vectors: phishing, exploit, rdp; impact: ransomware, fraud.
+
+**MITRE ATT&CK**: T1071, T1573, T1219
+
+**CTF objectives (5) — find evidence that disproves the hypothesis:**
+
+- **[H-2a076e19-2-O1] DNS resolution sweep for published C2 domains** _(difficulty: easy · 100 pts · MITRE: T1071.004)_
+  - Falsification criterion: If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.
+  - Data sources: DNS resolver logs, Passive DNS
+  - Suggested query: `dns | where query in ('sample.exe','w32.9f1f11a708-100.sbx.tg','cca616647db9370c88998ae25da6997f.exe') | summarize count() by client_ip`
+- **[H-2a076e19-2-O2] Egress connections to published C2 IPs** _(difficulty: medium · 200 pts · MITRE: T1071, T1573)_
+  - Falsification criterion: If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.
+  - Data sources: Proxy logs, NetFlow, Firewall accept logs
+  - Suggested query: `egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip`
+- **[H-2a076e19-2-O3] Beacon periodicity / jitter analysis** _(difficulty: hard · 300 pts · MITRE: T1071, T1095)_
+  - Falsification criterion: If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.
+  - Data sources: NetFlow, Zeek conn.log
+  - Suggested query: `conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s`
+- **[H-2a076e19-2-O4] TLS / JA3 fingerprint pivot** _(difficulty: hard · 250 pts · MITRE: T1573.002)_
+  - Falsification criterion: If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.
+  - Data sources: Zeek ssl.log, Suricata TLS, NDR
+  - Suggested query: `tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni`
+- **[H-2a076e19-2-O5] Remote-monitoring tooling abuse check** _(difficulty: medium · 200 pts · MITRE: T1219)_
+  - Falsification criterion: If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.
+  - Data sources: EDR installed-software, Process telemetry
+  - Suggested query: `process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'`
+
+#### H-2a076e19-3 · Post-foothold lateral movement consistent with the reported actor  _(confidence: medium)_
+
+**Statement.** An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.
+
+**Why this hypothesis?** Archetype 'lateral_movement' selected based on vectors: phishing, exploit, rdp; impact: ransomware, fraud.
+
+**MITRE ATT&CK**: T1021.001, T1021.002, T1021.006, T1003
+
+**CTF objectives (4) — find evidence that disproves the hypothesis:**
+
+- **[H-2a076e19-3-O1] Anomalous remote logons (Type 3 / Type 10)** _(difficulty: medium · 200 pts · MITRE: T1021.001, T1021.002)_
+  - Falsification criterion: If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.
+  - Data sources: Windows Security event log, Domain Controller logs
+  - Suggested query: `security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10`
+- **[H-2a076e19-3-O2] Admin-tool usage outside baseline** _(difficulty: medium · 200 pts · MITRE: T1021.002, T1021.006, T1059)_
+  - Falsification criterion: If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.
+  - Data sources: Sysmon EID 1, EDR, 4688
+  - Suggested query: `process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)`
+- **[H-2a076e19-3-O3] Kerberos abuse telemetry** _(difficulty: hard · 300 pts · MITRE: T1558.003, T1110.003)_
+  - Falsification criterion: If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.
+  - Data sources: Domain Controller security log
+  - Suggested query: `security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name`
+- **[H-2a076e19-3-O4] Lateral file-copy staging** _(difficulty: medium · 200 pts · MITRE: T1570, T1021.002)_
+  - Falsification criterion: If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.
+  - Data sources: File-share auditing (5145), EDR file events
+  - Suggested query: `file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\.*\\(C\$|admin\$)/`
 
 ---
 
