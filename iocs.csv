@@ -297,7 +297,6 @@ cves,CVE-2016-3081,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 cves,CVE-2015-1000013,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 cves,CVE-2015-5477,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 cves,CVE-2015-3306,2,https://thehackernews.com/2026/10/flax-typhoon-exploits-five-flaws-as.html | https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-cves,CVE-2015-2291,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 cves,CVE-2014-125110,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 cves,CVE-2014-6278,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 ips,1.34.140.5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -914,6 +913,7 @@ domains,arforcex.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,asean.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,asp.net,1,https://isc.sans.edu/diary/rss/33422
 domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
+domains,auth.json,1,https://isc.sans.edu/diary/rss/33410
 domains,autocad.py,1,https://isc.sans.edu/diary/rss/33420
 domains,az.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,b.alitagotest.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -936,6 +936,8 @@ domains,cch.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisorie
 domains,ccleaner.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,ccleaner64.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,cdn-dynmedia-1.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
+domains,chat.json,1,https://isc.sans.edu/diary/rss/33410
+domains,chat.jsonl,1,https://isc.sans.edu/diary/rss/33410
 domains,check.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,checkapi.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,checkinfo.tk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -948,7 +950,6 @@ domains,config.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280
 domains,conhost.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,control.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,copy.bat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,csc.exe,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 domains,csc.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,csrfproxy.studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,css.js,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -986,6 +987,7 @@ domains,endoflife.date,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/t
 domains,error.jsp,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,eseecloud.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
 domains,etechhosting.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,evidence.jsonl,1,https://isc.sans.edu/diary/rss/33410
 domains,explorer.exe,1,https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 domains,fbijobs.gov,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,fcchk.twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -995,6 +997,7 @@ domains,findfindx.com,1,https://www.cisa.gov/news-events/cybersecurity-advisorie
 domains,fm.run,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,fscan.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,fukua.org,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,full-transcript.md,1,https://isc.sans.edu/diary/rss/33410
 domains,gate.sinica.edu.tw.checkapi.cf,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gf.phtml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,gitlab-ci.yml,1,https://www.rapid7.com/blog/post/etr-cve-2026-97229-critical-unauthenticated-remote-code-execution-in-gitlab
@@ -1023,8 +1026,7 @@ domains,index.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-
 domains,info.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,integritytoch.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,iplc-hk.hmbcloud.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-domains,iqvw64e.sys,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440
+domains,isc.sans.edu,5,https://isc.sans.edu/diary/rss/33410 | https://isc.sans.edu/diary/rss/33420 | https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
 domains,javacheck.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,javaupdate.giize.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1074,6 +1076,8 @@ domains,oledump.py,1,https://isc.sans.edu/diary/rss/33420
 domains,one.hmbiplc-01.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,oneforall.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,opcuaserverconfig.copy,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
+domains,opencode-chat-replay.py,1,https://isc.sans.edu/diary/rss/33410
+domains,opencode.db,1,https://isc.sans.edu/diary/rss/33410
 domains,options.playbuttontheme,1,https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/
 domains,order.dell.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
 domains,orders.staples.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
@@ -1100,6 +1104,7 @@ domains,purple76.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,pw.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,pw2.sexytube0.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,random.cktime.ooguy.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,report.md,1,https://isc.sans.edu/diary/rss/33410
 domains,rndismp6.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,s3crts.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,safe-extract.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
@@ -1132,6 +1137,7 @@ domains,socks.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 domains,soudan.html,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,spaceport.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,sqlmap.py,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,state.db,1,https://isc.sans.edu/diary/rss/33410
 domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,streescans.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,studiocloud.xyz,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1151,6 +1157,9 @@ domains,traffic.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advi
 domains,trendmicro.96html.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,trust.feeee,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 domains,tsedws.com,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
+domains,turn.error,1,https://isc.sans.edu/diary/rss/33410
+domains,turn.id,1,https://isc.sans.edu/diary/rss/33410
+domains,turn.role,1,https://isc.sans.edu/diary/rss/33410
 domains,tuta.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,tutanota.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,twimg.co.uk,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1223,16 +1232,12 @@ domains,yaml-payload.jar,1,https://www.cisa.gov/news-events/cybersecurity-adviso
 domains,zerogravity1986.softether.net,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,0e6fecb2d369b0eae63731616a3daada52036634885ab1b85b115af6bc5bcb86,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,2aa7f13bf474e2ce5049fd4db2bf4da04b4ce51ac0d36dceb24865255241c937,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
-sha256,2e3e1bcd44cc3cbec4f5ca9991d14a326d3cc6bf76fe6e0d434c9b5f7e1ae6ab,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,2ecb51d7fa3bc3fa7ad7df64c6d0cd1f4ff2b37ed6839d3cff529fb08af49fb0,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,2f5c406eb64ad8902c8e30610d43fd3efc05a14cdb8fb158818953eaf3dc6a81,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,2fbcb1995c458e5affd5fb8f1f979a08ddce21714a2e413aa3d5dc44f9f245fe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,327b8b61eb446cc4f710771e44484f62b804ae3d262b57a56575053e2df67917,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 sha256,33790218d5871af646feef5be29e0596d4703a45ce675c1eb2ca00140b3a1bde,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,34098fe0bc4c69c4c4eb3f74688fb375326804536d25e5574e8c4c28c113b5c3,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,36f3b7645609ef40444dbc68f01d26c543d67689eda4937272ea5cfa4df1b522,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,389066bd5543aeea363d23a4dce7f7a21c7f2c73c61f506a93a69f594cf48ecf,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,456586ababa08f70216c4459f4d6375676166ebfddd98a33b447ceb5099e8dc5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1242,7 +1247,6 @@ sha256,4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1,1,https:
 sha256,4d488f21269b18e37aaca93ac2a61707c9b611e506cdb3b287277746e94636b5,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,5782ff2c835c88cc1ee521d2e8c523cfad73db3f9a29c93b40c4223f0338ade9,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
-sha256,5f60d16fa67ff8ef07817c33b7e6b7fa91c6c21060020df46b1f5c56e076e259,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,644decbc6ce8c52382f4755fa6fc2cb4d89a0e7ec0e574c11b398a6f2eed04b1,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,645f6f2667af01a94d04a9d7a71916a13d9426835d636b4ceee2e25ccb34e525,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,670fa10a2ddde21fd594c4fef86b554d864089ed2de7153b472e921c623403ae,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1252,7 +1256,6 @@ sha256,72c6af6a4be99e31c4a7a0aa4f01750792788e7f6f9749243a9f2c47c14a708f,1,https:
 sha256,73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 sha256,752b14c6e6936991d51fcd5ebf40d303e657c2372893604f96044848ad9a5f24,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,7b9efc7ef8957411cdd22582ce4bfb3a5f76d9c91cdb7e36bf85c9785a2480e9,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,7dd3747d777f9576a11004532b463351e7718b6af193d8ee7221ac41479d199a,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,804a53be802378a8ec4c94602fd3d6584e0d472d83148e8a42c731950fec415d,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,86f1cfa6a2e0a8cb6fc1fbee28472308e6467932f8658a6a4885e29ed8c34a67,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,8a592e22c51311d482272ec5aba0103c9cd0cfd78e5b5ba75dfa8f1c56926672,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1264,15 +1267,11 @@ sha256,98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b,1,https:
 sha256,9dc85f9569a15eaf51c7d34254767ea30dd67b2178cec4cc7125288b9544fe00,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
-sha256,a0294f7152f9c4c908e9def58279e9fa29952715947c950c8489949f26a15cc8,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,a0dc80a37eb7e2716c02a94adc8df9baedec192a77bde31669faed228d9ff526,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 sha256,a14844e982f172d0f23910558c3f390a9d4c45dc32db825c2af7cf0ed8631db2,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,a42632c68d2dcea06300e790c9440fe0943ce0dee2075f29170fd2774eacf433,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,add7dd142e4f7e2873bc8f7b7fb6308063608e0b49a773dea93abad4047f1489,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,b1552703ff0035f197c22cdb3a514bb6aa45ec98de3ef5409faab0978f18c35e,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,bacb5794a300f7a88c7f6d458382eb11d2f39c0f496b509ca512afe8588fc33f,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,bbdd3620a67aedec4b9a68b2c9cc880b6631215e129816aea19902a6f4bc6f41,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-sha256,c17bf76d02163863c251c3bb3a12725eeb525fab5522521923925e0469ca269f,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,c4503db6ece93eddf4511e787607cb14606a1df9f526f1e39992497119437cec,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,c7f86a4623db5c90273cea041d43207849c5c6b0060c370b2095f13871b1366d,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,c9d5dc956841e000bfd8762e2f0b48b66c79b79500e894b4efa7fb9ba17e4e9e,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
@@ -1282,7 +1281,6 @@ sha256,e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346,1,https:
 sha256,e7e727458f573dded05537baddac2867d2801db1c3c74410398d063dfd6f6575,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,e93244080a749b521f63476343ce3c81cc8c1b672fa0d9e67359aee37544c784,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
 sha256,efb0437e6a6a0f07169952f1a8b734299ec9a8b1faadbed811fe017f2cf54976,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-281a
-sha256,f8f5e0440c57c7deffd75ca33e2511867039796aa803e7ef847396a379188a7d,1,https://blog.talosintelligence.com/ignore-all-instructions-and-read-this-blog-the-state-of-ai-analysis-evasion-in-malware/
 sha256,fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f,2,https://blog.talosintelligence.com/making-sure-the-checks-get-printed/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 sha1,07353237350c35d6dc2c8f143b649cd07c71f62b,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 sha1,b498a2683640c983bb069fa2ea9e67cef4a3797d,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
