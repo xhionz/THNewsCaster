@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-23T14:29:38+00:00",
+  "generated_at": "2026-10-23T15:09:04+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -16000,327 +16000,6 @@
     },
     {
       "article": {
-        "id": "5dc3760dd184b5da",
-        "source": "The Hacker News",
-        "title": "Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge",
-        "link": "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html",
-        "published": "Fri, 09 Oct 2026 18:17:26 +0530",
-        "summary": "Threat actors have been observed exploiting two recently disclosed flaws in the AhsayCBS backup utility to seize control of affected devices and deploy web shells and XMRig cryptocurrency miners. Details of the flaws are below - CVE-2026-105133 (CVSS v4 score: 5.5) - An improper authentication vulnerability in the checkSysPwd() function in the \"com/ahsay/obs/api/ApiStructsAction.java\"",
-        "raw_text": "Attackers Exploit AhsayCBS Flaws to Deploy XMRig Miners Disguised as Microsoft Edge Threat actors have been observed exploiting two recently disclosed flaws in the AhsayCBS backup utility to seize control of affected devices and deploy web shells and XMRig cryptocurrency miners. Details of the flaws are below - CVE-2026-105133 (CVSS v4 score: 5.5) - An improper authentication vulnerability in the checkSysPwd() function in the \"com/ahsay/obs/api/ApiStructsAction.java\"",
-        "tags": []
-      },
-      "scoring": {
-        "score": 52,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 CVE(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "1 initial-access vector(s)=+7",
-          "1 impact action(s)=+8",
-          "1 IOC(s)=+4"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-105133"
-        ],
-        "ips": [],
-        "domains": [
-          "apistructsaction.java"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1505.003"
-        ],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "energy"
-        ],
-        "actions": [
-          "cryptomining"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-5dc3760d-1",
-          "title": "Initial access via CVE-2026-105133 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-105133 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-105133; vectors: exploit; impact: cryptomining.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-5dc3760d-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-105133.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5dc3760d-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-105133 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-105133/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5dc3760d-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-105133 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-105133')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5dc3760d-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-5dc3760d-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-5dc3760d-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-105133; vectors: exploit; impact: cryptomining.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-5dc3760d-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('apistructsaction.java') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5dc3760d-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5dc3760d-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-5dc3760d-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-5dc3760d-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-5dc3760d-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-105133; vectors: exploit; impact: cryptomining.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-5dc3760d-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-5dc3760d-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-5dc3760d-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-5dc3760d-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-09T14:58:26+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
         "id": "9b28c0e3253914cb",
         "source": "Cisco Talos",
         "title": "Parasitizing trust: How legitimate infrastructure becomes a delivery pipeline for attackers",
@@ -17603,9 +17282,339 @@
       ],
       "first_seen": "2026-10-20T16:10:43+00:00",
       "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "580c9660164a28e8",
+        "source": "Microsoft Security",
+        "title": "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/",
+        "published": "Wed, 14 Oct 2026 13:00:00 +0000",
+        "summary": "Microsoft uncovered a Chinese-language cybercriminal ecosystem, an interconnected network of phishing kit operators (tracked as Storm-2990), and an illicit marketplace (tracked as Storm-3119) selling tools and infrastructure for large-scale phishing. In collaboration with law enforcement agencies and other partners worldwide, Microsoft’s Digital Crimes Unit (DCU) facilitated a disruption of the ecosystem. The post The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime appeared first on Microsoft Security Blog .",
+        "raw_text": "The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime Microsoft uncovered a Chinese-language cybercriminal ecosystem, an interconnected network of phishing kit operators (tracked as Storm-2990), and an illicit marketplace (tracked as Storm-3119) selling tools and infrastructure for large-scale phishing. In collaboration with law enforcement agencies and other partners worldwide, Microsoft’s Digital Crimes Unit (DCU) facilitated a disruption of the ecosystem. The post The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime appeared first on Microsoft Security Blog . In this article Uncovering the shadow world of a phishing kit ecosystem Storm-3119: YAM Store, the power broker Storm-2990: The Iron Man System phishing kit Downstream activity from Storm-2990 phishing kits Mitigation and protection guidance Microsoft Defender detections Over the past year, Microsoft uncovered a Chinese-language cybercriminal ecosystem, an interconnected network of phishing kit operators, developers, and an illicit marketplace selling tools and infrastructure for large-scale phishing, enabling cybercriminal operations worldwide. Threat actors purchased and used these tools and infrastructure, including phishing kits and access to compromised or fraudulent Microsoft or Google cloud environments and related credentials, to target organizations across the healthcare, financial services, wholesale distribution, and information technology (IT) sectors in Japan, the United States, Australia, and India. In collaboration with law enforcement agencies and other partners worldwide, Microsoft’s Digital Crimes Unit (DCU) facilitated a disruption of the ecosystem’s primary developers and infrastructure . Microsoft’s research into one phishing kit unraveled a larger ecosystem, including the phishing kit developers, an infrastructure dealer, and the threat actors who buy from both. In this blog, we examine several phishing kits marketed and sold through YAM Store, an underground marketplace tracked by Microsoft as Storm-3119. We share our analysis of the technical aspects of this Chinese-language phishing kit ecosystem, the shared infrastructure, provisioning methods, and downstream activity by threat actors using these tools. Figure 1: Heat map of most impacted countries by combined Storm-3119 and Storm-2990-related activity. Uncovering the shadow world of a phishing kit ecosystem Microsoft, alongside industry partner Resecurity , identified three phishing kits sold through the YAM Store that make up this Chinese-language cybercriminal network: CoGUI (also known as NX or FA), Haozi (also known as Phoenix), and Iron Man System. Microsoft tracks the cluster of activity and the developers behind all three phishing kits as Storm-2990. Since January 2026, the threat actors behind these kits have been responsible for facilitating the sending of over one billion phishing emails and SMS messages to over 75 thousand organizations worldwide. Microsoft assesses with high confidence that these phishing kits were developed by Chinese-speaking threat actors, and, despite their distinct branding and separate Telegram-based sales channels, exhibit highly similar capabilities and functionality. The phishing kits provide phishing templates impersonating legitimate brands and organizations (including government, financial, and logistics) worldwide, and enable criminal actors to facilitate high-volume phishing and credential stealing operations. The similarity in their infrastructure and overlap in activity suggest either shared development origins, code reuse, or close collaboration among their developers. These phishing kits have been advertised through YAM Store, first CoGUI and Haozi, followed by Iron Man System starting in June 2026. YAM Store and affiliated phishing kit companies accepted payments through cryptocurrency, including USDT and Ethereum, adding another layer to conceal illicit activity. The scale and proliferation of this ecosystem demonstrate how readily available criminal infrastructure can lower the barrier to entry, enabling less skilled cybercriminals to target organizations at scale and contribute to fraud losses. By mapping the relationship between YAM Store and these phishing kits, we provide insight into the commercial infrastructure that supports modern phishing operations. Figure 2. YAM Store (Storm-3119) sells fraudulently acquired infrastructure to CoGUI, Haozi, and Iron Man System, all interconnected phishing kit operators, who then provide these services to other threat actors. Storm-3119: YAM Store, the power broker YAM Store is an initial access broker (IAB) that sells infrastructure using compromised or fraudulently obtained environments in providers like Microsoft and Google. The marketplace offers a variety of infrastructure based on age, subscription type, and environment types such as education (.edu) or non-profit (.org). Figure 3: YAM Store procurement and downstream activity chain The YAM Store marketplace provides cybercriminals with a platform to purchase fraudulently acquired Microsoft and Google domains associated with legitimate, expired, or previously used organization numbers, allowing actors to use seemingly legitimate infrastructure and obtain workspaces at relatively low cost. Storm-3119 uses automation to identify expired environment or organization names and leverages legitimate customer information associated with them to help circumvent existing detections. Figure 4. YAM Store interface and Telegram contact Anatomy of YAM Store operations: How Storm-3119 acquires, controls, and monetizes infrastructure During this investigation, Microsoft uncovered a five-stage attack pipeline often used in Storm-3119’s operations. YAM Store functions as an access broker, an intermediary that hijacks Microsoft 365 and Azure for Education tenants and resells the stolen accounts, licenses, and storage as a service to downstream operations, including the phishing kits tracked as Storm-2990. The pipeline below describes the supply side of that business: how the actor acquires, controls, and monetizes compromised environments. Stage 1 – Reconnaissance : Storm-3119 conducts automated reconnaissance of target environments. The actor uses Flask, a lightweight Python web framework, to covertly identify and profile cloud-enabled organizations. The tooling is designed to discover Microsoft 365 tenants, assess enrollment opportunities, gather licensing and Azure cloud information, and perform these activities anonymously through Tor infrastructure. Stage 2 – Environment takeover and app-only admin panels : Once a viable environment is identified, the threat actor centralizes associated information in an actor-controlled platform used to administer compromised Microsoft 365 environments. This platform is a separate set of administrative panels (implemented in PHP, Java/Spring, and Cloudflare Workers) that lets the operator maintain, monetize, and expand access using stolen application credentials. Leveraging the compromised environment’s client secret through an application-only authentication flow, the panel performs full directory control: it resets passwords silently (without forcing a change at next sign-in), assigns education licenses, and grants privileged attributes that the actor can later monetize. Because this access is application-level rather than tied to a single user session, the resulting persistence is more durable, more scalable, and harder to detect. Stage 3 – Storage and resource abuse : With the stolen privileged credentials, the threat actor signs in to a compromised Global Administrator account and self-provisions the PnP Management Shell service principal, which represents the actor’s application inside the compromised tenant. Through this service principal, the threat actor grants themselves broad Microsoft Graph permissions, including read and write access to directory data and AppCatalog.ReadWrite.All, along with full control over the SharePoint API. The actor then abuses the compromised tenant’s SharePoint and OneDrive as bulk hosting and converts the hijacked storage into a sellable product. Stage 4 – Phishing and DNS infrastructure support : The threat actor maintains dedicated infrastructure to support and manage phishing operations on behalf of their customers. A custom DNS management platform enables centralized control of phishing domains, SSL certificates, and domain-routing configurations through Cloudflare. Stage 5 – Storefront and monetization : Storm-3119 resells the hijacked accounts, licenses, and storage through an automated storefront, operating as the access broker that supplies these resources to downstream operations. Payment is accepted through Alipay, WeChat Pay, and USDT (TRC20), and the storefront supports a sub-reseller tier. Telegram is used for order notifications and buyer contact rather than as the primary sales channel. In addition to targeting existing tenants, Storm-3119 also separately creates fraudulent organizations and supporting web presence to establish tenants on Microsoft’s platform, likely using AI-generated content and forged documentation to make the fabricated entities appear legitimate. In one case, the actor created an environment, likely using AI, named “Jewish Choice” under the guise of a nonprofit organization and associated it with jewishchoice[.]org , a domain registered only within the past several months that did not appear to represent a legitimate organization. This activity indicates that Storm-3119 likely established the website and associated domain to lend credibility to the fabricated nonprofit identity and facilitate tenant creation. Figure 5: YAM Store created the fake non-profit “Jewish Choice” to sell to criminal actors with a [.]org top-level domain to appear as a legitimate organization in phishing emails. Storm-2990: The Iron Man System phishing kit YAM Store sells its illicitly acquired infrastructure, as well as the prominent phishing kits tracked as Storm-2990, to other threat actors. The platforms are commercially licensed phishing-as-a-service (PaaS) products. They are designed to impersonate organizations across several industry verticals to steal information, including sign-in credentials (usernames, passwords) and financial data (credit card information), used to gain access to network environments. Iron Man System’s customers purchase a subscription that provides access to the kit’s license server, with the domain hard-coded into the kit. This restriction adds a layer of obfuscation by limiting site access to paying customers. The kits allow attackers to steal money by abusing the stolen credit card information. Figure 6. Iron Man System admin sign-in The Iron Man System phishing kit contains over 2,335 templates tailored to over 139 countries including Australia, Japan, India, and the United States, with the United States accounting for the most phishing templates. The phishing lures used by Iron Man System mimic various trusted brands and organizations, such as local government including authorities associated with traffic and parking fees, law enforcement, healthcare, finance, transportation, and retail. These lures are designed to trick targets into providing sensitive information. Most phishing lures used in the United States are transportation or government-related. Figure 7. Phishing lure impersonating traffic authorities in the Philippines Figure 8. Phishing lure impersonating Amazon shipping services Figure 9. Phishing lure impersonating a Japanese financial service provider. It warns the target that a routine security check determined that the target’s account requires re-authentication. The email provides instructions for the target to visit the ‘official’ website and follow instructions to authenticate to the portal Figure 10. Sample lure impersonating Australia Post Figure 11. Sample lure impersonating Medicare The phishing kits are capable of the following advanced evasion techniques to varying degrees: Geofencing , a technique used to restrict access to configured countries only, so only users from specific countries can access the phishing content from their web browser Fake CAPTCHA gates , used to prevent or block automated browsing from threat research tools by making the user click a box or execute an action IP address block list and allow list , used to block or allow IP addresses to prevent threat researcher interaction Anti-detection configuration related tosettings to evade security researcher detection Telegram bot configuration ,including bot tokens and chat IDs for real-time phishing that enables credential exfiltration. It allows the kit operator to receive automatic notifications on their Telegram account when a target takes action on a phishing lure, including entering credentials, credit card data submission, and verification codes. After the target provides the sensitive information (sign-in details, credit card info), the phishing kit collects it using a WebSocket, offering customers real-time victim interaction through Telegram notifications during credential harvesting. This confirms that the kit supports live, interactive phishing where the operator monitors each victim’s progress and manually controls what the victim sees next, a hallmark of sophisticated PaaS platforms. The attacker then harvests the information to use in follow-on fraudulent financial activities. The Iron Man System phishing kit panel is predominately hosted on China-based hosting providers, with a smaller number of panels found on hosting providers in other countries. The fully featured, multi-tenant phishing kit uses the GoFrame application development framework, an open-source Go framework with roots in the Chinese developer ecosystem. Downstream activity from Storm-2990 phishing kits Microsoft observed downstream activity by threat actors using infrastructure affiliated with the Storm-2990 phishing kits. In analyzed cases, the actors used similar common phishing techniques, such as urgency in the message and attaching malicious links that redirect to actor-controlled infrastructure that allows these downstream threat actors to perform the following activities: Credential stealing: The actors use phishing pages that impersonate legitimate services to trick targets into providing credentials or other authentication information, enabling downstream actors to access compromised accounts. Device code phishing: In some cases, the actors abuse the device code authentication flow to trick victims into authenticating to legitimate applications, allowing downstream actors to obtain authentication tokens and access compromised accounts. Financial fraud: The end goal for the downstream actors is to use stolen payment data to make fraudulent purchases of high-end goods or fraudulent transactions on legitimate financial platforms. The threat actors using the phishing kits conduct phishing campaigns at scale whether it is a missing toll payment or a traffic citation. The following screenshots show email or SMS phishing lures used in Storm-2990 phishing kits. Figure 12: Sample of landing pages impersonating mainstream tech, streaming and brokerage services around the world. The templates are tailored to specific countries using trusted local or international brand names and local language. Mitigation and protection guidance This interconnected network of Chinese-language phishing kit operators and developers operates as an enabling ecosystem, providing infrastructure and services that facilitate criminal activity rather than functioning as a standalone malware tool. Microsoft assesses that the ecosystem is not limited to the abuse of Microsoft services and extends to other providers. While Microsoft notes that the identified organizations impacted by attacks stemming from Storm-3119 or Storm-2990 operations include financial, healthcare, and IT companies, the activity conducted by threat actors using these tools are common attacks that could affect any organization. Most of the activity that stems from this phishing kit ecosystem consists of social engineering, phishing operations, and account and storage takeovers. Microsoft recommends the following to mitigate the impact of Storm-3119 and Storm-2990-related threats. In nearly all the cases observed by Microsoft, the phishing lures used by the Storm-2990 operators followed prescriptive scam red flags, including urgency, time-sensitive tasks such as clicking a provided link with official branding. Users should verify with the purported sender of the message or email, even when the task involves signing in to a known, secure account not provided by the link or calling the purported organization or company directly. Educate users about protecting personal and business information in social media, filtering unsolicited communication, identifying lures in spear-phishing emails and watering holes, and reporting reconnaissance attempts and other suspicious activities. Educate users about common phishing techniques. Sign-in prompts should clearly identify the application being authenticated to. As of 2021, Microsoft Azure interactions prompt the user to confirm (Cancel or Continue) that they are signing in to the app they expect, which is an option frequently missing from phishing sign-ins. Review our recommended settings for Exchange Online Protection and Microsoft Defender for Office 365 to ensure your organization has established essential defenses and knows how to monitor and respond to threat activity. Configure the Microsoft Defender for Office 365 Safe Links policy to apply to internal recipients. Hardening credentials and cloud identities is also necessary to defend against phishing attacks, which seek to gain valid credentials and access tokens. As an initial step, use passwordless solutions like passkeys and implement multifactor authentication (MFA) throughout your environment: Invoke the principles of least privilege and Zero Trust to significantly slow down threat actors who might have been able to gain initial access and buy time for defenders to respond. Since Storm-3119 operators have been observed obtaining Global Administrator access, implementing these principles can help lock down Global Administrator roles and who has access to specific resources. Use the Microsoft Authenticator app for passkeys and MFA , and complement MFA with Conditional Access policies, where sign-in requests are evaluated using additional identity-driven signals. Conditional Access policies can also be scoped to strengthen privileged accounts with phishing-resistant MFA . Your passkey and MFA policy can be further secured by only allowing MFA and passkey registrations from trusted locations and devices. Enable network protection to prevent applications or users from accessing malicious domains and other malicious content on the internet. Microsoft Defender detections Microsoft Defender customers can refer to the list of applicable detections below. Microsoft Defender coordinates detection, prevention, investigation, and response across endpoints, identities, email, and apps to provide integrated protection against attacks like the threat discussed in this blog. The coverage below applies to the downstream activity detected by Microsoft that was identified using Storm-2990 infrastructure. Tactic Observed activity Microsoft Defender coverage Initial access Storm-2990-affiliated threat actors sign in to compromised accounts. Phishing campaigns use emails with malicious links. Microsoft Entra ID Protection – Atypical travel – Malicious IP address – Unfamiliar sign-in properties Microsoft Defender for Office 365 – A potentially malicious URL click was detected – Email messages containing malicious URL removed after delivery – Email reported by user as malware or phish Microsoft Defender for Cloud – Communication with suspicious domain identified by threat intel Credential access Storm-2990 facilitates high-volume phishing and credential stealing operations. Microsoft Entra ID Protection – Password Spray Microsoft Defender for Endpoint – Potential phishing web site – Suspicious activity linked to an emerging threat actor detected – Suspicious connection blocked by network protection Microsoft Defender for Identity – User identity risk elevated based on defender risk assessment – User exhibiting spike in distinct application resource access combinations – User sign-in from shared client infrastructure exhibiting anomalous activity Microsoft Defender XDR – Account compromise through anomalous password spray or credential compromise – Authentication from password-spraying infrastructure – Potential user account compromise identified through attack analysis Microsoft Security Copilot Microsoft Security Copilot is embedded in Microsoft Defender and provides security teams with AI-powered capabilities to summarize incidents, analyze files and scripts, summarize identities, use guided responses, and generate device summaries, hunting queries, and incident reports. Customers can also deploy AI agents , including the following Microsoft Security Copilot agents , to perform security tasks efficiently: Threat Intelligence Briefing agent Phishing Triage agent Threat Hunting agent Dynamic Threat Detection agent Security Copilot is also available as a standalone experience where customers can perform specific security-related tasks, such as incident investigation, user analysis, and vulnerability impact assessment. In addition, Security Copilot offers developer scenarios that allow customers to build, test, publish, and integrate AI agents and plugins to meet unique security needs. Threat intelligence reports Microsoft Defender XDR customers can use the following threat analytics reports in the Defender portal (requires license for at least one Defender XDR product) to get the most up-to-date information about the activity and techniques discussed in this blog. These reports provide intelligence, protection information, and recommended actions to prevent, mitigate, or respond to associated threats found in customer environments. Threat Overview Profile: Evolving phishing threats Microsoft Security Copilot customers can also use the Microsoft Security Copilot integration in Microsoft Defender Threat Intelligence, either in the Security Copilot standalone portal or in the embedded experience in the Microsoft Defender portal to get more information about the activity discussed in this blog. References CoGUI Phish Kit Targets Japan with Millions of Messages | Proofpoint US IronToll: Global Government-Impersonation PhaaS | PhishEye Learn more For the latest security research from the Microsoft Threat Intelligence community, check out the Microsoft Threat Intelligence Blog . To get notified about new publications and to join discussions on social media, follow us on LinkedIn , X (formerly Twitter) , and Bluesky . To hear stories and insights from the Microsoft Threat Intelligence community about the ever-evolving threat landscape, listen to the Microsoft Threat Intelligence podcast . The post The hidden network: Inside the phishing infrastructure ecosystem powering global cybercrime appeared first on Microsoft Security Blog .",
+        "tags": []
+      },
+      "scoring": {
+        "score": 48,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "1 MITRE technique hit(s)=+8",
+          "4 initial-access vector(s)=+13",
+          "1 impact action(s)=+8",
+          "1 product mention(s)=+3",
+          "2 IOC(s)=+6"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "appcatalog.readwrite.all",
+          "jewishchoice.org"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1566"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit",
+          "cloud-misconfig",
+          "social-engineering"
+        ],
+        "sectors": [
+          "healthcare",
+          "finance",
+          "government",
+          "manufacturing",
+          "education",
+          "retail"
+        ],
+        "actions": [
+          "fraud"
+        ],
+        "products": [
+          "Microsoft 365 / Entra ID"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-580c9660-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft 365 / Entra ID",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft 365 / Entra ID within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: phishing, exploit, cloud-misconfig; impact: fraud; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-580c9660-1-O1",
+              "title": "Inventory exposure to Microsoft 365 / Entra ID",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft 365 / Entra ID, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft 365 / Entra ID' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-580c9660-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-580c9660-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-580c9660-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft 365 / Entra ID hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-580c9660-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-580c9660-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: phishing, exploit, cloud-misconfig; impact: fraud; products: Microsoft 365 / Entra ID.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-580c9660-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('appcatalog.readwrite.all','jewishchoice.org') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-580c9660-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-580c9660-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-580c9660-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-580c9660-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-580c9660-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on vectors: phishing, exploit, cloud-misconfig; impact: fraud; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-580c9660-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-580c9660-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-580c9660-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-580c9660-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-14T13:32:49+00:00",
+      "agent_trace": []
     }
   ],
-  "skipped": 384,
-  "total_seen": 385,
+  "skipped": 410,
+  "total_seen": 410,
   "brief": "50 hunt-worthy item(s) today, 5 rated critical. Prioritise the highest-scored items first. Top of the list: #StopRansomware: SafePay Ransomware; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); The Q3 Vulnerability Pulse: Discovery ≠ Exploitation."
 }
