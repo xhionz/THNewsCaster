@@ -1,0 +1,7270 @@
+{
+  "cves": [
+    {
+      "value": "CVE-2026-111943",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "CVE-2026-111594",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-111100",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-110936",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-110825",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-110491",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-110322",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-110243",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-109813",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-109812",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
+      ]
+    },
+    {
+      "value": "CVE-2026-109619",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+      ]
+    },
+    {
+      "value": "CVE-2026-109618",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+      ]
+    },
+    {
+      "value": "CVE-2026-109576",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-109122",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-108471",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108467",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108460",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108457",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108400",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108399",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108398",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-108131",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-108130",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-107861",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107777",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107621",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107617",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107607",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107606",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107605",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-107362",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107361",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107337",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107336",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107335",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107334",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-107333",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-106931",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-105960",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-105733",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-105718",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-105667",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105664",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105279",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105273",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-105265",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-105134",
+      "sources": [
+        "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html",
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-105133",
+      "sources": [
+        "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html",
+        "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html",
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-105016",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-104935",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "CVE-2026-103672",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-102866",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102857",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102856",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102855",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102764",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support"
+      ]
+    },
+    {
+      "value": "CVE-2026-102225",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102217",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102214",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102211",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-102076",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-102075",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-102074",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-102073",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-101103",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-101021",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-100220",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100219",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100215",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100214",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100211",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100210",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100209",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-100202",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97858",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-97851",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-97814",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97800",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97799",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97798",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97780",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97778",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97776",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97767",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97765",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97761",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97759",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97758",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97756",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97755",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97753",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97749",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-97745",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97742",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97741",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97739",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-97016",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-96952",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96951",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-96943",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96940",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96939",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96934",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96929",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96914",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96913",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96911",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96858",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96656",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96655",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96654",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96652",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-96616",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-96222",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96207",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-96202",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-94510",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-94188",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-92817",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-92450",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-89208",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08"
+      ]
+    },
+    {
+      "value": "CVE-2026-89206",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89205",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89204",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89203",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89202",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89201",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89200",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89199",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89198",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89197",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-89196",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
+      ]
+    },
+    {
+      "value": "CVE-2026-88850",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-88207",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88191",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88185",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88178",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88174",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88171",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88159",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88156",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-88152",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88147",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88144",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88133",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88131",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88120",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88119",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88118",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88117",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88093",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88074",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-88073",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85945",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85941",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85908",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85906",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85902",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85901",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85884",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85870",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85855",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85850",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85849",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85848",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85843",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85832",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85804",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85802",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85791",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-85355",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-84014",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83947",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83943",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83934",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83927",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83921",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83917",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83902",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83899",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83896",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83886",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83867",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83848",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83842",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83840",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83834",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83830",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83793",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83785",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83769",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83768",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83763",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83761",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83750",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83738",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83735",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83732",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83724",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83717",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83704",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83699",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83669",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83580",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83510",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83509",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-83505",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-81971",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-80466",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-78557",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-78556",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
+      ]
+    },
+    {
+      "value": "CVE-2026-77900",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-76519",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-72955",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70571",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "CVE-2026-70303",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70300",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70291",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-70286",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70279",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70273",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70271",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70269",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70255",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70253",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70250",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70249",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70245",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70242",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2026-70241",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70237",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70236",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70233",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70229",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70223",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70218",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70215",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70187",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70176",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70156",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70153",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70151",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70147",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70144",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70132",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70117",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70108",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70106",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70104",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70103",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70076",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70060",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-70054",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69926",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69923",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69918",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69882",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69880",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69802",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69789",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69783",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69733",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69718",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69673",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69452",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-69435",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-64560",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-64552",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64545",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64538",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64425",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64423",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64422",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64413",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64412",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64411",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64375",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64371",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64370",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64317",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-64279",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-63810",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-63357",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63356",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63355",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63354",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63353",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63352",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63351",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63350",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14"
+      ]
+    },
+    {
+      "value": "CVE-2026-63252",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-63248",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-62927",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-62840",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "CVE-2026-61387",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-60007",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-58080",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-53400",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53362",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53358",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53356",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53352",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53350",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53349",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53337",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53325",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53295",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53275",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53269",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53268",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53265",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53264",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53263",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53256",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53255",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53254",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53253",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53249",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53245",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53242",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53239",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53236",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53228",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53227",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53225",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53223",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53221",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53219",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53218",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53212",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53208",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53198",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53192",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53184",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53183",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53181",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53177",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53168",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53167",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53150",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53149",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53148",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53147",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53146",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53134",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53131",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53080",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-53050",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53012",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53006",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53002",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-53001",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52999",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52998",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52986",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52970",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52948",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52947",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52946",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52943",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52942",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52933",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52930",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52929",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52928",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52923",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52918",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52917",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52912",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-52910",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-52909",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46333",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-46331",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46323",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46322",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46321",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46320",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46307",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46306",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46304",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46303",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46294",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46275",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46243",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46234",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46227",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46214",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46209",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46196",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46195",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46193",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46191",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46190",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46187",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46185",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46180",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46177",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46174",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-46173",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46172",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46168",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46167",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46165",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46163",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46161",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46159",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46151",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46150",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46149",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46146",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46137",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46136",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46132",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-46128",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46125",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46124",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46122",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46120",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46116",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46113",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46110",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46107",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46102",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46101",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46099",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46092",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46088",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46086",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46083",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46070",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46069",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46065",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46064",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46056",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46051",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46050",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46047",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46046",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46044",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46040",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46038",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46037",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46033",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46026",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46023",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46022",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46021",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46018",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46015",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-46003",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45997",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45991",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45850",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45844",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45843",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45842",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45841",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45840",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45839",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45838",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45836",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45835",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-45834",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43503",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43502",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43501",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43499",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43496",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43493",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43492",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43421",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43350",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43303",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43216",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43117",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43116",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43114",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43112",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43111",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43110",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43099",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43094",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43093",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43089",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43085",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43080",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43074",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43071",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43057",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43052",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43040",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43038",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43035",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43033",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43030",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43028",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43027",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43026",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43025",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43024",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-43011",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-41989",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-40355",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-33920",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+      ]
+    },
+    {
+      "value": "CVE-2026-33391",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+      ]
+    },
+    {
+      "value": "CVE-2026-33389",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+      ]
+    },
+    {
+      "value": "CVE-2026-33388",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+      ]
+    },
+    {
+      "value": "CVE-2026-33387",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+      ]
+    },
+    {
+      "value": "CVE-2026-31768",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31761",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31752",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31737",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31712",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31711",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31709",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31708",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31705",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31704",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31700",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31699",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31698",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31697",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31696",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31694",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31685",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31682",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31681",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31680",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31676",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31674",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31673",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31671",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31670",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31669",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31665",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31664",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31658",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31651",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31649",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31642",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31637",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31634",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31630",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31629",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31628",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31625",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31624",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31622",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31617",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31613",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31612",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31611",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31586",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31583",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31580",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31565",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31563",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31555",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31546",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31533",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31532",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31521",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31518",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31515",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31508",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31507",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31504",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31503",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31500",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31496",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31495",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31494",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31488",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31485",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31469",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31466",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31452",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31451",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31450",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31449",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31448",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31447",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31446",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31441",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31428",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31427",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31424",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31423",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31422",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31421",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31418",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31417",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31416",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31415",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31414",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31411",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31407",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-31403",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31402",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31396",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31391",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-31389",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-28388",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-27135",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23475",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23474",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23463",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23458",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23457",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23456",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23455",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23454",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23452",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23450",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23449",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23446",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23444",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23442",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23439",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23438",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23434",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23422",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23414",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23399",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23398",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23397",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23396",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23395",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23392",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23391",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23389",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23388",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23382",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23381",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23379",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23378",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23372",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23370",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23368",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23367",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23365",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23364",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23359",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23357",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23356",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23352",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23351",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23343",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23340",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23339",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23336",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23335",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23321",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23319",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23318",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23317",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23315",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23312",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23310",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23304",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23303",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23302",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23300",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23296",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23293",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23292",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23290",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23287",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23284",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23281",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23279",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23278",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23277",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23274",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23273",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23272",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23271",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23270",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23255",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23253",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23245",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23243",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23242",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23231",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23204",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23157",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23154",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23141",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23113",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23111",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23110",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23103",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23100",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23095",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23087",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23086",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23084",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23083",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23066",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-23060",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23054",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23038",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23026",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23019",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23011",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23010",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23005",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-23003",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-22994",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-22992",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-22982",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-22980",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-22979",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-22977",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-17539",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-11856",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-11824",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "CVE-2026-11822",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "CVE-2026-9854",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-9853",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-9852",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "CVE-2026-9079",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-8932",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-8927",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-6732",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-6653",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-6276",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "CVE-2026-3497",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2026-0322",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2026-0257",
+      "sources": [
+        "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html"
+      ]
+    },
+    {
+      "value": "CVE-2025-71316",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "CVE-2025-71267",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71266",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71265",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71221",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71197",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71191",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71190",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71189",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71186",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71185",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71163",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71162",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71161",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71131",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71123",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71120",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71114",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71113",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71112",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71104",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71098",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71097",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71095",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71088",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71086",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71085",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71079",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71075",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-71064",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-70873",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "CVE-2025-68820",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68818",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68816",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68814",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68803",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68798",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68788",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68787",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68782",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68776",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68773",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68764",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68742",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68725",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68724",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68371",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68363",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68349",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68337",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68291",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68266",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68265",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-68264",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68261",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-68239",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-68206",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-61985",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-61984",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-61624",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
+      "value": "CVE-2025-40300",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40261",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40219",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40196",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40149",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40135",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-40105",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40080",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40078",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40070",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-40022",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39997",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-39980",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39978",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39977",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39964",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39955",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39953",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39931",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39871",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39866",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39863",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-39845",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39827",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39826",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39795",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39782",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39773",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39770",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39764",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39756",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39748",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-39721",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39691",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-39681",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38736",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38732",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38727",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38725",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38721",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38704",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-38681",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38614",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38591",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38584",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-38322",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38250",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-38232",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38201",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38192",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-38162",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-38125",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-38105",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-37980",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37972",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37964",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37959",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37945",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37917",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37909",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-37785",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-33073",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
+      "value": "CVE-2025-25257",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "CVE-2025-24054",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
+      "value": "CVE-2025-23143",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-23136",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-23131",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-22121",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22111",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22107",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22105",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-22095",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22090",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22083",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22060",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22056",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22055",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22015",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-22005",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21999",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21959",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21938",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21926",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21925",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21919",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21913",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21887",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21875",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21867",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21865",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21864",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21863",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21862",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21861",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21859",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21858",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21853",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21846",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21844",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21838",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21835",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21832",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21830",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21814",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21806",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21802",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21796",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21795",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21791",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21790",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21787",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21780",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21779",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21776",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21767",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21766",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21765",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21764",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21763",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21762",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21761",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21760",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21758",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21756",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21753",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21745",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21744",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21738",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21735",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21731",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21728",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21727",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21726",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21725",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21724",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21719",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21718",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21716",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21708",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21707",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21706",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21705",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21704",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21703",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21702",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21700",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21682",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2025-21676",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21655",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21648",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-21645",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2025-8088",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "CVE-2025-6965",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "CVE-2024-58086",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-58083",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58079",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58077",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58072",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58071",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58068",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58063",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58061",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58058",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58056",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-58020",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58017",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58016",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-58014",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58013",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58011",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-58009",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58005",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-58002",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57996",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57993",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57986",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57981",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57980",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57979",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57977",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-57973",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-57924",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-57917",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-56719",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-56703",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-56657",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-56647",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-56631",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-54458",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-53170",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-53166",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-53124",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-50298",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-50164",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-50063",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-50014",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-49998",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-49994",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-49968",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-47809",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-47736",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-46786",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-42079",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-40945",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-40766",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2024-40711",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2024-36927",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-36922",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-36903",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-28956",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-27056",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2024-26982",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2024-26783",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2023-54271",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2023-53292",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2023-52927",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2023-51384",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2023-28531",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2023-27532",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2023-23397",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "CVE-2023-20269",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2021-44228",
+      "sources": [
+        "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
+      ]
+    },
+    {
+      "value": "CVE-2021-41617",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
+      ]
+    },
+    {
+      "value": "CVE-2020-3259",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "CVE-2015-1000013",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "CVE-2014-125110",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    }
+  ],
+  "ips": [
+    {
+      "value": "2.1.7.5",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
+      ]
+    },
+    {
+      "value": "5.255.11.134",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "25.1.1.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.1.2",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.2.2",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure",
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.3.0",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "25.1.3.1",
+      "sources": [
+        "https://www.rapid7.com/blog/post/etr-ivanti-connect-secure-zero-day-exploited-in-the-wild-cve-2026-104935"
+      ]
+    },
+    {
+      "value": "37.10.71.188",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "77.37.49.40",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "88.119.167.239",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "104.26.2.223",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "140.82.114.4",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "144.172.64.60",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "144.172.64.99",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "144.172.64.128",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "167.235.225.149",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "173.194.194.94",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "185.199.108.133",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "187.15.88.186",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "187.15.89.186",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "187.15.90.217",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    }
+  ],
+  "domains": [
+    {
+      "value": "1.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "2026.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "485055033bcddfde56325c0d2feea4f2.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "68tadmin.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "acro.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "acronis.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "anydesk.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "apistructsaction.java",
+      "sources": [
+        "https://thehackernews.com/2026/10/attackers-exploit-ahsaycbs-flaws-to.html"
+      ]
+    },
+    {
+      "value": "asp.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "attack.mitre.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "b2.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "bi.zone",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "cca616647db9370c88998ae25da6997f.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "ccleaner.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "ccleaner64.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "cisa.dhs.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "config.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "control.py",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "copy.bat",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "csc.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "dcsync.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "developer.hashicorp.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "diskdirector.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "docbook.ui.page.cls",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01"
+      ]
+    },
+    {
+      "value": "docs.intersystems.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01"
+      ]
+    },
+    {
+      "value": "domains.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "dyraswtb.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "endoflife.date",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
+      ]
+    },
+    {
+      "value": "eseecloud.app",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
+      ]
+    },
+    {
+      "value": "explorer.exe",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "fbijobs.gov",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "fdwsd.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "http.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "index.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "isc.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://isc.sans.edu/diary/rss/33426",
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "jackalsyn.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "kernel32.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "libsmb2.dll",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "license.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "locker.dll",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "me.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "net.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "netscan.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "netscan.lic",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "netscan.xml",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "netscannew.zip",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "next.js",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "nltest.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "node.js",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
+      ]
+    },
+    {
+      "value": "nxc.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "opcuaserverconfig.copy",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
+      ]
+    },
+    {
+      "value": "order.dell.com",
+      "sources": [
+        "https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/"
+      ]
+    },
+    {
+      "value": "orders.staples.com",
+      "sources": [
+        "https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/"
+      ]
+    },
+    {
+      "value": "oui.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "outlook.com",
+      "sources": [
+        "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
+      ]
+    },
+    {
+      "value": "permission.permissionname",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.permissiontype",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.privilegelevel",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.targetappdisplayname",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.targetappid",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "permission.usagestatus",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
+      ]
+    },
+    {
+      "value": "php-up-2026.html",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "php.ini",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+      ]
+    },
+    {
+      "value": "php.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "ping.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "portable.dat",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "pulsebrowser.29kh.in12.talos",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "rndismp6.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "safe-extract.py",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "sample.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422",
+        "https://isc.sans.edu/diary/rss/33426",
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "scan.xml",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "sharpshares.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "shinywire.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "shutterstock.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+      ]
+    },
+    {
+      "value": "snort.org",
+      "sources": [
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
+      ]
+    },
+    {
+      "value": "soc.dll",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "socks.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "spaceport.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "sqldiff.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "stopransomware.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "submit.php",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
+      ]
+    },
+    {
+      "value": "subs.txt",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "support.swann.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02"
+      ]
+    },
+    {
+      "value": "svchost.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "tuta.io",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "tutanota.com",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "unionfs.sys",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "urlscan.io",
+      "sources": [
+        "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "user.ini",
+      "sources": [
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+      ]
+    },
+    {
+      "value": "w32.58d6fec4ba-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "w32.9f1f11a708-100.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "w32.fed979f93b-95.sbx.tg",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "w32.pup",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "win.backdoor.chvost",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.backdoor.pickleshell",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.malware.generic",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.malware.laplas",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.proxy.generic",
+      "sources": [
+        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
+      ]
+    },
+    {
+      "value": "win.tool.kmsauto",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "win.worm.zard",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "wininet.dll",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33422"
+      ]
+    },
+    {
+      "value": "winrar.exe",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "wrc.intersystems.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01"
+      ]
+    },
+    {
+      "value": "www.akamai.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "www.cisa.gov",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01",
+        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+      ]
+    },
+    {
+      "value": "www.hashicorp.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "www.hitachienergy.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+      ]
+    },
+    {
+      "value": "www.kiloview.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "www.php.net",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "www.sans.edu",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33426"
+      ]
+    },
+    {
+      "value": "www.siemens.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+      ]
+    },
+    {
+      "value": "www.wago.com",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+      ]
+    }
+  ],
+  "sha256": [
+    {
+      "value": "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "327b8b61eb446cc4f710771e44484f62b804ae3d262b57a56575053e2df67917",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "6c1d36df94ebe367823e73ba33cfb4f40756a5e8ee1e30e8f0ae55d47e220a6a",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "921df888aaabcd828a3723f4c9f5fe8b8379c6b7067d16b2ea10152300417eae",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "985c3972712218c62d2418b41056dba5fe883ca5104d8ec12041f8611db344f9",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "a0dc80a37eb7e2716c02a94adc8df9baedec192a77bde31669faed228d9ff526",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "bbdd3620a67aedec4b9a68b2c9cc880b6631215e129816aea19902a6f4bc6f41",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838",
+      "sources": [
+        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    }
+  ],
+  "sha1": [
+    {
+      "value": "07353237350c35d6dc2c8f143b649cd07c71f62b",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "b498a2683640c983bb069fa2ea9e67cef4a3797d",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "bbfed53e3bb1f306f4da97d995cf4ae5b73ad081",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "d711a5af5aed48a3b36b98f4fcf52809aebef7a2",
+      "sources": [
+        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    }
+  ],
+  "md5": [
+    {
+      "value": "0c883b1d66afce606d9830f48d69d74b",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "207d9d891ac756b2bfad88aba5682c65",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "2915b3f8b703eb744fc54c81f4a9c67f",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "485055033bcddfde56325c0d2feea4f2",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "63f3351cfdf618bec6045f60203e7978",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    },
+    {
+      "value": "cca616647db9370c88998ae25da6997f",
+      "sources": [
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "f1fe671bcefd4630e5ed8b87c9283534",
+      "sources": [
+        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+      ]
+    }
+  ]
+}
