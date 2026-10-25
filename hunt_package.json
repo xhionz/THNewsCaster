@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T18:22:27+00:00",
+  "generated_at": "2026-10-25T19:03:24+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -7853,6 +7853,333 @@
         }
       ],
       "first_seen": "2026-10-20T16:10:43+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "6b46513076c85a9e",
+        "source": "/r/blueteamsec",
+        "title": "I spun up a free, read-only script to check WordPress sites for signs of PHP2Shell compromise. Looking for feedback",
+        "link": "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/",
+        "published": "2026-10-24T20:19:15+00:00",
+        "summary": "Patching PHP fixes PHP2Shell (CVE-2026-109618 / 109619), but it does nothing about a backdoor someone planted before the patch. Amazon's honeypots caught an exploitation attempt on Oct 17, four days before disclosure, and Amazon's advice is to investigate from at least that date. So I used Claude Code to spin up a bash script to triage WordPress sites. It checks: * PHP CLI version vs. the fixed releases * Core and plugin checksums (via WP-CLI) * PHP files in uploads * Files modified since Oct 17 (adjustable) * auto_prepend_file hooks in .user.ini / .htaccess / php.ini * mu-plugins * Common web-shell patterns in wp-content * Admin accounts and any users created in the window * Injected scripts in options and posts * WP-Cron, the site user's crontab, and SSH authorized_keys It's read-only and never modifies or deletes anything. It runs WP-CLI with --skip-plugins --skip-themes so a backdoored plugin can't execute during the check. It works on one site, every site on a server, or a list of remote servers over SSH, and it writes a Markdown report per site plus a summary. Repo (MIT): https://github.com/brentmartinmiller/php2shell-check Caveats: a clean report lowers the odds of compromise but doesn't prove a site is clean. It doesn't parse web server logs, so pull those separately before rotation eats the Oct 17+ window. A few false positives are expected, like Wordfence's prepend file, header-script plugins, and obfuscated premium plugins. The README covers how to read them. I'd a",
+        "raw_text": "I spun up a free, read-only script to check WordPress sites for signs of PHP2Shell compromise. Looking for feedback Patching PHP fixes PHP2Shell (CVE-2026-109618 / 109619), but it does nothing about a backdoor someone planted before the patch. Amazon's honeypots caught an exploitation attempt on Oct 17, four days before disclosure, and Amazon's advice is to investigate from at least that date. So I used Claude Code to spin up a bash script to triage WordPress sites. It checks: * PHP CLI version vs. the fixed releases * Core and plugin checksums (via WP-CLI) * PHP files in uploads * Files modified since Oct 17 (adjustable) * auto_prepend_file hooks in .user.ini / .htaccess / php.ini * mu-plugins * Common web-shell patterns in wp-content * Admin accounts and any users created in the window * Injected scripts in options and posts * WP-Cron, the site user's crontab, and SSH authorized_keys It's read-only and never modifies or deletes anything. It runs WP-CLI with --skip-plugins --skip-themes so a backdoored plugin can't execute during the check. It works on one site, every site on a server, or a list of remote servers over SSH, and it writes a Markdown report per site plus a summary. Repo (MIT): https://github.com/brentmartinmiller/php2shell-check Caveats: a clean report lowers the odds of compromise but doesn't prove a site is clean. It doesn't parse web server logs, so pull those separately before rotation eats the Oct 17+ window. A few false positives are expected, like Wordfence's prepend file, header-script plugins, and obfuscated premium plugins. The README covers how to read them. I'd appreciate feedback, especially false positives you hit, indicators I'm missing, or quirks on shared hosts. Issues and PRs welcome. ************** UPDATES: 5xx in the access logs. Added as a new section. It finds the access, error and FPM logs next to the site, under the home directory or under /var/log, including rotated .gz files, and counts requests and 5xx per day for the window against up to seven days before it. It also lists the URLs that returned 5xx inside the window, so the \"random URLs\" pattern is visible at a glance, and greps the error and FPM logs for segfault and bus-error lines. Your baseline point is baked into the verdict: a window with 5xx only gets a review flag when there is no baseline or it runs clearly above it. On the first real host I ran it against there was a full seven-day baseline and a flat zero across the window. There's a LOGS= variable for logs that live somewhere unusual. The l10n.php false positive. Those files are now counted separately instead of flooding the list. I was careful about the exclusion: a file only counts as a translation pack if it has exactly the shape WordPress writes, which is Docker. Two things. On the host, the report now lists every running container that has a php binary, the version inside it graded against the fixed releases, and whether the container still runs an older build than the image on disk. That last one is your three-days-on-8.3.35 case: pulled, but never recreated. Separately, you can list docker:container:path as a target and the whole check runs inside the container via docker exec, nothing installed. The one catch is that Alpine images don't ship bash, which the README now says. And the third CVE. CVE-2026-115560 went out on the 23rd with no fixed build, so I added a check for the session.upload_progress.enabled=0 mitigation php.net asked for. It reads PHP-FPM's own view and every readable php.ini, pool and Apache config, and reports but doesn't credit .user.ini or .htaccess, since php.net says those are too late to help. It's graded as review rather than a likely problem, because the vector needs app code that switches the session serializer at runtime and WordPress never does that. Pull requests welcome. submitted by /u/82miles [link] [comments]",
+        "tags": []
+      },
+      "scoring": {
+        "score": 65,
+        "rationale": [
+          "source weight (social)=+2",
+          "2 CVE(s)=+25",
+          "2 MITRE technique hit(s)=+11",
+          "2 initial-access vector(s)=+9",
+          "1 impact action(s)=+8",
+          "4 IOC(s)=+10"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-109618",
+          "CVE-2026-115560"
+        ],
+        "ips": [],
+        "domains": [
+          "user.ini",
+          "php.ini",
+          "l10n.php",
+          "php.net"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1053",
+          "T1021.001"
+        ],
+        "vectors": [
+          "exploit",
+          "rdp"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [
+          "fraud"
+        ],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-6b465130-1",
+          "title": "Initial access via CVE-2026-109618 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-109618 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-109618, CVE-2026-115560; vectors: exploit, rdp; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-6b465130-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-109618.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-6b465130-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-109618 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-109618/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-6b465130-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-109618 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-109618')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-6b465130-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-6b465130-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-6b465130-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-109618, CVE-2026-115560; vectors: exploit, rdp; impact: fraud.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-6b465130-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('user.ini','php.ini','l10n.php') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-6b465130-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-6b465130-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-6b465130-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-6b465130-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-6b465130-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-109618, CVE-2026-115560; vectors: exploit, rdp; impact: fraud.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-6b465130-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-6b465130-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-6b465130-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-6b465130-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-25T19:03:24+00:00",
       "agent_trace": []
     },
     {
@@ -17315,328 +17642,9 @@
       ],
       "first_seen": "2026-10-23T14:29:38+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "ee228c5586edb359",
-        "source": "Cisco Talos",
-        "title": "There's only so much code: the rise in vulnerability numbers",
-        "link": "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/",
-        "published": "Tue, 20 Oct 2026 15:31:22 GMT",
-        "summary": "The September Microsoft Tuesday release included 975 vulnerability advisories. This month, 1,415 vulnerabilities were just dropped. Compared to a pre-June average of 100 a month, that increase is staggering. Where did they come from? And what does the future look like?",
-        "raw_text": "There's only so much code: the rise in vulnerability numbers The September Microsoft Tuesday release included 975 vulnerability advisories. This month, 1,415 vulnerabilities were just dropped. Compared to a pre-June average of 100 a month, that increase is staggering. Where did they come from? And what does the future look like? Frontier AI models (like Mythos) are rapidly mining decades of technical debt across ubiquitous legacy libraries, driving monthly Microsoft Patch Tuesday vulnerability advisories up more than tenfold (reaching 1,415 this month). This volume is overwhelming open-source maintainers and putting pressure on the traditional 90-day coordinated disclosure model. Despite a 105% year-over-year surge in CVEs, Known Exploited Vulnerabilities (KEVs) grew by only 37%, and only 3 of September's 975 Microsoft advisories saw in-the-wild exploitation, demonstrating that the vast majority of AI-discovered bugs are not practically exploited. We may be able to take new-bug-class vulnerability spikes as evidence that these vulnerabilities will eventually level off and decline, once the historical code backlog is remediated and AI verification is embedded directly into new development pipelines. With attackers able to parse patches faster via AI, defenders cannot cover for all possible threats. Organizations should continue to build robust defense-in-depth. Prioritize high-exploitability flaws in their specific environments, implement interim mitigations (such as LiveProtect), deploy behavioral anomaly detection, and integrate current AI evaluation models into their software build chains. The September Microsoft Tuesday release included 975 vulnerability advisories. This month, 1,415 vulnerabilities were just dropped. Compared to a pre-June average of 100 a month, that increase is staggering. Where did they come from? As of April, frontier models came onto the scene more fine-tuned than ever toward vulnerability detection, particularly with the introduction of Mythos. The deluge brings a lot of questions: If these numbers are real, why hasn’t the internet collapsed? Are these vulnerabilities a new breed, and if not, why didn’t analysts find them in code that is sometimes decades old? Is the coordinated disclosure model still relevant in an era of this kind of speed? How in the world do defenders deal with those numbers? Should we go home, kiss our spouses, and prepare for the end? The answer to many of these questions boils down to this: The majority of these vulnerabilities are coming from repositories of old code from large-profile products and systems; and disclosure does not equal weaponization. Where is it from? AI is chewing through a backlog of technical debt in libraries and tools used as the dependable, best-practice lynchpins of so many environments. These models have a new perspective, an ability to \"think\" without some of the hangups or assumptions of human defenders, and they are thorough in listing those vulnerabilities. Entrenched older tools have always been prime targets because of their predictability; attackers know those tools and all their secrets, and they know what is likely to be present in a network with them. Multi-exploit attacks can be deployed with little variability. Pre-Mythos threat actors exploited log4j ( CVE-2021-44228 ) to immense success. The library was ubiquitous, included in nearly every environment, but not a component that got cataloged in visibility scans. A combination of scale and low visibility meant defenders were blindsided, scrambling to find out if they even used the log4j library before starting to concoct a mitigation plan. Talos has ongoing relationships with some of the largest technical vendors (such as the Microsoft Active Protections Process ( MAPP ) agreement). Organizations share additional information—detection guidance or maybe a POC — for vulnerabilities that are most likely to be exploited, to enable Talos to provide adequate coverage when the advisories are announced. \"Microsoft believes it is important for us to provide detection content, based on their guidance,\" as Yves Younan, Director of Talos Vulnerability Discovery, Detection, and Testing, says. Talos has needed to invest more resources to get coverage in on time for critical vendors like Microsoft to keep up with notifications coming in fast and often on staggered or out-of-band timelines. For larger vendors, the pressure is handleable for now. However, open-source projects are getting flooded. Some projects have a trusted group that can combine to tackle patches, and some share with the full community for immediate assistance, but it is up to the project. The internet runs on open-source work. The pace of discovery presents a challenge for the traditional coordinated disclosure system vulnerability hunters have been using for years, and some are calling it into question. Security vulnerabilities should be reported, to enable an informed defender base and regular patching, and vendors responsible for vulnerable code need time to create coverage. A timed disclosure model where notifications are sent to a vendor, who then has a set period of time (typically 90 days) to provide coverage before the disclosure is released publicly, has created a more secure online environment for decades. Now, many practitioners are releasing advisories publicly without a disclosure period beforehand. The reasoning is that if one AI can find a weakness, any other could, so the vulnerability is already, effectively, released. This conversation is actively changing expectations around vulnerability disclosure, and guidance is in flux. Will it stay this high? No one knows the future, but we can always look to the past for insight. Numbers of vulnerabilities jump drastically when a new bug class is identified, as their possibilities are explored to the fullest. Then the discoveries plateau and drop off. When format string vulnerabilities were discovered as a new bug class in 2000, the initial influx of discoveries ramped up and up, until reaching a peak in 2005 and then slowly declining over the next couple of years. Format string vulnerabilities are still discovered, but they are a smaller overall fraction of the number of CVEs discovered in a year. Theoretically, AI-assisted vulnerability discovery could go the same way. While frontier models have not discovered a new vulnerability class, they are more efficient at discovering known types of software vulnerabilities. Given that a lot of vital software has a long history of code releases, there’s plenty of code to mine for weaknesses. But there’s only so much code… right? Old and commonly used tools are often under the highest scrutiny, lending them one kind of safety: Because of their popularity, utility, and stability, when popular tools have vulnerabilities, they are discovered fast and patched promptly. As the historical backlog of essential systems is turned over by AI, vulnerabilities will be found and patched. New code will ideally be run through AI bug-checkers that will prevent new vulnerabilities from being introduced. The rate of new vulns should level off and drop accordingly. There are some caveats. In the past, as vulnerability disclosures increased through coordinated disclosures, we saw increased adoption of mitigations. Exploitation became significantly harder. Attackers often need to chain together 3 or more vulnerabilities to successfully exploit a system. However, more awareness of vulnerabilities often leads to more exploitation. Attackers often use vendor patches meant to protect customers to discover where vulnerabilities might exist. The frequency of patching has delayed human attackers via parsing bottlenecks, but AI can eliminate that problem. Are the numbers the real issue? The volume is certainly up. Fresh as this blog is being finished, the October Patch Tuesday dropped almost 500 more than last month. With refinement, any vulnerability could become a link to a path of effect. But... not all vulnerabilities are exploitable. Some are wildly impractical for attacker use. In fact, the percent of Known Exploited Vulnerabilities (KEVs) is vastly smaller than the found vulnerabilities. Of the 975 vulnerabilities Microsoft reported in September, there were only three in-the-wild exploits detected. When viewed by percentage, vulnerabilities versus KEVs tell a different and perhaps reassuring story. Compared with the same period last year, additions to the known-exploited vulnerability list increased by 37%, while published CVEs increased by 105%. However, we wouldn't necessarily expect those figures to grow in proportion. Adversaries only need enough useful vulnerabilities to compromise their targets, and the same vulnerabilities can be reused against many organizations. The KEV count tracks distinct vulnerabilities known to be exploited, not the number of attacks or successful compromises. AI helps ingest code, advisory reports, and attack surfaces with inhuman speed, but it cannot currently make judgment calls about the value of a weakness. For defenders, the question remains the same: Which vulnerabilities provide a viable path into their environment, and how do you close those paths? What do we do now? The undeniable danger here is in exploitation time going down rapidly, while the vulnerabilities that could become exploits is still going up. The biggest hurdle for a defender is determining what is a real vulnerability for their environment, and what is not. Different defenders have different forms of control depending on their role. For those who are writing code, the new standard validation chain should include AI evaluation by models at least as up to date as those being used to hunt for vulnerabilities. It is relatively cheap to run new code through AI, but very expensive to run a cumbersome backlog of old code through. Bite it off in chunks. For those whose role involves keeping the tools ready: Upgrade ASAP. Don't stop there. For Cisco customers, implement LiveProtect to mitigate vulnerabilities between advisory release day and patching, to give time for that patching. Do this for everything you own. Move beyond static domain blocking and implement behavioral detection that alerts on anomalous traffic patterns directed toward automation platforms. Hone your focus to the vulnerabilities with the highest exploitability in your environment. KEVs are far less common among the sea of advisories, and their numbers have not risen proportionally with the AI-assisted deluge. Focus on building defense-in-depth. Employ multiple protection systems, to cover for delays in patching. Implement interim mitigations (such as LiveProtect), create custom IPS/Snort triggers to block pre-patched traffic using SnortML, deploy behavioral anomaly detection, and integrate current AI evaluation models in software build chains. Dive deeper into this conversation with the latest TTP interview with Yves Younan and vulnerability researcher Bella Fusari. For more numbers and advice for defenders: Don't swing at everything Threat Source Newsleter: Discovery ≠ Exploitation",
-        "tags": []
-      },
-      "scoring": {
-        "score": 48,
-        "rationale": [
-          "source weight (vendor)=+10",
-          "1 CVE(s)=+20",
-          "1 initial-access vector(s)=+7",
-          "1 impact action(s)=+8",
-          "1 product mention(s)=+3"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2021-44228"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "energy",
-          "manufacturing"
-        ],
-        "actions": [
-          "fraud"
-        ],
-        "products": [
-          "Microsoft Exchange"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-ee228c55-1",
-          "title": "Initial access via CVE-2021-44228 affecting Microsoft Exchange",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2021-44228 in Microsoft Exchange within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2021-44228; vectors: exploit; impact: fraud; products: Microsoft Exchange.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-ee228c55-1-O1",
-              "title": "Inventory exposure to Microsoft Exchange",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for CVE-2021-44228.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-ee228c55-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2021-44228 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2021-44228/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-ee228c55-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2021-44228 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2021-44228')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-ee228c55-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-ee228c55-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-ee228c55-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2021-44228; vectors: exploit; impact: fraud; products: Microsoft Exchange.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-ee228c55-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-ee228c55-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-ee228c55-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-ee228c55-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-ee228c55-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-ee228c55-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2021-44228; vectors: exploit; impact: fraud; products: Microsoft Exchange.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-ee228c55-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-ee228c55-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-ee228c55-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-ee228c55-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-20T16:10:43+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
-  "total_seen": 385,
+  "skipped": 407,
+  "total_seen": 410,
   "brief": "50 hunt-worthy item(s) today, 5 rated critical. Prioritise the highest-scored items first. Top of the list: #StopRansomware: SafePay Ransomware; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); The Q3 Vulnerability Pulse: Discovery ≠ Exploitation."
 }

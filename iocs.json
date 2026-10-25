@@ -1,6 +1,12 @@
 {
   "cves": [
     {
+      "value": "CVE-2026-115560",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
+      ]
+    },
+    {
       "value": "CVE-2026-111943",
       "sources": [
         "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
@@ -73,7 +79,8 @@
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
     {
@@ -6200,12 +6207,6 @@
       ]
     },
     {
-      "value": "CVE-2021-44228",
-      "sources": [
-        "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
-      ]
-    },
-    {
       "value": "CVE-2021-41617",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -6622,6 +6623,12 @@
       ]
     },
     {
+      "value": "l10n.php",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
+      ]
+    },
+    {
       "value": "libsmb2.dll",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -6792,13 +6799,15 @@
     {
       "value": "php.ini",
       "sources": [
-        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
     {
       "value": "php.net",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
+        "https://isc.sans.edu/diary/rss/33440",
+        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
     {
@@ -6975,7 +6984,8 @@
     {
       "value": "user.ini",
       "sources": [
-        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/"
+        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
+        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
     {
