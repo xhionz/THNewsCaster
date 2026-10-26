@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T09:14:15+00:00",
+  "generated_at": "2026-10-26T09:55:20+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -17007,6 +17007,353 @@
     },
     {
       "article": {
+        "id": "ab7c842e609eea2e",
+        "source": "SANS Internet Storm Center",
+        "title": "Looking for a Language [Guest Diary], (Wed, Oct 21st)",
+        "link": "https://isc.sans.edu/diary/rss/33442",
+        "published": "Mon, 26 Oct 2026 09:38:03 GMT",
+        "summary": "[This is a Guest Diary by Jeffray Spence, an ISC intern as part of the SANS.edu BACS program]",
+        "raw_text": "Looking for a Language [Guest Diary], (Wed, Oct 21st) [This is a Guest Diary by Jeffray Spence, an ISC intern as part of the SANS.edu BACS program] [This is a Guest Diary by Jeffray Spence, an ISC intern as part of the SANS.edu BACS program] Around Here, we start our day with coffee, but our day does not begin until we have our data...So much data. Where to even begin? When approaching a massive dataset, such as those from a DShield SIEM Honeypot, the first step is to actually find something to analyze. As for myself, I usually go looking for something that makes me go; \" Huh. \" Today we will be walking through a starting approach with Kibana Discover to search out embedded language preferences in webtraffic, then we will use this as a starting point for finding anomalous activity. Find A Problem to Get Some Data Inside of my DShield SIEM there are nearly a million records, so I approach by looking for a slightly smaller data carve with which to work which still represents the problem set: Anyone with Elastic Kibana can perform this approach on their webtraffic data as long as the HTTP headers are provided. Here, the logs are from my SANS Dshield Honeypot and the accompanying Dshield SIEM. For those who desire to install this setup there are plenty of great resources out there with links at the end of this article [ 1 ] [ 2 ]. In slightly more than 3 weeks of observation the rasperry pi honeypot had transferred a Million Records into the Elastic SIEM. These many records can prove very challenging when figuring out where to start, so it is helpful to know that even with no filtering applied on the Discover page the Field Statistics will give some fairly detailed metrics about what fields exist in the current Index. On the Discover page in the upper right, I selected my index (here the index is “ cowrie ”) and without any filter applied I selected Field Statistics : Calculating statistics ourselves is possible using ESQL and Stats, however this feature of Elastic makes gaining visibility much more obtainable at the onset. We are immediately presented with a screen displaying all of the Documents broken down by Top Values which potentially gives us some valuable insight: The resultant statistics show that in these 3 weeks my honeypot had generated 960,000 logs, but all of those are only within 4 rules. Four is less than a 960,000 so this gives a more manageable starting dataset: “ Huh. ” This little raspberry PI has been humming away quietly all day and all night and only 4 rules have popped up. I found this interesting. With no filtering applied only 15,271 records triggered any rule? This setup is a honeypot, so literally every record is suspicious. So, what about the other 944,866 records which triggered no rules? Today, we want a problem not a project, so we are going to use one of these rules to narrow down our traffic for analysis. We have rule triggers for the Index page . Boring. Great for generating a large dataset, but this is not a very targeted approach. Git Config is something I had previously analyzed, and this led me to discover malicious traffic attempting to scrape Git Config from internet hosts. Neat, but not for today. Fortinet Emulation , for those who don't know, has fairly recently gotten a lot of attention [ 3 ]. Only one detection so far in my honeypot, so for me that's just an outlier. Interesting, but not much of a corpus. Through the process of elimination, we are left with the Sonicwall Appliance Login Page rule. Good representation over the problem space with 41 individual hosts logging in activity. This could potentially demonstrate how an attack is conducted or give a clue as to who was conducting one. Perfect because we are looking for regular and repeating attack attempts. I selected these criteria as a Kibana filter. Now to start digging. Data Selection Now that we have a smaller dataset to work within, we need to decide what we want to find. After that we need to figure out how to actually find that. This first approach is what I would NOT recommend One do: Noticing here that every field statistic for all 157 records has One Distinct Value and only1 category under Distribution tells us these fields are ALL common to ALL records. A field common to every record will have a unique value for each record. We don't want common, we want weird: the approach I will use is to flip it and look at Distribution 2 or higher. This is Long tail analysis: Here we see the Distinct values are now descending with the “sweet spot” between 2 and 6 so. Not an exact criterion, but one that is practical for manual review. Within these fields we have fields of interest: When fields contain similar values, they may illustrate a relationship between the data represented. Here the traffic triggering the Sonicwall Rule contains a relatively small subset of unique values. The next step is to find something we cannot readily explain away; a simple exercise to conduct on the “ tags ”, “ host.ip ”, and “ host.mac ” fields. The IP and MAC are going to be both interfaces of my Dshield Pi itself, while the Tags are going to be metadata about how the rules generate. The “ source.geo.continent_code ” is not very useful in a Virtual Private Server (VPS) enabled world but may prove useful later. This leaves 2 fields: http.request.connection \" Close \" and \" close \". Most traffic parsing tools are going to convert these all to lowercase string, and thus never see this small difference. . No longer interesting. http.request.mime_type \" utf-8 \" (the defacto choice) verses some interesting mime encoding... Next was to break down what this mime encoding is saying: \" GBK,utf-8;q=0.7,*;q=0.3 \" This string is sent to a webserver as the Accept-Charset HTTP header. Values of GBK,utf-8 , and wildcard ( * ) are present. The preference weights are specified as \" q \" (for “quality value” by convention). Since the implicit maximum weight value is q=1.0, the simplified character set preferences are: ( GBK;q=1.0),(utf-8;q=0.7),(*;q=0.3 ) I think of this as a preference for what character encoding to use: ( Send me “GBK” 100% of the time, if not “utf-8” 70%, and if not Whatever 30% ) UTF-8 makes sense as does wildcard ( * ). However, GBK is explicitly the extension of the “GB 2312” character set for Simplified Chinese characters. \"Huh. \" Why do these requests explicitly state they greatly desire to transfer data to my Honeypot, which is not in China, using an exclusively Chinese character set? I also apply this as a filter in Kibana to narrow our results to 8 Records: Two issues are now present. This dataset of 8 records is too narrow to work with, and also, we don’t actually care about the Sonicwall rule anymore now that we find some interesting traffic. Next, we need to pull in some additional data for this mime type field. Finding commonality So my Elastic SIEM, the webhoneypot index is for Webserver Logs, and my cowrie index shares these fields. Here the filter works for both. At this point we are not interested in the “Sonicwall Appliance” filter anymore, so we remove it. We are now using the “Mime Type” field to work out the language preferences and have 47 interesting records within the http.request.mime_type : These records now represent every inbound connection attempt sending this exact same format string for the GBK Character set preferences. There are 47 requests in total which send the identical preference header. How can we use this header to find odd traffic in our data? The problem set has not changed, only our dataset. We repeat the same process of sorting the Distribution Field under the Field statistics section. Following this Distribution Analysis process we see two User-Agents, which is interesting. However, we also very clearly see there are two source.geo.region_name values: “ Beijing ”, yeah, ok that makes sense. Beijing is in China… but “ Ontario ”? \" Huh \". People do move around, however, following a purely statistical analysis approach one would not anticipate that Canadian Cyber actors would greatly desire a Chinese Character set while targeting my American Honeypot. This presents as an anomaly. We add the source.geo.region_name : Ontario filter and observe there are now only 3 records: At this point I exported these three records to Libre Office so I could look at them: Modern VPS availability makes the Autonomous System (AS) number far more useful than an IP: AS-7456 is the system responsible for all three of these records. This field, “source.geo.as.number” will be our next field to analyze: What’s Your Number? We now set our new filter to be source.geo.as.number : 7456 We remove all other filters and follow the same “Distribution Analysis” as before. We immediately find the same pattern: There is again a language preference but this time in a different field: The http.request.accept-language encoding for all 31 requests from AS-7456 read as either: zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.628 at (90.3%) OR zh-CN,zh;q=0.83 at (9.7%) \" zh-CN \" means \"Mainland Chinese\" Language preference. \" zh \" just means any version of Chinese. For all 121 records observed for this AS there were 31 alternative language preference specified. This is an optional header, however the indication of a desired alternate language preference can narrow down our search scope considerably. I applied the filter as: http.request.accept-language : \" zh-CN,zh;q=0.9,en;q=0.8,en-GB;q=0.7,en-US;q=0.6 \" OR http.request.accept-language : \" zh-CN,zh;q=0.8 \" At this point I exported the 31 records for this filter: I took these records over to LibreOffice as a Tab Separated Value sheet so I could have a look at it. When I did the pattern was unmistakable: These are all regularly scanning internet hosts for the same set of endpoints all from the same Canadian based AS-7456: 165[.]154.36.91 165[.]154.29.93 165[.]154.11.140 165[.]154.120.226 165[.]154.33.72 165[.]154.182.221 Values for http.request.body.content were all consistent repetitions of: /cgi-bin/login /config.json /sitemap.xml /robots.txt /favicon.ico / There is no attempt being made to conceal the fact that these user agents strongly desire Chinese character sets in the HTTP Language preferences while actively targeting internet facing endpoints. We have discovered an obviously automated campaign. Interestingly, tzrhxln[.]cn ( 165[.]154.29.93 ) is a suspect high entropy domain. Similar domains also appear in this dataset as extracted with this ESQL Query: source.domain values: leheedu[.]cn mail.,brossy.com[.]cn mail.brossy.com[.]cn tzrhxln[.]cn All of these domains operate from AS-7456, have strong CN presence, and are actively scanning. One Conclusion This demonstration of a simple approach to Elastic Discovery using optional HTTP language preferences and mime types is only an example. We have found high entropy domains, bot scanners, and plenty of nefarious intent, however the most interesting aspect in my view is the approach we have taken. Expanding upon this could yield automation. Typically, when analyzing datasets in a SIEM it is common to look for all the fields that match a correlation. In this approach we attempt to match the least commonality required to gain a single insight into what hosts may be related and then repeat the data acquisition process with this selected feature. This is featuring selection, and because we are purposely iterating upon the selection with intent, we are functionally engaged in rudimentary feature engineering. Using the embedded language preferences in webtraffic as a starting point we were able to trim a massive corpus into a manageable selection. We have also built upon some understanding of how these language headers appear in logs when browsing, so we could always simply begin selecting those features as a starting point in the future when processing SIEM data. Just a simple example for today, but we eventually found what we were looking for. Also, most importantly, the more efficient we are in the search, then the more time we have for our coffee. [1] https://github.com/dshield-isc/dshield [2] https://github.com/bruneaug/DShield-SIEM [3] https://www.fortinet.com/blog/psirt-blogs/analysis-of-reported-credential-compromise-of-fortigate-devices [4] https://www.sans.edu/cyber-security-programs/bachelors-degree/ ----------- Guy Bruneau IPSS Inc. My GitHub Page Twitter: GuyBruneau gbruneau at isc dot sans dot edu (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 50,
+        "rationale": [
+          "source weight (advisory)=+15",
+          "2 initial-access vector(s)=+9",
+          "1 impact action(s)=+8",
+          "1 product mention(s)=+3",
+          "27 IOC(s)=+15"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [
+          "165.154.36.91",
+          "165.154.29.93",
+          "165.154.11.140",
+          "165.154.120.226",
+          "165.154.33.72",
+          "165.154.182.221"
+        ],
+        "domains": [
+          "sans.edu",
+          "host.ip",
+          "host.mac",
+          "source.geo",
+          "http.request.connection",
+          "http.request",
+          "source.geo.as.number",
+          "http.request.accept",
+          "http.request.body.content",
+          "config.json",
+          "sitemap.xml",
+          "robots.txt",
+          "favicon.ico",
+          "tzrhxln.cn",
+          "source.domain",
+          "leheedu.cn",
+          "brossy.com.cn",
+          "mail.brossy.com.cn",
+          "www.fortinet.com",
+          "www.sans.edu",
+          "isc.sans.edu"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit",
+          "vpn-edge"
+        ],
+        "sectors": [
+          "manufacturing",
+          "telecom"
+        ],
+        "actions": [
+          "fraud"
+        ],
+        "products": [
+          "Fortinet FortiOS"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-ab7c842e-1",
+          "title": "Initial access via the disclosed vulnerability affecting Fortinet FortiOS",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Fortinet FortiOS within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: exploit, vpn-edge; impact: fraud; products: Fortinet FortiOS.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-ab7c842e-1-O1",
+              "title": "Inventory exposure to Fortinet FortiOS",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Fortinet FortiOS, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Fortinet FortiOS' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ab7c842e-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ab7c842e-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ab7c842e-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Fortinet FortiOS hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-ab7c842e-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-ab7c842e-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: exploit, vpn-edge; impact: fraud; products: Fortinet FortiOS.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-ab7c842e-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('sans.edu','host.ip','host.mac') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ab7c842e-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('165.154.36.91','165.154.29.93','165.154.11.140') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ab7c842e-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-ab7c842e-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ab7c842e-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-ab7c842e-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on vectors: exploit, vpn-edge; impact: fraud; products: Fortinet FortiOS.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-ab7c842e-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-ab7c842e-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-ab7c842e-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-ab7c842e-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-26T09:55:20+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "40c2793d66377bc7",
         "source": "CISA Advisories",
         "title": "CISA Urges Patching Critical Vulnerability in BeyondTrust Remote Support",
@@ -17319,332 +17666,9 @@
       ],
       "first_seen": "2026-10-16T21:44:58+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "84e4fa62c9a17617",
-        "source": "SecurityWeek",
-        "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
-        "link": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
-        "published": "Fri, 23 Oct 2026 14:23:37 +0000",
-        "summary": "Noteworthy stories that might have slipped under the radar: Russia’s APT28 hit NATO defense firms, PingCAP source code stolen, ShinyHunters negotiator probe. The post In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware appeared first on SecurityWeek .",
-        "raw_text": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware Noteworthy stories that might have slipped under the radar: Russia’s APT28 hit NATO defense firms, PingCAP source code stolen, ShinyHunters negotiator probe. The post In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware appeared first on SecurityWeek .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 48,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 threat actor hit(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "1 initial-access vector(s)=+7",
-          "1 impact action(s)=+8"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [
-          "APT28 (Fancy Bear)"
-        ],
-        "mitre_techniques": [
-          "T1486"
-        ],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "finance",
-          "manufacturing"
-        ],
-        "actions": [
-          "ransomware"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-84e4fa62-1",
-          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on threat actors: APT28 (Fancy Bear); vectors: exploit; impact: ransomware.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-84e4fa62-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-84e4fa62-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-84e4fa62-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-84e4fa62-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-84e4fa62-2",
-          "title": "Post-foothold lateral movement consistent with APT28 (Fancy Bear)",
-          "statement": "An attacker who matched the TTPs of APT28 (Fancy Bear) has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
-          "rationale": "Archetype 'lateral_movement' selected based on threat actors: APT28 (Fancy Bear); vectors: exploit; impact: ransomware.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1021.001",
-            "T1021.002",
-            "T1021.006",
-            "T1003"
-          ],
-          "objectives": [
-            {
-              "id": "H-84e4fa62-2-O1",
-              "title": "Anomalous remote logons (Type 3 / Type 10)",
-              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
-              "data_sources": [
-                "Windows Security event log",
-                "Domain Controller logs"
-              ],
-              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
-              "mitre_attack": [
-                "T1021.001",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-2-O2",
-              "title": "Admin-tool usage outside baseline",
-              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR",
-                "4688"
-              ],
-              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
-              "mitre_attack": [
-                "T1021.002",
-                "T1021.006",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-2-O3",
-              "title": "Kerberos abuse telemetry",
-              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
-              "data_sources": [
-                "Domain Controller security log"
-              ],
-              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
-              "mitre_attack": [
-                "T1558.003",
-                "T1110.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-84e4fa62-2-O4",
-              "title": "Lateral file-copy staging",
-              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
-              "data_sources": [
-                "File-share auditing (5145)",
-                "EDR file events"
-              ],
-              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
-              "mitre_attack": [
-                "T1570",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-84e4fa62-3",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on threat actors: APT28 (Fancy Bear); vectors: exploit; impact: ransomware.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-84e4fa62-3-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-84e4fa62-3-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-3-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-84e4fa62-3-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-84e4fa62-3-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-23T14:29:38+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 383,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 5 rated critical. Prioritise the highest-scored items first. Top of the list: #StopRansomware: SafePay Ransomware; October 2026 Microsoft Patch Tuesday, (Tue, Oct 13th); The Q3 Vulnerability Pulse: Discovery ≠ Exploitation."
 }
