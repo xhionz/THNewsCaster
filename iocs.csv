@@ -254,7 +254,7 @@ cves,CVE-2026-108460,1,https://blog.talosintelligence.com/microsoft-patch-tuesda
 cves,CVE-2026-108457,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-108400,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-108399,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
-cves,CVE-2026-108398,2,https://isc.sans.edu/diary/rss/33422 | https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
+cves,CVE-2026-108398,1,https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 cves,CVE-2026-108131,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-108130,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -286,7 +286,7 @@ cves,CVE-2026-102866,1,https://blog.talosintelligence.com/microsoft-patch-tuesda
 cves,CVE-2026-102857,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-102856,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-102855,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
-cves,CVE-2026-102764,1,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-102764,2,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support
 cves,CVE-2026-102225,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-102217,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-102214,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
@@ -329,7 +329,7 @@ cves,CVE-2026-97741,1,https://blog.talosintelligence.com/microsoft-patch-tuesday
 cves,CVE-2026-97739,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-97016,2,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/ | https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 cves,CVE-2026-96952,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
-cves,CVE-2026-96951,4,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/ | https://isc.sans.edu/diary/rss/33422 | https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
+cves,CVE-2026-96951,3,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/ | https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 cves,CVE-2026-96943,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-96940,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-96939,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
@@ -499,7 +499,7 @@ cves,CVE-2026-78556,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2026-77900,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-76519,1,https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-72955,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
-cves,CVE-2026-70571,2,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/ | https://isc.sans.edu/diary/rss/33422
+cves,CVE-2026-70571,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-70303,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-70300,1,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/
 cves,CVE-2026-70291,2,https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/ | https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
@@ -1357,7 +1357,6 @@ domains,95.sbx.tg,1,https://blog.talosintelligence.com/i-had-plans-for-that-seco
 domains,acro.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,acronis.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,anydesk.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,asp.net,1,https://isc.sans.edu/diary/rss/33422
 domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
@@ -1374,7 +1373,6 @@ domains,control.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280
 domains,cook.pth,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,cook.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,copy.bat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,csc.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,data.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,dcsync.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,developer.hashicorp.com,1,https://isc.sans.edu/diary/rss/33426
@@ -1390,7 +1388,6 @@ domains,eseecloud.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-
 domains,explorer.exe,1,https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 domains,favicon.ico,1,https://isc.sans.edu/diary/rss/33442
 domains,fbijobs.gov,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
-domains,fdwsd.dll,1,https://isc.sans.edu/diary/rss/33422
 domains,hdr.json,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,host.ip,1,https://isc.sans.edu/diary/rss/33442
 domains,host.mac,1,https://isc.sans.edu/diary/rss/33442
@@ -1398,14 +1395,12 @@ domains,http.request,1,https://isc.sans.edu/diary/rss/33442
 domains,http.request.accept,1,https://isc.sans.edu/diary/rss/33442
 domains,http.request.body.content,1,https://isc.sans.edu/diary/rss/33442
 domains,http.request.connection,1,https://isc.sans.edu/diary/rss/33442
-domains,http.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,hub.docker.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,index.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-domains,isc.sans.edu,5,https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458
+domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
-domains,kernel32.dll,1,https://isc.sans.edu/diary/rss/33422
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,leheedu.cn,1,https://isc.sans.edu/diary/rss/33442
@@ -1444,11 +1439,10 @@ domains,ping.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa2
 domains,portable.dat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,pulsebrowser.29kh.in12.talos,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,raw.githubusercontent.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
-domains,rndismp6.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
 domains,safe-extract.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,sample.exe,2,https://blog.talosintelligence.com/i-had-plans-for-that-second/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
-domains,sans.edu,4,https://isc.sans.edu/diary/rss/33422 | https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
+domains,sans.edu,3,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
 domains,scan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,sharpshares.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1462,7 +1456,6 @@ domains,socks.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa
 domains,source.domain,1,https://isc.sans.edu/diary/rss/33442
 domains,source.geo,1,https://isc.sans.edu/diary/rss/33442
 domains,source.geo.as.number,1,https://isc.sans.edu/diary/rss/33442
-domains,spaceport.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,sqldiff.exe,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15
 domains,stealer.sa,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1472,7 +1465,6 @@ domains,svchost.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,tuta.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,tutanota.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,tzrhxln.cn,1,https://isc.sans.edu/diary/rss/33442
-domains,unionfs.sys,1,https://isc.sans.edu/diary/rss/33422
 domains,urlscan.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,user.ini,2,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,w32.58d6fec4ba-95.sbx.tg,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
@@ -1486,7 +1478,6 @@ domains,win.malware.laplas,1,https://blog.talosintelligence.com/break-the-silenc
 domains,win.proxy.generic,1,https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/
 domains,win.tool.kmsauto,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,win.worm.zard,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
-domains,wininet.dll,1,https://isc.sans.edu/diary/rss/33422
 domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 domains,www.akamai.com,1,https://isc.sans.edu/diary/rss/33426

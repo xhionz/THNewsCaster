@@ -1538,7 +1538,6 @@
     {
       "value": "CVE-2026-108398",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33422",
         "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
     },
@@ -1735,7 +1734,8 @@
     {
       "value": "CVE-2026-102764",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support"
       ]
     },
     {
@@ -1996,7 +1996,6 @@
       "value": "CVE-2026-96951",
       "sources": [
         "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
-        "https://isc.sans.edu/diary/rss/33422",
         "https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026"
       ]
@@ -3019,8 +3018,7 @@
     {
       "value": "CVE-2026-70571",
       "sources": [
-        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/",
-        "https://isc.sans.edu/diary/rss/33422"
+        "https://blog.talosintelligence.com/microsoft-patch-tuesday-for-october-2026/"
       ]
     },
     {
@@ -8279,12 +8277,6 @@
       ]
     },
     {
-      "value": "asp.net",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
       "value": "attack.mitre.org",
       "sources": [
         "https://isc.sans.edu/diary/rss/33426"
@@ -8381,12 +8373,6 @@
       ]
     },
     {
-      "value": "csc.sys",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
       "value": "data.bin",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -8477,12 +8463,6 @@
       ]
     },
     {
-      "value": "fdwsd.dll",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
       "value": "hdr.json",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -8525,12 +8505,6 @@
       ]
     },
     {
-      "value": "http.sys",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
       "value": "hub.docker.com",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
@@ -8557,7 +8531,6 @@
     {
       "value": "isc.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33422",
         "https://isc.sans.edu/diary/rss/33426",
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
@@ -8568,12 +8541,6 @@
       "value": "jackalsyn.com",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440"
-      ]
-    },
-    {
-      "value": "kernel32.dll",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -8807,12 +8774,6 @@
       ]
     },
     {
-      "value": "rndismp6.sys",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
       "value": "robots.txt",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -8834,7 +8795,6 @@
     {
       "value": "sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33422",
         "https://isc.sans.edu/diary/rss/33426",
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442"
@@ -8919,12 +8879,6 @@
       ]
     },
     {
-      "value": "spaceport.sys",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
-      ]
-    },
-    {
       "value": "sqldiff.exe",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
@@ -8976,12 +8930,6 @@
       "value": "tzrhxln.cn",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
-      ]
-    },
-    {
-      "value": "unionfs.sys",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
@@ -9062,12 +9010,6 @@
       "value": "win.worm.zard",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
-      ]
-    },
-    {
-      "value": "wininet.dll",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33422"
       ]
     },
     {
