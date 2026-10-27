@@ -261,9 +261,6 @@ cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-107777,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01
 cves,CVE-2026-107621,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 cves,CVE-2026-107617,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
-cves,CVE-2026-107607,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02
-cves,CVE-2026-107606,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02
-cves,CVE-2026-107605,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02
 cves,CVE-2026-107362,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 cves,CVE-2026-107361,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 cves,CVE-2026-107337,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
@@ -1416,6 +1413,8 @@ domains,node.js,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
 domains,nxc.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,opcuaserverconfig.copy,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 domains,openssl.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
+domains,order.dell.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
+domains,orders.staples.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
 domains,oui.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,outlook.com,1,https://www.rapid7.com/blog/post/em-patch-tuesday-october-2026
 domains,permission.permissionname,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
@@ -1450,7 +1449,6 @@ domains,stealer.sa,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/in
 domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,submit.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,subs.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,support.swann.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02
 domains,svchost.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,tuta.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,tutanota.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
@@ -1472,7 +1470,7 @@ domains,wininet.dll,1,https://isc.sans.edu/diary/rss/33422
 domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 domains,www.akamai.com,1,https://isc.sans.edu/diary/rss/33426
-domains,www.cisa.gov,7,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
+domains,www.cisa.gov,6,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 domains,www.hashicorp.com,1,https://isc.sans.edu/diary/rss/33426
 domains,www.hitachienergy.com,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 domains,www.kiloview.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
