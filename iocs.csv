@@ -269,7 +269,7 @@ cves,CVE-2026-105273,1,https://www.cisa.gov/news-events/ics-medical-advisories/i
 cves,CVE-2026-105265,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-105134,2,https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html | https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-105133,2,https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html | https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-104935,2,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/ | https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure
+cves,CVE-2026-104935,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 cves,CVE-2026-103672,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-102764,2,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support
 cves,CVE-2026-102076,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
@@ -1141,8 +1141,6 @@ cves,CVE-2015-1000013,1,https://blog.talosintelligence.com/the-q3-vulnerability-
 cves,CVE-2014-125110,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 ips,2.1.7.5,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04
 ips,5.255.11.134,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-ips,25.1.1.1,1,https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure
-ips,25.1.2.2,1,https://www.cisa.gov/news-events/alerts/2026/10/13/cisa-urges-patching-newly-exploited-vulnerability-ivanti-connect-secure
 ips,37.10.71.188,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 ips,77.37.49.40,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 ips,88.119.167.239,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1171,6 +1169,7 @@ domains,95.sbx.tg,1,https://blog.talosintelligence.com/i-had-plans-for-that-seco
 domains,acro.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,acronis.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,anydesk.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,appcatalog.readwrite.all,1,https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/
 domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
@@ -1215,6 +1214,7 @@ domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories
 domains,index.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
+domains,jewishchoice.org,1,https://www.microsoft.com/en-us/security/blog/2026/10/14/the-hidden-network-inside-the-phishing-infrastructure-ecosystem-powering-global-cybercrime/
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,leheedu.cn,1,https://isc.sans.edu/diary/rss/33442
