@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-26T23:31:58+00:00",
+  "generated_at": "2026-10-27T00:11:29+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -6123,6 +6123,629 @@
         }
       ],
       "first_seen": "2026-10-22T19:03:32+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "241eceff349aa225",
+        "source": "SANS Internet Storm Center",
+        "title": "Apple Patches for October 2026, (Mon, Oct 26th)",
+        "link": "https://isc.sans.edu/diary/rss/33458",
+        "published": "Mon, 26 Oct 2026 23:34:37 GMT",
+        "summary": "Apple today released patches for 304 vulnerabilties. This number is still in line with prior Apple updates, and comes just about a month after the last apple update.",
+        "raw_text": "Apple Patches for October 2026, (Mon, Oct 26th) Apple today released patches for 304 vulnerabilties. This number is still in line with prior Apple updates, and comes just about a month after the last apple update. Apple today released patches for 304 vulnerabilties. This number is still in line with prior Apple updates, and comes just about a month after the last apple update. Noteworthy Issue: CVE-2026-86950: This is an already exploited vulnerability in CoreGraphics, and was patched originally a month ago. This month's update delivers the corresponding patches for iOS 18. No new vulnerability is marked as already exploited. Other Interesting issues: CVE-2026-86990: A malicious app may access the camera without user permissions. CVE-2026-28864: A local attacker may gain access to user's Keychain items. iOS 27.2 and iPadOS 27.2 iOS 26.7.2 and iPadOS 26.7.2 iOS 18.7.11 and iPadOS 18.7.11 macOS Golden Gate 27.2 macOS Tahoe 26.7.2 macOS Sequoia 15.8.2 tvOS 27.2 watchOS 27.2 visionOS 27.2 Safari 27.2 CVE-2022-26704: An app may be able to gain elevated privileges. Affects Spotlight x x x x CVE-2026-112410: A remote attacker may cause an unexpected process termination. Affects Heimdal x x x CVE-2026-112413: Processing a maliciously crafted file may lead to unexpected app termination. Affects Model I/O x x x x x x CVE-2026-112414: Processing a maliciously crafted message may lead to a denial-of-service. Affects Mail x x x x x x CVE-2026-112415: An app may be able to cause unexpected system termination or corrupt process memory. Affects AppleAVD x x x x x x CVE-2026-112416: Processing a maliciously crafted video file may lead to unexpected app termination. Affects AppleAVD x x x x x x x CVE-2026-112417: Processing a maliciously crafted 3D model may lead to memory corruption. Affects RealityKit x CVE-2026-112421: An app may be able to modify protected parts of the file system. Affects PackageKit x x x CVE-2026-112423: Processing a maliciously crafted file may lead to a denial-of-service or potentially disclose memory contents. Affects SceneKit x x x x x x CVE-2026-112424: An app may be able to cause unexpected system termination or read kernel memory. Affects HFS x x x CVE-2026-112425: Processing a 3D model may result in disclosure of process memory. Affects SceneKit x x x x x x x CVE-2026-112427: A remote attacker may be able to cause arbitrary code execution. Affects Remote Management x CVE-2026-112428: An app may bypass Gatekeeper checks. Affects DesktopServices x x x CVE-2026-112429: Processing a maliciously crafted file may disclose process memory. Affects ColorSync x x x CVE-2026-112430: An app may be able to gain root privileges. Affects Security x x x CVE-2026-112432: An app may be able to access sensitive user data. Affects FontParser x x x x x CVE-2026-112434: An app may be able to gain root privileges. Affects Security x x x CVE-2026-112438: An unprivileged attacker may be able to execute arbitrary code as root. Affects Kernel x x x CVE-2026-112441: An app may be able to access sensitive user data. Affects Spotlight x x x CVE-2026-112442: An app may be able to modify protected parts of the file system. Affects PackageKit x x x CVE-2026-112443: An app may be able to cause unexpected system termination or corrupt process memory. Affects Wi-Fi x x CVE-2026-112444: An app may be able to bypass Gatekeeper checks. Affects DesktopServices x x CVE-2026-112446: An app may be able to access sensitive user data. Affects Accounts x x x x x CVE-2026-112447: An app may be able to bypass Privacy preferences. Affects Time Machine x x x CVE-2026-112449: Processing a maliciously crafted 3D model may lead to memory corruption. Affects Model I/O x x x x x x CVE-2026-112451: A remote attacker may be able to cause a denial-of-service or disclose process memory. Affects smbx x x x CVE-2026-112453: An app may be able to break out of its sandbox. Affects System Settings x x x CVE-2026-112454: Processing a maliciously crafted video file may lead to unexpected app termination or corrupt process memory. Affects AppleAVD x x x x x CVE-2026-112455: An app may be able to access sensitive user data. Affects Shortcuts x x x x x x x x CVE-2026-112456: Processing a maliciously crafted file may lead to heap corruption. Affects HFS x x x x x CVE-2026-112457: An attacker on the local network may be able to cause unexpected system termination or corrupt process memory. Affects Remote Management x x x CVE-2026-112459: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects IOMobileFrameBuffer x x x x CVE-2026-112461: Processing a maliciously crafted 3D model may lead to memory corruption. Affects Model I/O x x x x x x CVE-2026-112462: A malicious application may be able to bypass Privacy preferences. Affects Control Center x x x CVE-2026-112464: Processing a maliciously crafted file may lead to heap corruption. Affects SceneKit x x x x x x x CVE-2026-112466: An app may be able to cause unexpected system termination or read kernel memory. Affects AVEVideoEncoder x x x x x x x x CVE-2026-112467: An app may be able to bypass network restrictions. Affects App Store x x CVE-2026-112468: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects AVEVideoEncoder x x x x CVE-2026-112469: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects AVEVideoEncoder x x x CVE-2026-112470: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects AVEVideoEncoder x CVE-2026-112471: Processing a maliciously crafted image may lead to unexpected process termination. Affects Core Image x x x CVE-2026-112473: An attacker with the legacy VNC password for Screen Sharing may be able to copy files to the Mac. Affects Screen Sharing Server x x x CVE-2026-112474: An app may be able to cause unexpected system termination or write kernel memory. Affects Kernel x x x x x CVE-2026-112475: An app may be able to cause unexpected system termination. Affects HFS x x x CVE-2026-112476: An app may be able to cause unexpected system termination. Affects Kernel x x x x x x x x CVE-2026-112477: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects IOSurface x x x x x x x x CVE-2026-112478: An app may be able to cause unexpected system termination or read kernel memory. Affects IOKit x x CVE-2026-112479: A malicious USB device may be able to cause unexpected system termination or read kernel memory. Affects USB x x x x x CVE-2026-112480: A user with screen sharing access may be able to view another user's screen. Affects Remote Management x x x CVE-2026-112481: An attacker on the local network may be able to cause unexpected process termination or disclose process memory. Affects Screen Sharing Server x x x CVE-2026-112482: An attacker on the local network may be able to corrupt process memory. Affects Screen Sharing Server x x x CVE-2026-112483: An app may be able to modify protected parts of the file system. Affects Directory Utility x x x CVE-2026-112484: A malicious application may be able to execute arbitrary code with system privileges. Affects Screen Sharing Server x x x CVE-2026-112485: Processing a maliciously crafted 3D model may lead to memory corruption. Affects Model I/O x x x x x x CVE-2026-112486: Processing a 3D model may lead to unexpected app termination. Affects Model I/O x x x x x x CVE-2026-112487: An app may be able to gain root privileges. Affects Storage x x x CVE-2026-112488: Processing a maliciously crafted image may corrupt process memory. Affects ImageIO x x x x x CVE-2026-112491: Processing a maliciously crafted file may lead to unexpected app termination. Affects RealityKit x x x x x x x CVE-2026-112492: An app may be able to gain root privileges. Affects StorageKit x x x CVE-2026-112493: An app may be able to gain root privileges. Affects SecurityAgent x x x CVE-2026-112494: An app may bypass Gatekeeper checks. Affects LaunchServices x x CVE-2026-112495: An app may be able to cause unexpected system termination or read kernel memory. Affects SoftRAID x x x CVE-2026-112497: An app may be able to break out of its sandbox. Affects libxpc x x x CVE-2026-112498: An app may be able to break out of its sandbox. Affects quarantine x x x CVE-2026-112501: An app may be able to cause unexpected system termination. Affects Kernel x x x x x x x x CVE-2026-112502: An app may be able to cause a denial-of-service. Affects Disk Images x x x CVE-2026-112504: An app may be able to modify protected parts of the file system. Affects StorageKit x x x CVE-2026-112505: A malicious Screen Sharing peer may be able to corrupt process memory. Affects smbx x x x CVE-2026-112506: An app may be able to access sensitive user data. Affects Security x CVE-2026-112507: An app may be able to cause unexpected system termination or write kernel memory. Affects Kernel x CVE-2026-112508: An app may be able to cause unexpected system termination or read kernel memory. Affects udf x x x CVE-2026-112510: A remote attacker may be able to cause a denial-of-service. Affects smbx x x x CVE-2026-112511: A malicious Screen Sharing peer may be able to create arbitrary symlinks as root. Affects Screen Sharing Server x x x CVE-2026-112512: An app may be able to bypass Gatekeeper checks. Affects System Settings x x x CVE-2026-112513: An app may be able to break out of its sandbox. Affects Printing x CVE-2026-112514: An attacker may be able to cause unexpected system termination or corrupt kernel memory. Affects Kernel x x x x x x x x CVE-2026-112515: An attacker may be able to cause unexpected system termination or read kernel memory. Affects IOHIDFamily x x x x x x x x CVE-2026-112516: An app may be able to cause unexpected system termination. Affects Kernel x x x x x x x x CVE-2026-112517: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects Kernel x x x x x x x x CVE-2026-112518: An attacker in a privileged network position may be able to impersonate a Kerberos KDC. Affects Heimdal x x x x x CVE-2026-112519: Connecting to a malicious VNC server may cause a denial-of-service. Affects Screen Sharing x x x CVE-2026-112521: A sandboxed process may be able to circumvent sandbox restrictions. Affects Security x x x CVE-2026-112522: Processing a maliciously crafted file may lead to unexpected app termination. Affects libarchive x x x x x CVE-2026-112523: An app may be able to access user-sensitive data. Affects Help Viewer x x x CVE-2026-112524: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects udf x x x CVE-2026-112525: An app may be able to cause unexpected system termination or read kernel memory. Affects APFS x x x CVE-2026-112526: A remote attacker may be able to cause unexpected app termination. Affects smbx x x x CVE-2026-112529: An app may be able to cause unexpected system termination. Affects udf x x x CVE-2026-112530: An app may be able to gain root privileges. Affects CVMS x x x CVE-2026-112531: An app may be able to cause unexpected system termination. Affects AppleRAID x x x CVE-2026-112532: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects Kernel x x x CVE-2026-112533: An app may be able to access sensitive user data. Affects IOGPUFamily x x x CVE-2026-112534: An app may be able to bypass sandbox restrictions. Affects dyld x x x CVE-2026-112535: An app may be able to modify protected parts of the file system. Affects StorageKit x x x CVE-2026-112536: An app may be able to cause unexpected system termination or write kernel memory. Affects APFS x x x CVE-2026-112537: An app may be able to read sensitive location information. Affects Wi-Fi x x x CVE-2026-112539: A malicious app may be able to read or write to protected files. Affects AppleMobileFileIntegrity x x x CVE-2026-112540: Processing a maliciously crafted file may lead to unexpected app termination. Affects SceneKit x x x CVE-2026-112541: An app may be able to gain root privileges. Affects StorageKit x x x CVE-2026-112542: A malicious app may be able to intercept network traffic. Affects ppp x x x CVE-2026-112543: A malicious app may be able to break out of its sandbox. Affects Kernel x x x CVE-2026-112544: Mounting a malicious disk image may cause unexpected system termination. Affects AppleRAID x CVE-2026-112545: An app may be able to gain root privileges. Affects configd x x x CVE-2026-112546: Processing a maliciously crafted file may lead to unexpected app termination. Affects Audio x x x x x x x x CVE-2026-112547: An app may be able to access sensitive user data. Affects ReplayKit x CVE-2026-112548: An app may be able to gain root privileges. Affects StorageKit x x x CVE-2026-112550: An app may be able to cause a denial-of-service. Affects ncurses x x x CVE-2026-112551: An app may be able to read sensitive location information. Affects AirPort x x CVE-2026-112552: An attacker with control of a network file server may be able to cause unexpected system termination. Affects SMB x x x CVE-2026-112553: Processing a maliciously crafted file may lead to unexpected app termination. Affects Model I/O x x CVE-2026-112554: An app may be able to cause unexpected system termination or read kernel memory. Affects IOStorageFamily x x x x x CVE-2026-112555: A malicious app may be able to break out of its sandbox. Affects zsh x x x CVE-2026-112556: An attacker may tamper with code-signed applications to execute arbitrary code in the application's context. Affects System Settings x x x CVE-2026-112557: A malicious application may be able to bypass Privacy preferences. Affects Spotlight x x x CVE-2026-112558: An app may be able to access sensitive user data. Affects Spotlight x x x CVE-2026-112560: Processing a maliciously crafted image may result in disclosure of process memory. Affects ImageIO x x CVE-2026-112562: A malicious app may be able to break out of its sandbox. Affects Printing x x x CVE-2026-112563: Processing a maliciously crafted file may lead to unexpected app termination. Affects Model I/O x x x CVE-2026-112566: An attacker in physical proximity may be able to cause a denial-of-service. Affects Bluetooth x x x x x CVE-2026-112567: A malicious application may be able to bypass Privacy preferences. Affects Spotlight x x x x x x x CVE-2026-112568: Processing a maliciously crafted file may bypass Gatekeeper checks. Affects ArchiveService x x x CVE-2026-112570: An app may be able to break out of its sandbox. Affects DiskArbitration x x x CVE-2026-112571: Processing a maliciously crafted image may result in disclosure of process memory. Affects ImageIO x x x x x x x x CVE-2026-112575: An app may be able to monitor keystrokes without user permission. Affects WindowServer x x x CVE-2026-112576: An app may be able to cause unexpected changes to copy-on-write memory. Affects Kernel x x x x x x x x CVE-2026-112577: An app may be able to access sensitive user data. Affects TCC x CVE-2026-112593: An app may be able to cause unexpected system termination or write kernel memory. Affects GPU Drivers x x CVE-2026-112595: An attacker in physical proximity may be able to craft malicious network traffic to gain access to a Thread network. Affects Thread x x x CVE-2026-112596: Processing a maliciously crafted video file may lead to unexpected system termination. Affects HomeKit x x x x x CVE-2026-112599: Processing maliciously crafted web content may lead to an unexpected process crash. Affects WebKit x x x x x x CVE-2026-112601: An app may be able to cause a denial-of-service. Affects Shortcuts x CVE-2026-112604: Processing a maliciously crafted file may lead to unexpected app termination. Affects CoreSymbolication x x CVE-2026-112606: An app may be able to cause unexpected system termination. Affects Kernel x x x x x x x x CVE-2026-112607: A remote attacker may be able to leak memory. Affects mDNSResponder x x CVE-2026-112609: An app may be able to access sensitive user data. Affects Safety Check x CVE-2026-112610: Processing a maliciously crafted PDF file may lead to memory corruption. Affects CoreGraphics x x CVE-2026-112611: Processing a maliciously crafted PDF file may lead to memory corruption. Affects CoreGraphics x x CVE-2026-112612: An attacker with physical access to a trust-paired device may be able to read and write arbitrary files. Affects Accounts x x CVE-2026-112614: Processing a maliciously crafted image may lead to unexpected app termination. Affects ImageIO x x x x CVE-2026-112615: Processing maliciously crafted web content may lead to an unexpected process termination. Affects WebKit x x x x x x x CVE-2026-112616: An app may be able to access sensitive user data. Affects Screen Time x x x CVE-2026-112617: An app may be able to access sensitive user data. Affects iCloud x CVE-2026-112618: An app may be able to access sensitive user data. Affects Files x x CVE-2026-112619: Processing a maliciously crafted calendar invitation may lead to memory corruption. Affects Calendar x x x x CVE-2026-112620: An attacker in a privileged network position may be able to cause a denial-of-service. Affects Wi-Fi x x x x CVE-2026-112621: Processing a maliciously crafted image may result in memory corruption. Affects LinkPresentation x x x x x CVE-2026-112622: An attacker in radio range may be able to cause unexpected system termination. Affects Wi-Fi x x x x CVE-2026-112623: Processing maliciously crafted web content may lead to arbitrary code execution. Affects WebKit x x x x CVE-2026-112624: An app may be able to bypass Privacy preferences. Affects Kernel x x x x x x CVE-2026-112625: Processing a maliciously crafted image may result in memory corruption. Affects ImageIO x x x x x CVE-2026-112626: Processing maliciously crafted web content may lead to arbitrary code execution. Affects WebKit JavaScript Bindings x x x x x x x CVE-2026-112627: Processing a maliciously crafted image may result in disclosure of process memory. Affects ImageIO x x x x x x CVE-2026-112628: An app may be able to access sensitive user data. Affects Spotlight x x x x x x CVE-2026-112629: Processing a maliciously crafted image may lead to unexpected app termination. Affects ImageIO x x x x x CVE-2026-112630: Processing a maliciously crafted image may result in disclosure of process memory. Affects ImageIO x x x x CVE-2026-112632: Processing a maliciously crafted image may result in disclosure of process memory. Affects ImageIO x x CVE-2026-112633: Processing a maliciously crafted image may lead to unexpected app termination. Affects ImageIO x CVE-2026-112634: Processing a maliciously crafted image may lead to unexpected app termination. Affects ImageIO x CVE-2026-112637: Processing maliciously crafted web content may lead to arbitrary code execution. Affects WebKit Canvas x x x x x x CVE-2026-112638: An attacker in radio range may be able to cause unexpected system termination. Affects CoreAudio x x x x x x x x CVE-2026-112639: Processing maliciously crafted web content may lead to arbitrary code execution. Affects WebKit Process Model x x x x x CVE-2026-112640: Processing maliciously crafted web content may lead to memory corruption. Affects WebKit x x x x x x x CVE-2026-112642: Processing a maliciously crafted font may result in the disclosure of process memory. Affects FontParser x x x x x x x CVE-2026-112646: An app may be able to cause unexpected system termination or corrupt process memory. Affects SpringBoard x x x CVE-2026-112647: An app may be able to access sensitive user data. Affects iCloud x x x CVE-2026-112652: An malicious app may be able to bypass certificate validation. Affects Security x x x x x x CVE-2026-112655: Processing maliciously crafted web content may lead to arbitrary code execution. Affects WebKit x x x CVE-2026-112656: Processing a maliciously crafted font may result in the disclosure of process memory. Affects CoreText x x x x x x x x CVE-2026-112658: An app may be able to access sensitive user data. Affects Siri x x CVE-2026-112659: Processing maliciously crafted web content may lead to arbitrary code execution. Affects WebKit x x x x x CVE-2026-112660: An app may be able to bypass certain Privacy preferences. Affects Photos Storage x x x x x x CVE-2026-112665: An app may be able to determine kernel memory layout. Affects Kernel x x x x x x x CVE-2026-112669: Processing maliciously crafted web content may lead to an unexpected Safari crash. Affects WebKit x x x x x CVE-2026-112670: Processing a maliciously crafted file may lead to heap corruption. Affects BOM x x x CVE-2026-112671: A remote attacker may be able to cause a denial-of-service. Affects Mail x x x x x x CVE-2026-112672: A maliciously crafted ZIP archive may bypass Gatekeeper checks. Affects BOM x x x CVE-2026-112673: Processing maliciously crafted web content may lead to an unexpected process termination. Affects WebKit x x x x x CVE-2026-112675: An app may be able to access sensitive user data. Affects Audio x x x CVE-2026-112676: An app may be able to access a user's Photos Library. Affects Photos Storage x x x x x x CVE-2026-112677: An application may be able to execute arbitrary code with system privileges. Affects RemoteManagement x x x CVE-2026-112678: An app may be able to access sensitive user data. Affects Calendar x x x x x x x CVE-2026-112679: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects Kernel x x x x x CVE-2026-112680: Processing maliciously crafted web content may result in the disclosure of process memory. Affects WebKit x x x x x CVE-2026-112681: An app may be able to fingerprint the user. Affects Power Management x x CVE-2026-112682: A remote attacker may be able to cause unexpected app termination. Affects Messages x x x x x x CVE-2026-112683: Processing a maliciously crafted font may lead to unexpected app termination or corrupt process memory. Affects FontParser x x x x x x CVE-2026-112684: Processing maliciously crafted web content may lead to an unexpected process crash. Affects WebKit x x x x x x x CVE-2026-112685: An app may be able to access sensitive user data. Affects Siri x x x x x CVE-2026-112686: Processing maliciously crafted web content may lead to an unexpected process termination. Affects WebKit x x x x x x x CVE-2026-112687: An attacker on the local network may be able to cause unexpected system termination or corrupt process memory. Affects MediaRemote x x CVE-2026-112688: Parsing a file may lead to an unexpected app termination or arbitrary code execution. Affects CoreMedia x x x x CVE-2026-112689: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects AVEVideoEncoder x x x x x x CVE-2026-112690: A remote attacker may be able to break out of the WebContent sandbox. Affects App Store x x x x x x CVE-2026-112691: An app may be able to cause unexpected system termination. Affects SwiftUI x x x x CVE-2026-112692: An app may be able to access sensitive user data. Affects App Intents x x x x CVE-2026-112693: Processing maliciously crafted web content may lead to an unexpected Safari crash. Affects WebKit x x x x CVE-2026-112696: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects Apple Neural Engine x x x x x CVE-2026-112698: An app may be able to cause unexpected system termination. Affects Kernel x x x x x CVE-2026-112701: An app may be able to access sensitive user data. Affects CloudKit x x CVE-2026-112704: A malicious app may be able to break out of its sandbox. Affects AppleAVD x x x CVE-2026-112705: An app may be able to cause unexpected system termination. Affects AVEVideoEncoder x x x x x x CVE-2026-112706: An app may be able to access sensitive user data. Affects CoreMedia x x x x x CVE-2026-112707: An app may be able to identify what other apps a user has installed. Affects Maps x x CVE-2026-112708: An app may be able to cause unexpected system termination or corrupt process memory. Affects CoreAudio x x x CVE-2026-113896: An app may be able to access sensitive user data. Affects FileProvider x x x x x x CVE-2026-113897: A remote attacker may be able to break out of Web Content sandbox. Affects WebKit Process Model x x x x CVE-2026-113898: A malicious application may be able to bypass Privacy preferences. Affects Accounts x x x x x x x x CVE-2026-113899: An app may be able to cause unexpected system termination. Affects ppp x x x CVE-2026-113900: An app may be able to gain root privileges. Affects Crash Reporter x x x CVE-2026-113901: Processing maliciously crafted web content may lead to an unexpected process crash. Affects WebRTC x x x x CVE-2026-113903: Processing maliciously crafted web content may lead to unexpected memory modification. Affects WebKit x x x x CVE-2026-113904: Processing maliciously crafted web content may lead to an unexpected process crash. Affects WebKit x CVE-2026-113906: An attacker in physical proximity may be able to cause a denial-of-service. Affects Bluetooth x x CVE-2026-113907: An app may be able to cause unexpected system termination or corrupt process memory. Affects CoreAudio x x x x x x x x CVE-2026-113908: An app may be able to access sensitive user data. Affects Contacts x CVE-2026-113909: An attacker in physical proximity may be able to corrupt process memory. Affects Wi-Fi x x x x CVE-2026-113910: An app may be able to disclose kernel memory. Affects Compression x x x x x x x x CVE-2026-113912: Processing a maliciously crafted media file may lead to unexpected app termination or corrupt process memory. Affects CoreAudio x x x x x x CVE-2026-113913: Processing web content may disclose sensitive information. Affects Security x x x x x x CVE-2026-113914: An app may be able to access sensitive user data. Affects App Store x x CVE-2026-113915: An app may be able to access sensitive user data. Affects MediaAnalysis x x x x x x x x CVE-2026-113934: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects CoreStorage x CVE-2026-113935: An app may be able to cause unexpected system termination. Affects CoreStorage x CVE-2026-113939: Mounting a maliciously crafted disk image may cause unexpected system termination or corrupt kernel memory. Affects CoreStorage x CVE-2026-113941: An app may be able to cause unexpected system termination or read kernel memory. Affects CoreStorage x CVE-2026-113946: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects CoreStorage x CVE-2026-113947: Unpacking a maliciously crafted archive may lead to unexpected app termination or arbitrary code execution. Affects GPUTools x CVE-2026-113948: An app may be able to modify protected parts of the file system. Affects PackageKit x CVE-2026-113949: Processing maliciously crafted web content may lead to memory corruption. Affects WebKit x x x x x CVE-2026-113950: Processing a maliciously crafted font may lead to unexpected app termination or corrupt process memory. Affects CoreGraphics x x x x x CVE-2026-113952: A website may be able to use a media format that should be restricted in Lockdown Mode. Affects WebKit x x x x CVE-2026-20648: A malicious app may be able to access notifications from other iCloud devices. Affects Siri x CVE-2026-20649: A user may be able to view sensitive user information. Affects Game Center x CVE-2026-28864: A local attacker may gain access to user's Keychain items. Affects Security x x x CVE-2026-28991: An app may be able to cause a denial-of-service. Affects Accelerate x CVE-2026-43736: An app may be able to access sensitive user data. Affects Siri x CVE-2026-64750: Processing a maliciously crafted image may result in memory corruption. Affects ImageIO x x x CVE-2026-64759: Processing a maliciously crafted image may lead to arbitrary code execution. Affects ImageIO x CVE-2026-64767: A remote attacker may be able to cause unexpected system termination or corrupt kernel memory. Affects afpfs x CVE-2026-64789: A malicious application may bypass Gatekeeper checks. Affects quarantine x x CVE-2026-65327: A local attacker may be able to elevate their privileges. Affects CUPS x x x CVE-2026-65339: An app may be able to leak sensitive user information. Affects Audio x CVE-2026-65350: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects Kernel x x x CVE-2026-65363: An app may be able to break out of its sandbox. Affects Security x x x CVE-2026-65368: A maliciously crafted disk image may bypass Gatekeeper checks. Affects CoreServicesUIAgent x x CVE-2026-65373: A malicious app may be able to gain root privileges. Affects Screen Sharing Server x x CVE-2026-65384: A remote attacker may cause an unexpected process termination. Affects Screen Sharing Server x CVE-2026-65385: A buffer overflow may result in memory corruption and unexpected app termination. Affects IOKit x x x x CVE-2026-65392: An app with root privileges may be able to access private information. Affects Sandbox x CVE-2026-65397: An app may be able to access sensitive user data. Affects Photos Storage x x x x x x CVE-2026-84493: A malicious app may be able to access Bluetooth without user consent. Affects AccessorySetupKit x x CVE-2026-84494: An app may be able to cause unexpected system termination or write kernel memory. Affects Apple Neural Engine x x x CVE-2026-84495: An app may be able to cause unexpected system termination or write kernel memory. Affects Kernel x x x CVE-2026-84496: Mounting a maliciously crafted disk image may cause unexpected system termination or corrupt kernel memory. Affects APFS x x CVE-2026-84498: An app may be able to disclose kernel memory. Affects udf x x CVE-2026-84528: An app may be able to access sensitive user data. Affects Carbon Core x x CVE-2026-84539: An app may be able to cause unexpected system termination. Affects GPU Drivers x CVE-2026-84542: An app may be able to read files outside of its sandbox. Affects Metal x x CVE-2026-84545: An app with App Sandbox restrictions may be able to escape the sandbox and execute code with root privileges. Affects CUPS x x CVE-2026-84590: A remote attacker may be able to cause unexpected app termination or heap corruption. Affects Screen Sharing Server x x x CVE-2026-84594: An app may be able to access sensitive user data. Affects UIKit x CVE-2026-84595: An app may be able to cause unexpected system termination. Affects Apple Neural Engine x x CVE-2026-84599: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects Kernel x CVE-2026-84604: Processing a maliciously crafted audit file may corrupt process memory. Affects OpenBSM x x CVE-2026-84605: An app may be able to read the device's name. Affects TextKit x x CVE-2026-84610: A maliciously crafted ZIP archive may bypass Gatekeeper checks. Affects BOM x x CVE-2026-84614: An attacker with physical access may be able to access contacts from the lock screen. Affects Siri x CVE-2026-84627: Processing a maliciously crafted image may lead to heap corruption. Affects ImageIO x x CVE-2026-86880: An app may be able to access sensitive user data. Affects MediaRemote x CVE-2026-86896: A malicious app may be able to gain root privileges. Affects CloudKit x x x CVE-2026-86916: An app may be able to execute arbitrary code with kernel privileges. Affects Kernel x CVE-2026-86920: An app may be able to access sensitive user data. Affects Apple Intelligence x x x CVE-2026-86923: An app may be able to access sensitive user data. Affects Siri x x CVE-2026-86925: An app may be able to access sensitive user data. Affects Quick Look x x x CVE-2026-86929: Processing a maliciously crafted file may lead to arbitrary code execution. Affects Grapher x x CVE-2026-86931: An app may be able to access sensitive user data. Affects Security x x CVE-2026-86937: An app may bypass Gatekeeper checks. Affects ArchiveService x x x CVE-2026-86939: An attacker with root privileges may be able to access protected user data. Affects Archive Utility x x CVE-2026-86941: An app may bypass Gatekeeper checks. Affects Carbon Core x x x CVE-2026-86942: An app may be able to cause a denial-of-service. Affects Heimdal x x x CVE-2026-86943: A remote attacker may be able to cause a denial-of-service. Affects Heimdal x CVE-2026-86945: A malicious app may be able to create files in protected directories. Affects libcryptex x x x CVE-2026-86946: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects SMB x x x CVE-2026-86950: Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals on versions of iOS before iOS 27.. Affects CoreGraphics x CVE-2026-86958: An attacker with memory write capability may be able to bypass pointer authentication codes and run arbitrary code. Affects dyld x x CVE-2026-86964: An app may be able to cause unexpected system termination. Affects Kernel x CVE-2026-86966: An app may be able to modify protected parts of the file system. Affects copyfile x x x CVE-2026-86968: A malicious app may be able to access restricted system interfaces or launder launch attribution. Affects System Preferences x x x CVE-2026-86969: An app may be able to cause unexpected system termination or corrupt kernel memory. Affects CoreAudio x x x x x CVE-2026-86970: Processing a maliciously crafted font may result in the disclosure of process memory. Affects FontParser x x x x x x x x CVE-2026-86971: Processing a maliciously crafted image may lead to unexpected app termination. Affects Accelerate Framework x x x x x x CVE-2026-86972: Processing a maliciously crafted audio file may lead to memory corruption. Affects CoreAudio x x x x x x x CVE-2026-86973: Processing maliciously crafted web content may lead to an unexpected process crash. Affects WebRTC x x x x CVE-2026-86974: Processing maliciously crafted web content may lead to memory corruption. Affects WebKit x x x x x CVE-2026-86978: An app may be able to access sensitive user data. Affects HomeKit x x x CVE-2026-86984: An app may be able to access information about a user's contacts. Affects Siri x x x CVE-2026-86985: Processing maliciously crafted web content may lead to an unexpected process crash. Affects WebKit x x x x x CVE-2026-86986: Processing maliciously crafted web content may lead to an unexpected Safari crash. Affects WebKit x CVE-2026-86987: A remote attacker may be able to access sensitive user data. Affects Apple Intelligence x CVE-2026-86988: Processing a maliciously crafted image may result in disclosure of process memory. Affects ColorSync x x x x x CVE-2026-86989: An app may be able to fingerprint the user. Affects MobileGestalt x x CVE-2026-86990: A malicious app may be able to access the camera without user permission. Affects CoreMedia x x x x x x CVE-2026-86991: Processing a maliciously crafted file may lead to unexpected process termination. Affects SceneKit x x x x x x CVE-2026-86992: Processing a maliciously crafted video file may lead to unexpected app termination. Affects CoreMedia x x x x x x x x (c) SANS Internet Storm Center. https://isc.sans.edu Creative Commons Attribution-Noncommercial 3.0 United States License.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 66,
+        "rationale": [
+          "source weight (advisory)=+15",
+          "304 CVE(s)=+30",
+          "1 MITRE technique hit(s)=+8",
+          "2 initial-access vector(s)=+9",
+          "1 IOC(s)=+4"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-86950",
+          "CVE-2026-86990",
+          "CVE-2026-28864",
+          "CVE-2022-26704",
+          "CVE-2026-112410",
+          "CVE-2026-112413",
+          "CVE-2026-112414",
+          "CVE-2026-112415",
+          "CVE-2026-112416",
+          "CVE-2026-112417",
+          "CVE-2026-112421",
+          "CVE-2026-112423",
+          "CVE-2026-112424",
+          "CVE-2026-112425",
+          "CVE-2026-112427",
+          "CVE-2026-112428",
+          "CVE-2026-112429",
+          "CVE-2026-112430",
+          "CVE-2026-112432",
+          "CVE-2026-112434",
+          "CVE-2026-112438",
+          "CVE-2026-112441",
+          "CVE-2026-112442",
+          "CVE-2026-112443",
+          "CVE-2026-112444",
+          "CVE-2026-112446",
+          "CVE-2026-112447",
+          "CVE-2026-112449",
+          "CVE-2026-112451",
+          "CVE-2026-112453",
+          "CVE-2026-112454",
+          "CVE-2026-112455",
+          "CVE-2026-112456",
+          "CVE-2026-112457",
+          "CVE-2026-112459",
+          "CVE-2026-112461",
+          "CVE-2026-112462",
+          "CVE-2026-112464",
+          "CVE-2026-112466",
+          "CVE-2026-112467",
+          "CVE-2026-112468",
+          "CVE-2026-112469",
+          "CVE-2026-112470",
+          "CVE-2026-112471",
+          "CVE-2026-112473",
+          "CVE-2026-112474",
+          "CVE-2026-112475",
+          "CVE-2026-112476",
+          "CVE-2026-112477",
+          "CVE-2026-112478",
+          "CVE-2026-112479",
+          "CVE-2026-112480",
+          "CVE-2026-112481",
+          "CVE-2026-112482",
+          "CVE-2026-112483",
+          "CVE-2026-112484",
+          "CVE-2026-112485",
+          "CVE-2026-112486",
+          "CVE-2026-112487",
+          "CVE-2026-112488",
+          "CVE-2026-112491",
+          "CVE-2026-112492",
+          "CVE-2026-112493",
+          "CVE-2026-112494",
+          "CVE-2026-112495",
+          "CVE-2026-112497",
+          "CVE-2026-112498",
+          "CVE-2026-112501",
+          "CVE-2026-112502",
+          "CVE-2026-112504",
+          "CVE-2026-112505",
+          "CVE-2026-112506",
+          "CVE-2026-112507",
+          "CVE-2026-112508",
+          "CVE-2026-112510",
+          "CVE-2026-112511",
+          "CVE-2026-112512",
+          "CVE-2026-112513",
+          "CVE-2026-112514",
+          "CVE-2026-112515",
+          "CVE-2026-112516",
+          "CVE-2026-112517",
+          "CVE-2026-112518",
+          "CVE-2026-112519",
+          "CVE-2026-112521",
+          "CVE-2026-112522",
+          "CVE-2026-112523",
+          "CVE-2026-112524",
+          "CVE-2026-112525",
+          "CVE-2026-112526",
+          "CVE-2026-112529",
+          "CVE-2026-112530",
+          "CVE-2026-112531",
+          "CVE-2026-112532",
+          "CVE-2026-112533",
+          "CVE-2026-112534",
+          "CVE-2026-112535",
+          "CVE-2026-112536",
+          "CVE-2026-112537",
+          "CVE-2026-112539",
+          "CVE-2026-112540",
+          "CVE-2026-112541",
+          "CVE-2026-112542",
+          "CVE-2026-112543",
+          "CVE-2026-112544",
+          "CVE-2026-112545",
+          "CVE-2026-112546",
+          "CVE-2026-112547",
+          "CVE-2026-112548",
+          "CVE-2026-112550",
+          "CVE-2026-112551",
+          "CVE-2026-112552",
+          "CVE-2026-112553",
+          "CVE-2026-112554",
+          "CVE-2026-112555",
+          "CVE-2026-112556",
+          "CVE-2026-112557",
+          "CVE-2026-112558",
+          "CVE-2026-112560",
+          "CVE-2026-112562",
+          "CVE-2026-112563",
+          "CVE-2026-112566",
+          "CVE-2026-112567",
+          "CVE-2026-112568",
+          "CVE-2026-112570",
+          "CVE-2026-112571",
+          "CVE-2026-112575",
+          "CVE-2026-112576",
+          "CVE-2026-112577",
+          "CVE-2026-112593",
+          "CVE-2026-112595",
+          "CVE-2026-112596",
+          "CVE-2026-112599",
+          "CVE-2026-112601",
+          "CVE-2026-112604",
+          "CVE-2026-112606",
+          "CVE-2026-112607",
+          "CVE-2026-112609",
+          "CVE-2026-112610",
+          "CVE-2026-112611",
+          "CVE-2026-112612",
+          "CVE-2026-112614",
+          "CVE-2026-112615",
+          "CVE-2026-112616",
+          "CVE-2026-112617",
+          "CVE-2026-112618",
+          "CVE-2026-112619",
+          "CVE-2026-112620",
+          "CVE-2026-112621",
+          "CVE-2026-112622",
+          "CVE-2026-112623",
+          "CVE-2026-112624",
+          "CVE-2026-112625",
+          "CVE-2026-112626",
+          "CVE-2026-112627",
+          "CVE-2026-112628",
+          "CVE-2026-112629",
+          "CVE-2026-112630",
+          "CVE-2026-112632",
+          "CVE-2026-112633",
+          "CVE-2026-112634",
+          "CVE-2026-112637",
+          "CVE-2026-112638",
+          "CVE-2026-112639",
+          "CVE-2026-112640",
+          "CVE-2026-112642",
+          "CVE-2026-112646",
+          "CVE-2026-112647",
+          "CVE-2026-112652",
+          "CVE-2026-112655",
+          "CVE-2026-112656",
+          "CVE-2026-112658",
+          "CVE-2026-112659",
+          "CVE-2026-112660",
+          "CVE-2026-112665",
+          "CVE-2026-112669",
+          "CVE-2026-112670",
+          "CVE-2026-112671",
+          "CVE-2026-112672",
+          "CVE-2026-112673",
+          "CVE-2026-112675",
+          "CVE-2026-112676",
+          "CVE-2026-112677",
+          "CVE-2026-112678",
+          "CVE-2026-112679",
+          "CVE-2026-112680",
+          "CVE-2026-112681",
+          "CVE-2026-112682",
+          "CVE-2026-112683",
+          "CVE-2026-112684",
+          "CVE-2026-112685",
+          "CVE-2026-112686",
+          "CVE-2026-112687",
+          "CVE-2026-112688",
+          "CVE-2026-112689",
+          "CVE-2026-112690",
+          "CVE-2026-112691",
+          "CVE-2026-112692",
+          "CVE-2026-112693",
+          "CVE-2026-112696",
+          "CVE-2026-112698",
+          "CVE-2026-112701",
+          "CVE-2026-112704",
+          "CVE-2026-112705",
+          "CVE-2026-112706",
+          "CVE-2026-112707",
+          "CVE-2026-112708",
+          "CVE-2026-113896",
+          "CVE-2026-113897",
+          "CVE-2026-113898",
+          "CVE-2026-113899",
+          "CVE-2026-113900",
+          "CVE-2026-113901",
+          "CVE-2026-113903",
+          "CVE-2026-113904",
+          "CVE-2026-113906",
+          "CVE-2026-113907",
+          "CVE-2026-113908",
+          "CVE-2026-113909",
+          "CVE-2026-113910",
+          "CVE-2026-113912",
+          "CVE-2026-113913",
+          "CVE-2026-113914",
+          "CVE-2026-113915",
+          "CVE-2026-113934",
+          "CVE-2026-113935",
+          "CVE-2026-113939",
+          "CVE-2026-113941",
+          "CVE-2026-113946",
+          "CVE-2026-113947",
+          "CVE-2026-113948",
+          "CVE-2026-113949",
+          "CVE-2026-113950",
+          "CVE-2026-113952",
+          "CVE-2026-20648",
+          "CVE-2026-20649",
+          "CVE-2026-28991",
+          "CVE-2026-43736",
+          "CVE-2026-64750",
+          "CVE-2026-64759",
+          "CVE-2026-64767",
+          "CVE-2026-64789",
+          "CVE-2026-65327",
+          "CVE-2026-65339",
+          "CVE-2026-65350",
+          "CVE-2026-65363",
+          "CVE-2026-65368",
+          "CVE-2026-65373",
+          "CVE-2026-65384",
+          "CVE-2026-65385",
+          "CVE-2026-65392",
+          "CVE-2026-65397",
+          "CVE-2026-84493",
+          "CVE-2026-84494",
+          "CVE-2026-84495",
+          "CVE-2026-84496",
+          "CVE-2026-84498",
+          "CVE-2026-84528",
+          "CVE-2026-84539",
+          "CVE-2026-84542",
+          "CVE-2026-84545",
+          "CVE-2026-84590",
+          "CVE-2026-84594",
+          "CVE-2026-84595",
+          "CVE-2026-84599",
+          "CVE-2026-84604",
+          "CVE-2026-84605",
+          "CVE-2026-84610",
+          "CVE-2026-84614",
+          "CVE-2026-84627",
+          "CVE-2026-86880",
+          "CVE-2026-86896",
+          "CVE-2026-86916",
+          "CVE-2026-86920",
+          "CVE-2026-86923",
+          "CVE-2026-86925",
+          "CVE-2026-86929",
+          "CVE-2026-86931",
+          "CVE-2026-86937",
+          "CVE-2026-86939",
+          "CVE-2026-86941",
+          "CVE-2026-86942",
+          "CVE-2026-86943",
+          "CVE-2026-86945",
+          "CVE-2026-86946",
+          "CVE-2026-86958",
+          "CVE-2026-86964",
+          "CVE-2026-86966",
+          "CVE-2026-86968",
+          "CVE-2026-86969",
+          "CVE-2026-86970",
+          "CVE-2026-86971",
+          "CVE-2026-86972",
+          "CVE-2026-86973",
+          "CVE-2026-86974",
+          "CVE-2026-86978",
+          "CVE-2026-86984",
+          "CVE-2026-86985",
+          "CVE-2026-86986",
+          "CVE-2026-86987",
+          "CVE-2026-86988",
+          "CVE-2026-86989",
+          "CVE-2026-86991",
+          "CVE-2026-86992"
+        ],
+        "ips": [],
+        "domains": [
+          "isc.sans.edu"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1021.002"
+        ],
+        "vectors": [
+          "exploit",
+          "smb"
+        ],
+        "sectors": [
+          "energy",
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-241eceff-1",
+          "title": "Initial access via CVE-2026-86950 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-86950 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-86950, CVE-2026-86990, CVE-2026-28864; vectors: exploit, smb.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-241eceff-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-86950.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-241eceff-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-86950 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-86950/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-241eceff-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-86950 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-86950')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-241eceff-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-241eceff-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-241eceff-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-86950, CVE-2026-86990, CVE-2026-28864; vectors: exploit, smb.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-241eceff-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('isc.sans.edu') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-241eceff-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-241eceff-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-241eceff-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-241eceff-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-241eceff-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-86950, CVE-2026-86990, CVE-2026-28864; vectors: exploit, smb.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-241eceff-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-241eceff-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-241eceff-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-241eceff-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-27T00:11:29+00:00",
       "agent_trace": []
     },
     {
@@ -17350,321 +17973,6 @@
         }
       ],
       "first_seen": "2026-10-26T09:55:20+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "40c2793d66377bc7",
-        "source": "CISA Advisories",
-        "title": "CISA Urges Patching Critical Vulnerability in BeyondTrust Remote Support",
-        "link": "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support",
-        "published": "Fri, 16 Oct 26 12:00:00 +0000",
-        "summary": "CISA is aware of critical authentication bypass vulnerability CVE-2026-102764 , affecting BeyondTrust Remote Support (formerly Bomgar) versions 26.2.3 and earlier. Patches are available for supported versions (24.3.1 and later); organizations using older versions must upgrade first. Cyber threat actors are actively exploiting the vulnerability to gain initial access, then establishing persistence, escalating privileges, and moving laterally. CISA added CVE-2026-102764 to its Known Exploited Vulnerabilities (KEV) catalog on Oct. 16, 2026. CISA urges organizations with affected self-hosted Remote Support appliances to immediately take the following actions: Apply the BT26-05-RS patch, as outlined in BeyondTrust’s Security Advisory BT26-05 . Organizations on a self-hosted Remote Support version older than 24.3.1 will need to upgrade to a newer version to apply the patch. Organizations using BeyondTrust-hosted (SaaS) Remote Support deployments have already been patched. Review BeyondTrust’s blog ARMORY CASTLE and BT26-05: What Security Teams Need to Know for detailed information on the vulnerability and recommended response and mitigation actions. Limit external access to the Remote Support appliance to the services needed to support users and customers. Restrict access to administrative interfaces to trusted networks. Review BeyondTrust’s B Series Appliance on-premises security for additional guidance on securing network connectivity for self-hosted Remote Support appliances. Or",
-        "raw_text": "CISA Urges Patching Critical Vulnerability in BeyondTrust Remote Support CISA is aware of critical authentication bypass vulnerability CVE-2026-102764 , affecting BeyondTrust Remote Support (formerly Bomgar) versions 26.2.3 and earlier. Patches are available for supported versions (24.3.1 and later); organizations using older versions must upgrade first. Cyber threat actors are actively exploiting the vulnerability to gain initial access, then establishing persistence, escalating privileges, and moving laterally. CISA added CVE-2026-102764 to its Known Exploited Vulnerabilities (KEV) catalog on Oct. 16, 2026. CISA urges organizations with affected self-hosted Remote Support appliances to immediately take the following actions: Apply the BT26-05-RS patch, as outlined in BeyondTrust’s Security Advisory BT26-05 . Organizations on a self-hosted Remote Support version older than 24.3.1 will need to upgrade to a newer version to apply the patch. Organizations using BeyondTrust-hosted (SaaS) Remote Support deployments have already been patched. Review BeyondTrust’s blog ARMORY CASTLE and BT26-05: What Security Teams Need to Know for detailed information on the vulnerability and recommended response and mitigation actions. Limit external access to the Remote Support appliance to the services needed to support users and customers. Restrict access to administrative interfaces to trusted networks. Review BeyondTrust’s B Series Appliance on-premises security for additional guidance on securing network connectivity for self-hosted Remote Support appliances. Organizations with affected self-hosted Remote Support appliances should conduct network and memory forensics to identify evidence of potential compromise. If your organization suspects a compromise, CISA recommends taking the following actions: Isolate any suspected or confirmed compromised appliances. Collect a snapshot of virtual appliances or forensic image for physical appliances to conduct future forensics, immediately forward appliance syslog and session events to the SIEM, and collect any additional logs, such as web application firewall, reverse-proxy, or perimeter firewall logs for the exposure window. Consult BeyondTrust’s Syslog guide for additional information on forwarding appliance logs and session events. Conduct network and forensic investigations for evidence of compromise. Additionally, hunt for indicators of threat actor activity, including unrecognized privileged or administrative sessions, unrecognized script files, unexpected gaps in logs or log forwarding, and unauthorized account, permission, or session-policy changes. Consult CISA’s Binding Operational Directive (BOD) 26-04: Implementation Guidance for Prioritizing Security Updates Based on Risk to assist with prioritizing vulnerability remediation. Rebuild from a known-good state and apply the BT26-05-RS patch. Then rotate every credential the appliance stored or injected, revoke all active support sessions, and review new multifactor authentication registrations on privileged accounts. CISA urges organizations to review the BeyondTrust security advisory and resources noted above and apply necessary updates. CISA also recommends reviewing Mandiant’s blog, ARMORY CASTLE Exploits BeyondTrust , for additional hunt and isolation guidance and detections. Disclaimer The information in this report is being provided “as is” for informational purposes only. CISA does not endorse any commercial entity, product, company, or service, including any entities, products, or services linked within this document. Any reference to specific commercial entities, products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by CISA.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 50,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "1 CVE(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "1 initial-access vector(s)=+7"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-102764"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1219"
-        ],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-40c2793d-1",
-          "title": "Initial access via CVE-2026-102764 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-102764 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-102764; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-40c2793d-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-102764.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-40c2793d-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-102764 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-102764/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-40c2793d-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-102764 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-102764')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-40c2793d-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-40c2793d-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-40c2793d-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-102764; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-40c2793d-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-40c2793d-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-40c2793d-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-40c2793d-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-40c2793d-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-40c2793d-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-102764; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-40c2793d-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-40c2793d-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-40c2793d-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-40c2793d-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-16T21:44:58+00:00",
       "agent_trace": []
     }
   ],
