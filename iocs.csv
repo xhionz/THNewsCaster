@@ -286,7 +286,6 @@ cves,CVE-2026-96654,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-ad
 cves,CVE-2026-96652,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-96616,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-94188,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
-cves,CVE-2026-92817,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01
 cves,CVE-2026-92450,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-89208,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
 cves,CVE-2026-89206,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12
@@ -1168,6 +1167,7 @@ domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,bi.zone,1,https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/
+domains,bootrepair.sys,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,brossy.com.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,cca616647db9370c88998ae25da6997f.exe,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,ccleaner.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1285,8 +1285,9 @@ domains,win.tool.kmsauto,1,https://blog.talosintelligence.com/i-had-plans-for-th
 domains,win.worm.zard,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
+domains,www.acronis.com,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,www.akamai.com,1,https://isc.sans.edu/diary/rss/33426
-domains,www.cisa.gov,6,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
+domains,www.cisa.gov,5,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 domains,www.fortinet.com,1,https://isc.sans.edu/diary/rss/33442
 domains,www.hashicorp.com,1,https://isc.sans.edu/diary/rss/33426
 domains,www.hitachienergy.com,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05

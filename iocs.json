@@ -1731,12 +1731,6 @@
       ]
     },
     {
-      "value": "CVE-2026-92817",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01"
-      ]
-    },
-    {
       "value": "CVE-2026-92450",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
@@ -7134,6 +7128,12 @@
       ]
     },
     {
+      "value": "bootrepair.sys",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
+      ]
+    },
+    {
       "value": "brossy.com.cn",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -7846,6 +7846,12 @@
       ]
     },
     {
+      "value": "www.acronis.com",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
+      ]
+    },
+    {
       "value": "www.akamai.com",
       "sources": [
         "https://isc.sans.edu/diary/rss/33426"
@@ -7855,7 +7861,6 @@
       "value": "www.cisa.gov",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-286-01",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
         "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01",
