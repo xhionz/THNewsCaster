@@ -1482,7 +1482,6 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
@@ -1492,7 +1491,6 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -5052,6 +5050,12 @@
       ]
     },
     {
+      "value": "CVE-2026-20127",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11473-keydrift/"
+      ]
+    },
+    {
       "value": "CVE-2026-17539",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
@@ -7367,6 +7371,18 @@
       ]
     },
     {
+      "value": "libcommon.so",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11473-keydrift/"
+      ]
+    },
+    {
+      "value": "libdssl.so",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11473-keydrift/"
+      ]
+    },
+    {
       "value": "libsmb2.dll",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7579,6 +7595,12 @@
       ]
     },
     {
+      "value": "rootfs.rw",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11473-keydrift/"
+      ]
+    },
+    {
       "value": "safe-extract.py",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
@@ -7736,6 +7758,18 @@
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
+      ]
+    },
+    {
+      "value": "vdaemon.bin",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11473-keydrift/"
+      ]
+    },
+    {
+      "value": "vdaemon.conf",
+      "sources": [
+        "https://blog.talosintelligence.com/uat-11473-keydrift/"
       ]
     },
     {

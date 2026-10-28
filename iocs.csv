@@ -245,8 +245,8 @@ cves,CVE-2026-110322,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-110243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-109813,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
 cves,CVE-2026-109812,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
-cves,CVE-2026-109619,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,6,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-109576,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-109122,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -827,6 +827,7 @@ cves,CVE-2026-22979,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2026-22977,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-20649,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-20648,1,https://isc.sans.edu/diary/rss/33458
+cves,CVE-2026-20127,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 cves,CVE-2026-17539,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-16438,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2026-16437,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
@@ -1206,6 +1207,8 @@ domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,leheedu.cn,1,https://isc.sans.edu/diary/rss/33442
+domains,libcommon.so,1,https://blog.talosintelligence.com/uat-11473-keydrift/
+domains,libdssl.so,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,libsmb2.dll,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,license.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,litellm-1.107.0.data,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1241,6 +1244,7 @@ domains,portable.dat,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,pulsebrowser.29kh.in12.talos,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,raw.githubusercontent.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
+domains,rootfs.rw,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,safe-extract.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,sample.exe,2,https://blog.talosintelligence.com/i-had-plans-for-that-second/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,sans.edu,3,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
@@ -1267,6 +1271,8 @@ domains,tutanota.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-n
 domains,tzrhxln.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,urlscan.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,user.ini,2,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+domains,vdaemon.bin,1,https://blog.talosintelligence.com/uat-11473-keydrift/
+domains,vdaemon.conf,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,w32.58d6fec4ba-95.sbx.tg,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,w32.9f1f11a708-100.sbx.tg,2,https://blog.talosintelligence.com/i-had-plans-for-that-second/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,w32.fed979f93b-95.sbx.tg,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
