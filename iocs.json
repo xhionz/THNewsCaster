@@ -1482,6 +1482,7 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
@@ -1491,6 +1492,7 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -5899,12 +5901,6 @@
       ]
     },
     {
-      "value": "CVE-2025-25257",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
-      ]
-    },
-    {
       "value": "CVE-2025-24054",
       "sources": [
         "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
@@ -6447,12 +6443,6 @@
       "value": "CVE-2025-21645",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
-      ]
-    },
-    {
-      "value": "CVE-2025-8088",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
       ]
     },
     {
@@ -7118,12 +7108,6 @@
       ]
     },
     {
-      "value": "bi.zone",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
-      ]
-    },
-    {
       "value": "bootrepair.sys",
       "sources": [
         "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
@@ -7779,36 +7763,6 @@
       "value": "w32.pup",
       "sources": [
         "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
-    },
-    {
-      "value": "win.backdoor.chvost",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
-      ]
-    },
-    {
-      "value": "win.backdoor.pickleshell",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
-      ]
-    },
-    {
-      "value": "win.malware.generic",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
-      ]
-    },
-    {
-      "value": "win.malware.laplas",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
-      ]
-    },
-    {
-      "value": "win.proxy.generic",
-      "sources": [
-        "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/"
       ]
     },
     {

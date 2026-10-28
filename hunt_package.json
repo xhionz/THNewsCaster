@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T13:35:49+00:00",
+  "generated_at": "2026-10-28T14:15:54+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -1178,340 +1178,6 @@
         }
       ],
       "first_seen": "2026-10-15T17:01:00+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "7fae382b9edadce0",
-        "source": "Cisco Talos",
-        "title": "Break the silence: Kazakhstan-nexus UAT-6275 targets CIS government organizations",
-        "link": "https://blog.talosintelligence.com/break-the-silence-kazakhstan-nexus-uat-6275-targets-cis-government-organizations/",
-        "published": "Wed, 14 Oct 2026 14:00:00 GMT",
-        "summary": "Talos and Recorded Future identified UAT-6275 activity targeting government organizations across the Commonwealth of Independent States. Recovered artifacts show additional interest in water resources and energy.",
-        "raw_text": "Break the silence: Kazakhstan-nexus UAT-6275 targets CIS government organizations Talos and Recorded Future identified UAT-6275 activity targeting government organizations across the Commonwealth of Independent States. Recovered artifacts show additional interest in water resources and energy. This research was conducted jointly with Julian-Ferdinand Vögele of Recorded Future’s Insikt Group. Details of the joint research and presentation are available here . Cisco Talos identified UAT-6275 ( TAG-193 by Recorded Future) activity targeting government organizations across the Commonwealth of Independent States (CIS). Recovered artifacts show additional interest in water resources and energy. This focus is consistent with intelligence collection and may reflect the regional effects of the Russia–Ukraine war. In activity observed from June 2025 through August 2026, Talos identified four infection-chain types that use macro-enabled documents, PS2EXE downloaders, GitHub-hosted PowerShell, and a crafted WinRAR archive exploiting CVE-2025-8088. The recovered payloads include several custom reverse shells that provide interactive remote access. Three publicly accessible staging directories and GitHub repository history exposed payload builds, tool inventories, and changes to command-and-control (C2) infrastructure. These operational security lapses gave us direct visibility into the group's recent activity. The files recovered from the exposed infrastructure suggest preparation for post-compromise operations and potential activity against Linux hosts and internet-facing appliances. Talos assesses with medium confidence that UAT-6275 has a Kazakhstan nexus, based on infrastructure access, language artifacts, sample submissions, working hours analysis, and regional targeting interests. Background Cisco Talos and Recorded Future Insikt Group jointly investigated UAT-6275 activity targeting government organizations across the Commonwealth of Independent States (CIS). The investigation uncovered three publicly accessible staging directories and a previously unreported GitHub repository used to host malicious scripts and payloads. These exposed assets provided visibility into the threat actor's malware development, infrastructure changes and preparations for additional intrusion activity. Talos tracks this activity as UAT-6275, while Recorded Future tracks it as TAG-193. It overlaps with Silent Lynx (first reported by Seqrite) and sits within a broader set of campaigns connected to YoroTrooper , which we first reported in 2023. Subsequent research on Tomiris (Kaspersky) , ShadowSilk (Group-IB) , Cavalry Werewolf (BI.ZONE) , and Hydra Saiga (VMRay) identified overlapping indicators across these reported clusters. We assess that UAT-6275 and YoroTrooper likely belong to the same broader activity cluster. However, we continue to track them separately because we have not observed direct indicator or toolset overlap between the two. This post summarizes our joint Virus Bulletin 2026 white paper, “ Break the silence: tracking Silent Lynx through exposed infrastructure ” which contains the full technical analysis and indicators of compromise (IOCs). Victimology UAT-6275's targeting is concentrated in Central Asia and the wider CIS region. Across the reviewed campaigns, observed victims and lure themes span nine countries: Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, Uzbekistan, Armenia, Azerbaijan, Russia, and Belarus. Figure 1. Regional targeting. Government and diplomatic affairs UAT-6275 targets government institutions responsible for diplomacy, economic development, agriculture, and environmental management. These organizations hold information that can inform bilateral negotiations, economic planning, and regional security decisions. Our network flow analysis identified activity involving a Tajik government entity shortly after treaty discussions with Kazakhstan in March 2026 and a Belarusian government entity ahead of a bilateral meeting in April. This timing may indicate an interest in regional diplomatic developments. The decoy documents we recovered also suggest an interest in diplomatic relations, international trade, and aviation. Examples include a diplomatic letter addressed to Armenia’s Ministry of Foreign Affairs. Figure 2. Lure document masquerading as a Russian diplomatic congratulatory letter to the Armenian Ministry of Foreign Affairs. Water security and resource management The group’s interest in regional resources spans environmental management and energy. Talos observed activity involving an Armenian government entity responsible for environmental matters and Uzbekistan’s Smart Forestry initiative, consistent with earlier reporting on Silent Lynx targeting water resource organizations across Central Asia. Energy-themed decoys included a cooperation proposal between Turkmenistan’s state oil company, Turkmennebit, and Russia’s Orsk Oil Refinery, used in an August 2025 sample. The refinery supplies petroleum products to Kazakhstan and later shut down after a Ukrainian drone strike in August 2026 , with repairs expected to take up to six months. These ties suggest a possible intelligence interest in regional fuel supplies and the war’s implications for Kazakhstan’s energy security. Figure 3. Decoy impersonating Turkmennebit and proposing cooperation with Orsk Oil Refinery management. Campaign timeline Since Seqrite first reported Silent Lynx in January 2025, we have identified at least eight campaigns across the region through May 2026. These include malware delivery targeting Russia, Turkmenistan, and Uzbekistan; a credential-harvesting site impersonating Azerbaijan’s State Agency for Public Service; and lures referencing the China–Central Asia Summit and Russian energy infrastructure. In 2026, we also observed activity involving government entities in Tajikistan, Armenia, and Belarus, as well as Uzbekistan’s Smart Forestry initiative in May. Figure 4. Campaign timeline. Infrastructure and malware delivery Talos identified three publicly accessible staging directories containing malware and tools of UAT-6275. One sample led to the previously unreported GitHub repository, where the group hosted PowerShell scripts and payloads. Its commit history allowed us to track infrastructure changes and malware development. The group relies on lightweight reverse shells, including Chvost, Laplas, and PickleShell, to issue commands on compromised systems. We also recovered Linux-compatible tooling and a publicly available proof-of-concept exploit for FortiWeb CVE-2025-25257 from UAT-6275 infrastructure. These findings suggest interest in expanding the group’s operational capabilities. Four infection chains UAT-6275 used malicious documents, executable downloaders, and shortcuts to deliver malware, and later incorporated a WinRAR exploit. Talos categorized the recovered samples into four infection chains, A – D, based on how they retrieve and execute their payloads. Figure 5. First observations of four UAT-6275 infection chains, June 2025 – April 2026. The first Chain A samples, observed in June 2025, used macro-enabled Word documents to download and execute a second-stage binary. In July 2025, we observed Chain B downloaders built with PS2EXE, a tool that packages PowerShell scripts as standalone Windows executables. These downloaders retrieved reverse-shell payloads and created scheduled tasks for persistence. We first observed Chain C in October 2025. A malicious shortcut launches PowerShell to retrieve and execute a GitHub-hosted script that provides remote shell access. Later samples also downloaded PickleShell and placed it in the Windows Startup folder for persistence. Figure 6. Chain C retrieves a GitHub-hosted PowerShell script; later samples also deploy PickleShell to the Startup folder. In April 2026, we identified a RAR archive that exploited CVE-2025-8088 in WinRAR to place PickleShell in the Windows Startup folder (Chain D). The payload runs at the next user sign-in. This was the first vulnerability exploit we observed in UAT-6275’s malware delivery. Figure 7. Chain D exploits CVE-2025-8088 to place PickleShell in the Windows Startup folder for execution at the next sign-in. Kazakhstan nexus assessment Talos assesses with medium confidence that UAT-6275 has a Kazakhstan nexus. Supporting evidence includes Russian-language artifacts, apparent malware-testing submissions from Kazakhstan shortly after compilation, and operator activity consistent with UTC+5 working hours. Figure 8. Timing of 77 GitHub commits in UTC+3 and UTC+5, with 09:00–18:00 local working hours shaded. Looking ahead UAT-6275’s sustained activity and adoption of new delivery techniques suggest the group will continue pursuing access to government organizations across Central Asia and the CIS. Its interest in environmental agencies, economic ministries, and energy infrastructure reflects the intelligence value of regional diplomacy and resource management. Defenders in these sectors should monitor unexpected PowerShell activity and payload downloads from public services such as GitHub, alongside scheduled tasks and Startup-folder changes. Keeping archive utilities patched can help reduce exposure to the exploit-assisted delivery observed in this campaign. For further details on this research and our accompanying presentation, see “ Break the Silence: Tracking Silent Lynx Through Exposed Infrastructure ” on Virus Bulletin’s website, as well as Recorded Future’s related blog post . Coverage The following ClamAV signatures detect and block this threat: Win.Backdoor.PickleShell-10060602-0 Win.Backdoor.Chvost-10060603-0 Win.Malware.Generic-10060604-0 Win.Malware.LAPLAS-10060605-0 Win.Malware.LAPLAS-10060606-0 Win.Proxy.Generic-10060628-0 The following Snort rules cover this threat: Snort 2: 1:11192, 1:15306, 1:46983, 1:47398 Snort 3: 1:46983, 4:16 IOCs IOCs for this research can be found at our GitHub repository here .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 86,
-        "rationale": [
-          "source weight (vendor)=+10",
-          "2 CVE(s)=+25",
-          "5 MITRE technique hit(s)=+20",
-          "2 initial-access vector(s)=+9",
-          "1 impact action(s)=+8",
-          "6 IOC(s)=+14"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2025-8088",
-          "CVE-2025-25257"
-        ],
-        "ips": [],
-        "domains": [
-          "bi.zone",
-          "win.backdoor.pickleshell",
-          "win.backdoor.chvost",
-          "win.malware.generic",
-          "win.malware.laplas",
-          "win.proxy.generic"
-        ],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1059",
-          "T1059.001",
-          "T1053",
-          "T1547",
-          "T1219"
-        ],
-        "vectors": [
-          "phishing",
-          "exploit"
-        ],
-        "sectors": [
-          "government",
-          "energy",
-          "manufacturing"
-        ],
-        "actions": [
-          "fraud"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-7fae382b-1",
-          "title": "Initial access via CVE-2025-8088 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2025-8088 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2025-8088, CVE-2025-25257; vectors: phishing, exploit; impact: fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-7fae382b-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2025-8088.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-7fae382b-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2025-8088 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2025-8088/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-7fae382b-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2025-8088 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2025-8088')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-7fae382b-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-7fae382b-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-7fae382b-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2025-8088, CVE-2025-25257; vectors: phishing, exploit; impact: fraud.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-7fae382b-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('bi.zone','win.backdoor.pickleshell','win.backdoor.chvost') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-7fae382b-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-7fae382b-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-7fae382b-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-7fae382b-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-7fae382b-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2025-8088, CVE-2025-25257; vectors: phishing, exploit; impact: fraud.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-7fae382b-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-7fae382b-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-7fae382b-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-7fae382b-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-14T14:13:57+00:00",
       "agent_trace": []
     },
     {
@@ -17731,9 +17397,322 @@
       ],
       "first_seen": "2026-10-26T23:31:58+00:00",
       "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "5314d1ea5b0a5918",
+        "source": "CISA Advisories",
+        "title": "Critical Vulnerabilities in PHP Require Immediate Patching",
+        "link": "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+        "published": "Wed, 21 Oct 26 12:00:00 +0000",
+        "summary": "CISA strongly urges organizations to immediately patch the recently disclosed critical vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619 . These vulnerabilities, known as “php2shell,” allow for unauthenticated remote code execution in PHP and affect all PHP installations serving web requests. Organizations should immediately update to PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 to fix these vulnerabilities. While CISA has not observed exploitation of these vulnerabilities as of the time of publication, they pose a risk to organizations if left unpatched. CISA urges organizations to take the following actions: Identify and inventory systems running any version of PHP across your organization. PHP is often a component of other software and prevalence may not be directly observable. Apply the patch immediately, prioritizing internet-facing systems. Organizations that cannot update immediately, or that continue to use PHP 8.1 or earlier unsupported versions, should take PHP-based systems offline until they can be patched or updated. A web application firewall may provide some protection until systems are updated or patched. Review the official PHP security advisory for guidance on patching. Monitor for suspicious activity, including PHP worker processes launching shells or downloading tools. CISA urges network defenders to review the following advisory and apply necessary updates: Security Advisory: Critical Remote Code Execution Vulnerabilities, Update Now Disclaimer The inf",
+        "raw_text": "Critical Vulnerabilities in PHP Require Immediate Patching CISA strongly urges organizations to immediately patch the recently disclosed critical vulnerabilities in PHP, CVE-2026-109618 and CVE-2026-109619 . These vulnerabilities, known as “php2shell,” allow for unauthenticated remote code execution in PHP and affect all PHP installations serving web requests. Organizations should immediately update to PHP 8.5.12, 8.4.27, 8.3.36, or 8.2.35 to fix these vulnerabilities. While CISA has not observed exploitation of these vulnerabilities as of the time of publication, they pose a risk to organizations if left unpatched. CISA urges organizations to take the following actions: Identify and inventory systems running any version of PHP across your organization. PHP is often a component of other software and prevalence may not be directly observable. Apply the patch immediately, prioritizing internet-facing systems. Organizations that cannot update immediately, or that continue to use PHP 8.1 or earlier unsupported versions, should take PHP-based systems offline until they can be patched or updated. A web application firewall may provide some protection until systems are updated or patched. Review the official PHP security advisory for guidance on patching. Monitor for suspicious activity, including PHP worker processes launching shells or downloading tools. CISA urges network defenders to review the following advisory and apply necessary updates: Security Advisory: Critical Remote Code Execution Vulnerabilities, Update Now Disclaimer The information in this report is being provided “as is” for informational purposes only. CISA does not endorse any commercial entity, product, company, or service, including any entities, products, or services linked within this document. Any reference to specific commercial entities, products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply endorsement, recommendation, or favoring by CISA.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 47,
+        "rationale": [
+          "source weight (advisory)=+15",
+          "2 CVE(s)=+25",
+          "1 initial-access vector(s)=+7"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2026-109618",
+          "CVE-2026-109619"
+        ],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [],
+        "vectors": [
+          "exploit"
+        ],
+        "sectors": [
+          "manufacturing"
+        ],
+        "actions": [],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-5314d1ea-1",
+          "title": "Initial access via CVE-2026-109618 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-109618 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-5314d1ea-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-109618.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5314d1ea-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-109618 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-109618/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5314d1ea-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-109618 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-109618')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5314d1ea-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-5314d1ea-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5314d1ea-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-5314d1ea-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5314d1ea-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5314d1ea-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-5314d1ea-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-5314d1ea-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5314d1ea-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-5314d1ea-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5314d1ea-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5314d1ea-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-5314d1ea-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-21T16:18:47+00:00",
+      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 384,
   "total_seen": 385,
-  "brief": "50 hunt-worthy item(s) today, 4 rated critical. Prioritise the highest-scored items first. Top of the list: #StopRansomware: SafePay Ransomware; The Q3 Vulnerability Pulse: Discovery ≠ Exploitation; CISA Malcolm."
+  "brief": "50 hunt-worthy item(s) today, 3 rated critical. Prioritise the highest-scored items first. Top of the list: #StopRansomware: SafePay Ransomware; The Q3 Vulnerability Pulse: Discovery ≠ Exploitation; CISA Malcolm."
 }
