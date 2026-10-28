@@ -267,8 +267,8 @@ cves,CVE-2026-105664,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-105279,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 cves,CVE-2026-105273,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 cves,CVE-2026-105265,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
-cves,CVE-2026-105134,2,https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html | https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-105133,2,https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html | https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-105134,1,https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html
+cves,CVE-2026-105133,1,https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html
 cves,CVE-2026-104935,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 cves,CVE-2026-103672,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-102764,2,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support
@@ -357,7 +357,6 @@ cves,CVE-2026-84493,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-80466,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02
 cves,CVE-2026-78557,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
 cves,CVE-2026-78556,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
-cves,CVE-2026-76519,1,https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-65397,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-65392,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-65385,1,https://isc.sans.edu/diary/rss/33458
@@ -487,6 +486,7 @@ cves,CVE-2026-46307,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2026-46306,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-46304,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-46303,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
+cves,CVE-2026-46300,1,https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-46294,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-46275,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-46243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
@@ -609,6 +609,7 @@ cves,CVE-2026-43025,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2026-43024,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-43011,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-41989,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
+cves,CVE-2026-41709,1,https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-40355,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-33920,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18
 cves,CVE-2026-33391,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18
@@ -843,7 +844,6 @@ cves,CVE-2026-6732,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293
 cves,CVE-2026-6653,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-6276,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 cves,CVE-2026-3497,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
-cves,CVE-2026-0322,1,https://www.cisa.gov/news-events/alerts/2026/10/14/cisa-adds-four-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-0257,1,https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html
 cves,CVE-2025-71316,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15
 cves,CVE-2025-71267,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
