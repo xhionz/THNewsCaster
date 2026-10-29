@@ -1423,6 +1423,12 @@
       ]
     },
     {
+      "value": "CVE-2026-111497",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+      ]
+    },
+    {
       "value": "CVE-2026-111100",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
@@ -1475,7 +1481,8 @@
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -1484,6 +1491,7 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
@@ -1506,66 +1514,6 @@
       ]
     },
     {
-      "value": "CVE-2026-107777",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107621",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-107617",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-107362",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107361",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107337",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107336",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107335",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107334",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-107333",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
       "value": "CVE-2026-106931",
       "sources": [
         "https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog"
@@ -1581,30 +1529,6 @@
       "value": "CVE-2026-105960",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-105667",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-105664",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-105279",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-105273",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
       ]
     },
     {
@@ -1660,24 +1584,6 @@
       "value": "CVE-2026-101103",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-101021",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-97858",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-97851",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
       ]
     },
     {
@@ -2378,42 +2284,6 @@
       ]
     },
     {
-      "value": "CVE-2026-63252",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-63248",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-62927",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-61387",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-60007",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-58080",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
       "value": "CVE-2026-53400",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -2869,6 +2739,12 @@
       "value": "CVE-2026-52909",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-48356",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -6888,6 +6764,12 @@
       ]
     },
     {
+      "value": "CVE-2021-44228",
+      "sources": [
+        "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
+      ]
+    },
+    {
       "value": "CVE-2021-41617",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -7096,12 +6978,6 @@
       ]
     },
     {
-      "value": "68tadmin.php",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
       "value": "95.sbx.tg",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
@@ -7150,6 +7026,12 @@
       ]
     },
     {
+      "value": "bootrepair.sys",
+      "sources": [
+        "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
+      ]
+    },
+    {
       "value": "brossy.com.cn",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -7195,18 +7077,6 @@
       "value": "config.json",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
-      ]
-    },
-    {
-      "value": "config.php",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
-      "value": "control.py",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
       ]
     },
     {
@@ -7297,12 +7167,6 @@
       "value": "epics-controls.org",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01"
-      ]
-    },
-    {
-      "value": "eseecloud.app",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02"
       ]
     },
     {
@@ -7423,12 +7287,6 @@
       "value": "iconicsinc.my.site.com",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
-      ]
-    },
-    {
-      "value": "index.php",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
       ]
     },
     {
@@ -7598,12 +7456,6 @@
       ]
     },
     {
-      "value": "opcuaserverconfig.copy",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01"
-      ]
-    },
-    {
       "value": "openssl.exe",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7738,12 +7590,6 @@
       ]
     },
     {
-      "value": "safe-extract.py",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
-      ]
-    },
-    {
       "value": "sample.exe",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
@@ -7863,12 +7709,6 @@
       "value": "stopransomware.gov",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "submit.php",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01"
       ]
     },
     {
@@ -8019,13 +7859,9 @@
       ]
     },
     {
-      "value": "www.cisa.gov",
+      "value": "www.acronis.com",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02",
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01",
-        "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02"
+        "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
       ]
     },
     {

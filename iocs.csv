@@ -236,6 +236,7 @@ cves,CVE-2026-112413,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-111943,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 cves,CVE-2026-111594,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
+cves,CVE-2026-111497,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-111100,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-110936,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-110825,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -244,28 +245,14 @@ cves,CVE-2026-110322,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-110243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-109813,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
 cves,CVE-2026-109812,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
-cves,CVE-2026-109619,3,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/
-cves,CVE-2026-109618,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-109576,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-109122,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
-cves,CVE-2026-107777,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01
-cves,CVE-2026-107621,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
-cves,CVE-2026-107617,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
-cves,CVE-2026-107362,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-cves,CVE-2026-107361,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-cves,CVE-2026-107337,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-cves,CVE-2026-107336,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-cves,CVE-2026-107335,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-cves,CVE-2026-107334,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-cves,CVE-2026-107333,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 cves,CVE-2026-106931,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-106087,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 cves,CVE-2026-105960,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
-cves,CVE-2026-105667,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
-cves,CVE-2026-105664,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
-cves,CVE-2026-105279,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
-cves,CVE-2026-105273,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 cves,CVE-2026-105265,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-104935,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 cves,CVE-2026-103672,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
@@ -275,9 +262,6 @@ cves,CVE-2026-102075,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-102074,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
 cves,CVE-2026-102073,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
 cves,CVE-2026-101103,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
-cves,CVE-2026-101021,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
-cves,CVE-2026-97858,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
-cves,CVE-2026-97851,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 cves,CVE-2026-96656,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-96655,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-96654,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
@@ -394,12 +378,6 @@ cves,CVE-2026-63353,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2026-63352,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14
 cves,CVE-2026-63351,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14
 cves,CVE-2026-63350,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14
-cves,CVE-2026-63252,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
-cves,CVE-2026-63248,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
-cves,CVE-2026-62927,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
-cves,CVE-2026-61387,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
-cves,CVE-2026-60007,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
-cves,CVE-2026-58080,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 cves,CVE-2026-53400,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-53362,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-53358,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
@@ -474,6 +452,7 @@ cves,CVE-2026-52917,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2026-52912,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-52910,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-52909,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
+cves,CVE-2026-48356,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-46333,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2026-46331,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2026-46323,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
@@ -1128,6 +1107,7 @@ cves,CVE-2023-20269,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 cves,CVE-2023-20198,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 cves,CVE-2023-4863,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2022-26704,1,https://isc.sans.edu/diary/rss/33458
+cves,CVE-2021-44228,1,https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/
 cves,CVE-2021-41617,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2020-3259,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 cves,CVE-2015-1000013,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
@@ -1162,7 +1142,6 @@ ips,187.15.90.217,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/sto
 domains,1.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,2026.php,1,https://isc.sans.edu/diary/rss/33440
 domains,485055033bcddfde56325c0d2feea4f2.exe,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
-domains,68tadmin.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,95.sbx.tg,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,acro.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,acronis.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1171,6 +1150,7 @@ domains,api.openai.com,1,https://blog.talosintelligence.com/nik-c2-new-ai-enable
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,bootkit.bin,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
+domains,bootrepair.sys,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,brossy.com.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,browserdata.zip,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,cca616647db9370c88998ae25da6997f.exe,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
@@ -1179,8 +1159,6 @@ domains,ccleaner64.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisori
 domains,cisa.dhs.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,clientchallengetable.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,config.json,1,https://isc.sans.edu/diary/rss/33442
-domains,config.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-domains,control.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,cook.pth,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,cook.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,copy.bat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1196,7 +1174,6 @@ domains,domains.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,dyraswtb.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,endoflife.date,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/
 domains,epics-controls.org,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
-domains,eseecloud.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
 domains,exec.command,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,exodus.wallet,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,favicon.ico,1,https://isc.sans.edu/diary/rss/33442
@@ -1217,7 +1194,6 @@ domains,http.request.connection,1,https://isc.sans.edu/diary/rss/33442
 domains,hub.docker.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
-domains,index.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1245,7 +1221,6 @@ domains,next.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm
 domains,nltest.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,node.js,2,https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
 domains,nxc.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,opcuaserverconfig.copy,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 domains,openssl.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,order.dell.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
 domains,orders.staples.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
@@ -1268,7 +1243,6 @@ domains,pulsebrowser.29kh.in12.talos,1,https://blog.talosintelligence.com/the-q3
 domains,raw.githubusercontent.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
 domains,rootfs.rw,1,https://blog.talosintelligence.com/uat-11473-keydrift/
-domains,safe-extract.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,sample.exe,2,https://blog.talosintelligence.com/i-had-plans-for-that-second/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,sans.edu,2,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
 domains,scan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1289,7 +1263,6 @@ domains,source.geo.as.number,1,https://isc.sans.edu/diary/rss/33442
 domains,sqldiff.exe,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15
 domains,stealer.sa,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,submit.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,subs.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,svchost.exe,2,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/ | https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,system.management.automation.dll,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
@@ -1314,7 +1287,7 @@ domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 domains,wrapper.app.account,1,https://isc.sans.edu/diary/rss/33470
 domains,wrapper.app.parameter,1,https://isc.sans.edu/diary/rss/33470
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
-domains,www.cisa.gov,5,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
+domains,www.acronis.com,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,www.fortinet.com,1,https://isc.sans.edu/diary/rss/33442
 domains,www.hitachienergy.com,4,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03
 domains,www.kiloview.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
