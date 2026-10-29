@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T15:41:19+00:00",
+  "generated_at": "2026-10-29T16:59:56+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -14249,6 +14249,325 @@
     },
     {
       "article": {
+        "id": "03cfadf3d28b9554",
+        "source": "Microsoft Security",
+        "title": "Tracking AI adoption in North Korean threat actor tradecraft",
+        "link": "https://www.microsoft.com/en-us/security/blog/2026/10/29/tracking-ai-adoption-in-north-korean-threat-actor-tradecraft/",
+        "published": "Thu, 29 Oct 2026 16:00:00 +0000",
+        "summary": "As Microsoft Threat Intelligence continues to track how threat actors operationalize AI to increase the speed and efficiency of attacks, we’ve identified North Korean threat actors expanding their use of AI with varying levels of adoption. This blog breaks down how North Korean threat actors are utilizing AI across their operations, reflecting a broader trend of threat actors incorporating AI into their attack chains. The post Tracking AI adoption in North Korean threat actor tradecraft appeared first on Microsoft Security Blog .",
+        "raw_text": "Tracking AI adoption in North Korean threat actor tradecraft As Microsoft Threat Intelligence continues to track how threat actors operationalize AI to increase the speed and efficiency of attacks, we’ve identified North Korean threat actors expanding their use of AI with varying levels of adoption. This blog breaks down how North Korean threat actors are utilizing AI across their operations, reflecting a broader trend of threat actors incorporating AI into their attack chains. The post Tracking AI adoption in North Korean threat actor tradecraft appeared first on Microsoft Security Blog . In this article Stages of AI adoption by North Korean threat actors AI use across North Korean threat operations AI-assisted targeting and reconnaissance AI-assisted social engineering and identity deception AI-assisted software and tooling development AI-assisted operational scaling and analysis Mitigation and protection guidance Microsoft Defender detections As Microsoft Threat Intelligence continues to track how threat actors operationalize AI to increase the speed, efficiency, and complexity of attacks, we’ve identified North Korean threat actors expanding their use of AI with varying levels of adoption. Threat actors use AI as a force multiplier across their operations, particularly to accelerate and scale established workflows. Recent activities illustrate this AI-enabled acceleration and scaling: Jade Sleet launched campaigns through three front companies in a single week, Onyx Sleet generated dozens of tailored lures in minutes, Coral Sleet rapidly built a new capability to trojanize private source code repositories, and Diamond Sleet used AI to enhance tailored targeting workflows, including persona development and front company creation. Further, Onyx Sleet and Pearl Sleet are leveraging the open-source agentic AI penetration testing framework ARTEX to conduct operations, further indicating North Korea’s willingness to quickly adopt new AI technologies for their operations. The Democratic People’s Republic of Korea operates under extensive international sanctions and uses cyber operations and other illicit mechanisms to evade these restrictions and advance state objectives. Within this operating environment, North Korean threat actors have demonstrated the willingness to adopt new technologies that help sustain or advance existing operations. AI adoption by North Korean threat actors therefore largely supports existing goals and targeting priorities rather than representing a shift in actor motivations. North Korean threat actors conduct cyber operations primarily to generate revenue for the regime, collect strategic intelligence, and, in some cases, pursue politically motivated disruptive or destructive objectives. Across these objectives, North Korean threat actor tradecraft remains grounded in social engineering, malware delivery, and the abuse of legitimate tools. These operations commonly target cryptocurrency and financial organizations, information technology companies and software supply chains, government entities, and education-related organizations. Despite threat actors’ adoption of AI, Microsoft Threat Intelligence assesses that AI-enabled operations remain human-directed and have not become fully autonomous. Microsoft Threat Intelligence assesses the overall adoption of AI across North Korean threat actors as high, with threat actors such as Jade Sleet, Coral Sleet, and Jasper Sleet demonstrating an established use of AI across all operational workflows, alongside increasing adoption across the broader North Korean threat actor set. This blog breaks down how North Korean threat actors are utilizing AI across their operations, reflecting a broader trend of threat actors incorporating AI into their attack chains. We also provide mitigation guidance and Microsoft Defender detections to help organizations defend against these threats. Stages of AI adoption by North Korean threat actors North Korean threat actors are increasingly integrating generative and agentic AI platforms into their operations, but the rate and maturity of adoption vary. Based on identified AI use, Microsoft Threat Intelligence assesses high-impact North Korean threat actors across four stages of adoption: emerging, expanding, accelerating, and operationalized. Across these actors, AI use spans research, content generation, development, malware and tooling, infrastructure, and broader operational activities. Mapping high-impact North Korean threat actors by stages of AI adoption Operationalized: Threat actors at this stage have embedded AI into routine operational workflows, using it as an established part of their existing processes. Microsoft Threat Intelligence assesses that the North Korean threat actors Jade Sleet, Coral Sleet, and Jasper Sleet have operationalized AI across their entire operations, which frequently encompass identity-based attacks built on deceptive social engineering. These attacks can be accelerated with AI capabilities that tailor lures or personas to the intended audience. Accelerating: Threat actors at this stage demonstrate rapid adoption of AI across multiple operational functions. Microsoft Threat Intelligence assesses that Diamond Sleet , Onyx Sleet, Pearl Sleet, and Sapphire Sleet are at the accelerating stage of AI adoption. Expanding: Threat actors at this stage are expanding their use of AI across selected operational activities, but adoption is not yet embedded across broader workflows. Microsoft Threat Intelligence assesses that Emerald Sleet is at the expanding stage of AI adoption. While evidence suggests Emerald Sleet has incorporated AI into some workflows, Microsoft Threat Intelligence has not identified the same level of adoption and impact as other North Korean threat actors. Emerging: Threat actors at this stage demonstrate limited or experimental use of AI. At this time, Microsoft Threat Intelligence has not assessed any North Korean threat actors as operating at the emerging stage. AI use across North Korean threat operations Microsoft Threat Intelligence has identified North Korean threat actors using AI platforms to support a range of operational activities, from reconnaissance to developing social engineering content, maintaining fraudulent identities, supporting tool development, and scaling repetitive operational tasks. Current evidence indicates that these actors primarily use AI to enhance existing tradecraft and operator productivity rather than to enable autonomous operations. Microsoft Threat Intelligence has identified North Korean threat actors leveraging the following AI-enabled tactics as part of their threat operations. AI-assisted targeting and reconnaissance Based on industry reporting and changes in targeting activity in 2026, North Korean threat actors are scaling reconnaissance capabilities by using generative AI platforms, including gathering information on target organizations prior to launching social engineering operations. Microsoft Threat Intelligence has identified that these actors: Research organizations and employees, then use information from this research to craft highly bespoke and convincing lures, target-specific infrastructure, and job applications Research wallets, exchanges, and decentralized finance (DeFi) and blockchain workflows, accelerating the development of domain knowledge needed to support targeted operations Explore vulnerabilities, APIs, security products, and cloud services, leading to a demonstrated change in the speed and sophistication of threat activity against specific technologies Research software development roles, job requirements, and technology organizations to support job searching, resume development, and persona alignment, resulting in rapid tailored persona or lure creation, application to newly posted job roles, or spear phishing operations For example, between June 8 and June 12, 2026, Microsoft Threat Intelligence identified Jade Sleet conducting job-themed targeting against individuals across various organizations, including those involved in cybersecurity, AI, blockchain, and talent recruitment companies. The actor leveraged tailored domains, social media profiles, and industry-specific knowledge to pose as recruiters for a spoofed AI-powered blockchain intelligence company, using software engineer-themed opportunities to initiate contact and schedule interviews with individuals who engaged with the outreach. Within this short time frame, Jade Sleet conducted similar job-themed targeting using two additional front companies, supported by comparable infrastructure and relevant domain knowledge. Microsoft Threat Intelligence assesses that the pace and breadth of this activity demonstrates how Jade Sleet is using generative AI to accelerate operational workflows, including rapidly developing target- and industry-specific knowledge, tailoring reconnaissance and targeting, and scaling outreach to target individuals. Jasper Sleet also continues to leverage generative AI platforms to build fake digital personas. The actor’s use of suspected generative and agentic AI-assisted resume workflows demonstrates an improvement in the speed, scale, and relevance of persona preparation over the past year. Identified application activity indicates that the actor has invested in repeatable tooling to support employment-themed operations, ultimately helping the actor scale application activity and interact more credibly with the hiring processes of impacted organizations. Since August 2026, Microsoft Threat Intelligence has observed Diamond Sleet returning to targeting the oil and gas sector for the first time since 2023, expanding their focus on communications and internet policy-related organizations, and continuing to target defense-related organizations. Further, Diamond Sleet has created fake communications technology companies, complete with supporting websites and tailored personas, to target telecommunications companies under the guise of legitimate business partnerships. These shifts have occurred alongside Diamond Sleet’s increased use of generative AI platforms to support reconnaissance and technical development, suggesting that AI could be improving the efficiency of existing operational workflows. AI-assisted social engineering and identity deception Several North Korean threat actors leverage job-themed social engineering techniques to gain access to target environments. For example, Sapphire Sleet, Jade Sleet, and Coral Sleet use employment- and interview-themed social engineering to target users and organizations, while Jasper Sleet uses fraudulent identities to obtain legitimate remote employment. These actors leverage AI to improve the process of creating convincing lures, aid in the development of fake personas, and evade detection when interacting with targets. Specifically, these actors use AI to: Produce tailored phishing, recruiter, and investment lures Create job-themed payload-delivery content and malicious repository lures Translate content and adjust tone to support foreign-language impersonation and more natural communications Build resumes, biographies, and realistic interview responses Support coding assessments, job-related tasks, and the management of multiple worker personas Enhance profile images and other identity artifacts Alter profile images, video, voice, and backgrounds Sustain recruiter, developer, investor, and other social identities across interactions and platforms Microsoft Threat Intelligence has identified over 100 PDF lure files attributed to Onyx Sleet that were created in August and September 2026 with target-specific details. Metadata indicated that the actor created dozens of files at a time in rapid succession within minutes, highly likely to be the output of an AI platform. This automation supports the actor’s high-volume phishing campaigns against South Korean users and could make disruption and detection efforts more difficult given the rapid regeneration or modification of additional lures. Microsoft Threat Intelligence has also identified possible synthetic media generation, focused on AI-created voice and video, by Emerald Sleet. While we have not been able to determine the full operational impact of such tooling, it is highly likely that synthetic media creation is valued by multiple North Korean threat actors, as it significantly enhances existing social engineering capabilities. AI-assisted software and tooling development Microsoft Threat Intelligence has identified evidence indicating that North Korean threat actors are leveraging AI-enabled software and tools to assist in malware development. These tools include AI-assisted development platforms, such as Cursor, which have likely enabled Jade Sleet, Coral Sleet, Pearl Sleet, and Sapphire Sleet to: Generate, convert, debug, and refactor code Assist with scripts, commands, persistence mechanisms, and obfuscation Troubleshoot errors and help operators diagnose tool behavior Support the adaptation or reimplementation of functionality across languages, libraries, and environments Additionally, AI-enabled development cycles further allow threat actors to circumvent detection and blocking efforts, as AI platforms streamline retooling, helping enable threat actors to rapidly pivot in reaction to defensive measures. For example, Microsoft Threat Intelligence has identified evidence indicating that Sapphire Sleet, who has conducted several supply chain attacks, likely incorporated AI during the August 2026 Rust software compromise. The activity spanned from initial stages targeting Rust developers to development and deployment of malware. Notably, Sapphire Sleet’s malware in this campaign was a marked improvement compared with other attributed campaigns, as the malware used dynamic .NET compilation during post-exploitation, most likely for defense evasion. And, since April 2026, Coral Sleet has operationalized a workflow to trojanize private GitHub repositories, integrating them into their existing malware chain. This new capability, its breadth and scale, and its rapid implementation were highly likely engineered using an AI-enabled development platform. AI-assisted operational scaling and analysis North Korean threat actors are leveraging AI platforms to scale and manage diverse operations. For example, Jasper Sleet’s AI tooling helps maintain consistent communication and performance across multiple fraudulent worker personas. We have also seen evidence of AI use for automating repetitive tasks, summarizing collected information from victim organizations, and accelerating post-compromise decision making while human operators likely continue to direct intent and objectives. This operational adoption extends to emerging agentic AI technologies. Since late October 2026, Microsoft threat Intelligence has identified Onyx Sleet and Pearl Sleet leveraging open-source agentic AI penetration testing ARTEX in operations, highlighting how North Korean threat actors are adopting new AI technologies as they become available. Mitigation and protection guidance Threat actor misuse of AI accelerates risk across enterprise environments by amplifying existing threats such as phishing, malware threats, and insider activity. To help organizations stay ahead of AI-enabled threat activity, Microsoft has introduced the Security Dashboard for AI . The dashboard provides users with a unified view of AI security posture by aggregating security, identity, and data risk across Microsoft Defender , Microsoft Entra , and Microsoft Purview . This allows organizations to understand what AI assets exist in their environment, recognize emerging risk patterns, and prioritize governance and security across AI agents, applications, and platforms. To learn more about the Microsoft Security Dashboard for AI see: Assess your organization’s AI risk with Microsoft Security Dashboard for AI . Additionally, Microsoft Agent 365 serves as a control plane for AI agents in enterprise environments, allowing users to manage, govern, and secure AI agents and workflows while monitoring emerging risks of agentic AI use. Agent 365 supports a growing ecosystem of agents, including Microsoft agents, broader ecosystems of agents such as Adobe and Databricks, and open-source agents published on GitHub. As the AI-enabled operations conducted by North Korean threat actors vary across TTPs, the following guidance can help organizations harden their networks against multiple classes of threats. Vulnerability and exposure management Use Microsoft Defender Vulnerability Management to identify, assess, remediate, and track vulnerabilities across critical assets. Use the exposure score to reduce your vulnerability exposure and the Microsoft Secure Score to identify and remediate security misconfigurations in your environment. Use a perimeter scanning tool like Microsoft Defender External Attack Surface Management to understand your organization’s digital footprint and potential attack surface. Targeting web-facing vulnerabilities continues to be one of the most effective attack methods for initial access. Ensure any web-facing systems are isolated from the public internet with a secure network boundary and access them with a virtual private network (VPN). If certain servers must be accessible on the public internet, position them behind a web application firewall (WAF) , reverse proxy , or perimeter network (also known as a DMZ), which can reduce the risk of vulnerability exploitation in some cases. Consider automating patching where possible. Windows Update client policies offer automated patching, which can greatly reduce the amount of time IT admins must spend identifying, configuring, and deploying updates. To help manage infrastructure distributed across cloud, on-premises, and hybrid networks, use a centralized patching solution like Azure Update Manager . Protecting against social engineering and phishing Educate users about protecting personal and business information on social media, filtering unsolicited communication, identifying lures in spear-phishing emails and watering holes, and reporting reconnaissance attempts and other suspicious activity. Educate users about preventing malware infections , such as ignoring or deleting unsolicited and unexpected emails or attachments sent through instant messaging applications or social networks. Review the recommended settings for Exchange Online Protection and Microsoft Defender for Office 365 to ensure your organization has established essential defenses and knows how to monitor and respond to threat activity. Invest in user awareness training and phishing simulations. Attack simulation training in Microsoft Defender for Office 365, which also includes simulating phishing messages in Microsoft Teams, is one approach to running realistic attack scenarios in your organization. Enable Zero-hour auto purge (ZAP) in Defender for Office 365 to quarantine sent mail in response to newly acquired threat intelligence and retroactively neutralize malicious phishing, spam, or malware messages that have already been delivered to mailboxes. Responders could also manually check for and purge unwanted emails containing URLs and/or Subject fields that are similar, but not identical, to those of known bad messages. Investigate malicious email that was delivered in Microsoft 365 and use Threat Explorer to find and delete phishing emails. Turn on Safe Links and Safe Attachments in Microsoft Defender for Office 365. Only allow device code flow where necessary. Microsoft recommends blocking device code flow wherever possible . Where necessary, configure Microsoft Entra ID’s device code flow in your Conditional Access policies. Vetting potential employees Exercise greater scrutiny for employees of staffing companies, since this is the easiest avenue for North Korean workers to infiltrate target companies. Check to make sure a potential employee’s social media/professional accounts are not highly similar to the accounts of other individuals. In addition, check that a contact phone number listed on a potential employee’s account is unique and not also used by other accounts. Scrutinize resumes and background checks for consistency of names, addresses, and dates. Consider contacting references by phone or video-teleconference rather than email only. Search whether a potential employee is employed at multiple companies using the same persona. Ensure the potential employee is seen on camera during multiple video telecommunication sessions. If the potential employee reports video and/or microphone issues that prohibit participation, this should be considered a red flag. Confirm the potential employee has a digital footprint. This includes a real phone number (not VOIP), a residential address, and social media accounts. Defending against malware Turn on cloud-delivered protection in Microsoft Defender Antivirus or the equivalent for your antivirus product to cover rapidly evolving attacker tools and techniques. Cloud-based machine learning protections block a majority of new and unknown variants. Ensure Microsoft Defender Antivirus definitions are up to date and real-time protection is turned on . Run endpoint detection and response (EDR) in block mode so that Microsoft Defender for Endpoint can block malicious artifacts, even when your non-Microsoft antivirus does not detect the threat or when Microsoft Defender Antivirus is running in passive mode. EDR in block mode works behind the scenes to remediate malicious artifacts that are detected post-breach. Configure investigation and remediation in full automated mode to let Microsoft Defender for Endpoint take immediate action on alerts to resolve breaches, significantly reducing alert volume. Configure automatic attack disruption in Microsoft Defender XDR. Automatic attack disruption is designed to contain attacks in progress, limit the impact on an organization’s assets, and provide more time for security teams to remediate the attack fully. Enable network protection in Microsoft Defender for Endpoint. Microsoft Defender XDR customers can turn on attack surface reduction rules to prevent several of the infection vectors of this threat. These rules, which can be configured by users with administrator rights, offer significant hardening against targeted attacks. In observed attacks, Microsoft customers who had the following rules turned on could mitigate the attack in the initial stages and prevent hands-on-keyboard activity: Block executable content from email client and webmail Block executable files from running unless they meet a prevalence, age, or trusted list criterion Block execution of potentially obfuscated scripts Use advanced protection against ransomware Microsoft Defender detections Microsoft Defender customers can refer to the list of applicable detections below. Microsoft Defender coordinates detection, prevention, investigation, and response across endpoints, identities, email, and apps to provide integrated protection against attacks like the threat discussed in this blog. Tactic Observed activity Microsoft Defender coverage Actor-specific alerts Known threat actor activity Microsoft Defender for Endpoint – Emerald Sleet threat actor activity – Diamond Sleet Actor activity detected – Onyx Sleet activity group – Pearl Sleet actor activity detected – Sapphire Sleet actor activity – Jade Sleet threat actor activity detected – Coral Sleet activity Reconnaissance AI-assisted research of target organizations Microsoft Defender for Cloud – Possible AI Tools Reconnaissance Detected – Possible Secret Reconnaissance Detected Initial access Sign-in activity; phishing Microsoft Defender XDR – Sign-in activity by a suspected North Korean entity Jasper Sleet Microsoft Entra ID Protection – Atypical travelImpossible travel – Microsoft Entra threat intelligence (sign-in) Microsoft Defender for Office 365 – A potentially malicious URL click was detected – A user clicked through to a potentially malicious URL – Suspicious email sending patterns detected – Email messages containing malicious URL removed after delivery – Email messages removed after delivery – Email reported by user as malware or phish Execution Backdoors observed in Sapphire Sleet Rust software compromise Microsoft Defender Antivirus – Trojan:Linux/ProcmacSteal – Trojan:PowerShell/ProcmacSteal – Trojan:MacOS/ProcmacSteal – Trojan:Cargo/ProcmacSteal Microsoft Security Copilot Microsoft Security Copilot is embedded in Microsoft Defender and provides security teams with AI-powered capabilities to summarize incidents, analyze files and scripts, summarize identities, use guided responses, and generate device summaries, hunting queries, and incident reports. Customers can also deploy AI agents , including the following Microsoft Security Copilot agents , to perform security tasks efficiently: Threat Intelligence Briefing agent Phishing Triage agent Threat Hunting agent Dynamic Threat Detection agent Security Copilot is also available as a standalone experience where customers can perform specific security-related tasks, such as incident investigation, user analysis, and vulnerability impact assessment. In addition, Security Copilot offers developer scenarios that allow customers to build, test, publish, and integrate AI agents and plugins to meet unique security needs. Threat intelligence reports Microsoft Defender XDR customers can use the following threat analytics reports in the Defender portal (requires license for at least one Defender XDR product) to get the most up-to-date information about the activity and techniques discussed in this blog. These reports provide intelligence, protection information, and recommended actions to prevent, mitigate, or respond to associated threats found in customer environments. Threat overview profile: Threat actors operationalizing AI Actor profile: Coral Sleet Actor profile: Diamond Sleet Actor profile: Emerald Sleet Actor profile: Jade Sleet Actor profile: Jasper Sleet Actor profile: Onyx Sleet Actor profile: Pearl Sleet Actor profile: Sapphire Sleet Microsoft Security Copilot customers can also use the Microsoft Security Copilot integration in Microsoft Defender Threat Intelligence, either in the Security Copilot standalone portal or in the embedded experience in the Microsoft Defender portal to get more information about this threat. Learn more For the latest security research from the Microsoft Threat Intelligence community, check out the Microsoft Threat Intelligence Blog . To get notified about new publications and to join discussions on social media, follow us on LinkedIn , X (formerly Twitter) , and Bluesky . To hear stories and insights from the Microsoft Threat Intelligence community about the ever-evolving threat landscape, listen to the Microsoft Threat Intelligence podcast . The post Tracking AI adoption in North Korean threat actor tradecraft appeared first on Microsoft Security Blog .",
+        "tags": []
+      },
+      "scoring": {
+        "score": 56,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "4 MITRE technique hit(s)=+17",
+          "6 initial-access vector(s)=+15",
+          "2 impact action(s)=+11",
+          "1 product mention(s)=+3"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1566",
+          "T1059",
+          "T1059.001",
+          "T1486"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit",
+          "supply-chain",
+          "vpn-edge",
+          "cloud-misconfig",
+          "social-engineering"
+        ],
+        "sectors": [
+          "finance",
+          "government",
+          "energy",
+          "manufacturing",
+          "education",
+          "telecom"
+        ],
+        "actions": [
+          "ransomware",
+          "fraud"
+        ],
+        "products": [
+          "Microsoft 365 / Entra ID"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-03cfadf3-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft 365 / Entra ID",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft 365 / Entra ID within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: phishing, exploit, supply-chain; impact: ransomware, fraud; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-03cfadf3-1-O1",
+              "title": "Inventory exposure to Microsoft 365 / Entra ID",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft 365 / Entra ID, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft 365 / Entra ID' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-03cfadf3-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-03cfadf3-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-03cfadf3-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft 365 / Entra ID hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-03cfadf3-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-03cfadf3-2",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on vectors: phishing, exploit, supply-chain; impact: ransomware, fraud; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-03cfadf3-2-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-03cfadf3-2-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-03cfadf3-2-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-03cfadf3-2-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-03cfadf3-3",
+          "title": "Identity compromise of privileged users",
+          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
+          "rationale": "Archetype 'identity_compromise' selected based on vectors: phishing, exploit, supply-chain; impact: ransomware, fraud; products: Microsoft 365 / Entra ID.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1078",
+            "T1621",
+            "T1528",
+            "T1556"
+          ],
+          "objectives": [
+            {
+              "id": "H-03cfadf3-3-O1",
+              "title": "Impossible-travel / atypical sign-ins",
+              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
+              "data_sources": [
+                "Entra ID sign-in logs",
+                "Okta system log"
+              ],
+              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
+              "mitre_attack": [
+                "T1078.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-03cfadf3-3-O2",
+              "title": "MFA-fatigue / push-bombing",
+              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
+              "data_sources": [
+                "MFA provider logs (Duo / Entra)"
+              ],
+              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
+              "mitre_attack": [
+                "T1621",
+                "T1078"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-03cfadf3-3-O3",
+              "title": "Help-desk social-engineering pivot",
+              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
+              "data_sources": [
+                "ITSM ticket data",
+                "Help-desk recordings"
+              ],
+              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
+              "mitre_attack": [
+                "T1078",
+                "T1556"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-03cfadf3-3-O4",
+              "title": "OAuth illicit-consent grants",
+              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
+              "data_sources": [
+                "Entra ID audit log",
+                "Google Workspace audit"
+              ],
+              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
+              "mitre_attack": [
+                "T1528"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-29T16:59:56+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
         "id": "63705a454161c9a8",
         "source": "CISA Advisories",
         "title": "Hitachi Energy CoreTec Product",
@@ -17795,332 +18114,9 @@
       ],
       "first_seen": "2026-10-29T15:00:21+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "84e4fa62c9a17617",
-        "source": "SecurityWeek",
-        "title": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware",
-        "link": "https://www.securityweek.com/in-other-news-tor-exit-relays-hijacked-banks-spot-rogue-ai-agents-self-rebuilding-macos-ransomware/",
-        "published": "Fri, 23 Oct 2026 14:23:37 +0000",
-        "summary": "Noteworthy stories that might have slipped under the radar: Russia’s APT28 hit NATO defense firms, PingCAP source code stolen, ShinyHunters negotiator probe. The post In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware appeared first on SecurityWeek .",
-        "raw_text": "In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware Noteworthy stories that might have slipped under the radar: Russia’s APT28 hit NATO defense firms, PingCAP source code stolen, ShinyHunters negotiator probe. The post In Other News: Tor Exit Relays Hijacked, Banks Spot Rogue AI Agents, Self-Rebuilding macOS Ransomware appeared first on SecurityWeek .",
-        "tags": []
-      },
-      "scoring": {
-        "score": 48,
-        "rationale": [
-          "source weight (news)=+5",
-          "1 threat actor hit(s)=+20",
-          "1 MITRE technique hit(s)=+8",
-          "1 initial-access vector(s)=+7",
-          "1 impact action(s)=+8"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [
-          "APT28 (Fancy Bear)"
-        ],
-        "mitre_techniques": [
-          "T1486"
-        ],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "finance",
-          "manufacturing"
-        ],
-        "actions": [
-          "ransomware"
-        ],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-84e4fa62-1",
-          "title": "Initial access via the disclosed vulnerability affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on threat actors: APT28 (Fancy Bear); vectors: exploit; impact: ransomware.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-84e4fa62-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for the referenced CVE.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-84e4fa62-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-84e4fa62-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-84e4fa62-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-84e4fa62-2",
-          "title": "Post-foothold lateral movement consistent with APT28 (Fancy Bear)",
-          "statement": "An attacker who matched the TTPs of APT28 (Fancy Bear) has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
-          "rationale": "Archetype 'lateral_movement' selected based on threat actors: APT28 (Fancy Bear); vectors: exploit; impact: ransomware.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1021.001",
-            "T1021.002",
-            "T1021.006",
-            "T1003"
-          ],
-          "objectives": [
-            {
-              "id": "H-84e4fa62-2-O1",
-              "title": "Anomalous remote logons (Type 3 / Type 10)",
-              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
-              "data_sources": [
-                "Windows Security event log",
-                "Domain Controller logs"
-              ],
-              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
-              "mitre_attack": [
-                "T1021.001",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-2-O2",
-              "title": "Admin-tool usage outside baseline",
-              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
-              "data_sources": [
-                "Sysmon EID 1",
-                "EDR",
-                "4688"
-              ],
-              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
-              "mitre_attack": [
-                "T1021.002",
-                "T1021.006",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-2-O3",
-              "title": "Kerberos abuse telemetry",
-              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
-              "data_sources": [
-                "Domain Controller security log"
-              ],
-              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
-              "mitre_attack": [
-                "T1558.003",
-                "T1110.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-84e4fa62-2-O4",
-              "title": "Lateral file-copy staging",
-              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
-              "data_sources": [
-                "File-share auditing (5145)",
-                "EDR file events"
-              ],
-              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
-              "mitre_attack": [
-                "T1570",
-                "T1021.002"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-84e4fa62-3",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on threat actors: APT28 (Fancy Bear); vectors: exploit; impact: ransomware.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-84e4fa62-3-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-84e4fa62-3-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-84e4fa62-3-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-84e4fa62-3-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-84e4fa62-3-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-23T14:29:38+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 382,
   "total_seen": 385,
   "brief": "50 hunt-worthy item(s) today, 6 rated critical. Prioritise the highest-scored items first. Top of the list: IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases; #StopRansomware: SafePay Ransomware; Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN."
 }
