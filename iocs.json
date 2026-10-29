@@ -1482,6 +1482,7 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
@@ -1491,6 +1492,7 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -7092,12 +7094,6 @@
       ]
     },
     {
-      "value": "attack.mitre.org",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33426"
-      ]
-    },
-    {
       "value": "b2.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7197,12 +7193,6 @@
       "value": "dcsync.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "developer.hashicorp.com",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33426"
       ]
     },
     {
@@ -7340,7 +7330,6 @@
     {
       "value": "isc.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33426",
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
         "https://isc.sans.edu/diary/rss/33458"
@@ -7616,7 +7605,6 @@
     {
       "value": "sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33426",
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442"
       ]
@@ -7828,12 +7816,6 @@
       ]
     },
     {
-      "value": "www.akamai.com",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33426"
-      ]
-    },
-    {
       "value": "www.cisa.gov",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
@@ -7847,12 +7829,6 @@
       "value": "www.fortinet.com",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
-      ]
-    },
-    {
-      "value": "www.hashicorp.com",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33426"
       ]
     },
     {
@@ -7901,7 +7877,6 @@
     {
       "value": "www.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33426",
         "https://isc.sans.edu/diary/rss/33442"
       ]
     },

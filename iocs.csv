@@ -245,8 +245,8 @@ cves,CVE-2026-110322,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-110243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-109813,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
 cves,CVE-2026-109812,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
-cves,CVE-2026-109619,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,6,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-109576,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-109122,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -1161,7 +1161,6 @@ domains,95.sbx.tg,1,https://blog.talosintelligence.com/i-had-plans-for-that-seco
 domains,acro.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,acronis.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,anydesk.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,attack.mitre.org,1,https://isc.sans.edu/diary/rss/33426
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,bootrepair.sys,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
@@ -1179,7 +1178,6 @@ domains,cook.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/insid
 domains,copy.bat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,data.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,dcsync.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,developer.hashicorp.com,1,https://isc.sans.edu/diary/rss/33426
 domains,diskdirector.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,docbook.ui.page.cls,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 domains,docs.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
@@ -1202,7 +1200,7 @@ domains,hub.docker.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26
 domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,index.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458
+domains,isc.sans.edu,3,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
@@ -1247,7 +1245,7 @@ domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
 domains,rootfs.rw,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,safe-extract.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
 domains,sample.exe,2,https://blog.talosintelligence.com/i-had-plans-for-that-second/ | https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
-domains,sans.edu,3,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
+domains,sans.edu,2,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
 domains,scan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,sharpshares.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1282,10 +1280,8 @@ domains,win.worm.zard,1,https://blog.talosintelligence.com/i-had-plans-for-that-
 domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 domains,www.acronis.com,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
-domains,www.akamai.com,1,https://isc.sans.edu/diary/rss/33426
 domains,www.cisa.gov,5,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02
 domains,www.fortinet.com,1,https://isc.sans.edu/diary/rss/33442
-domains,www.hashicorp.com,1,https://isc.sans.edu/diary/rss/33426
 domains,www.hitachienergy.com,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05
 domains,www.kiloview.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 domains,www.litellm.dev,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1293,7 +1289,7 @@ domains,www.litellm.dev.example,1,https://www.microsoft.com/en-us/security/blog/
 domains,www.mitsubishielectric.co.jp,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,www.mitsubishielectric.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,www.php.net,1,https://isc.sans.edu/diary/rss/33440
-domains,www.sans.edu,2,https://isc.sans.edu/diary/rss/33426 | https://isc.sans.edu/diary/rss/33442
+domains,www.sans.edu,1,https://isc.sans.edu/diary/rss/33442
 domains,www.siemens.com,8,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18
 domains,www.wago.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02
 sha256,0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
