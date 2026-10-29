@@ -245,8 +245,8 @@ cves,CVE-2026-110322,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-110243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-109813,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
 cves,CVE-2026-109812,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
-cves,CVE-2026-109619,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,6,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-109576,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-109122,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -1189,6 +1189,9 @@ domains,epics-controls.org,1,https://www.cisa.gov/news-events/ics-advisories/ics
 domains,eseecloud.app,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02
 domains,favicon.ico,1,https://isc.sans.edu/diary/rss/33442
 domains,fbijobs.gov,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
+domains,ghidra-server.org,1,https://isc.sans.edu/diary/rss/33470
+domains,ghidra.lab.local,1,https://isc.sans.edu/diary/rss/33470
+domains,ghidra.repositories.dir,1,https://isc.sans.edu/diary/rss/33470
 domains,hdr.json,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,host.ip,1,https://isc.sans.edu/diary/rss/33442
 domains,host.mac,1,https://isc.sans.edu/diary/rss/33442
@@ -1200,7 +1203,7 @@ domains,hub.docker.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26
 domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,index.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01
-domains,isc.sans.edu,3,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458
+domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
@@ -1248,6 +1251,7 @@ domains,sample.exe,2,https://blog.talosintelligence.com/i-had-plans-for-that-sec
 domains,sans.edu,2,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
 domains,scan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
+domains,server.conf,1,https://isc.sans.edu/diary/rss/33470
 domains,sharpshares.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,shinywire.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,shutterstock.com,1,https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/
@@ -1278,6 +1282,8 @@ domains,w32.pup,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-
 domains,win.tool.kmsauto,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,win.worm.zard,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,wrapper.app.account,1,https://isc.sans.edu/diary/rss/33470
+domains,wrapper.app.parameter,1,https://isc.sans.edu/diary/rss/33470
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 domains,www.acronis.com,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,www.cisa.gov,5,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-02 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-01 | https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-288-02

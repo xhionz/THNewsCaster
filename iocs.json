@@ -1482,7 +1482,6 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
@@ -1492,7 +1491,6 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -7262,6 +7260,24 @@
       ]
     },
     {
+      "value": "ghidra-server.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
+      "value": "ghidra.lab.local",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
+      "value": "ghidra.repositories.dir",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
       "value": "hdr.json",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7332,7 +7348,8 @@
       "sources": [
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
-        "https://isc.sans.edu/diary/rss/33458"
+        "https://isc.sans.edu/diary/rss/33458",
+        "https://isc.sans.edu/diary/rss/33470"
       ]
     },
     {
@@ -7622,6 +7639,12 @@
       ]
     },
     {
+      "value": "server.conf",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
       "value": "sharpshares.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7801,6 +7824,18 @@
       "value": "winrar.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "wrapper.app.account",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
+      "value": "wrapper.app.parameter",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33470"
       ]
     },
     {
