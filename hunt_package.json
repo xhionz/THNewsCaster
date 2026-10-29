@@ -1,8 +1,467 @@
 {
-  "generated_at": "2026-10-29T13:30:55+00:00",
+  "generated_at": "2026-10-29T14:19:36+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
+    {
+      "article": {
+        "id": "c6dbd2d480f697fb",
+        "source": "Cisco Talos",
+        "title": "IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases",
+        "link": "https://blog.talosintelligence.com/ir-trends-q3-2026/",
+        "published": "Thu, 29 Oct 2026 14:00:00 GMT",
+        "summary": "Phishing remained the leading initial access technique, while percentage of ransomware and pre-ransomware cases increased. Finance and public administration tied as the top-targeted industries.",
+        "raw_text": "IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases Phishing remained the leading initial access technique, while percentage of ransomware and pre-ransomware cases increased. Finance and public administration tied as the top-targeted industries. Phishing remained the leading initial access technique, appearing in slightly over one-third of all Cisco Talos Incident Response (Talos IR) engagements — a decrease from over 50 percent last quarter. In addition to traditional phishing links and attachments, we observed numerous threat actors conducting voice phishing (vishing) in tandem with IT desk impersonation to socially engineer the victim into allowing remote access via a legitimate remote monitoring and management (RMM) tool. Exploitation of public-facing applications was the next most common vector, accounting for one-third of Talos IR engagements. Threat actors predominantly targeted edge devices such as security gateways and remote network management interfaces. These are critical components within enterprise environments, often responsible for managing authentication, network traffic, or sensitive data. Compromising them can provide broad access to internal networks or user credentials. Ransomware and pre-ransomware incidents made up 27 percent of engagements in Q3 2026, an increase from a maximum of 20 percent seen in the previous four quarters. Talos responded to attacks involving prolific, technologically advanced, and well-established ransomware-as-a-service (RaaS) variants such as The Gentlemen, Qilin, and Rhysida, as well as Interlock, which operates as a closed group. Threat actors predominantly chose to disable endpoint detection and response (EDR) systems, often by exploiting vulnerable drivers or using Windows Defender Application Control (WDAC). Additionally, we observed the emerging ransomware variant VYPR, whose operator(s) tested a range of tactics, techniques, and procedures (TTPs) instead of following a standard attack method or affiliate playbook. Salt Typhoon-affiliated threat actors exploit public-facing application vulnerabilities for cyber espionage Talos IR continues to see prolonged cyber espionage intrusions targeting the telecommunications sector. Talos attributed most of these intrusions with high confidence to China state-sponsored threat actors, including Salt Typhoon. The attackers in these intrusions routinely gain initial access by leveraging valid credentials and exploiting a known vulnerability (CVE-2023-20198) in publicly accessible web-based management interfaces—two of the most frequently observed initial access vectors this quarter. In one campaign, the threat actor deployed BadCandy, a malicious web shell implant known to be leveraged by Salt Typhoon, to maintain persistent and stealthy remote access. The adversaries continue to employ living-off-the-land (LOTL) tactics, leveraging legitimate network infrastructure features — such as VPN access, traffic mirroring, and management protocols — to establish backdoors, exfiltrate data, and conduct reconnaissance. Exploiting a vulnerability in the web-based management interface, they created privileged accounts, disabled logging to conceal their activity, and altered configurations to maintain persistence, blending their actions with normal administrative operations to evade detection. These intrusions revealed several security weaknesses in the victim environment, including reliance on password-only authentication without evidence of multi-factor authentication (MFA), use of legacy and weak management protocols (such as plaintext SNMP and outdated VPN encryption), and inadequate credential management practices. Attackers were able to create and abuse privileged accounts, disable logging, and manipulate configuration settings without encountering effective security barriers, enabling persistent and stealthy access. The absence of strong MFA and robust credential management are two of the most frequently observed security weaknesses this quarter. AI exploited as a weapon and a target Recent Talos IR investigations highlight the growing role of artificial intelligence (AI) in cybercriminal activity, both as a tool and a target. In one case, an internal threat actor who was hired under false credentials abused their privileged access to install AI-powered development tools, such as GitHub Copilot CLI and Anthropic Claude Code. While the investigation did not find evidence of malicious activity or data theft, the employee’s developer-level access — including cloning repositories, configuring plugins, and connecting to databases — could have enabled them to use AI tools to automate malicious actions within the organization. A second investigation revealed an attack chain in which a compromised macOS endpoint, infected via a trojanized application, was scripted to scrape credentials from the macOS keychain specifically associated with the Anthropic Claude Code AI assistant. This direct targeting of AI-related secrets highlights an emerging threat, where attackers seek to compromise not only traditional user and system credentials but also those tied to AI platforms, which may grant access to additional sensitive data and advanced automation capabilities. These incidents highlight the critical need for organizations to implement strong MFA and robust credential management practices, especially for AI platforms and development tools. Ransomware trends Ransomware and pre-ransomware incidents increased from a little over 20 percent last quarter to 27 percent in Q3, involving well-known threat groups like Interlock and the emerging ransomware VYPR. Frequently observed techniques involved deleting EDR systems and socially engineering victims into initiating remote management sessions. Emerging ransomware variant: VYPR During a Talos IR engagement, we observed a ransomware variant called “VYPR” that we assess is relatively new and still operationally immature. This assessment is supported by the absence of an established data leak site (DLS), as none was referenced in the ransom note and associated DLS infrastructure was not created until after the engagement. The group also appeared to rely on older leaked Conti-derived source code with only minimal modifications, reflecting a relatively unsophisticated technical approach. Their operations further suggested experimentation rather than a refined playbook, as they took an unusually long time to exfiltrate and encrypt data while testing different exfiltration parameters and deploying multiple vulnerable drivers to disable EDR protections. The actor gained initial access through voice phishing (vishing); they tricked a user into initiating a Microsoft Quick Assist session, allowing remote access to the endpoint. While the exact social engineering technique was not confirmed in this case, threat actors frequently impersonate IT help desks during vishing calls to manipulate victims into establishing remote connections — a tactic observed in several other Q3 engagements. The actor was then able to utilize existing RMM software, which subsequently executed PowerShell commands to download and install a Microsoft Software Installer (MSI) package from a remote IP address. During the attack, the actor leveraged tools that are commonly observed during ransomware investigations, including MeshAgent, Rclone, PsExec, IP scan, and Microsoft Terminal Services Client (MSTSC). Notably, we saw exfiltration over multiple days, which is not commonly observed during ransomware investigations. EDR killers: Why evade detection when you can destroy it? We observed several instances where ransomware operators disabled EDR systems, prioritizing direct disruption of security controls. We observed Interlock ransomware actors making multiple attempts to impair endpoint detection EDR capabilities by trying to uninstall Cisco Secure Endpoint (CSE) on compromised systems and used tools such as PsExec.exe and taskkill.exe to terminate security services and integrity checkers, including cscm.exe and sfc.exe. Additionally, the adversary disabled Windows Defender real-time protection and cleared various event logs to reduce visibility and hinder forensic analysis. This is in line with previously observed Interlock activity, where they deployed a malicious WDAC policy to terminate EDR solutions. In the previously mentioned VYPR ransomware incident, the threat actor disabled EDR and antivirus (AV) by using Bring Your Own Vulnerable Driver (BYOVD) techniques to evade detection and execute the ransomware. BYOVD attacks take advantage of trusted but flawed drivers to gain kernel-level access, enabling threat actors to disable EDR mechanisms and carry out their operations unimpeded. While this technique is commonly observed in ransomware attacks, this actor deployed an unusually large number of vulnerable drivers in the environment, possibly to create redundancies and maximize their chances of success. Targeting Targeting of the financial industry increased from last quarter to comprise 18 percent of all engagements, tying with public administration as the most targeted sector. Although the financial industry remains a valuable target, Talos has not ranked it among the top three most impacted sectors since 2024. One possible reason is that organizations in finance can typically invest more in cybersecurity, unlike sectors such as public administration, which has consistently been among the top-targeted industries over the past year. Meanwhile, health care fell to third place after ranking as the most targeted industry for the previous two consecutive quarters. Initial access While the number of engagements involving phishing as an initial access vector declined from last quarter, it remained the most common technique, appearing in 37 percent of Talos IR engagements. Exploitation of public-facing applications was the second most common initial access vector, accounting for 33 percent of engagements. Recommendations for addressing top security weaknesses The most common security weaknesses observed this quarter were insufficient logging, improper credential and secret management, and absent or improperly implemented authentication and MFA. These trends closely mirror last quarter, when insufficient logging and authentication weaknesses were also prevalent. Centralize logging and set retention requirements The leading security weakness was insufficient logging leading to visibility gaps, seen in over 40 percent of engagements this quarter. These gaps were in part due to the common threat actor practice of deleting logs, and in part due to insufficient log retention or configuration implemented by the customer. Talos IR recommends implementing a SIEM or centralized logging platform with a minimum of 90 days of retention, forwarding logs from servers, workstations, network infrastructure, cloud identity providers, and security appliances off-device so they survive log tampering and host rebuilds, and enabling process-creation, command-line, and cloud API (e.g., Microsoft Graph) auditing. Talos IR's Log Architecture Assessment service can identify gaps and provide a roadmap to a complete view of the environment. Tighten authentication and MFA controls Missing or insufficient authentication and MFA controls were the third most common security weakness this quarter, observed in 33 percent of engagements. The most prevalent issue was reliance on single-factor authentication, which allowed unauthorized access in several incidents. In many cases, legacy authentication protocols were still enabled, enabling adversaries to log in without any MFA requirements, and some environments failed to enforce MFA for high-privilege accounts. To reduce this risk, Talos IR recommends transitioning from push- and SMS-based MFA to phishing-resistant methods such as FIDO2/WebAuthn and hardware security keys. Organizations should also restrict self-service MFA enrollment by requiring helpdesk verification, block legacy authentication through Conditional Access, enforce number matching or verified push where phishing-resistant methods are not yet feasible, and condition access on device compliance and trusted infrastructure rather than geographic location alone. Safeguard credentials and secrets Improper credential and secret management was the second most common security weakness seen in 33 percent of engagements this quarter, reinforcing the importance of security awareness training and consistent security hygiene for every user. Observed security issues included unsafe storage and handling of credentials, such as saving passwords in browser stores, poor control mechanisms like permitting autofill for browser-stored credentials, and credential reuse and sharing. Effective secret management begins with a formal process that covers passwords, API keys, tokens, certificates, and other sensitive credentials. By requiring unique passwords for every account and encouraging the use of password managers, organizations reduce the risks associated with credential reuse and sharing. Storing secrets securely, with encryption and access restricted to only those who need them, further strengthens protection. When credentials are no longer necessary or are suspected to be compromised, they should be promptly revoked and replaced. Regular reviews of access to privileged credentials, combined with thorough logging, help detect unusual activity. Equipping staff with training on safe handling and clear reporting procedures ensures that accidental disclosures are addressed quickly and effectively. Tales from the Frontlines: An exclusive briefing on Q3 incidents On November 12, Talos incident responders will be hosting an exclusive, unrecorded 30-minute webinar to review the most high-impact incidents our customers faced in Q3. Designed for security professionals of all levels, this is a candid discussion of what happened, how we handled it, and what it means for your organization. Registration is required to attend. Don't miss this chance to hear real-world stories from the frontlines of cyber defense, directly from the team who lived them. Register here MITRE ATT&CK appendix The table below represents MITRE ATT&CK techniques and tools observed in this quarter’s IR engagements, including relevant examples. Given that some techniques can fall under multiple tactics, we grouped them under the most relevant tactic based on the way they were leveraged. Please note that this is not an exhaustive list. Key findings from the MITRE ATT&CK framework include: The rise of phishing and the frequent use of valid accounts for initial access and lateral movement both highlight how attackers continue to rely on methods that have remained consistently effective year over year. Attacker success consistently reflects basic weaknesses in enterprise security posture, with persistent exploitation of known vulnerabilities — especially in internet-facing applications — demonstrating that adversaries continually scan for and opportunistically target unpatched systems. The most used techniques to maintain persistence were deploying web shells and creating scheduled tasks, demonstrating that attackers prioritize stealthy, reliable access by leveraging legitimate system components that blend in with normal operations. These techniques enable threat actors to maintain long-term control and quickly re-establish their presence even if some signs of compromise are removed. Tactic Technique Example Initial Access (TA0001) T1190 Exploit Public-Facing Application Adversaries may exploit vulnerabilities in public-facing applications to gain unauthorized access to a network. T1566 Phishing (link, attachment, voice, service) Adversaries may rely on users clicking a malicious link or opening a malicious attachment to gain initial access, often using social engineering to increase success. T1078 Valid Accounts (Local, Domain, Cloud, SSH) Adversaries may obtain and abuse credentials of existing accounts to access systems within the network and execute their payload. T1133 External Remote Services Adversaries may leverage remote services such as VPN or RDP to gain entry into an environment using legitimate access mechanisms. Execution (TA0002) T1059 Command and Scripting Interpreter (PowerShell, Windows/Unix Shell, JavaScript, Python) Adversaries may use built-in scripting interpreters like PowerShell or bash to execute malicious code on victim systems. T1610 Deploy Container Adversaries may deploy malicious containers in cloud or on-premises environments to establish execution. Per sistence (TA0003) T1505.003 Server Software Component: Web Shell Adversaries may install web shells on compromised servers to maintain per sistent access via HTTP/S. T1543 Create or Modify System Process (Windows Service, Scheduled Task) Adversaries may create or modify system processes, such as scheduled tasks or services, to maintain per sistence after initial compromise. T1136.001 Create Account: Local Account Adversaries may create new local accounts to establish per sistence or elevate privileges within the environment. Defense Evasion (TA0005) T1036 Masquerading Adversaries may disguise malicious files or processes as legitimate system components to avoid detection. T1562.001 Impair Defenses: Disable/ Modify Security Tools Adversaries may disable or modify security software and tools to avoid detection and facilitate continued o per ations. T1070 Indicator Removal (File Deletion, Clear Event Logs) Adversaries may remove or alter evidence of their activity by deleting files or clearing logs on compromised systems. T1027 Obfuscated Files or Information Adversaries may obfuscate files and information to prevent security tools from identifying malicious activity. T1218.011 System Binary Proxy Execution: Rundll32 Adversaries may use legitimate system binaries such as rundll32 to proxy execution of malicious code. T1222 File and Directory Per missions Modification Adversaries may modify file or directory per missions to conceal their presence or maintain access. T1055 Process Injection Adversaries may inject malicious code into the address space of legitimate processes to evade detection. T1550 Use Alternate Authentication Material Adversaries may use alternate authentication material, such as SSH keys, to access accounts without using passwords. Discovery (TA0007) T1018 Remote System Discovery Adversaries may enumerate remote systems on a network to identify targets for lateral movement or data collection. T1082 System Information Discovery Adversaries may collect detailed information about the o per ating system and hardware to inform later actions. T1087 Account Discovery (Domain Account) Adversaries may query for user and group information to identify accounts of interest in the environment. T1046 Network Service Discovery Adversaries may scan for open ports and network services to identify potential entry points or targets. T1518.001 Security Software Discovery Adversaries may search for installed security software to tailor evasion techniques accordingly. T1016 System Network Configuration Discovery Adversaries may gather network configuration details to better understand the environment and plan next steps. Command and Control (TA0011) T1105 Ingress Tool Transfer Adversaries may transfer tools or payloads into an environment to facilitate further o per ations. T1071 Application Layer Protocol (Web, DNS) Adversaries may use common web or DNS protocols for command and control to blend in with normal network traffic. T1219 Remote Access Software Adversaries may use legitimate remote access software to maintain control over compromised systems. T1572 Protocol Tunneling Adversaries may tunnel command and control traffic through allowed protocols to bypass network defenses. T1090 Proxy Adversaries may route communications through proxy servers to obscure their origin and evade detection. Lateral Movement (TA0008) T1021.002 SMB/Windows Admin Shares Adversaries may use SMB and admin shares to move laterally between systems within the network. T1021.004 SSH Adversaries may use SSH with stolen credentials or keys to move laterally across systems. T1570 Lateral Tool Transfer Adversaries may transfer tools or files between systems to enable further compromise. T1047 Windows Management Instrumentation Adversaries may leverage WMI to execute code or commands remotely on Windows systems. Privilege Escalation (TA0004) T1098 Account Manipulation (Additional Cloud Roles) Adversaries may modify account per missions or roles to escalate privileges within cloud environments. Collection (TA0009) T1005 Data from Local System Adversaries may collect files and sensitive data from local systems for later exfiltration. T1039 Data from Network Shared Drive Adversaries may look for folders and drives shared on remote systems as a means of identifying sources of information to gather. T1560.001 Archive Collected Data via Utility Adversaries may compress or archive collected data to facilitate exfiltration. Credential Access (TA0006) T1110.003 Brute Force: Password Spraying Adversaries may attempt to gain access by systematically trying commonly used passwords against many accounts. T1556 Modify Authentication Process Adversaries may modify authentication processes to facilitate unauthorized access. T1649 Steal or Forge Authentication Certificates Adversaries may steal or forge authentication certificates to bypass authentication controls. T1558 Steal or Forge Kerberos Tickets Adversaries may forge or steal Kerberos tickets to access resources within the network. T1557 Adversary-in-the-Middle Adversaries may intercept communications to capture credentials in transit. Exfiltration (TA0010) T1567.002 Exfiltration to Cloud Storage Adversaries may exfiltrate collected data to cloud storage services outside the target network. T1041 Exfiltration Over C2 Channel Adversaries may transfer stolen data over established command and control channels. T1048 Exfiltration Over Alternative Protocol Adversaries may exfiltrate data using alternative network protocols such as FTP or SFTP. Impact (TA0040) T1486 Data Encrypted for Impact Adversaries may encrypt files or entire systems to disrupt normal o per ations and demand ransom. T1490 Inhibit System Recovery Adversaries may delete backups or shadow copies to prevent recovery and maximize impact. Reconnaissance (TA0043) T1595.002 Active Scanning: Vulnerability Scanning Adversaries may actively scan for vulnerable systems and services as part of their reconnaissance. T1589.001 Gather Victim Identity Information: Credentials Adversaries may collect credential information from public sources to inform later attacks. Resource Development (TA0042) T1583 Acquire Infrastructure Adversaries may acquire infrastructure, such as servers or domains, to support their o per ations. T1584 Compromise Infrastructure Adversaries may compromise third-party infrastructure to use as a launch point for further activities. Software/Tool GoGRPC RAT Adversaries may deploy GoGRPC RAT, commonly observed as fly.exe, to remotely control compromised systems and execute commands via the GoGRPC protocol, enabling stealthy management and data collection. Node RAT Adversaries may leverage Node.js-based remote access tools to establish per sistence, execute arbitrary code, and facilitate command and control through JavaScript runtimes on victim machines. BadCandy Adversaries may use BadCandy , a remote access trojan, to gain per sistent remote control, exfiltrate data, and monitor victim activities, often leveraging encrypted communications to evade detection. Overlord RAT Adversaries may utilize Overlord RAT to remotely administer compromised hosts, execute commands, and transfer files, often blending C2 traffic with legitimate protocols to avoid network monitoring. SideSlipRAT Adversaries may deploy SideSlipRAT to maintain ongoing access to victim systems, execute malicious payloads, and collect sensitive information while using various evasion techniques to bypass defenses. Impacket SMBexec Adversaries may use Impacket’s SMBexec tool to execute commands remotely over SMB, allowing lateral movement and post-exploitation activities within Windows environments by leveraging valid credentials.",
+        "tags": []
+      },
+      "scoring": {
+        "score": 133,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "1 CVE(s)=+20",
+          "1 malware family hit(s)=+20",
+          "1 threat actor hit(s)=+20",
+          "17 MITRE technique hit(s)=+20",
+          "7 initial-access vector(s)=+15",
+          "3 impact action(s)=+14",
+          "6 IOC(s)=+14"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [
+          "CVE-2023-20198"
+        ],
+        "ips": [],
+        "domains": [
+          "psexec.exe",
+          "taskkill.exe",
+          "cscm.exe",
+          "sfc.exe",
+          "fly.exe",
+          "node.js"
+        ],
+        "hashes_md5": [],
+        "hashes_sha1": [],
+        "hashes_sha256": [],
+        "malware_families": [
+          "Rhysida"
+        ],
+        "threat_actors": [
+          "Salt Typhoon"
+        ],
+        "mitre_techniques": [
+          "T1566",
+          "T1190",
+          "T1133",
+          "T1078",
+          "T1059",
+          "T1059.001",
+          "T1053",
+          "T1055",
+          "T1021.001",
+          "T1021.002",
+          "T1486",
+          "T1041",
+          "T1219",
+          "T1218.011",
+          "T1098",
+          "T1110",
+          "T1505.003"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit",
+          "vpn-edge",
+          "rdp",
+          "smb",
+          "credential-theft",
+          "social-engineering"
+        ],
+        "sectors": [
+          "finance",
+          "energy",
+          "manufacturing",
+          "telecom"
+        ],
+        "actions": [
+          "ransomware",
+          "data-breach",
+          "espionage"
+        ],
+        "products": []
+      },
+      "hypotheses": [
+        {
+          "id": "H-c6dbd2d4-1",
+          "title": "Initial access via CVE-2023-20198 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2023-20198 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2023-20198; malware families: Rhysida; threat actors: Salt Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, espionage.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-c6dbd2d4-1-O1",
+              "title": "Inventory exposure to the affected product",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2023-20198.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-c6dbd2d4-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2023-20198 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2023-20198/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-c6dbd2d4-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2023-20198 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2023-20198')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-c6dbd2d4-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-c6dbd2d4-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-c6dbd2d4-2",
+          "title": "Endpoint execution of Rhysida",
+          "statement": "One or more endpoints in the estate have executed or attempted to execute Rhysida payloads since the reporting date.",
+          "rationale": "Archetype 'malware_execution' selected based on CVEs cited: CVE-2023-20198; malware families: Rhysida; threat actors: Salt Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, espionage.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1204",
+            "T1059",
+            "T1547"
+          ],
+          "objectives": [
+            {
+              "id": "H-c6dbd2d4-2-O1",
+              "title": "EDR hash sweep for Rhysida",
+              "falsification_criterion": "If a search of EDR file/process telemetry for known Rhysida SHA256s returns zero hits in the last 90 days, payload presence is disproven.",
+              "data_sources": [
+                "EDR (CrowdStrike/Defender/SentinelOne)",
+                "Threat-intel feed"
+              ],
+              "suggested_query": "process_events | where sha256 in (ti_lookup('Rhysida', 'sha256')) | summarize count() by host",
+              "mitre_attack": [
+                "T1204",
+                "T1059"
+              ],
+              "difficulty": "easy",
+              "points": 150
+            },
+            {
+              "id": "H-c6dbd2d4-2-O2",
+              "title": "Behavioural pattern hunt for Rhysida",
+              "falsification_criterion": "If parent/child anomalies typical of the family (e.g. Office spawning script hosts, rundll32 chains) are absent across the estate, execution chain is unsupported.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR process tree"
+              ],
+              "suggested_query": "process | where parent in ('winword.exe','excel.exe','outlook.exe') and child in ('rundll32.exe','wscript.exe','mshta.exe','powershell.exe')",
+              "mitre_attack": [
+                "T1059.001",
+                "T1059.005",
+                "T1218.011"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-c6dbd2d4-2-O3",
+              "title": "Persistence-key inspection",
+              "falsification_criterion": "If autoruns, scheduled tasks, services, and WMI subscriptions show no Rhysida-aligned artifacts, post-execution persistence is disproven.",
+              "data_sources": [
+                "Sysmon EID 13/12",
+                "Autoruns sweep",
+                "EDR persistence module"
+              ],
+              "suggested_query": "registry_set | where key matches /Run|RunOnce|Image File Execution Options/ and value matches /unusual-path/",
+              "mitre_attack": [
+                "T1547.001",
+                "T1053.005"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-c6dbd2d4-2-O4",
+              "title": "AV / quarantine retrospective",
+              "falsification_criterion": "If retrospective AV / quarantine logs show no detections for related signatures over the last 30 days, the family is unlikely to have landed in-environment.",
+              "data_sources": [
+                "AV management console",
+                "Defender ATP detections"
+              ],
+              "suggested_query": "av_events | where signature contains 'Rhysida' | summarize by host, action",
+              "mitre_attack": [
+                "T1204"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-c6dbd2d4-2-O5",
+              "title": "Memory-resident loader check",
+              "falsification_criterion": "If a memory scan (YARA via EDR / Volatility) finds none of the published loader patterns on a sampled set of high-risk hosts, in-memory residency is unsupported.",
+              "data_sources": [
+                "YARA via EDR",
+                "Volatility on a sampled host"
+              ],
+              "suggested_query": "memory_scan | yara_rule == 'rule_rhysida' | summarize by host",
+              "mitre_attack": [
+                "T1620",
+                "T1055"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-c6dbd2d4-3",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2023-20198; malware families: Rhysida; threat actors: Salt Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, espionage.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-c6dbd2d4-3-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('psexec.exe','taskkill.exe','cscm.exe') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-c6dbd2d4-3-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-c6dbd2d4-3-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-c6dbd2d4-3-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-c6dbd2d4-3-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-c6dbd2d4-4",
+          "title": "Post-foothold lateral movement consistent with Salt Typhoon",
+          "statement": "An attacker who matched the TTPs of Salt Typhoon has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on CVEs cited: CVE-2023-20198; malware families: Rhysida; threat actors: Salt Typhoon; vectors: phishing, exploit, vpn-edge; impact: ransomware, data-breach, espionage.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-c6dbd2d4-4-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-c6dbd2d4-4-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-c6dbd2d4-4-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-c6dbd2d4-4-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-29T14:19:36+00:00",
+      "agent_trace": []
+    },
     {
       "article": {
         "id": "e57c548ad3e067f9",
@@ -17657,323 +18116,9 @@
       ],
       "first_seen": "2026-10-27T17:12:18+00:00",
       "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "075471936b28881a",
-        "source": "CISA Advisories",
-        "title": "CISA Adds Two Known Exploited Vulnerabilities to Catalog",
-        "link": "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "published": "Mon, 26 Oct 26 12:00:00 +0000",
-        "summary": "CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog and updated the PHP Alert, Critical Vulnerabilities in PHP Require Immediate Patching : CVE-2026-109618 – PHP Memory Corruption Vulnerability CVE-2026-109619 – PHP Stale Internal Request-State Vulnerability These types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not curre",
-        "raw_text": "CISA Adds Two Known Exploited Vulnerabilities to Catalog CISA has added two new vulnerabilities to its Known Exploited Vulnerabilities (KEV) Catalog and updated the PHP Alert, Critical Vulnerabilities in PHP Require Immediate Patching : CVE-2026-109618 – PHP Memory Corruption Vulnerability CVE-2026-109619 – PHP Stale Internal Request-State Vulnerability These types of vulnerabilities are a frequent attack vector for malicious cyber actors and pose significant risks to the federal enterprise. Binding Operational Directive (BOD) 26-04: Prioritizing Security Updates Based on Risk establishes vulnerability management requirements for Federal Civilian Executive Branch (FCEB) agencies. BOD 26-04 reinforces the importance of the KEV Catalog and requires federal agencies to prioritize rapid remediation of high-risk vulnerabilities, specifically those identified by Common Vulnerabilities and Exposures (CVEs) listed in CISA’s KEV Catalog on publicly exposed assets that grant total control of the asset post-exploitation, while deferring action for lower-risk vulnerabilities. BOD 26-04 further establishes basic expectations for when agencies must check whether threat actors compromised the system before the patch was applied. While BOD 26-04 applies only to FCEB agencies, CISA encourages all organizations to adopt risk-based vulnerability management and prioritize remediation of KEV Catalog vulnerabilities . CISA will continue to add vulnerabilities to the catalog that meet the specified criteria . Aware of an exploited vulnerability not currently listed in the KEV Catalog? Submit it for potential addition through CISA’s KEV Nomination Form . Potential KEV additions must have a CVE ID, evidence of exploitation, and clear mitigation guidance.",
-        "tags": []
-      },
-      "scoring": {
-        "score": 47,
-        "rationale": [
-          "source weight (advisory)=+15",
-          "2 CVE(s)=+25",
-          "1 initial-access vector(s)=+7"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2026-109618",
-          "CVE-2026-109619"
-        ],
-        "ips": [],
-        "domains": [],
-        "hashes_md5": [],
-        "hashes_sha1": [],
-        "hashes_sha256": [],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [],
-        "vectors": [
-          "exploit"
-        ],
-        "sectors": [
-          "government",
-          "manufacturing"
-        ],
-        "actions": [],
-        "products": []
-      },
-      "hypotheses": [
-        {
-          "id": "H-07547193-1",
-          "title": "Initial access via CVE-2026-109618 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-109618 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-07547193-1-O1",
-              "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-109618.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'the affected product' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-07547193-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-109618 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-109618/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-07547193-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-109618 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-109618')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-07547193-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-07547193-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-07547193-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-07547193-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('the published C2 domains') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-07547193-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-07547193-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-07547193-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-07547193-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-07547193-3",
-          "title": "Identity compromise of privileged users",
-          "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-109618, CVE-2026-109619; vectors: exploit.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1078",
-            "T1621",
-            "T1528",
-            "T1556"
-          ],
-          "objectives": [
-            {
-              "id": "H-07547193-3-O1",
-              "title": "Impossible-travel / atypical sign-ins",
-              "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
-              "data_sources": [
-                "Entra ID sign-in logs",
-                "Okta system log"
-              ],
-              "suggested_query": "signin | where risk_level in ('high','medium') and user in (privileged_users) | summarize by country, ip",
-              "mitre_attack": [
-                "T1078.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-07547193-3-O2",
-              "title": "MFA-fatigue / push-bombing",
-              "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
-              "data_sources": [
-                "MFA provider logs (Duo / Entra)"
-              ],
-              "suggested_query": "mfa | summarize denies = countif(result=='deny'), accepts = countif(result=='accept') by user, bin(ts,1h) | where denies > 5 and accepts > 0",
-              "mitre_attack": [
-                "T1621",
-                "T1078"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-07547193-3-O3",
-              "title": "Help-desk social-engineering pivot",
-              "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
-              "data_sources": [
-                "ITSM ticket data",
-                "Help-desk recordings"
-              ],
-              "suggested_query": "tickets | where action in ('password_reset','mfa_reset') and target in (privileged_users) | join (verifications) on ticket_id",
-              "mitre_attack": [
-                "T1078",
-                "T1556"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-07547193-3-O4",
-              "title": "OAuth illicit-consent grants",
-              "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
-              "data_sources": [
-                "Entra ID audit log",
-                "Google Workspace audit"
-              ],
-              "suggested_query": "audit | where action == 'Consent to application' and scopes contains 'Mail.Read' or 'files.read.all'",
-              "mitre_attack": [
-                "T1528"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-26T23:31:58+00:00",
-      "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 383,
   "total_seen": 385,
-  "brief": "50 hunt-worthy item(s) today, 5 rated critical. Prioritise the highest-scored items first. Top of the list: #StopRansomware: SafePay Ransomware; Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN; The Q3 Vulnerability Pulse: Discovery ≠ Exploitation."
+  "brief": "50 hunt-worthy item(s) today, 6 rated critical. Prioritise the highest-scored items first. Top of the list: IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases; #StopRansomware: SafePay Ransomware; Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN."
 }

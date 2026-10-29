@@ -245,8 +245,8 @@ cves,CVE-2026-110322,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-2
 cves,CVE-2026-110243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-109813,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
 cves,CVE-2026-109812,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03
-cves,CVE-2026-109619,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,3,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/
+cves,CVE-2026-109618,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://isc.sans.edu/diary/rss/33440 | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-109576,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-109122,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -1122,6 +1122,7 @@ cves,CVE-2023-51384,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2023-28531,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2023-27532,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 cves,CVE-2023-20269,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+cves,CVE-2023-20198,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 cves,CVE-2023-4863,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2022-26704,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2021-44228,1,https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/
@@ -1178,6 +1179,7 @@ domains,control.py,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280
 domains,cook.pth,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,cook.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,copy.bat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,cscm.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,csrss.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,data.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,dcsync.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1194,6 +1196,7 @@ domains,exec.command,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-
 domains,exodus.wallet,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,favicon.ico,1,https://isc.sans.edu/diary/rss/33442
 domains,fbijobs.gov,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
+domains,fly.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,fodhelper.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,formhistory.sqlite,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,ghidra-server.org,1,https://isc.sans.edu/diary/rss/33470
@@ -1235,7 +1238,7 @@ domains,netscan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,netscannew.zip,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,next.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,nltest.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,node.js,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
+domains,node.js,2,https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
 domains,nxc.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,opcuaserverconfig.copy,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-288-01
 domains,openssl.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1255,6 +1258,7 @@ domains,php.net,2,https://isc.sans.edu/diary/rss/33440 | https://www.reddit.com/
 domains,ping.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,places.sqlite,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,portable.dat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,psexec.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,pulsebrowser.29kh.in12.talos,1,https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/
 domains,raw.githubusercontent.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
@@ -1265,6 +1269,7 @@ domains,sans.edu,2,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/d
 domains,scan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,server.conf,1,https://isc.sans.edu/diary/rss/33470
+domains,sfc.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,sharpshares.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,shinywire.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,shutterstock.com,1,https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/
@@ -1283,6 +1288,7 @@ domains,submit.php,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-280
 domains,subs.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,svchost.exe,2,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/ | https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,system.management.automation.dll,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
+domains,taskkill.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,total-sitevv.lol,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,tuta.io,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/
 domains,tutanota.com,1,https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/

@@ -1481,8 +1481,7 @@
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
       ]
     },
     {
@@ -1491,7 +1490,6 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
@@ -6854,6 +6852,12 @@
       ]
     },
     {
+      "value": "CVE-2023-20198",
+      "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/"
+      ]
+    },
+    {
       "value": "CVE-2023-4863",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
@@ -7194,6 +7198,12 @@
       ]
     },
     {
+      "value": "cscm.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/"
+      ]
+    },
+    {
       "value": "csrss.exe",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
@@ -7287,6 +7297,12 @@
       "value": "fbijobs.gov",
       "sources": [
         "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "fly.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/"
       ]
     },
     {
@@ -7541,6 +7557,7 @@
     {
       "value": "node.js",
       "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
       ]
     },
@@ -7661,6 +7678,12 @@
       ]
     },
     {
+      "value": "psexec.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/"
+      ]
+    },
+    {
       "value": "pulsebrowser.29kh.in12.talos",
       "sources": [
         "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
@@ -7720,6 +7743,12 @@
       "value": "server.conf",
       "sources": [
         "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
+      "value": "sfc.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/"
       ]
     },
     {
@@ -7829,6 +7858,12 @@
       "value": "system.management.automation.dll",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
+      "value": "taskkill.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/ir-trends-q3-2026/"
       ]
     },
     {
