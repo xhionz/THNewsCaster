@@ -1423,12 +1423,6 @@
       ]
     },
     {
-      "value": "CVE-2026-111497",
-      "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog"
-      ]
-    },
-    {
       "value": "CVE-2026-111100",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
@@ -1578,6 +1572,12 @@
       ]
     },
     {
+      "value": "CVE-2026-106087",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
+      ]
+    },
+    {
       "value": "CVE-2026-105960",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
@@ -1720,6 +1720,12 @@
       "value": "CVE-2026-92450",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-89209",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01"
       ]
     },
     {
@@ -2866,12 +2872,6 @@
       ]
     },
     {
-      "value": "CVE-2026-48356",
-      "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog"
-      ]
-    },
-    {
       "value": "CVE-2026-46333",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -3512,6 +3512,12 @@
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16"
+      ]
+    },
+    {
+      "value": "CVE-2026-43284",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03"
       ]
     },
     {
@@ -5066,6 +5072,12 @@
       ]
     },
     {
+      "value": "CVE-2026-13162",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03"
+      ]
+    },
+    {
       "value": "CVE-2026-11856",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
@@ -5081,6 +5093,12 @@
       "value": "CVE-2026-11822",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
+      ]
+    },
+    {
+      "value": "CVE-2026-10756",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
       ]
     },
     {
@@ -6870,12 +6888,6 @@
       ]
     },
     {
-      "value": "CVE-2021-44228",
-      "sources": [
-        "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
-      ]
-    },
-    {
       "value": "CVE-2021-41617",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -6911,6 +6923,30 @@
       "value": "5.255.11.134",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "9.1.1.0",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
+      ]
+    },
+    {
+      "value": "9.1.2.0",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
+      ]
+    },
+    {
+      "value": "9.2.1.6",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
+      ]
+    },
+    {
+      "value": "9.2.2.1",
+      "sources": [
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
       ]
     },
     {
@@ -7111,12 +7147,6 @@
       "value": "bootkit.bin",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "bootrepair.sys",
-      "sources": [
-        "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
       ]
     },
     {
@@ -7989,12 +8019,6 @@
       ]
     },
     {
-      "value": "www.acronis.com",
-      "sources": [
-        "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
-      ]
-    },
-    {
       "value": "www.cisa.gov",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-280-01",
@@ -8014,7 +8038,9 @@
       "value": "www.hitachienergy.com",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03"
       ]
     },
     {
@@ -8069,7 +8095,8 @@
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18"
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18",
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01"
       ]
     },
     {
