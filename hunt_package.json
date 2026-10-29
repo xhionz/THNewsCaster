@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T17:40:04+00:00",
+  "generated_at": "2026-10-29T18:21:27+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -1382,356 +1382,6 @@
         }
       ],
       "first_seen": "2026-10-28T21:49:09+00:00",
-      "agent_trace": []
-    },
-    {
-      "article": {
-        "id": "eb0c40b29abe161e",
-        "source": "Cisco Talos",
-        "title": "The Q3 Vulnerability Pulse: Discovery ≠ Exploitation",
-        "link": "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/",
-        "published": "Thu, 15 Oct 2026 18:00:00 GMT",
-        "summary": "Is the cybersecurity world really facing a \"Bugmageddon?\" Thor breaks down the latest CVE and KEV trends in the latest Threat Source newsletter.",
-        "raw_text": "The Q3 Vulnerability Pulse: Discovery ≠ Exploitation Is the cybersecurity world really facing a \"Bugmageddon?\" Thor breaks down the latest CVE and KEV trends in the latest Threat Source newsletter. Welcome to this week’s edition of the Threat Source newsletter. I've been following a lot of (sometimes heated) threads and discussions lately about the current vulnerability landscape. I learned new words/phrases such as Summer of Hell (although I'm writing this with 1°C/34°F outside), Vulnpocalypse, Bugmageddon, Bugpocalypse, Breachpocalypse... Let's look at some numbers: We crossed the 70k mark, and it's only the end of September. This has never been seen before — I think we can agree this number is skyrocketing. Also, CVE numbering organically grew into the six-digit range. Check your tooling. Some might say we broke that barrier already in 2014 ( CVE-2014-125110 ), or even hit seven digits in 2015 ( CVE-2015-1000013 ), but those were allocated artificially. (History note: Before 2014, 9999 was the highest possible identifier.) So that could be seen as the apocalypse argument. On the other hand, we have the KEV numbers: They didn't explode... yet? Counting by sheer volume, YoY, CVEs increased by 105%, while KEV only grew 37%. Sounds huge at first, but following a 30% increase from 2024 to 2025, that's less dramatic — a counter-argument of sorts. CVEs from 2025 or older still account for 33%. In other words, a good third of the KEVs are suggesting there is a patch gap. Looking at the 2026 CVEs, the share where the publication date matches the date added to KEV is 29%, which is only 2% more than (all of) 2025. Acknowledging this \"math\" is not the whole ball of wax, but it still tells me we are not living in a zero-day apocalypse right now. There’s also a slight uptick in networking gear-related CVEs, to 27%. This is the second time I'll ask you to check your tooling. A new column, “forensicTriage,” was added to the KEV to flag which high-risk vulnerabilities require mandatory forensic triage and incident response workflows. You can read more about it in BOD 26-04 , or the Implementation Guidance . So where does that leave us? The CVE numbers alone — that +70k mark, now that Q3 is behind us — make a decent case for Vulnpocalypse, or whichever name you prefer. That part of the story is real. But discovery isn't exploitation, and that gap is exactly what the KEV numbers remind us of. Vendors seem to be keeping pace too, at least partially — KEV is growing, just not nearly at CVE's speed, which on its own would almost be good news. Where the story breaks down is on the practical side. More than a third of actively exploited vulnerabilities still trace back to 2025 or earlier. Patch debt doesn't care how many new apocalypse-themed hashtags we invent. So, panic? I still don't think so. Relax? Definitely not either. Somewhere between the two is where the real work sits — chipping away at that backlog, one legacy system at a time. Maybe by next quarter it'll feel less like Bugmageddon and more like business as usual. Or maybe I won't even need a warmer jacket for the upcoming \"Winter of Hell.\" The one big thing Cisco Talos and Recorded Future’s Insikt Group are disclosing new espionage activity from UAT-6275 targeting government and critical infrastructure across the Commonwealth of Independent States (CIS). Thanks to the threat actor's own operational security lapses, researchers gained direct visibility into their infrastructure and malware development. We observed four distinct infection chains delivering custom reverse shells via macro-enabled documents, GitHub-hosted scripts, and a WinRAR vulnerability. Why do I care? Regional government and critical infrastructure entities are actively being targeted for diplomatic and economic intelligence. UAT-6275 is consistently evolving its tradecraft, abusing legitimate platforms like GitHub to host payloads and deploying lightweight reverse shells. Furthermore, recovered tooling suggests the group is preparing to expand its reach into Linux hosts and internet-facing appliances. So now what? Defenders in targeted regions and sectors should monitor for unexpected PowerShell activity and payload downloads originating from public services like GitHub. It is also critical to watch for suspicious scheduled tasks and unauthorized changes to the Windows Startup folder, which this group uses for persistence. Finally, ensure archive utilities are fully patched to prevent exploit-assisted delivery. ClamAV signatures and indicators of compromise (IOCs) to detect this threat can be found in the full blog post . Top security headlines of the week Hackers heat supermarket fridges to 50°C in France cyber attack The attack began overnight from Sunday to Monday. The unknown attackers reportedly abused the defrosting function in older control software, setting some equipment to heat continuously, with temperatures said to have reached 50°C. ( Hack Read ) Ivanti zero-day chain gave attackers root access to fully patched VPN CVE-2026-104935 affects Ivanti Connect Secure and it can be exploited for unauthenticated remote code execution with elevated privileges. ( SecurityWeek ) U.S. arrests two in crackdown on North Korean IT worker laptop farms As part of the scheme, which allegedly ran between 2019 and July 2025, the two housed and configured laptops issued by victim U.S. companies so ITWs would appear to work from the U.S. ( SecurityWeek ) Canadian cybersecurity executive arrested in U.S. federal extortion case While the FBI did not publicly announce Dubrovsky’s arrest, the case appears to align with actions taken in the wake of the ShinyHunters’ attack on the FBI’s IT systems, which exposed personal data about thousands of bureau employees. ( CyberScoop ) Maximum-severity SSRF flaw in SonicWall SMA devices under attack The vulnerability, which SonicWall assigned a maximum 10 out of 10 CVSS score, stems from an \"unintended alternate access path,\" according to the vendor's advisory. ( Dark Reading ) Can’t get enough Talos? You've got to lurk before you can smirk How do you get under a cybercriminal’s skin? Sometimes you expose their operations. Sometimes you make every step through a network painfully slow. And sometimes, if you’re Azim, you join a dark web forum where they’re insulting you, and help them to do it. Microsoft Patch Tuesday for October 2026 Microsoft has released its monthly security update for October 2026, which includes 1,415 vulnerabilities affecting a range of products, including 85 that Microsoft marked as \"critical.\" One breach, please, and make no mistakes The cybersecurity community has seen examples of autonomous agents, built inside AI labs, attacking public infrastructure. How you prepare for agentic threats is what makes the difference during real incidents. Upcoming events where you can find Talos VB (Oct. 14 – 16) Seville, Spain CAMLIS (Oct. 21 – 23) Arlington, VA SecurityOnion Conference (Oct. 23) Augusta, GA BsidesAugusta (Oct. 24) Augusta, GA SAINTCON (Oct. 26 – 30) Provo, UT CYBERWARCON (Nov. 20) Arlington, VA AVAR 2026 (Dec. 2 – 4) Hyderabad, India Black Hat Europe (Dec. 7 – 10) London, U.K. Most prevalent malware files from Talos telemetry over the past week SHA256: 9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507 MD5: 2915b3f8b703eb744fc54c81f4a9c67f Talos Rep: https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507 Example Filename: sample.exe Detection Name: W32.9F1F11A708-100.SBX.TG** SHA256: 73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f MD5: 63f3351cfdf618bec6045f60203e7978 Talos Rep: https://talosintelligence.com/talos_file_reputation?s=73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f Example Filename: f_00478d.exe Detection Name: W32.PUP:PulseBrowser.29kh.in12.Talos SHA256: 58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681 MD5: f1fe671bcefd4630e5ed8b87c9283534 Talos Rep: https://talosintelligence.com/talos_file_reputation?s=58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681 Example Filename: KMSAuto Net.exe Detection Name: W32.58D6FEC4BA-95.SBX.TG SHA256: fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f MD5: 207d9d891ac756b2bfad88aba5682c65 Talos Rep: https://talosintelligence.com/talos_file_reputation?s=fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f Example Filename: sample.exe Detection Name: W32.FED979F93B-95.SBX.TG",
-        "tags": []
-      },
-      "scoring": {
-        "score": 95,
-        "rationale": [
-          "source weight (vendor)=+10",
-          "3 CVE(s)=+30",
-          "4 MITRE technique hit(s)=+17",
-          "2 initial-access vector(s)=+9",
-          "2 impact action(s)=+11",
-          "1 product mention(s)=+3",
-          "15 IOC(s)=+15"
-        ],
-        "is_hunt_worthy": true
-      },
-      "extraction": {
-        "cves": [
-          "CVE-2014-125110",
-          "CVE-2015-1000013",
-          "CVE-2026-104935"
-        ],
-        "ips": [],
-        "domains": [
-          "sample.exe",
-          "w32.9f1f11a708-100.sbx.tg",
-          "w32.pup",
-          "pulsebrowser.29kh.in12.talos",
-          "net.exe",
-          "w32.58d6fec4ba-95.sbx.tg",
-          "w32.fed979f93b-95.sbx.tg"
-        ],
-        "hashes_md5": [
-          "2915b3f8b703eb744fc54c81f4a9c67f",
-          "63f3351cfdf618bec6045f60203e7978",
-          "f1fe671bcefd4630e5ed8b87c9283534",
-          "207d9d891ac756b2bfad88aba5682c65"
-        ],
-        "hashes_sha1": [],
-        "hashes_sha256": [
-          "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
-          "73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f",
-          "58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681",
-          "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f"
-        ],
-        "malware_families": [],
-        "threat_actors": [],
-        "mitre_techniques": [
-          "T1059",
-          "T1059.001",
-          "T1053",
-          "T1547"
-        ],
-        "vectors": [
-          "exploit",
-          "vpn-edge"
-        ],
-        "sectors": [
-          "government",
-          "manufacturing"
-        ],
-        "actions": [
-          "espionage",
-          "fraud"
-        ],
-        "products": [
-          "Ivanti Connect Secure"
-        ]
-      },
-      "hypotheses": [
-        {
-          "id": "H-eb0c40b2-1",
-          "title": "Initial access via CVE-2014-125110 affecting Ivanti Connect Secure",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2014-125110 in Ivanti Connect Secure within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2014-125110, CVE-2015-1000013, CVE-2026-104935; vectors: exploit, vpn-edge; impact: espionage, fraud; products: Ivanti Connect Secure.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1190",
-            "T1133"
-          ],
-          "objectives": [
-            {
-              "id": "H-eb0c40b2-1-O1",
-              "title": "Inventory exposure to Ivanti Connect Secure",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Ivanti Connect Secure, the external-exploitation hypothesis is disproven for CVE-2014-125110.",
-              "data_sources": [
-                "Asset CMDB",
-                "External attack-surface scanner",
-                "Vulnerability scanner"
-              ],
-              "suggested_query": "asset_inventory | where product == 'Ivanti Connect Secure' and exposure == 'internet' and version in (vulnerable_versions)",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-eb0c40b2-1-O2",
-              "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2014-125110 in the last 30 days, in-the-wild exploitation against us is unsupported.",
-              "data_sources": [
-                "WAF logs",
-                "IDS/IPS",
-                "Edge firewall",
-                "CDN logs"
-              ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2014-125110/ | summarize count() by src_ip, dst_host",
-              "mitre_attack": [
-                "T1190",
-                "T1133"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-eb0c40b2-1-O3",
-              "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2014-125110 fix across exposed hosts, the hypothesis is disproven by remediation.",
-              "data_sources": [
-                "SCCM/Intune",
-                "Patch management",
-                "Tanium / Kandji"
-              ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2014-125110')) | summarize coverage = avg(installed) by host_role",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-eb0c40b2-1-O4",
-              "title": "Post-exploit web-shell sweep",
-              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Ivanti Connect Secure hosts, post-exploit foothold is unsupported.",
-              "data_sources": [
-                "EDR process telemetry",
-                "File integrity monitoring"
-              ],
-              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
-              "mitre_attack": [
-                "T1505.003",
-                "T1059"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-eb0c40b2-1-O5",
-              "title": "Honeypot / canary check",
-              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
-              "data_sources": [
-                "Honeypot logs",
-                "Canary tokens"
-              ],
-              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
-              "mitre_attack": [
-                "T1190"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-eb0c40b2-2",
-          "title": "Outbound C2 beaconing to reported infrastructure",
-          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2014-125110, CVE-2015-1000013, CVE-2026-104935; vectors: exploit, vpn-edge; impact: espionage, fraud; products: Ivanti Connect Secure.",
-          "confidence": "high",
-          "mitre_attack": [
-            "T1071",
-            "T1573",
-            "T1219"
-          ],
-          "objectives": [
-            {
-              "id": "H-eb0c40b2-2-O1",
-              "title": "DNS resolution sweep for published C2 domains",
-              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
-              "data_sources": [
-                "DNS resolver logs",
-                "Passive DNS"
-              ],
-              "suggested_query": "dns | where query in ('sample.exe','w32.9f1f11a708-100.sbx.tg','w32.pup') | summarize count() by client_ip",
-              "mitre_attack": [
-                "T1071.004"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-eb0c40b2-2-O2",
-              "title": "Egress connections to published C2 IPs",
-              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
-              "data_sources": [
-                "Proxy logs",
-                "NetFlow",
-                "Firewall accept logs"
-              ],
-              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
-              "mitre_attack": [
-                "T1071",
-                "T1573"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-eb0c40b2-2-O3",
-              "title": "Beacon periodicity / jitter analysis",
-              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
-              "data_sources": [
-                "NetFlow",
-                "Zeek conn.log"
-              ],
-              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
-              "mitre_attack": [
-                "T1071",
-                "T1095"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            },
-            {
-              "id": "H-eb0c40b2-2-O4",
-              "title": "TLS / JA3 fingerprint pivot",
-              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
-              "data_sources": [
-                "Zeek ssl.log",
-                "Suricata TLS",
-                "NDR"
-              ],
-              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
-              "mitre_attack": [
-                "T1573.002"
-              ],
-              "difficulty": "hard",
-              "points": 250
-            },
-            {
-              "id": "H-eb0c40b2-2-O5",
-              "title": "Remote-monitoring tooling abuse check",
-              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
-              "data_sources": [
-                "EDR installed-software",
-                "Process telemetry"
-              ],
-              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
-              "mitre_attack": [
-                "T1219"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            }
-          ],
-          "sigma_rule": ""
-        },
-        {
-          "id": "H-eb0c40b2-3",
-          "title": "Data staging and exfiltration to attacker-controlled storage",
-          "statement": "Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.",
-          "rationale": "Archetype 'exfiltration' selected based on CVEs cited: CVE-2014-125110, CVE-2015-1000013, CVE-2026-104935; vectors: exploit, vpn-edge; impact: espionage, fraud; products: Ivanti Connect Secure.",
-          "confidence": "medium",
-          "mitre_attack": [
-            "T1560",
-            "T1041",
-            "T1567",
-            "T1567.002"
-          ],
-          "objectives": [
-            {
-              "id": "H-eb0c40b2-3-O1",
-              "title": "Cloud-storage exfil to non-corp tenants",
-              "falsification_criterion": "If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.",
-              "data_sources": [
-                "Proxy logs",
-                "CASB / DLP"
-              ],
-              "suggested_query": "proxy | where host matches /mega\\.nz|anonfiles\\.com|transfer\\.sh|filebin\\.net/ | summarize bytes = sum(bytes_out) by user",
-              "mitre_attack": [
-                "T1567.002",
-                "T1567"
-              ],
-              "difficulty": "easy",
-              "points": 100
-            },
-            {
-              "id": "H-eb0c40b2-3-O2",
-              "title": "Archive-then-egress pattern",
-              "falsification_criterion": "If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.",
-              "data_sources": [
-                "EDR process+file events",
-                "NetFlow"
-              ],
-              "suggested_query": "file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m",
-              "mitre_attack": [
-                "T1560",
-                "T1041"
-              ],
-              "difficulty": "medium",
-              "points": 250
-            },
-            {
-              "id": "H-eb0c40b2-3-O3",
-              "title": "Outbound volume to rare ASNs",
-              "falsification_criterion": "If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.",
-              "data_sources": [
-                "NetFlow",
-                "Firewall logs"
-              ],
-              "suggested_query": "netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB",
-              "mitre_attack": [
-                "T1041",
-                "T1567"
-              ],
-              "difficulty": "medium",
-              "points": 200
-            },
-            {
-              "id": "H-eb0c40b2-3-O4",
-              "title": "DNS-tunnelling search",
-              "falsification_criterion": "If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.",
-              "data_sources": [
-                "DNS resolver logs"
-              ],
-              "suggested_query": "dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000",
-              "mitre_attack": [
-                "T1071.004",
-                "T1048.003"
-              ],
-              "difficulty": "hard",
-              "points": 300
-            }
-          ],
-          "sigma_rule": ""
-        }
-      ],
-      "first_seen": "2026-10-15T18:21:27+00:00",
       "agent_trace": []
     },
     {
@@ -5285,6 +4935,437 @@
         }
       ],
       "first_seen": "2026-10-27T15:50:42+00:00",
+      "agent_trace": []
+    },
+    {
+      "article": {
+        "id": "5b5abb0d6907ce20",
+        "source": "Cisco Talos",
+        "title": "A quiet week in infosec <.<",
+        "link": "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
+        "published": "Thu, 29 Oct 2026 18:00:00 GMT",
+        "summary": "In this edition of the Threat Source newsletter, William explores how PHP has taken over the conversation, Node.js has joined in, but underneath it all, there are still good people doing good work.",
+        "raw_text": "A quiet week in infosec <.< In this edition of the Threat Source newsletter, William explores how PHP has taken over the conversation, Node.js has joined in, but underneath it all, there are still good people doing good work. Welcome to this week’s edition of the Threat Source newsletter. “The darkest period of my life, so far, arrived the summer I was pregnant with my eldest son. The future was growing in me with all of its terrifying unpredictability, and I found myself anxious, unable to work and woefully at sea.” — Lauren Groff I doubt Lauren had this maniacal infosec news cycle in mind when she wrote about the terrifyingly unpredictable future, but honestly, she’s got our current careers down cold. Let he who is not woefully at sea cast the first water balloon? I’ll work on it. Here we are with PHP taking up every available ounce of oxygen, Node.js adding its own spice to the sauce... and here’s me, staring my screen blankly, waiting for an original thought to leak out and onto this page. Not to worry, none have. There is simply nothing novel to say because the entire internet has it covered. In triplicate. With graphs and compelling statistics and AI-generated evil bad guy images galore. These vulnerabilities are serious, and the remediations matter. Teams need to know what they run, find the affected systems, and get them patched and determine ways to secure systems that can’t be patched. I’m simply not going to add another dramatic headline to the stack or pretend there’s a clever new angle hiding in the margins. The thing I keep looping on is that the work underneath the headlines is familiar and it’s the real story. To defend your environment, you need a team that knows that environment, has enough time and expertise to investigate the telemetry, that can tell an anomaly from the usual benign noise, and take action. Yes, the right tools help, and without them you can’t do it — but the people doing the work are still what make those tools useful. Give smart people enough room to do smart people stuff. This is the entire ballgame. Read it again: Give smart people enough room to do smart people stuff. Because a good response starts way before the headline. Know what you own, who owns it, what version is running, whether it can be reached from the internet, what identities can do what task on the device, etc. When a fix is available, make sure it actually reaches the system you meant to fix. If a system cannot be updated yet, give that exception an owner and a deadline. Reduce its exposure, add monitoring, and keep checking until the fix is in place. “We’ll get to it” is not a plan. So, there may be nothing new to say about PHP this week, but the work is still worth talking about: Know your environment, take care of your team members, and keep paying attention when the weird thing stops being weird and starts becoming evidence. When the next headline arrives, help your teammate do the same. “The only thing that makes life possible is permanent, intolerable uncertainty: not knowing what comes next.” — Ursula K. Le Guin The one big thing Cisco Talos has recently discovered \"NIK C2,\" a new command-and-control framework that integrates AI directly into its attack chain. This Go-based Windows implant allows adversaries to dump credentials, stream keystrokes, and deploy screen-locking ransomware. It also uses an integrated OpenAI model to analyze harvested data on the fly. By hijacking the victim's own API keys to fund these requests, NIK C2 collapses data collection and exploitation into a single, continuous session. Why do I care? By embedding a live AI pipeline directly into the C2 loop, NIK C2 turns a compromised host into an active operational asset rather than a passive foothold. Because it processes data and generates context-aware payloads locally, it erases the offline processing delays that historically gave defenders a critical detection window. Furthermore, by piggybacking on the victim's OpenAI account, threat actors completely mask their infrastructure, leaving no attributable trace and complicating incident response. So now what? Defenders must embrace continuous behavioral vigilance. Ensure endpoint solutions monitor for unusual local proxy routing, unexpected PowerShell executions, and unauthorized access to browser databases or crypto wallets. Update your defenses using the ClamAV signature and indicators of compromise (IOCs) provided in the full blog . Top security headlines of the week CISA gives agencies days to patch critical PHP bugs CISA added the two vulnerabilities in the PHP open-source scripting software to the Known Exploited Vulnerabilities (KEV) catalog Monday. ( Federal News Network ) Node2Shell: Brotli flaw triggers patching across Microsoft, Node.js, Python packages An out-of-bounds write in Google’s Brotli decoder affects Node.js, .NET, PowerShell, and Python packages, and can lead to code execution. ( SecurityWeek ) Gheist uses stolen GitHub tokens to steal private repository secrets via Actions logs Each workflow sits on a new branch named ci-sync- followed by six random characters. Deleting a branch, or the run it started, does not undo the exposure. ( The Hacker News ) Japan internet giant GMO says hackers posted stolen customer data GMO Internet is investigating a data leak after suspected unauthorized access to its Onamae cloud desktop service, which provides virtualized desktops to financial traders. ( TechCrunch ) Third Serengeti sweep tops 1,400 arrests as investigations mature Interpol's annual Operation Serengeti, now on its third iteration, led to 1,462 arrests across 20 African countries and the U.S., recovering $105 million in stolen funds. ( Dark Reading ) Can’t get enough Talos? Stealing AI secrets and breaking EDRs Phishing may have dropped from last quarter's highs, but ransomware engagements climbed as attackers shifted their focus toward disabling EDR systems and scraping AI credentials. The financial sector also returned as a top target. From federal SOCs to Talos: Ryan Fetterman on practical security research What does it mean to be \"blue collar\" for the blue team? Amy sat down with security researcher Ryan Fetterman to discuss his journey from federal agency work to his new role at Talos. The Guy Who Invented Pain (plus first reactions to PHP2Shell) David Bianco built the Pyramid of Pain, so we offered him some more. David joins the Beers with Talos crew for a conversation how AI changes about his famous model, how EvidenceForge creates simulated incidents for research and training, and why his red-team entrance exam didn’t go to plan. Compromised eMudhra intermediate certificates Cisco Talos is aware of eight compromised intermediate certificates belonging to the intermediate certificate authority. eMudhra has revoked the certificates and stopped issuing new certificates under its G3 root. Two critical RCEs in PHP core Two critical remote code execution vulnerabilities in PHP core could have implications across its wider ecosystem. This blog explains what we know so far, and details the Snort coverage available. Upcoming events where you can find Talos SAINTCON (Oct. 26 – 30) Provo, UT CYBERWARCON (Nov. 20) Arlington, VA AVAR 2026 (Dec. 2 – 4) Hyderabad, India Black Hat Europe (Dec. 7 – 10) London, U.K. Most prevalent malware files from Talos telemetry over the past week SHA256: 73a25ff8893260418c2271b863c567e40e842adbab3c57023cb72de590ea377d MD5: 0cf0271c3564881fce95f44c649bd745 Talos Rep: https://talosintelligence.com/talos_file_reputation?s=73a25ff8893260418c2271b863c567e40e842adbab3c57023cb72de590ea377d Example Filename: KMSAuto++.exe Detection Name: HackTool:WZTeam-tpd SHA256: 9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507 MD5: 2915b3f8b703eb744fc54c81f4a9c67f Talos Rep: https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507 Example Filename: sample.exe Detection Name: W32.9F1F11A708-100.SBX.TG** SHA256: 7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f MD5: cca616647db9370c88998ae25da6997f Talos Rep: https://talosintelligence.com/talos_file_reputation?s=7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f Example Filename: cca616647db9370c88998ae25da6997f.exe Detection Name: Win.Tool.Kmsauto::1201 SHA256: 58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681 MD5: f1fe671bcefd4630e5ed8b87c9283534 Talos Rep: https://talosintelligence.com/talos_file_reputation?s=58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681 Example Filename: KMSAuto Net.exe Detection Name: W32.58D6FEC4BA-95.SBX.TG SHA256: fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f MD5: 207d9d891ac756b2bfad88aba5682c65 Talos Rep: https://talosintelligence.com/talos_file_reputation?s=fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f Example Filename: sample.exe Detection Name: W32.FED979F93B-95.SBX.TG",
+        "tags": []
+      },
+      "scoring": {
+        "score": 68,
+        "rationale": [
+          "source weight (vendor)=+10",
+          "4 MITRE technique hit(s)=+17",
+          "2 initial-access vector(s)=+9",
+          "3 impact action(s)=+14",
+          "1 product mention(s)=+3",
+          "18 IOC(s)=+15"
+        ],
+        "is_hunt_worthy": true
+      },
+      "extraction": {
+        "cves": [],
+        "ips": [],
+        "domains": [
+          "node.js",
+          "sample.exe",
+          "w32.9f1f11a708-100.sbx.tg",
+          "cca616647db9370c88998ae25da6997f.exe",
+          "win.tool.kmsauto",
+          "net.exe",
+          "w32.58d6fec4ba-95.sbx.tg",
+          "w32.fed979f93b-95.sbx.tg"
+        ],
+        "hashes_md5": [
+          "0cf0271c3564881fce95f44c649bd745",
+          "2915b3f8b703eb744fc54c81f4a9c67f",
+          "cca616647db9370c88998ae25da6997f",
+          "f1fe671bcefd4630e5ed8b87c9283534",
+          "207d9d891ac756b2bfad88aba5682c65"
+        ],
+        "hashes_sha1": [],
+        "hashes_sha256": [
+          "73a25ff8893260418c2271b863c567e40e842adbab3c57023cb72de590ea377d",
+          "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+          "7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f",
+          "58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681",
+          "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f"
+        ],
+        "malware_families": [],
+        "threat_actors": [],
+        "mitre_techniques": [
+          "T1566",
+          "T1059",
+          "T1059.001",
+          "T1486"
+        ],
+        "vectors": [
+          "phishing",
+          "exploit"
+        ],
+        "sectors": [
+          "finance",
+          "government",
+          "manufacturing"
+        ],
+        "actions": [
+          "ransomware",
+          "data-breach",
+          "fraud"
+        ],
+        "products": [
+          "Microsoft Exchange"
+        ]
+      },
+      "hypotheses": [
+        {
+          "id": "H-5b5abb0d-1",
+          "title": "Initial access via the disclosed vulnerability affecting Microsoft Exchange",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting the disclosed vulnerability in Microsoft Exchange within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1190",
+            "T1133"
+          ],
+          "objectives": [
+            {
+              "id": "H-5b5abb0d-1-O1",
+              "title": "Inventory exposure to Microsoft Exchange",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of Microsoft Exchange, the external-exploitation hypothesis is disproven for the referenced CVE.",
+              "data_sources": [
+                "Asset CMDB",
+                "External attack-surface scanner",
+                "Vulnerability scanner"
+              ],
+              "suggested_query": "asset_inventory | where product == 'Microsoft Exchange' and exposure == 'internet' and version in (vulnerable_versions)",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5b5abb0d-1-O2",
+              "title": "Hunt for exploit attempts at the edge",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for the referenced CVE in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "data_sources": [
+                "WAF logs",
+                "IDS/IPS",
+                "Edge firewall",
+                "CDN logs"
+              ],
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-the referenced CVE/ | summarize count() by src_ip, dst_host",
+              "mitre_attack": [
+                "T1190",
+                "T1133"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5b5abb0d-1-O3",
+              "title": "Patch-status correlation",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the the referenced CVE fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "data_sources": [
+                "SCCM/Intune",
+                "Patch management",
+                "Tanium / Kandji"
+              ],
+              "suggested_query": "patch_state | where kb in (fixes_for('the referenced CVE')) | summarize coverage = avg(installed) by host_role",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5b5abb0d-1-O4",
+              "title": "Post-exploit web-shell sweep",
+              "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on Microsoft Exchange hosts, post-exploit foothold is unsupported.",
+              "data_sources": [
+                "EDR process telemetry",
+                "File integrity monitoring"
+              ],
+              "suggested_query": "process | where parent in ('w3wp.exe','httpd','nginx','java') and child in ('cmd.exe','powershell.exe','/bin/sh','/bin/bash')",
+              "mitre_attack": [
+                "T1505.003",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-5b5abb0d-1-O5",
+              "title": "Honeypot / canary check",
+              "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
+              "data_sources": [
+                "Honeypot logs",
+                "Canary tokens"
+              ],
+              "suggested_query": "canary_events | where product == '<product>' | where event_type in ('probe','exploit') | summarize by src_ip",
+              "mitre_attack": [
+                "T1190"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5b5abb0d-2",
+          "title": "Outbound C2 beaconing to reported infrastructure",
+          "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
+          "rationale": "Archetype 'c2_beacon' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "high",
+          "mitre_attack": [
+            "T1071",
+            "T1573",
+            "T1219"
+          ],
+          "objectives": [
+            {
+              "id": "H-5b5abb0d-2-O1",
+              "title": "DNS resolution sweep for published C2 domains",
+              "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
+              "data_sources": [
+                "DNS resolver logs",
+                "Passive DNS"
+              ],
+              "suggested_query": "dns | where query in ('node.js','sample.exe','w32.9f1f11a708-100.sbx.tg') | summarize count() by client_ip",
+              "mitre_attack": [
+                "T1071.004"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5b5abb0d-2-O2",
+              "title": "Egress connections to published C2 IPs",
+              "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
+              "data_sources": [
+                "Proxy logs",
+                "NetFlow",
+                "Firewall accept logs"
+              ],
+              "suggested_query": "egress | where dst_ip in ('the published C2 IPs') | summarize bytes_out = sum(bytes_sent) by src_ip",
+              "mitre_attack": [
+                "T1071",
+                "T1573"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5b5abb0d-2-O3",
+              "title": "Beacon periodicity / jitter analysis",
+              "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
+              "data_sources": [
+                "NetFlow",
+                "Zeek conn.log"
+              ],
+              "suggested_query": "conn | summarize stddev_interval = stdev(diff(ts)), count() by src_ip, dst_host | where count() > 50 and stddev_interval < 5s",
+              "mitre_attack": [
+                "T1071",
+                "T1095"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-5b5abb0d-2-O4",
+              "title": "TLS / JA3 fingerprint pivot",
+              "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
+              "data_sources": [
+                "Zeek ssl.log",
+                "Suricata TLS",
+                "NDR"
+              ],
+              "suggested_query": "tls | where ja3 in (ti_lookup('family','ja3')) | summarize by src_ip, sni",
+              "mitre_attack": [
+                "T1573.002"
+              ],
+              "difficulty": "hard",
+              "points": 250
+            },
+            {
+              "id": "H-5b5abb0d-2-O5",
+              "title": "Remote-monitoring tooling abuse check",
+              "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
+              "data_sources": [
+                "EDR installed-software",
+                "Process telemetry"
+              ],
+              "suggested_query": "process | where name in ('anydesk.exe','teamviewer.exe','screenconnect.exe','atera*.exe') and signer != 'corp_managed'",
+              "mitre_attack": [
+                "T1219"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5b5abb0d-3",
+          "title": "Post-foothold lateral movement consistent with the reported actor",
+          "statement": "An attacker who matched the TTPs of the reported actor has moved laterally inside the estate using RDP/SMB/WinRM, admin tooling, or Kerberos abuse.",
+          "rationale": "Archetype 'lateral_movement' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1021.001",
+            "T1021.002",
+            "T1021.006",
+            "T1003"
+          ],
+          "objectives": [
+            {
+              "id": "H-5b5abb0d-3-O1",
+              "title": "Anomalous remote logons (Type 3 / Type 10)",
+              "falsification_criterion": "If 4624 logon-type 3/10 events show no bursts from a single source to many destinations, lateral movement via RDP/SMB is unsupported.",
+              "data_sources": [
+                "Windows Security event log",
+                "Domain Controller logs"
+              ],
+              "suggested_query": "security | where event_id in (4624) and logon_type in (3,10) | summarize dests = dcount(dst_host) by src_user, src_host | where dests > 10",
+              "mitre_attack": [
+                "T1021.001",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5b5abb0d-3-O2",
+              "title": "Admin-tool usage outside baseline",
+              "falsification_criterion": "If PsExec / WMIC / PowerShell remoting / Impacket-style usage is absent outside known admin jump-hosts, the lateral-tool hypothesis is disproven.",
+              "data_sources": [
+                "Sysmon EID 1",
+                "EDR",
+                "4688"
+              ],
+              "suggested_query": "process | where name in ('psexec.exe','psexesvc.exe','wmic.exe','wsmprovhost.exe') and host !in (admin_jumphosts)",
+              "mitre_attack": [
+                "T1021.002",
+                "T1021.006",
+                "T1059"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5b5abb0d-3-O3",
+              "title": "Kerberos abuse telemetry",
+              "falsification_criterion": "If 4769 ticket requests show no anomalous RC4 / odd-SPN patterns and no AS-REP roasting indicators, credential-based lateral movement is unsupported.",
+              "data_sources": [
+                "Domain Controller security log"
+              ],
+              "suggested_query": "security | where event_id == 4769 and ticket_encryption == 'RC4-HMAC' | summarize by target_spn, account_name",
+              "mitre_attack": [
+                "T1558.003",
+                "T1110.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            },
+            {
+              "id": "H-5b5abb0d-3-O4",
+              "title": "Lateral file-copy staging",
+              "falsification_criterion": "If SMB writes of archives / executables across multiple hosts from one user/host are absent, lateral staging is unsupported.",
+              "data_sources": [
+                "File-share auditing (5145)",
+                "EDR file events"
+              ],
+              "suggested_query": "file | where action == 'write' and ext in ('.7z','.rar','.zip','.exe') and dest matches /\\\\\\\\.*\\\\(C\\$|admin\\$)/",
+              "mitre_attack": [
+                "T1570",
+                "T1021.002"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            }
+          ],
+          "sigma_rule": ""
+        },
+        {
+          "id": "H-5b5abb0d-4",
+          "title": "Data staging and exfiltration to attacker-controlled storage",
+          "statement": "Sensitive data has been staged (archived) and exfiltrated to attacker-controlled endpoints or cloud-storage tenants in the reporting window.",
+          "rationale": "Archetype 'exfiltration' selected based on vectors: phishing, exploit; impact: ransomware, data-breach, fraud; products: Microsoft Exchange.",
+          "confidence": "medium",
+          "mitre_attack": [
+            "T1560",
+            "T1041",
+            "T1567",
+            "T1567.002"
+          ],
+          "objectives": [
+            {
+              "id": "H-5b5abb0d-4-O1",
+              "title": "Cloud-storage exfil to non-corp tenants",
+              "falsification_criterion": "If DLP / proxy show no uploads to mega.nz, anonfiles, transfer.sh, or personal Dropbox/OneDrive tenants, cloud exfil is disproven.",
+              "data_sources": [
+                "Proxy logs",
+                "CASB / DLP"
+              ],
+              "suggested_query": "proxy | where host matches /mega\\.nz|anonfiles\\.com|transfer\\.sh|filebin\\.net/ | summarize bytes = sum(bytes_out) by user",
+              "mitre_attack": [
+                "T1567.002",
+                "T1567"
+              ],
+              "difficulty": "easy",
+              "points": 100
+            },
+            {
+              "id": "H-5b5abb0d-4-O2",
+              "title": "Archive-then-egress pattern",
+              "falsification_criterion": "If user/host telemetry shows no archive creation (rar/7z) within minutes of a large outbound transfer, the stage-then-exfil pattern is absent.",
+              "data_sources": [
+                "EDR process+file events",
+                "NetFlow"
+              ],
+              "suggested_query": "file_create | where ext in ('.rar','.7z','.zip') | join (egress | where bytes_out > 50MB) on host within 30m",
+              "mitre_attack": [
+                "T1560",
+                "T1041"
+              ],
+              "difficulty": "medium",
+              "points": 250
+            },
+            {
+              "id": "H-5b5abb0d-4-O3",
+              "title": "Outbound volume to rare ASNs",
+              "falsification_criterion": "If outbound bytes-by-ASN over the last 30 days show no first-seen / low-reputation destination receiving >1GB, bulk exfil is unsupported.",
+              "data_sources": [
+                "NetFlow",
+                "Firewall logs"
+              ],
+              "suggested_query": "netflow | summarize bytes = sum(bytes_out) by asn | where asn !in (corp_known_asns) and bytes > 1GB",
+              "mitre_attack": [
+                "T1041",
+                "T1567"
+              ],
+              "difficulty": "medium",
+              "points": 200
+            },
+            {
+              "id": "H-5b5abb0d-4-O4",
+              "title": "DNS-tunnelling search",
+              "falsification_criterion": "If DNS query-length and txt-record distributions show no entropy / volume anomalies per source, DNS-tunnelled exfil is unsupported.",
+              "data_sources": [
+                "DNS resolver logs"
+              ],
+              "suggested_query": "dns | summarize avg(query_length), p99(query_length), count() by client_ip | where p99 > 200 and count() > 1000",
+              "mitre_attack": [
+                "T1071.004",
+                "T1048.003"
+              ],
+              "difficulty": "hard",
+              "points": 300
+            }
+          ],
+          "sigma_rule": ""
+        }
+      ],
+      "first_seen": "2026-10-29T18:21:27+00:00",
       "agent_trace": []
     },
     {
@@ -18072,7 +18153,7 @@
       "agent_trace": []
     }
   ],
-  "skipped": 385,
+  "skipped": 384,
   "total_seen": 385,
-  "brief": "50 hunt-worthy item(s) today, 5 rated critical. Prioritise the highest-scored items first. Top of the list: IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases; #StopRansomware: SafePay Ransomware; Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN."
+  "brief": "50 hunt-worthy item(s) today, 4 rated critical. Prioritise the highest-scored items first. Top of the list: IR trends Q3 2026: Actors impersonate IT help desks in vishing attacks as ransomware activity increases; #StopRansomware: SafePay Ransomware; Inside KeyDrift: Analyzing historical UAT-11473 activity on Cisco SD-WAN."
 }

@@ -1538,12 +1538,6 @@
       ]
     },
     {
-      "value": "CVE-2026-104935",
-      "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
-    },
-    {
       "value": "CVE-2026-103672",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
@@ -6780,18 +6774,6 @@
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
-    },
-    {
-      "value": "CVE-2015-1000013",
-      "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
-    },
-    {
-      "value": "CVE-2014-125110",
-      "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
     }
   ],
   "ips": [
@@ -7046,6 +7028,7 @@
     {
       "value": "cca616647db9370c88998ae25da6997f.exe",
       "sources": [
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
@@ -7403,7 +7386,7 @@
     {
       "value": "net.exe",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     },
     {
@@ -7445,6 +7428,7 @@
     {
       "value": "node.js",
       "sources": [
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/ir-trends-q3-2026/",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
       ]
@@ -7566,12 +7550,6 @@
       ]
     },
     {
-      "value": "pulsebrowser.29kh.in12.talos",
-      "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
-    },
-    {
       "value": "raw.githubusercontent.com",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7592,8 +7570,8 @@
     {
       "value": "sample.exe",
       "sources": [
-        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
     {
@@ -7788,26 +7766,20 @@
     {
       "value": "w32.58d6fec4ba-95.sbx.tg",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     },
     {
       "value": "w32.9f1f11a708-100.sbx.tg",
       "sources": [
-        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
     {
       "value": "w32.fed979f93b-95.sbx.tg",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
-    },
-    {
-      "value": "w32.pup",
-      "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     },
     {
@@ -7819,6 +7791,7 @@
     {
       "value": "win.tool.kmsauto",
       "sources": [
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
@@ -8018,7 +7991,7 @@
     {
       "value": "58d6fec4ba24c32d38c9a0c7c39df3cb0e91f500b323e841121d703c7b718681",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     },
     {
@@ -8034,9 +8007,9 @@
       ]
     },
     {
-      "value": "73ac1bbfaee6c76c34f655ac0477a4cd930f2aa55e658c8e312ff81aac9a741f",
+      "value": "73a25ff8893260418c2271b863c567e40e842adbab3c57023cb72de590ea377d",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     },
     {
@@ -8054,6 +8027,7 @@
     {
       "value": "7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f",
       "sources": [
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
@@ -8096,8 +8070,8 @@
     {
       "value": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
       "sources": [
-        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
     {
@@ -8157,7 +8131,7 @@
     {
       "value": "fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     }
   ],
@@ -8201,16 +8175,22 @@
       ]
     },
     {
+      "value": "0cf0271c3564881fce95f44c649bd745",
+      "sources": [
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
+      ]
+    },
+    {
       "value": "207d9d891ac756b2bfad88aba5682c65",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     },
     {
       "value": "2915b3f8b703eb744fc54c81f4a9c67f",
       "sources": [
-        "https://blog.talosintelligence.com/i-had-plans-for-that-second/",
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
+        "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
     {
@@ -8220,21 +8200,16 @@
       ]
     },
     {
-      "value": "63f3351cfdf618bec6045f60203e7978",
-      "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
-      ]
-    },
-    {
       "value": "cca616647db9370c88998ae25da6997f",
       "sources": [
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
       ]
     },
     {
       "value": "f1fe671bcefd4630e5ed8b87c9283534",
       "sources": [
-        "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
+        "https://blog.talosintelligence.com/a-quiet-week-in-infosec/"
       ]
     }
   ]
