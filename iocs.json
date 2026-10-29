@@ -1616,18 +1616,6 @@
       ]
     },
     {
-      "value": "CVE-2026-105134",
-      "sources": [
-        "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html"
-      ]
-    },
-    {
-      "value": "CVE-2026-105133",
-      "sources": [
-        "https://thehackernews.com/2026/10/ahsaycbs-flaws-exploited-to-deploy-web.html"
-      ]
-    },
-    {
       "value": "CVE-2026-104935",
       "sources": [
         "https://blog.talosintelligence.com/the-q3-vulnerability-pulse-discovery-exploitation/"
@@ -6934,6 +6922,12 @@
       ]
     },
     {
+      "value": "87.120.196.120",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "88.119.167.239",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7092,6 +7086,12 @@
       ]
     },
     {
+      "value": "api.openai.com",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "b2.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7104,6 +7104,12 @@
       ]
     },
     {
+      "value": "bootkit.bin",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "bootrepair.sys",
       "sources": [
         "https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/"
@@ -7113,6 +7119,12 @@
       "value": "brossy.com.cn",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
+      ]
+    },
+    {
+      "value": "browserdata.zip",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
@@ -7182,6 +7194,12 @@
       ]
     },
     {
+      "value": "csrss.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "data.bin",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7248,6 +7266,18 @@
       ]
     },
     {
+      "value": "exec.command",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
+      "value": "exodus.wallet",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "favicon.ico",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -7257,6 +7287,18 @@
       "value": "fbijobs.gov",
       "sources": [
         "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "fodhelper.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
+      "value": "formhistory.sqlite",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
@@ -7365,6 +7407,12 @@
       ]
     },
     {
+      "value": "key4.db",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "l10n.php",
       "sources": [
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
@@ -7419,15 +7467,33 @@
       ]
     },
     {
+      "value": "logins.json",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "mail.brossy.com.cn",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
       ]
     },
     {
+      "value": "main.go",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "me.com",
       "sources": [
         "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+      ]
+    },
+    {
+      "value": "mshta.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
@@ -7509,6 +7575,12 @@
       ]
     },
     {
+      "value": "os.exit",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "oui.txt",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7574,6 +7646,12 @@
       "value": "ping.txt",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "places.sqlite",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
@@ -7663,6 +7741,12 @@
       ]
     },
     {
+      "value": "simvol.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "sitecustomize.py",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7737,7 +7821,20 @@
     {
       "value": "svchost.exe",
       "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/",
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "system.management.automation.dll",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
+      "value": "total-sitevv.lol",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
@@ -7809,9 +7906,21 @@
       ]
     },
     {
+      "value": "wallet.dat",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "win.tool.kmsauto",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "win.trojan.godiscorder",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
@@ -7997,6 +8106,12 @@
       ]
     },
     {
+      "value": "4887afc0a574e9419a9695ef083460f58e4ef9a1c40793523ce112251273bdf9",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
       "sources": [
         "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
@@ -8118,6 +8233,12 @@
       ]
     },
     {
+      "value": "d791dd0ff3228ed29a8d7333d4567be829159c5632ea347780992006f91c5295",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
       "value": "d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
@@ -8147,6 +8268,12 @@
       "value": "07353237350c35d6dc2c8f143b649cd07c71f62b",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "7d16381a9de823943b5a0987dbd0f26edf22052b",
+      "sources": [
+        "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
