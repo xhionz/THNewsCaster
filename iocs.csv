@@ -1,4 +1,5 @@
 type,value,article_count,sources
+cves,CVE-2026-118527,1,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-115560,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-114598,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114597,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
@@ -237,7 +238,7 @@ cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-111943,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 cves,CVE-2026-111594,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 cves,CVE-2026-111497,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-111357,1,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-111357,2,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-111100,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-110936,1,https://www.cisa.gov/news-events/alerts/2026/10/20/cisa-adds-six-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-110825,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -1149,7 +1150,6 @@ domains,api.openai.com,1,https://blog.talosintelligence.com/nik-c2-new-ai-enable
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,bootkit.bin,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
-domains,bootrepair.sys,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,brossy.com.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,browserdata.zip,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,cca616647db9370c88998ae25da6997f.exe,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
@@ -1284,7 +1284,6 @@ domains,winrar.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/a
 domains,wrapper.app.account,1,https://isc.sans.edu/diary/rss/33470
 domains,wrapper.app.parameter,1,https://isc.sans.edu/diary/rss/33470
 domains,wrc.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
-domains,www.acronis.com,1,https://www.reddit.com/r/netsec/comments/1xgxdk8/the_gentlemen_a_closer_look_at_a_notsogentle/
 domains,www.fortinet.com,1,https://isc.sans.edu/diary/rss/33442
 domains,www.hitachienergy.com,4,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03
 domains,www.kiloview.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
