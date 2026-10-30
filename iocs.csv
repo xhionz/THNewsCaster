@@ -257,7 +257,7 @@ cves,CVE-2026-106087,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-3
 cves,CVE-2026-105960,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
 cves,CVE-2026-105265,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-103672,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01
-cves,CVE-2026-102764,2,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support
+cves,CVE-2026-102764,1,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support
 cves,CVE-2026-102076,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
 cves,CVE-2026-102075,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
 cves,CVE-2026-102074,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08
@@ -887,7 +887,6 @@ cves,CVE-2025-68239,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2025-68206,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2025-61985,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-61984,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
-cves,CVE-2025-61624,1,https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2025-40300,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-40261,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-40219,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
@@ -1152,6 +1151,7 @@ domains,bcnp59991459a.pdf,1,https://www.cisa.gov/news-events/ics-advisories/icsa
 domains,bootkit.bin,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,brossy.com.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,browserdata.zip,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
+domains,bun.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,cca616647db9370c88998ae25da6997f.exe,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,ccleaner.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,ccleaner64.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1195,9 +1195,12 @@ domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-30
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,isc.sans.edu,4,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470
 domains,jackalsyn.com,1,https://isc.sans.edu/diary/rss/33440
+domains,java.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
+domains,javaw.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,key.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,key4.db,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+domains,learn.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,leheedu.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,libcommon.so,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,libdssl.so,1,https://blog.talosintelligence.com/uat-11473-keydrift/
@@ -1220,6 +1223,7 @@ domains,next.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm
 domains,nltest.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,node.js,3,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
 domains,nxc.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,onmicrosoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,openssl.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,order.dell.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
 domains,orders.staples.com,1,https://blog.talosintelligence.com/parasitizing-trust-how-legitimate-infrastructure-becomes-a-delivery-pipeline-for-attackers/
@@ -1244,6 +1248,7 @@ domains,rootfs.rw,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,sample.exe,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,sans.edu,2,https://isc.sans.edu/diary/rss/33440 | https://isc.sans.edu/diary/rss/33442
 domains,scan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,searchapp.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,server.conf,1,https://isc.sans.edu/diary/rss/33470
 domains,sfc.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
@@ -1262,6 +1267,7 @@ domains,sqldiff.exe,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 domains,stealer.sa,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,subs.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,support.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,svchost.exe,2,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/ | https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,system.management.automation.dll,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,taskkill.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
@@ -1297,6 +1303,7 @@ domains,www.siemens.com,9,https://www.cisa.gov/news-events/ics-advisories/icsa-2
 domains,www.wago.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02
 sha256,0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,03ac2a8b752605d1d7710979c17ff18b03dd978203ba23ba97fd8ce3d6f897ea,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
+sha256,06c5c14f043aee3bcc5843b5f50909623d5c9a6239a7c1fba9cddad4111469e7,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,0aaf7ba346d41ef2f40390436738b001180d5a1c03aa093f121078a9969d9a1a,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,12d4ccc5c6f8d35cf4f2cf233b7f3e418e863e657d81ff5f5fc9e210005b9484,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,1bbce8caa94f01c0aaa0b7ddae51553a8a32e1ce53d96d44fe583272aff7ad00,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1315,6 +1322,7 @@ sha256,7598727f209d717041db37f7dca271d3a7d328a279890e0e1d55375729aeb86d,1,https:
 sha256,7f191632e7320705d154b85204f1ae546b543acbd7e8861229b76f5042b92bdb,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
 sha256,84dc8c82c0a4a4a62552ef826b49fcc86d1a5c4a5d0f2c06665723f93d129d7d,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
+sha256,85b6c424117494d3056e88689dbc94c75e9afdb187a339714043aec0da109f17,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,921df888aaabcd828a3723f4c9f5fe8b8379c6b7067d16b2ea10152300417eae,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 sha256,985c3972712218c62d2418b41056dba5fe883ca5104d8ec12041f8611db344f9,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 sha256,98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
@@ -1330,6 +1338,7 @@ sha256,d791dd0ff3228ed29a8d7333d4567be829159c5632ea347780992006f91c5295,1,https:
 sha256,d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 sha256,e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+sha256,f326201269f1ee2f803ae435317507263bb6e0dbfdeb70bd1bb5446e2e46f001,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/
 sha1,07353237350c35d6dc2c8f143b649cd07c71f62b,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 sha1,7d16381a9de823943b5a0987dbd0f26edf22052b,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/

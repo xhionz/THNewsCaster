@@ -1557,7 +1557,6 @@
     {
       "value": "CVE-2026-102764",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support"
       ]
     },
@@ -5411,12 +5410,6 @@
       ]
     },
     {
-      "value": "CVE-2025-61624",
-      "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-adds-two-known-exploited-vulnerabilities-catalog"
-      ]
-    },
-    {
       "value": "CVE-2025-40300",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -7037,6 +7030,12 @@
       ]
     },
     {
+      "value": "bun.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
       "value": "cca616647db9370c88998ae25da6997f.exe",
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
@@ -7299,6 +7298,18 @@
       ]
     },
     {
+      "value": "java.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
+      "value": "javaw.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
       "value": "key.bin",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7314,6 +7325,12 @@
       "value": "l10n.php",
       "sources": [
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
+      ]
+    },
+    {
+      "value": "learn.microsoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
       ]
     },
     {
@@ -7448,6 +7465,12 @@
       "value": "nxc.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "onmicrosoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
       ]
     },
     {
@@ -7599,6 +7622,12 @@
       ]
     },
     {
+      "value": "searchapp.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
       "value": "securitychallenges.dat",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
@@ -7704,6 +7733,12 @@
       "value": "subs.txt",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "support.microsoft.com",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
       ]
     },
     {
@@ -7934,6 +7969,12 @@
       ]
     },
     {
+      "value": "06c5c14f043aee3bcc5843b5f50909623d5c9a6239a7c1fba9cddad4111469e7",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
       "value": "0aaf7ba346d41ef2f40390436738b001180d5a1c03aa093f121078a9969d9a1a",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -8043,6 +8084,12 @@
       ]
     },
     {
+      "value": "85b6c424117494d3056e88689dbc94c75e9afdb187a339714043aec0da109f17",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
       "value": "921df888aaabcd828a3723f4c9f5fe8b8379c6b7067d16b2ea10152300417eae",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -8131,6 +8178,12 @@
       "value": "e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "f326201269f1ee2f803ae435317507263bb6e0dbfdeb70bd1bb5446e2e46f001",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
       ]
     },
     {
