@@ -947,8 +947,6 @@ cves,CVE-2025-37945,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2025-37917,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-37909,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-37785,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
-cves,CVE-2025-33073,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/
-cves,CVE-2025-24054,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/
 cves,CVE-2025-23143,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-23136,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2025-23131,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
@@ -1121,6 +1119,7 @@ ips,77.37.49.40,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26
 ips,87.120.196.120,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 ips,88.119.167.239,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 ips,104.26.2.223,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+ips,134.209.82.225,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 ips,140.82.114.4,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 ips,144.172.64.60,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 ips,144.172.64.99,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
@@ -1143,6 +1142,7 @@ domains,485055033bcddfde56325c0d2feea4f2.exe,1,https://blog.talosintelligence.co
 domains,95.sbx.tg,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,acro.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,acronis.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,anthropic.claude,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,anydesk.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,api.openai.com,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,b2.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
@@ -1157,10 +1157,13 @@ domains,ccleaner.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories
 domains,ccleaner64.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,cisa.dhs.gov,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,clientchallengetable.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
+domains,com.apple.sysmond,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
+domains,com.apple.sysmond.plist,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,config.json,1,https://isc.sans.edu/diary/rss/33442
 domains,cook.pth,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,cook.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,copy.bat,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,credtheft.ms,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,cscm.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,csrss.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,data.bin,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1171,7 +1174,6 @@ domains,docs.intersystems.com,1,https://www.cisa.gov/news-events/ics-medical-adv
 domains,domain.txt,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,domains.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,dyraswtb.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,endoflife.date,1,https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/
 domains,epics-controls.org,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 domains,exec.command,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,exodus.wallet,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
@@ -1221,7 +1223,7 @@ domains,netscan.xml,1,https://www.cisa.gov/news-events/cybersecurity-advisories/
 domains,netscannew.zip,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,next.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,nltest.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
-domains,node.js,3,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02
+domains,node.js,4,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02 | https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,nxc.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,onmicrosoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,openssl.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1258,6 +1260,7 @@ domains,shutterstock.com,1,https://krebsonsecurity.com/2026/10/widespread-php-fl
 domains,simvol.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,sitecustomize.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,sitemap.xml,1,https://isc.sans.edu/diary/rss/33442
+domains,smt.cmd,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,soc.dll,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,socks.exe,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,source.domain,1,https://isc.sans.edu/diary/rss/33442
@@ -1269,6 +1272,7 @@ domains,stopransomware.gov,1,https://www.cisa.gov/news-events/cybersecurity-advi
 domains,subs.txt,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 domains,support.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,svchost.exe,2,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/ | https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+domains,sysmon.cmd,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,system.management.automation.dll,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,taskkill.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,total-sitevv.lol,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
@@ -1320,6 +1324,7 @@ sha256,668169d35b87bf51324080390b1b1c5ab12bd335cfe5f1a99e3689abd5e02ae6,1,https:
 sha256,6c1d36df94ebe367823e73ba33cfb4f40756a5e8ee1e30e8f0ae55d47e220a6a,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
 sha256,73a25ff8893260418c2271b863c567e40e842adbab3c57023cb72de590ea377d,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/
 sha256,7598727f209d717041db37f7dca271d3a7d328a279890e0e1d55375729aeb86d,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
+sha256,7e0a52885fadee05544a9e99eb18c792bec05900a5e1a66d68f8383decb0e278,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 sha256,7f191632e7320705d154b85204f1ae546b543acbd7e8861229b76f5042b92bdb,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
 sha256,84dc8c82c0a4a4a62552ef826b49fcc86d1a5c4a5d0f2c06665723f93d129d7d,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1339,6 +1344,7 @@ sha256,d791dd0ff3228ed29a8d7333d4567be829159c5632ea347780992006f91c5295,1,https:
 sha256,d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 sha256,e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a
+sha256,ecb58cb29078d9646ad1dcdbe51526f2d9cfea06be5fb2ab183e8ecc3ab6bf15,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 sha256,f326201269f1ee2f803ae435317507263bb6e0dbfdeb70bd1bb5446e2e46f001,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/
 sha1,07353237350c35d6dc2c8f143b649cd07c71f62b,1,https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a

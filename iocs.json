@@ -5775,18 +5775,6 @@
       ]
     },
     {
-      "value": "CVE-2025-33073",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
-      ]
-    },
-    {
-      "value": "CVE-2025-24054",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
-      ]
-    },
-    {
       "value": "CVE-2025-23143",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -6848,6 +6836,12 @@
       ]
     },
     {
+      "value": "134.209.82.225",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
       "value": "140.82.114.4",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -6982,6 +6976,12 @@
       ]
     },
     {
+      "value": "anthropic.claude",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
       "value": "anydesk.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7067,6 +7067,18 @@
       ]
     },
     {
+      "value": "com.apple.sysmond",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
+      "value": "com.apple.sysmond.plist",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
       "value": "config.json",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -7088,6 +7100,12 @@
       "value": "copy.bat",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "credtheft.ms",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
     },
     {
@@ -7148,12 +7166,6 @@
       "value": "dyraswtb.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "endoflife.date",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1x7hvhz/two_hardening_tools_adwindows_in_ps1/"
       ]
     },
     {
@@ -7458,7 +7470,8 @@
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/ir-trends-q3-2026/",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02"
+        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02",
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
     },
     {
@@ -7682,6 +7695,12 @@
       ]
     },
     {
+      "value": "smt.cmd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
       "value": "soc.dll",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7746,6 +7765,12 @@
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/",
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "sysmon.cmd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
     },
     {
@@ -8071,6 +8096,12 @@
       ]
     },
     {
+      "value": "7e0a52885fadee05544a9e99eb18c792bec05900a5e1a66d68f8383decb0e278",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
       "value": "7f191632e7320705d154b85204f1ae546b543acbd7e8861229b76f5042b92bdb",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -8184,6 +8215,12 @@
       "value": "e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "ecb58cb29078d9646ad1dcdbe51526f2d9cfea06be5fb2ab183e8ecc3ab6bf15",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
     },
     {
