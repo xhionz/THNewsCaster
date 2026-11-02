@@ -1494,8 +1494,7 @@
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
       ]
     },
     {
@@ -1504,7 +1503,6 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
-        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
@@ -1584,6 +1582,12 @@
       "value": "CVE-2026-101103",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
+      ]
+    },
+    {
+      "value": "CVE-2026-98432",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33482"
       ]
     },
     {
@@ -6808,6 +6812,12 @@
       ]
     },
     {
+      "value": "17.0.0.0",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33482"
+      ]
+    },
+    {
       "value": "37.10.71.188",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7296,7 +7306,8 @@
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
         "https://isc.sans.edu/diary/rss/33458",
-        "https://isc.sans.edu/diary/rss/33470"
+        "https://isc.sans.edu/diary/rss/33470",
+        "https://isc.sans.edu/diary/rss/33482"
       ]
     },
     {
@@ -7615,7 +7626,8 @@
       "value": "sans.edu",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440",
-        "https://isc.sans.edu/diary/rss/33442"
+        "https://isc.sans.edu/diary/rss/33442",
+        "https://isc.sans.edu/diary/rss/33482"
       ]
     },
     {
@@ -7739,6 +7751,12 @@
       ]
     },
     {
+      "value": "support.apple.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33482"
+      ]
+    },
+    {
       "value": "support.microsoft.com",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
@@ -7767,6 +7785,12 @@
       "value": "taskkill.exe",
       "sources": [
         "https://blog.talosintelligence.com/ir-trends-q3-2026/"
+      ]
+    },
+    {
+      "value": "tcp.hdr",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33482"
       ]
     },
     {
@@ -7920,9 +7944,21 @@
       ]
     },
     {
+      "value": "www.openwall.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33482"
+      ]
+    },
+    {
       "value": "www.php.net",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440"
+      ]
+    },
+    {
+      "value": "www.rfc-editor.org",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33482"
       ]
     },
     {
