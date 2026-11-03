@@ -6524,18 +6524,6 @@
       ]
     },
     {
-      "value": "CVE-2024-40766",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "CVE-2024-40711",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "CVE-2024-36927",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -6610,18 +6598,6 @@
       ]
     },
     {
-      "value": "CVE-2023-27532",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "CVE-2023-20269",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "CVE-2023-20198",
       "sources": [
         "https://blog.talosintelligence.com/ir-trends-q3-2026/"
@@ -6644,21 +6620,9 @@
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
       ]
-    },
-    {
-      "value": "CVE-2020-3259",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
     }
   ],
   "ips": [
-    {
-      "value": "5.255.11.134",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
     {
       "value": "9.1.1.0",
       "sources": [
@@ -6690,45 +6654,15 @@
       ]
     },
     {
-      "value": "37.10.71.188",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "77.37.49.40",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "87.120.196.120",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
-      "value": "88.119.167.239",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "104.26.2.223",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "134.209.82.225",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
-      ]
-    },
-    {
-      "value": "140.82.114.4",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -6786,24 +6720,6 @@
       ]
     },
     {
-      "value": "167.235.225.149",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "173.194.194.94",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "185.199.108.133",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "187.15.88.186",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
@@ -6824,12 +6740,6 @@
   ],
   "domains": [
     {
-      "value": "1.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "2026.php",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440"
@@ -6839,6 +6749,12 @@
       "value": "485055033bcddfde56325c0d2feea4f2.exe",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
+      ]
+    },
+    {
+      "value": "7.2.8.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -6854,15 +6770,9 @@
       ]
     },
     {
-      "value": "acro.exe",
+      "value": "advancedwindowsmanager.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "acronis.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -6872,21 +6782,9 @@
       ]
     },
     {
-      "value": "anydesk.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "api.openai.com",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "b2.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -6899,6 +6797,42 @@
       "value": "bcnp59991459a.pdf",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
+      ]
+    },
+    {
+      "value": "beliefdesk.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "belieftrack.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "boinc.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "boinc.scr",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "boincscr.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "boinctray.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -6939,21 +6873,27 @@
       ]
     },
     {
-      "value": "ccleaner.exe",
+      "value": "ce11.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
-      "value": "ccleaner64.exe",
+      "value": "charityengine.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
-      "value": "cisa.dhs.gov",
+      "value": "client.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "client.tmp",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -6975,6 +6915,12 @@
       ]
     },
     {
+      "value": "companyharbor.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "config.json",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -6993,9 +6939,9 @@
       ]
     },
     {
-      "value": "copy.bat",
+      "value": "cratebase.cfd",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7023,18 +6969,6 @@
       ]
     },
     {
-      "value": "dcsync.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "diskdirector.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "docbook.ui.page.cls",
       "sources": [
         "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01"
@@ -7053,15 +6987,33 @@
       ]
     },
     {
-      "value": "domains.txt",
+      "value": "eld0.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
-      "value": "dyraswtb.exe",
+      "value": "eld1.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "eld3.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "eld4.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "eld5.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7083,6 +7035,12 @@
       ]
     },
     {
+      "value": "fallport.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "favicon.ico",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -7101,9 +7059,21 @@
       ]
     },
     {
+      "value": "foldlodge.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "formhistory.sqlite",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
+      "value": "friendsanchor.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7191,6 +7161,12 @@
       ]
     },
     {
+      "value": "inkact.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "isc.sans.edu",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440",
@@ -7217,6 +7193,12 @@
       "value": "javaw.exe",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
+      ]
+    },
+    {
+      "value": "johan.msi",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7262,18 +7244,6 @@
       ]
     },
     {
-      "value": "libsmb2.dll",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "license.txt",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "litellm-1.107.0.data",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7283,12 +7253,6 @@
       "value": "litellm.dev",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
-      ]
-    },
-    {
-      "value": "locker.dll",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -7322,39 +7286,9 @@
       ]
     },
     {
-      "value": "netscan.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "netscan.lic",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "netscan.xml",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "netscannew.zip",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "next.js",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "nltest.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -7368,9 +7302,15 @@
       ]
     },
     {
-      "value": "nxc.exe",
+      "value": "offerloader.da",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "offerloader.db",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7383,6 +7323,12 @@
       "value": "openssl.exe",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
+      ]
+    },
+    {
+      "value": "orbittrack.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7401,12 +7347,6 @@
       "value": "os.exit",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "oui.txt",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -7467,21 +7407,15 @@
       ]
     },
     {
-      "value": "ping.txt",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "places.sqlite",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
       ]
     },
     {
-      "value": "portable.dat",
+      "value": "prairielink.cfd",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7531,9 +7465,21 @@
       ]
     },
     {
-      "value": "scan.xml",
+      "value": "schtasks.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "sdk-agent.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "sdk-agent.updater.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7561,15 +7507,15 @@
       ]
     },
     {
-      "value": "sharpshares.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "shutterstock.com",
       "sources": [
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+      ]
+    },
+    {
+      "value": "signalpane.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7594,18 +7540,6 @@
       "value": "smt.cmd",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
-      ]
-    },
-    {
-      "value": "soc.dll",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "socks.exe",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -7639,21 +7573,15 @@
       ]
     },
     {
-      "value": "stopransomware.gov",
+      "value": "stonestation.cfd",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
       "value": "subnet.com",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01"
-      ]
-    },
-    {
-      "value": "subs.txt",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -7672,7 +7600,7 @@
       "value": "svchost.exe",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/",
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7712,6 +7640,12 @@
       ]
     },
     {
+      "value": "updater.exe",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "user.ini",
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
@@ -7728,6 +7662,12 @@
       "value": "vdaemon.conf",
       "sources": [
         "https://blog.talosintelligence.com/uat-11473-keydrift/"
+      ]
+    },
+    {
+      "value": "virtualbox-7.2.8-r173730.msi",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7756,6 +7696,12 @@
       ]
     },
     {
+      "value": "willowbox.xyz",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "win.tool.kmsauto",
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
@@ -7775,9 +7721,15 @@
       ]
     },
     {
-      "value": "winrar.exe",
+      "value": "wishcourt.cfd",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "wishgrove.cfd",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7894,6 +7846,12 @@
   ],
   "sha256": [
     {
+      "value": "006510ce1da2b7410376f0788c19e55616eb4bcc30072d25b7d0871dc32aa11c",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19",
       "sources": [
         "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
@@ -7930,9 +7888,9 @@
       ]
     },
     {
-      "value": "327b8b61eb446cc4f710771e44484f62b804ae3d262b57a56575053e2df67917",
+      "value": "21306fc5716f95e252388f920314b42f1c8bcc7df67cb4d39da30217b96f4044",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7954,6 +7912,12 @@
       ]
     },
     {
+      "value": "452a210bba4c8d08f7cb7733a816d7220a7fa570a469aea0a997cfc8b594b6a0",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
       "value": "462d0c9f67ca522d9e0e4acd245e90b36ce0d5353604a66bb7c43a1ec4a6fcf7",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7969,6 +7933,18 @@
       "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
       "sources": [
         "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "523fb81fae0c7beba7b5171243cc0dee7a4d04ae0483be9172eef2394a5a2152",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "55cd3d36fdcc58016a64398357b2c9724a060da9f0d09266e537a61ec9552e4f",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -7990,9 +7966,9 @@
       ]
     },
     {
-      "value": "6c1d36df94ebe367823e73ba33cfb4f40756a5e8ee1e30e8f0ae55d47e220a6a",
+      "value": "72750d32b440e9f2b6d05ff3d218a561a75d3d75fb976b461fa59897674a7f70",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
@@ -8039,12 +8015,6 @@
       ]
     },
     {
-      "value": "921df888aaabcd828a3723f4c9f5fe8b8379c6b7067d16b2ea10152300417eae",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "985c3972712218c62d2418b41056dba5fe883ca5104d8ec12041f8611db344f9",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
@@ -8076,21 +8046,15 @@
       ]
     },
     {
-      "value": "a0dc80a37eb7e2716c02a94adc8df9baedec192a77bde31669faed228d9ff526",
+      "value": "ab2c2dd37fdcfe1e7620a57f98c80bd063258bea145adc0cc6a0f8b1e24c6a8f",
       "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+        "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
       ]
     },
     {
       "value": "b6122440d0d9cb1eb1ade9933f49214da8c31288de7710c076c2680dfa528465",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
-      ]
-    },
-    {
-      "value": "bbdd3620a67aedec4b9a68b2c9cc880b6631215e129816aea19902a6f4bc6f41",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     },
     {
@@ -8124,12 +8088,6 @@
       ]
     },
     {
-      "value": "e79608cf1d6b51324c14bef8883054c1238ed5f080222cc464810e6e14adc346",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "ecb58cb29078d9646ad1dcdbe51526f2d9cfea06be5fb2ab183e8ecc3ab6bf15",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
@@ -8150,33 +8108,9 @@
   ],
   "sha1": [
     {
-      "value": "07353237350c35d6dc2c8f143b649cd07c71f62b",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
       "value": "7d16381a9de823943b5a0987dbd0f26edf22052b",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "b498a2683640c983bb069fa2ea9e67cef4a3797d",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "bbfed53e3bb1f306f4da97d995cf4ae5b73ad081",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
-      ]
-    },
-    {
-      "value": "d711a5af5aed48a3b36b98f4fcf52809aebef7a2",
-      "sources": [
-        "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
       ]
     }
   ],
