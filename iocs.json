@@ -1466,27 +1466,9 @@
       ]
     },
     {
-      "value": "CVE-2026-110322",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
-      ]
-    },
-    {
       "value": "CVE-2026-110243",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-109813",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
-      ]
-    },
-    {
-      "value": "CVE-2026-109812",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-03"
       ]
     },
     {
@@ -1494,7 +1476,9 @@
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
+        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -1503,13 +1487,9 @@
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
+        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
-      ]
-    },
-    {
-      "value": "CVE-2026-109576",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
       ]
     },
     {
@@ -1537,21 +1517,9 @@
       ]
     },
     {
-      "value": "CVE-2026-105960",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
-      ]
-    },
-    {
       "value": "CVE-2026-105265",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-103672",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
       ]
     },
     {
@@ -1576,12 +1544,6 @@
       "value": "CVE-2026-102073",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08"
-      ]
-    },
-    {
-      "value": "CVE-2026-101103",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
       ]
     },
     {
@@ -1624,12 +1586,6 @@
       "value": "CVE-2026-96616",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
-      ]
-    },
-    {
-      "value": "CVE-2026-94188",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-01"
       ]
     },
     {
@@ -1714,12 +1670,6 @@
       "value": "CVE-2026-89196",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12"
-      ]
-    },
-    {
-      "value": "CVE-2026-88850",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
       ]
     },
     {
@@ -2047,9 +1997,9 @@
       ]
     },
     {
-      "value": "CVE-2026-80466",
+      "value": "CVE-2026-81648",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+        "https://thehackernews.com/2026/11/attackers-target-unpatched.html"
       ]
     },
     {
@@ -4206,12 +4156,6 @@
       ]
     },
     {
-      "value": "CVE-2026-28388",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
       "value": "CVE-2026-27135",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -4934,12 +4878,6 @@
       ]
     },
     {
-      "value": "CVE-2026-17539",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
       "value": "CVE-2026-16438",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
@@ -4964,12 +4902,6 @@
       ]
     },
     {
-      "value": "CVE-2026-11856",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
       "value": "CVE-2026-11824",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15"
@@ -4985,60 +4917,6 @@
       "value": "CVE-2026-10756",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02"
-      ]
-    },
-    {
-      "value": "CVE-2026-9854",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
-      ]
-    },
-    {
-      "value": "CVE-2026-9853",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
-      ]
-    },
-    {
-      "value": "CVE-2026-9852",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
-      ]
-    },
-    {
-      "value": "CVE-2026-9079",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-8932",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-8927",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-6732",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-6653",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
-      ]
-    },
-    {
-      "value": "CVE-2026-6276",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05"
       ]
     },
     {
@@ -6756,12 +6634,6 @@
       ]
     },
     {
-      "value": "CVE-2021-44228",
-      "sources": [
-        "https://blog.talosintelligence.com/theres-only-so-much-code-the-rise-in-vulnerability-numbers/"
-      ]
-    },
-    {
       "value": "CVE-2021-41617",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -6775,12 +6647,6 @@
     }
   ],
   "ips": [
-    {
-      "value": "2.1.7.5",
-      "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04"
-      ]
-    },
     {
       "value": "5.255.11.134",
       "sources": [
@@ -6976,6 +6842,12 @@
       ]
     },
     {
+      "value": "9by0tjwoc3ut.exe",
+      "sources": [
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
+      ]
+    },
+    {
       "value": "acro.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
@@ -7009,6 +6881,12 @@
       "value": "b2.exe",
       "sources": [
         "https://www.cisa.gov/news-events/cybersecurity-advisories/aa26-293a"
+      ]
+    },
+    {
+      "value": "battle.net",
+      "sources": [
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
       ]
     },
     {
@@ -7247,6 +7125,12 @@
       ]
     },
     {
+      "value": "hide.me",
+      "sources": [
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
+      ]
+    },
+    {
       "value": "host.ip",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -7305,6 +7189,7 @@
       "sources": [
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
+        "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33458",
         "https://isc.sans.edu/diary/rss/33470",
         "https://isc.sans.edu/diary/rss/33482"
@@ -7471,6 +7356,7 @@
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/ir-trends-q3-2026/",
+        "https://isc.sans.edu/diary/rss/33450",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02",
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
@@ -7570,6 +7456,7 @@
       "value": "php.net",
       "sources": [
         "https://isc.sans.edu/diary/rss/33440",
+        "https://isc.sans.edu/diary/rss/33450",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
@@ -7610,6 +7497,12 @@
       ]
     },
     {
+      "value": "rolimons.com",
+      "sources": [
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
+      ]
+    },
+    {
       "value": "rootfs.rw",
       "sources": [
         "https://blog.talosintelligence.com/uat-11473-keydrift/"
@@ -7627,6 +7520,7 @@
       "sources": [
         "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
+        "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33482"
       ]
     },
@@ -7907,8 +7801,6 @@
     {
       "value": "www.hitachienergy.com",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-04",
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-05",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-03"
       ]
@@ -7982,9 +7874,9 @@
       ]
     },
     {
-      "value": "www.wago.com",
+      "value": "ylp9m5j3i2aw.exe",
       "sources": [
-        "https://www.cisa.gov/news-events/ics-advisories/icsa-26-293-02"
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
       ]
     }
   ],
@@ -8065,6 +7957,12 @@
       "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
       "sources": [
         "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
+      ]
+    },
+    {
+      "value": "57ef4242666d78c50df145b34023df564f0fad38812d6a580e66433d427e2279",
+      "sources": [
+        "https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/"
       ]
     },
     {
