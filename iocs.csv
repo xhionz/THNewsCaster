@@ -237,7 +237,6 @@ cves,CVE-2026-112415,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112414,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112413,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
-cves,CVE-2026-111943,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 cves,CVE-2026-111594,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 cves,CVE-2026-111497,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-111357,3,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
@@ -1068,6 +1067,7 @@ cves,CVE-2024-36927,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2024-36922,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2024-36903,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2024-28956,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
+cves,CVE-2024-27834,1,https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2024-27056,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2024-26982,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2024-26783,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
@@ -1088,18 +1088,12 @@ ips,9.2.2.1,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 ips,17.0.0.0,1,https://isc.sans.edu/diary/rss/33482
 ips,87.120.196.120,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 ips,134.209.82.225,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
-ips,144.172.64.60,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-ips,144.172.64.99,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-ips,144.172.64.128,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 ips,165.154.11.140,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.29.93,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.33.72,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.36.91,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.120.226,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.182.221,1,https://isc.sans.edu/diary/rss/33442
-ips,187.15.88.186,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-ips,187.15.89.186,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-ips,187.15.90.217,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,485055033bcddfde56325c0d2feea4f2.exe,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,7.2.8.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,95.sbx.tg,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
@@ -1191,7 +1185,6 @@ domains,mailtest.php,1,https://isc.sans.edu/diary/rss/33488
 domains,main.go,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,mshta.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,net.exe,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/
-domains,next.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,node.js,5,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://isc.sans.edu/diary/rss/33450 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02 | https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,nvd.nist.gov,1,https://isc.sans.edu/diary/rss/33488
 domains,offerloader.da,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
@@ -1200,12 +1193,6 @@ domains,onmicrosoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/
 domains,openssl.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,orbittrack.cfd,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,os.exit,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
-domains,permission.permissionname,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-domains,permission.permissiontype,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-domains,permission.privilegelevel,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-domains,permission.targetappdisplayname,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-domains,permission.targetappid,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-domains,permission.usagestatus,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,php.ini,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,php.net,2,https://isc.sans.edu/diary/rss/33450 | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,places.sqlite,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
@@ -1280,7 +1267,6 @@ domains,www.sans.edu,1,https://isc.sans.edu/diary/rss/33442
 domains,www.siemens.com,9,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01
 domains,ylp9m5j3i2aw.exe,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
 sha256,006510ce1da2b7410376f0788c19e55616eb4bcc30072d25b7d0871dc32aa11c,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
-sha256,0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,03ac2a8b752605d1d7710979c17ff18b03dd978203ba23ba97fd8ce3d6f897ea,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,06c5c14f043aee3bcc5843b5f50909623d5c9a6239a7c1fba9cddad4111469e7,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,0aaf7ba346d41ef2f40390436738b001180d5a1c03aa093f121078a9969d9a1a,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1288,12 +1274,9 @@ sha256,12d4ccc5c6f8d35cf4f2cf233b7f3e418e863e657d81ff5f5fc9e210005b9484,1,https:
 sha256,1bbce8caa94f01c0aaa0b7ddae51553a8a32e1ce53d96d44fe583272aff7ad00,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,21306fc5716f95e252388f920314b42f1c8bcc7df67cb4d39da30217b96f4044,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 sha256,34bef04fe88ac9d0aae0475630b1738681d15b94f233ac8aa46eacf5968305fa,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
-sha256,42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
-sha256,432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,452a210bba4c8d08f7cb7733a816d7220a7fa570a469aea0a997cfc8b594b6a0,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 sha256,462d0c9f67ca522d9e0e4acd245e90b36ce0d5353604a66bb7c43a1ec4a6fcf7,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,4887afc0a574e9419a9695ef083460f58e4ef9a1c40793523ce112251273bdf9,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
-sha256,4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,523fb81fae0c7beba7b5171243cc0dee7a4d04ae0483be9172eef2394a5a2152,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 sha256,55cd3d36fdcc58016a64398357b2c9724a060da9f0d09266e537a61ec9552e4f,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 sha256,57ef4242666d78c50df145b34023df564f0fad38812d6a580e66433d427e2279,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
@@ -1308,17 +1291,13 @@ sha256,7fc50b69b56bfdfa9fc0a3e088ff13904587d6336a51e9edcc7919cba83d4e3f,2,https:
 sha256,84dc8c82c0a4a4a62552ef826b49fcc86d1a5c4a5d0f2c06665723f93d129d7d,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,85b6c424117494d3056e88689dbc94c75e9afdb187a339714043aec0da109f17,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,985c3972712218c62d2418b41056dba5fe883ca5104d8ec12041f8611db344f9,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
-sha256,98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,9dd0a3926f96a37eb86cf1ee2310d9be93139cc4ebef3ef9e2efe9531390be25,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
-sha256,9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
 sha256,ab2c2dd37fdcfe1e7620a57f98c80bd063258bea145adc0cc6a0f8b1e24c6a8f,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 sha256,b6122440d0d9cb1eb1ade9933f49214da8c31288de7710c076c2680dfa528465,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 sha256,c2e32d0ce2548aa662c18bf5001911a79fe5b30cf8357132275add02fdcde054,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
-sha256,cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,d791dd0ff3228ed29a8d7333d4567be829159c5632ea347780992006f91c5295,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 sha256,d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1,1,https://blog.talosintelligence.com/i-had-plans-for-that-second/
-sha256,e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 sha256,ecb58cb29078d9646ad1dcdbe51526f2d9cfea06be5fb2ab183e8ecc3ab6bf15,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 sha256,f326201269f1ee2f803ae435317507263bb6e0dbfdeb70bd1bb5446e2e46f001,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 sha256,fed979f93bcaf4e73ebd25748093a92095d5109cbd01d55f97bdc50ce509ad2f,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/

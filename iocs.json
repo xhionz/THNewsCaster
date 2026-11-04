@@ -1431,12 +1431,6 @@
       ]
     },
     {
-      "value": "CVE-2026-111943",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
-      ]
-    },
-    {
       "value": "CVE-2026-111594",
       "sources": [
         "https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01"
@@ -6525,6 +6519,12 @@
       ]
     },
     {
+      "value": "CVE-2024-27834",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/11/04/cisa-adds-one-known-exploited-vulnerability-catalog"
+      ]
+    },
+    {
       "value": "CVE-2024-27056",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
@@ -6649,24 +6649,6 @@
       ]
     },
     {
-      "value": "144.172.64.60",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "144.172.64.99",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "144.172.64.128",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
       "value": "165.154.11.140",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
@@ -6700,24 +6682,6 @@
       "value": "165.154.182.221",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442"
-      ]
-    },
-    {
-      "value": "187.15.88.186",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "187.15.89.186",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "187.15.90.217",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
       ]
     }
   ],
@@ -7275,12 +7239,6 @@
       ]
     },
     {
-      "value": "next.js",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
       "value": "node.js",
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
@@ -7330,42 +7288,6 @@
       "value": "os.exit",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "permission.permissionname",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "permission.permissiontype",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "permission.privilegelevel",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "permission.targetappdisplayname",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "permission.targetappid",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
-      ]
-    },
-    {
-      "value": "permission.usagestatus",
-      "sources": [
-        "https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/"
       ]
     },
     {
@@ -7832,12 +7754,6 @@
       ]
     },
     {
-      "value": "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
-      ]
-    },
-    {
       "value": "03ac2a8b752605d1d7710979c17ff18b03dd978203ba23ba97fd8ce3d6f897ea",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
@@ -7880,18 +7796,6 @@
       ]
     },
     {
-      "value": "42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
-      ]
-    },
-    {
-      "value": "432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
-      ]
-    },
-    {
       "value": "452a210bba4c8d08f7cb7733a816d7220a7fa570a469aea0a997cfc8b594b6a0",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
@@ -7907,12 +7811,6 @@
       "value": "4887afc0a574e9419a9695ef083460f58e4ef9a1c40793523ce112251273bdf9",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
       ]
     },
     {
@@ -8001,21 +7899,9 @@
       ]
     },
     {
-      "value": "98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
-      ]
-    },
-    {
       "value": "9dd0a3926f96a37eb86cf1ee2310d9be93139cc4ebef3ef9e2efe9531390be25",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/"
-      ]
-    },
-    {
-      "value": "9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
       ]
     },
     {
@@ -8044,12 +7930,6 @@
       ]
     },
     {
-      "value": "cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
-      ]
-    },
-    {
       "value": "d791dd0ff3228ed29a8d7333d4567be829159c5632ea347780992006f91c5295",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
@@ -8059,12 +7939,6 @@
       "value": "d921fc993574c8be76553bcf4296d2851e48ee39b958205e69bdfd7cf661d2b1",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
-      ]
-    },
-    {
-      "value": "e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838",
-      "sources": [
-        "https://blog.talosintelligence.com/compromised-intermediate-certificates/"
       ]
     },
     {
