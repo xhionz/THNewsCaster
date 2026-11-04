@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T06:39:45+00:00",
+  "generated_at": "2026-11-04T07:21:18+00:00",
   "generator": "THNewsCaster",
   "version": "0.1.0",
   "briefings": [
@@ -17703,13 +17703,13 @@
     },
     {
       "article": {
-        "id": "399f3911aacd4296",
+        "id": "25a989e14d06c6f1",
         "source": "The Hacker News",
-        "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
-        "link": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
-        "published": "Tue, 03 Nov 2026 11:04:37 +0530",
-        "summary": "Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according to findings from Defused Cyber. The vulnerability in question is CVE-2026-81648, which carries a CVSS score of 10.0. Successful exploitation of the flaw could permit unauthenticated users to delete arbitrary files on the server and extract",
-        "raw_text": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according to findings from Defused Cyber. The vulnerability in question is CVE-2026-81648, which carries a CVSS score of 10.0. Successful exploitation of the flaw could permit unauthenticated users to delete arbitrary files on the server and extract",
+        "title": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades",
+        "link": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
+        "published": "Wed, 04 Nov 2026 11:13:11 +0530",
+        "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a security flaw in WordPress Core to the Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The high-severity vulnerability, tracked as CVE-2026-119977 (CVSS score: 8.1), is a case of Time-of-check Time-of-use (TOCTOU) race condition that could be exploited to achieve arbitrary code",
+        "raw_text": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a security flaw in WordPress Core to the Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The high-severity vulnerability, tracked as CVE-2026-119977 (CVSS score: 8.1), is a case of Time-of-check Time-of-use (TOCTOU) race condition that could be exploited to achieve arbitrary code",
         "tags": []
       },
       "scoring": {
@@ -17724,7 +17724,7 @@
       },
       "extraction": {
         "cves": [
-          "CVE-2026-81648"
+          "CVE-2026-119977"
         ],
         "ips": [],
         "domains": [],
@@ -17740,16 +17740,18 @@
           "exploit",
           "rdp"
         ],
-        "sectors": [],
+        "sectors": [
+          "government"
+        ],
         "actions": [],
         "products": []
       },
       "hypotheses": [
         {
-          "id": "H-399f3911-1",
-          "title": "Initial access via CVE-2026-81648 affecting the affected product/service",
-          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-81648 in the affected product/service within the last 30 days.",
-          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-81648; vectors: exploit, rdp.",
+          "id": "H-25a989e1-1",
+          "title": "Initial access via CVE-2026-119977 affecting the affected product/service",
+          "statement": "A threat actor has attempted to obtain initial access to our environment by exploiting CVE-2026-119977 in the affected product/service within the last 30 days.",
+          "rationale": "Archetype 'initial_access_cve' selected based on CVEs cited: CVE-2026-119977; vectors: exploit, rdp.",
           "confidence": "medium",
           "mitre_attack": [
             "T1190",
@@ -17757,9 +17759,9 @@
           ],
           "objectives": [
             {
-              "id": "H-399f3911-1-O1",
+              "id": "H-25a989e1-1-O1",
               "title": "Inventory exposure to the affected product",
-              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-81648.",
+              "falsification_criterion": "If zero internet-facing assets run a vulnerable build of the affected product, the external-exploitation hypothesis is disproven for CVE-2026-119977.",
               "data_sources": [
                 "Asset CMDB",
                 "External attack-surface scanner",
@@ -17773,16 +17775,16 @@
               "points": 100
             },
             {
-              "id": "H-399f3911-1-O2",
+              "id": "H-25a989e1-1-O2",
               "title": "Hunt for exploit attempts at the edge",
-              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-81648 in the last 30 days, in-the-wild exploitation against us is unsupported.",
+              "falsification_criterion": "If WAF / firewall / IDS show no exploit-signature hits for CVE-2026-119977 in the last 30 days, in-the-wild exploitation against us is unsupported.",
               "data_sources": [
                 "WAF logs",
                 "IDS/IPS",
                 "Edge firewall",
                 "CDN logs"
               ],
-              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-81648/ | summarize count() by src_ip, dst_host",
+              "suggested_query": "edge_logs | where signature contains 'CVE' or uri matches /exploit-pattern-for-CVE-2026-119977/ | summarize count() by src_ip, dst_host",
               "mitre_attack": [
                 "T1190",
                 "T1133"
@@ -17791,15 +17793,15 @@
               "points": 200
             },
             {
-              "id": "H-399f3911-1-O3",
+              "id": "H-25a989e1-1-O3",
               "title": "Patch-status correlation",
-              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-81648 fix across exposed hosts, the hypothesis is disproven by remediation.",
+              "falsification_criterion": "If MDM / patch-management shows 100% deployment of the CVE-2026-119977 fix across exposed hosts, the hypothesis is disproven by remediation.",
               "data_sources": [
                 "SCCM/Intune",
                 "Patch management",
                 "Tanium / Kandji"
               ],
-              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-81648')) | summarize coverage = avg(installed) by host_role",
+              "suggested_query": "patch_state | where kb in (fixes_for('CVE-2026-119977')) | summarize coverage = avg(installed) by host_role",
               "mitre_attack": [
                 "T1190"
               ],
@@ -17807,7 +17809,7 @@
               "points": 100
             },
             {
-              "id": "H-399f3911-1-O4",
+              "id": "H-25a989e1-1-O4",
               "title": "Post-exploit web-shell sweep",
               "falsification_criterion": "If a sweep of webroots and IIS/Apache process trees finds no anomalous children (cmd, powershell, /bin/sh) on the affected product hosts, post-exploit foothold is unsupported.",
               "data_sources": [
@@ -17823,7 +17825,7 @@
               "points": 250
             },
             {
-              "id": "H-399f3911-1-O5",
+              "id": "H-25a989e1-1-O5",
               "title": "Honeypot / canary check",
               "falsification_criterion": "If exposed canary instances of the same product show no probing or exploitation telemetry, opportunistic mass-exploitation against the org is unlikely.",
               "data_sources": [
@@ -17841,10 +17843,10 @@
           "sigma_rule": ""
         },
         {
-          "id": "H-399f3911-2",
+          "id": "H-25a989e1-2",
           "title": "Outbound C2 beaconing to reported infrastructure",
           "statement": "Hosts in the estate are beaconing to the command-and-control infrastructure reported in this article (domains, IPs, TLS fingerprints, or RMM tooling).",
-          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-81648; vectors: exploit, rdp.",
+          "rationale": "Archetype 'c2_beacon' selected based on CVEs cited: CVE-2026-119977; vectors: exploit, rdp.",
           "confidence": "medium",
           "mitre_attack": [
             "T1071",
@@ -17853,7 +17855,7 @@
           ],
           "objectives": [
             {
-              "id": "H-399f3911-2-O1",
+              "id": "H-25a989e1-2-O1",
               "title": "DNS resolution sweep for published C2 domains",
               "falsification_criterion": "If recursive DNS logs show zero resolutions for the IOC domains in the last 90 days, active beaconing is disproven.",
               "data_sources": [
@@ -17868,7 +17870,7 @@
               "points": 100
             },
             {
-              "id": "H-399f3911-2-O2",
+              "id": "H-25a989e1-2-O2",
               "title": "Egress connections to published C2 IPs",
               "falsification_criterion": "If proxy / firewall egress logs show no connections to the IOC IPs or matching ASNs, network-level C2 is unsupported.",
               "data_sources": [
@@ -17885,7 +17887,7 @@
               "points": 200
             },
             {
-              "id": "H-399f3911-2-O3",
+              "id": "H-25a989e1-2-O3",
               "title": "Beacon periodicity / jitter analysis",
               "falsification_criterion": "If beacon-style periodic outbound connections (low jitter, small payloads) to uncategorised destinations are absent, covert C2 is unlikely.",
               "data_sources": [
@@ -17901,7 +17903,7 @@
               "points": 300
             },
             {
-              "id": "H-399f3911-2-O4",
+              "id": "H-25a989e1-2-O4",
               "title": "TLS / JA3 fingerprint pivot",
               "falsification_criterion": "If JA3/JA3S fingerprints associated with the reported family are absent in TLS telemetry, encrypted C2 attribution is weakened.",
               "data_sources": [
@@ -17917,7 +17919,7 @@
               "points": 250
             },
             {
-              "id": "H-399f3911-2-O5",
+              "id": "H-25a989e1-2-O5",
               "title": "Remote-monitoring tooling abuse check",
               "falsification_criterion": "If unmanaged AnyDesk / TeamViewer / ScreenConnect / Atera installs are absent, RMM-based C2 is disproven.",
               "data_sources": [
@@ -17935,10 +17937,10 @@
           "sigma_rule": ""
         },
         {
-          "id": "H-399f3911-3",
+          "id": "H-25a989e1-3",
           "title": "Identity compromise of privileged users",
           "statement": "Privileged identities have been compromised through phishing, MFA fatigue, help-desk social engineering, or OAuth illicit-consent grants.",
-          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-81648; vectors: exploit, rdp.",
+          "rationale": "Archetype 'identity_compromise' selected based on CVEs cited: CVE-2026-119977; vectors: exploit, rdp.",
           "confidence": "medium",
           "mitre_attack": [
             "T1078",
@@ -17948,7 +17950,7 @@
           ],
           "objectives": [
             {
-              "id": "H-399f3911-3-O1",
+              "id": "H-25a989e1-3-O1",
               "title": "Impossible-travel / atypical sign-ins",
               "falsification_criterion": "If Entra ID / Okta risky-sign-in detections show no impossible-travel hits on privileged identities, account compromise is unsupported.",
               "data_sources": [
@@ -17963,7 +17965,7 @@
               "points": 100
             },
             {
-              "id": "H-399f3911-3-O2",
+              "id": "H-25a989e1-3-O2",
               "title": "MFA-fatigue / push-bombing",
               "falsification_criterion": "If MFA telemetry shows no bursts of denied pushes followed by a successful one for the same user, MFA-fatigue compromise is disproven.",
               "data_sources": [
@@ -17978,7 +17980,7 @@
               "points": 200
             },
             {
-              "id": "H-399f3911-3-O3",
+              "id": "H-25a989e1-3-O3",
               "title": "Help-desk social-engineering pivot",
               "falsification_criterion": "If ticketing / call-recording shows no recent password-reset or MFA-reset requests for privileged users without proper verification, help-desk vector is unsupported.",
               "data_sources": [
@@ -17994,7 +17996,7 @@
               "points": 250
             },
             {
-              "id": "H-399f3911-3-O4",
+              "id": "H-25a989e1-3-O4",
               "title": "OAuth illicit-consent grants",
               "falsification_criterion": "If Entra/Workspace audit logs show no recently consented third-party apps with high-impact scopes, OAuth abuse is disproven.",
               "data_sources": [
@@ -18012,7 +18014,7 @@
           "sigma_rule": ""
         }
       ],
-      "first_seen": "2026-11-03T06:14:45+00:00",
+      "first_seen": "2026-11-04T07:21:17+00:00",
       "agent_trace": []
     }
   ],
