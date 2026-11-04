@@ -1,6 +1,6 @@
 type,value,article_count,sources
 cves,CVE-2026-119977,2,https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html | https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
-cves,CVE-2026-118527,1,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-118527,2,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
 cves,CVE-2026-115560,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-114598,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114597,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
@@ -239,13 +239,14 @@ cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-111943,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 cves,CVE-2026-111594,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 cves,CVE-2026-111497,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-111357,2,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-111357,3,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
 cves,CVE-2026-111100,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-110825,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-110491,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
+cves,CVE-2026-110447,1,https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0
 cves,CVE-2026-110243,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
-cves,CVE-2026-109619,4,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,5,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/ | https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,2,https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,3,https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-109122,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-107861,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-106087,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
@@ -1204,7 +1205,7 @@ domains,permission.privilegelevel,1,https://www.microsoft.com/en-us/security/blo
 domains,permission.targetappdisplayname,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,permission.targetappid,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,permission.usagestatus,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
-domains,php.ini,2,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+domains,php.ini,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,php.net,2,https://isc.sans.edu/diary/rss/33450 | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,places.sqlite,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,prairielink.cfd,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
@@ -1223,7 +1224,6 @@ domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories
 domains,sendmail.php,1,https://isc.sans.edu/diary/rss/33488
 domains,server.conf,1,https://isc.sans.edu/diary/rss/33470
 domains,sfc.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
-domains,shutterstock.com,1,https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/
 domains,signalpane.cfd,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,simvol.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,sitecustomize.py,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
@@ -1248,7 +1248,7 @@ domains,testemail.php,1,https://isc.sans.edu/diary/rss/33488
 domains,total-sitevv.lol,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,tzrhxln.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,updater.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
-domains,user.ini,2,https://blog.talosintelligence.com/two-critical-rces-in-php-core/ | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+domains,user.ini,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,vdaemon.bin,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,vdaemon.conf,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,virtualbox-7.2.8-r173730.msi,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/

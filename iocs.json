@@ -10,7 +10,8 @@
     {
       "value": "CVE-2026-118527",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
       ]
     },
     {
@@ -1445,7 +1446,8 @@
       "value": "CVE-2026-111357",
       "sources": [
         "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
       ]
     },
     {
@@ -1467,6 +1469,12 @@
       ]
     },
     {
+      "value": "CVE-2026-110447",
+      "sources": [
+        "https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0"
+      ]
+    },
+    {
       "value": "CVE-2026-110243",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01"
@@ -1475,8 +1483,6 @@
     {
       "value": "CVE-2026-109619",
       "sources": [
-        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
         "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
@@ -1484,8 +1490,6 @@
     {
       "value": "CVE-2026-109618",
       "sources": [
-        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
         "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
@@ -7363,7 +7367,6 @@
     {
       "value": "php.ini",
       "sources": [
-        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
@@ -7478,12 +7481,6 @@
       "value": "sfc.exe",
       "sources": [
         "https://blog.talosintelligence.com/ir-trends-q3-2026/"
-      ]
-    },
-    {
-      "value": "shutterstock.com",
-      "sources": [
-        "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/"
       ]
     },
     {
@@ -7634,7 +7631,6 @@
     {
       "value": "user.ini",
       "sources": [
-        "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
