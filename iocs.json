@@ -10,8 +10,7 @@
     {
       "value": "CVE-2026-118527",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
+        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -1446,8 +1445,7 @@
       "value": "CVE-2026-111357",
       "sources": [
         "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
+        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -6591,6 +6589,12 @@
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11"
       ]
+    },
+    {
+      "value": "CVE-2000-0411",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
+      ]
     }
   ],
   "ips": [
@@ -6982,6 +6986,12 @@
       ]
     },
     {
+      "value": "email-test.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
+      ]
+    },
+    {
       "value": "epics-controls.org",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01"
@@ -7057,6 +7067,12 @@
       "value": "ghidra.repositories.dir",
       "sources": [
         "https://isc.sans.edu/diary/rss/33470"
+      ]
+    },
+    {
+      "value": "gist.github.com",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
       ]
     },
     {
@@ -7138,7 +7154,8 @@
         "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33458",
         "https://isc.sans.edu/diary/rss/33470",
-        "https://isc.sans.edu/diary/rss/33482"
+        "https://isc.sans.edu/diary/rss/33482",
+        "https://isc.sans.edu/diary/rss/33488"
       ]
     },
     {
@@ -7226,6 +7243,12 @@
       ]
     },
     {
+      "value": "mailtest.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
+      ]
+    },
+    {
       "value": "main.go",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
@@ -7257,6 +7280,12 @@
         "https://isc.sans.edu/diary/rss/33450",
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02",
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
+      "value": "nvd.nist.gov",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
       ]
     },
     {
@@ -7399,7 +7428,8 @@
       "sources": [
         "https://isc.sans.edu/diary/rss/33442",
         "https://isc.sans.edu/diary/rss/33450",
-        "https://isc.sans.edu/diary/rss/33482"
+        "https://isc.sans.edu/diary/rss/33482",
+        "https://isc.sans.edu/diary/rss/33488"
       ]
     },
     {
@@ -7430,6 +7460,12 @@
       "value": "securitychallenges.dat",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02"
+      ]
+    },
+    {
+      "value": "sendmail.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
       ]
     },
     {
@@ -7563,6 +7599,18 @@
       "value": "tcp.hdr",
       "sources": [
         "https://isc.sans.edu/diary/rss/33482"
+      ]
+    },
+    {
+      "value": "test-mail.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
+      ]
+    },
+    {
+      "value": "testemail.php",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33488"
       ]
     },
     {

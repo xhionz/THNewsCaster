@@ -1,6 +1,6 @@
 type,value,article_count,sources
 cves,CVE-2026-119977,2,https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html | https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
-cves,CVE-2026-118527,2,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
+cves,CVE-2026-118527,1,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-115560,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-114598,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114597,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
@@ -239,7 +239,7 @@ cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-111943,1,https://blog.talosintelligence.com/compromised-intermediate-certificates/
 cves,CVE-2026-111594,1,https://www.cisa.gov/news-events/ics-medical-advisories/icsma-26-295-01
 cves,CVE-2026-111497,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-111357,3,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
+cves,CVE-2026-111357,2,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-111100,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-110825,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
 cves,CVE-2026-110491,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-01
@@ -1078,6 +1078,7 @@ cves,CVE-2023-20198,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 cves,CVE-2023-4863,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2022-26704,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2021-41617,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
+cves,CVE-2000-0411,1,https://isc.sans.edu/diary/rss/33488
 ips,9.1.1.0,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 ips,9.1.2.0,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 ips,9.2.1.6,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
@@ -1142,6 +1143,7 @@ domains,eld1.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake
 domains,eld3.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,eld4.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,eld5.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
+domains,email-test.php,1,https://isc.sans.edu/diary/rss/33488
 domains,epics-controls.org,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 domains,exec.command,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,exodus.wallet,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
@@ -1155,6 +1157,7 @@ domains,friendsanchor.xyz,1,https://www.microsoft.com/en-us/security/blog/2026/1
 domains,ghidra-server.org,1,https://isc.sans.edu/diary/rss/33470
 domains,ghidra.lab.local,1,https://isc.sans.edu/diary/rss/33470
 domains,ghidra.repositories.dir,1,https://isc.sans.edu/diary/rss/33470
+domains,gist.github.com,1,https://isc.sans.edu/diary/rss/33488
 domains,hdr.json,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,hide.me,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
 domains,host.ip,1,https://isc.sans.edu/diary/rss/33442
@@ -1167,7 +1170,7 @@ domains,hub.docker.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26
 domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,inkact.xyz,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
-domains,isc.sans.edu,5,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470 | https://isc.sans.edu/diary/rss/33482
+domains,isc.sans.edu,6,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470 | https://isc.sans.edu/diary/rss/33482 | https://isc.sans.edu/diary/rss/33488
 domains,java.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,javaw.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,johan.msi,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
@@ -1182,11 +1185,13 @@ domains,litellm-1.107.0.data,1,https://www.microsoft.com/en-us/security/blog/202
 domains,litellm.dev,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,logins.json,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,mail.brossy.com.cn,1,https://isc.sans.edu/diary/rss/33442
+domains,mailtest.php,1,https://isc.sans.edu/diary/rss/33488
 domains,main.go,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,mshta.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,net.exe,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/
 domains,next.js,1,https://www.microsoft.com/en-us/security/blog/2026/10/21/storm-0940-uses-artex-agentic-ai-connectwise-supply-chain-compromise/
 domains,node.js,5,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://isc.sans.edu/diary/rss/33450 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02 | https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
+domains,nvd.nist.gov,1,https://isc.sans.edu/diary/rss/33488
 domains,offerloader.da,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,offerloader.db,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,onmicrosoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
@@ -1209,12 +1214,13 @@ domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
 domains,rolimons.com,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
 domains,rootfs.rw,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,sample.exe,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
-domains,sans.edu,3,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33482
+domains,sans.edu,4,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33482 | https://isc.sans.edu/diary/rss/33488
 domains,schtasks.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,sdk-agent.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,sdk-agent.updater.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,searchapp.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,securitychallenges.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
+domains,sendmail.php,1,https://isc.sans.edu/diary/rss/33488
 domains,server.conf,1,https://isc.sans.edu/diary/rss/33470
 domains,sfc.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,shutterstock.com,1,https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/
@@ -1237,6 +1243,8 @@ domains,sysmon.cmd,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/in
 domains,system.management.automation.dll,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,taskkill.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,tcp.hdr,1,https://isc.sans.edu/diary/rss/33482
+domains,test-mail.php,1,https://isc.sans.edu/diary/rss/33488
+domains,testemail.php,1,https://isc.sans.edu/diary/rss/33488
 domains,total-sitevv.lol,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,tzrhxln.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,updater.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
