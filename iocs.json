@@ -10,7 +10,8 @@
     {
       "value": "CVE-2026-118527",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
       ]
     },
     {
@@ -1445,7 +1446,8 @@
       "value": "CVE-2026-111357",
       "sources": [
         "https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog",
+        "https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/"
       ]
     },
     {
@@ -1476,7 +1478,6 @@
       "value": "CVE-2026-109619",
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
-        "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
         "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
@@ -1486,7 +1487,6 @@
       "value": "CVE-2026-109618",
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
-        "https://isc.sans.edu/diary/rss/33440",
         "https://krebsonsecurity.com/2026/10/widespread-php-flaw-may-cause-many-site-outages-today/",
         "https://www.cisa.gov/news-events/alerts/2026/10/21/critical-vulnerabilities-php-require-immediate-patching",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
@@ -6711,12 +6711,6 @@
   ],
   "domains": [
     {
-      "value": "2026.php",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
-      ]
-    },
-    {
       "value": "485055033bcddfde56325c0d2feea4f2.exe",
       "sources": [
         "https://blog.talosintelligence.com/i-had-plans-for-that-second/"
@@ -7140,18 +7134,11 @@
     {
       "value": "isc.sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
         "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33458",
         "https://isc.sans.edu/diary/rss/33470",
         "https://isc.sans.edu/diary/rss/33482"
-      ]
-    },
-    {
-      "value": "jackalsyn.com",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
       ]
     },
     {
@@ -7345,12 +7332,6 @@
       ]
     },
     {
-      "value": "php-up-2026.html",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
-      ]
-    },
-    {
       "value": "php.ini",
       "sources": [
         "https://blog.talosintelligence.com/two-critical-rces-in-php-core/",
@@ -7360,7 +7341,6 @@
     {
       "value": "php.net",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33450",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -7417,7 +7397,6 @@
     {
       "value": "sans.edu",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33440",
         "https://isc.sans.edu/diary/rss/33442",
         "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33482"
@@ -7762,12 +7741,6 @@
       "value": "www.openwall.com",
       "sources": [
         "https://isc.sans.edu/diary/rss/33482"
-      ]
-    },
-    {
-      "value": "www.php.net",
-      "sources": [
-        "https://isc.sans.edu/diary/rss/33440"
       ]
     },
     {
