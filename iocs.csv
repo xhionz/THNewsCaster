@@ -1076,7 +1076,7 @@ cves,CVE-2023-53292,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-29
 cves,CVE-2023-52927,2,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16
 cves,CVE-2023-51384,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
 cves,CVE-2023-28531,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
-cves,CVE-2023-20198,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
+cves,CVE-2023-20198,2,https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://isc.sans.edu/diary/rss/33492
 cves,CVE-2023-4863,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2022-26704,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2021-41617,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11
@@ -1166,7 +1166,7 @@ domains,hub.docker.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26
 domains,iconics.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,iconicsinc.my.site.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,inkact.xyz,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
-domains,isc.sans.edu,6,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470 | https://isc.sans.edu/diary/rss/33482 | https://isc.sans.edu/diary/rss/33488
+domains,isc.sans.edu,7,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33458 | https://isc.sans.edu/diary/rss/33470 | https://isc.sans.edu/diary/rss/33482 | https://isc.sans.edu/diary/rss/33488 | https://isc.sans.edu/diary/rss/33492
 domains,java.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,javaw.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,johan.msi,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
@@ -1201,9 +1201,10 @@ domains,psexec.exe,1,https://blog.talosintelligence.com/ir-trends-q3-2026/
 domains,raw.githubusercontent.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
 domains,robots.txt,1,https://isc.sans.edu/diary/rss/33442
 domains,rolimons.com,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
+domains,rootevidence.com,1,https://isc.sans.edu/diary/rss/33492
 domains,rootfs.rw,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,sample.exe,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
-domains,sans.edu,4,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33482 | https://isc.sans.edu/diary/rss/33488
+domains,sans.edu,5,https://isc.sans.edu/diary/rss/33442 | https://isc.sans.edu/diary/rss/33450 | https://isc.sans.edu/diary/rss/33482 | https://isc.sans.edu/diary/rss/33488 | https://isc.sans.edu/diary/rss/33492
 domains,schtasks.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,sdk-agent.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,sdk-agent.updater.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
@@ -1263,6 +1264,7 @@ domains,www.mitsubishielectric.co.jp,1,https://www.cisa.gov/news-events/ics-advi
 domains,www.mitsubishielectric.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 domains,www.openwall.com,1,https://isc.sans.edu/diary/rss/33482
 domains,www.rfc-editor.org,1,https://isc.sans.edu/diary/rss/33482
+domains,www.rootevidence.com,1,https://isc.sans.edu/diary/rss/33492
 domains,www.sans.edu,1,https://isc.sans.edu/diary/rss/33442
 domains,www.siemens.com,9,https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-02 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-08 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-11 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-12 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-14 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-15 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-16 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-295-18 | https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01
 domains,ylp9m5j3i2aw.exe,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
