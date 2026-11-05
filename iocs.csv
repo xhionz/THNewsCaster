@@ -2,7 +2,6 @@ type,value,article_count,sources
 cves,CVE-2026-119977,2,https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html | https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-118527,2,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
 cves,CVE-2026-115560,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
-cves,CVE-2026-114625,1,https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-114598,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114597,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114596,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
@@ -1117,6 +1116,7 @@ domains,bun.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-
 domains,cca616647db9370c88998ae25da6997f.exe,2,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/i-had-plans-for-that-second/
 domains,ce11.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,charityengine.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
+domains,cisa.dhs.gov,1,https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems
 domains,client.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,client.tmp,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,clientchallengetable.dat,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
@@ -1155,6 +1155,7 @@ domains,ghidra.lab.local,1,https://isc.sans.edu/diary/rss/33470
 domains,ghidra.repositories.dir,1,https://isc.sans.edu/diary/rss/33470
 domains,gist.github.com,1,https://isc.sans.edu/diary/rss/33488
 domains,hdr.json,1,https://www.microsoft.com/en-us/security/blog/2026/10/23/inside-the-litellm-1-107-0-supply-chain-compromise-credential-theft-through-python-startup-hooks/
+domains,hhs.gov,1,https://www.cisa.gov/resources-tools/resources/us-government-partners-urge-hardening-industrial-refrigeration-and-cold-chain-monitoring-systems
 domains,hide.me,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
 domains,host.ip,1,https://isc.sans.edu/diary/rss/33442
 domains,host.mac,1,https://isc.sans.edu/diary/rss/33442
