@@ -1455,12 +1455,14 @@
     {
       "value": "CVE-2026-109619",
       "sources": [
+        "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
       "value": "CVE-2026-109618",
       "sources": [
+        "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -2616,7 +2618,6 @@
       "value": "isc.sans.edu",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442",
-        "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33458",
         "https://isc.sans.edu/diary/rss/33470",
         "https://isc.sans.edu/diary/rss/33482",
@@ -2737,7 +2738,6 @@
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/ir-trends-q3-2026/",
-        "https://isc.sans.edu/diary/rss/33450",
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
     },
@@ -2792,7 +2792,6 @@
     {
       "value": "php.net",
       "sources": [
-        "https://isc.sans.edu/diary/rss/33450",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
@@ -2861,7 +2860,6 @@
       "value": "sans.edu",
       "sources": [
         "https://isc.sans.edu/diary/rss/33442",
-        "https://isc.sans.edu/diary/rss/33450",
         "https://isc.sans.edu/diary/rss/33482",
         "https://isc.sans.edu/diary/rss/33488",
         "https://isc.sans.edu/diary/rss/33492"
