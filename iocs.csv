@@ -2,7 +2,6 @@ type,value,article_count,sources
 cves,CVE-2026-119977,2,https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html | https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-118527,2,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
 cves,CVE-2026-115560,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
-cves,CVE-2026-114625,1,https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-114598,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114597,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114596,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
@@ -237,7 +236,7 @@ cves,CVE-2026-112415,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112414,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112413,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
-cves,CVE-2026-111497,2,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/
+cves,CVE-2026-111497,3,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xfa5rc/someone_is_already_building_a_target_list_of/ | https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/
 cves,CVE-2026-111357,4,https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html | https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
 cves,CVE-2026-110447,1,https://www.cisa.gov/news-events/alerts/2026/10/23/cisa-adds-one-known-exploited-vulnerability-catalog-0
 cves,CVE-2026-109619,3,https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html | https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
