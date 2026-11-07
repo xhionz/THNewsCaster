@@ -238,8 +238,8 @@ cves,CVE-2026-112413,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-111497,2,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/
 cves,CVE-2026-111357,4,https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html | https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
-cves,CVE-2026-109619,3,https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html | https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,4,https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html | https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,2,https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,3,https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-107155,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-107154,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-106087,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
@@ -350,8 +350,12 @@ ips,9.1.2.0,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 ips,9.2.1.6,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 ips,9.2.2.1,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 ips,17.0.0.0,1,https://isc.sans.edu/diary/rss/33482
+ips,31.77.229.35,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
 ips,65.87.223.26,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/
+ips,85.11.167.52,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
+ips,85.11.168.45,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
 ips,87.120.196.120,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
+ips,91.92.240.238,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
 ips,134.209.82.225,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 ips,157.22.126.128,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/
 ips,165.154.11.140,1,https://isc.sans.edu/diary/rss/33442
@@ -360,8 +364,13 @@ ips,165.154.33.72,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.36.91,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.120.226,1,https://isc.sans.edu/diary/rss/33442
 ips,165.154.182.221,1,https://isc.sans.edu/diary/rss/33442
+ips,178.15.54.129,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
+ips,178.16.54.129,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
 ips,199.19.77.18,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/
 ips,199.19.77.84,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/
+ips,199.19.95.66,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
+ips,199.19.95.67,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
+ips,199.19.95.68,1,https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/
 domains,21.09.2026.xml,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/email-threat-landscape-q3-2026-trends-and-insights/
 domains,21.09.2026.xml.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/email-threat-landscape-q3-2026-trends-and-insights/
 domains,21092026.pdf.js,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/email-threat-landscape-q3-2026-trends-and-insights/

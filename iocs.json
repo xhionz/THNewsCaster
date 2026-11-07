@@ -1443,7 +1443,6 @@
     {
       "value": "CVE-2026-109619",
       "sources": [
-        "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
         "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
@@ -1451,7 +1450,6 @@
     {
       "value": "CVE-2026-109618",
       "sources": [
-        "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
         "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
@@ -2123,15 +2121,39 @@
       ]
     },
     {
+      "value": "31.77.229.35",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
       "value": "65.87.223.26",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
       ]
     },
     {
+      "value": "85.11.167.52",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
+      "value": "85.11.168.45",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
       "value": "87.120.196.120",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
+      ]
+    },
+    {
+      "value": "91.92.240.238",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
       ]
     },
     {
@@ -2183,6 +2205,18 @@
       ]
     },
     {
+      "value": "178.15.54.129",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
+      "value": "178.16.54.129",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
       "value": "199.19.77.18",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
@@ -2192,6 +2226,24 @@
       "value": "199.19.77.84",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
+      ]
+    },
+    {
+      "value": "199.19.95.66",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
+      "value": "199.19.95.67",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
+      "value": "199.19.95.68",
+      "sources": [
+        "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
       ]
     }
   ],
