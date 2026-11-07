@@ -236,10 +236,12 @@ cves,CVE-2026-112415,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112414,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112413,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
-cves,CVE-2026-111497,4,https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html | https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xfa5rc/someone_is_already_building_a_target_list_of/ | https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/
+cves,CVE-2026-111497,2,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/
 cves,CVE-2026-111357,4,https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html | https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
 cves,CVE-2026-109619,3,https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html | https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-109618,4,https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html | https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-107155,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
+cves,CVE-2026-107154,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-106087,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
 cves,CVE-2026-98432,1,https://isc.sans.edu/diary/rss/33482
 cves,CVE-2026-97229,1,https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog
@@ -298,7 +300,10 @@ cves,CVE-2026-84496,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-84495,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-84494,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-84493,1,https://isc.sans.edu/diary/rss/33458
+cves,CVE-2026-82308,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-81648,1,https://thehackernews.com/2026/11/attackers-target-unpatched.html
+cves,CVE-2026-77709,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
+cves,CVE-2026-77708,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-65397,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-65392,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-65385,1,https://isc.sans.edu/diary/rss/33458
@@ -315,6 +320,7 @@ cves,CVE-2026-64759,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-64750,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-63774,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01
 cves,CVE-2026-63017,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-307-01
+cves,CVE-2026-58115,1,https://www.reddit.com/r/blueteamsec/comments/1xpkhnu/siemens_expands_the_device_list_for_a_100rated/
 cves,CVE-2026-48356,1,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-46300,2,https://www.cisa.gov/news-events/alerts/2026/10/28/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xjm9cx/hunting_php2shell_exploitation_panos_management/
 cves,CVE-2026-43736,1,https://isc.sans.edu/diary/rss/33458
@@ -326,7 +332,8 @@ cves,CVE-2026-28864,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-20649,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-20648,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-20127,1,https://blog.talosintelligence.com/uat-11473-keydrift/
-cves,CVE-2026-19868,1,https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog
+cves,CVE-2026-19868,2,https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog | https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
+cves,CVE-2026-19703,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-16438,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2026-16437,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
 cves,CVE-2026-16436,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-02
@@ -442,7 +449,7 @@ domains,mailtest.php,1,https://isc.sans.edu/diary/rss/33488
 domains,main.go,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,mshta.exe,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,net.exe,1,https://blog.talosintelligence.com/a-quiet-week-in-infosec/
-domains,node.js,4,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html | https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
+domains,node.js,3,https://blog.talosintelligence.com/a-quiet-week-in-infosec/ | https://blog.talosintelligence.com/ir-trends-q3-2026/ | https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/
 domains,nvd.nist.gov,1,https://isc.sans.edu/diary/rss/33488
 domains,offerloader.da,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,offerloader.db,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
@@ -519,6 +526,7 @@ domains,www.rfc-editor.org,1,https://isc.sans.edu/diary/rss/33482
 domains,www.rootevidence.com,1,https://isc.sans.edu/diary/rss/33492
 domains,www.sans.edu,1,https://isc.sans.edu/diary/rss/33442
 domains,www.siemens.com,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01
+domains,www.vulncheck.com,1,https://www.reddit.com/r/blueteamsec/comments/1xpkhnu/siemens_expands_the_device_list_for_a_100rated/
 domains,ylp9m5j3i2aw.exe,1,https://blog.talosintelligence.com/appraisal-by-ai-model-driven-victim-prioritization-in-the-volta-infostealer/
 domains,your-q3-compensation-summary.docx,1,https://www.microsoft.com/en-us/security/blog/2026/11/05/email-threat-landscape-q3-2026-trends-and-insights/
 sha256,006510ce1da2b7410376f0788c19e55616eb4bcc30072d25b7d0871dc32aa11c,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/

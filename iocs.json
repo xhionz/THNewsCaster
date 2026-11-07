@@ -1427,9 +1427,7 @@
     {
       "value": "CVE-2026-111497",
       "sources": [
-        "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
         "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.reddit.com/r/blueteamsec/comments/1xfa5rc/someone_is_already_building_a_target_list_of/",
         "https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/"
       ]
     },
@@ -1457,6 +1455,18 @@
         "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
+      ]
+    },
+    {
+      "value": "CVE-2026-107155",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
+      ]
+    },
+    {
+      "value": "CVE-2026-107154",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
       ]
     },
     {
@@ -1808,9 +1818,27 @@
       ]
     },
     {
+      "value": "CVE-2026-82308",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
+      ]
+    },
+    {
       "value": "CVE-2026-81648",
       "sources": [
         "https://thehackernews.com/2026/11/attackers-target-unpatched.html"
+      ]
+    },
+    {
+      "value": "CVE-2026-77709",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
+      ]
+    },
+    {
+      "value": "CVE-2026-77708",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
       ]
     },
     {
@@ -1910,6 +1938,12 @@
       ]
     },
     {
+      "value": "CVE-2026-58115",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpkhnu/siemens_expands_the_device_list_for_a_100rated/"
+      ]
+    },
+    {
       "value": "CVE-2026-48356",
       "sources": [
         "https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog"
@@ -1979,7 +2013,14 @@
     {
       "value": "CVE-2026-19868",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog"
+        "https://www.cisa.gov/news-events/alerts/2026/11/06/cisa-adds-one-known-exploited-vulnerability-catalog",
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
+      ]
+    },
+    {
+      "value": "CVE-2026-19703",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/"
       ]
     },
     {
@@ -2688,7 +2729,6 @@
       "sources": [
         "https://blog.talosintelligence.com/a-quiet-week-in-infosec/",
         "https://blog.talosintelligence.com/ir-trends-q3-2026/",
-        "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
       ]
     },
@@ -3154,6 +3194,12 @@
       "value": "www.siemens.com",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-01"
+      ]
+    },
+    {
+      "value": "www.vulncheck.com",
+      "sources": [
+        "https://www.reddit.com/r/blueteamsec/comments/1xpkhnu/siemens_expands_the_device_list_for_a_100rated/"
       ]
     },
     {
