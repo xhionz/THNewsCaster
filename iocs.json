@@ -1,6 +1,12 @@
 {
   "cves": [
     {
+      "value": "CVE-2026-123158",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
       "value": "CVE-2026-119977",
       "sources": [
         "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
@@ -1443,14 +1449,12 @@
     {
       "value": "CVE-2026-109619",
       "sources": [
-        "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
       "value": "CVE-2026-109618",
       "sources": [
-        "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
         "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
@@ -2127,9 +2131,33 @@
       ]
     },
     {
+      "value": "52.119.124.122",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "58.151.184.226",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "62.210.173.100",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
       "value": "65.87.223.26",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
+      ]
+    },
+    {
+      "value": "82.74.132.129",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
       ]
     },
     {
@@ -2151,15 +2179,69 @@
       ]
     },
     {
+      "value": "87.241.132.12",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
       "value": "91.92.240.238",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
       ]
     },
     {
+      "value": "92.255.57.7",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "109.94.173.13",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "112.162.23.132",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "121.163.224.97",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "121.190.39.238",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
       "value": "134.209.82.225",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/"
+      ]
+    },
+    {
+      "value": "152.233.50.185",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "154.80.128.173",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "156.238.252.37",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
       ]
     },
     {
@@ -2217,6 +2299,24 @@
       ]
     },
     {
+      "value": "183.99.38.238",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "185.2.148.137",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "195.178.110.78",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
       "value": "199.19.77.18",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/05/threat-actors-use-agentic-ai-tooling-to-find-and-abuse-exposed-secrets/"
@@ -2244,6 +2344,24 @@
       "value": "199.19.95.68",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/06/artex-abuse-expands-as-cybercriminals-target-financial-sector/"
+      ]
+    },
+    {
+      "value": "213.86.169.133",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "220.70.219.98",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
+      ]
+    },
+    {
+      "value": "220.77.237.35",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
       ]
     }
   ],
@@ -2683,7 +2801,8 @@
         "https://isc.sans.edu/diary/rss/33470",
         "https://isc.sans.edu/diary/rss/33482",
         "https://isc.sans.edu/diary/rss/33488",
-        "https://isc.sans.edu/diary/rss/33492"
+        "https://isc.sans.edu/diary/rss/33492",
+        "https://isc.sans.edu/diary/rss/33498"
       ]
     },
     {
@@ -2893,7 +3012,8 @@
         "https://isc.sans.edu/diary/rss/33442",
         "https://isc.sans.edu/diary/rss/33482",
         "https://isc.sans.edu/diary/rss/33488",
-        "https://isc.sans.edu/diary/rss/33492"
+        "https://isc.sans.edu/diary/rss/33492",
+        "https://isc.sans.edu/diary/rss/33498"
       ]
     },
     {
@@ -3099,6 +3219,12 @@
       "value": "virtualbox-7.2.8-r173730.msi",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
+      ]
+    },
+    {
+      "value": "vpsvault.host",
+      "sources": [
+        "https://isc.sans.edu/diary/rss/33498"
       ]
     },
     {
