@@ -2,7 +2,6 @@ type,value,article_count,sources
 cves,CVE-2026-123158,1,https://isc.sans.edu/diary/rss/33498
 cves,CVE-2026-119977,2,https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html | https://www.cisa.gov/news-events/alerts/2026/11/03/cisa-adds-one-known-exploited-vulnerability-catalog
 cves,CVE-2026-118527,2,https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
-cves,CVE-2026-115560,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 cves,CVE-2026-114598,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114597,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
 cves,CVE-2026-114596,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01
@@ -239,8 +238,8 @@ cves,CVE-2026-112413,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-112410,1,https://isc.sans.edu/diary/rss/33458
 cves,CVE-2026-111497,2,https://www.cisa.gov/news-events/alerts/2026/10/27/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xk3lso/cve2026111497wordpresspoc_cve2026111497_rce_poc/
 cves,CVE-2026-111357,4,https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html | https://www.cisa.gov/news-events/alerts/2026/10/29/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.cisa.gov/news-events/alerts/2026/10/30/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.securityweek.com/ivanti-patches-two-more-zero-days-exploited-in-connect-secure-attack-chain/
-cves,CVE-2026-109619,1,https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
-cves,CVE-2026-109618,2,https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog | https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
+cves,CVE-2026-109619,2,https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
+cves,CVE-2026-109618,2,https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/ | https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog
 cves,CVE-2026-107155,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-107154,1,https://www.reddit.com/r/blueteamsec/comments/1xpouoe/sonicwall_sonicos_affected_by_multiple/
 cves,CVE-2026-106087,1,https://www.cisa.gov/news-events/ics-advisories/icsa-26-302-02
@@ -467,7 +466,6 @@ domains,java.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help
 domains,javaw.exe,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,johan.msi,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,key4.db,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
-domains,l10n.php,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,learn.microsoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,leheedu.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,libcommon.so,1,https://blog.talosintelligence.com/uat-11473-keydrift/
@@ -485,8 +483,6 @@ domains,offerloader.db,1,https://www.microsoft.com/en-us/security/blog/2026/11/0
 domains,onmicrosoft.com,1,https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/
 domains,orbittrack.cfd,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,os.exit,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
-domains,php.ini,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
-domains,php.net,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,places.sqlite,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,prairielink.cfd,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
 domains,prce.py,1,https://www.reddit.com/r/blueteamsec/comments/1xjm9cx/hunting_php2shell_exploitation_panos_management/
@@ -527,7 +523,6 @@ domains,testemail.php,1,https://isc.sans.edu/diary/rss/33488
 domains,total-sitevv.lol,1,https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/
 domains,tzrhxln.cn,1,https://isc.sans.edu/diary/rss/33442
 domains,updater.exe,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/
-domains,user.ini,1,https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/
 domains,vdaemon.bin,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,vdaemon.conf,1,https://blog.talosintelligence.com/uat-11473-keydrift/
 domains,virtualbox-7.2.8-r173730.msi,1,https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/

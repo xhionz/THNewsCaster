@@ -21,12 +21,6 @@
       ]
     },
     {
-      "value": "CVE-2026-115560",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
-      ]
-    },
-    {
       "value": "CVE-2026-114598",
       "sources": [
         "https://www.cisa.gov/news-events/ics-advisories/icsa-26-300-01"
@@ -1449,14 +1443,15 @@
     {
       "value": "CVE-2026-109619",
       "sources": [
+        "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
         "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
       "value": "CVE-2026-109618",
       "sources": [
-        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog",
-        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
+        "https://www.bleepingcomputer.com/news/security/php2shell-security-flaws-now-sucessfully-exploited-in-the-wild/",
+        "https://www.cisa.gov/news-events/alerts/2026/10/26/cisa-adds-two-known-exploited-vulnerabilities-catalog"
       ]
     },
     {
@@ -2830,12 +2825,6 @@
       ]
     },
     {
-      "value": "l10n.php",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
-      ]
-    },
-    {
       "value": "learn.microsoft.com",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/10/30/help-desk-impersonation-ad-cs-abuse-investigating-esc1-esc8-intrusion-paths/"
@@ -2937,18 +2926,6 @@
       "value": "os.exit",
       "sources": [
         "https://blog.talosintelligence.com/nik-c2-new-ai-enabled-framework/"
-      ]
-    },
-    {
-      "value": "php.ini",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
-      ]
-    },
-    {
-      "value": "php.net",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
     {
@@ -3195,12 +3172,6 @@
       "value": "updater.exe",
       "sources": [
         "https://www.microsoft.com/en-us/security/blog/2026/11/03/fake-download-campaign-uses-trojanized-installers-deliver-monetization-payloads/"
-      ]
-    },
-    {
-      "value": "user.ini",
-      "sources": [
-        "https://www.reddit.com/r/blueteamsec/comments/1xeirws/i_spun_up_a_free_readonly_script_to_check/"
       ]
     },
     {
